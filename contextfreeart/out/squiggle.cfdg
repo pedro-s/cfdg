@@ -1,0 +1,11 @@
+/* copyright (c) 2012 by Jonas Kölker.  License: WTFPL, or contact me */
+startshape begin
+background {b -1}
+
+rule begin {4*{x 10} walk {a -0.9 sat 1 brightness 1}}
+rule walk {CIRCLE {} step {}}
+
+rule step {walk {y +1}}
+rule step {walk {r 7}}
+rule step {walk {h 1}}
+rule step {walk {s 0.999}}

@@ -1,0 +1,44 @@
+startshape start
+
+rule start{
+	trunk {hue 0 sat 1 b 1}
+}
+
+rule rainbow{
+	CIRCLE{hue 60 sat 1}
+	CIRCLE{hue 120 sat 1 y 1.2}
+	CIRCLE{hue 180 sat 1 y 2.4}
+	CIRCLE{hue 240 sat 1 y 3.6}
+	CIRCLE{hue 300 sat 1 y 4.8}
+	CIRCLE{hue 0 sat 1 y 6}
+}
+
+rule trunk {
+	rainbow{}
+	trunk{x 1.2}
+}
+
+rule trunk 0.025{
+	branch{hue 60 sat 1}
+	branch{hue 120 sat 1 y 1.2}
+	branch{hue 180 sat 1 y 2.4}
+	branch{hue 240 sat 1 y 3.6}
+	branch{hue 300 sat 1 y 4.8}
+	branch{hue 0 sat 1 y 6}
+}
+
+rule branch {
+	CIRCLE{}	
+	branch{x 1.2}
+}
+
+rule branch 0.04 {
+	branch{r 60}
+}
+rule branch 0.04 {
+	branch{r -60}
+}
+
+rule branch 0.06{}
+
+

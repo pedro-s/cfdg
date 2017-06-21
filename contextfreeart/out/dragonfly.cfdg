@@ -1,0 +1,24 @@
+startshape dragonfly
+
+background {b -1}
+
+rule dragon {
+	TRIANGLE {b .1}
+	dragon {s .5774 r -30 b .1}
+	dragon {s .5774 x .3333 r 90 b .1}
+}
+
+rule fly {
+	2*{f 180 y -.5774}
+	{dragon {}
+	fly {s .3333 x .1667 y .4811 r 60}}
+	2*{f 180 y -.5774}
+	dragon {s .5774 r 30 x .6667 y -.5774 b .1}
+	fly {s .3333 x 1 y -.1925 b .2}
+}
+
+rule dragonfly {
+	3*{r 120}
+	fly {x .2887 y .5 r 30}
+	dragonfly {s .3333 b .1}
+}

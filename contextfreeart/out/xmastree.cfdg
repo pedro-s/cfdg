@@ -1,0 +1,177 @@
+startshape tree
+background {sat .5  hue 220}
+
+rule star2
+{
+	triangle{b 1 s 1 hue 30 s .3 1.2 1}
+	triangle{b 1 s 1 hue 30 s .3 .7 1 r 90}
+	triangle{b 1 s 1 hue 30 s .3 1.2 1 r 180}
+	triangle{b 1 s 1 hue 30 s .3 .7 1 r 270}
+}
+path triangle
+{
+	MOVETO { x -.05  y  0}	
+	LINETO { x  0 y .1 }
+	LINETO { x .05 y 0}
+	CLOSEPOLY{}
+
+}
+rule tree
+{
+	trunk{s .4 1 1 a -.1}
+	fronds{}
+	starback{s .25 y .5 z +50  a -.4 }
+	//presents{ y -.25}
+}
+rule presents
+{
+	presentR{s .9 x .01}
+	presentL{s .9 x -.01}
+}
+rule presentR
+{
+	SQUARE{s .2 b .5 sat .9 hue 0 }
+	presentR{s .9  x .1 y -.01}
+}
+rule presentR .5
+{
+	SQUARE{s .2 b .5 sat .9 hue 0 }
+	presentR{s 1.1  x .1 y .01}
+}
+rule presentR 
+{
+
+}
+rule presentL
+{
+	SQUARE{s .2 b .5 sat .9 hue 0 }
+	presentL{s .9 x -.05}
+}
+
+rule starback
+{
+	star{z -100}
+	starfront {s .75 a -.3 b .1}
+}
+rule starfront
+{
+	star{z +100}
+	starback {s .75  a -.3  b -.2}
+}
+rule star
+{
+	CIRCLE{b .9 sat .9 hue 60}
+}
+rule fronds
+{
+	frondR{}
+	frondR{f 90}
+	frondsrec {s .9 .9 .4  y .05 alpha -.05 }
+	subfronds{ |b .5}
+
+}
+rule frondsrec 1
+{
+	frondR{ alpha -.05 b -.2| }
+	frondR{f 90 alpha -.05 b -.2|}
+	frondsrec {s .9 .9 .4  y .05  }
+	//ball{}
+	subfronds{ |b .5}
+
+}
+rule frondsrec 1
+{
+	frondR{ alpha +.05 b  .2| }
+	frondR{f 90 alpha +.05 b  .2| }
+	frondsrec {s .9 .9 .4  y .05 }
+	//ball{}
+	subfronds{ |b .5}
+
+}
+
+
+path trunk
+{
+ 	MOVETO {x  .1 y 0}
+	LINETO {x .1 y -.3}
+	LINETO {x -.1 y -.3}
+	LINETO {x -.1 y 0}
+	CLOSEPOLY{}
+	FILL {b 0 sat 0}
+}
+rule subfronds 1
+{
+	fronds2  {s .75 1 1    z +1    b .2}
+}
+rule subfronds 1
+{
+	fronds2  {s .75 1 1    z +1    b -.2}
+}
+rule subfronds 1
+{
+	fronds2  {s .75 1 1   y .02  z +1    b .2}
+}
+rule subfronds 1
+{
+	fronds2  {s .75 1 1  y-.01   z +1    b -.2}
+}
+
+
+rule fronds2
+{
+	frondR{}
+	frondR{f 90}
+	subfronds{}
+}
+rule subfrondsx 1
+{
+	fronds {s .75 .9 .4  z +.1 y -.02  b  -.2}
+}
+rule subfrondsx 10  {}
+
+rule frondR
+{
+	frondRPath{}
+	ball{s 1.1}
+}
+path frondRPath
+{
+	MOVETO { x -.001  y  0}	
+	LINETO { x  .5 y -.2  x1 .2  y1 -.2}
+	LINETO { x -.001  y -.2 x1 .2 y1 -.2}
+	CLOSEPOLY{}
+	FILL{b .2 hue 150 sat .9}
+}	
+
+rule ball 1
+{
+	ball2 {s .05 x .3 y -.13 b .5 hue 30 sat .9}
+}
+rule ball 1
+{
+	ball2 {s .05 x .3 y -.13 b .5 hue 60 sat .9}
+}
+rule ball 1
+{
+	ball2 {s .05 x .3 y -.13 b .5 hue 0 sat .9}
+}
+rule ball 2
+{
+}
+rule ball2
+{
+	CIRCLE{}
+	star2 {x .2 s 2.5}
+
+}
+
+path frondR1
+{
+	MOVETO { x -.001  y  0}	
+	CURVETO { x  .5 y -.2  x1 .2  y1 -.2}
+	CURVETO { x -.001  y -.2 x1 .2 y1 -.2}
+	CLOSEPOLY{}
+	FILL{b .2 hue 150 sat .9}
+
+}	
+

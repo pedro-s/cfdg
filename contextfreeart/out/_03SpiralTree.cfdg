@@ -1,0 +1,11 @@
+startshape SPIRAL
+
+rule SPIRAL{
+  CIRCLE{}
+  SPIRAL{y 0.4 rotate 2 size 0.99}
+}
+
+rule SPIRAL 0.01 {
+  SPIRAL{ flip 90 }
+  SPIRAL{  }
+}

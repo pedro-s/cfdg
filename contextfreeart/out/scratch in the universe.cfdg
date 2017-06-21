@@ -1,0 +1,9 @@
+startshape REPEAT
+background {h 236.79 sat 1.0000 b 1.0000}
+rule REPEAT {
+CIRCLE {s .99 r 45 h 20 skew 67 4 h 59.36 sat 1.0000 b 1.0000}
+CIRCLE {h 27.39 sat 1.0000 b 1.0000}
+CIRCLE { s .80 r 45 skew 15 89}
+REPEAT { z -1 s .7 y .7 x -1.5}
+REPEAT{ z -1 s .7 y .7 x 1.5}
+}

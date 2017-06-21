@@ -1,0 +1,13 @@
+startshape do
+background { b -.05 sat .75 hue 190 }
+rule do { 
+	ten { r 90 }
+}
+rule ten { d { } 
+	ten { y .4 r -35 s .75 z .0025 }
+	ten { y -1 r 35 s .25 .75 z .0025 }
+}
+rule d {
+	30* { s .97 r 5 x -.05 y -.05 b .01 z .001}
+		CIRCLE { }
+}

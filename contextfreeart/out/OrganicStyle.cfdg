@@ -1,0 +1,29 @@
+startshape A
+background {b -.5 sat .2 h 30}
+ 
+rule A { 
+    A { s 0.92 r 35}
+    B { a -.7 }
+    B { s 0.97 b .95 a -.2 }
+}
+ 
+rule B {
+    C{} C{ flip 45 }
+}
+
+ 
+rule C {
+    C { s 0.99 y .1 r .3 h 1}
+    D { }
+}
+
+rule C 0.0004 {
+	C {}
+	A {s .5 sat .15 b -.5}
+}
+ 
+rule D { 4*{r 80}TRIANGLE { a -.8 s 5 }}
+rule D { 3*{r 100}TRIANGLE { a -.8 s 5 }}
+rule D {D{ r -17}}
+rule D {CIRCLE{ a -.6 s 6}}
+rule D {SQUARE{ s 5 2 y -.4 r 45 a -.97 }}

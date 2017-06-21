@@ -1,0 +1,20 @@
+startshape wheels
+
+rule wheels{
+  three_wheels{b 0}
+}
+
+rule three_wheels{
+wheel{}
+three_wheels{s 0.46 y -.266}
+three_wheels{s 0.46 x .23 y (-.266 + 0.46 * sin(60))}
+three_wheels{s 0.46 x -.23 y (-.266 + 0.46 * sin(60))}
+}
+
+
+path wheel{
+    MOVETO{y .5}       
+    ARCTO{y -.5 r .5}
+    ARCTO{y .5 r .5}
+    STROKE{b -1 width 0.05}
+}

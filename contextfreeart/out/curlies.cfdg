@@ -1,0 +1,12 @@
+startshape start
+
+background {b -1}
+
+rule start {
+	12*{ r 30 h 30 } curl { }
+}
+
+rule curl {
+	CIRCLE { }
+	curl { s 0.99 y 0.15  r 2.25 b 0.01 sat 0.01}
+}

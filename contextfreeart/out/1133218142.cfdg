@@ -1,0 +1,47 @@
+startshape start_gt
+
+// i like random colored spots.
+// they're very, uh, art deco or
+// something.
+
+// random starting orientation
+rule start_gt { gt { r 0 } }
+rule start_gt { gt { r 90 } }
+rule start_gt { gt { r 180 } }
+rule start_gt { gt { r 270 } }
+
+// send off two lines at a 90 deg
+// angle to each other
+rule gt {
+ LINE { r 45 }
+ LINE { r 135 }
+}
+
+// continue the line
+rule LINE {
+ SQUARE { }
+ // move the hue some, while
+ // remaining black, so our dots
+ // will be randomly colored
+ LINE { y 1 s 0.99 hue 27.1 }
+}
+
+// stick a dot out there
+rule LINE 0.01 {
+ SQUARE { }
+ LINE { y 1 s 0.99 }
+ // up the sat/brightness so
+ // that our dots will have color
+ SPOT { s 5 sat 1 b 1 }
+}
+
+// circle is ok, too
+rule SPOT 0.5 { SQUARE { x -10 } }
+rule SPOT 0.5 { SQUARE { x 10 } }
+
+// split out
+rule LINE 0.01 {
+ SQUARE { }
+ LINE { y 1 s 0.99 }
+ gt { r -90 b 0.05 }
+}

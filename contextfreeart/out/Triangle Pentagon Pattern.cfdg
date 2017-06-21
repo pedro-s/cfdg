@@ -1,0 +1,38 @@
+startshape A
+
+rule A 100 {
+TRISHAPE {b 1 }
+
+5*{r 72}B {s .5 y .7 }
+}
+
+rule B 100 {
+TRISHAPE { }
+5*{r 72}C {s .5 y .7 }
+}
+
+rule C 100 {
+TRISHAPE { }
+3*{r 120}B {s .5 y .7 }
+}
+
+rule OUTER {
+PENTAGON { }
+OUTER {s .9 a -.1}
+}
+
+path TRISHAPE {
+	MOVETO{x -.5 y -.5}
+	LINETO{x -.45 y -.5}
+	LINETO{x 0 y .95}
+	LINETO{x .45 y -.5}
+	LINETO{x .5 y -.5}
+	LINETO{x 0 y 1}
+	CLOSEPOLY{}
+}
+
+path PENTAGON {
+	MOVETO {x 0 y 0}
+	LINETO {x 1.3 y .4}
+	STROKE{width 0.02 b -1}
+}

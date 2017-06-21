@@ -1,0 +1,17 @@
+startshape triangles
+background { b -1 }
+rule triangles {
+TRIANGLE { y -30 x -35 }
+TRIANGLE { size .9 b 1 y -28 x -34.5 }
+TRIANGLE { size .8 b .9 y -26 x -34 }
+TRIANGLE { size .7 b .8 y -24 x -33.5 }
+TRIANGLE { size .6 b .7 y -22 x -33 }
+TRIANGLE { size .5 b .6 y -20 x -32.5 }
+TRIANGLE { size .4 b .5 y -18 x -32 }
+TRIANGLE { size .3 b .4 y -16 x -31.5 }
+TRIANGLE { size .2 b .3 y -14 x -31 }
+TRIANGLE { size .1 b .2 y -12 x -30.5 }
+TRIANGLE { size .09 b .1 y -10 x -30 }
+triangles { z -6 s .75 -1 y .3 x .99 b .1 a -.1 sat 2 hue 100 }
+triangles { z -6 s .75 y -.3 x .99 b .1 a -.1 sat 2 hue 100 }
+}

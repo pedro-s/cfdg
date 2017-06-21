@@ -1,0 +1,19 @@
+startshape pyth_start
+
+background { b -1 }
+
+
+rule pyth_start{
+	pyth{         b 1 a -1 h 120 sat 1}
+	pyth{x  1 y 3 b 1 a -1 sat 0}
+	pyth{x -2 y 4 b 1 a -1 h 240 sat 1}
+	pyth{x -3 y 1 b 1 a -1 sat 0}
+	
+}
+
+rule pyth{
+	SQUARE{}
+	pyth[y  0.5 r 45 s 0.707 y  1 b  .1  a .1]
+   pyth[y -0.5 r 45 s 0.707 y -1 b -.05 a .1]
+}
+

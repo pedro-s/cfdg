@@ -1,0 +1,8 @@
+startshape peace
+
+rule peace {
+360 * {x 0.1 r 1} CIRCLE {}
+114 * {y 0.1} CIRCLE {}
+40 * {x -0.1 y 0.1} CIRCLE {x 4 y 1.6}
+40 * {x 0.1 y 0.1} CIRCLE {x -4 y 1.7}
+}

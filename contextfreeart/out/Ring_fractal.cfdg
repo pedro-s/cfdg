@@ -1,0 +1,12 @@
+startshape foo[]
+CF::Background = [b -1]
+
+shape foo {
+	bar []
+	loop 2 [r 130] foo [x 0.766 r 10 s 0.59]
+}
+
+shape bar {
+	CIRCLE [s 1.02 b 1]
+	CIRCLE []
+}

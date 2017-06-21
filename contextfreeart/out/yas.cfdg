@@ -1,0 +1,24 @@
+startshape sierpinski
+
+CF::Background = [b -1]
+
+shape sierpinski
+ {
+  triangle[b 1 sat .6 hue 360 r 180]
+  sierpinski[s .5 y (1/sqrt(3)) x 0 z -1] // top
+  sierpinski[s .5  y (-sqrt(3)/6) x -.5]  // left
+  sierpinski[s .5  y (-sqrt(3)/6) x .5 ]  // right
+}
+
+path triangle {  
+  MOVETO ( -0.5 , (sin(-30) / sqrt(3)))
+  loop 3 [r 120] {
+    CURVEREL ( 0.5 ,0, 0.25 , 0.1)
+    CURVEREL ( 0.5,0, CF::Continuous)
+  }
+  CLOSEPOLY (CF::Align)
+  FILL[]
+  STROKE( .005 )[b -1]
+}
+
+

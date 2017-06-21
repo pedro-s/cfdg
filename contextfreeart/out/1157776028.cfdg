@@ -1,0 +1,67 @@
+startshape ILL9
+background {b -.25}
+
+rule ILL9 {
+ILL {y 11.5}
+ILL {}
+ILL {y -11.5}
+ILL {y 11.5 x 11.5}
+ILL {x 11.5}
+ILL {y -11.5 x 11.5}
+ILL {y 11.5 x -11.5}
+ILL {x -11.5}
+ILL {y -11.5 x -11.5}
+}
+
+
+rule ILL {
+YC {s 11}
+BANDCI {}
+}
+
+rule YC {
+CIRCLE {hue 60 saturation 1 b 1}
+}
+
+rule BAND {
+SQUARE {y 5 s .6 1 skew 15 0 hue 60 saturation .7 b .5}
+SQUARE {y 5 s .6 1 hue 60 saturation .7 b .5} 
+SQUARE {y 5 s .6 1 skew -15 0 hue 60 saturation .7 b .5}
+KEY {s .35 y 5.1 x -.35}
+KEY {s .35 y 5.1 x .35 b 1}
+}
+
+rule KEY {
+CIRCLE {}
+SQUARE {s .6 1 y -.7}
+}
+
+
+rule BANDC {
+BAND {}
+BAND {r 18}
+BAND {r 36}
+BAND {r 54}
+BAND {r 72}
+BAND {r 90}
+BAND {r 108}
+BAND {r 126}
+BAND {r 144}
+BAND {r 162}
+BAND {r 180}
+BAND {r -18}
+BAND {r -36}
+BAND {r -54}
+BAND {r -72}
+BAND {r -90}
+BAND {r -108}
+BAND {r -126}
+BAND {r -144}
+BAND {r -162}
+BAND {r -180}
+}
+
+rule BANDCI {
+BANDC {}
+BANDCI {s .8 r 6.999}
+}

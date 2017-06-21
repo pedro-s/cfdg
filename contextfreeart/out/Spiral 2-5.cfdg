@@ -1,0 +1,9 @@
+startshape SPIRAL
+
+rule SPIRAL
+
+{
+200* { x 1 r 40  s 1.1}
+CIRCLE {hue 41.0 sat 0.7573 b 0.8491}
+
+}

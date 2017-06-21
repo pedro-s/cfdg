@@ -1,0 +1,319 @@
+/*
+	Code & Life
+	by zch 2010-06
+	variants: ASD, BOA, HVY, HWD, LQZ, LSA, LRC, LSE, WPN, WQH
+*/
+startshape START
+
+background {
+	h rand_static(360)
+	sat rand_static(0, 1)
+	b rand_static(-1, -0.5)
+}
+
+size {
+	s 11 11
+	x 0
+	y 0
+}
+
+path P1 {
+	MOVETO { x -0.5 y 0.25 }
+	ARCTO { x rand_static( -0.4, 0.0) y rand_static( 0, 1)	}
+	ARCTO { x rand_static( -0.3, 0.1) y rand_static( 0, 2)	}
+	ARCTO { x rand_static( -0.2, 0.2) y rand_static( 0, 3)	}
+	ARCTO { x rand_static( -0.1, 0.3) y rand_static( 0, 2)	}
+	ARCTO { x rand_static( -0.0, 0.4) y rand_static( 0, 1)	}
+	ARCTO { x 0.5 y 0.25 }
+
+	LINETO { x 0.5 y -0.25 }
+	ARCTO { x rand_static( 0, 0.4) y rand_static( -0.75, 0.25)	}
+	ARCTO { x rand_static( -0.4,0) y rand_static( -0.75, 0.25)	}
+	ARCTO { x -0.5 y -0.25 }
+	CLOSEPOLY {}
+}
+
+path P2 {
+	MOVETO { x 0 y 0 }
+	ARCTO { r -1 x rand_static( -0.25, 0.0) y rand_static( 0.0, 0.2)	}
+	ARCTO { r -1 x rand_static( -0.25, 0.0) y rand_static( 0.0, 0.4)	}
+	ARCTO { r -1 x rand_static( -0.25, 0.0) y rand_static( 0.0, 0.4)	}
+
+	ARCTO { r -1 x 0 y rand_static( 0.45, 0.5)	}
+
+
+
+	CLOSEPOLY {}
+}
+
+rule BACKDROP {
+	SQUARE {
+		z -100
+		s 10
+		h rand_static(360)
+		sat rand_static(0, 1)
+		b rand_static(0, 0.2 )
+	}
+	BG {
+		r rand_static(360) b 0.25
+		h rand_static(360)
+		sat rand_static(0, 1)
+		b rand_static(0.3, 0.5 )
+	}
+
+}
+
+rule BACKDROP {
+	SQUARE {
+		z -100
+		s 10
+		h rand_static(360)
+		sat rand_static(0, 1)
+		b rand_static(0.3, 0.5 )
+	}
+	BG {
+		r rand_static(360) b 0.25
+		h rand_static(360)
+		sat rand_static(0, 1)
+		b rand_static(0, 0.2 )
+	}
+}
+
+rule BACKDROP 2 { BACKDROP{ s 1 -1}}
+
+rule START {
+	BACKDROP { z 0 }
+	FLOWERPATH {
+		z 300
+		r rand_static(360)
+		h rand_static(360)
+		sat rand_static(0, 1)
+		b rand_static(0.75, 1)
+	}
+	NUMLINES {
+		z 0
+		s 0.15
+		x-4.5
+		y+4.5
+		b 1
+		a -0.5
+	}
+}
+
+rule FLOWERPATH 12 {
+	FLOWER {}
+	FLOWERPATH { z-0.001 s 0.9 x+1 r 30 }
+}
+
+rule FLOWERPATH 5 { FLOWERPATH { r 90 } }
+rule FLOWERPATH 5 { FLOWERPATH { r 45 } }
+rule FLOWERPATH 5 { FLOWERPATH { r 15 } }
+
+
+rule FLOWERPATH {	FLOWERPATH { s 1.1 } }
+rule FLOWERPATH {	FLOWERPATH { s 1 -1 } }
+
+rule FLOWERPATH 5 { FLOWERPATH { x+1 } }
+rule FLOWERPATH 5 { FLOWERPATH { x-1 } }
+rule FLOWERPATH 5 { FLOWERPATH { y+1 } }
+rule FLOWERPATH 5 { FLOWERPATH { y-1 } }
+
+
+rule FLOWERPATH {	FLOWER {} }
+	
+
+rule FLOWER {	4*{r+90} PETAL {}}
+rule FLOWER {	5*{r+72} PETAL {}}
+rule FLOWER {	6*{r+60} PETAL {}}
+rule FLOWER {	8*{r+45} PETAL {}}
+
+
+rule PETAL {
+		P2 {x +0.01 y +0.05 z 2 s 1 1 } 
+		P2 {x -0.01 y +0.05 z 2 s -1 1 }
+		PETAL {y+0.25 s 0.6}
+}
+
+rule PETAL {
+		P2 {x +0.01 y +0.05 z 2 s 1 1 } 
+		P2 {x -0.01 y +0.05 z 2 s -1 1 }
+
+}
+
+rule BG { BG { s 1 -1 } }
+rule BG 14 { BG {x+0.5} }
+rule BG 14 { BG {x-0.5} }
+rule BG 14 { BG {y-0.5} }
+rule BG 15 { BG {y+0.5} }
+rule BG 3 { 4*{r+90} TENTACLE { x+ 1} }
+rule BG 3 { 5*{r+72} TENTACLE { x+ 1} }
+rule BG 3 { 6*{r+60} TENTACLE { x+ 1} }
+rule BG 3 { 8*{r+45} TENTACLE { x+ 1} }
+
+rule TENTACLE 20 {
+	P1 {}
+	TENTACLE { x+0.9 s 0.9 r rand_static( 12, 45 ) }
+}
+
+rule TENTACLE {}
+
+rule PIX {	CIRCLE {s 0.8}}
+rule PIX {	PIX {s 1.05}}
+rule PIX {	PIX {r 5}}
+rule PIX {	PIX {r -5}}
+
+rule NUMLINES 15 { NUMLINE {} NUMLINES { y-1.2} }
+rule NUMLINES 2 { NUMLINE {} NUMLINES { y-2.4} }
+rule NUMLINES { NUMLINE {} }
+
+rule NUMLINE 5 { NUM {} NUMLINE {x +1}}
+rule NUMLINE { NUM {} }
+rule NUMLINE { NUMLINE {x+1} }
+
+rule NUM {NUM0 {s 0.2}}
+rule NUM {NUM1 {s 0.2}}
+rule NUM {NUM2 {s 0.2}}
+rule NUM {NUM3 {s 0.2}}
+rule NUM {NUM4 {s 0.2}}
+rule NUM {NUM5 {s 0.2}}
+rule NUM {NUM6 {s 0.2}}
+rule NUM {NUM7 {s 0.2}}
+rule NUM {NUM8 {s 0.2}}
+rule NUM {NUM9 {s 0.2}}
+rule NUM {NUM {y+0.1}}
+rule NUM {NUM {y-0.1}}
+rule NUM {NUM {x+0.1}}
+rule NUM {NUM {x-0.1}}
+rule NUM {NUM {r +5}}
+rule NUM {NUM {r -5}}
+
+
+rule NUM0 {
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 2 } 
+	PIX { x -1 y 1 } 
+	PIX { x 1 y 1 } 
+	PIX { x -1 y 0 } 
+	PIX { x 1 y 0 } 
+	PIX { x -1 y -1 } 
+	PIX { x 1 y -1 } 
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+}
+
+rule NUM1 {
+	PIX { x -1 y 2 } 
+	PIX { x 0 y 2 } 
+	PIX { x 0 y 1 } 
+	PIX { x 0 y 0 } 
+	PIX { x 0 y -1 } 
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+	PIX { x 1 y -2 } 
+}
+
+rule NUM2 {
+	PIX { x -1 y 2 } 
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 1 } 
+	PIX { x 1 y 0 } 
+	PIX { x -1 y -1 } 
+	PIX { x 0 y -1 } 
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+	PIX { x 1 y -2 } 
+}
+
+rule NUM3 {
+	PIX { x -1 y 2 } 
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 1 } 
+	PIX { x 0 y 0 } 
+	PIX { x 1 y 0 } 
+	PIX { x 1 y -1 } 
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+	PIX { x 1 y -2 } 
+}
+
+rule NUM4 {
+	PIX { x 1 y 2 } 
+	PIX { x -1 y 1 } 
+	PIX { x 1 y 1 } 
+	PIX { x -1 y 0 } 
+	PIX { x 1 y 0 } 
+	PIX { x -1 y -1 } 
+	PIX { x 0 y -1 } 
+	PIX { x 1 y -1 } 
+	PIX { x 1 y -2 } 
+}
+
+rule NUM5 {
+	PIX { x -1 y 2 } 
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 2 } 
+	PIX { x -1 y 1 } 
+	PIX { x 0 y 1 } 
+	PIX { x 1 y 0 } 
+	PIX { x 1 y -1 } 
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+}
+
+rule NUM6 {
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 2 } 
+	PIX { x -1 y 1 } 
+	PIX { x -1 y 0 } 
+	PIX { x 0 y 0 } 
+	PIX { x 1 y 0 } 
+	PIX { x -1 y -1 } 
+	PIX { x 1 y -1 } 
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+	PIX { x 1 y -2 } 
+}
+
+rule NUM7 {
+	PIX { x -1 y 2 } 
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 2 } 
+	PIX { x 1 y 1 } 
+	PIX { x 1 y 0 } 
+	PIX { x 0 y -1 } 
+	PIX { x 0 y -2 } 
+}
+
+rule NUM8 {
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 2 } 
+	PIX { x -1 y 1 } 
+	PIX { x 1 y 1 }
+	PIX { x -1 y 0 } 
+	PIX { x 0 y 0 } 
+	PIX { x 1 y 0 } 
+	PIX { x -1 y -1 } 
+	PIX { x 1 y -1 } 
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+	PIX { x 1 y -2 } 
+}
+
+rule NUM9 {
+	PIX { x 0 y 2 } 
+	PIX { x 1 y 2 } 
+
+	PIX { x -1 y 1 } 
+	PIX { x 1 y 1 } 
+
+	PIX { x -1 y 0 } 
+	PIX { x 0 y 0 } 
+	PIX { x 1 y 0 } 
+
+	PIX { x 1 y -1 } 
+
+	PIX { x -1 y -2 } 
+	PIX { x 0 y -2 } 
+}
+
+

@@ -1,0 +1,58 @@
+startshape START
+
+// Use tile to fill the screen with the picture
+tile {s 1 1}
+
+
+rule START{
+GEOM {b 1}
+}
+
+
+
+// This rule defines Geometry 
+rule GEOM
+{
+
+// SHAPE{b  .8 sat -.8 z 4}
+
+BRUSH{}
+
+DIV {s .5 x -.5     y .5                            sat  .90 }
+DIV {s .5 x -.5     y -.5    flip 180         b -.9      a -.35}
+DIV {s .5 x .5      y -.5    r  180             sat  -.8 }
+DIV {s .5 x .5      y .5     flip  90            sat  -1 h 5}
+
+}
+
+
+// Control the iterations 
+
+rule DIV {
+MULT{ s .5}
+}
+
+rule MULT {
+GEOM {s 2 z  20}
+}
+
+
+
+// Base brush
+rule BRUSH {
+SQUARE {s 1.3  z 3 r 45 a -.2}
+}
+
+
+
+// the base path of this fractal
+rule SHAPE{
+
+SQUARE {y .5 s 1 .1}
+SQUARE {y -.5 s 1 .1}
+SQUARE {x -.5 s  .1 1}
+
+SQUARE {y .5 x .75 s .5 .1}
+SQUARE {y -.75 x .5 s .1 .5}
+
+}

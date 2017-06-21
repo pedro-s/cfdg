@@ -1,0 +1,11 @@
+startshape shells
+background{b-.3 sat.2 hue 60}
+
+rule shells{
+ 5*{r 60}shell{x.3}
+}
+ 
+rule shell{
+ 9*{r 2 s 0.84 z.1 h 1.2 sat.9 b.4} 
+ CIRCLE{h 20 y-.75 x-.1 s 1 1.5 sat 1 b.2}
+}

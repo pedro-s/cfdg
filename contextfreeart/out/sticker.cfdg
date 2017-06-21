@@ -1,0 +1,29 @@
+startshape THIS_STICKER
+
+rule THIS_STICKER {
+  frame{}
+  I {x .3 y .15}
+  LOVE {x .95 y .15 }
+  THIS_STICKER { s .695 x 1.45 y .15}
+}
+
+path frame {
+  MOVETO {}   LINETO {x 0 y 1}  LINETO {x 5 y 1}  LINETO {x 5 y 0 }
+  CLOSEPOLY {}
+  STROKE{width .05}
+}
+
+path I {
+  MOVETO{}  LINETO { x 0 y .7 }
+  MOVETO{x -.2} LINEREL { x .4}
+  MOVETO{x -.2 y .7} LINEREL { x .4}
+  STROKE{}
+}
+
+path LOVE {
+  MOVETO {}
+  CURVETO {   x 0  y 0.6       x1 0.6 y1  0.4    x2 0.4 y2 0.9}
+  CURVETO {   x 0  y 0         x1 -0.4 y1  0.9    x2 -0.6 y2 0.4}
+  CLOSEPOLY{}
+  FILL{h 0 sat .9 b .7}
+}

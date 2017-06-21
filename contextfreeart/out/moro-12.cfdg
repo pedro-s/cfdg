@@ -1,0 +1,21 @@
+startshape do
+background {b -1 }
+tile { s 1.5 y 1}
+
+rule do { 
+	1* { r 45 s .9} ten { y -1 hue 150 sat 1}
+}
+rule ten { d { s .75 } 
+	ten { y -.4 s .75 r 9 z .0025 }
+	eleven { y .5 s .5 }
+}
+rule eleven {
+//	d { hue 100 b 1 }
+	3 * { r 90 } eleven { y 1 s .6}
+	ten { s .5 hue 10}
+}
+rule d {
+	CIRCLE { a -.94 hue -150 s 2.5 sat -.5 b 1}
+	30* { s .95 r 5 x -.01 y -.01 b .025 sat -.04 }
+		CIRCLE { }
+}

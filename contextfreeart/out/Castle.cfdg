@@ -1,0 +1,7 @@
+startshape Foo
+
+rule Foo {
+	SQUARE{}
+	Foo {y 0.5 x 0.5 r 45 s 0.5 h -0.9 b 0.1 sat 0.1}
+	Foo {y 0.5 x -0.5 r -45 s 0.5 h 0.9 b 0.1 sat 0.9}
+}

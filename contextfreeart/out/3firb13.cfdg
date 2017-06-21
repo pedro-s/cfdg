@@ -1,0 +1,112 @@
+startshape fir
+background { b -.2 }
+ 
+ 
+rule fir { c_u { |hue 140 b 0 sat .6 hue 30} }
+ 
+
+rule d { 
+10 * { x .01 s .92 1 b .03 sat .06 } SQUARE { s .7 1.5 }
+ }
+ 
+ 
+ 
+rule c_u_D {
+    d { }
+    c_u { z .001}
+}
+rule c_u {
+    c_u_D { y .75 s .93 r 6 }
+    c_ucont { s .75}
+}
+rule c_u {
+    c_u_D { y .75 s .93 r -6 }
+    c_ucont { s .75}
+}
+
+rule c_ucont .1 {	c_dl { }}
+rule c_ucont .1 {	c_dr { }}
+rule c_ucont .4 {	c_dl { } c_dr { }}
+rule c_ucont .4 {	c_ul { s .8 y .5 }}
+rule c_ucont .4 {	c_ur { s .8 y .5}}
+rule c_ucont .01 { }
+ 
+ 
+ 
+ 
+rule c_dl_D {
+    d { r 120 }
+    c_dl { }
+}
+rule c_dl {
+    c_dl_D { x -1 y -.5 s .9 z .2}
+    c_dlcont { s .75 hue 1| b .1}
+}
+rule c_dl { c_dl { r -2 } }
+rule c_dlcont .2 {	c_ul { }}
+rule c_dlcont .2 {	c_dr { }}
+rule c_dlcont .4 { }
+rule c_dlcont .2 {	c_dlcont { x .1}}
+rule c_dlcont .2 {	c_dlcont { x -.1}}
+ 
+ 
+ 
+ 
+ 
+rule c_dr_D {
+    d { r -120 }
+    c_dr { }
+}
+rule c_dr {
+    c_dr_D { x 1 y -.5 s .9 z .2}
+    c_drcont { s .75 hue 1|}
+}
+rule c_dr { c_dr { r 2 } }
+rule c_drcont .2 {	c_ur { }}
+rule c_drcont .2 {	c_dl { }}
+rule c_drcont .4 { }
+rule c_drcont .2 {	c_drcont { x .1}}
+rule c_drcont .2 {	c_drcont { x -.1}}
+ 
+ 
+ 
+ 
+ 
+rule c_ur_D {
+    d { r -90 }
+    c_ur { }
+}
+rule c_ur {
+    c_ur_D { x .5 y 0 s .9 z -.2}
+    c_urcont { s .5 hue 1|}
+}
+rule c_ur { c_ur { r 1 } }
+rule c_urcont .2 {	c_ul { }}
+rule c_urcont .2 {	c_dr { }}
+rule c_urcont .9 { }
+rule c_urcont .2 {	c_urcont { x .1}}
+rule c_urcont .2 {	c_urcont { x -.1}}
+ 
+ 
+ 
+ 
+ 
+rule c_ul_D {
+    d { r 90}
+    c_ul { }
+}
+rule c_ul {
+    c_ul_D { x -.5 y 0 s .9 z -.2}
+    c_ulcont { s .5 hue 1|}
+}
+rule c_ul { c_ul { r -1 } }
+rule c_ulcont .2 {	c_dl { }}
+rule c_ulcont .2 {	c_ur { }}
+rule c_ulcont .9 { }
+rule c_ulcont .2 {	c_ulcont { x .1}}
+rule c_ulcont .2 {	c_ulcont { x -.1}}
+ 
+ 
+ 
+ 
+ 

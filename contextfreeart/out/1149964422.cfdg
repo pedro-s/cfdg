@@ -1,0 +1,24 @@
+startshape WAVE
+
+background {b -1 }
+ 
+rule WAVE {
+	ROTATE { r 0}
+}
+
+
+rule ROTATE {
+	OBJECT {}
+	ROTATE {x 0 y 0 r 1 s .99}
+	
+}
+
+rule OBJECT { 
+	BASE { }
+	OBJECT {y .005 r 0  s .99  sat 1 hue .1 b 1}
+	
+}
+
+rule BASE{
+	CIRCLE { }
+}

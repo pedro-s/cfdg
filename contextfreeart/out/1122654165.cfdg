@@ -1,0 +1,17 @@
+startshape MARIGOLD{color}
+
+rule MARIGOLD{
+PETAL1{}
+PETAL2{}
+}
+
+rule PETAL1 {
+CIRCLE{x 1 y 2 skew 20 40  sat 0.5 b 0.8}
+PETAL1{s 0.99 r 15 b 0.025 hue 1.5 sat 0.5 b 0.025}
+PETAL2{s 0.99 r -15 hue 1.5 sat 0.7  }
+}
+
+rule PETAL2 {
+CIRCLE{x 1 y 2 skew 20 40  sat 0.5 b 0.8 }
+PETAL2{s 0.99 r -15 hue 1.5 sat 0.5 b 0.025}
+}

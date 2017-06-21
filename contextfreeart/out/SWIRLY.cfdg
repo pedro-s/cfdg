@@ -1,0 +1,12 @@
+startshape thing
+background {b-1}
+rule thing { do {h 267.97 sat 1.0000 b 0.5193} }
+rule do {
+SQUARE  {r 5 b 1}
+SQUARE  {r 10 b 1}
+SQUARE  {r 15 b 1}
+SQUARE {r 5 b 1}
+SQUARE {r 10 b 1}
+SQUARE {r 15 b 1}
+do {r 2 s.98 h 113.06 sat 1.0000 b 1.0000 }
+}

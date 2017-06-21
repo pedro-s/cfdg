@@ -1,0 +1,12 @@
+startshape vynil
+
+rule vynil {
+	thinLine { }
+	thinLine { flip 90 }
+	CIRCLE { s 7 y 203 }
+}
+
+rule thinLine {
+	SQUARE {}
+	thinLine { x 1 r .28 s .99999 }
+}

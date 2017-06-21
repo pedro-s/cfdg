@@ -1,0 +1,36 @@
+startshape start
+
+background {sat 1 hue 20}
+
+rule start {
+	ccccc {sat 1}
+	ccccc {sat 1 x -0.02 y 0.02 a -0.2 z 0.1}
+}
+
+rule ccccc {
+	cccc {}
+	ccccc {x 1.01 y 0.275 s 0.52 b 0.01  r 60}
+}
+
+rule cccc {
+	ccc {}
+	ccc {s 0.8 r 68 x 0.756 y -0.999}
+}
+rule ccc {
+	cc {}
+	ccc {r 109 x -0.24 y -0.74 s 0.689}}
+
+rule cc {
+	c {}
+	c {x 0.675 s 0.689}
+	cc {x 0.675 s .474721 r 180 y 0.465}
+}
+
+rule c {
+	cs {}
+}
+rule cs {
+	CIRCLE {b 0.75 hue 128}
+	CIRCLE {b 1 s 0.5 hue 22}
+	CIRCLE {b 0.75 s 0.25 hue 128}
+}

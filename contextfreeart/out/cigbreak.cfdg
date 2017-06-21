@@ -1,0 +1,47 @@
+startshape lcurve
+
+////////////////////////////
+
+rule lcurve 40 {
+	SQUARE { r -1 }
+	lcurve { y 0.9 r 2 }
+}
+
+rule lcurve 3 {
+	tap { r -90 }
+	lcurve { }
+}
+
+rule lcurve 1 {
+	CIRCLE { y 2 }
+}
+
+////////////////////////////
+
+rule tap 30 {
+	SQUARE { }
+	tap { y 0.9 }
+}
+
+rule tap 2 {
+	lcurve { r -90 }
+}
+
+rule tap 2 {
+	cig { s 2 }
+}
+
+rule tap 3 {}
+
+////////////////////////////
+
+rule cig {
+	SQUARE { sat 0 b 0
+				y 5.1 x 0 s 1.2 10.2 }
+	SQUARE { hue 40 sat 0.76 b 0.8
+				y 1.35 s 1 2.5 }
+	SQUARE { sat 0 b 0.9
+				y 6.3 s 1 7.4 }
+	SQUARE { sat 0 b 0.5
+				y 9.7 s 1 0.8 }
+}

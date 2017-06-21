@@ -1,0 +1,16 @@
+startshape X
+
+rule X {
+	Y { }
+	X { x 2 y 1 r 40 s .75 b .1 }
+}
+
+rule Y {
+	hair { }
+	X { y .75 r 60 s .45 b .1 }
+}
+
+rule hair {
+	TRIANGLE { flip 180 }
+	hair { x .2 r 1 s .975 }
+}

@@ -1,0 +1,67 @@
+startshape WAVE
+
+CF::Background = [b-1]
+
+shape WAVE
+{
+CIRCLE [x.5  s .9 h 60.95 sat 0.6864 b 1.0000]
+
+//Tree
+loop 7 [ y .15 r -3 s .95]
+CIRCLE [x .5 y .4 s .23 h 20.81 sat 1.0000 b 0.6796]
+
+//Leaves
+loop 4 [x -.02 r 7 s .9]
+CIRCLE [x .5 y 1 s .2 h 90.71 sat 1.0000 b 0.7901]
+
+loop 4 [x -.01 y .1 r -13 s .9]
+CIRCLE [x .6 y 1 s .2 h 90.71 sat 1.0000 b 0.7901]
+
+loop 4 [x .02 y .1 r 8  s .9]
+CIRCLE [x .55 y 1.1 s .2 h 90.71 sat 1.0000 b 0.7901]
+
+loop 4 [x  -.02  y .3 r -17 s .9]
+CIRCLE [x .6  y 1.1 s .2 h 90.71 sat 1.0000 b 0.7901]
+
+loop 4 [x  -.02  y .3 r -2 s .9]
+CIRCLE [x .6  y 1.1 s .2 h 90.71 sat 1.0000 b 0.7901]
+
+//Coconuts
+CIRCLE [x .501 y 1 s .2 h 19.75 sat 0.9208 b 0.3923]
+CIRCLE [x .601 y 1 s .2 h 19.75 sat 0.9208 b 0.3923]
+CIRCLE [x .57 y 1.1 s .2 h 19.75 sat 0.9208 b 0.3923]
+
+
+
+//Wave 3
+CIRCLE [y -.3 s .37 h 214.78 sat 0.9740 b 1.0000]
+CIRCLE [x .2 y -.3 s .37 h 214.78 sat 0.9740 b 1.0000]
+CIRCLE [x .4 y -.3 s .37 h 214.78 sat 0.9740 b 1.0000]
+CIRCLE [x .6 y -.3 s .37 h 214.78 sat 0.9740 b 1.0000]
+CIRCLE [x .8 y -.3 s .37 h 214.78 sat 0.9740 b 1.0000]
+CIRCLE [x 1 y -.3 s .37 h 214.78 sat 0.9740 b 1.0000]
+
+//sun
+
+CIRCLE [x -1 y 2 s .8 h 28.35 sat 0.9595 b 1.0000]
+
+
+//Wave 2
+CIRCLE [y -.15 s .30 h 205.35 sat 0.9344 b 1.0000]
+CIRCLE [x .2 y -.15 s .30 h 205.35 sat 0.9344 b 1.0000]
+CIRCLE [x .4 y -.15 s .30 h 205.35 sat 0.9344 b 1.0000]
+CIRCLE [x .6 y -.15 s .30 h 205.35 sat 0.9344 b 1.0000]
+CIRCLE [x .8 y -.15 s .30 h 205.35 sat 0.9344 b 1.0000]
+CIRCLE [x 1 y -.15 s .30 h 205.35 sat 0.9344 b 1.0000]
+
+//Top Waves
+CIRCLE [s .25 h 197.61 sat 0.7344 b 0.9613]
+CIRCLE [x .2 s .25 h 197.61 sat 0.7344 b 0.9613]
+CIRCLE [x .4 s .25 h 197.61 sat 0.7344 b 0.9613]
+CIRCLE [x .6 s .25 h 197.61 sat 0.7344 b 0.9613]
+CIRCLE [x .8 s .25 h 197.61 sat 0.7344 b 0.9613]
+CIRCLE [x 1 s .25 h 197.61 sat 0.7344 b 0.9613]
+
+
+
+}

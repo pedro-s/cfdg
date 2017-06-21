@@ -1,0 +1,11 @@
+startshape CS1
+
+rule CS1 {
+	FRED { r -90 }
+}
+
+rule FRED {
+	CIRCLE { y 0.0125 s .975 b 0 }
+	CIRCLE { y 0.0246875 s .950625 b 1 }
+	FRED { s .950625 r -20 }
+}

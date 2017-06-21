@@ -1,0 +1,9 @@
+startshape r0
+background {b -1}
+tile {s 4 3}
+rule r0{r2{a -100 sat 1 b 1}}
+rule r2{72*{r 5} r1{a 0.01}}
+rule r1{r1[x 0.02 s 1.01 h 0.15] TRIANGLE[]}
+rule r1 0.05 {}
+rule r1 0.003 {r0{s 0.3}}
+

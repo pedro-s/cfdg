@@ -1,0 +1,27 @@
+startshape rods_and_joints
+background{hue 160 sat .6 b -0.8} 
+
+
+
+rule rods_and_joints {
+ piece {sat 1 b 1 hue 10}
+}
+
+rule piece {
+ rod { }
+ piece {r -15 x -0.195 s 0.98 0.91 hue 5 alpha -0.07}
+ piece [flip 90  x -0.5 y -0.15 r 90 s 0.5 hue -10 alpha 0.1]
+
+}
+
+rule rod {
+ SQUARE {s 1 0.01}
+ joint {x -0.496 s 0.03}
+ joint {x 0.5 s 0.03}
+ joint {x -0.2 s 0.03}
+}
+
+rule joint { 
+ CIRCLE { }
+// joint {b 0.01 s 0.99}
+}

@@ -1,0 +1,12 @@
+startshape dragon
+background{hue 208.2 sat 0.4653 b -0.6318 } 
+rule dragon{
+	dragon{ s .68 r 135  x +.25 y -.25 b 0.1  }
+	dragon{ s .68 r 45 x +.25 y+.25 b 0.1 }
+	cercle{  hue 208.2 sat 0.4653 b 0.6318  }
+	 
+}
+rule cercle{
+	CIRCLE{ s .25 b 0.15}
+	cercle{ s .98 y 0.001 skew 0.1 0.1 b -0.05} 
+}

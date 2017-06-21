@@ -1,0 +1,165 @@
+startshape HIGHROLLERSDRINK
+background{ b -1 } 
+rule HIGHROLLERSDRINK{
+MARTINI {}
+
+CUBE {s 2.5 x 14 y 2}
+CUBE {s 2.4 x 20 y 2.8}
+}
+
+rule MARTINI {
+GLASS {}
+WITH {s .13 y 24 r 130 x -3.6 z -1}
+
+}
+
+rule GLASS {
+
+//BOOZE {a -.7}
+CUP {a -.7 y 17}
+STEM {a -.7}
+PIED {a -.7 }
+PIED {a -.7 flip 90}
+RIM {a -.9}
+}
+
+
+rule RIM {
+
+CIRCLE { s 20 2.5 hue 236.3099 sat .35 b 0.4980 y 26 z -7}
+RIM {s .97 y .5 z 1}
+}
+
+
+
+rule BOOZE {
+
+TRIANGLE {r 180 s 19 9 hue 236.3099 sat .5 b 0.4980 y 22.6}
+}
+
+rule CUP{
+STEM {r 50 s  1 .85}
+STEM {r -50 s  1 .85}}
+
+rule STEM {
+
+17 * {y 1.024} GLASSUNIT {}
+
+}
+
+
+rule PIED {
+
+GLASSUNIT {y -.5 r 90}
+PIED {x -.98 s .9 y -.08}
+}
+
+
+rule GLASSUNIT {
+
+SQUARE { s 1 hue 236.3099 sat 0.4883 b 0.4980}
+SQUARE { s .4 1 hue 178.2376 sat 0.6774 b 0.6980}
+}
+
+
+
+
+rule WITH {
+TOOTHPICK {z -1}
+HOWMANY {}
+}
+rule HOWMANY {
+
+TURNED_PO {}
+
+}
+
+rule HOWMANY {
+
+TURNED_PO {x -13}
+TURNED_PO { x 13}
+
+}
+rule HOWMANY {
+
+TURNED_PO {x -26}
+TURNED_PO {}
+TURNED_PO {x 26}
+
+}
+rule TURNED_PO {
+TURNED_PO {r 3.6}
+}
+rule TURNED_PO 0.01 {
+PITTEDOLIVE {s 26}
+}
+rule TOOTHPICK {
+
+SQUARE {s 80 1 hue 58.7363 sat 0.6824 b 0.6059}
+POINT {x 40.55}
+POINT {x -40.55 flip 90}
+}
+
+
+rule POINT {
+SQUARE {hue 58.7363 sat 0.6824 b 0.6059}
+POINT {x .5 s .95}
+
+}
+
+rule PITTEDOLIVE {
+OLIVE {}
+PIT {z 1 y .26 }
+}
+rule OLIVE {
+	CIRCLE {s .87 1 hue 107.9691 sat 0.4052 b .4}
+	OLIVE {  s .98 b .04 }
+}
+rule PIT {
+	CIRCLE {s .4 .3 hue 13.1839 sat 0.9409 b 0.5255}
+}
+
+
+rule CUBE { 
+SQUARE{a -.2 x .5 y -.5  skew 0 30 h 2 sat 1 b .6} // right front side 
+SQUARE{a -.2 x -.5 y -.5 skew 0 330 h 2 sat 1 b .6} // left front side 
+SQUARE {a -.2 s 1.112 skew 15 15 r 315 y .288 h 2 sat 1 b .6} // top side
+DOTS {}
+}
+
+rule DOTS .1 { //four on top
+CIRCLE {s .2 .16 b 1} 
+CIRCLE {s .2 .14 y .6 b 1} 
+CIRCLE {s .2 .15 y .3 x .6 b 1} 
+CIRCLE {s .2 .15 y .3 x -.6 b 1} 
+CIRCLE {s .13 .2 x -.8 y -.05 skew 0 -10 b 1}
+CIRCLE {s .13 .2 x -.8 y -.35 skew 0 -10 b 1}
+CIRCLE {s .13 .2 x -.8 y -.65 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -.4 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -.7 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -1 skew 0 -10 b 1}
+CIRCLE {s .13 .2 x .8 y -.05 skew 10 0 b 1} 
+CIRCLE {s .14 .2 x .2 y -.95 skew 10 0 b 1} 
+} 
+
+rule DOTS .1 { // two on top
+CIRCLE {s .2 .16 b 1} 
+CIRCLE {s .2 .14 y .6 b 1} 
+CIRCLE {s .13 .2 x -.55 y -.5 skew 0 -10 b 1} 
+CIRCLE {s .13 .2 x .8 y -.05 skew 10 0 b 1} 
+CIRCLE {s .13 .2 x .8 y -.60 skew 10 0 b 1} 
+CIRCLE {s .14 .2 x .2 y -.45 skew 10 0 b 1} 
+CIRCLE {s .14 .2 x .2 y -.95 skew 10 0 b 1} 
+}
+
+rule DOTS .1 { // three on top
+CIRCLE {s .2 .16 b 1} 
+CIRCLE {s .2 .14 y .6 b 1} 
+CIRCLE {s .2 .15 y .3 b 1} 
+CIRCLE {s .13 .2 x -.8 y -.05 skew 0 -10 b 1} 
+CIRCLE {s .13 .2 x -.8 y -.65 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -.4 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.52 y -.54 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -1 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x .5 y -.55 skew 10 0 b 1} 
+}

@@ -1,0 +1,15 @@
+startshape CARACOL
+
+rule CARACOL {
+    EITHER {x -1}
+    EITHER {x 1}
+}
+
+rule EITHER {BL{}}
+rule EITHER {BL{}}
+
+rule BL {
+    125*{r 1}CIRCLE{size 0.2 y 2 b 0.5 sat 0.7 }    
+    WL {r -12 size 1.026 y 0.5 hue 10}
+}
+rule WL {EITHER  {}}

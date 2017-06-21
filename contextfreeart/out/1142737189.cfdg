@@ -1,0 +1,22 @@
+startshape KOCHSTART
+
+rule KOCHSTART
+{
+	KOCH { b 0 }
+}
+
+rule KOCH
+{
+	TRIANGLE { x -0.334 y 0.193 size 0.3333 r -60 }
+	TRIANGLE { x 0.334 y 0.193 size 0.3333 r 60 }
+	TRIANGLE { x 0 y -0.385 size 0.3333 r 180 }
+	TRIANGLE { x 0 y 0 size 1 }
+	
+	KOCH { x -0.334 y -0.193 size 0.3333 r 60  alpha -0.3 }
+	KOCH { x 0.334 y -0.193  size 0.3333 r -60 alpha -0.3 }
+	KOCH { x 0 y 0.3849 size 0.3333 alpha -0.3 }
+
+	KOCH { x -0.334 y 0.193 size 0.3333 r 60 alpha -0.3 }
+	KOCH { x 0.334 y 0.193 size 0.3333 r -60 alpha -0.3  }
+	KOCH { x 0 y -0.385 size 0.3333 r 180 alpha -0.3  }
+}

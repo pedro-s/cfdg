@@ -1,0 +1,29 @@
+startshape sheet 
+ 
+background {b -1}
+ 
+rule sheet {
+    CUBE1 {}
+    ROW {}
+    ROWS {}
+   sheet { x -1 y 1 r 48.85 s 0.955 b 01.2 hue .66}
+      }
+ 
+rule CUBE1 { 
+SQUARE{x .58 y -.5  skew 0 40 h 92 sat 1 b .77} 
+SQUARE{x 1.5 y -.5 skew 0 3840 h 9 sat 1 b .7} 
+SQUARE {s .6 skew 275 25 r 35 x 1 y -1.18 h 452 sat 81 b .5}
+
+}
+ 
+rule ROW {
+30* [x 2] CUBE1{}
+}
+rule ROWS {
+30* [x 17 y 1 r 90] ROW {}
+}
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,52 @@
+# Experimental Fractal 010: Cactus
+# 
+# This is a Context Free (www.contextfreeart.org)
+# script made by Jonas John (www.jonasjohn.de)
+# 
+# Feel free to use the whole code, parts of it 
+# or the created figure for your own projects.
+# But please credit me in some way -- Thanks :-)
+
+startshape start
+
+# looks better on black
+background { b -1 }
+
+rule start {
+    spike { sat 1 b 1 }
+    
+    # repeat this routine
+    start { x 1 r 40 y -1 }
+}
+
+rule start .5 {
+    spike { sat 1 b 1 }
+    
+    # repeat this routine
+    start { x 1 r 10 y -1 }
+}
+
+rule start .1 {
+    spike { sat 1 b 1 }
+    
+    # repeat this routine
+    start { x 1 r 65 y -1 }
+}
+
+rule start .05 {
+    spike { sat 1 b 1 }
+    
+    # repeat this routine
+    start { x 1 r 100 y -1 }
+}
+
+rule start .001 {
+    # stop this recursion
+} 
+
+# draw a spike:
+rule spike {
+    SQUARE { }
+    spike { x .975 s .95 hue 1.2 }
+}
+

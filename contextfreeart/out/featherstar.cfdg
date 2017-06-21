@@ -1,0 +1,51 @@
+startshape FEATHERSTAR
+
+ background {hue 0 sat 1 b 0}
+
+rule FEATHERSTAR {
+	FEATHER {x 0 y 0}
+	FEATHERSTAR {r 50 size .9965}
+}
+
+rule FEATHER {
+	SINGL {
+		x 3 y -55
+		r 0 b 1 s 10
+	}
+	SINGL { flip 90
+		x 5 y -55
+		r 0 b 1 s 10
+}
+	REC {
+	}
+}
+rule REC 2 {
+	FEATHER { y -27 x 0
+         rotate 0
+         size 0.5 }
+}
+
+rule SINGL {
+	STEML { }
+	STEML { x 5 r 5 flip 0 }
+	SINGL { x 1 size 0.99 r -10}
+}
+rule SINGL 5 {
+	STEML { }
+	STEML { x 5 r 5 flip 0 }
+	SINGL { x 1 size 0.99 r 1}
+}
+rule SINGL  {
+	STEML { }
+	STEML { x 5 r 5 flip 0 }
+	SINGL { x 1 size 0.99 r 5}
+}
+rule STEML {
+	WHISP { r 1 s 0.1 }
+}
+
+rule WHISP {
+	CIRCLE { }
+	CIRCLE {x 5 }
+	WHISP { x 0.8 r -1 s 0.99}
+}

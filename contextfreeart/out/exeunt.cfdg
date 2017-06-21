@@ -1,0 +1,58 @@
+/*
+	EXEUNT
+	www.lazymoon.org
+	exeunt.cfdg
+*/
+
+startshape I
+background {b -0.8}
+rule I {
+	16*[r 45] TWIRL[h 273 |h 343 sat 0.5 |sat 0.9 b 1.0 ]
+}
+
+rule TWIRL 45{
+	SY[]
+	TWIRL[x 1 s 0.99 h 0.01| sat 0.01|]
+}
+rule TWIRL 5{
+	TURNL[]
+}
+rule TWIRL 5{
+	TURNR[]
+}
+
+rule TURNL 95{
+	SY[]
+	TURNL[x 1 r 10]
+}
+rule TURNL 5{
+	E[]
+}
+
+rule TURNR 95{
+	SY[]
+	TURNR[x 1 r -10]
+}
+rule TURNR 5{
+	E[]
+}
+
+rule E {
+	C[a -0.9 s 0.5]
+	TWIRL[]
+}
+
+rule C{CIRCLE[s 10 z -5000]}
+rule C{CIRCLE[s 20 z -5000]}
+rule C{CIRCLE[s 30 z -5000]}
+
+rule SY{CIRCLE[a -0.5]S[y -1]}
+rule SY{CIRCLE[a -0.5]S[y -2]}
+rule SY{CIRCLE[a -0.5]S[y 1]}
+rule SY{CIRCLE[a -0.5]S[y 2]}
+
+rule S {SQUARE[s 1 0.5]}
+rule S {SQUARE[s 1 0.8]}
+rule S {SQUARE[s 1 0.6]}
+rule S {SQUARE[s 1 0.4]}
+rule S {SQUARE[s 1 0.2]}

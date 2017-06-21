@@ -1,0 +1,23 @@
+startshape ingestion
+
+background { b -.95 }
+
+rule ingestion {
+	70* { r (360/100) } trip { |h 0 h 60 sat .9 b .1 }
+}
+
+rule trip { acid { } }
+rule shrooms { acid { } }
+rule acid { shrooms { } }
+rule shrooms 10 {
+  pix { }
+  shrooms { x .5 r -10 s .999 h -.0006| sat .0001 b .0005 }
+}
+rule acid 10 {
+  pix { }
+  acid { y .5 r 40 s .999 h -.0006| sat .0001 b .0005 }
+}
+
+rule pix {
+  CIRCLE { a -.5 }
+}

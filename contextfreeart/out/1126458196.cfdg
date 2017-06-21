@@ -1,0 +1,48 @@
+startshape family
+
+rule family { 
+TREE {} 
+family {x 5 y 0.5 s 0.5  hue 10 sat .5} 
+family {x 1 y 0.5 s 0.5 hue 10 sat .5 } 
+family {x -7 y 0.5 s 0.5  hue 10 sat .5} 
+family {x -3 y 0.5 s 0.5 hue 10 sat .5 } 
+
+} 
+
+
+rule TREE  10 {
+    	TRIANGLE { s .30 1}
+
+   	TREE { y 0.4 size 0.945 b .02 r 10}
+}
+
+rule TREE  10 {
+	TRIANGLE { size 0.30 1.5  hue 90 sat .5}
+
+	TREE { y 0.4 size 0.945 r -10 b .01}
+}
+
+
+rule TREE 2.5{
+	ZWEIG {}
+}
+
+rule ZWEIG{
+	ZWEIG_LINKS  {}
+	ZWEIG_RECHTS {}
+}
+
+rule ZWEIG_LINKS 3{
+	TREE {r 15 s .98}
+}
+rule ZWEIG_LINKS{
+	TREE {r 10 s .99}
+}
+
+
+rule ZWEIG_RECHTS 3{
+	TREE {r -5 s .98}
+}
+rule ZWEIG_RECHTS{
+	TREE {r -10 s .99 }
+}

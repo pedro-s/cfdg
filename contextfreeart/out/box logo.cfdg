@@ -1,0 +1,22 @@
+startshape box
+background{h 195.28 sat 0.6518 b 0.9686}
+rule box
+
+{
+//top of box
+TRIANGLE {h 0.00 sat 0.0000 b 0.2707}
+
+TRIANGLE{r 180 x .499999  y .285 h 0.00 sat 0.0000 b 0.2707}
+
+
+//left 
+TRIANGLE{r 60 x -.01 y -.6 }
+
+TRIANGLE{x .49 y -.89}
+
+//right
+TRIANGLE{x 1.03 y .001}
+
+TRIANGLE{r 60 x 1.03 y -.5755}
+
+}

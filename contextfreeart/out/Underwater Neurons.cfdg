@@ -1,0 +1,43 @@
+startshape START
+//background {hue 190 sat .9 b 1}
+
+rule START
+{
+	RING {z 100 hue 360 sat 1 b 1 alpha 0}
+	RING {z 100 s .7 .7 hue 40 sat 1 b 1 alpha 0}
+	RING {z 100 s .8 .8 alpha 0}
+	CIRCLE {z 100 s 6 6 alpha 0}
+	6 * {r 60} BRANCH {hue 360 sat .8 b .5 x -6.1}
+}
+
+rule RING
+{
+	360 * {r 1} SQUARE {x -5}
+}
+
+rule BRANCH
+{
+	SQUARE {}
+	BRANCH {x -1.2}
+}
+
+rule BRANCH .1
+{
+	SQUARE {}
+	BRANCH {r 22 x -1.2}
+}
+
+rule BRANCH .1
+{
+	SQUARE {}
+	BRANCH {r -22 x -1.2}
+}
+
+
+//Recurse
+rule BRANCH .01
+{
+	CIRCLE {}
+	//7 * {r 51} BRANCH {z -1 s .5 x -1.1 alpha -.1}
+	START {s .5 x -1.1 alpha 0}
+}

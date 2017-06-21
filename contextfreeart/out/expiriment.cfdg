@@ -1,0 +1,31 @@
+startshape D
+background { h 74.80 sat 0.9326 b 0.7293 }
+rule D { 20* { y 100 }
+C { }
+}
+
+
+
+rule C {40* { s 2 y .4 r 20}
+B { r 20  x ..4 }
+A { }
+}
+
+
+
+
+
+rule B {40* { s 2 y .4 r 20}
+A { r 20  x .4 }
+}
+rule A { SQUARE { b -1 }
+TRIANGLE { h 56.31 sat 0.8012 b 0.7017}
+TRIANGLE { r 60 h 56.31 sat 0.8012 b 0.7017 }
+CIRCLE { s .5 h 0.00 sat 0.0000 b 0.7680 }
+SQUARE { r 36 s .3 x -.2 y -.2 h 8.13 sat 0.9428 b 0.7293 }
+SQUARE { r 12 s .3 x .2 y .2 h 8.13 sat 0.9428 b 0.7293 }
+SQUARE { r 13 s .3 x -.1 y -.2 h 8.13 sat 0.9428 b 0.7293 }
+CIRCLE { s .3 x .2 y .2 h 236.50 sat 0.9060 b 0.7293 }
+TRIANGLE { s .3 x -.1 y -.2 h 56.31 sat 0.8012 b 0.7017 }
+
+}

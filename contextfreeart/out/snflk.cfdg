@@ -1,0 +1,22 @@
+startshape iter2
+
+rule iter {
+	SHAPE {r 45}
+	5*{r 72} iter2 {x 7 s .5}
+}
+
+rule iter2 {
+	SHAPE {}
+	4*{r 90} iter {x 7 s .5}
+}
+
+rule SHAPE {
+	SQUARE {s 10 .8 r 45}
+	SQUARE {s 5 .9 r 45 b 1}
+	SQUARE {s 10 .8 r -45}
+	SQUARE {s 5 .9 r -45 b 1}
+	SQUARE {s 2 .6 y 2.5}
+	SQUARE {s 2 .6 y -2.5}
+	SQUARE {s 2 .6 x 2.5 r 90}
+	SQUARE {s 2 .6 x -2.5 r 90}
+}

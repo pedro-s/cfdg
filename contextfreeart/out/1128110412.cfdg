@@ -1,0 +1,26 @@
+startshape START
+background { b -1 }
+
+rule START {
+   SPIRAL{}
+   SPIRAL { r 120 }
+   SPIRAL { r 240 }
+}
+
+rule SPIRAL {
+   F_SQUARES { }
+   F_TRIANGLES { x 0.5 y 0.5 r 45 }
+   SPIRAL { y 1 r 35 s 0.97 }
+}
+
+rule F_SQUARES {
+  SQUARE {  hue 220 sat 0.9 b 0.33  }
+   SQUARE { s 0.9  sat 0.75 b 1 }
+   F_SQUARES { s 0.7 r 15 hue 55}
+}
+
+rule F_TRIANGLES {
+#  TRIANGLE {  hue 10 sat 0.9 b 0.33  s 2 0.5}
+  TRIANGLE { s 1.9 0.4 sat 0.7 b 1 }
+  F_TRIANGLES { s 0.8 r 5 hue 25}
+} 

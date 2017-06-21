@@ -1,0 +1,49 @@
+startshape grid
+
+rule grid {
+20* {y 1 } row {} 
+  }
+rule row {
+20* {x 1 } core {} 
+  }
+rule core {
+ CIRCLE { s .5}
+}
+rule core {
+ CIRCLE { s .5}
+ SQUARE { b 1 s .5 y .25 }
+}
+rule core {
+ CIRCLE { s .5}
+ SQUARE { b 1 s .5 y -.25 }
+}
+rule core {
+ CIRCLE { s .5}
+ SQUARE { b 1 s .5 x .25 }
+}
+rule core {
+ CIRCLE { s .5}
+ SQUARE { b 1 s .5 x -.25 }
+}
+
+rule core  {
+  SQUARE { s .5}
+  CIRCLE { b 1 s .5 y .25}
+}
+rule core  {
+  SQUARE { s .5}
+  CIRCLE { b 1 s .5 y -.25}
+}
+rule core  {
+  SQUARE { s .5}
+  CIRCLE { b 1 s .5 x .25}
+}
+rule core  {
+  SQUARE { s .5}
+  CIRCLE { b 1 s .5 x -.25}
+}
+rule core {
+  SQUARE {s .5}
+}
+
+rule core .5  {}

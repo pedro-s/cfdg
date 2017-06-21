@@ -1,0 +1,24 @@
+startshape SF
+background{b -1}
+
+rule SF {
+	6*{r 60}ARM{ }
+}
+rule ARM {
+	SPHERE{ s 5 1}
+	ARM { x 3 s 0.6 r 32 alpha -0.03}
+	ARM {x 3 s 0.6 r -32 alpha -0.03}
+}
+
+rule SPHERE {
+	COLORING{ h 60 b 0.25 }
+}
+
+rule COLORING {
+	SHAPE{}
+	COLORING { x 0.001 y 0.001 z 1 s 0.99  b 0.05 hue 0.15 }
+}
+
+rule SHAPE {
+	CIRCLE{}
+}

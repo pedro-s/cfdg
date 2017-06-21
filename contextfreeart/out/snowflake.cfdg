@@ -1,0 +1,36 @@
+startshape SNOWFLAKE
+background { h 55.19 sat 0.3495 b 0.3291 }
+
+rule SNOWFLAKE { 
+	6* {r 60} SPIKE {}
+}
+
+rule SPIKE {
+	SQUARE { h 55.19 sat 0.3495 b -0.1129 }
+	SPIKE { y 0.95 s 0.97 }
+}
+rule SPIKE 0.03 {
+	SQUARE {}
+	SPIKE { r 60 }
+	SPIKE { r -60 }
+	SPIKE { y 0.95 s 0.97  }
+}
+rule SNOWFLAKE {
+	6* {r 60} SPIKE {}
+}
+
+rule Trident {
+	ZigL { x 0 b 0.02 }
+	Zig { h -64.32 sat -0.1018 b 0.0576 }
+	ZagL { x 0 b 0.02 flip 90}
+	CIRCLE { x 10 y 10 s 6 b 0.75 }
+	CIRCLE { x -10 y 10 s 6 b 0.75 }
+//	CIRCLE { x 17 y 15 s 4 b 0.75 }
+//	CIRCLE { x -17 y 15 s 4 b 0.75 }
+}
+
+
+
+
+
+

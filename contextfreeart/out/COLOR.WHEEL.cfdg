@@ -1,0 +1,86 @@
+startshape CRWH
+
+CF::Background = [ a -1]
+
+shape CRWH
+
+
+{
+
+
+//wing red
+
+CIRCLE [ z 1 h 4.18 sat 0.9135 b 1.0000 y 1.25 s 1.25] 
+
+//wing r center 
+CIRCLE [z 1 h 315.00 sat 0.0314 b 1.0000 s -1  y 1.25]
+
+CIRCLE [z 1 h 0.00 sat 0.0000 b 0.0000 s -.65  y 1.25]
+
+//wing red-orange 
+CIRCLE [h 22.29 sat 0.7325 b 1.0000 s 1.25  y 1.03  x .7 ]
+
+//wing r-o center 
+CIRCLE [ h 323.13 sat 0.0556 b 1.0000  x .7  y 1.03 ] 
+
+//wing orange 
+CIRCLE [ h 30.61 sat 0.9166 b 1.0000 s 1.25 x 1.15 y .5]
+
+//wing o center 
+CIRCLE [h 26.57 sat 0.0497 b 1.0000 x 1.15 y .5]
+
+//wing yellow-orange 
+CIRCLE [h 41.42 sat 0.7557 b 1.0000 s 1.25  x 1.23  y -.2 ] 
+
+//wing y-o center
+CIRCLE [ h 333.43 sat 0.0248 b 1.0000 x 1.23 y -.2 ]
+
+//wing yellow
+CIRCLE [ h 57.36 sat 0.8445 b 1.0000 s 1.25 x .97  y  -.8 ]
+
+//wing y center 
+CIRCLE [ h 315.00 sat 0.0314 b 1.0000 x .97  y -.8 ]
+
+//wing yellow-green 
+CIRCLE [ h 95.44 sat 0.7032 b 1.0000 s 1.25 x .5  y -1.15]
+
+//wing y-g center 
+CIRCLE [ h 26.57 sat 0.0248 b 1.0000 x .5 y -1.15]
+
+//wing green 
+CIRCLE [h 110.82 sat 0.8440 b 1.0000 s 1.25 y -1.25]
+
+//wing g center 
+CIRCLE [ h 345.96 sat 0.0458 b 1.0000 y -1.25]
+
+//wing green-blue
+CIRCLE [h 139.97 sat 0.7255 b 1.0000 s 1.25 x -.7 y -1.03]
+
+//wing g-b center
+CIRCLE [ h 29.74 sat 0.0896 b 1.0000 x -.7 y -1.03 ]
+
+//wing blue 
+CIRCLE [ h 210.19 sat 0.7070 b 1.0000 s 1.25 x -1.15 y -.5]
+
+//wing b center 
+CIRCLE [ h 45.00 sat 0.0786 b 1.0000 x -1.15 y -.5]
+
+//wing blue-purple 
+CIRCLE [ h 239.04 sat 0.5183 b 1.0000 s 1.25 x -1.23 y .2]
+
+//wing b-p center 
+CIRCLE [ h 303.69 sat 0.0801 b 1.0000 x -1.23 y .2]
+
+//wing purple 
+CIRCLE [h 256.89 sat 0.8328 b 1.0000 s 1.25 x -.97 y .8]
+
+//wing p center
+CIRCLE [h 0.00 sat 0.0111 b 1.0000 x -.97 y .8]
+
+//wing purple-red 
+CIRCLE [h 283.69 sat 0.8920 b 1.0000 s 1.25 x -.5 y 1.15]
+
+//wing p-r center 
+CIRCLE [h 315.00 sat 0.0314 b 1.0000 x -.5 y 1.15]
+
+}

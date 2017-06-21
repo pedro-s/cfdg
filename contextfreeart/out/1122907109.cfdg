@@ -1,0 +1,48 @@
+startshape INIT { color }
+
+include random_words.cfdg
+
+rule INIT {
+	WORD{ r 90 }
+	GRASS{hue 128 b 1 sat 1}
+}
+
+rule WORD_HOOK{
+	WORD {s 0.9 r 20}
+}
+rule WORD_HOOK{
+	WORD {s 0.9 r -20}
+}
+rule WORD_HOOK 0.7 {
+	WORD {s 0.9 r 15}
+	WORD {s 0.9 r 15 flip -15}
+}
+rule WORD_HOOK 0.1 {
+	WORD {}
+	WORD {s 0.3 r 70}
+}
+rule WORD_HOOK 0.1 {
+	WORD {}
+	WORD {s 0.3 r -70}
+}
+
+### the grass
+
+rule GRASS{
+	BLADE {}
+	GRASS_R{x 1 s 0.99}
+	GRASS_R{x 1 s 0.99 flip 90}
+}
+
+rule GRASS_R {
+	BLADE{}
+	GRASS_R{x 0.2 s 0.99 r -0.01 b -0.1}
+}
+rule GRASS_R {
+	BLADE{}
+	GRASS_R{x 0.2 s 0.99 r -0.01 b 0.1}
+}
+
+rule BLADE{ TRIANGLE {} BLADE{y 0.2 s 0.8 1}}
+rule BLADE{ TRIANGLE {} BLADE{y 0.2 r 8 s 0.8 1}}
+rule BLADE{ TRIANGLE {} BLADE{y 0.2 r -8 s 0.8 1}}

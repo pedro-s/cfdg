@@ -1,0 +1,34 @@
+startshape p
+background { b -1 }
+rule p 
+{
+	oth {}
+	oth { x 2.5}
+	oth { x 5}
+}
+rule oth
+	{
+	pos { x .5 y .5 }
+	pos { x -.5	y -.5}
+	pos { x .5 y -.5 }
+	pos { x -.5 y .5}
+	oth { s .9 }
+}
+rule pos
+{
+	hollow {  x 1 y 1 }
+	hollow {  x 1  }
+	hollow { x 1 y -1 }
+	hollow {   y 1 }
+	hollow { x -1 y 1 }
+	hollow {  x -1 }
+	hollow {  x -1 y -1 }
+	hollow {  y -1 }	
+	pos { r 1.25 s .96 }
+}
+rule hollow 
+{
+	CIRCLE {b -1}
+	CIRCLE { b 1 hue 30 saturation .95 s .8 }
+	CIRCLE { b 1 hue 140 saturation .95 s .64 }
+}

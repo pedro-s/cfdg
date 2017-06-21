@@ -1,0 +1,81 @@
+// Title:  Tasty Loops
+// Author: epmoyer
+// Date:   12/26/06
+// Reference Pic Seed: TIL
+// Description:    
+//     This is a collection of fuzzy loops that appear to have a brush-stroke texture.
+//     Many thanks to momo's 'BTP-73' which inspired the fuzzy drawing algorithm.
+//
+// Intersting Concepts:
+//     Uses invisible drawing (apha = 0) to get from one loop to the next.
+//     Transitions between loops are bound to a circle, which keeps them from becoming too distant.     
+//     Uses and end-case rule (i.e. the empty MAIN_CCW rule) to terminate instead of terminating 
+//       based on reducing draw size below the limit.  There is no iterative downward scaling.
+//       Because termination is random, it could run forever, or could stop immediately.
+
+startshape INIT
+background {  b -1}
+
+rule INIT{ 
+   MAIN_CCW{ |hue 60 |sat 0.9 |b 1  hue 0 sat 1 b 1 alpha -0.5}
+}
+
+// Rotate counter clockwise (while drawing)
+// -----------------------------------------------------------------------
+rule MAIN_CCW{ 
+   //TRIANGLE{}
+	BLUR {}
+	MAIN_CCW {r 4 y 1 hue 0.01}
+}
+rule MAIN_CCW 0.0005{ MAIN_CW{alpha -1} }
+rule MAIN_CCW 0.00001{}
+
+// Rotate clockwise (move only; no drawing (alpha is 0))
+// -----------------------------------------------------------------------
+rule MAIN_CW{
+	BLUR {}
+	MAIN_CW {r -4 y 1}
+}
+rule MAIN_CW 0.1{ MAIN_CCW{alpha 1} }
+
+
+// Draw a blurry segment, fading out to left and right of center
+// -----------------------------------------------------------------------
+rule BLUR{
+	BLUR_R{}
+   BLUR_L{}
+}
+
+rule BLUR_R{
+	NODE{  }
+   BLUR_R{r 2 x 0.5 alpha -0.2 }
+}
+
+rule BLUR_R{
+	NODE{  }
+   BLUR_R{r -2 x 0.5 alpha -0.2 }
+}
+
+rule BLUR_R 0.3 {}
+
+rule BLUR_L{
+	NODE{  }
+   BLUR_L{r 2 x -0.5 alpha -0.2 }
+}
+
+rule BLUR_R{
+	NODE{  }
+   BLUR_L{r -2 x -0.5 alpha -0.2 }
+}
+
+rule BLUR_L 0.3 {}
+
+// Draw blurry nodes
+// -----------------------------------------------------------------------
+rule NODE{ CIRCLE{s 0.1 6 x 0.1 y 0.1 hue 5} }
+rule NODE{ CIRCLE{s 0.1 6 x -0.1 y 0.2 hue -5} }
+rule NODE{ TRIANGLE{s 1 6 x 0.1 y 0.2 hue 10} }
+rule NODE{ TRIANGLE{s 1 6 x -0.1 y 0.1 hue -10} }
+rule NODE{ CIRCLE{s 0.2 5 x 0 y 0.25 hue 20} }
+rule NODE{ CIRCLE{s 0.2 6 x 0 y 0.1 hue -20} }
+rule NODE 0.1 {}

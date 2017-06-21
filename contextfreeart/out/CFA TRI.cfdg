@@ -1,0 +1,16 @@
+startshape TRI
+
+CF::Background = [b - 1 ]
+
+shape TRI
+
+{
+//Arwing
+TRIANGLE [h 0.00 sat 0.0000 b 1.0000]
+
+TRIANGLE [x .4 y -.4 skew 50 5 r 90 h 0.00 sat 0.0000 b 1.0000]
+
+TRIANGLE [x -.4 y -.4 skew 50 5 r 210 h 0.00 sat 0.0000 b 1.0000]
+
+TRIANGLE [y -.4 s .5 r 180  h 0.00 sat 0.0000 b 1.0000]
+}

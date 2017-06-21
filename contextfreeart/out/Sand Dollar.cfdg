@@ -1,0 +1,44 @@
+startshape SANDDOLLAR
+CF::Background=[b -1]
+shape SANDDOLLAR
+{
+
+//circle string multiplier for number and length
+
+	loop 1000 [r 72]
+		LINER(3...3) [y 10 sat 1 b 0.2]
+}
+
+//circle string shape and curve with randomizer
+
+shape LINER(number angle)
+rule {
+	UTRIANGLE [y 0.5 s 1 r 1]
+	LINER(=) [r -angle b 0.05 hue 45 60 sat 0.75 y 9 x 0 s 0.975]
+}
+
+//edge size and spacer
+
+rule .1 { 
+	LINER(-3…3) []
+}
+
+//circle string circle size and number of circles in each dot
+
+path UTRIANGLE {
+	MOVETO(0, -0.5)
+	loop 9 [r 1000] {
+		CURVEREL(
+			0.75, sqrt(3)/4,
+			-0.5, 0.025,
+			0, sqrt(3)/8
+		)
+		CURVEREL(
+			0.25, sqrt(3)/4,
+			0.25 + 0.025, sqrt(3)/4 - 0.025,
+			CF::Continuous
+		)
+	}
+}
+
+//CF:: means configuration and allows certain parameters to be set

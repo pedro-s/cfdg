@@ -1,0 +1,18 @@
+/*
+first context free composition, so it had to be
+gratuitous... 
+ 
+Copyleft 2009, Forrest Oliphant, forresto.com
+Creative Commons Attribution-ShareAlike 3.0 United States
+*/
+ 
+startshape foo
+ 
+rule foo { 87 * { r 72 } foo2{} }
+ 
+rule foo2 { 
+  1000 * {hue 44 s 1.01 r 1} TRIANGLE{
+    hue 44 sat 1 b 1 s 1 a -.95 y -1 r 18870
+  }
+}
+ 

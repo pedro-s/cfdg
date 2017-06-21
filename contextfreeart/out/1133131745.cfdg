@@ -1,0 +1,22 @@
+startshape S
+background{b -1}
+rule S 30 {
+	T{b 1 sat 1}
+	T{flip 90 b 1 sat 1}
+	S{y 30, r 5, s 0.99, b 1 hue 3 sat 1}
+}
+rule S {
+	T{b 1}
+	T {flip 90 b 1}
+	S{y 30, r 5, s 0.99, b 1, flip 90}
+}
+
+rule T {
+	U{}
+	T{y 5, r 3, s 0.99 hue 1.5}
+}
+
+rule U {
+	CIRCLE{}
+	U{y 1, r 5, s 0.99}
+}

@@ -1,0 +1,141 @@
+startshape begin
+
+rule begin {
+	2* {x 401} staff { }
+	8* { x 100 } note { x -160 }
+	begin { y 100 s .8 b .6 z -1 }
+}
+
+
+rule staff {
+	5* { y 30 } SQUARE { size 400 1 }
+	SQUARE { size 1 120 x -200 y 60 }
+	SQUARE { size 1 120 x 200 y 60 }
+}
+
+rule note {
+	D { }
+}
+
+rule note { 
+	C { }
+}
+
+rule note { 
+	E { }
+}
+
+rule note {
+	FS { }
+}
+
+rule note {
+	F { }
+}
+
+rule note {
+	G { }
+}
+
+rule note {
+	A { }
+}
+
+rule note {
+	B { }
+}
+
+rule note {
+	c { }
+}
+
+rule note {
+	d { }
+}
+
+rule note {
+	e { }
+}
+
+rule note {
+	hf { }
+}
+
+rule note {
+	g { }
+}
+
+rule note {
+	ha {  }
+}
+
+rule ha { 
+	g { y 15 }
+	SQUARE { size 70 1 y 150 }
+}
+
+rule C { 
+	D { y - 15 }
+	SQUARE { size 70 1 y -30 }
+}
+
+rule D {
+	E { y -15 }
+}
+
+rule E { 
+	CIRCLE { size 40 30 }
+	SQUARE { size 6 80 y 40 x 17 }
+}
+
+rule F { 
+	E { y 15 }
+}
+
+rule FS { 
+	F { }
+	sharp { x -30 y 15 s .6 }
+}
+
+rule G {
+	F { y 15 }
+}
+
+rule A {
+	G { y 15 }
+}
+
+rule B {
+	A { y 105 r 180 }
+}
+
+rule c {
+	B { y 15 }
+}
+
+rule d {
+	c { y 15 }
+}
+
+rule e { 
+	d { y 15 }
+}
+
+rule hf {
+	e { y 15 }
+}
+
+rule g {
+	hf { y 15 }
+}
+
+rule sharp {
+	sharp_unskewed { skew 0 20 }
+}
+
+rule sharp_unskewed {
+	SQUARE { s 5 30 x -7 }
+	SQUARE { s 5 30 x 7 }
+	SQUARE { s 30 2 y-7 }
+	SQUARE { s 30 2 y 7 }
+}

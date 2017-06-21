@@ -1,0 +1,34 @@
+startshape rotate_tentacle
+
+rule shift_segment {
+ segment { y 10 }
+}
+
+rule segment {
+ CIRCLE { }
+ segment { y -1 s 0.88 r 5 hue 10 }
+}
+
+rule segment {
+ CIRCLE { }
+ segment { y -1 s 0.88 r -5 hue -10 }
+}
+
+rule tentacle {
+ shift_segment { r 0 }
+ tentacle { r 7 hue -7 s 0.9 a -0.025 }
+}
+
+rule three_tentacle {
+ tentacle { flip 0 hue 0 sat 1 b 0.8 }
+ tentacle { flip 60 hue 120 sat 1 b 0.8 }
+ tentacle { flip 120 hue 240 sat 1 b 0.8 }
+}
+
+rule rotate_tentacle 359 {
+ rotate_tentacle { r 1 }
+}
+
+rule rotate_tentacle 1 {
+ three_tentacle { }
+}

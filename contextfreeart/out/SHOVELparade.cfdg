@@ -1,0 +1,22 @@
+startshape SHOVELparade
+
+background {h 0 sat .15 b 1}
+size {s 55 x -27 y -15}
+
+path SHOVEL
+{MOVETO {x 0 y 0} LINETO {x 0 y 3}
+LINETO {x 2 y 3} LINETO {x 3 y .5}
+LINETO {x 5 y .5} LINETO { x 5 y -.5}
+LINETO {x 3 y -.5} LINETO {x 2 y -3}
+LINETO {x 0 y -3} CLOSEPOLY{ }
+FILL { }}
+
+rule shovelRED
+{6*{y 7} {9*{x 5 sat .21} SHOVEL {b 1 sat 0.15}}}
+
+rule shovelBLACK
+{6*{y 7} {9*{x 5 b .3} SHOVEL {r 180 sat .1 b 0.1}}}
+
+rule SHOVELparade
+{shovelRED { x 5}
+shovelBLACK { x 10 y -3.5}}

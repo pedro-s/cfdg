@@ -1,0 +1,100 @@
+startshape SPIKES
+
+rule SPIKES {
+	2* {r 180} SPIKE {}
+	//2* {r 180} SPIKE {x 1 }
+}
+
+rule SPIKE {
+	LSPIKE {}
+}
+rule SPIKE {
+	LSPIKE { flip 90 }
+}
+
+rule LSPIKE   {
+	SQUARE {}
+	LSPIKE { y 0.98 s .98 r 0}
+}
+
+rule LSPIKE 0.005 {
+	SPIKE { r 90}
+	SPIKE { r -90}
+	LSPIKE { y 0.98}
+}
+
+rule LSPIKE 0.005 {
+	SPIKE { r 90}
+	SPIKE { r -90}
+}
+
+rule LSPIKE 0.005 {
+	SPIKE { r 90}
+}
+
+rule LSPIKE 0.005 {
+	SPIKE { r -90}
+}
+
+rule LSPIKE 0.005 {
+	SQUARE {}
+	RSPIKE { y 0.98 r 0}
+	RSPIKE { y 0.98 r 0 flip 90}
+}
+
+rule LSPIKE 0.003 {
+	SQUARE {}
+	RSPIKE {flip 45}
+	RSPIKE {r 90}
+}
+
+rule LSPIKE .009 {SERIFS{}}
+
+rule RSPIKE {
+	SQUARE {}
+	RSPIKE { y 0.98 s .999 r 2}
+}
+
+rule RSPIKE 0.02 {
+	SQUARE {}
+	LSPIKE { y 0.98 r 2}
+}
+
+
+rule RSPIKE .009 {SERIFS{}}
+
+
+rule SERIFS {
+	SERIF {}
+}
+
+rule SERIFS 4 {
+	SERIF {}
+	SERIF {flip 90}
+}
+
+rule SERIFS {
+	SERIF {flip 90}
+}
+
+rule SERIF {
+	SERIF1 {s .25}
+	SERIF2 {y -.5 s .9}
+	SERIF3 {y -1}
+	SQUARE {y -.39}
+}
+
+rule SERIF1 {
+	SQUARE {}
+	SERIF1 {x 1 y .03 s .955}
+}
+
+rule SERIF2 {
+	SQUARE {}
+	SERIF2 {x .23 y .055 s .92}
+}
+
+rule SERIF3 {
+	SQUARE {}
+	SERIF3 {x .1 y .05 s .92}
+}

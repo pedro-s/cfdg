@@ -1,0 +1,9 @@
+startshape pinwheel
+background { hue 200 sat 0.0983 b 0.9294}
+
+rule pinwheel {
+CIRCLE{hue 195 sat .01 b 0.9294 }
+pinwheel { s .9 x 01 y 1 r 97 hue .5 sat .2 b 0.9294}
+pinwheel { s 0.5 x 03 y 2 r 36 hue .5 sat .001 b 0.9294}
+
+}

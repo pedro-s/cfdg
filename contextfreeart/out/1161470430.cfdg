@@ -1,0 +1,108 @@
+startshape GRASS
+
+background{
+	hue 15 saturation 0.5 b -0.5
+}
+
+rule GRASS{
+	GRASS{x 3}
+}
+rule GRASS{
+	GRASS{x -3}
+}
+rule GRASS{
+	GRASS{x 2.2}
+}
+rule GRASS{
+	GRASS{x -2.2}
+}
+rule GRASS{
+	TUFT{b 0.5 s 0.5}
+	GRASS{}
+}
+
+rule GRASS 0.005{}
+
+rule TUFT{
+	TUFT{r -5}
+}
+rule TUFT{
+	TUFT{r 5}
+}
+rule TUFT{
+	TUFT{b 0.1 z 0.1}
+}
+rule TUFT{
+	TUFT{b -0.1 z -0.1}
+}
+rule TUFT{
+	BLADE{y 0.5 hue 120 saturation 1}
+	TUFT{}
+}
+rule TUFT{
+	TUFT{s 0.98}
+}
+rule TUFT{
+	TUFT{s 1.025}
+}
+rule TUFT 0.03{
+	FLOWER{b 0.5 hue 120 saturation 1 s 2}
+}
+rule TUFT 0.24{
+}
+
+rule BLADE{
+	SQUARE{}
+	CIRCLE{y 0.5}
+	BLADE{y 0.5 r -1.5 s 0.98}
+}
+rule BLADE{
+	SQUARE{}
+	CIRCLE{y 0.5}
+	BLADE{y 0.5 r 2.5 s 0.98}
+}
+
+rule FLOWER{
+	TRIANGLE{}
+	FLOWER{y 0.4 r -1.5 s 0.995 b -0.01}
+}
+rule FLOWER{
+	TRIANGLE{}
+	FLOWER{y 0.4 r 2 s 0.995 b -0.01}
+}
+rule FLOWER 0.01{
+	LADYBIRD{x 1.25 s 1.5 3 b 1}
+	FLOWER{}
+}
+rule FLOWER 0.04{
+	CIRCLE{hue -60 saturation 1 b 1 s 2}
+	PETAL{s 2}
+}
+
+rule PETAL{
+	TRIANGLE{hue 210 saturation -0.9 b 1 s 0.3 1 y 1 r 180}
+	PETAL{r 17}
+}
+rule PETAL{
+	TRIANGLE{hue 210 saturation -0.9 b 1 s 0.3 1 y 1 r 180}
+	PETAL{r 19}
+}
+rule PETAL{
+	PETAL{r 18}
+}
+rule PETAL 0.1{}
+
+rule LADYBIRD{
+	CIRCLE{hue 240}
+	DOT{}
+	DOT{r 51}
+	DOT{r 103}
+	DOT{r 154}
+	DOT{r 205}
+	DOT{r 257}
+	DOT{r 309}
+}
+
+rule DOT{
+	CIRCLE{x 0.3 s 0.1 saturation 0 b -1}
+}

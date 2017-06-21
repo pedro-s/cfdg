@@ -1,0 +1,97 @@
+/*
+Generational - by Jeremy Douglass - 2007-04-06
+  based on Piupole by Guigui
+    http://www.contextfreeart.org/gallery/view.php?id=558
+  in response to andrewborrell on genetic algorithms
+    http://www.contextfreeart.org/phpbb/viewtopic.php?p=1724
+
+Parent1 is always yellow with wide eyes and an open mouth,
+Parent2 is always brown with narrow eyes and a closed mouth.
+Within traits, they vary, and their children mix by trait.
+*/
+
+startshape generational
+background { hue 210 sat .5 b -.2 }
+
+rule generational {
+	children { }
+	p01 { x -.7 z -10 s .25 }
+	p02 { x  .7 z -10 s .25 }
+}
+
+rule children     { children_col { s .2 } }
+rule children_col { 5* { x  1 } children_row { x -2 s 0.8 } }
+rule children_row { 5* { y -1 } child        { y  2 s 0.8 } }
+
+// offspring
+rule child {
+	pick_body {}
+	pick_eyes { s 0.3 y  0.15 }
+	pick_mouth { s 0.3 z  1    }
+}
+rule child .1 { child { hue 180  } } // random mutation
+
+// PARENT1
+// PARENT1 appearance
+rule p01 {
+	p01_body {}
+	p01_eyes { s 0.3 y  0.15 }
+	p01_mouth { s 0.3 z  1    }
+}
+// PARENT1 gamete - could become part of child
+rule pick_body      { p01_body {}  }
+rule pick_eyes  1.2 { p01_eyes {}  } // dominant-ish trait
+rule pick_mouth     { p01_mouth {} }
+
+// PARENT1 genes
+rule p01_body   { skin { b 1.0  sat .5   hue 30 } }
+rule p01_body   { skin { b 0.5  sat .5  hue 30 } }
+rule p01_eyes   { p01_eye { x -1 r -15 } p01_eye { x 1 r  15   } }
+rule p01_mouth {
+	skin { s 1 1.3 } skin { s 0.9 1.2 }
+	CIRCLE { s 0.8 0.6 y -.1 z 0.1 sat 1 b 0.3 }
+	2* [flip 90] CIRCLE { r -9 s 0.1 0.2 x -.1 y 0.4 z 0.2 b 1 sat 0.3 a -.5 }
+}
+rule p01_mouth {
+	skin { s 1 1.3 } skin { s 0.9 1.2 }
+	CIRCLE { s 0.3 0.4 y -.1 z 0.1 sat 1 b 0.3 }
+	2* [flip 90] CIRCLE { r -9 s 0.1 0.2 x -.1 y 0.3 z 0.2 b 1 sat 0.3 a -.5 }
+}
+rule p01_eye { skin { s 1.2   } CIRCLE {         b 1 z 0.1 } CIRCLE { s 0.3 z 0.15 } }
+rule p01_eye { skin { s 1.2 2 } CIRCLE { s 1 1.7 b 1 z 0.1 } CIRCLE { s 0.3 z 0.15 } }
+
+// PARENT2
+
+// PARENT2 appearance
+rule p02 {
+	p02_body {}
+	p02_eyes { s 0.3 y  0.15 }
+	p02_mouth { s 0.3 z  1    }
+}
+
+// PARENT2 gamete - could become part of child
+rule pick_body     { p02_body  {} }
+rule pick_eyes  .8 { p02_eyes  {} } // recessive-ish trait
+rule pick_mouth    { p02_mouth {} }
+
+// PARENT2 genes
+rule p02_body   { skin { b 0    sat 1    hue  0 } }
+rule p02_body   { skin { b 0    sat 0.5  hue  0 } }
+rule p02_eyes   { p02_eye { x -1       } p02_eye { x 1 flip 90 } }
+rule p02_eyes   { p02_eye { x -1 r  15 } p02_eye { x 1 r -15   } }
+rule p02_eyes   { p02_eye { x -1 r -15 } p02_eye { x 1 r  15   } }
+rule p02_mouth {
+	CIRCLE { s 1 1.3 b 0.5 sat 1 hue 30 } skin { s 0.9 1.2 z 0.02 }
+	SQUARE { s 0.9 0.06 y -.1 z 0.04 b 0.5 sat 1 hue 30 }
+	2* [flip 90] CIRCLE { r -9 s 0.1 0.2 x -.1 y 0.3 z 0.1 b 1 sat 0.3 a -.5 }
+}
+rule p02_mouth {
+	skin { s 1 1.3 } skin { s 0.9 1.2 z 0.02 }
+	4* { x 0.21 }  SQUARE { x -.315 s 0.15 0.3 y -.1 z 0.04 b 1 }
+	2* [ flip 90 ] CIRCLE { r -9 s 0.1 0.2 x -.1 y 0.3 z 0.1 b 1 sat 0.3 a -.5 }
+}
+rule p02_eye   { SQUARE { y 0.1 s 1.2 0.15 b 0.2 sat 1 hue 30 } }
+
+// common unvarying genome
+
+rule skin { CIRCLE { b 0.5 hue 30 sat .25 } }

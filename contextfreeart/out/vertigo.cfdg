@@ -1,0 +1,8 @@
+startshape vertigo
+size { s .8 .8 }
+rule vertigo {
+  SQUARE { b 0 s 0.95  a -.9}
+  CIRCLE { b -.8 a -.9}
+  vertigo { r .3 s 0.997 b 0.0015 }
+}
+ 

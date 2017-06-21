@@ -1,0 +1,51 @@
+ 
+startshape looking_out
+
+rule looking_out {
+ hemisphere { }
+ hemisphere {flip 90 x 30}
+}
+
+rule hemisphere {
+ eye {s 20 }
+ 14 * {r 20 } nerve1 [r -30 y 10.5]
+}
+
+rule eye {
+ 500 * {b 0.01 s 0.999} CIRCLE { }
+ sphere { s 0.4 hue 200 sat 0.2 b 0.7 }
+ pupil { s 0.25  b 0.5}
+}
+
+rule sphere {
+ 500 * {b 0.01 s 0.999} CIRCLE { }
+}
+
+rule pupil { CIRCLE { }}
+
+rule nerve1 {
+ nervebrush{}
+ nerve1 {y 1.0 size 0.99 rotate 1.5 }
+}
+
+rule nerve1 0.03 {nerve2 {}}
+
+rule nerve2 {
+ nervebrush{}
+ nerve2 {y 1.0 size 0.99 rotate -1.5}
+}
+
+rule nerve2 0.06 {
+ nervebrush {}
+ nerve2 {y 1.0 size 0.99 rotate 1.5}
+ nerve1 {y 1.0 size 0.6 rotate -60}
+ nerve2 {y 1.0 size 0.5 rotate 60}
+}
+
+rule nerve2 0.005 {
+ CIRCLE {s 10}
+}
+
+rule nervebrush {
+ SQUARE { }
+}

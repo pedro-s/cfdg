@@ -1,0 +1,27 @@
+// XPO
+
+startshape ingestion
+
+background { b -1 }
+
+rule ingestion {
+	70* { r (360/70) } trip { |h 40 h 29 sat 0 b .5 }
+}
+
+rule trip { acid { } }
+rule trip { shrooms { } }
+
+rule shrooms { acid { } }
+rule acid { shrooms { } }
+rule shrooms 10 {
+  pix { }
+	shrooms { x .5 r 8 s .999 h .0005| sat .0005 b .002 }
+}
+rule acid 17 {
+  pix { }
+	acid    { x -.5 r 1 s .999 h .0005| sat .0005 b .002 }
+}
+
+rule pix {
+	CIRCLE { a -.6 }
+}

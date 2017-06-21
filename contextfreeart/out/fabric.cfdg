@@ -1,0 +1,20 @@
+startshape k
+
+background {b -.5}
+
+   
+// regular crossing
+//rule k {7*{y 4.8} {7*{x 4.8}m{}}}
+//rule m {n{z -1}n{x .9 y .85 r 90}n{z 1 x 2.4}n{x 3.1 y .85 r 90}
+//n{z 1y - 2.45}n{x .9 y -1.6 r 90}n{z -1 x 2.4 y - 2.45}n{x 3.1 y -1.6 r 90}}
+
+
+// random crossing
+rule k {14*{y 2.4} {14*{x 2.4}m{}}}
+rule m {n{z -1}n{x .9 y .85 r 90}}
+rule m {n{z 1}n{x .9 y .85 r 90}}
+// random crossing
+
+
+rule n{180*{x .0 y .01  |b .05 b  .0113|}slice{} }
+rule slice {CIRCLE{s 2.5 .1 b .3}}

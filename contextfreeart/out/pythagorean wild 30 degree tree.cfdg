@@ -1,0 +1,73 @@
+startshape tree_bit
+
+background { b -1 }
+
+
+rule tree_bit 
+{
+	SQUARE { hue 108.3 sat 1.0 b 0.85 }
+	SQUARE { hue 149.6250 sat 1.0000 b 0.06275  s .9}
+// let @ = 330 degrees
+// right hand branch info:
+// size of square will need to be s=(cos @)
+// rotation gets applied first; after rotating, the
+// lower right corner of square will be at <x',y'>
+// where x' =x*cos@-y*sin@  and  y'=x*sin@+ycos@
+// & <x,y> is the original lower right corner <0.5, -0.5>
+// next, the new square gets scaled by s, so the corner point
+// is now <s*x', s*y'>
+// we want it to end up at the upper right corner of the orignal
+// square <0.5, 0.5> so we translate accordingly
+	tree_bit2 {
+		x 0.34150635094610966169093079268823
+		y 1.0915063509461096616909307926882
+		r 330
+		s 0.86602540378443864676372317075294 }
+// left hand branch is handled in a simliar fashion, except now we scale
+// by sin(@) and rotate by 60
+	tree_bit2 {
+		x -0.59150635094610966169093079268823
+		y 0.84150635094610966169093079268823
+		r 60
+		s 0.5
+	}
+
+}
+
+rule tree_bit 
+{
+	SQUARE { hue 108.3 sat 1.0 b 0.85 }
+	SQUARE {hue 149.6250 sat 1.0000 b 0.06275 s .9}
+// let @ = 330 degrees
+// right hand branch info:
+// size of square will need to be s=(cos @)
+// rotation gets applied first; after rotating, the
+// lower right corner of square will be at <x',y'>
+// where x' =x*cos@-y*sin@  and  y'=x*sin@+ycos@
+// & <x,y> is the original lower right corner <0.5, -0.5>
+// next, the new square gets scaled by s, so the corner point
+// is now <s*x', s*y'>
+// we want it to end up at the upper right corner of the orignal
+// square <0.5, 0.5> so we translate accordingly
+	tree_bit{
+		x 0.34150635094610966169093079268823
+		y 1.0915063509461096616909307926882
+		r 330
+		s 0.86602540378443864676372317075294 }
+// left hand branch is handled in a simliar fashion, except now we scale
+// by sin(@) and rotate by 60
+	tree_bit{
+		x -0.59150635094610966169093079268823
+		y 0.84150635094610966169093079268823
+		r 60
+		s 0.5
+	}
+
+}
+
+
+rule tree_bit2
+{
+	tree_bit { flip 90 }
+
+}

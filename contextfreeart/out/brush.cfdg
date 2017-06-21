@@ -1,0 +1,11 @@
+startshape BRANCH
+
+rule BRANCH 100 {
+SQUARE { }
+BRANCH {y .8 s .999 }
+}
+
+rule BRANCH 2 {
+BRANCH {r 17 s .9}
+BRANCH {r -17 s .9}
+}

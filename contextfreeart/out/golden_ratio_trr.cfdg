@@ -1,0 +1,20 @@
+startshape golden
+
+//tile {s 7.8538 6.8 skew 26.55 0}
+
+background {b -1}
+
+rule golden {
+	6*{r -60 x 1.309 y 1.6898}
+	{3*{r 120 x -1 b .2}
+	ratio {}}
+}
+
+rule ratio {
+	2*{f 180 y -.5774}
+	{2*{s .382 r -60 x .191 y .4671 b .1}
+	{14*{s .618 r 60 x .5 y .0681 b .1}
+	TRIANGLE{b .1}}}
+	ratio {s .618 x -.191 y -.1103 b .15}
+	ratio {s .618 x .809 y -.1103 b .075}
+}

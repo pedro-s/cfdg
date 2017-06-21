@@ -1,0 +1,50 @@
+startshape SETHUE
+
+background {b -1.0}
+
+rule SETHUE 100
+{
+	SETHUE{hue 10.0}
+}
+
+rule SETHUE 1
+{
+	STARTFIRE{}
+}
+
+rule STARTFIRE
+{
+	FIRE{hue 0.0 sat 1.0 b 1.0 alpha -0.3}
+}
+
+rule FIRE
+{
+	DOFIRE{x 1}
+}
+
+
+rule FIRE
+{
+	DOFIRE{}
+}
+
+rule DOFIRE
+{
+	CIRCLE{s 1.1 alpha 1.0 b -1.0 sat -1.0}
+	CIRCLE{}
+	FIRE{y 0.1 r 2.0 hue 0.01 size 0.9994}
+}
+
+rule DOFIRE
+{
+	CIRCLE{s 1.1 alpha 1.0 b -1.0 sat -1.0}
+	CIRCLE{s 2 alpha -0.4}
+	FIRE{y 0.1 r 2.0 hue 0.01 size 0.9994}
+}
+
+rule DOFIRE
+{
+	CIRCLE{s 1.1 alpha 1.0 b -1.0 sat -1.0}
+	CIRCLE{s 5 alpha -0.7}
+	FIRE{y 0.1 r 2.0 hue 0.01 size 0.9994}
+}

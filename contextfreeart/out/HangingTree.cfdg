@@ -1,0 +1,41 @@
+startshape FOREST
+
+rule FOREST {
+     SEED {}
+
+}
+
+rule SEED {BRANCH {}}
+rule SEED {BRANCH {rotate 21}}
+rule SEED {BRANCH {rotate -21}}
+rule SEED {BRANCH {rotate 21}}
+rule SEED {BRANCH {rotate -2}}
+rule SEED {FORK {}}
+
+rule BRANCH {LEFTBRANCH {flip 90}}
+rule BRANCH {LEFTBRANCH {}}
+
+rule LEFTBRANCH 19 {BLOCK {} LEFTBRANCH {y 0.531 rotate 2.1 size 0.99}}
+rule LEFTBRANCH 19 {BLOCK {} LEFTBRANCH {y 0.831 rotate 2.2 size 1}}
+rule LEFTBRANCH {BLOCK {} LEFTBRANCH {y 0.1 rotate 8 size 1}}
+rule LEFTBRANCH {BLOCK {} FORK {}}
+
+
+rule BLOCK {
+     SQUARE {rotate 15}
+     SQUARE {rotate -15}
+     SQUARE {}
+}
+
+rule FORK {
+     BRANCH { }
+     BRANCH {size 0.5 rotate 15}
+}
+rule FORK {
+     BRANCH { }
+     BRANCH {size 0.5 rotate -15}
+}
+rule FORK {
+     BRANCH {size 0.5 rotate -15}
+     BRANCH { }
+}

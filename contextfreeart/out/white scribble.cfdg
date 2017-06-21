@@ -1,0 +1,32 @@
+startshape start
+background {b -1}
+
+
+rule start {
+1* {r 45} scribble{}
+}
+
+rule scribble {
+star { s 1 b 1 }
+ scribble { x 10 y 1 }
+}
+rule scribble {
+star {  s 3 b 1 }
+scribble { x -10 y -1}
+}
+rule scribble {
+star { s .3 b 1 }
+scribble { x 1 y -1}
+}
+rule scribble {
+star { s 2 b 1 }
+scribble { x -1 y 1}
+}
+rule scribble .001 {
+ #end
+}
+
+rule star {
+TRIANGLE {}
+TRIANGLE {flip 190}
+}

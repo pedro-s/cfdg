@@ -1,0 +1,45 @@
+startshape earth
+
+
+background {b -1}
+
+
+rule earth {
+   globe { z 1 s 5 }
+   continent1 { z 2 s 1 y 0.31 x -0.6 rotate 180 alpha -0.7 }
+   cloud { z 3 s 0.9 y -0.54 x 2 rotate 90 }
+}
+
+rule globe {
+   CIRCLE { hue 204.8874 sat 0.7374 b 0.0575  }
+	globe { s 0.99 b 0.02 x 0.0045 }
+}
+
+
+rule cloud {
+   cloud1 {}
+   cloud2 {}
+}
+
+rule cloud1 {
+	CIRCLE { s 4 alpha -0.95 }
+	cloud1 { b 0.1 x 1.5 s 0.6 rotate 46 alpha 0.01}
+	cloud2 { b 0.2 y 1.4 s 0.8 rotate 43 alpha 0.01}
+}
+
+rule cloud2 {
+	cloud1 { b 0.2 x 1.3 s 0.8 rotate 12 alpha 0.01}
+	cloud2 { b 0.1 y 1.2 s 0.4 rotate 14 alpha 0.01}
+}
+
+
+
+
+rule continent1 {
+   TRIANGLE { s 2 hue 118.4956 sat 0.2747 b 0 skew 20 30 }
+	continent1 { b 0.01 x 0.58 y 0.78 s 0.35 rotate 55 }
+	continent1 { b 0.01 x 0.75 y 0.2 s 0.15 rotate 55 }
+	continent1 { b 0.01 x -0.0 y 0.75 s 0.78 0.37 rotate 37 }
+	continent1 { b 0.01 y -0.79 s 0.9  rotate 155 }
+}
+

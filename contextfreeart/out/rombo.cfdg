@@ -1,0 +1,39 @@
+startshape main45
+background {hue 0 sat 1 b -0.3} 
+
+path mezza {
+MOVETO {x -0.5 y 0}
+ARCTO { x 0 y 0.5 rx 0.5 ry 0.5 }
+STROKE {hue 55 sat 1 b 1 width 0.39 }
+}
+
+rule piastrella 5 {
+mezza {}
+mezza {flip 45}
+}
+
+rule piastrella 1{
+mezza {flip 90}
+mezza {flip 180}
+}
+
+rule elem_bordo {
+mezza {f 90}
+mezza {x 0.99}
+ }
+
+rule bordo {
+10* {x 1.98} elem_bordo{y -1}
+}
+
+rule main {
+20 * {y 0.99} {20* {x 0.99 } piastrella {}}
+bordo{y 0.01}
+bordo{r 90 x 18.8}
+bordo{f 0 y 18.8}
+bordo{r -90 y 18.81 x 0.02}
+}
+
+rule main45{
+main{r 45}
+}

@@ -1,0 +1,33 @@
+startshape arrows
+
+background {b -1}
+
+rule arrows {
+	5*{r (360/5)}
+	x1x {} x5x {}
+}
+
+rule x5x {
+	5*{r (360/5) b .1}
+	x2x {}
+}
+
+rule x2x {
+	arrow {}
+	x2x {f 90 s .309 b .2}
+	x2x {s .7265 r -90 x .5878 y -.809 b .2}
+}
+
+rule x1x {
+	x5x {}
+	2*{f 90}
+	x1x {s .5 x -.9511 y -1.309}
+}
+
+path arrow {
+	LINETO {x .5878 y -.809}
+	LINETO {y -.3821}
+	LINETO {x -.5878 y -.809}
+	CLOSEPOLY {}
+	FILL {b .2}
+}

@@ -1,0 +1,42 @@
+startshape go
+
+background {hue 22 sat .8 b -.5}
+
+rule go 
+{
+	horns {r -90 hue 45 sat .8 brightness 1} // rotate properly
+}
+
+rule horns
+{
+	CIRCLE {s 1.08 x -.19 } // emphasize the edge, and suggest a nose
+
+	exp1 { x -.2 b -1 } // black circles (right)
+	exp1 { x -.23 b -.1 sat -.4  } // black circles (right)
+	exp1 { x -.25 } // red (right)
+
+	exp1 { x -.2 b -1 flip 0}  // black circles (left)
+	exp1 { x -.23 b -.1 sat -.4  flip 0}  // black circles (left)
+	exp1 { x -.25 flip 0} // red (left)
+
+	exp1 {s 1.008  x  -.23 b -1 } // little bit of outline
+	exp1 {s 1.008  x  -.23 b -1 flip 0} // little bit of outline
+}
+
+rule exp1
+{
+	CIRCLE {s 1.05 }
+	exp1 {r -1.45 x -.058 s .998 z .001} // the z seems to add more shade
+}
+
+rule draw
+{
+	CIRCLE {s 1.05 x -.25 z -.001 b -1}
+	CIRCLE {s 1.05 x -.2 z .002}
+}
+
+rule horn
+{
+	draw{}
+	horn {r 1.45 y .058 z .01 s .9977}
+}

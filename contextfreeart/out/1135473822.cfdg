@@ -1,0 +1,22 @@
+
+startshape BLOCK
+
+rule BLOCK 100 {
+	BLOCK { s 0.5 x 0.25 y 0.25 }
+	BLOCK { s 0.5 x -0.25 y -0.25 }
+	BLOCK { s 0.5 x -0.25 y 0.25 }
+	BLOCK { s 0.5 x 0.25 y -0.25 }
+}
+
+rule BLOCK 30 {
+	TERMINATE {}
+}
+
+rule TERMINATE 10 {
+	CIRCLE {}
+	CIRCLE { s 0.9 b 1 }
+}
+
+rule TERMINATE 10 {
+	CIRCLE {}
+}

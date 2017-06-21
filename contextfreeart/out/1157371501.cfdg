@@ -1,0 +1,30 @@
+startshape NOODY 
+rule NOODY{
+	NOODIES_POST{r 90}
+}
+rule NOODIES_POST{
+	MOOD_HY{s 5}
+}
+rule MOOD_HY{
+	DRAWNODES{}
+	MOOD_HY{x 9 s .9 r 90}
+}
+rule MOOD_HY .01{
+	DRAWNODES{}
+	MOOD_HY{x 5 s .8 r 10}
+	MOOD_HY{x 2 s .5 r 5}
+}
+rule MOOD_HY .0{
+	DRAWNODES{}
+	MOOD_HY{x 6 s .66 r 956}
+	MOOD_HY{x 1 s .7}
+}
+rule DRAWNODES{
+	CIRCLE{s 1  r 10}
+	CIRCLE{s 8 x 7}
+	CIRCLE{s 10 x 7}
+	CIRCLE{s 5  x 1}
+	CIRCLE{s 3  x 1}
+	CIRCLE{s 1  x 0}
+	
+}

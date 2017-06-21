@@ -1,0 +1,73 @@
+startshape S
+background { hue 220 b -.7 sat 1 }
+tile { s 100 } 
+rule S { C [ b 1] dupl [ hue 30 ]}
+
+rule C {
+B [ ]
+mC [ ]
+}
+rule dupl 2 { S [ ] }
+rule dupl { }
+
+rule mC { C [ x 10 hue 1] }
+rule mC { C [ y 5 b -.1] }
+rule mC { C [ x -10 hue .1] }
+rule mC { C [ y -5 b .1] }
+
+rule mC  .1{ }
+
+rule B { 
+2* { x 5 } A { x 4 y -3 }
+2* { x 5 } A { x 1 y -2 }
+2* { x 5 } A { x 3 y -1 }
+2* { x 5 } A [ ] 
+2* { x 5 } A { x 2 y 1 }
+
+}
+
+rule A {
+cross [ ]
+}
+rule A .5 { }
+
+
+rule cross { draw [   hue 134.7 sat 0.9 b -.4 ] }
+rule cross { draw [  hue 117.5 sat 1 b -.1 ] }
+rule cross { draw [  hue 56.9 sat 0.9 b -.8 ] }
+
+rule draw {
+make [ ]
+make [ x -1]
+make [ x 1]
+make [ y -1]
+make [ y 1]
+}
+rule draw .1 { mflash [ y .45 x .45 ] draw [ ] }
+
+rule make { make [b -.1 ] }
+rule make { SQUARE [ b -1 ] mcontained [ s .95] }
+rule make .5 { SQUARE [ b 1 sat -1] mcontained [ s .95] }
+rule make .003 { make [ ] biggy [ s 10 hue 180 z 1 a -.9 ] }
+rule make .02 { halo [ s 50 b 1] }
+rule mcontained { 
+  SQUARE [ ] 
+  SQUARE [ x -.45 s .05 1 b .5 sat -.3 ] 
+  SQUARE [ y .45 s 1 .05 b .5 sat -.3 ]
+  SQUARE [ y -.45 s 1 .05 b -.5 sat -.3 ]
+}
+rule mflash { flash [ a -.6 |hue 40 sat -1 ] }
+rule mflash .5 { mflash [ r 1 ] }
+rule mflash .5 { mflash [ r -1 ] }
+
+rule flash { crossy [ b 1] flash [ sat .05 s .93 hue .4|] }
+
+rule crossy { crossy { s 1.1 } }
+rule crossy { SQUARE [ s .02  ] SQUARE [ s 5 .02 ] }
+
+rule biggy { mcontained [ ] }
+rule biggy .1 { biggy [ s .5 2 ]}
+rule biggy 3 { biggy [ r -2 ]}
+rule biggy 3 { biggy [ s 1.1 ]}
+
+rule halo { CIRCLE [ a -.99] halo [ s .9 ] }

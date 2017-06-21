@@ -1,0 +1,50 @@
+startshape TRI
+background { h 235.14 sat 0.4901 b 0.5922}
+rule TRI {
+ARM { }
+
+}
+
+rule ARM {
+
+ARM { x 2  y .4 size .99 rotate 4 }
+
+TRIANGLE { size 18 x 18 y 18 }
+
+TRIANGLE { size 17 x 17 y 17 h 180.00 sat 0.6235 b 0.5801  }
+
+TRIANGLE { size 16 x 16 y 16 h 304.00 sat 1.0000 b 0.5249 }
+
+TRIANGLE { size 16 x 16 y 16 h 96.24 sat 1.0000 b 0.4696 }
+
+TRIANGLE { size 15 x 15 y 15 }
+
+TRIANGLE { size 14 x 14 y 14 }
+
+TRIANGLE { size 13 x 13 y 13 }
+
+TRIANGLE { size 12 x 12 y 12 }
+
+TRIANGLE { size 12 x 12 y 12 }
+
+TRIANGLE { size 11 x 11 y 11 }
+
+TRIANGLE { size 10 x 10 y 10 h 180.00 sat 0.6235 b 0.5801 }
+
+TRIANGLE { size 9 x 9 y 9 h 304.00 sat 1.0000 b 0.5249 }
+
+TRIANGLE { size 8 x 8 y 8 h 96.24 sat 1.0000 b 0.4696 }
+
+TRIANGLE { size 7 x 7 y 7 }
+
+TRIANGLE { size 6 x 6 y 6  }
+
+TRIANGLE { size 5 x 5 y 5 }
+
+TRIANGLE { size 4 x 4 y 4  }
+
+TRIANGLE { size 3 x 3 y 3 }
+
+TRIANGLE { size 2 x 2 y 2  }
+
+}

@@ -1,0 +1,48 @@
+startshape MONDRIAN
+
+// Randomized fill: white most of the time,
+// but occasionally a primary color.
+rule MONDRIAN 10 {
+	SQUARE {hue 0 sat 0 b 1}
+}
+rule MONDRIAN {
+	SQUARE {hue 0 sat 1 b 1}
+}
+rule MONDRIAN {
+	SQUARE {hue 60 sat 1 b 1}
+}
+rule MONDRIAN {
+	SQUARE {hue 240 sat 1 b 1}
+}
+
+// Randomize line orientation
+rule MONDRIAN 50 {
+	MONDRIAN {r 90}
+}
+
+// Split at a random point.
+rule MONDRIAN 5 {
+	SQUARE {s .08 1 x .24 z 1}
+	MONDRIAN {s .70 1 x -.15}
+	MONDRIAN {s .22 1 x .39}
+}
+rule MONDRIAN 5 {
+	SQUARE {s .08 1 x -.18 z 1}
+	MONDRIAN {s .28 1 x -.36}
+	MONDRIAN {s .64 1 x .18}
+}
+rule MONDRIAN 5 {
+	SQUARE {s .08 1 x .12 z 1}
+	MONDRIAN {s .58 1 x -.21}
+	MONDRIAN {s .34 1 x .33}
+}
+rule MONDRIAN 5 {
+	SQUARE {s .08 1 x -.06 z 1}
+	MONDRIAN {s .40 1 x -.3}
+	MONDRIAN {s .52 1 x .24}
+}
+rule MONDRIAN 5 {
+	SQUARE {s .08 1 x 0 z 1}
+	MONDRIAN {s .46 1 x -.27}
+	MONDRIAN {s .46 1 x .27}
+}

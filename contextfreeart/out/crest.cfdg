@@ -1,0 +1,17 @@
+startshape DORP
+
+rule DORP {
+	S { x -4 y 8 s 7 }
+	SS { x -4 y 8 s 7 }
+	SPIRAL { }
+}
+
+background {hue 0 sat 1 b 0}
+
+rule SS {
+	CIRCLE { s 6.5 b .01 }
+}
+
+rule S {    CIRCLE { h 1 s 6 b 1 }
+}	
+ rule SPIRAL{  SQUARE{}  SPIRAL{y 0.4 rotate 2  size 0.992 }} rule SPIRAL 0.007 {  SPIRAL{ flip 270 }  SPIRAL{  }}

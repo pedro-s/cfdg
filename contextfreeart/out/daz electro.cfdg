@@ -1,0 +1,131 @@
+startshape Circuit
+
+rule Circuit {
+	DCSource {}
+	2*{f 90} Conn {x 1.2}
+}
+
+rule Conn 20 {Resistor {x .3} Conn {x 1.8}}
+rule Conn 10 {Capacitor {} Conn {x 1.2}}
+rule Conn 10 {Diode {} Conn {x 1.2}}
+rule Conn 3 {Transistor {} Conn {r -90 x .2 y -1.4} Conn {r 90 x .2 y 1.4}}
+rule Conn 2 {DCSource {} Conn {x 1.2}}
+rule Conn 5 {Corner {} Conn {r -90 y -1.2}}
+rule Conn 5 {Ground {}}
+rule Conn 5 {Terminal {}}
+rule Conn 30 {Wire {x -.1} Conn {x .8}}
+rule Conn 1 {Join {} Conn {r -90 y -1} Conn {r 90 y 1} Conn {x .8}}
+
+rule Wire {
+	SQUARE {s 1.2 0.07}
+}
+
+rule Resistor {
+	SQUARE {s 1 0.07 y .14}
+	SQUARE {s 1 0.07 y -.14}
+	SQUARE {s 0.07 .35 x -.5}
+	SQUARE {s 0.07 .35 x .5}
+	SQUARE {s .5 .07 x -.75}
+	SQUARE {s .5 .07 x .75}
+	MaybeVariable {}
+}
+
+rule Variable {
+	SQUARE {s 1.3 .05 r 45}
+	SQUARE {s .24 .05 x .4 y .5}
+	SQUARE {s .05 .24 x .5 y .4}
+}
+
+rule Diode {
+	SQUARE {s .5 .07 x -.5}
+	SQUARE {s .5 .07 x .5}
+	SQUARE {s .07 .6 x .25}
+	SQUARE {s .07 .6 x -.25}
+	SQUARE {s .6 .07 r 30 y -.13}
+	SQUARE {s .6 .07 r -30 y .13}
+	MaybeLight {}
+}
+rule Diode {Diode {f 90}}
+
+rule MaybeLight 2 {}
+rule MaybeLight {
+	LightArrow {s .7 x -.05 y .45 r -30}
+	LightArrow {s .7 x .1 y .35 r -30}
+}
+rule MaybeLight {
+	LightArrow {f 0 s .7 x -.05 y .45 r -30}
+	LightArrow {f 0 s .7 x .1 y .35 r -30}
+}
+
+rule LightArrow {
+	SQUARE {s .03 .4}
+	SQUARE {s .03 .15 r 30 x -.04 y -.13}
+	SQUARE {s .03 .15 r -30 x .04 y -.13}
+}
+
+rule Join {
+	SQUARE {s 1.2 0.07}
+	SQUARE {s 0.07 1.2}
+	CIRCLE {s 0.3}
+}
+
+rule Pole {
+	SQUARE {s .03 .25 x -.4 y .4}
+	SQUARE {s .25 .03 x -.4 y .4}
+}
+
+rule DCSource {
+	SQUARE {s .07 1 x -.15}
+	SQUARE {s .07 .5 x .15}
+	SQUARE {s .5 .07 x -.4}
+	SQUARE {s .5 .07 x .4}
+	Pole {}
+}
+
+rule Capacitor {
+	SQUARE {s .5 .07 x -.35}
+	SQUARE {s .5 .07 x .35}
+	SQUARE {s .07 .9 x -.1}
+	SQUARE {s .07 .9 x .1}
+	MaybePole {}
+	MaybeVariable {}
+}
+
+rule MaybePole 2 {}
+rule MaybePole 1 {Pole {}}
+
+rule MaybeVariable 5 {}
+rule MaybeVariable 1 {Variable {}}
+
+rule Ground {
+	SQUARE {s .5 .07 x -.4}
+	SQUARE {s .07 1 x -.15}
+	SQUARE {s .07 .6}
+	SQUARE {s .07 .3 x .15}
+}
+
+rule Corner {
+	SQUARE {s .5 .07 x -.4}
+	SQUARE {s .07 .5 y -.4}
+	CornerSub {x -.15 y -.15}
+}
+
+rule CornerSub {
+	21*{r -4.5} CIRCLE {s .07 y .15}
+}
+
+rule Terminal {
+	SQUARE {s .5 .07 x -.4}
+	60*{r 6} CIRCLE {s .07 y .15}
+}
+
+rule Transistor {
+	SQUARE {s .6 .07 x -.5}
+	SQUARE {s .07 .5 x .2 y .6}
+	SQUARE {s .07 .5 x .2 y -.6}
+	120*{r 3} CIRCLE {s .07 y .5}
+	SQUARE {s .07 .5 x -.2}
+	SQUARE {s .5 .07 r 36 y .225}
+	SQUARE {s .5 .07 r -36 y -.225}
+	TRIANGLE {s .3 r 130 x -.05 y .18}
+}

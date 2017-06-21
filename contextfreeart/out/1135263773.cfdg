@@ -1,0 +1,72 @@
+startshape coolcubes
+include i_polygons.cfdg
+
+background { hue 200 sat 0.1 b -0.8 }
+
+rule coolcubes {
+ cube {x 0.0 y 0.0 alpha 0 sat 1}
+ cube {x 1.5 y 0.0 alpha -0.11 hue 40 sat 0.88}
+ cube {x 3.0 y 0.0 alpha -0.22 hue 80 sat 0.77}
+ cube {x 0.0 y 1.5 alpha -0.33  hue 120 sat 0.66}
+ cube {x 1.5 y 1.5 alpha -0.44  hue 160 sat 0.55}
+ cube {x 3.0 y 1.5 alpha -0.55  hue 200 sat 0.44}
+ cube {x 0.0 y 3.0 alpha -0.66  hue 240 sat 0.1}
+ cube {x 1.5 y 3.0 alpha -0.77  hue 280 sat 0.88}
+ cube {x 3.0 y 3.0 alpha -0.88  hue 320 sat 0.77}
+}
+
+
+///////////////////////////////////////////////
+//
+// definition of my cube
+//
+// change relative colors of sides for fun
+//
+///////////////////////////////////////////////
+
+rule cube { 
+flipside {x 0.281 y 0.281 hue 240} 
+flipholdside2 [r 45 skew 45 0 x -0.5125 y 0.355 s 0.4 0.707 b -0.5 hue 120 ] 
+flipholdside2 [r -45 skew 0 45 x 0.355 y -0.5125 s 0.707 0.4 b -0.5 hue 40 ] 
+holdside3 [r 45 skew 45 0 x 0.9095 y -0.355 s 0.4 0.707 hue 80 ] 
+holdside3 [r -45 skew 0 45 x -0.355 y 0.9095 s 0.707 0.4 hue 160 ] 
+holdside3 { } 
+} 
+
+rule holdside2 0.001{ side { }}
+rule holdside2 {holdside2 { }}
+rule holdside3 0.00001{ holdside2 { }}
+rule holdside3 {holdside3 { }}
+
+rule flipholdside2 0.001{ flipside { }}
+rule flipholdside2 {flipholdside2 { }}
+
+rule side {
+ bg { }
+ postpone_fg { }
+}
+
+rule flipside {
+ fg { }
+ postpone_bg { }
+}
+
+rule postpone_fg 0.001 {fg { }}
+rule postpone_fg  {postpone_fg { }}
+rule postpone_bg 0.001 {bg { }}
+rule postpone_bg  {postpone_bg { }}
+
+///////////////////////////////////////////////
+//
+// definition of the cube faces. change these
+// however you want - my default is to draw the background
+// as a square, so you can tell it's a cube, and then draw
+// something on top of it
+//
+///////////////////////////////////////////////
+
+
+rule bg { SQUARE {b 0.8 }}
+rule fg { polygon10sided {b 0.3 hue 50 alpha 0.5 r 9 } }
+
+

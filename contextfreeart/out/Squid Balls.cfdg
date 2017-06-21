@@ -1,0 +1,42 @@
+startshape MEGABALL
+
+background {b -1}
+
+rule MEGABALL
+{
+	72 * {r 5} GRID {}
+	//GRID {}
+}
+
+rule GRID
+{	10 * {x 1 y 1} HLINE {}}
+
+rule HLINE
+{
+	BALL {}
+	HLINE {r 2 s .9 x .5 y .5 alpha -.001}
+}
+
+rule HLINE
+{
+	BALL {}
+	HLINE {r -2 s .9 x .5 y .5 alpha -.001}
+}
+
+rule HLINE .05
+{
+	HLINE {r -4}
+	HLINE {r 4}
+}
+
+rule BALL 3
+{
+	CIRCLE {h 60 sat 1 b 1 alpha -.97}
+	BALL {s .9}
+}
+
+rule BALL 2
+{
+	CIRCLE {h 0 sat 1 b 1 alpha -.97}
+	BALL {s .9}
+}

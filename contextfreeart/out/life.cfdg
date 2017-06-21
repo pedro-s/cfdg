@@ -1,0 +1,66 @@
+startshape START 
+background { b -.1 sat 1 hue -22}
+
+rule START { 
+3500 * {r 1 x 0  y .00151  h .005}  BRUSH   {sat 0  r 90}
+500 * {r 1 x 0  y .00151  h .01}  FRIEND   {sat 1  r 90}
+}
+
+
+rule BRUSH  .01 {
+CIRCLE {  b 1 s .3 a -.88 hue -30 }
+}
+
+rule BRUSH  {
+BRUSH {y -0.01 s .920  sat  +.245}
+}
+
+rule FRIEND 100 {
+
+FRIEND {y .005}
+
+}
+
+rule FRIEND 50 {
+FRIEND {r  20}
+}
+
+rule FRIEND 50 {
+FRIEND {r  -20}
+}
+
+
+rule FRIEND 10 {}
+
+rule FRIEND {HEAD {y .326 z 10 sat -1 b 1 }}
+
+rule HEAD{
+CIR{ s .01}
+RECTB { s .0020}
+}
+
+rule HEAD 10 {HEAD{ r 3}}
+
+
+rule HEAD 2 {
+HEAD{ flip 90}
+}
+
+rule CIR{
+CIRCLE{y -1 alpha  -.55}
+CIR{ s .9 y .1}
+}
+
+
+rule RECTB { 
+SQUARE { } 
+RECTB { s 0.99 y 1   
+r 1.317 
+alpha -.025} 
+} 
+
+
+rule RECTB 0.021 { 
+RECTB { flip 90 } 
+} 
+

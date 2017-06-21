@@ -1,0 +1,129 @@
+#########################
+## Curiosity killed the...
+
+startshape KITTEN
+
+rule KITTEN { # English
+	MEOW { y -3 }
+	WALK {}
+}
+
+rule KATJE { # Dutch
+	MIAUW { y -3 }
+	WALK {}
+}
+
+#########################
+## Walk definitions
+
+rule WALK 60 {
+	STRAIGHT {}
+	WALK { y 8 r 4 }
+}
+
+rule WALK 60 {
+	STRAIGHT {}
+	WALK { y 8 r -4 }
+}
+
+rule WALK 30 {
+	SHARP_LEFT {}
+	WALK { x -5 y 4 r 80 }
+}
+
+rule WALK 30 {
+	SHARP_RIGHT {}
+	WALK { x 5 y 4 r -80 }
+}
+
+rule WALK 5 {
+	WALK_AWAY {}
+}
+
+rule WALK_AWAY {
+	STRAIGHT {}
+	WALK_AWAY { y 8 s .7 r 15 }
+}
+
+rule WALK_AWAY {
+	STRAIGHT {}
+	WALK_AWAY { y 8 s .7 r -15 }
+}
+
+#########################
+## Walk definitions debugging
+
+rule DEBUG {
+
+	STRAIGHT { x -10 y -8 }
+	SQUARE { x -10 y 3 s 7 b .9 }
+	SHARP_LEFT { x -10 }
+	STRAIGHT { x -15 y 4 r 80 }
+
+	STRAIGHT { y -8 }
+	STRAIGHT {}
+	STRAIGHT{ y 8 }
+
+	STRAIGHT { x 10 y -8 }
+	SQUARE { x 10 y 3 s 7 b .9 }
+	SHARP_RIGHT { x 10 }
+	STRAIGHT { x 15 y 4 r -80 }
+}
+
+#########################
+## Walk element definitions
+
+rule STRAIGHT {
+	PAW { x -1 }
+	PAW { x 1 y 2 }
+	PAW { x -1 y 4 }
+	PAW { x 1 y 6 }
+}
+
+rule SHARP_LEFT {
+	PAW { x -1.1 r 20 }
+	PAW { x .3 y 2.5 r 40 }
+	PAW { x -2.5 y 2.2 r 60 }
+	PAW { x -3 y 4.5 r 80 }
+}
+
+rule SHARP_RIGHT {
+	PAW { x -1.1 r -20 }
+	PAW { x 1.3 y 1 r -40 }
+	PAW { x .6 y 3.5 r -60 }
+	PAW { x 3.2 y 2.8 r -80 }
+}
+
+#########################
+## Unit elements
+
+rule PAW {
+	CIRCLE {}
+	CIRCLE { s .3 x -.55 y .5 }
+	CIRCLE { s .3 x -.2 y .7 }
+	CIRCLE { s .3 x .2 y .7 }
+	CIRCLE { s .3 x .55 y .5 }
+}
+
+#########################
+## Text elements
+
+include i_pix.cfdg
+
+rule MEOW { # English
+	M_5by5 { x -2 b .5 }
+	E_5by5 { x -.6 b .5 }
+	O_5by5 { x .6 b .5 }
+	W_5by5 { x 2 b .5 }
+}
+
+rule MIAUW { # Dutch
+	M_5by5 { x -2.4 b .5 }
+	I_5by5 { x -1.2 b .5 }
+	A_5by5 { b .5 }
+	U_5by5 { x 1.2 b .5 }
+	W_5by5 { x 2.4 b .5 }
+}
+
+#########################
+## That's all folks...

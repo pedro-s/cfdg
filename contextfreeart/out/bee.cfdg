@@ -1,0 +1,101 @@
+startshape beez
+//include flowers/leaf3.cfdg
+
+rule beez {
+5* { x 2 } bee2 [ ]
+5* { x 2 } bee2 [ y 2 s .7]
+5* { x 2 } bee2 [ y -2 s .5]
+4* { x 2 } bee2 [ y -4 x 1]
+5* { x 2 } bee2 [ y -6 s .7]
+5* { x 2 } bee2 [ y -8 s .7]
+
+}
+
+rule bee2 {
+leafo [ z -2 s 2]
+beeo [ ]
+}
+
+rule bee2 { bee2 [ r 10 ] }
+rule bee2 { bee2 [ r -10 ] }
+
+rule beeo {
+// body
+cseg4 [hue 59.7 sat 1.0 b 1.0 z -.18]
+cseg4 [x .3 b -1 z -.19]
+cseg4 [x .5 hue 59.7 sat 1.0 b 1.0 s .9 z -.2 ]
+//face
+eyes [ x -.275 ]
+smile [ x -.25 s .3]
+// legs
+threeleg [ y -.4 x .1 r -35 s .6 ]
+threeleg [ y -.3 x .1 flip 90 r -25 s .6 z -.2]
+// wings
+4* { r 20 } beewing [ y .2 x .4 r 20 z -.1]
+4* { r 20 } beewing [ y .7 x .7 r -20 z .1]
+//antennae
+rbeeleg [ y .4 x -.2 r 120 s .6]
+rbeeleg [ y .35 x -.25 r 160 s .6 z -.1]
+}
+
+rule smile .2 { smile [ flip 180 y 1.6] }
+rule smile { smile [ r 10 ] }
+rule smile { smile [ y .1 ] }
+rule smile { smile [ s 1.1 ] }
+rule smile { arc20 [ r -200 y .6] }
+rule arc20 .6 { arc20 [ r -3 ] }
+rule arc20 { CIRCLE { s .1 } arc20 [ x -.05 r 3] }
+rule arc20 .05 { }
+
+rule eyes { eyes [ r 8 ] }
+rule eyes { eyes [ r -8 ] }
+rule eyes { eyes [ y .1 ] }
+rule eyes { eyes [ s 1.1 ] }
+rule eyes { eye [ x -.075 s .15] eye [ x .075 s .2] }
+rule eyes { eye [ x -.1 s .15] eye [ x .11 s .2] }
+
+rule eye { CIRCLE [ b 1] rCIRCLE [ b -1 s .6 ] }
+rule rCIRCLE { rCIRCLE [ x .1] }
+rule rCIRCLE 5 { rCIRCLE [ r 5] }
+rule rCIRCLE { CIRCLE [ ] }
+
+rule beewing 5 { beewing [ r -5 ] }
+rule beewing { CIRCLE [ s .4 .8 a -.7  hue 190.1 sat 0.3 b 1.0 ] }
+
+rule threeleg 2 { threeleg [ r -10 ] }
+rule threeleg { 3* { r 15 s 1.1 x .1} beeleg [ ] }
+rule rbeeleg { rbeeleg [ r 5]}
+rule rbeeleg { rbeeleg [ r -5]}
+rule rbeeleg { beeleg [ ]}
+rule beeleg { cseg100 [ s .04 b -1] cseg100 [ x .4 s .04 r -30 b -1] }
+
+rule cseg4 { 4* { x .1 } furball [ ] }
+
+rule cseg100 { 100* { x .1 } CIRCLE [ ] }
+
+
+rule furball {
+1000* { y .01 r 175 s .9999 } fur [ ]
+}
+rule fur 5 { fur [ r 12 ] }
+rule fur 5 { fur [ r -12 ] }
+rule fur 1 { fur [ b -.04 ] }
+rule fur { SQUARE [s 1 .003]}
+
+
+// leaf
+rule leafo { 3* { r 55 } mleaf [ y .5 ] }
+rule mleaf { leaf [ ] }
+rule mleaf { mleaf [ y -.3 ] }
+rule mleaf 2 { mleaf [ r 35 ] }
+
+rule leaf { leaf [ hue 1 b .05] }
+rule leaf {
+viCIRCLE [ s .4 1 hue 125.8 sat 1.0 b 0.6 ]
+leaf [ s .48 y .5 ]
+leaf [ s .58 r 70 y .25 ]
+leaf [ s .58 r -70 y .25 ]
+}
+
+
+rule viCIRCLE { 1* { s .9 b .1 a -.05 y .17 r 30} TRIANGLE [ a .3 s 1 .6] }

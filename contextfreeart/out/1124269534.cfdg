@@ -1,0 +1,31 @@
+startshape sticks
+
+
+
+rule sticks {
+line { r 15 }
+line { r -15 }
+line { r 45 }
+line { r -45 }
+sticks { s 0.9999 x 0.2 y 0.12 r 1.333 }
+}
+
+rule line {
+SQUARE { s 0.06 5
+	hue 40 sat 0.6 b 0.5  }
+} 
+
+rule line {
+SQUARE { s 0.02 3
+	 hue 40 sat 0.6 b 0.333 }
+}
+
+rule line {
+SQUARE { s 0.05 6
+	hue 40 sat 0.6 b 0.75  }
+}
+
+rule line {
+SQUARE { s 0.02 4 
+	 hue 40 sat 0.6 b 0.2 }
+}

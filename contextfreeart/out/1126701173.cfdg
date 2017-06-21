@@ -1,0 +1,49 @@
+startshape INIT 
+background { b -1 }
+
+rule INIT {
+	SCENE { y 100 hue 150 r -35}
+	SCENE { flip -190 y -225 hue 157 r 30}
+	SCENE { flip 90 x 120 r -45 y -55 hue 150}
+}
+
+rule SCENE {
+	BALL { hue 10 sat 0.9 b 0.9 }
+	LL {hue 15 sat 0.9 b 0.9 }
+}
+
+rule BALL {
+	SHAPE { }
+	SHAPE { flip 90 }
+	BALL { y 8 r 4 s 0.9999 r 8}
+}
+
+rule LL {
+	SHAPE { }
+	SHAPE { flip 90 }
+	LL { y 1 s 0.999 alpha -0.01 r 7}
+}
+
+
+rule SHAPE {
+	LINE { }
+	SHAPE { y 15 x 1 alpha -0.05 s 0.9999 r 0.5}
+}
+
+
+rule SHAPE 0.08 {
+	SHAPE { r -35 }
+}
+
+rule SHAPE 0.08 {
+	SHAPE { r -39 }
+}
+
+rule LINE {CIRCLE { s 15 20 }}
+rule LINE {CIRCLE { s 1 20 b 0.5 alpha -0.3 hue 30}}
+rule LINE {TRIANGLE { s 9 20 }}
+rule LINE {CIRCLE { s 60 20 alpha -0.7 hue 50}}
+rule LINE {SQUARE { s 5 20 }}
+
+rule LINE 0.06 { LL { alpha -0.5 hue 135 r 15}}
+

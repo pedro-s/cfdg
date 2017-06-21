@@ -1,0 +1,15 @@
+startshape mods { color }
+
+rule mods
+{
+mod { }
+mods { x +0.75 y +0.75 s 0.5 r 15 }
+mods { x -0.5 y -0.5 s 0.75 r 60 }
+}
+
+rule mod
+{
+CIRCLE { x 0 y 0 s 0.5 hue 213 sat 1 b 0.44 }
+CIRCLE { x 0 y 0 s 0.33 b 1}
+CIRCLE { x 0 y 0 s 0.167 hue 358 sat 0.88 b 0.93 }
+}

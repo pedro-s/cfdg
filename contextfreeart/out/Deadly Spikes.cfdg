@@ -1,0 +1,11 @@
+startshape EYE
+background { b -1}
+rule EYE{
+10* { r 15 x 1 y 1}
+TRIANGLE {s 2 r 15 h 108.43 sat 0.0351 b 0.1878} 
+10* {  r 35 x 1 y 1 }
+TRIANGLE { r 30 s 1.5 h 0.00 sat 0.0000 b 1.0000 }
+10* { r 25 x 1 y 1}
+TRIANGLE { r 25 s .7 h 10 h 3.47 sat 1.0000 b 0.7845}
+}
+

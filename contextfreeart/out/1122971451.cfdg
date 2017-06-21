@@ -1,0 +1,55 @@
+startshape MARINER{color}
+
+
+rule CODE0{
+SQUARE{x 0 y 0 h 0 sat 1 b 1}
+}
+
+rule CODE1{
+CODE0{x 0 y 0}
+CODE0{x 0 y 1}
+CODE0{x 1 y 1}
+CODE0{x 1 y 0  h 180 sat 1 b 1}
+}
+
+rule CODE2{
+CODE1{x 0 y 0}
+CODE1{x 0 y 2}
+CODE1{x 2 y 2}
+CODE1{x 2 y 0  h 180 sat 1 b 1}
+}
+
+rule CODE4{
+CODE2{x 0 y 0}
+CODE2{x 0 y 4}
+CODE2{x 4 y 4}
+CODE2{x 4 y 0  h 180 sat 1 b 1}
+}
+
+rule CODE8{
+CODE4{x 0 y 0}
+CODE4{x 0 y 8}
+CODE4{x 8 y 8}
+CODE4{x 8 y 0  h 180 sat 1 b 1}
+}
+
+rule CODE16{
+CODE8{x 0 y 0}
+CODE8{x 0 y 16}
+CODE8{x 16 y 16}
+CODE8{x 16 y 0  h 180 sat 1 b 1}
+}
+
+rule CODE32{
+CODE16{x 0 y 0}
+CODE16{x 0 y 32}
+CODE16{x 32 y 32}
+CODE16{x 32 y 0  h 180 sat 1 b 1}
+}
+
+rule MARINER{
+CODE32{x 0 y 0}
+CODE32{x 0 y 64}
+CODE32{x 64 y 64}
+CODE32{x 64 y 0  h 180 sat 1 b 1}
+}

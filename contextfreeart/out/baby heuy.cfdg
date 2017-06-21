@@ -1,0 +1,31 @@
+startshape FLAMENADO
+background { h 221.39 sat 0.8738 b 1.0000}
+rule FLAMENADO {
+50* {y .1 s .9 rotate -7.5} CIRCLE { h 30.00 sat 1.0000 b 0.9412}
+CIRCLE { x -.5 s .27 sat 235 h 54.29 sat 0.4941 b 1.0000}
+CIRCLE { x .5 s .27 sat 235 h 54.16 sat 0.4934 b 1.0000}
+CIRCLE { a 1 s .99 sat 235 h 54.16 sat 0.4934 b 1.0000}
+CIRCLE { x .51 s .24 h 61.72 sat 0.6824 b 1.0000}
+CIRCLE { x .49 s .24 h 54.29 sat 0.4941 b 1.0000}
+CIRCLE { x -.51 s .24 h 61.72 sat 0.6824 b 1.0000}
+CIRCLE { x -.49 s .24 h 54.29 sat 0.4941 b 1.0000}
+CIRCLE { x .2 y .24 s .2 h 33.69 sat 0.8413 b 1.0000}
+CIRCLE { x -.2 y .24 s .2 h 33.69 sat 0.8413 b 1.0000}
+CIRCLE { x .2 y .235 s .2 h 54.29 sat 0.4941 b 1.0000}
+CIRCLE { x -.2 y .235 s .2 h 54.29 sat 0.4941 b 1.0000}
+CIRCLE { x .2 y .2 s .2}
+CIRCLE { x -.2 y .2 s .2}
+CIRCLE { x -.2 y .2 s .2 h 0.00 sat 0.0000 b 1.0000}
+CIRCLE { x .2 y .2 s .2 h 0.00 sat 0.0000 b 1.0000}
+CIRCLE { x .2 y .2 s .1 h 248.05 sat 0.8026 b 1.0000}
+CIRCLE { x -.2 y .2 s .1 h 248.05 sat 0.8026 b 1.0000}
+CIRCLE { x .2 y .2 s .04 }
+CIRCLE { x -.2 y .2 s .04 }
+CIRCLE { x 0 y -.29 s .4 h 21.19 sat 0.5839 b 1.0000}
+CIRCLE { x 0 y -.34 s .4 h 54.16 sat 0.4934 b 1.0000}
+TRIANGLE { x 0 y 0 s .22 h 60.49 sat 0.6767 b 1.0000}
+CIRCLE { x -.06 y -.06 s .03 h 54.16 sat 0.4934 b 1.0000}
+CIRCLE { x .06 y -.06 s .03 h 54.16 sat 0.4934 b 1.0000}
+CIRCLE { y -.32 s .24 h 61.76 sat 0.6810 b 1.0000}
+CIRCLE { y -.3 s .22 h 54.29 sat 0.4941 b 1.0000}
+}

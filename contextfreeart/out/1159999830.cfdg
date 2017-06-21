@@ -1,0 +1,43 @@
+startshape Haare
+
+rule Haare {
+	Draw { }
+	Draw { r 135 }
+	Draw { r 270 }
+}
+
+rule Draw {
+	Stachel { x -1 y 21 }
+	Stachel { x 1 y 13 }
+	Stachel { x 2 y -8 }
+	Stachel { x -3 y 5 }
+	Stachel { x 5 y 3 }
+	Stachel { x 8 y -2 }
+	Stachel { x 13 y 1 }
+	Stachel { x 21 y -1 }
+	Draw { x 2 r 13 alpha -0.01 }
+}
+
+rule Draw {
+	Stachel { x 1 y 21 r 90 }
+	Stachel { x 1 y 13 r 90 }
+	Stachel { x -2 y 8 r 90 }
+	Stachel { x 3 y -5 r 90 }
+	Stachel { x -5 y 3 r 90 }
+	Stachel { x -8 y 2 r 90 }
+	Stachel { x 13 y -1 r 90 }
+	Stachel { x 21 y 1 r 90 }
+	Draw { x 1 r -13 alpha -0.01 }
+}
+
+rule Draw 0.01 { }
+
+rule Stachel {
+	SQUARE { s 0.3 1 }
+	Stachel {y 0.995 s 0.975 r -13 alpha -0.02}
+}
+
+rule Stachel {
+	SQUARE { s 0.3 1 }
+	Stachel {y 0.995 s 0.975 r 9 alpha -0.02}
+}

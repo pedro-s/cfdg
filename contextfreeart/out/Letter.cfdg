@@ -1,0 +1,201 @@
+startshape Text
+
+
+rule Text{
+	Open{}
+	FirstRow{y -40}
+	Rows{ y -60}
+}
+
+
+rule Open{
+	SymbolCap{ }
+	LowerTriple{ x 16}
+	SymbolCap{ x 48}
+	LowerTriple{ x 64}
+	OpenTail{ x 88 }
+}
+rule OpenTail{
+	LowerTriple{ }
+	OpenTail{ x 24 }
+} 
+rule OpenTail 3{
+	Comma {}
+}
+	
+
+rule Rows 3 {
+	RowTriple{  }
+	Rows{ y -60}
+}
+rule Rows{
+	LastRow{}
+	Close{ y -40 }
+}
+
+rule RowTriple 2{
+	3 * {y -20} Row{}
+}
+rule RowTriple{
+	LastRow{}
+	FirstRow{y -40}
+}
+
+rule FirstRow{
+	SymbolCap{ x 8}
+	10 * {x 24 } Triple {x 24}
+	LowerTriple{x 264}
+}
+rule Row{
+	LowerTriple{}
+	10 * {x 24 } Triple {x 24}
+	LowerTriple{x 264}
+}
+rule LastRow{
+	LowerTriple{}
+	RowTail{x 24}
+}
+rule RowTail{
+	Triple{ }
+	RowTail {x 24}
+}
+rule RowTail{
+	LowerTriple{}
+	Period{ x 24}
+}
+
+
+rule Close{
+	SymbolCap{ }
+	LowerTriple{ x 16}
+	SymbolCap{ x 48}
+	LowerTriple{ x 64}
+	CloseTail{ x 88 }
+}
+rule CloseTail{
+	LowerTriple{ }
+	CloseTail{ x 24 }
+} 
+rule CloseTail 3{
+	Comma{}
+	Sig{ x 24 y -40}
+}
+
+
+rule Sig{
+	SymbolCap{ }
+	LowerTriple{ x 16}
+	SigTail{ x 40 }
+}
+rule SigTail{
+	LowerTriple{ }
+	SigTail{ x 24 }
+} 
+rule SigTail 3{
+}
+
+
+rule Triple 4{
+	LowerTriple {}
+}
+rule Triple 2{
+	SymbolWiggle{  }
+	SymbolWiggle{ x 16 }
+}
+rule Triple{
+	Period { }
+	SymbolCap{ x 8 }
+}
+rule Triple{
+	2 * {x 8} SymbolWiggle{  }
+	Comma { x 16 }
+}
+
+
+rule LowerTriple{
+	3 * {x 8 } SymbolWiggle {}
+}
+
+rule SymbolCap{
+	SymbolWiggle { s 2 2 x 5 y 4.6}
+}
+
+
+rule SymbolWiggle{
+	Symbol{ x -1}
+}
+rule SymbolWiggle{
+	Symbol{ }
+}
+rule SymbolWiggle{
+	Symbol{ x 1}
+}
+
+
+rule Symbol{
+	SymbolA{}
+}
+rule Symbol{
+	SymbolB{}
+}
+rule Symbol{
+	SymbolC{}
+}
+rule Symbol{
+	SymbolD{}
+}
+rule Period {
+	CIRCLE { x -6 y -4 }
+}
+rule Comma{
+	Comma1{ x -6 y -4 r -10 }
+}
+rule Comma1 {
+	CIRCLE {  }
+	Comma1 { r -0.5 s 0.98 y -0.04}	
+}
+
+
+rule SymbolA{
+	Circular{r 45}
+}
+rule SymbolB{
+	Circular{ f 90 x -6.35 y -2.3}
+
+}
+rule SymbolC{
+	SymbolA{}
+	Curve{ x -0.3 y -5 }
+}
+rule SymbolC{
+	SymbolB{}
+	Curve{ x -6.35 y -2.3 }
+}
+rule SymbolD{
+	SymbolC{ r 180 x -6 y -3.6 }
+}
+
+rule Circular 2 {
+	340*{ r 1 s 0.999 y 0.06}  CIRCLE { s 1 0.5 }
+}
+rule Circular {
+	Spiral {}
+}
+
+rule Spiral 200{
+	CIRCLE { s 1 0.5 }
+	Spiral { r 1 s 0.999 y 0.06}
+}
+rule Spiral{
+	SpiralEnd { }
+}
+rule SpiralEnd{
+	CIRCLE { s 1 0.5 }
+	SpiralEnd { r 0.5 s 0.98 y 0.06}
+}
+
+rule Curve{
+	CIRCLE { s 1 0.5 }
+	Curve { r -0.15 s 0.996 y 0.06}
+}
+

@@ -1,0 +1,54 @@
+startshape rob
+
+rule rob {
+	doug {}
+	rob {
+		x 10
+		y 10
+		s .999
+		r 1
+	}
+}
+
+rule doug {
+	bob {}
+	doug {
+		x 10
+		y 88
+		r 20
+		s 0.999
+		hue 1
+		b 1
+		sat 1
+	}
+}
+
+rule bob .2 {}
+rule bob {
+	SQUARE { s 1,35 }
+	bob {
+		x 1
+		flip 10
+	}
+}
+rule bob {
+	SQUARE { s 1,35 }
+	bob {
+		y 1
+		flip 20
+	}
+}
+rule bob {
+	SQUARE { s 1,35 }
+	bob {
+		x 1
+		flip 30
+	}
+}
+rule bob {
+	SQUARE { s 1,35 }
+	bob {
+		y 1
+		flip 40
+	}
+}

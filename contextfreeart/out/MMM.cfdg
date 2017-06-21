@@ -1,0 +1,10 @@
+startshape GOOFY
+background { b -1 }
+
+rule GOOFY { 
+
+SQUARE { h 119.40 sat 0.9055 b 0.3536 }
+SQUARE { s 87 h 230.41 sat 0.7497 b .05367 }
+
+GOOFY { skew 0.2 0.0015 s .999 b .001}
+}

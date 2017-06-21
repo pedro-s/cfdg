@@ -1,0 +1,2 @@
+startshape r0
+rule r0 {2*[r 25  f 0] {12*{r 30}{3*[x 1 r 3 s 1.05] {1000*[y 1 r -3 s 1.05] {CIRCLE{}}}}}}

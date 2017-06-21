@@ -1,0 +1,9 @@
+startshape SPATTER
+background {b -1}
+
+rule SPATTER
+{
+    CIRCLE{b 1 sat 0.9}
+
+    6*{x -0.7 y -1 r 43} {SPATTER{s 0.4 h 7}}
+}

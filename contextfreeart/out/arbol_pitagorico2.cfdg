@@ -1,0 +1,16 @@
+startshape pitagoras2
+
+background { hue -180 saturation 0 brightness -0.1}
+rule pitagoras2
+{
+ rama{ }
+}
+
+rule rama
+{
+SQUARE{}
+SQUARE{b .9999 s .99 hue 54.0 sat 0.1679 b 1.0000}
+rama {r 65 s .4191 x -.60 y .778  h 20}
+rama {r -25 s .9079 x .285 y 1.102 }
+
+}

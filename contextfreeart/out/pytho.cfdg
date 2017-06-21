@@ -1,0 +1,16 @@
+startshape pyth_start
+background { h 42.58 sat 1.0000 b 1.0000}
+ 
+rule pyth_start{
+3* {x 1 y 3 h -20} {
+	3* {x -3 y 1 h 20} pyth{x 4 y -7.707 b 1 a -1 h 0 sat 1}
+	}
+}
+ 
+rule pyth{
+    SQUARE{}
+    pyth[y  0.5 r 45 s 0.707 y  1 b  .1  a .1]
+    pyth[y -0.5 r 45 s 0.707 y -1 b -.1 a .1]
+}
+ 
+ 

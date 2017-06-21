@@ -1,0 +1,8 @@
+startshape INIT
+
+rule INIT {
+	CIRCLE{x 1}
+	CIRCLE{x -1}
+	INIT {x -1.5 r 45 s 0.66}
+	INIT {x 1.5 r 45 s 0.66}
+}

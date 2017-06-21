@@ -1,0 +1,14 @@
+startshape SPIRAL
+
+shape SPIRAL
+rule
+{
+	CIRCLE []
+	SPIRAL [x 1 r 0.5 s 0.99999]
+}
+rule
+{
+	CIRCLE []
+	SPIRAL [x 1 r 0.5 s -0.99999]
+}
+

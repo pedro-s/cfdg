@@ -1,0 +1,80 @@
+background {hue 270 sat 0.6 b -0.5}
+
+startshape make
+
+rule make {
+	construct {hue 120 b 0.3 sat 0.7}
+	fill {x 6 y 6 hue 270 sat 0.8 b 0.8}
+}
+
+rule fill {
+	200* {s 0.99 hue 0.38} SQUARE {s 16}
+}
+
+rule construct {
+
+	//8x8 jigsaw
+
+	//make middle pieces
+	7*{y 2}	horiz {}
+
+	//make edge pieces:
+	7*{y 2} side {flip 90}
+	7*{x 2} side {y -2 r 90}
+
+	//top and right lines
+	SQUARE {s 16 0.05 y 14 x 6}
+	SQUARE {s 0.05 16 y 6 x 14}	
+
+	//bottom and left lines
+	SQUARE {s 16 0.05 y -2 x 6}
+	SQUARE {s 0.05 16 y 6 x -2}
+}
+
+rule horiz {
+	7*{x 2}	pair {}
+}
+
+rule pair{
+	side {}
+	side {r 90}
+}
+
+rule side{
+	makeside {}
+}
+
+rule side{
+	makeside {flip 180}
+}
+
+rule makeside {
+	prim {}
+	prim {flip 90 x 2}
+}
+
+rule prim {
+	curve1{}
+	curve1{x 0.308 y 0.04 flip -180 r 16}
+	curve2 {x 0.63 y 0.085}
+	curve3 {r 219 x 0.720 y -0.282}
+	12*{x 0.01} brush1 {x 0.88 y -0.625 s 0.05}
+}
+
+rule curve1 {	
+32*{x 0.01 r 0.5} brush1 {s 0.05}
+}
+
+rule curve2 {	
+48*{x 0.01 r -3.0} brush1 {s 0.05}
+}
+
+rule curve3 {	
+48*{x 0.01 r 3.0} brush1 {s 0.05}
+}
+
+rule brush1 {
+	SQUARE {}
+	SQUARE {s 1 0.15 y 1.5 hue -20}
+	SQUARE {s 1 0.15 y -1.5 hue -20}
+}

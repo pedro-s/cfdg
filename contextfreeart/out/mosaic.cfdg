@@ -1,0 +1,38 @@
+startshape MOSAIC
+
+background {b -.95}
+
+rule MOSAIC {
+	CENTER {}
+	6* {r 60 hue 60} CENTER {y -8.66 sat .5}
+}
+
+rule CENTER {
+	STAR {hue 150}
+	6* {r 60} ARM {y 1.155 x 1 hue 240}
+	6* {r 60} HOOK {y 2.31 x 1}
+}
+
+rule ARM {
+	5* {x 1} DIAMOND {}
+	TRIANGLE {x -.5 y .2887 r 180}
+	TRIANGLE {x -.5 y .866}
+	ARM {s .99 b .01 sat -.005 hue .5}
+}
+
+rule HOOK {
+	5* {x 1} DIAMOND {y -.2887 x .5}	
+	3* {x .5 y .866} DIAMOND {r 60}
+	HOOK {s .99 b .002 sat -.005 hue -.5}
+}
+
+rule STAR {
+	TRIANGLE {s 3}
+	TRIANGLE {s 3 r 180}
+	STAR {s .995 b .002 sat -.001}
+}
+
+rule DIAMOND {
+	TRIANGLE {x .5 y .2887 r 180}
+	TRIANGLE {}	
+}

@@ -1,0 +1,36 @@
+startshape FRACT
+background { b -1 }
+
+rule FRACT {
+FRACT { y .288 s .5 b 1 h 341.57 sat 0.2811 b 0.4641}
+FRACT { x -.25 y -.144 s .5 b 1 }
+FRACT { x .25 y -.144 s .5 b 1}
+}
+rule FRACT 2 {
+FRACT { y .188 s .5 b 1 h 297.90 sat 0.4275 b 1.0000 }
+FRACT { x -.35  y -.244 s .5 b 1 h 11.63 sat 0.7714 b 1.0000 }
+FRACT { x .45 y -.244 s .5 b 1 }
+}
+rule FRACT 3 {
+TRIANGLE { h 26.13 sat 0.6559 b 1.0000 }
+TRIANGLE { y .488 s .3 b 1h 310.70 sat 0.7327 b 1.0000 }
+TRIANGLE { y .388 s .3 b 1 h 231.71 sat 0.8069 b 1.0000 }
+TRIANGLE { s .7 b 1 h 346.87 sat 0.6846 b 0.6188 }
+TRIANGLE { y .588 s .3 b 1 h 50.60 sat 0.8052 b 1.0000 }
+TRIANGLE { y .688 s .3 b 1 h 125.97 sat 0.8512 b 1.0000 }
+TRIANGLE { y .788 s.3 b 1 h 262.96 sat 0.9068 b 1.0000 }
+TRIANGLE { y .888 s .3 b 1 h 61.39 sat 0.1392 b 1.0000 }
+TRIANGLE { y .988 s .3 b 1 h 98.37 sat 0.7637 b 0.6188 }
+TRIANGLE { x -.288 y -.170 s .3 b 1 h 231.71 sat 0.8069 b 1.0000 }
+TRIANGLE { y -.170 x .288 s .3 b 1 h 310.70 sat 0.7327 b 1.0000 }
+TRIANGLE { x -.388 y -.270 s .3 b 1 h 50.60 sat 0.8052 b 1.0000 }
+TRIANGLE { x -.488 y -.370 s .3 b 1 h 125.97 sat 0.8512 b 1.0000 }
+TRIANGLE { x -.588 y -.470 s .3 b 1 h 262.96 sat 0.9068 b 1.0000 }
+TRIANGLE { x -.688 y -.570 s .3 b 1 h 61.39 sat 0.1392 b 1.0000 }
+TRIANGLE { x -.788 y -.670 s .3 b 1 h 346.87 sat 0.6846 b 0.6188 }
+TRIANGLE { y -.270 x .388 s .3 b 1 h 231.71 sat 0.8069 b 1.0000 }
+TRIANGLE { y -.370 x .488 s .3 b 1 h 310.70 sat 0.7327 b 1.0000 }
+TRIANGLE { y -.470 x .588 s .3 b 1 h 50.60 sat 0.8052 b 1.0000 }
+TRIANGLE { y -.570 x .688 s .3 b 1 h 125.97 sat 0.8512 b 1.0000 }
+TRIANGLE { y -.670 x .788 s .3 b 1 h 262.96 sat 0.9068 b 1.0000 }
+}

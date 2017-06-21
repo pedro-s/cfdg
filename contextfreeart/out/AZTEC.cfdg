@@ -1,0 +1,103 @@
+startshape AZTEC
+CF::Background = [h 158.84 sat 1.0000 b 1.0000]
+shape AZTEC
+{
+//row 1 
+loop 20 [x 1]
+TRIANGLE []
+
+loop 19 [x 1]
+TRIANGLE [x .5 y .5 r 180 s .5]
+
+loop 20 [x 1]
+TRIANGLE [s .5 h 158.84 sat 1.0000 b 1.0000]
+
+loop 37 [x .5]
+SQUARE [x .5 y 1 s .25]
+
+//Inverse row 1 
+
+loop 20 [x 1]
+TRIANGLE [y 2 r 180]
+
+loop 19 [x 1]
+TRIANGLE [x .5 y 1.5 s .5]
+
+loop 20 [x 1]
+TRIANGLE [y 2 r 180 s .5 h 158.84 sat 1.0000 b 1.0000]
+
+//middle design
+loop 5 [x -.7 y .7 ]
+TRIANGLE [x 9 y 3]
+
+loop 5 [x .7 y .7]
+TRIANGLE [x 9 y 3]
+
+loop 5 [x -.7 y .7 ]
+TRIANGLE [x 3.42 y 3]
+
+loop 5 [x .7 y .7]
+TRIANGLE [x 3.42 y 3]
+
+loop 5 [x -.7 y .7 ]
+TRIANGLE [x 14.58 y 3]
+
+loop 5 [x .7 y .7]
+TRIANGLE [x 14.58 y 3]
+
+//inverse middle section
+
+loop 5 [x .7 y -.7 ]
+TRIANGLE [x 9 y 8.6]
+
+loop 5 [x -.7 y -.7]
+TRIANGLE [x 9 y 8.6]
+
+loop 5 [x .7 y -.7 ]
+TRIANGLE [x 3.42 y 8.6]
+
+loop 5 [x -.7 y -.7]
+TRIANGLE [x 3.42 y 8.6]
+
+loop 5 [x .7 y -.7 ]
+TRIANGLE [x 14.58 y 8.6]
+
+loop 5 [x -.7 y -.7]
+TRIANGLE [x 14.58 y 8.6]
+
+//inside
+loop 3 [x 5.55]
+TRIANGLE [x 3.45 y 6.5 s 2 ]
+loop 3 [x 5.55]
+TRIANGLE [x 3.45 y 5.35 s 2 r 180 ]
+
+//top row
+
+loop 20 [x 1]
+TRIANGLE [y 10]
+
+loop 19 [x 1]
+TRIANGLE [x .5 y 10.5 r 180 s .5]
+
+loop 20 [x 1]
+TRIANGLE [y 10 s .5 h 158.84 sat 1.0000 b 1.0000]
+
+loop 37 [x .5]
+SQUARE [x .5 y 11 s .25]
+
+loop 20 [x 1]
+TRIANGLE [y 12 r 180]
+
+loop 19 [x 1]
+TRIANGLE [x .5 y 11.5 s .5]
+
+loop 20 [x 1]
+TRIANGLE [y 12 r 180 s .5 h 158.84 sat 1.0000 b 1.0000]
+
+
+
+
+
+
+
+}

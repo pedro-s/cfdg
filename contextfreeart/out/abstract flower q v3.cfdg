@@ -1,0 +1,55 @@
+startshape zero
+
+
+//bdp
+//bdu
+//colore=rand_static(3600)
+colore=10
+
+teta=360*(sqrt(5)-1)/2
+
+CF::ColorDepth = 16
+
+CF::Background = [b -.81 sat 1 h (colore)] 
+CF::Size = [s .8]
+
+shape zero{
+due [r rand(360)]
+}
+
+
+//-------------------------
+shape due
+{
+uno[]
+due[r teta s .97 z 1 ]
+}
+//------------------------------
+shape tre
+
+rule {
+uno[]
+}
+
+rule {
+uno[f 90]
+}
+
+
+//------------------------
+shape uno
+
+rule {
+CIRCLE [s .9 a -.99 b .4 sat 1 h colore]
+CIRCLE [s .2  b 1 z .00001 r 45  a -.859]
+
+uno [s rand_static(.995,.998) r rand_static(.75,1.7) y .01]
+}
+
+/*
+rule 0.001211 {
+uno [f 90]
+}
+*/
+//--------------------------
+

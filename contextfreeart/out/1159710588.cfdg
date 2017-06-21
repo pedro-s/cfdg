@@ -1,0 +1,71 @@
+startshape NEURONS
+background {b -0.8} 
+
+rule NEURONS{
+	NEURON {r 180}
+	NEURON {r 180 x 7 y -2 b 0.9}
+	NEURON {r 180 x -7 y -2 b 0.9}
+	}
+
+rule NEURON {
+	AXON {}
+	BODY {}
+	DENDRITE3 { x -.4 y -.2 r 140}
+	DENDRITE3 { x .4 y -.2 r 220}
+	}
+
+rule AXON 30 {
+	CIRCLE {size .1 }
+	AXON {s .997 b .1 r 1 y .1 x .02 } 
+	}
+
+rule AXON 30 {
+	CIRCLE {size .1}
+	AXON {s .999 b -.1 r -1 y .1 x -.03 } 
+	}
+
+rule AXON 1 {
+	DENDRITE3 {}
+	 }
+
+rule BODY{
+	PROCESS {}
+	PROCESS {r 120}
+	PROCESS {r 240}
+//	MEMBRANE {}
+//	NUCLEUS {}
+	}
+
+rule FORMATION {
+	CIRCLE {s .5 }
+	PROCESS {y .13}
+	}
+
+rule PROCESS {
+	FORMATION {r 2 s .8 }
+	}
+
+// the conjunction of the two rules below
+// adds zigzags to the dendrites.
+
+rule DENDRITE 80 {
+	CIRCLE {size .1 } 
+	DENDRITE {s .995 b -.05 x -.05 y .1} }
+
+rule DENDRITE 80 {
+	CIRCLE {size .1} 
+	DENDRITE {s .995 b 0.05 x .05 y .1} }
+
+rule DENDRITE 5  {
+	DENDRITE3 {s .98 b .1}
+	}
+
+// connect to other neurons
+ rule DENDRITE 0.1 { NEURON {s .9 r 45 b 0}}
+
+// give a little biological rotation
+rule DENDRITE3 { 
+	DENDRITE {s .95 r -15}
+	DENDRITE {s .95 r 15 } }
+
+

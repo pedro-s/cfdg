@@ -1,0 +1,49 @@
+startshape STAR
+
+background {b -.95 h 20 sat 1}
+
+
+rule STAR {5 * {r 72} TENTACOLO {hue 240 alpha -1 y .5 sat  0 r 0} }
+
+
+rule TENTACOLO 2  {TENTACOLO{flip 90}}
+
+
+rule TENTACOLO{
+
+GLOW  {s .5 x  +1}
+GLOW  {}
+GLOW  {s .5 x  -1}
+
+1 * {} RECTB {s  .051 x  1  r -90 z -1 a -.2}
+1 * {} RECTB {s  .051 x  -1  r 90 z -1 a -.2}
+3 * {} RECTB {s  .063   r -90 z -1 a .01 }
+3 * {} RECTB {s  .063   r -90 z -1 a .01 flip 180}
+
+TENTACOLO {y+.23 s .97 alpha .01 
+
+//---------------------------
+// try different rotations
+r 7
+//---------------------------
+
+sat -.051 b .007}
+
+}
+
+
+
+
+rule GLOW{   // CIRCLE {z 0 s 2.5    b .01 sat .7 z -2}    CIRCLE {z 1 s .7   b .09}    CIRCLE {z 2 s .3   b .4}    CIRCLE {z 3 s .2 b .9}    CIRCLE {z 4 s .1 b 1}}
+
+
+rule GLOW {GLOW {x  +.01}}
+rule GLOW {GLOW {x  -.01}}
+
+
+
+rule RECTB { 
+SQUARE { }
+RECTB { s 0.95 y 1   r 1.317   b .9} 
+} 
+

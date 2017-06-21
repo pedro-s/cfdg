@@ -1,0 +1,15 @@
+//FRACTALS RULE!!!!!
+
+startshape fractal
+
+rule fractal{
+ draw{}
+}
+
+rule draw{
+ CIRCLE{}
+ draw{size 0.5 brightness 0.5 x 0.5}
+ draw{size 0.5 brightness 0.5 x -0.5}
+ draw{size 0.5 brightness 0.5 y 0.5}
+ draw{size 0.5 brightness 0.5 y -0.5}
+}

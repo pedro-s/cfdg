@@ -1,0 +1,16 @@
+startshape A
+background { b -.3 }
+
+rule A {
+	6*{ x 1 h 12 }{
+	6*{ y 1 h 6 }
+	KEVIN{}}
+}
+
+rule KEVIN {
+	CIRCLE { h 200 sat .5 b 1 }
+}
+
+rule KEVIN 6 {
+	A { x 0 y 0 r 30 s .35 }
+}

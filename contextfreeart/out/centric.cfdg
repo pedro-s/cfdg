@@ -1,0 +1,30 @@
+startshape A
+
+rule A {
+36*{r 10 b .05 hue 3}B { r -13.5 b 0.5 b .4 sat .3}
+}
+
+rule B {
+	C { }
+     B {y 1 skew 1 2 s 0.5 hue 13}
+}
+rule B {
+	C { }
+     B {y 1 skew 1 -.5 s 1.09}
+}
+
+
+rule C{
+5*{s 1.35 hue 10}SQUARE { s .5 a -.59}
+3*{s .9 z .5 b .3}box {b -1 a -.3 sat 1}
+CIRCLE{b 1 sat -1 z 1 s .4}
+5*{r 1 sat -.05}B{b 1 sat -.2 z 1 s .1 r -2}
+}
+
+path box {
+    MOVETO{x 0.5 y 0.5}
+    LINETO{x -0.5 y 0.5}
+    LINETO{x -0.5 y -0.5}
+    LINETO{x 0.5 y -0.5}
+    CLOSEPOLY{}
+    STROKE{width 0.05}}

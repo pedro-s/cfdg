@@ -1,0 +1,20 @@
+startshape SAHPE
+background {a-1}
+rule SAHPE {
+CIRCLE { }
+CIRCLE { h 0.00 sat 0.0000 b 1.0000 s .9}
+
+
+CIRCLE { s .15}
+CIRCLE { s .14 h 0.00 sat 0.0000 b 1.0000}
+CIRCLE {s .05 h 359.40 sat 1.0000 b 0.7293}
+40* {x .01}
+SQUARE { x.1 s .02}
+40* {y .01}
+SQUARE {y .1 s .02}
+40* {x -.01}
+SQUARE { x -.1 s .02}
+40* {y -.01}
+SQUARE {y -.1 s .02}
+
+}

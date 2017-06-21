@@ -1,0 +1,52 @@
+startshape GALAGA
+background {b-1}
+rule GALAGA {
+STARSHIP {}
+ENEMIES {}
+STARS {}
+}
+rule STARSHIP {
+//fire
+2*{x 0.11}
+TRIANGLE {s 0.07 x -0.053 y -0.145 r 180 h 0.00 sat 1.0000 b 1.0000}
+2*{x 0.11}
+TRIANGLE {s 0.04 x -0.053 y -0.1363 r 180 h 27.87 sat 1.0000 b 1.0000}
+//jets
+2*{x 0.11}
+TRIANGLE {s 0.07 y -0.105 x -0.053 h 0.00 sat 0.0000 b 0.5580}
+2*{x 0.106}
+TRIANGLE {s 0.1 y -0.09 x -0.053 h 0.00 sat 0.0000 b 0.8398}
+//connector
+TRIANGLE {s 0.1 y -0.05 h 0.00 sat 0.0000 b 0.5580}
+//guns
+2*{x -0.08}
+TRIANGLE {s 0.02 x 0.04 r 180 h 0.00 sat 0.0000 b 0.5580}
+//fuselage
+TRIANGLE {s 0.1 h 0.00 sat 0.0000 b 0.8398}
+TRIANGLE {y -0.0578 s 0.1 r 180 h 0.00 sat 0.0000 b 0.8398}
+//cockpit
+TRIANGLE {s 0.05 y 0.015 h 0.00 sat 0.0000 b 0.0884}
+//shots
+2*{y 1.03 r 180}
+TRIANGLE { y 0.5 s 0.1 h 0.00 sat 0.0000 b 1.0000}
+2*{y 3.03 r 180}
+TRIANGLE { y 1.5 s 0.1 h 0.00 sat 0.0000 b 1.0000}
+}
+rule ENEMIES {
+9*{x 0.4}
+ENEMY {x -2 y 2}
+10*{x 0.4}
+ENEMY {x -2 y 3}
+}
+rule ENEMY {
+TRIANGLE {r 180 s 0.2 h 0.00 sat 0.0000 b 0.4199}
+TRIANGLE {r 180 s 0.1 h 359.29 sat 0.9032 b 0.7294}
+}
+rule STARS {
+TRIANGLE {x 1.7 y 2 s 0.02 h 0.00 sat 0.0000 b 1.0000}
+TRIANGLE {x 1.6 y 2.1 s 0.02 h 0.00 sat 0.0000 b 1.0000}
+TRIANGLE {x 1.4 y 1.9 s 0.02 h 0.00 sat 0.0000 b 1.0000}
+TRIANGLE {x 1.5 y 2.2 s 0.02 h 0.00 sat 0.0000 b 1.0000}
+TRIANGLE {x 1.8 y 1.7 s 0.02 h 0.00 sat 0.0000 b 1.0000}
+TRIANGLE {x 1.5 y 2.1 s 0.02 h 0.00 sat 0.0000 b 1.0000}
+}

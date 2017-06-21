@@ -1,0 +1,18 @@
+startshape tree
+
+rule tree 20{
+SQUARE{}
+tree{ s .99 y .995 r 7}
+}
+
+rule tree  {
+SQUARE{ }
+tree {s .99 y .995 r 7}
+tree { r 50 s .8}
+}
+rule tree 20{
+SQUARE{}
+tree{ s .99 y .995 r 2 f 90}
+}
+
+

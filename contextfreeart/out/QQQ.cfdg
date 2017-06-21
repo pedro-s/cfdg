@@ -1,0 +1,28 @@
+startshape QQQ
+
+background {h 180.00 sat 1.0000 b 1.0000}
+
+rule QQQ
+{
+GGG {y -1 r 90 h 60.00 sat 1.0000 b 1.0000}
+GGG {x 1 h 300.00 sat 1.0000 b 1.0000}
+GGG {x 1 y -2 r 180 h 124.59 sat 0.3914 b 1.0000}
+GGG {x 2 y -1 r 270 h 240.00 sat 1.0000 b 1.0000}
+JJJ {h 128.30 sat 0.6235 b 1.0000}
+QQQ { x 4 y 2 size .8 rotate 75 h 32.15 sat 0.9187 b 1.0000}
+GGG {x 1 y -.2 r 25}
+}
+
+rule GGG
+{
+JJJ {y -2 x 3}
+}
+
+rule JJJ
+{
+CIRCLE {x 1 y -1 b-1 size 4 h 116.57 sat 0.8447 b 1.0000}
+CIRCLE {x 1 y -1 h 0.00 sat 0.0000 b 1.0000 size 3.5}
+}
+
+
+

@@ -1,0 +1,15 @@
+startshape x3x 
+
+background {b -1}
+
+rule x3x {
+	3*{r (360/3) h 8}
+	dewtone {y -2 x -2}
+	x3x {s .8 h 10 a -.4}
+} 
+
+rule dewtone {
+	9*{r(360/9)}
+	CIRCLE {b .12 y 1.94 r 12 h 100 sat .4}
+	dewtone {s .999 b .0008 x .005 y -.001 f 45 h .0001 sat .001}
+}

@@ -1,0 +1,43 @@
+startshape start
+
+rule start 360
+{
+	start{hue 1}
+}
+
+rule start
+{
+	bigspiral{hue 0 sat 1 b 0.5}
+}
+
+rule bigspiral
+{
+	smallspiral{}
+	bigspiral{y 1 r 250 s 0.995 hue .1}
+}
+
+rule smallspiral 4
+{
+	hair{}
+	hair{flip 180}
+	smallspiral{y 10 r 5 s 0.99 sat 0.01 b 0.01}
+}
+
+rule smallspiral
+{
+	hair{}
+	hair{flip 180}
+	smallspiral{y 2 r -5 s 0.99 sat 0.01 b 0.01}
+}
+
+rule hair
+{
+	SQUARE{}
+	hair{y 2 r 10 s 0.9}
+}
+
+rule hair
+{
+	SQUARE{}
+	hair{y 2 r -10 s 0.9}
+}

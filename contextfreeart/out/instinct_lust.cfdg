@@ -1,0 +1,23 @@
+startshape lust
+
+background { b -.95 }
+
+rule lust {
+	70* { r (360/70) } trip { |h 0 h 0 sat 1 b 1 }
+}
+
+rule trip { acid { } }
+rule shrooms { acid { } }
+rule acid { shrooms { } }
+rule shrooms 7 {
+  pix { }
+  shrooms { x .5 r 0 s .999 h .0005| sat .0005 b -.001 }
+}
+rule acid 10 {
+  pix { }
+  acid { x -.3535 y .3535 r 8 s .999 h .0005| sat .0005 b -.001 }
+}
+
+rule pix {
+  CIRCLE { a -.6 }
+}

@@ -1,0 +1,32 @@
+startshape starz
+background {sat 1 b -.9 }
+
+rule starz
+{
+	bkg{ alpha -.8 sat .2 hue 20 b 1 }
+}
+rule bkg
+{
+	13*{r -4 s .965} {star2{r 50 s 7 }}
+	12*{r 4 s .965} {star2{r 50 s 7 }}
+	13*{r 4 s .965} {star2{r -50 s 7 }}
+	12*{r -4 s .965} {star2{r -50 s 7 }}
+
+	bkg{s .9 r 7 hue .7 sat .1 }
+	
+}
+
+rule star2
+{
+	triangle{  s .3 1.2 1 }
+	triangle{  s .3 1.2 1 r 180}
+}
+path triangle
+{
+	MOVETO { x -.05  y  0}	
+	LINETO { x  0 y .1 }
+	LINETO { x .05 y 0}
+	CLOSEPOLY{}
+
+}
+

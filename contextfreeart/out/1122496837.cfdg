@@ -1,0 +1,34 @@
+startshape PLANT {color}
+
+rule PLANT {
+	EITHER {x -2}
+	EITHER {x 2}
+}
+
+rule BOTH {
+	BL {rotate 30}
+	BL {rotate -30 flip 90}
+}
+
+rule EITHER {BL{}}
+rule EITHER {BL{flip 90}}
+
+rule BL {
+	CIRCLE { hue 25 sat 1 b 1}
+	WL {size 0.96 y 1.6
+		hue 1.667}
+}
+
+rule WL {BL {rotate 3}}
+rule WL {BL {rotate 4}}
+rule WL {BL {rotate 5}}
+rule WL {BL {rotate 6}}
+rule WL {BL {rotate 7}}
+rule WL {BL {rotate 3}}
+rule WL {BL {rotate 4}}
+rule WL {BL {rotate 5}}
+rule WL {BL {rotate 6}}
+rule WL {BL {rotate 7}}
+rule WL {BOTH {}}
+rule WL {BL {rotate -10 flip 90}}
+

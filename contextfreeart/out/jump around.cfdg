@@ -1,0 +1,15 @@
+startshape BETTER
+background {h 19.0 sat 0.694 b 0.7}
+
+rule BETTER {
+eins {y 2 h 60 z -1}
+ }
+ rule spot {
+ SQUARE{}
+}
+ rule eins {
+ spot {}
+ eins
+ { s 1.0001 0.993 r 11 hue 0.99959 a 0.1 b 0.1 sat 0.5 y 1}
+} 
+

@@ -1,0 +1,103 @@
+startshape TAN4x4 
+
+rule TAN450x450 {
+TAN450 {y 89}
+TAN450 {}
+TAN450 {y -89}
+}
+
+rule TAN450 {
+TAN90x90 {x 89}
+TAN90x90 {}
+TAN90x90 {x -89}
+}
+
+
+rule TAN90x90 {
+TAN90 {y 35.5}
+TAN90 {y 17.75}
+TAN90 {}
+TAN90 {y -17.75}
+TAN90 {y -35.5}
+}
+
+rule TAN90 {
+TAN18x18 {x 35.5}
+TAN18x18 {x 17.75}
+TAN18x18 {}
+TAN18x18 {x -17.75}
+TAN18x18 {x -35.5}
+}
+
+rule TAN18x18 {
+TAN6x6 {x 5.9}
+TAN6x6 {}
+TAN6x6 {x -5.9}
+TAN6x6 {x 5.9 y 5.9}
+TAN6x6 {y 5.9}
+TAN6x6 {x -5.9 y 5.9}
+TAN6x6 {x 5.9 y -5.9}
+TAN6x6 {y -5.9}
+TAN6x6 {x -5.9 y -5.9}
+}
+
+rule TAN6x6 {
+TAN2x2 {y 1.98}
+TAN2x2 {}
+TAN2x2 {y -1.98}
+TAN2x2 {y 1.98 x 1.98}
+TAN2x2 {x 1.98}
+TAN2x2 {y -1.98 x 1.98}
+TAN2x2 {y 1.98 x -1.98}
+TAN2x2 {x -1.98}
+TAN2x2 {y -1.98 x -1.98}
+}
+
+rule TAN4x4 {
+TAN2x2 {x .99 y .99}
+TAN2x2 {x -.99 y -.99}
+TAN2x2 {x -.99 y .99}
+TAN2x2 {x .99 y -.99}
+}
+
+rule TAN3x3 {
+TAN2x2 {}
+TAN2x2 {x .99}
+TAN2x2 {y .99}
+TAN2x2 {y .99 x .99}
+}
+
+rule TAN2x2 {
+SQR {x -.495 y -.495}
+SQR {x .495 y -.495}
+SQR {x .495 y .495}
+SQR {x -.495 y .495}
+}
+
+rule SQR {
+SQ {}
+}
+
+rule SQR {
+SQ {r 90}
+}
+
+rule SQR {
+SQ {r 180}
+}
+
+rule SQR {
+SQ {r -90}
+}
+
+
+rule SQ {
+RTRI {hue -9 saturation .65 b .6}
+RTRI {hue 56 saturation .55 b 1 r 180}
+}
+
+
+
+rule RTRI {
+	TRIANGLE [ size 1 1.155 x 0.165 y -0.144 skew 30 0 ]
+}

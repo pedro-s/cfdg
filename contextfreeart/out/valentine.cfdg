@@ -1,0 +1,76 @@
+startshape valentines
+
+rule valentines
+{
+	vpod{hue 0 b .7 sat 1}
+}
+rule vpod .3
+{
+	vpod{z 20}
+	vpod{z 30}
+	vpod{z 40 }
+}
+rule vpod .25
+{
+	vpod{z 20}
+	vpod{z 30}
+	vpod{z 40 }
+	vpod{z 50}
+}
+rule vpod.5
+{
+	vpod{z 20}
+	vpod{z 30}
+}
+
+rule vpod
+{
+	v{}
+}
+rule vpod .75
+{
+	v{}
+	vpod{x 1.4 y 1.4 s .75}
+}
+rule vpod .75
+{
+	v{}
+	vpod{x 1.2 y -1.2 s .75}
+}
+rule vpod .75
+{
+	v{}
+	vpod{x -1.2 y -1.2 s .75}
+}
+rule vpod .75
+{
+	v{}
+	vpod{x -1.4 y 1.4 s .75}
+}
+
+rule v
+{
+	vhalf2{}
+	vhalf2{flip 90}
+	gapfill{}
+	v {s .9 hue 10 z 1}
+}
+path gapfill
+{
+	MOVETO{x -.05 y 1}
+	LINETO{x .05 y 1}
+	LINETO{x .05 y -.95}
+	LINETO{x -.05 y -.95}
+	CLOSEPOLY{}
+}
+rule vhalf2
+{
+	vhalf1{skew 0 30 flip 90}
+}
+
+path vhalf1
+{
+    MOVETO{y 1 x .01}        
+    ARCTO{y -1 x .01 r .9}
+	CLOSEPOLY{}
+ }

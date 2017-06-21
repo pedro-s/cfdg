@@ -1,0 +1,9 @@
+startshape SUN
+
+background { b -0.93 }
+
+rule SUN {
+	CIRCLE { b 1 s 2 a -0.87 }
+	9* { r 40 } SUN { s .35 x 2 }
+	SUN { r 20 s .55 }
+}

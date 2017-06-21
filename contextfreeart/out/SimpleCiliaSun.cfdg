@@ -1,0 +1,12 @@
+startshape CiliaSun background {b-1}
+rule CiliaSun{
+  20*{s.9 b.4 sat.4}CIRCLE{s 60 b.3 sat 1 h 240}
+  40*{r 9} L{y 5  h-10 sat 1 b 1 |h 50 |sat 1 |b 1}}
+rule L{TRIANGLE {y.5 r 42.5 s.8}
+  L {r -2 b.1| h.1| y.75 x.433 s.97}}
+rule L{TRIANGLE {y.5 r 42.5 s.8}
+  L {r -6 b.1| h.1| y.75 x.433 s.97}}
+rule L{TRIANGLE {y.5 r 42.5 s.8}
+  L {r 2 b.1| h 0.1| y.75 x.433 s.97}}
+rule L{TRIANGLE {y.5 r 42.5 s.8}
+  L {r 6 b.1| h.1| y.75 x.433 s.97}}

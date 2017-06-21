@@ -1,0 +1,19 @@
+startshape grid [hue 120]
+
+CF::Background = [b -1]
+
+shape grid {
+	loop 20 [x 2.02]
+		loop 0..10 [y 1.053 hue -13]
+			oval []
+}
+
+shape oval {
+	loop 21 [x 0.05] dot [b 0.7 sat 1]
+}
+
+shape dot {
+	CIRCLE []
+	CIRCLE [z 1 s 0.5 b 1 sat -0.5]
+}
+

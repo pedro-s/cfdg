@@ -1,0 +1,7 @@
+startshape S
+
+rule S {
+	CIRCLE { sat 1 b 1}
+	S {x 1 r 51.42 s 0.99 h 51.42}
+}
+

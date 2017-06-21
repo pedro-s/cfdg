@@ -1,0 +1,35 @@
+CF::Background = [b -1] 
+
+startshape start01
+
+shape start01 { 
+sak[b 1 sat .5 h 130 r 45 z -1] 
+sak2[s 2 b -1 sat .5 h 130 r 45 z -2] 
+tent[s .1 h 110 b -1 sat .5 a 1 z 1]
+tent[s .1 h 110 b -1 sat .5 a 1 z 1 r 90]
+tent[s .1 h 110 b -1 sat .5 a 1 z 1 r 180]
+tent[s .1 h 110 b -1 sat .5 a 1 z 1 r 270]
+}
+
+shape sak {
+SQUARE[]
+sak[ s .9 b -.2 r 1]
+}
+shape sak2 {
+SQUARE[]
+sak2[ s .9 b .2]
+}
+shape tent 
+rule 1 {
+CIRCLE[]
+tent[y -.5 s .995 r 15 b .05]
+}
+rule 1 {
+CIRCLE[]
+tent[y -.5 s .95 r -15 b .05]
+}
+rule .03 {
+CIRCLE[]
+tent[y -.5 s .95 r -20 b .01]
+tent[y -.5 s .95 r -20 b .01 flip 130 h 20 sat -.3 z 1]
+}

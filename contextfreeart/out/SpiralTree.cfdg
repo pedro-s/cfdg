@@ -1,0 +1,21 @@
+startshape T
+
+rule T{
+	S{}
+}
+
+rule S 1.1 {
+	SU{}
+}
+
+rule S{
+	SU{}
+	S[s .5 x -5.5 y 4 r 90]
+	S[s .5 y 8]
+	S[s .5 x 2 y 4 r -90]
+}
+
+rule SU{
+	CIRCLE{}
+	SU{s .991 x .1 y .1 r 3}
+}

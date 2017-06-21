@@ -1,0 +1,70 @@
+// ebc  ebn ebx ece ecf ech ECU
+
+startshape tree
+
+size {s 6.4 4.7 y -2.4 }
+background {sat .4 b -.15 h -140}
+
+rule gradient{
+200 * {a .0038 y -.05 s .99 b -.03 h rand_static(-1.2, 2.5) z -1 } CIRCLE{s 20 1.5 y 4 sat 1  h -140 r rand_static(-5, 5)}
+}
+
+rule earth{
+10* {y .04 z -1} CIRCLE{ s 130 90 y -44.95  x rand_static(-2, 2) z -38 a 1}
+}
+
+
+rule tree{
+
+tronco {a -1 h -110 b -.5}
+earth{}
+gradient {a -1 b 1}
+
+//10 * {x 1} tronco {a -1 h -110 b -1 s .3 y -1 x -4}
+}
+
+rule tronco 2{
+tronco{f 90}
+}
+
+rule tronco{
+
+// trunk
+CIRCLE{ a 1 s .2 1.5 y .75 b -.5}
+SQUARE{ a 1 s .18 1.2  y .52 b -.5}
+
+
+// leaves
+CIRCLE{y 2 s 2 2 sat 1 r 40 }
+/*
+// alternative leaves
+CIRCLE{x 2 s 35 1 sat 1 r 40}
+CIRCLE{x -2 s 35 1 sat 1 r -40}
+*/
+
+
+tronco {y 1.2 s .85   r 10 a .01 h -3 z 1 b .018}
+rametti {s .4 a .01 y .7}
+}
+
+
+rule tronco .2{
+tronco {f 90}
+}
+
+rule tronco .3{
+tronco {s .8 a .01}
+rami {s .7  a .01 y .7}
+}
+
+
+rule rami {
+tronco {r 20  }
+tronco {r -20   }
+}
+
+rule rametti {
+tronco {r 30  }
+tronco {r -30   }
+
+}

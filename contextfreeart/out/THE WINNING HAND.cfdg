@@ -1,0 +1,87 @@
+startshape NEW
+
+background{ b -.5}
+
+rule NEW{
+//body of ace card
+SQUARE{skew 50 -5 s 20.3}
+
+SQUARE{skew 50 -5 b 1 s 20}
+
+SQUARE{skew 50 -5  s 10}
+
+SQUARE{skew 50 -5  s 9.7 b 1}
+//top left diamond
+SQUARE{skew 1 20 x -2 y 5 h 0.00 sat 1.0000 b 1.0000}
+//bottom right diamond
+SQUARE{skew 1 20 x 2 y -5 h 0.00 sat 1.0000 b 1.0000}
+//center diamond
+SQUARE{skew 1 20 h 0.00 sat 1.0000 b 1.0000}
+
+SQUARE{ h 0.00 sat 1.0000 b 1.0000 s 1.5 x 2 y 7 skew 50 -5 }
+
+SQUARE{ b 1.0000 s 1 x 2 y 7 skew 50 -5 }
+
+
+SQUARE{ h 0.00 sat 1.0000 b 1.0000 s 1.5 x -.5 y 7.25 skew 50 -5 }
+
+
+SQUARE{skew 50 -5 s 20.3 x 15}
+
+SQUARE{skew 50 -5 b 1 s 20 x 15}
+
+SQUARE{skew 50 -5  s 10 x 15}
+
+SQUARE{skew 50 -5  s 9.7 b 1 x 15}
+//top left diamond
+SQUARE{skew 1 20 x 13 y 5 h 0.00 sat 1.0000 b 1.0000 }
+//bottom right diamond
+SQUARE{skew 1 20 x 17 y -5 h 0.00 sat 1.0000 b 1.0000 }
+//center diamond
+SQUARE{skew 1 20 h 0.00 sat 1.0000 b 1.0000 x 15}
+
+SQUARE{skew 50 -5 s 20.3 x 30}
+
+SQUARE{skew 50 -5 b 1 s 20 x 30}
+
+SQUARE{skew 50 -5  s 10 x 30}
+
+SQUARE{skew 50 -5  s 9.7 b 1 x 30}
+//top left diamond
+SQUARE{skew 1 20 x 28 y 5 h 0.00 sat 1.0000 b 1.0000}
+//bottom right diamond
+SQUARE{skew 1 20 x 32 y -5 h 0.00 sat 1.0000 b 1.0000}
+//center diamond
+SQUARE{skew 1 20 h 0.00 sat 1.0000 b 1.0000 x 30}
+
+
+SQUARE{skew 50 -5 s 20.3 x 45}
+
+SQUARE{skew 50 -5 b 1 s 20 x 45}
+
+SQUARE{skew 50 -5  s 10 x 45}
+
+SQUARE{skew 50 -5  s 9.7 b 1 x 45}
+//top left diamond
+SQUARE{skew 1 20 x 43 y 5 h 0.00 sat 1.0000 b 1.0000}
+//bottom right diamond
+SQUARE{skew 1 20 x 47 y -5 h 0.00 sat 1.0000 b 1.0000}
+//center diamond
+SQUARE{skew 1 20 h 0.00 sat 1.0000 b 1.0000 x 45}
+
+SQUARE{skew 50 -5 s 20.3 x 60}
+
+SQUARE{skew 50 -5 b 1 s 20 x 60}
+
+SQUARE{skew 50 -5  s 10 x 60}
+
+SQUARE{skew 50 -5  s 9.7 b 1 x 60}
+//top left diamond
+SQUARE{skew 1 20 x 58 y 5 h 0.00 sat 1.0000 b 1.0000}
+//bottom right diamond
+SQUARE{skew 1 20 x 62 y -5 h 0.00 sat 1.0000 b 1.0000}
+//center diamond
+SQUARE{skew 1 20 h 0.00 sat 1.0000 b 1.0000 x 60}
+
+
+}

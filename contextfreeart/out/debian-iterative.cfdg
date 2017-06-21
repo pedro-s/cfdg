@@ -1,0 +1,6 @@
+startshape start
+background {b -1}
+
+rule start {spiral {r 180}}
+rule spiral {720*{r 1 s 1.003} step {y 1}}
+rule step {CIRCLE {sat 1 b 1 s 0.1}}

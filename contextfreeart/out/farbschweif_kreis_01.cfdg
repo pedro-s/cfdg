@@ -1,0 +1,24 @@
+startshape formB
+
+rule layer1 
+{   layer1 {size .254 } 
+formA { size 1.125 }
+layer2 { }
+} 
+
+
+rule layer2
+{  formB [  y -.5  b -.5]
+}
+
+rule formA
+{ SQUARE [ hue 335.6744 sat 0.8345 b 0.4980 size .9  y -1.5]
+
+}
+
+rule formB
+{ layer1 [ size .925418 hue -10 z +20   r 36 ]
+
+}
+
+

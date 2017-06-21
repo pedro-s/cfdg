@@ -1,0 +1,59 @@
+startshape init
+
+rule init {
+
+	RADICE { rotate -90}
+	RADICE {rotate -90 }
+	RADICE {rotate -90 }
+
+	init2 {}
+}
+
+
+
+
+rule RADICE{
+	RADICE { size .35   }
+
+	CIRCLE {  hue 30 b 0.75 sat  1 }
+	//CIRCLE {  size .7 hue 30 b 1    sat  1 }
+
+	RADICE { x 0.5 rotate 10 size 0.95 }
+}
+
+rule RADICE{
+	RADICE { size .5   }//.35
+
+	CIRCLE {  hue 30 b 0.75 sat  1 }
+	//CIRCLE {  size .7 hue 30 b 1    sat  1 }
+	RADICE { x 0.5 rotate -10 size 0.95 }
+}
+
+
+
+rule draw{
+//   SQUARE {   hue 117.7 sat 0.8812 b 0.3333   }
+   CIRCLE {  size .85    hue 92.0 sat 0.8805 b 0.7512    }//8
+
+   draw { y 0.5   rotate 15 size 0.95 }
+}
+
+rule draw{
+//   SQUARE {    hue 117.7 sat 0.8812 b 0.3333   }
+   CIRCLE {  size .85   hue 117.7 sat 0.8812 b 0.9104   }//8
+
+   draw { y 0.5 rotate -15 size 0.95 }
+}
+
+
+rule init2 {
+
+	draw { }
+
+init2 { size .95 y +1}
+
+
+
+
+
+}

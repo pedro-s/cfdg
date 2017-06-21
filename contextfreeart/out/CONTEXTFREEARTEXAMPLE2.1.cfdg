@@ -1,0 +1,11 @@
+startshape TRIDENT
+background { h 150 sat 1.0000 b 0.8066 }
+
+rule TRIDENT {
+ARM { }
+}
+rule ARM 98 {
+TRIANGLE { h -20.16 sat 0.9351 b 1.0000 }
+TRIANGLE { h 30.96 sat 0.9070 b 1.0000 size 0.9 brightness 1 }
+ARM { y 0.2 size 0.99 rotate 1275 }
+}

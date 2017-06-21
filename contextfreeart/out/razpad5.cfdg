@@ -1,0 +1,20 @@
+startshape razpad 
+
+background {b -1}
+
+rule razpad {
+	6* {r(360/6)}
+	pad {y -4}
+	razpad {s .8 r 30 b .14}
+}
+
+rule pad {
+	2* {f 90}
+	raz {x 2.5}
+}
+
+rule raz {
+	CIRCLE {b .01}
+	raz {s 1 .9 r 14 y .2 b .01}
+	raz {s 1 .05 x 1 r 180 b .001}
+}

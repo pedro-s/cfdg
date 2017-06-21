@@ -1,0 +1,116 @@
+startshape FARBKLAEKSSS
+
+rule FARBKLAEKSSS{
+RAINBOW[s 0.4 z 5 x -5 y -3]
+3*[x 2] CLOUD[z 10 s 2 y -2]
+2*[x 2] CLOUD[z 10 s 2 y -3]
+CLOUD[x 10 y 2 z 10 s 1.5]
+CLOUD[x 12.5 y 2 z 10 s 0.5]
+FARBKLAEKSS[s 1.5]
+FARBKLAEKSS[x 4 s 1.5]
+FARBKLAEKSS[ x 8 s 1.5]
+FARBKLAEKSS[x 6 y -2 s 1.5]
+MSUN[ x 4 y -3.5]
+AYE[z 20 y -4 x -1 r -20]
+AYE[z 20 y -4 x 1 r 210 f 1]
+MOUTH[z 20 y -4.6 s 0.4 x -0.3]
+MOUTH[z 20 y 1.6 x 10.6 s 0.2 r 10]
+PLOTW[z 18 x 10 y 2  s 0.8]
+PLOTW[z 18 x 11.3 y 1.7 s 0.6]
+}
+
+rule MSUN{
+10*[r 20] SUNN[ r -90 z 2 s 0.2]
+}
+
+rule FARBKLAEKSS{
+FARBKLAEKSL[]
+FARBKLAEKSS[r 1 s 0.999]
+}
+
+rule FARBKLAEKSL 80{
+FARBKLAEKSL[x 0.1 s 0.99]
+}
+
+rule FARBKLAEKSL{
+AS[]
+}
+
+
+
+rule AS{
+	4*[r 90] A[]
+}
+
+rule A{
+	PLOT[]
+	A[x 0.1 s 0.97 r 50]
+}
+rule A{
+	PLOT[]
+	A[x 0.1 s 0.97 r -50]
+}
+
+rule PLOT{
+	CIRCLE[s 0.5  z 2 hue 207 sat .51 b 1]
+	CIRCLE[hue 207 sat .78 b .70]
+}
+
+
+rule CLOUD{
+CLOUD[r 45 x 0.01]
+}
+
+rule CLOUD{
+CLOUD[r -20 x 0.01]
+}
+
+rule CLOUD 0.1{
+CIRCLE[s 1 z -3]
+CIRCLE[s .90 b 1 z -2]
+
+CLOUD[]
+}
+
+rule CLOUD{
+CLOUD[s 0.9999]
+}
+
+rule CLOUD 0.0001{}
+
+rule RAINBOW{
+7*[s 0.95 x 1 hue 45] STR[b 1 sat 1]
+}
+
+rule STR{
+530*[y 0.1 r -0.3] CIRCLE[]
+530*[y 0.1 r -0.3] CIRCLE[s 1.6 b -1 z -.1]
+}
+
+rule SUNN{
+1100*[y 0.01 s 1.002] CIRCLE[z 1 s 0.8 0.5]
+1100*[y 0.01 s 1.002] CIRCLE[z 2 s 0.6 0.4 hue 52 b 1 sat .87]
+CIRCLE[s 16 z 1]
+CIRCLE[hue 52 b 1 sat .87 s 15 z 2]
+}
+
+rule AYE{
+80*[r 3] SQUARE[r 30 s 1 .01 y 20 a -0.9]
+100*[r 1] SQUARE[r 150 s 1.4 .001 y 200]
+12*[r 8] SQUARE[r 170 s 1 .01 y 20]
+}
+
+rule MOUTH{
+SQUARE[r 40 s 1 0.1]
+SQUARE[x 0.7 r -40 s 1 0.1]
+}
+
+rule PLOTW{
+CIRCLE[s 0.8 b 1]
+WISH[z -1]
+}
+
+rule WISH{
+CIRCLE []
+WISH[y -.1 s .9 1]
+}

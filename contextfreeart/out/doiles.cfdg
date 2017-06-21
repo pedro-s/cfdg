@@ -1,0 +1,21 @@
+startshape qux
+background {b -1}
+
+rule qux {
+ foo{a 1 sat 1 hue 245 b 1}
+ 2*{r 180}baz{x 10 s .75}
+}
+
+rule baz {
+  foo{ a 1 sat 1 hue 200 b 1}
+  baz{ x 10 s .75 r 15 hue -45}
+}
+
+rule foo {
+  20*{r 18}bar{x 10 hue 45 a -.1}
+}
+
+rule bar {
+   CIRCLE{}
+   foo{s .25}
+}

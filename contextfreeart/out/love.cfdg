@@ -1,0 +1,23 @@
+// by Chouser, Feb 2008
+
+startshape love
+
+rule love {
+  half { x -0.4 b 0.6 }
+  half { x  0.4 b 0.6 flip 90 }
+  20 * { r 36 } spiral { s 0.2 0.2 z -1 }
+}
+
+rule half {
+  CIRCLE { hue 0 sat 1 }
+  half { s 0.94 x 0.0324 y -0.06 r -0.5 b -0.02 }
+}
+
+rule spiral {
+  CIRCLE { hue 340 sat 0.7 b 1 s 1 0.4 }
+  spiral { s 0.98 x 0.4 r 7 a 1 }
+}
+
+rule spiral 0.1 {
+  spiral { flip 0 }
+}

@@ -1,0 +1,27 @@
+startshape starthalf
+
+rule starthalf {
+ smallhalf { a -0.5 }
+}
+
+rule smallhalf {
+ circleseg { s 2 x 0.5 y 0.5 }
+ SQUARE { }
+ smallhalf {
+// 1-phi
+s .61803398874989484820
+// (1-phi)/2+0.5
+x .809016994374947424102
+// -(0.5-(1-phi)/2)
+y -.19098300562505257589
+r 90
+}
+}
+
+rule circleseg {
+ CIRCLE { }
+ CIRCLE { s 0.9 b 1 a 1}
+ SQUARE { x 0.5 y 0.5 b 1 }
+ SQUARE { x 0.5 y -0.5 b 1 }
+ SQUARE { x -0.5 y 0.5 b 1 }
+}

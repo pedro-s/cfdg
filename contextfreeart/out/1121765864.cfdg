@@ -1,0 +1,62 @@
+startshape SPIKES
+
+rule SPIKES {
+        SPIKE {}
+        SPIKE { r 90 }
+        SPIKE { r 180 }
+        SPIKE { r 270 }
+}
+
+rule SPIKE {
+        LSPIKE {}
+}
+rule SPIKE {
+        RSPIKE {}
+}
+
+rule LSPIKE {
+        SQUARE {}
+        LSPIKE { y 0.98 s 0.99 r 3}
+}
+
+rule LSPIKE 0.005 {
+        SPIKE { r 90 }
+        SPIKE { r -90 }
+        RSPIKE { y 0.98 s 0.99  r 1}
+}
+
+rule LSPIKE 0.002 {
+	RSPIKE{}
+}
+
+rule LSPIKE 0.002 {
+	STRAIGHT {}
+}
+
+rule RSPIKE {
+        SQUARE {}
+        RSPIKE { y 0.98 s 0.99 r -3}
+}
+
+rule RSPIKE 0.005 {
+        SPIKE { r 90 }
+        SPIKE { r -90 }
+        LSPIKE { y 0.98 s 0.99  r -1}
+}
+
+rule RSPIKE 0.01 {
+	LSPIKE{}
+}
+
+rule RSPIKE 0.01 {
+	STRAIGHT {}
+}
+
+rule STRAIGHT {
+	SQUARE {}
+	STRAIGHT {y 0.98 s 0.99}
+}
+
+rule STRAIGHT 0.05 {
+	SPIKE {}
+}

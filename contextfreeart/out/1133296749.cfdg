@@ -1,0 +1,35 @@
+startshape dot
+
+rule dot 0.001 {
+ CIRCLE { }
+}
+
+rule dot 0.0025 {
+ CIRCLE { }
+ dot { r 90 }
+ dot { r -90 }
+}
+
+rule dot {
+ CIRCLE { }
+ dot { y 1.1 s 0.9 hue 27 }
+}
+
+rule dot {
+ CIRCLE { }
+ dot { y 1.1 s 1.1 hue 23 }
+}
+
+rule dot 0.1 {
+ CIRCLE { sat 1 b 1 }
+ dot { y 1.1 }
+}
+
+rule dot 0.1 {
+ CIRCLE { }
+ dot { r 90 }
+}
+rule dot 0.1 {
+ CIRCLE { }
+ dot { r -90 }
+}

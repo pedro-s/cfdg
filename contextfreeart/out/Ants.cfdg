@@ -1,0 +1,193 @@
+startshape Ant
+
+background {b -1}
+
+rule Ant {
+         Head {}
+}
+
+
+rule Head {
+	LMandible{y 0.16 x -0.135}
+	RMandible{y 0.16 x 0.135}
+	CIRCLE {b 1.0 s 0.626}
+	CIRCLE {b 1.0 s 0.395 y -0.15 x -0.15}
+	CIRCLE {b 1.0 s 0.395 y -0.15 x 0.15}
+	SQUARE { b 1.0 s 0.255 y -0.05 x 0.198 r 12}
+	SQUARE { b 1.0 s 0.255 y -0.05 x -0.198 r -12}
+	CIRCLE {s 0.15 y -0.12 x 0.25}
+	CIRCLE {s 0.15 y -0.12 x -0.25}
+	CIRCLE {s 0.4 y 0.4 }
+	CIRCLE {s 0.07 y 0.19 x 0.025}
+	CIRCLE {s 0.07 y 0.19 x -0.025}
+	LLeg {s 0.035 y 0.15 x -0.2 r 40}
+	RLeg {s 0.035 y 0.15 x 0.2 r -40}
+	Thocycle {}
+}
+rule LMandible 0.45{
+	LMandible{r 0}
+}
+
+rule LMandible 0.45 {
+	LMandible{r 1}
+}
+
+rule LMandible 0.1 {
+	SQUARE { b 1 s 0.16 y 0.1 x 0 r -20}
+	TRIANGLE {b 1 s 0.15 y 0.145 x 0.04 r -75}
+	TRIANGLE {b 1 s 0.10 y 0.12 x 0.055 r -75}
+	TRIANGLE {b 1 s 0.10 y 0.09 x 0.045 r -75}
+	TRIANGLE {s 0.25 y 0.19 x -0.065 r -75}
+}
+
+rule RMandible 0.45{
+	RMandible{r 0}
+}
+
+rule RMandible 0.45 {
+	RMandible{r -1}
+}
+
+rule RMandible 0.1{
+	SQUARE { b 1 s 0.16 y 0.1 x 0 r 20}
+	TRIANGLE {b 1 s 0.15 y 0.145 x -0.04 r 75}
+	TRIANGLE {b 1 s 0.10 y 0.12 x -0.055 r 75}
+	TRIANGLE {b 1 s 0.10 y 0.09 x -0.045 r 75}
+	TRIANGLE {s 0.25 y 0.19 x 0.065 r 75}
+}
+
+rule Thocycle 0.45 {
+	Thocycle {r 2}
+}
+rule Thocycle 0.45 {
+	Thocycle {r -2}
+}
+rule Thocycle 0.1 {
+	Thorax {y -0.5 }
+}
+
+rule Thorax {
+	CIRCLE {b 1.0 y -0.03 s 0.38}
+	CIRCLE {b 1 y -0.17 s 0.33}
+	CIRCLE {b 1 y -0.3 s 0.28}
+	//SQUARE {b 1.0 y -0.38 s 0.14 r 45}
+	LLeg {s 0.07 r 70 y -0.10 x -0.17}
+	RLeg {s 0.07 r -70 y -0.10 x 0.17}
+	LLeg {s 0.07 r 95 y -0.20 x -0.15}
+	RLeg {s 0.07 r -95 y -0.20 x 0.15}
+	LLeg {s 0.07 r 240 y -0.30 x 0.14}
+	RLeg {s 0.07 r 120 y -0.30 x -0.14}
+	Abdocycle{}
+}
+
+rule Abdocycle 0.45 {
+	Abdocycle {r 3}
+}
+rule Abdocycle 0.45 {
+	Abdocycle {r -3}
+}
+rule Abdocycle 0.1 {
+	Abdomen {y -0.38}
+}
+
+
+rule Abdomen {
+	//CIRCLE {b 1.0  s 0.07 r 45}
+	//SQUARE {b 1.0 y -0.12 s 0.14 r 45}
+	CIRCLE {b 1.0 y -0.34 s 0.56}
+	CIRCLE {b 1.0 y -0.4 s 0.54}
+	CIRCLE {b 1.0 y -0.45 s 0.49}
+	CIRCLE {b 1.0 y -0.53 s 0.4}
+	SQUARE {b 1.0 y -0.54 s 0.3 r 45}
+}
+
+rule LLeg 0.45 {
+	LLeg {r 3}
+}
+rule LLeg 0.45 {
+	LLeg {r -3}
+}
+
+rule LLeg 0.1 {
+	ForeLeg{}
+	LMidLeg{ y 5.75 s 0.9 r -40}
+}
+
+rule RLeg 0.45 {
+	RLeg {r 3}
+}
+rule RLeg 0.45 {
+	RLeg {r -3}
+}
+
+rule RLeg 0.1 {
+	ForeLeg{}
+	RMidLeg{ y 5.75 s 0.9 r 40}
+}
+
+rule ForeLeg {
+	CIRCLE{b 1 s 0.5}
+	SQUARE{b 1 y 0.25 s 0.5}
+	SQUARE{b 1 y 0.5 s 0.5}
+	SQUARE{b 1 y 1 s 0.5}
+	SQUARE{b 1 y 1.5 s 0.5}
+	SQUARE{b 1 y 2 s 0.5}
+	SQUARE{b 1 y 2.5 s 0.5}
+	SQUARE{b 1 y 3 s 0.5}
+	SQUARE{b 1 y 3.5 s 0.5}
+	SQUARE{b 1 y 4 s 0.5}
+	SQUARE{b 1 y 4.5 s 0.5}
+	SQUARE{b 1 y 5 s 0.5}
+	SQUARE{b 1 y 5.5 s 0.5}
+	CIRCLE{b 1 y 5.75 s 0.5}
+}
+
+rule LMidLeg 0.45 {
+	LMidLeg{r 5}
+}
+
+rule LMidLeg 0.45 {
+	LMidLeg{r -5}
+}
+
+rule LMidLeg 0.1 {
+	ForeLeg{}
+	LEndLeg{ y 5.75 s 0.75 r 12}
+}
+
+rule LEndLeg 0.45 {
+	LEndLeg{r 5}
+}
+
+rule LEndLeg 0.45 {
+	LEndLeg{r -5}
+}
+
+rule LEndLeg 0.1 {
+	ForeLeg{}
+}
+
+rule RMidLeg 0.45 {
+	RMidLeg{r 5}
+}
+
+rule RMidLeg 0.45 {
+	RMidLeg{r -5}
+}
+
+rule RMidLeg 0.1{
+	ForeLeg{}
+	REndLeg{ y 5.75 s 0.75 r -12}
+}
+
+rule REndLeg 0.45 {
+	REndLeg{r 5}
+}
+
+rule REndLeg 0.45 {
+	REndLeg{r -5}
+}
+
+rule REndLeg 0.1 {
+	ForeLeg{}
+}

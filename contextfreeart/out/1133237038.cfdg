@@ -1,0 +1,95 @@
+startshape START
+background { b -1 }
+
+rule START {
+	START_ {skew 0 -30 x 26 alpha -0.6 y 18.5  s 0.8 1} 
+	START_ {skew 0 30 y 36.5 alpha -0.6 s 0.8 1}
+	TIME { }
+}
+
+rule TIME {TIME { }}
+
+rule TIME 0.005 {
+	START_ {skew 0 -30 s 0.8 1} 
+	START_ {skew 0 30 x 26 y 18 s 0.8 1}
+} 
+
+rule START_ {
+	BIGGER { x -16}
+	BIGGER { y 16 x -16}
+	BIGGER { y 16}
+	BIGGER { }
+}
+
+rule BIGGER {
+	SCENE { x -8}
+	SCENE { y 8 x -8}
+	SCENE { y 8}
+	SCENE { }
+}
+
+rule SCENE {
+	EIGHT { x -4}
+	EIGHT { y 4 x -4}
+	EIGHT { y 4}
+	EIGHT { }
+}
+
+rule EIGHT {
+	FOUR { x -2}
+	FOUR { y 2 x -2}
+	FOUR { y 2}
+	FOUR { y 0}
+}
+
+rule FOUR {
+	SHAPE {  x -1 }
+	SHAPE { y 1 x -1 }
+	SHAPE { y 1 }
+	SHAPE {}
+}
+
+// SHAPE ROTATION
+
+rule SHAPE 1.5 { SHAPE { r 2 }}
+rule SHAPE 1.5 { SHAPE { r -2 }}
+
+// COLOR SHAPES
+
+rule SHAPE { SHAPE_ { hue 40 }}
+rule SHAPE { SHAPE_ { hue 70 }}
+
+// COLOR ROTATION
+
+rule SHAPE 2 { SHAPE { hue 10 }}
+rule SHAPE 2 { SHAPE { hue -10}}
+
+// SHAPES 
+
+rule SHAPE_ {
+	SQUARE { b -1}
+	SQUARE { s 0.5 b 0.9 sat 1}
+}
+
+rule SHAPE_ {
+	SQUARE { b 0.9 sat 1}
+	SQUARE {  s 0.5 b -1 }
+}
+
+rule SHAPE_ {
+	SQUARES { y 0.375 x 0.125 }
+	SQUARES { y -0.125 x 0.125}
+}
+
+rule SHAPE_ { }
+
+rule SQUARES {
+	SQUARE { b -1 s 0.25 x -0.5}
+	SQUARE { b 0.9 sat 1 s 0.25 x -0.25}
+	SQUARE { b -1 s 0.25}
+	SQUARE { b 0.9 sat 1 s 0.25 x 0.25}
+	SQUARE { b 0.9 sat 1 s 0.25 x -0.5 y -0.25}
+	SQUARE { b -1 s 0.25 x -0.25 y -0.25}
+	SQUARE { b 0.9 sat 1 s 0.25 y -0.25}
+	SQUARE { b -1 s 0.25 y -0.25 x 0.25}
+}

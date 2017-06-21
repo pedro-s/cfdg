@@ -1,0 +1,169 @@
+startshape TOP
+
+background { a -1 } 
+rule TOP{
+	20*{x 1.2} COL{}
+}
+
+rule COL{
+	10*{y 2} FACE{}
+}
+
+rule FACE{
+//BODY{}	
+HEAD{}
+	//NOSE{}
+	EYE{}
+	HAIR{}
+	MOUTHE{}
+}
+
+//rule BODY{
+//	CIRCLE{s 1 sat 1 y -0.5 b 1 z 0}
+//}
+
+rule HEAD{
+	CIRCLE{s 1 1.5 sat 1 y -0.5 b 0.4 z 0}
+	CIRCLE{s 0.35 1 sat 1 y -1 x -0.3 b 0.4 z 0}
+	CIRCLE{s 0.35 1 sat 1 y -1 x +0.3 b 0.4 z 0}
+	CIRCLE{s 0.75 sat 1 y -0.25 b 0.2 z 0}
+	HEAD2{b 0.8}
+}
+
+rule HEAD 100{
+	HEAD{h +15}
+}
+
+rule HEAD2{
+	CIRCLE{s 1 sat 1 z 1}
+	HEAD2{s 0.9 y -0.1 x -0.01}
+}
+
+rule HEAD2 0.001{}
+
+rule HEAD2{
+	HEAD2{flip 150 }
+}
+
+rule HEAD2{
+	HEAD2{flip 210  }
+}
+
+rule NOSE{
+	TRIANGLE{x -0.5 s 0.2}
+}
+
+rule EYE{
+	ONEEYE{x -0.2}
+	ONEEYE{x +0.2}
+}
+
+rule ONEEYE{
+	ONEEYE{y -0.05}
+}
+
+rule ONEEYE 3{
+	OEYE{}
+	PEYE{}
+	SEYE{}
+}
+
+rule OEYE{
+	CIRCLE{b 1 z 2 s 0.2}
+}
+
+rule OEYE{
+	CIRCLE{b 1 z 2 s 0.1}
+}
+
+rule OEYE{
+	OEYE{s 0.8}
+}
+
+rule OEYE{
+	OEYE{s 1.2}
+}
+
+rule PEYE{
+	CIRCLE{b -1 s 0.25}
+}
+
+rule PEYE{
+	CIRCLE{b -1 z 1 s 0.15}
+}
+
+rule PEYE{
+	CIRCLE{b -1 z 2 s 0.05}
+}
+
+rule PEYE{
+	PEYE{s 1.25}
+}
+
+rule PEYE{
+	PEYE{y -0.01 z 2}
+}
+
+rule SEYE{
+	SEYE{y +0.0025 z 2}
+}
+
+rule SEYE{
+	CIRCLE{b -1 z 2 s 0.05}
+}
+
+rule PEYE{
+	CIRCLE{b -1 z 2 s 0.05}
+}
+
+rule HAIR{
+}
+
+rule MOUTHE{
+	MOUTH{}
+}
+
+rule MOUTHE{
+	MOUTHO{}
+}
+
+rule MOUTHE{
+	MOUTHU{}
+}
+
+rule MOUTH 2{
+	SQUARE{s 0.5 0.03 b 1 y -0.3 z 2}
+}
+
+rule MOUTH 2{
+	MOUTH{s 0.85 y -0.1}
+}
+
+rule MOUTH 1{
+	MOUTH{r 5}
+}
+
+rule MOUTH 1{
+	MOUTH{r -5}
+}
+
+rule MOUTHO{
+	CIRCLE{s 0.2 0.1 b 1 y -0.25 z 2}
+}
+
+rule MOUTHO 5{
+	MOUTHO{r 45 y -0.2 x -0.2}
+}
+
+rule MOUTHU2{
+	CIRCLE{s 0.05 0.05 b 1 y -0.25 z 2}
+	MOUTHU2{s 0.95 y -0.03 r -3 x -0.02}
+}
+
+rule MOUTHU{
+	MOUTHU2{x +0.25}
+}
+
+rule MOUTHU{
+	MOUTHU2{flip 85 x -0.25}
+}

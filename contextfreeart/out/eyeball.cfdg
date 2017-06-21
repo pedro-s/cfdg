@@ -1,0 +1,60 @@
+CF::Size = [s 225]
+
+startshape leggo
+
+shape leggo {
+CIRCLE[s 36]
+
+loop 180[r 2]
+vein[s .6 hue 65..180 sat .3 b .8 x 12 y 12	]
+
+loop 206[r 1.75]
+myveins[hue 160..250 sat .3 b .7 x -40 y -40] //Comment out this line for some trippy shizz
+
+loop 20 [r 14..20]
+yomama[s .8 hue 0 sat .7 b .7 a -.5 x (-71..-68 )y (-71..-68)]
+
+mycircle[]
+}
+
+shape yomama
+rule .99{
+CIRCLE[]
+yomama[s .995 x -.1...5 y -.1...5 r -10..10]
+}
+rule .01{
+CIRCLE[]
+yomama[s .995 x 0...5 y 0 ...5]
+yomama[s .6 r -60..60]
+}
+rule .05{
+CIRCLE[]
+yomama[s .995 x 0...5 y 0 ...5]
+yomama[s .6 r -60..60 a -.8]
+}
+
+shape myveins{
+vein[]
+loop 10 [r 18]
+vein[s .2 r -85]
+}
+
+shape vein
+rule .99{
+CIRCLE[a -.2]
+vein[s .99 x 0...5 y 0 ...5]
+}
+rule .0775{
+CIRCLE[a -.2]
+vein[s .99 x 0...5 y 0 ...5]
+vein[s .6 r -60..60]
+}
+
+path mycircle{
+myrad = 100
+
+MOVETO(0,(-myrad))
+ARCTO(0,(myrad),myrad)
+ARCTO(0,(-myrad),myrad)
+STROKE(1)[]
+}

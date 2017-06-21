@@ -1,0 +1,58 @@
+startshape BASE
+background { b -1}
+rule BASE {
+     
+    lampo{ }
+    lampo{ r 45}
+    lampo{ r -45}
+    lampo{ r 90}
+    lampo{ r -90}
+    lampo{ r 180}
+    lampo{ r 135}
+    lampo{ r -135}
+    }
+
+rule lampo {
+     stella { }	
+     stella {x 6 y 6 }
+     stella {x -6 y -6}
+     stella {x -6 y 6 }
+     stella {x 6 y -6 }
+     lampo{ r 10 x 15 y 15 size 0.6}
+     lampo{ r 350 x 15 y 15 size 0.6}
+    }
+rule stella
+{  arco { }
+   arco{ r 45}
+   arco { r 315}
+   arco { r 90}
+   arco { r 270}
+  // BASE{ r 10 x 5 y 5 size 0.6}
+  // BASE{ r 350 x 5 y 5 size 0.6}
+   
+}
+rule arco
+{  fiore { }
+   fiore {flip 180 }
+   
+   
+}
+  rule fiore{
+CIRCLE {b 1 sat 1 h 40}  
+TRIANGLE {x 0.65 r 33 size 0.55 b 1 sat 1 h 250}  
+TRIANGLE {x -0.65 r -33 size 0.55 b 1 sat 1 h 255}  
+TRIANGLE {y 0.65  size 0.55 b 1 sat 1 h 250}  
+TRIANGLE {y -0.65 r 180 size 0.55 b 1  sat 1 h 260} 
+TRIANGLE {x 0.45 y 0.45 r 190 size 0.55 b 1  sat 1 h 263}  
+TRIANGLE {x -0.45 y -0.45 r 25 size 0.55 b 1  sat 1 h 261 }  
+TRIANGLE {x 0.45 y -0.45 r -20 size 0.55 b 1  sat 1 h 260}  
+TRIANGLE {x -0.45 y 0.45 r 170 size 0.55 b 1  sat 1 h 263}
+fiore {y 2 size 0.75 }
+
+
+ 
+}
+ 
+
+  
+

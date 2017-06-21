@@ -1,0 +1,7 @@
+startshape OVAL
+
+rule OVAL
+{
+	CIRCLE {skew 42 35 h 1.00 sat 1.0000 b 0.7804}
+	OVAL{rotate 4.27 size 0.9996 h 17 sat 1 b 0.04}
+}

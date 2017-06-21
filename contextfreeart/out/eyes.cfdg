@@ -1,0 +1,101 @@
+startshape EYES
+
+background { hue 10 sat 0.2 }
+
+rule EYES {
+  EYE { x -8 r -3}
+  EYE { r 3}
+}
+
+rule EYE {
+  EYELASHES { z 1 y 1 b 0.2 hue 10 sat 0.2}
+  EYELASHES { z 1 y 1 flip 90 b 0.2 hue 10 sat 0.2}
+  EYELASHES { z 1 y -1 flip 0 b 0.2 hue 10 sat 0.2}
+  EYELASHES { z 1 y -1 rotate 180 b 0.2 hue 10 sat 0.2}
+  WHITE {z -1}
+  IRIS {s 0.9}
+}
+
+rule WHITE {
+  CIRCLE { s 5.4 2.2 b 0.6 hue 10 sat 0.3 }
+  CIRCLE { s 5.2 2.1 b 0.4 hue 10 sat 0.2 }
+  INNERWHITE { s 5 2 b 0.7}
+}
+
+rule INNERWHITE {
+  CIRCLE {}
+  INNERWHITE { s 0.96 1 b 0.1}
+}
+
+rule EYELASHES {
+  EYELASH {s 0.1}
+  EYELASHES { x -0.1 r 0.8 s 0.965}
+}
+
+rule EYELASHES 3 {
+  EYELASHES { x -0.1 r 0.8 s 0.965}
+}
+
+
+rule EYELASH {
+  SQUARE {}
+  EYELASH { y -0.95 r -2 s 0.9}
+}
+
+rule EYELASH {
+  SQUARE {}
+  EYELASH { y -0.95 r -1 s 0.95}
+}
+
+rule IRIS {
+  IRISBACK {}
+  REFLECTION { z 1}
+  CIRCLE { s 1.03 z 1 hue 200 b 0.3 sat 1 alpha -0.2}
+  CIRCLE { z 1}
+  FRONDS { b 1 alpha -0.95}
+  FRONDS { hue 130 b 0.7 sat 1 alpha -0.95}
+  FRONDS { hue 220 b 0.7 sat 1 alpha -0.92}
+  FRONDS { hue 20 b 0.7 sat 1 alpha -0.98}
+  FRONDS { alpha -0.95}
+}
+
+rule REFLECTION {
+  SQUARE { s 0.3 r 45 x -0.4 y 0.4 b 1 alpha -0.4 }
+  SQUARE { s 0.3 0.02 r 45 x -0.4 y 0.4 b 0 alpha -0.7 }
+  SQUARE { s 0.02 0.3 r 45 x -0.4 y 0.4 b 0 alpha -0.7 }
+}
+
+rule IRISBACK {
+  IRISBACK { y 0 s 0.98 b 0.05}
+  CIRCLE { s 2 hue 200 sat 0.9 b 0.1}
+}
+
+rule FRONDS {
+  FROND {s 0.1}
+  FRONDS [r 75.5 s 0.998]
+}
+
+rule FRONDS {
+  FROND {s 0.09}
+  FRONDS [r 32.3 s 0.998]
+}
+
+rule FROND {
+  SQUARE {}
+  FROND { y 1.05 s 0.9 }
+}
+
+rule FROND {
+  SQUARE {}
+  FROND { r 5 y 1.05 s 0.9 }
+}
+
+rule FROND {
+  SQUARE {}
+  FROND { r -5 y 1.05 s 0.9 }
+}
+
+rule FROND 0.3{
+  FROND { r -1 s 0.9 }
+  FROND { r 1 s 0.9 }
+}

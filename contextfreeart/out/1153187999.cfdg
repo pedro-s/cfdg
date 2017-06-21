@@ -1,0 +1,18 @@
+startshape 3SQUARE
+
+background { hue 349.7 sat 0.4270 b 0.8643 } 
+
+rule 3SQUARE {
+	MULTI{ hue 227.3 sat 0.8705 b 0.63 x -8 y 0 s 2 2 }
+      MULTI{ hue 353.7 sat 0.6339 b 0.63 x 0 y 0 s 2 2 }     
+	MULTI{ hue 152.7 sat 0.6977 b 0.63 x 8 y 0 s 2 2 }
+
+	3SQUARE{ hue 20 size 0.9 y 7 }
+}
+
+rule MULTI {
+	SQUARE { s 4 4}
+	CIRCLE { b 0.5  s 3 4}
+	TRIANGLE { hue 70 b 0.7  y -0.09 s 1.5 1.5 }
+
+}

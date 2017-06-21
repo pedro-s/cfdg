@@ -1,0 +1,31 @@
+startshape arc
+
+tile {s 500}
+
+rule arc { 
+  fuzz {b .5}
+  arc2 [] 
+  arc [r .3 x 1]
+}
+
+rule arc 0.001 {}
+rule arc 0.01 { arc {flip 180} }
+rule arc 0.005 { change_color {} }
+
+rule change_color { 
+  arc {b .5 hue 10 sat 1} 
+}
+
+rule arc2 { 3 * [x 14 y 12] fuzz {r 5} }
+
+rule fuzz { 
+  ln {} 
+  ln {y 20} 
+}
+
+rule ln {20 * [x 2] gr {} }
+
+rule gr { gr {y 1} }
+rule gr { bit {} }
+
+rule bit { SQUARE {} }

@@ -1,0 +1,12 @@
+startshape DANO2
+background { b -1}
+rule DANO2 {
+SQUARE {h 212.09 sat 0.7738 b 1.0000}
+DANO2 { y 6 x 2 size .98 rotate 35 }
+DANO2 { y 3 x -2 size .3 rotate 1000 }
+DANO { x 1 r 4 hue 4 }
+
+}
+
+
+rule DANO 0.001 {} 

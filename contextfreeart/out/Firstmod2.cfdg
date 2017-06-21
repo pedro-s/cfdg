@@ -1,0 +1,22 @@
+startshape BIG
+background { b -.5 }
+
+rule BIG {
+OP { x -0.5 y -0.5 }
+	OP { x  0.5 y -0.5 }
+	OP { x  0.5 y  0.5 }
+	OP { x -0.5 y  0.5 }
+}
+
+rule OP { 60* {r 10} QW {} }
+
+rule QW { TRIANGLE { size .5} 
+BUST { y 1.0 s .5 }
+}
+
+rule BUST  {
+TRIANGLE { size .5 }
+QW { r 40 }
+QW { r -40 }
+QW { y 0.60 s 0.05 }
+}

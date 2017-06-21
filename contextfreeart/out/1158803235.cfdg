@@ -1,0 +1,103 @@
+startshape ellen
+
+rule ellen
+{
+	thing2{}
+thing2{r 10}
+thing2{r 20}
+thing2{r 30}
+thing2{r 40}
+thing2{r 50}
+thing2{r 60}
+thing2{r 70}
+thing2{r 80}
+thing2{r 90}
+thing2{r 100}
+thing2{r 110}
+thing2{r 120}
+thing2{r 130}
+thing2{r 140}
+thing2{r 150}
+thing2{r 160}
+thing2{r 170}
+thing2{r 180}
+thing2{r 190}
+thing2{r 200}
+thing2{r 210}
+thing2{r 220}
+thing2{r 230}
+thing2{r 240}
+thing2{r 250}
+thing2{r 260}
+thing2{r 270}
+thing2{r 280}
+thing2{r 290}
+thing2{r 300}
+thing2{r 310}
+thing2{r 320}
+thing2{r 330}
+thing2{r 340}
+thing2{r 350}
+	
+}
+
+rule thing2
+{
+	ring{x 66}
+}
+
+rule ring
+{
+	thing{}
+	thing{r 30}
+	thing{r 60}
+	thing{r 90}
+	thing{r 120}
+	thing{r 150}
+	thing{r 180}
+	thing{r 210}
+	thing{r 240}
+	thing{r 270}
+	thing{r 300}
+	thing{r 330}
+}
+
+rule thing
+{
+	arc{}
+	arc{r 1}
+	arc{r 2}
+	arc{r 3}
+	arc{r 4}
+	arc{r 5}
+	arc{r 6}
+	arc{r 7}
+	arc{r 8}
+	arc{r 9}
+	arc{r 10}
+	arc{r 11}
+	arc{r 12}
+	arc{r 13}
+	arc{r 14}
+	arc{r 15}
+	arc{r 16}
+	arc{r 17}
+	arc{r 18}
+	arc{r 19}
+	arc{r 20}
+	arc{r 21}
+	arc{r 22}
+	arc{r 23}
+	arc{r 24}
+	arc{r 25}
+	arc{r 26}
+	arc{r 27}
+	arc{r 28}
+	arc{r 29}
+	arc{r 30}
+}
+
+rule arc
+{
+	CIRCLE{x 66 size .8}
+}

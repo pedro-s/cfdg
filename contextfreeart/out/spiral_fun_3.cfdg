@@ -1,0 +1,27 @@
+startshape spiral3
+
+background {b -1}
+
+rule spiral3
+{
+spiral2 {}
+spiral3{x  21 h 1 r  34 s .99}
+}
+
+rule spiral2
+{
+spiral {}
+spiral2{x  3 h 1 r  -21 s .99}
+}
+
+rule spiral
+{
+element {}
+spiral {x  .5 h 1 r  13 s .96}
+}
+
+rule element
+{
+CIRCLE {b 0}
+CIRCLE {h 1 sat 1 b 1 s .90}
+}

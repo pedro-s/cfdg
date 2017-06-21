@@ -1,0 +1,23 @@
+startshape MAIN [ b 1 ]
+CF::Background = [ b - 1]
+CF::Impure = 1
+
+LL = sqrt(3)
+
+shape MAIN{
+	SUB[]
+	loop i = 3 [] MAIN [[ s.5 x cos(90+i*120) y sin(90+i*120) ]]
+}
+
+shape SUB{
+	TRI[]
+	TRI[ r 180 s .5]
+}
+
+path TRI{
+	MOVETO(cos(210),sin(210))
+	LINETO(cos(330),sin(330))
+	LINETO(cos(90),sin(90))
+	CLOSEPOLY()
+	STROKE(.03, CF::RoundJoin)[]
+}

@@ -1,0 +1,13 @@
+startshape warpspeed
+
+background {b -1 }
+
+rule warpspeed{
+
+50*{ x 1 y 5 r 50 s .98.9 h 10  }
+{50*{ x .1 y .05 r 50  s .98.9 h 10   }
+{50*{ x .1 y .05 r 2 s .98.9 h 10  }
+CIRCLE {h 180.00 sat 0.2980 b 1.0000 }}}
+
+
+}

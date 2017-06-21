@@ -1,0 +1,112 @@
+//birdy singing ornaments
+//inspired by the TV series 'Hungarian Folk Tales'
+
+startshape SING
+
+background{hue 60 saturation 0.5 b 1}
+
+//spirals are elemental parts of the ornament
+rule SPIRAL{
+	CIRCLE{hue 30 saturation 1 b -0.8}
+	SPIRAL{y 0.2 r 2 s 0.99}
+}
+
+//this one will make them a little unequal
+rule SPIRAL{
+	CIRCLE{hue 30 saturation 1 b -0.8}
+	SPIRAL{y 0.2 r 4 s 0.99}
+}
+
+//spirals will sometimes end in a nice little flower
+rule SPIRAL 0.005{
+	CIRCLE{s 5 hue 30 saturation 1 b -0.8}
+	CIRCLE{s 4 z 1 hue 60 saturation 0.5 b 1}
+	PETAL{}
+	PETAL{r 60}
+	PETAL{r 120}
+	PETAL{r 180}
+	PETAL{r 240}
+	PETAL{r 300}
+}
+
+//petal of the little flower
+rule PETAL{
+	CIRCLE{s 5 y 5}
+}
+
+//going one step ahead with the ornament
+rule AHEAD{
+	SPIRAL{s .125 r -20}
+	SPIRAL{s .125 r 20 y 0.5 flip 90}
+}
+
+//first line of the ornament goes straight up
+rule UP{
+	AHEAD{}
+	UP{y 1}
+}
+
+//first line is 10 steps long in average
+rule UP 0.1{
+	TURNRIGHT{}
+}
+
+//second line goes the same way ahead
+rule DOWN{
+	AHEAD{}
+	DOWN{y 1}
+}
+rule DOWN 0.1{
+	TURNLEFT{}
+}
+
+//turn from the end of the first line to the second line
+rule TURNRIGHT 0.95{
+	AHEAD{}
+	TURNRIGHT{y 1 r -9}
+}
+
+//...by a 180 degree curve in average
+rule TURNRIGHT 0.05{
+	DOWN{}
+}
+
+//turn the other way around
+rule TURNLEFT 0.95{
+	AHEAD{}
+	TURNLEFT{y 1 r 9}
+}
+
+//ornament ends after this curve, which is a 180-degree one as well
+rule TURNLEFT 0.05{
+}
+
+//draw the singing birdy
+rule SING{
+	BIRDY{s 0.2 x -1}
+	UP{r -90} //start with the first line of ornaments but oriented according to the birdy
+}
+
+//draw the birdy
+rule BIRDY{
+	BILL{r 295 hue 30 saturation 1 b -0.8}
+	BILL{r 255 hue 30 saturation 1 b -0.8}
+	CIRCLE{s 1 y 1 hue 60 saturation 0.5 b 1 z 1} //eye
+	BODY{s 5 flip 0}
+	LEG{x -4 y -7 r 30}
+	LEG{x -4 y -7 r -30}
+}
+
+//body parts of the birdy
+rule BILL{
+	TRIANGLE{y 2.5 s 2 5}
+}
+rule BODY{ //looks like a spiral
+	CIRCLE{hue 30 saturation 1 b -0.8}
+	BODY{y 0.2 r 9 s 0.95}
+}
+rule LEG{
+	SQUARE{y -1.5 s 0.5 3}
+	SQUARE{y -3 x 0.75 s 1.5 0.5}
+	CIRCLE{y -3 s 0.5}
+}

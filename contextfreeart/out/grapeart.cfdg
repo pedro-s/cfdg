@@ -1,0 +1,62 @@
+// RQA RPZ RQD RQI
+// YTU
+
+startshape block
+
+// Forest Walk color scheme by Muma
+// d4beb0 bg hue 23 sat .17 b .83
+// 643c3a tree hue 3 sat .42 b .39
+// 8d874b green hue 55 sat .47 b .55
+// 5a6140 leaves hue 73 sat .34 b .38
+//	leaves 2 hue 167 sat .12 b .62
+
+background { hue 23 sat .17 b  -0.17 }
+
+rule kor  {
+	SQUARE { hue 3 sat .42 b .39}
+}
+
+rule rkor {
+	kor {}
+	rkor { x -1 r 3  s 0.98}
+}
+
+rule rkor .01 {
+	rkor {}
+	cimbi { x -.5 s .985 }
+}
+
+rule rkor .01 {
+	lkor {}
+	cimbi { x -.5 s .985 }
+}
+
+rule lkor {
+	kor {}
+	lkor { x -1 r -2 s .98}
+}
+
+rule cimbi .03 {
+	rkor {}
+	cimbi { x -.5 s .985 }
+}
+
+
+rule cimbi {
+	kor {}
+	cimbi { x -.5 s .985}
+}
+
+rule cimbi .006 {
+	CIRCLE { s 20 hue 55 sat .47 b .55 z -30 }
+	cimbi {}
+}
+rule cimbi .006 {
+	CIRCLE { s 20 hue 73 sat .34 b .38 z -30 }
+	cimbi {}
+}
+
+rule block {
+	cimbi {}
+	cimbi { x -30 r 90 }
+}

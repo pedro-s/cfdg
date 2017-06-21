@@ -1,0 +1,48 @@
+startshape startseg
+
+rule startseg {
+	seg1 { a -1 flip 180}
+}
+
+rule seg1 {
+	line {s 1.5}
+	seg2 {x 7.5 r 270}
+	seg1 {a +.05 s .333}
+}
+
+rule seg2 {
+	line {s 1.5}
+	seg3 {x 7.5 r 135}
+	seg1 {s .333 a +.05}
+}
+
+
+rule seg3 {
+	line {s 2.302}
+	seg4 {x 10.605 r 315}
+	seg1 {s .767 a +.05}
+}
+
+rule seg4 {
+	line {}
+	seg1 {s .333 a +.05}
+}
+
+
+rule line {
+	endpoint {}
+	point {x .5}
+	point {x 1.5}
+	point {x 2.5}
+	point {x 3.5}
+	point {x 4.5}
+	endpoint {}
+}
+	
+rule point {
+	SQUARE {}
+}
+
+rule endpoint {
+	CIRCLE {}
+}

@@ -1,0 +1,172 @@
+startshape messarounds
+
+background { b -.9 sat .7}
+
+rule squares{ 3*{ x 1} pickonefilling {} 
+3*{ x 1} pickonefilling {y 1}
+3*{ x 1} pickonefilling {y 2}}
+rule cubes { 3*{ x 2} CUBE{} 
+3*{ x 2} CUBE{y 2}}
+ 
+rule messarounds {
+messaround { } 
+conts{ }
+}
+rule conts .05 { }
+rule conts { conts { hue 33 } }
+rule conts { conts { b .3 } }
+rule conts { conts { b -.3 } }
+rule conts { conts { sat .2 } }
+rule conts { conts { sat -.2 } }
+rule conts { messarounds { x 1 y .58 z -1} }
+rule conts { messarounds { x 1 y -.58 z 1} }
+rule conts { messarounds { x -1 y .58 z -1} }
+rule conts { messarounds { x -1 y -.58 z 1} }
+
+rule messaround {
+CUBE {}
+messaround { y 1 s 1.1 z 1 r 3}
+}
+rule messaround .8 { }
+rule messaround .1 { messaround {flip 90}}
+
+
+rule CUBE {2*{s -1 1 }SIDE{}TOP{}}
+ 
+rule SIDE {FACE{skew 0 30 }}
+ 
+rule TOP {FACE[s 1.413 .816 r 135 b .4]}
+ 
+rule FACE {pickonefilling{x .5 y -.5 }}
+
+
+rule pickonefilling 50 { pickonefilling {hue 17}}
+rule pickonefilling { pickonefilling {sat 1}}
+rule pickonefilling { pickonefilling {sat -1}}
+rule pickonefilling 10 { pickonefilling {b .3}}
+rule pickonefilling 10{ pickonefilling {b -.2}}
+rule pickonefilling { pickonefilling {b .5}}
+
+rule pickonefilling { filling{} }
+rule pickonefilling { fillingb{} }
+rule pickonefilling { softyfilling{} }
+rule pickonefilling { thrilling{} }
+rule pickonefilling { minithrilling{} }
+rule pickonefilling { unithrilling{} }
+rule pickonefilling { softthrilling{} }
+rule pickonefilling { softerthrilling{} }
+
+rule pickonefilling { throlling{}}
+rule pickonefilling { minithrolling{}}
+rule pickonefilling { unithrolling{ }}
+rule pickonefilling { softthrolling{ }}
+
+rule pickonefilling { foury {}}
+rule pickonefilling { foury2 {}}
+rule pickonefilling { foury3 {}}
+rule pickonefilling { foury4 {}}
+
+rule pickonefilling { messfoury4 {}}
+rule pickonefilling { realmessfoury4 {}}
+
+rule pickonefilling { softfoury3 {}}
+rule pickonefilling { softerfoury3 {}}
+
+rule filling {
+   somebox { }
+   fillingb { s .8 b .2} }
+rule fillingb {
+   somebox { }
+   filling { s .8 b -.2} }
+
+rule softyfilling { 5* { r 1} filling{a -.5 r -2} }
+rule softyfilling { 5* { r 1} fillingb{a -.5 r -2} }
+
+rule thrilling {
+somebox{}
+thrilling { x -.25 s .5 1 z .01}
+thrilling { x .25 s .5 1 z .01}
+}
+rule thrilling { thrilling {r 90} }
+rule thrilling .5 {}
+
+rule minithrilling { 10*{} thrilling{} }
+rule unithrilling { 80*{} thrilling{} }
+rule softthrilling { 20*{} thrilling{ a -.7} }
+rule softerthrilling { 20*{} thrilling{ a -.95} }
+
+rule throlling {
+somebox2{ }
+throlling { x -.25 s .5 1 z .01}
+throlling { x .25 s .5 1 z .01}
+}
+rule throlling { throlling {r 90} }
+rule throlling .5 {}
+
+rule minithrolling { 10*{} throlling{} }
+rule unithrolling { 80*{} throlling{} }
+rule softthrolling { 20*{} throlling{ a -.7} }
+
+rule somebox { SQUARE {b -1} } 
+rule somebox { SQUARE {b .2} } 
+rule somebox { SQUARE {sat .5} } 
+
+rule somebox2 {somebox2{hue -10}}
+rule somebox2 { SQUARE {hue 15} } 
+rule somebox2 { SQUARE {hue -15} } 
+rule somebox2 .1 { SQUARE {hue 50} }
+rule somebox2 { SQUARE {b -.5 sat -.1} } 
+rule somebox2 { SQUARE {sat .9 b .3} } 
+
+rule somebox3 {somebox3{hue -10}}
+rule somebox3 {somebox3{r 3}}
+rule somebox3 {somebox3{r -3}}
+rule somebox3 { SQUARE {hue 15} } 
+rule somebox3 { SQUARE {hue -15} } 
+rule somebox3 .1 { somebox3 {hue 50 b 2} }
+rule somebox3 { SQUARE {b -.5 sat -.1} } 
+rule somebox3 { SQUARE {sat .9 b .3} } 
+
+
+
+rule foury {
+somebox{}
+foury{x .25 y .25 s .5 }
+foury{x .25 y -.25 s .5 }
+foury{x -.25 y .25 s .5 }
+foury{x -.25 y -.25 s .5 }
+}
+rule foury .05 { }
+rule foury2 {
+somebox3{}
+foury2{x .25 y .25 s .5 }
+foury2{x .25 y -.25 s .5 }
+foury2{x -.25 y .25 s .5 }
+foury2{x -.25 y -.25 s .5 }
+}
+rule foury2 .05 { }
+rule foury3 {
+somebox3{}
+foury3{x .25 y .25 s .5 }
+foury3{x .25 y -.25 s .5 }
+foury3{x -.25 y .25 s .5 }
+foury3{x -.25 y -.25 s .5 }
+}
+rule foury3 .5 { }
+rule foury4 {
+somebox3{}
+foury4{x .25 y .25 s .5 r 1 z .01}
+foury4{x .25 y -.25 s .5 r 1 z .01}
+foury4{x -.25 y .25 s .5 r 1 z .01}
+foury4{x -.25 y -.25 s .5 r 1 z .01}
+}
+rule foury4 { foury4 {r 10 } }
+rule foury4 { foury4 {r -10 } }
+rule foury4  1.5 { }
+
+
+
+rule messfoury4{ 20*{} foury4 { } }
+rule realmessfoury4{ 60*{} foury4 { } }
+rule softfoury3 { 5*{} foury3 { a -.5 } }
+rule softerfoury3 { 10*{} foury3 { a -.9 } }

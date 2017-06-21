@@ -1,0 +1,29 @@
+startshape SIMPLE
+
+rule SIMPLE {
+SQUARES { }
+SQUARES { x 90 }
+LINE { x 120 y 45 r 90 b .25 }
+LINE { x 80 r 90 s 1.1 }
+LINE { x 27 y 80 r -90 s .9 b .5 }
+TENDRILS { x 10 y 23 s .3 r -20 }
+TENDRILS { x 113.5 y -23 s .3 flip 90 r -45 }
+TENDRILS { x 27 y 82 s .3 r -50 b .5 }
+TENDRILS { x 140 y 64 s .3 b .25 flip 90 r 10 }
+}
+
+rule SQUARES {
+SQUARE { s 50 }
+SQUARE { x 45 y 45 s 40 b .25 }
+SQUARE { y 80 x 10 s 30 b .5 }
+}
+
+rule LINE {
+TRIANGLE { s 10}
+LINE { y 1 s .99 b .01 }
+}
+
+rule TENDRILS {
+CIRCLE { s 10 }
+TENDRILS { s .99 x 1 y 1 r 3 b .01 }
+}

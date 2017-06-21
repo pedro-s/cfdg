@@ -1,0 +1,54 @@
+startshape CUBE 
+
+background {b -1}
+
+rule CUBE { 
+SQUARE{a -.2 x .5 y -.5  skew 0 30 h 2 sat 1 b .6} // right front side 
+SQUARE{a -.2 x -.5 y -.5 skew 0 330 h 2 sat 1 b .6} // left front side 
+SQUARE {a -.2 s 1.112 skew 15 15 r 315 y .288 h 2 sat 1 b .6} // top side
+DOTS {}
+AGAIN {}
+}
+
+rule DOTS .1 { //four on top
+CIRCLE {s .2 .16 b 1} 
+CIRCLE {s .2 .14 y .6 b 1} 
+CIRCLE {s .2 .15 y .3 x .6 b 1} 
+CIRCLE {s .2 .15 y .3 x -.6 b 1} 
+CIRCLE {s .13 .2 x -.8 y -.05 skew 0 -10 b 1}
+CIRCLE {s .13 .2 x -.8 y -.35 skew 0 -10 b 1}
+CIRCLE {s .13 .2 x -.8 y -.65 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -.4 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -.7 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -1 skew 0 -10 b 1}
+CIRCLE {s .13 .2 x .8 y -.05 skew 10 0 b 1} 
+CIRCLE {s .14 .2 x .2 y -.95 skew 10 0 b 1} 
+} 
+
+rule DOTS .1 { // two on top
+CIRCLE {s .2 .16 b 1} 
+CIRCLE {s .2 .14 y .6 b 1} 
+CIRCLE {s .13 .2 x -.55 y -.5 skew 0 -10 b 1} 
+CIRCLE {s .13 .2 x .8 y -.05 skew 10 0 b 1} 
+CIRCLE {s .13 .2 x .8 y -.60 skew 10 0 b 1} 
+CIRCLE {s .14 .2 x .2 y -.45 skew 10 0 b 1} 
+CIRCLE {s .14 .2 x .2 y -.95 skew 10 0 b 1} 
+}
+
+rule DOTS .1 { // three on top
+CIRCLE {s .2 .16 b 1} 
+CIRCLE {s .2 .14 y .6 b 1} 
+CIRCLE {s .2 .15 y .3 b 1} 
+CIRCLE {s .13 .2 x -.8 y -.05 skew 0 -10 b 1} 
+CIRCLE {s .13 .2 x -.8 y -.65 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -.4 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.52 y -.54 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x -.2 y -1 skew 0 -10 b 1}
+CIRCLE {s .14 .2 x .5 y -.55 skew 10 0 b 1} 
+}
+
+rule AGAIN {
+CUBE {a -.25 y 1.6 size 0.6 rotate 20 brightness 0.01}
+}
+
+

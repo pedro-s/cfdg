@@ -1,0 +1,35 @@
+startshape SIX
+background { b 1 }
+
+rule SIX { FOUR { }}
+
+rule FOUR { 
+THREE { }
+FOUR { x 1 r 5 s 0.4 alpha -0.0009 }
+}
+
+rule FOUR {
+THREE { }
+FOUR { y 1 r -5 s 0.4 alpha -0.0009 hue 0.7 sat 0.9 b 1 skew 1.5 0 }
+}
+
+rule THREE { 
+TWO { }
+THREE { flip 32 s 0.99 alpha -0.0009 hue 0.7 sat 0.9 b 1 skew 2 0 }
+
+}
+
+rule THREE { 
+TWO { }
+THREE { flip -32 s 0.99 alpha -0.0009 hue 0.9 sat 0.9 b 1 }
+}
+
+rule TWO { 
+ONE { }
+TWO { x 1 s 0.89 r 5 alpha -0.0009 hue 0.9 sat 0.9 b 1}
+}
+
+rule ONE {
+SQUARE { s 0.08 3 hue 200 sat 0.6 b 0.9 }
+SQUARE { s 3 0.08 hue 200 sat 0.6 b 0.9 }
+}

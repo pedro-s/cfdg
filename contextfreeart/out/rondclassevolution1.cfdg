@@ -1,0 +1,24 @@
+startshape ddm
+background{b 1}
+
+rule ddm {
+	RIGHT{ r 30 }
+	ddm{ r 30 s 0.5}
+}
+rule RIGHT 5 {
+	SHAPE{ s 1 1}
+	RIGHT { x 2 s -1  hue -1 alpha -0.03}
+}
+rule RIGHT {
+	SHAPE{ s 1 1}
+	RIGHT { x 3 s 0.5 r 10 hue 6 alpha -0.5}
+	RIGHT {x 2 s 0.77 r -80 hue 1 alpha -0.3}
+}
+rule RIGHT 0.01 {}
+
+rule SHAPE{
+	TRIANGLE{ hue 62.1027 sat 1.0000 b 1.0000}
+   SQUARE{ y 2 hue 200.9558 sat 0.5243 b 1.0000}
+   CIRCLE { x 1 hue 296.8869 sat 0.8292 b 0.9294}
+}
+

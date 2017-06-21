@@ -1,0 +1,12 @@
+startshape ANGELA
+background{b -1}
+ 
+rule C  {
+CIRCLE{s 0.8 1 }
+TRIANGLE{s 0.8 1 y 0.35}
+C {s 0.8 sat -0.2}
+} 
+rule ANGELA {
+3*{r 120 y -1.40 x -0.80 h 40} C {b 1 h 240 sat 1 r 180} 
+3*{r 120}ANGELA{s 0.5 x 1 y 1}
+}

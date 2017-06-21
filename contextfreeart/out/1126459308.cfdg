@@ -1,0 +1,48 @@
+startshape FUNGI
+
+
+rule FUNGI {
+	ZWEIG{}
+		}
+
+rule ZWEIG {
+	ZWEIG {s 1 r 15}
+}
+
+
+rule SPOREN  25 {
+	CIRCLE {hue = 220 sat 0.4 b 0.1 s .1}
+    SPOREN {hue = 220 sat 0.5 b 0.2 y 0.2 size .995 b .01}
+}
+
+
+rule SPOREN 1{
+	ZWEIG {}
+}
+
+rule ZWEIG{
+	ZWEIG_LINKS  {}
+	ZWEIG_RECHTS {}
+}
+
+rule ZWEIG_LINKS 3{
+	SPOREN {r 35}
+}
+rule ZWEIG_LINKS{
+	SPOREN {r 70}
+}
+rule ZWEIG_LINKS{
+	SPOREN {r 105}
+}
+
+rule ZWEIG_RECHTS 3{
+	SPOREN {r -5}
+}
+rule ZWEIG_RECHTS{
+	SPOREN {r -10}
+}
+rule ZWEIG_RECHTS 15{
+	SPOREN {r -50}
+}
+
+

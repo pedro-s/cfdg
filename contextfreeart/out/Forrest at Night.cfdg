@@ -1,0 +1,52 @@
+startshape foo
+
+rule foo 0.5 {
+	love {r 45 b 1 z 100}
+	foo {s 0.01}
+}
+
+rule love {
+	SQUARE {}
+	CIRCLE {x 0.5 }
+	CIRCLE {y 0.5}	
+}
+
+rule love {
+	love2{h 0.8 b 0.7 sat 0.6}
+}
+
+rule love2 {
+	SQUARE {}
+	SQUARE {r 45}
+	love2 {x 1 y 1 s 0.5}
+	love2 {y 1 r 12 b 0.9 sat 0.9 h 0.9 s 0.99}
+}
+
+background {b -0.9}
+
+rule foo {
+	bar {}
+	bar {r 90}
+	bar {r 180}
+	bar {r 270}
+	foo {r 10 hue 13 s 0.9 b 0.1 sat 0.2}
+}
+
+
+rule bar 0.01{
+	bar {s 0.1 x 1 y 1}
+}
+
+rule bar {
+	TRIANGLE {y 0.79}
+	CIRCLE {x -0.5}
+}
+
+rule bar {
+	foo {x 3 s 0.9 x 80}
+}
+
+rule foo 0.1 {
+	bar {b  1.1}
+
+}

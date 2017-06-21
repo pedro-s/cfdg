@@ -1,0 +1,8 @@
+startshape q
+//tile {s 1100 }
+background { b -1}
+rule q { q1 {b 1 sat 1 y 525 } }
+rule q1 { 3600 * { r 1 x 0.5  h 1 z 1} q2 { r -90 } }
+rule q2 0.1 { q2 { s 1 -1 0 }}
+rule q2 0.02 {}
+rule q2 { SQUARE [b -1 s 6 z 2] SQUARE [ s 5]  q2 {r 1  x 1}}

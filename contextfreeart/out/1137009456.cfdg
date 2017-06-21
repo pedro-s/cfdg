@@ -1,0 +1,33 @@
+startshape Planetary_Systems
+
+rule Planetary_Systems {
+
+burbuja{ }
+
+}
+
+rule burbuja 1{
+
+CIRCLE {}
+CIRCLE {s 0.9 b 1  }
+burbuja{ s 0.3333  x 0 y 0}
+burbuja{ s 0.9 r 30 x 1 y 0}
+}
+
+rule burbuja 1{
+burbuja{ s 0.9 r -30  x -1 y 0}
+burbuja{ s 0.6666  x -0.5 y 1 }
+
+}
+
+rule burbuja_fin {
+CIRCLE {}
+CIRCLE {s 0.9 b 1 hue 49.8 sat 0.7593 b 0.9353 }
+}
+
+// stopper
+rule burbuja 0.1 {
+CIRCLE{} 
+burbuja {s 0.001}
+}
+rule burbuja 0.8 { burbuja_fin {} }

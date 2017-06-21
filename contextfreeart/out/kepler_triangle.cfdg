@@ -1,0 +1,17 @@
+startshape triangle 
+
+background {b -1}
+
+rule triangle {
+	2* {r 180 y -1}
+	kepler {} 
+} 
+
+rule kepler {
+	SQUARE {b .0618 h 61.8 sat .0618}
+	kepler {s .618 x -.5533 y .9338 r 52
+	b .00618 h 16.18 sat .00618}
+	kepler {s .7862 x .4323 y 1.0518 r -38
+	b .00618 h -16.18 sat .00618}
+	triangle{s .272 b .382}
+}

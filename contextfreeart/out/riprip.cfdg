@@ -1,0 +1,8 @@
+startshape beg
+
+rule beg {
+  CIRCLE [ b 0 ]
+  CIRCLE [ b .9 x .2 s .75]
+  CIRCLE [ b .9 x -.2 s .75]
+  beg [ r 9 s .9]
+}

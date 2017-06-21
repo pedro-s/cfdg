@@ -1,0 +1,8 @@
+startshape STAR
+background { b -1 }
+rule STAR
+{
+SQUARE {  sat 1.0000 b 0.9418}
+STAR {s.98 r 16 y .55 h 14 sat .8 b.5 }
+
+}

@@ -1,0 +1,30 @@
+startshape start
+
+
+rule start
+{
+	10*{s .95 z -100 h 30 alpha 0}plat{h -30}
+}
+
+rule plat
+{
+	row{ alpha -.75 z 0 h 75}
+	row{r 90 x 9 alpha -.75 z 1 h 150}
+	row{r 180 y 9 x 9 alpha -.75 z 2 h 225}
+	row{r 270 y 9 alpha -.75 z 3 h 300}
+}
+rule row
+{
+	10*{y 1.5 z 4}blobs{b 1 hue 200 sat 1}
+}
+
+
+rule blobs
+{
+	10*{x 1.5 s .95}circ{}
+}
+rule circ
+{
+	CIRCLE{}
+	circ{s .7}
+}

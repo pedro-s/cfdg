@@ -1,0 +1,31 @@
+startshape TENDRILS
+background{h 143.62 sat 0.5245 b 0.6796 }
+
+rule TENDRILS {
+ARM{}
+ARM{flip 90}
+}
+rule ARM 98{
+CIRCLE{size 15}
+TRIANGLE{ }
+//triangles that make up the head and eyes
+TRIANGLE{flip -10 y -10 size 3 h 110.26 sat 0.9949 b 0.5470  }
+//beads that go around the triangles
+CIRCLE{flip 50 y 10 s 1.5 h 354.36 sat 1.0000 b 0.6796 }
+TRIANGLE{size 1.5 }
+SQUARE {size .5 brightness 1 h 121.35 sat 1.0000 b 1.0000 rotate 10}
+ARM{y .4 size .99 rotate 10}
+}
+
+rule ARM2 {
+SQUARE{h 60.14 sat 1.0000 b 1.0000 }
+SQUARE {size .9 brightness 1}
+ARM{y .5 size .99 flip 90 }
+ARM{y .5 size 0.6 brightness .22}
+}
+
+
+
+
+
+

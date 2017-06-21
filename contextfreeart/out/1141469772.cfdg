@@ -1,0 +1,20 @@
+startshape HURRICANE_KATRINA
+
+rule HURRICANE_KATRINA
+	{
+	RAIN_BANDS{}
+	RAIN_BANDS{ r 90 }
+	HURRICANE_KATRINA{ y 2 size .99 r 10 sat 1 hue .5 b .05 }
+	}
+
+rule RAIN_BANDS
+	{
+	CLOUDS{}
+	RAIN_BANDS{ y 2 size .9 r 10 sat 1 hue 1 b .1 }
+	}
+
+rule CLOUDS
+	{
+	CIRCLE{}
+	CLOUDS{ x 2 size .9 r 10 sat 1 hue 2.5 b .1 }
+	}

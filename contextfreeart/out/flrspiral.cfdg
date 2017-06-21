@@ -1,0 +1,19 @@
+startshape compound
+
+
+background {b -.5}
+
+rule compound {
+	3*{r 19} spiral {}
+}
+
+
+rule spiral {
+	sh {}
+	sh {r .15 s .994 b .75 sat .2 hue 70}
+	spiral {r 1 s .994}
+}
+
+rule sh {
+	SQUARE {skew 3 8}
+}

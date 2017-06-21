@@ -1,0 +1,27 @@
+startshape SOMASEVEN
+
+rule DCUBE{
+	FRONTFACE[]
+	REARFACE[]
+	TOPFACE[]
+}
+
+rule FRONTFACE{
+	SQUARE[ f 90 skew 0 30  x 1 y -0.58 b .78] 
+}
+
+rule REARFACE{
+	SQUARE[b 0.7  skew 0 30]
+}
+
+rule TOPFACE{
+	SQUARE[x -0.5 y 0.79 s 1.413 .816 r 135 b  0.9]
+
+}
+
+rule SOMASEVEN{		
+		DCUBE[ z - 1 x  1 y 0.58]
+		DCUBE[z -1.98 x 1 y -0.42]
+          DCUBE[z 0.5 x 2  y -1]
+		DCUBE[z -1.98 x 3 y -0.43]
+}

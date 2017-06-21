@@ -1,0 +1,16 @@
+startshape ripples
+include dot_ripple.cfdg
+background{hue 60 sat .2 b 1}
+
+rule ripples
+{
+	ripple{x -14 y -3 hue 30 sat .9 b 1}
+	ripple{x 22 y 22 size .6 hue 0 sat .6 b 0.9}
+	ripple{x 15 y -12 size .5 hue 50 sat .7 b 1}
+	ripple{size 2 x 0 y 0 b .9}
+	ripple{size .2 x 5 y 10 hue 50 sat .9 b 1}
+	ripple{size .6 x -4 y 17 hue 50 sat .4 b 1}
+	ripple{x 10 y -10 size .3}
+	ripple{x 7 y 3 size .45 hue 0 sat .7 b .9}	
+}
+

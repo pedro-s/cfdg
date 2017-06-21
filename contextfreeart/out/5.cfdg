@@ -1,0 +1,52 @@
+startshape flower
+
+background {h 220 sat .5}
+
+rule flower{
+	5*{r 15}stick{r -30 }
+}
+
+rule stick{
+	CIRCLE{h 90 sat 1 b .45}
+	stick{y .25 r .5 s 0.99}
+}
+
+rule stick {
+	stick{flip 90 s 1.0101}
+}
+
+/*
+rule stick .01{
+	//uncoment this rule to look for mutants
+	//warning!
+	//giving more weigth to this rule
+	//may be very unkind -`/
+	stick{r -15}
+	stick{r 15}
+}
+*/
+
+rule stick .05{
+	//thorns
+	TRIANGLE{h 90 sat 1 b .45 r 85 x -.7} 
+	stick{}
+}
+
+rule stick .02{
+	//leaves
+	//I hope you'll enjoy playing
+	//with their parameters
+	CIRCLE{x -5.5 s 7 2 h 90 sat 1 b .45 r -24}
+	CIRCLE{x -5.4 s 6 3 h 92 sat .9 b .4 r -24 a -.3}
+	CIRCLE{x -5.45 s 11.5 5 h 87 sat .8 b .4 r -24 a -.3}
+	stick{}
+}
+
+rule stick .01{
+	//flower itself
+	CIRCLE{h 50 s 3 sat .9 h 60 b .9 z 1}
+	24*{r 15 }CIRCLE{x 3.5 s 5 1 sat .9 b .9 z 1}
+	24*{r 15 }CIRCLE{x 2.5 s 4 1 sat .9 b .9 a -.6 h 15 z 1}
+	24*{r 15 }CIRCLE{x 1.75 s 3 1 sat .9 b .9 a -.6 h 15 z 1	}
+}
+

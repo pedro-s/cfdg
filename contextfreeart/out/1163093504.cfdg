@@ -1,0 +1,38 @@
+startshape START
+
+background {b -1}
+
+rule START {
+	CILS {}
+	SUN{s 1.64 z 1 a -0.75}
+}
+
+rule CILS {
+	500 * {r 1 h 1} A {}
+}
+
+rule A {
+	SQUARE {}
+	A {y 1 s 0.9999 r 3 h 0.1 b 0.005 sat 0.005}
+}
+
+rule A {
+	SQUARE {}
+	A {y 1 s 0.9999 r -3 h 0.1 b 0.005 sat 0.005}
+}
+
+rule SUN {
+	1000 * {} B {}
+}
+
+rule B {
+	SQUARE {sat 1 b 1}
+	B {y 2 s 0.999 r 20 h 0.5}
+}
+
+rule B {
+	SQUARE {sat 1 b 1}
+	B {y 2 s 0.999 r -20 h 0.5}
+}
+
+

@@ -1,0 +1,122 @@
+startshape start
+
+background { b -1 }
+
+rule item {
+	CIRCLE { }
+}
+
+rule start {
+ 
+    startQ{sat 1}
+    startQ{h 96 r 96 sat 1}
+    startQ{h 150 r 150 sat 1}
+    startQ{h 300 r 300 sat 1}
+}
+ 
+ 
+rule startQ {
+    startW {}
+    startW {h 22.5 r 22.5}
+    startW {h 45 r 45}
+    startW {h 67.5  r 67.5}
+}
+ 
+rule startW {
+    block_S{}
+    block_S{h 19  r 19}
+}
+ 
+rule block_S {
+    item {}
+    block_AL{y 1 x -0.2 s 0.99 b 0.01 }
+    block_AR{y 1 x 0.2 s 0.9 b 0.1 }
+}
+ 
+rule block_AL{
+    item {}
+    block_AL{y 1 x -01 s 0.99 b 0.01 }
+}
+ 
+rule block_AL 0.03{
+    item {}
+    block_AL{y 1 x -0.2 s 0.99 b 0.01 }
+    block_R{y 1 x 0.2 s 0.99 b 0.01 }
+}
+ 
+ 
+rule block_AR{
+    item {}
+    block_AR{y 1 x 0.2 s 0.99 b 0.01 }
+}
+ 
+rule block_AR 0.03{
+    item {}
+    block_AR{y 1 x 0.2 s 0.99 b 0.01 }
+    block_L{y 1 x 0.2 s 0.99 b 0.01 }
+}
+ 
+rule block_L{
+    item {}
+    block_L{y 1 x -0.2 s 0.99 b 0.01 }
+}
+ 
+rule block_L 0.7{
+    item {}
+    block_R{y 1 x 0.2 s 0.9 b 0.01 }
+}
+ 
+rule block_L 0.01{
+    item {}
+    block_L{y 1 x -0.2 s 0.6 b 0.04 }
+    block_R{y 1 x 0.2 s 0.9 b 0.01 }
+}
+ 
+ 
+rule block_R{
+    item {}
+    block_R{y 1 x 0.6 s 0.99 b 0.01 }
+}
+ 
+rule block_R 0.5{
+    item {}
+    block_L{y 1 x -0.2 s 0.99 b 0.01 }
+}
+ 
+rule block_R 0.08{
+    item {}
+    block_L{y 1 x -0.2 s 0.99 b 0.3 }
+    block_R{y 1 x 0.2 s 0.99 b 0.01 }
+}
+ 
+
+rule init
+{
+ crawly{x -100 r -20 y 50 hue 215 sat .6 alpha -0.5}
+ crawly{x 100 r 170 hue 200 sat 0.4 alpha -0.5}
+}
+ 
+rule init
+{
+ crawly{x -90 y -40 r 45 hue 215 sat .6 alpha -0.5}
+ crawly{x 100 r 190 hue 200 sat 0.4 alpha -0.5}
+}
+ 
+rule init
+{
+ crawly{x -9 y -40 r 99 hue 215 sat .6 alpha -0.5}
+ crawly{y 120 r -99 hue 200 sat 0.4 alpha -0.5}
+}
+ 
+rule crawly
+{
+ body{}
+ crawler {b 1}
+ crawler {r 180 b 1}
+}
+ 
+rule body
+{
+ CIRCLE{s 60 b 0.5 alpha -0.3}
+ body{s 0.8}
+}

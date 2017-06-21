@@ -1,0 +1,397 @@
+startshape snowing
+background{hue 220 sat .2 b .7}
+
+rule snowing
+{
+	flake5a{x 30 y 45 b 1 size 2.3}
+	flake4a{x 15 y -15 b 1 size 2}
+	flake2a{x -2 y 30 b 1 size 1.3}
+	flake1a{x 50 y 15 b 1 size 1.4}
+	flake1{hue 220 sat .3 b .7}
+	flake2{hue 220 sat .2 b .7 x 50 y 50}
+	flake3{hue 220 sat .2 b .7 x 15 y 35}
+	flake4{hue 220 sat .2 b .7 x 45 y -5 size .8}
+	flake5{hue 220 sat .5 b .7 x 40 y 22 size .8}
+	flake6{hue 220 sat .5 b .7 x 20 y 10 size .6}
+	flake2{hue 220 sat .5 b .7 x 13 y -20 size .8}
+	flake2{hue 220 sat .9 b .7 x -5 y 48 size .4}
+	flake2{hue 220 sat .9 b .7 x 45 y -32 size .8}
+	flake6{hue 220 sat .8 b .7 x 25 y 55 size .6}
+}
+
+rule flake6
+{
+	vline6{}
+	vline6{r 60}
+	vline6{r -60}
+	vline6{r 120}
+	vline6{r -120}
+	vline6{r 180}
+}
+
+rule vline6
+{
+	10line{}
+	vline4{size .7 y 5 r 30}
+	vline4{size .7 y 5 r -30}
+	6line{y 2 r 60}
+	6line{y 2 r -60}
+}
+
+rule flake5a
+{
+	vline5a{}
+	vline5a{r 60}
+	vline5a{r -60}
+	vline5a{r 120}
+	vline5a{r -120}
+	vline5a{r 180}
+}
+
+rule vline5a
+{	6aline{y 2 r 60}
+	6aline{y 2 r -60}
+	4aline{y 4 r 60}
+	4aline{y 4 r -60}
+	6aline{y 6 r 60}
+	6aline{y 6 r -60}
+}
+
+rule flake5
+{
+	vline5{}
+	vline5{r 60}
+	vline5{r -60}
+	vline5{r 120}
+	vline5{r -120}
+	vline5{r 180}
+}
+
+rule vline5
+{	6line{y 2 r 60}
+	6line{y 2 r -60}
+	4line{y 4 r 60}
+	4line{y 4 r -60}
+	6line{y 6 r 60}
+	6line{y 6 r -60}
+}
+
+rule flake4a
+{
+	vline4a{}
+	vline4a{r 60}
+	vline4a{r -60}
+	vline4a{r 120}
+	vline4a{r -120}
+	vline4a{r 180}
+}
+
+
+rule flake4
+{
+	vline4{}
+	vline4{r 60}
+	vline4{r -60}
+	vline4{r 120}
+	vline4{r -120}
+	vline4{r 180}
+}
+
+rule vline4a
+{
+	10aline{}
+	6aline{y 2 r 60}
+	6aline{y 2 r -60}
+	4aline{y 4 r 60}
+	4aline{y 4 r -60}
+	6aline{flip 180 y 6 r 60}
+	6aline{flip 180 y 6 r -60}
+	4aline{flip 180 y 8 r 60}
+	4aline{flip 180 y 8 r -60}
+	4aline{y 10 r 30}
+	4aline{y 10 r -30}
+	10aline{flip 180 y 10 r 60}	
+	10aline{flip 180 y 10 r -60}	
+}
+
+
+rule vline4
+{
+	10line{}
+	6line{y 2 r 60}
+	6line{y 2 r -60}
+	4line{y 4 r 60}
+	4line{y 4 r -60}
+	6line{flip 180 y 6 r 60}
+	6line{flip 180 y 6 r -60}
+	4line{flip 180 y 8 r 60}
+	4line{flip 180 y 8 r -60}
+	4line{y 10 r 30}
+	4line{y 10 r -30}
+	10line{flip 180 y 10 r 60}	
+	10line{flip 180 y 10 r -60}	
+}
+
+rule flake3
+{
+	vline3{}
+	vline3{r 60}
+	vline3{r -60}
+	vline3{r 120}
+	vline3{r -120}
+	vline3{r 180}
+}
+
+rule vline3
+{
+	10line{flip 180}
+	4line{flip 180 size .2 r 30}
+	4line{flip 180 size .2 r -30}
+	4line{flip 180 y 2 size .2 r 30}
+	4line{flip 180 y 2 size .2 r -30}
+	4line{flip 180 y 4 size .7 r 30}
+	4line{flip 180 y 4 size .7 r -30}
+	4line{flip 180 y 6 size .7 r 30}
+	4line{flip 180 y 6 size .7 r -30}
+	4line{flip 180 y 8 size .7 r 30}
+	4line{flip 180 y 8 size .7 r -30}
+
+	4line{size .7 r 30}
+	4line{size .7 r -30}
+	4line{y 2 size .7 r 30}
+	4line{y 2 size .7 r -30}
+	4line{y 4 size .7 r 30}
+	4line{y 4 size .7 r -30}
+	4line{y 6 size .7 r 30}
+	4line{y 6 size .7 r -30}
+
+	4line{y 10 size .7 r 30}
+	4line{y 10 size .7 r -30}
+}
+
+rule flake2a
+{
+	vline2a{}
+	vline2a{r 60}
+	vline2a{r -60}
+	vline2a{r 120}
+	vline2a{r -120}
+	vline2a{r 180}
+}
+
+rule flake2
+{
+	vline2{}
+	vline2{r 60}
+	vline2{r -60}
+	vline2{r 120}
+	vline2{r -120}
+	vline2{r 180}
+}
+
+rule vline2a
+{
+	10aline{flip 180}
+	4aline{flip 180 size .2 r 30}
+	4aline{flip 180 size .2 r -30}
+	4aline{flip 180 y 2 size .2 r 30}
+	4aline{flip 180 y 2 size .2 r -30}
+	4aline{flip 180 y 4 size .7 r 30}
+	4aline{flip 180 y 4 size .7 r -30}
+	4aline{flip 180 y 6 size .7 r 30}
+	4aline{y 3  r -30}
+	4aline{y 3  r 30}
+	4aline{flip 180 y 6 size .7 r -30}
+	6aline{flip 180 y 8 size .7 r 60}
+	6aline{flip 180 y 8 size .7 r -60}
+	4aline{flip 180 y 10 size .9 r 30}
+	4aline{flip 180 y 10 size .9 r -30}
+}
+
+rule vline2
+{
+	10line{flip 180}
+	4line{flip 180 size .2 r 30}
+	4line{flip 180 size .2 r -30}
+	4line{flip 180 y 2 size .2 r 30}
+	4line{flip 180 y 2 size .2 r -30}
+	4line{flip 180 y 4 size .7 r 30}
+	4line{flip 180 y 4 size .7 r -30}
+	4line{flip 180 y 6 size .7 r 30}
+	4line{y 3  r -30}
+	4line{y 3  r 30}
+	4line{flip 180 y 6 size .7 r -30}
+	6line{flip 180 y 8 size .7 r 60}
+	6line{flip 180 y 8 size .7 r -60}
+	4line{flip 180 y 10 size .9 r 30}
+	4line{flip 180 y 10 size .9 r -30}
+}
+
+rule flake1
+{
+	vline{}
+	vline{r 60}
+	vline{r -60}
+	vline{r 120}
+	vline{r -120}
+	vline{r 180}
+}
+
+rule flake1a
+{
+	avline{}
+	avline{r 60}
+	avline{r -60}
+	avline{r 120}
+	avline{r -120}
+	avline{r 180}
+}
+
+rule avline
+{
+	10aline{}
+	4aline{r 30}
+	4aline{r -30}
+	4aline{y 2 size .9 r 30}
+	4aline{y 2 size .9 r -30}
+	6aline{flip 180 y 4 r 30}
+	6aline{flip 180 y 4 r -30}
+	4aline{y 6 size .7 r 30}
+	4aline{y 6 size .7 r -30}
+	4aline{y 8 size .6 r 30}
+	4aline{y 8 size .6 r -30}
+	4aline{y 10 size .4 r 30}
+	4aline{y 10 size .4 r -30}
+	4aline{flip 180 y 7 size .85 r 60}
+	4aline{flip 180 y 7 size .85 r -60}
+}
+
+rule vline
+{
+	10line{}
+	4line{r 30}
+	4line{r -30}
+	4line{y 2 size .9 r 30}
+	4line{y 2 size .9 r -30}
+	6line{flip 180 y 4 r 30}
+	6line{flip 180 y 4 r -30}
+	4line{y 6 size .7 r 30}
+	4line{y 6 size .7 r -30}
+	4line{y 8 size .6 r 30}
+	4line{y 8 size .6 r -30}
+	4line{y 10 size .4 r 30}
+	4line{y 10 size .4 r -30}
+	4line{flip 180 y 7 size .85 r 60}
+	4line{flip 180 y 7 size .85 r -60}
+}
+
+rule 4aline
+{
+SQUARE{size .2}
+SQUARE{y 0.5 size .2}
+SQUARE{y 1 size .2}
+SQUARE{y 1.5 size .2}
+SQUARE{y 2 size .2}
+SQUARE{y 2.5 size .2}
+SQUARE{y 3 size .2}
+SQUARE{y 3.5 size .2}
+SQUARE{y 4 size .2}
+}
+
+rule 4line
+{
+SQUARE{size .5}
+SQUARE{y 0.5 size .5}
+SQUARE{y 1 size .5}
+SQUARE{y 1.5 size .5}
+SQUARE{y 2 size .5}
+SQUARE{y 2.5 size .5}
+SQUARE{y 3 size .5}
+SQUARE{y 3.5 size .5}
+SQUARE{y 4 size .5}
+}
+
+rule 6aline
+{
+	SQUARE{size .2}
+	SQUARE{y 1.5 size .2}
+	SQUARE{y 1 size .2}
+	SQUARE{y .5 size .2}
+	SQUARE{y 2 size .2}
+	SQUARE{y 2.5 size .2}
+	SQUARE{y 3 size .2}
+	SQUARE{y 3.5 size .2}
+	SQUARE{y 4 size .2}
+	SQUARE{y 4.5 size .2}
+	SQUARE{y 5 size .2}
+	SQUARE{y 5.5 size .2}
+	SQUARE{y 6 size .2}
+}
+
+
+rule 6line
+{
+	SQUARE{size .5}
+	SQUARE{y 0.5 size .5}
+	SQUARE{y 1 size .5}
+	SQUARE{y 1.5 size .5}
+	SQUARE{y 2 size .5}
+	SQUARE{y 2.5 size .5}
+	SQUARE{y 3 size .5}
+	SQUARE{y 3.5 size .5}
+	SQUARE{y 4 size .5}
+	SQUARE{y 4.5 size .5}
+	SQUARE{y 5 size .5}
+	SQUARE{y 5.5 size .5}
+	SQUARE{y 6 size .5}
+}
+
+rule 10aline
+{
+SQUARE{size .2}
+SQUARE{y 0.5 size .2}
+SQUARE{y 1 size .2}
+SQUARE{y 1.5 size .2}
+SQUARE{y 2 size .2}
+SQUARE{y 2.5 size .2}
+SQUARE{y 3 size .2}
+SQUARE{y 3.5 size .2}
+SQUARE{y 4 size .2}
+SQUARE{y 4.5 size .2}
+SQUARE{y 5 size .2}
+SQUARE{y 5.5 size .2}
+SQUARE{y 6 size .2}
+SQUARE{y 6.5 size .2}
+SQUARE{y 7 size .2}
+SQUARE{y 7.5 size .2}
+SQUARE{y 8 size .2}
+SQUARE{y 8.5 size .2}
+SQUARE{y 9 size .2}
+SQUARE{y 9.5 size .2}
+SQUARE{y 10 size .2}
+}
+
+rule 10line
+{
+SQUARE{size .5}
+SQUARE{y 0.5 size .5}
+SQUARE{y 1 size .5}
+SQUARE{y 1.5 size .5}
+SQUARE{y 2 size .5}
+SQUARE{y 2.5 size .5}
+SQUARE{y 3 size .5}
+SQUARE{y 3.5 size .5}
+SQUARE{y 4 size .5}
+SQUARE{y 4.5 size .5}
+SQUARE{y 5 size .5}
+SQUARE{y 5.5 size .5}
+SQUARE{y 6 size .5}
+SQUARE{y 6.5 size .5}
+SQUARE{y 7 size .5}
+SQUARE{y 7.5 size .5}
+SQUARE{y 8 size .5}
+SQUARE{y 8.5 size .5}
+SQUARE{y 9 size .5}
+SQUARE{y 9.5 size .5}
+SQUARE{y 10 size .5}
+}

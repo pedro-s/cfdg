@@ -1,0 +1,24 @@
+startshape DANO
+
+background { b-1 }
+
+rule DANO {
+CIRCLE {size.9h 57.63 sat 0.9340 b 1.0000}
+CIRCLE {size.8h 109.40 sat 0.8364 b 1.0000}
+SQUARE {size.7 h 338.82 sat 0.9533 b 1.0000}
+SQUARE {size.6h 114.60 sat 1.0000 b 1.0000}
+TRIANGLE {size.8 h 235.84 sat 1.0000 b 1.0000}
+TRIANGLE {size.7h 59.98 sat 1.0000 b 1.0000}
+TRIANGLE {size.6h 353.25 sat 1.0000 b 1.0000}
+TRIANGLE {size.5 h 235.84 sat 1.0000 b 1.0000}
+TRIANGLE {size.4h 0.00 sat 1.0000 b 1.0000}
+CIRCLE {size.2h 114.60 sat 1.0000 b 1.0000}
+CIRCLE {size.1h 315.00 sat 1.0000 b 1.0000}
+CIRCLE {size.07h 63.05 sat 0.7354 b 1.0000}
+CIRCLE {size.05h 59.98 sat 1.0000 b 1.0000}
+CIRCLE {size.03h 237.17 sat 1.0000 b 1.0000}
+CIRCLE {size.02h 113.66 sat 1.0000 b 1.0000}
+DANO { x 1 r 4 hue 4 }
+DANO { r 100 x 1s.9}
+}
+rule DANO 0.001 {} 

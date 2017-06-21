@@ -1,0 +1,35 @@
+startshape I
+background {b -0.85}
+
+rule I {
+	A[]
+	B[x 33 y 38]
+}
+
+
+rule A {
+	90*[r 8 x 5] S[hue 80  |h 180 sat 0.07 |b 0.25 |sat 0.5 b 1]
+}
+rule B {
+	90*[r 8 y 5] S[hue 180 |h 280 sat 0.07 |b 0.25 |sat 0.5 b 1]
+}
+
+
+rule S{
+	C[]
+	S[x 0.1 s 0.99 r -2 h 0.01| b 0.01| sat 0.01|]
+}
+rule S{
+	C[]
+	S[x 0.1 s 0.99 r 1 h 0.01| b 0.01| sat 0.01|]
+}
+
+rule S 0.025 {
+	190*[r 1 x 0.1] C[]
+	S[s 0.99 x -1 y 11.5 flip 90]
+}
+
+rule C {
+	4*[s 2] CIRCLE[sat -1 b 1 s 1.2 a -0.995 z -10000]
+	CIRCLE[]
+}

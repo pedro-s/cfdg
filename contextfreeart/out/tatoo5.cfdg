@@ -1,0 +1,6 @@
+startshape SPIRAL
+
+rule SPIRAL{
+  CIRCLE{size 5.8}
+  SPIRAL{y 2.5 rotate 1 size 0.999}
+}

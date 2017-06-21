@@ -1,0 +1,25 @@
+startshape BOAB
+
+rule BOAB {
+	BRANCH {}
+	BRANCH {}
+
+}
+rule BRANCH 98{
+	NODE {}
+	BRANCH {y .1 s .993 r 1 brightness .003  hue .1 sat .01}
+}
+rule BRANCH 1{
+	NODE {}
+	BRANCH {y .1 s .993 flip 90 brightness .003 hue .1 sat .01}
+}
+rule BRANCH 1{
+	NODE {}
+	BRANCH {y .1 s .993 flip 90 brightness .003 hue .1 sat .01}
+	BRANCH {y .1 s .7 }
+}
+
+rule NODE {
+	CIRCLE {s 3}
+}
+

@@ -1,0 +1,15 @@
+startshape x12x 
+
+background {b -1}
+
+rule x12x {
+	4*{s .64 r 15 h 120 sat .1 b .4}
+	{12* {r (360/12)}
+	R {}
+}}
+
+rule R
+	{SQUARE{b .1}
+	2*{f 45}
+	R{s 1 .6 r 18 x -1.8 y -3.6 b .1 h 5 sat .04 z 1}
+}

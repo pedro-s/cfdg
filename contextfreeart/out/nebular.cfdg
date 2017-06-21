@@ -1,0 +1,21 @@
+startshape aa
+background{b -.9 sat 1 hue 250 }
+rule aa
+{
+    18*{r 20} cc{ sat 0 b 1}
+}
+
+rule cc 
+{
+	bb{}
+	aa {y 2 s .975}
+}
+rule cc 16
+{
+	bb{}
+}
+path bb
+{
+	LINETO{y 1}
+	STROKE{width .005}
+}

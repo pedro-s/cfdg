@@ -1,0 +1,42 @@
+startshape LIBRA
+
+background { b 1 }
+
+rule LIBRA {
+	3* { x 100 } LINE { b .3 }
+}
+
+rule LINE {	
+	250* { y -0.1 } ROPE { }
+	LINEX { y -25 }
+}
+
+rule LINEX {
+	WEIGHT { s 20 z 1 }
+}
+rule LINEX 500 {
+	ROPE { }
+	LINEX { y -0.1 }
+}
+rule ROPE { CIRCLE { } }
+rule ROPE { CIRCLE { b .2 } }
+
+rule WEIGHT 5 {
+	STONE { }
+	SMALLER { x -0.49 s 0.05 z -1 }
+	SMALLER { x  0.49 s 0.05 z -1 }
+}
+rule WEIGHT { STONE { } }
+
+rule STONE .5 {
+	CIRCLE { b .3 }
+	STONE { s .995 b .01 }
+}
+rule STONE {
+	CIRCLE { b .3 }
+	STONE { s .995 b -.01 }
+}
+
+rule SMALLER { LINE { s 0.3 } }
+rule SMALLER { LINE { s 0.6 } }
+rule SMALLER { LINE { s 0.8 } }

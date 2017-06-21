@@ -1,0 +1,37 @@
+startshape start
+background{hue 45 saturation 0.16 brightness 0.83}
+
+rule start{
+   47* {y 10} {               
+     21 * {x 20} block {} 
+     
+   }
+}
+
+rule block{
+  SQUARE{x - 10 s 0.1 10}
+  SQUARE{s 0.1 10}
+  SQUARE{x 10 s 0.1 10}
+  SQUARE{y - 5 s 20 0.1}
+  SQUARE{ y 5 s 20 0.1}
+  tri{}
+}
+
+rule tri{
+  TRIANGLE{y 1.7 hue 15 saturation 0.78 brightness 0.62 size 20.1 11.5 z -1 flip 180}
+}
+
+
+rule tri{
+  TRIANGLE{y - 1.7 hue 15 saturation 0.78 brightness 0.62 size 20.1 11.5 z -1}
+}
+
+rule tri{
+   TRIANGLE{y -1.7 hue 30 saturation 0.07 brightness 0.6 size 20.1 11.5 z -1}
+}
+
+rule tri{
+   TRIANGLE{y 1.7 hue 30 saturation 0.07 brightness 0.6 size 20.1 11.5 z -1 flip 180}
+}
+
+rule tri{}

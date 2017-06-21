@@ -1,0 +1,50 @@
+
+startshape TREE
+
+tile {s 50}
+
+rule TREE 25 {
+    SQUARE {size 0.25 0.055}
+    TREE {x 0.2 }
+}
+rule TREE 1 {
+    BRANCH {  }
+}
+
+rule TREE 0.4 {
+}
+
+rule BRANCH {
+    BRANCH_LEFT { }
+    BRANCH_RIGHT { }
+    ADDCENTRE { }
+}
+rule BRANCH_LEFT 3 {
+    TREE { rotate 90 }
+}
+rule BRANCH_LEFT {
+    TREE { rotate 45 }
+}
+rule BRANCH_LEFT {
+    TREE { rotate 225 }
+}
+rule BRANCH_LEFT 2 {
+}
+
+
+rule BRANCH_RIGHT 3 {
+    TREE { rotate -90 }
+}
+rule BRANCH_RIGHT {
+    TREE { rotate -45 }
+}
+rule BRANCH_RIGHT {
+    TREE { rotate -225 }
+}
+rule BRANCH_RIGHT 2.5 {
+}
+
+rule ADDCENTRE 20 {
+SQUARE {size 0.25}
+}
+rule ADDCENTRE {}

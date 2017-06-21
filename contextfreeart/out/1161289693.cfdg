@@ -1,0 +1,28 @@
+startshape go
+background { b -1 }
+rule go {
+
+go { s 0.9 x 01 y 1 r 10}
+go2{}
+go1{}
+go3{}
+
+}
+rule go2{
+hollow{}
+go2 { s .75 x -2 y -2 r 20}
+}
+
+rule go1{
+hollow{}
+go1 { s .9 x -2 y -2 r 200}
+}
+rule go3{
+hollow{}
+go1 { s .9 x -2 y -2 r 110}
+}
+rule hollow
+{
+	CIRCLE {b 1 }
+	CIRCLE { s .8 b 0 b 1 h 10 saturation .95}
+}

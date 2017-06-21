@@ -1,0 +1,74 @@
+startshape SCENE
+background {b -1}
+
+rule SCENE {
+TUTT {x -50 r 12} 
+TUTT {s .25 x -10 y -50 r -30 hue -31512532}
+}
+
+rule TUTT {
+TUT {}
+TUTT {s .85 alpha -.6 r 60}
+}
+
+rule TUT {
+TU {}
+TU {r 120}
+TU {r 240}
+TU {y 33.75 x -19.5 r 120}
+TU {y 33.75 x 58.5 r 120}
+TU {y -33.75 x 19.5 r 120}
+TU {s .5 x -19.5}
+TU {s .5 x 19.5}
+TU {s .5 y -33.75}
+}
+
+rule TU {
+E {y 22.5 r 120}
+E {y 22.5 r 240}
+E {y 22.5}
+A {y 22.5 s .5 r 120}
+A {y 22.5 s .5 r 240}
+A {y 22.5 s .5}
+S {y 22.5}
+}
+
+rule S {
+N {r 120} 
+N {r 240} 
+N {}
+} 
+
+rule N {
+V {flip 90}
+V {}
+}
+
+rule V {
+E {y 13 x 6 s .3 r 45}
+}
+
+rule A {
+CU {y 10}
+CU {y 8 s .5 r 180}
+CU {y 8.5 x -1 s .5 r 135}
+CU {y 8.5 x 1 s .5 r 225}
+}
+
+rule E {
+CU {y -14.5}
+CU {y -16.5 s .5 r 180 hue 1 saturation 1}
+CU {y -16 x -1 s .5 r 135 hue 1 saturation 1}
+CU {y -16 x 1 s .5 r 225 hue 1 saturation 1}
+}
+
+rule CU {
+C {x -.5}
+C {x .5 flip 90}
+CIRCLE {b 1 y -.5 s 2 hue 1 saturation 1}
+}
+
+rule C {
+SQUARE {b 1}
+C {y .2 r .75 s .99}
+}

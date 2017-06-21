@@ -1,0 +1,69 @@
+
+startshape init
+
+rule init {
+  3* {x 7} iqtest {}
+  3* {x 7} iqtest {y -7}
+  2* {x 7} iqtest {y -14}
+}
+
+rule iqtest {
+  3* {x 2} bigAndSmallShape {}
+  3* {x 2} bigAndSmallShape {y -2}
+  2* {x 2} bigAndSmallShape {y -4}
+  emptyBox {x 4 y -4}
+}
+
+rule ring {
+  CIRCLE {}
+  CIRCLE {s .9 b 1}
+}
+
+rule triangleUp {
+  TRIANGLE {}
+  TRIANGLE {s .85 b 1}
+}
+
+rule triangleDown {
+  triangleUp {rotate 180}
+}
+
+rule square {
+  SQUARE {}
+  SQUARE {s .9 b 1}
+}
+
+rule diamond {
+  square {rotate 45}
+}
+
+rule shape { ring {} }
+rule shape { triangleUp {} }
+rule shape { triangleDown {} }
+rule shape { square {} }
+rule shape { diamond {} }
+
+rule smallShape {
+  shape {s .2}
+}
+
+rule emptyBox {
+  SQUARE {s 2}
+  SQUARE {s 1.98 b 1}
+}
+
+rule boxedShape {
+  shape {}
+  emptyBox {}
+}
+
+rule bigAndSmallShape {
+  boxedShape {}
+  smallMovedShape {}
+}
+
+rule smallMovedShape { smallShape {} }
+rule smallMovedShape { smallShape {x .8} }
+rule smallMovedShape { smallShape {x -.8} }
+rule smallMovedShape { smallShape {y .8} }
+rule smallMovedShape { smallShape {y -.8} }

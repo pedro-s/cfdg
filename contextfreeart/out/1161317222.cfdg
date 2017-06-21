@@ -1,0 +1,23 @@
+startshape branches
+rule branches
+{
+	straightline1 { }
+	straightline2 {}
+	branches { y 50 s .75 r 45}
+	branches { y 50 s .75 r 315}
+}
+rule straightline1
+{
+	hollow{}
+	straightline1 { s .999 y .1 r .05 }
+}
+rule straightline2
+{
+	hollow{}
+	straightline2 { s .999 y .1 r 359.95 }
+}
+rule hollow 
+{
+	CIRCLE {b -1}
+	CIRCLE { b 1 hue 130 saturation .95 s .99999 }
+}

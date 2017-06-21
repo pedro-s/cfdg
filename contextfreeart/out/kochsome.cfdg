@@ -1,0 +1,16 @@
+startshape koch
+
+background {b -1}
+
+rule koch {
+	6*{r 60}
+	some {y -.5774}
+	koch {s .5774 r 30 b .2}
+}
+
+rule some {
+	TRIANGLE {b .1}
+	2*{f 90}
+	some {s .5774 r 150 x .1667 y -.2887 b .1}
+	koch {s .1947 r -30 x (1/3)}	
+}

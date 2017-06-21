@@ -1,0 +1,67 @@
+startshape lightningstorm
+
+rule lightningstorm
+{
+	cloud { }
+	lightning { }
+}
+
+rule cloud
+{
+	part { }
+	part { }
+	part { }
+	part { }
+}
+
+rule part 5
+{
+	CIRCLE { hue 0 sat 0 }
+	part { s .99 }
+}
+
+rule part 0.1
+{
+	part { b .1 }
+}
+
+rule part 10
+{
+	part { x .1 y .01 }
+}
+
+rule part 10
+{
+	part { x -.1 y .01 }
+}
+
+rule part 10
+{
+	part { x .1 y -.01 }
+}
+
+rule part 10
+{
+	part { x -.1 y -.01 }
+}
+
+rule lightning
+{
+	base { hue 63 sat 1 b 1.0 }
+}
+
+rule base
+{
+	CIRCLE { s .2 }
+	turn { y -0.1 s .98 }
+}
+
+rule turn
+{
+	base { r 5 }
+}
+
+rule turn
+{
+	base { r -5 }
+}

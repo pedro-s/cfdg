@@ -1,0 +1,27 @@
+startshape worship
+background { hue 352.9134 sat 0.6791 b -0.64}
+rule worship {
+	intricaatum { hue 230 sat .9 b 1}
+}
+
+rule intricaatum {
+	intricaatum { s .95 .6 y -.5 r 181 z .03}
+	4 * { r 90 } B { hue -60 s .5 y .25 }
+}
+rule B {
+	d_f{ s .5 a 1}
+	2 * { flip 90 } C { hue 60 x .5 s .75}
+}
+rule C {
+	d_f { s .75 y -1 hue 90 b -.6}
+}
+rule d_f {
+	d {s .4 }
+}
+rule d {
+	fade {s 1.7 a -.9 b .5 z .02}
+	30* {s .91 b .02 r 90 z .01} CIRCLE { y .03}
+}
+rule fade {
+	20* { s .98 } CIRCLE { }
+}

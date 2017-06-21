@@ -1,0 +1,46 @@
+startshape A
+
+rule A {
+	VLINE {x 9 z 10}
+	HLINE {y 9 z 10}
+	DLINE8 {x 1 y 1 z 10}
+	DLINE6 {x 3 y 1 z 10}
+	DLINE6 {y 3 x 1 z 10}
+	DLINE4 {x 5 y 1 z 10}
+	DLINE4 {x 1 y 5 z 10}
+	DLINE2 {x 7 y 1 z 10}
+	DLINE2 {x 1 y 7 z 10}
+	VLINE {}
+	HLINE {}
+}
+
+rule VLINE {
+	10 * {y 1 z 1} CUBE {sat 1 b 1}
+}
+
+rule HLINE {
+	10 * {x 1 z 1} CUBE {sat 1 b 1}
+}
+
+rule DLINE8 {
+	8 * {x 1 y 1 z 1} CUBE {sat 1 b 1}
+}
+
+rule DLINE6 {
+	6 * {x 1 y 1 z 1} CUBE {sat 1 b 1}
+}
+
+rule DLINE4 {
+	4 * {x 1 y 1 z 1} CUBE {sat 1 b 1}
+}
+
+rule DLINE2 {
+	2 * {x 1 y 1 z 1} CUBE {sat 1 b 1}
+}
+
+rule CUBE {
+	SQUARE {}
+	SQUARE {h 45 x 0.855 y 0.180 s 0.7 1 skew 0 20}
+	SQUARE {h 200 x 0.358 y 0.685 s 1 0.36 skew 35 0}
+}
+

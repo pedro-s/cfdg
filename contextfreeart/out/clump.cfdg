@@ -1,0 +1,61 @@
+startshape clump
+CF::Background = [hue 120 sat .1 b -0.5]
+CF::MinimumSize = 0.2
+CF::Size = [s 100 150 y 20]
+ 
+shape clump {
+  root_clump []
+  soil [z 1]
+  plant_clump [z 1]
+}
+
+shape soil 
+rule {
+ loop num=16000 []
+    pebble [x (-num/360..num/360) y (-(16000-num)/2000..(16000-num)/2000)]
+}
+
+shape pebble
+rule {
+ CIRCLE[hue (30..60) sat 1 b (0...2) s (.1...5)]
+}
+
+shape root_clump {
+ loop num=8000 []
+    root [hue (30..60) sat 1 b 0 x (-num/200..num/200) s .1]
+}
+
+shape plant_clump {
+ loop num=400 []
+    plant [x (-num/9..num/9) y (0..(16-num/25)) s (200000/250000 - (num/500)^2)]
+}
+ 
+shape root
+rule {
+ CIRCLE []
+ root [alpha -0.0005 .3 b (.00001...0005) .5 x (-.2...2) y -.2]
+}
+
+rule 0.002 {}
+
+shape plant
+rule {
+ stem [hue (110..130) b (.5...7) sat 1]
+}
+
+shape stem
+rule {
+ CIRCLE []
+ stem [alpha -.0001 y .2 x (-.1...1) s .996]
+}
+
+rule .05 {
+ CIRCLE []
+ leaf [s ((2*randint()-1)*(.3...5)) (.3...5)]
+ stem [y .2 x (-.1...1) s .996]
+}
+
+shape leaf 
+rule {
+ CIRCLE [b -.3 s 20 6 x 10 r (3..8)]
+}

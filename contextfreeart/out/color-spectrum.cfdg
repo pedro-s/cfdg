@@ -1,0 +1,5 @@
+/* copyright (c) 2012 by Jonas Kölker.  License: WTFPL, or contact me */
+startshape spectrum
+
+rule spectrum {360*{x 1 h 1} stripe {sat 1 b 1}}
+rule stripe {SQUARE {s 2 360}}

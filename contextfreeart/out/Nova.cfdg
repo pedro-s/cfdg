@@ -1,0 +1,44 @@
+startshape Main
+
+background{ b -1 }
+
+rule Main {
+	CIRCLE{ s 10  sat 0 b 1 }
+	60*{r 6} {
+		Fire{x 5 s 2    sat 1 b 1 h 240 r 2 a -0.99}
+		Fire{x 5        sat 1 b 1       r 2 a -0.95}
+		Fire{x 5 s 0.5  sat 1 b 1 h 60  r 1 a -0.9}
+		Fire{x 5 s 0.25       b 1}
+	}
+	Nova{}
+}
+
+rule Fire {
+	Ray{s 10 1}
+}
+
+rule Fire {
+	Ray{s 7.5 1}
+}
+
+rule Fire {
+	Ray{s 5 1}
+}
+
+rule Fire {
+	Ray{s 2.5 1}
+}
+
+rule Ray {
+	SQUARE{x 5 s 10 1}
+	Ray{s 0.99 1 b 0.01}
+}
+
+rule Nova {
+	120*{r 3}NovaPiece{x 120 a -0.9}
+}
+
+rule NovaPiece {
+	CIRCLE{s 70 1}
+	NovaPiece{s 0.9 b 0.1}
+}

@@ -1,0 +1,30 @@
+startshape the_ring
+
+rule the_ring {
+	ring {}
+	ring { flip 90 }
+	the_ring { }
+}
+
+rule the_ring .1 {
+}
+
+rule ring {
+	CIRCLE { }
+	ring { x 2 r .75 s .9999 }
+}
+
+rule ring {
+	CIRCLE { s 2 }
+	ring { x 2 r .5 s .9999 }
+}
+
+rule ring {
+	CIRCLE { s 3 }
+	ring { x 2 r .25 s .9999 }
+}
+
+rule ring {
+	CIRCLE { s 4 }
+	ring { x 2 r .5 s .9999 }
+}

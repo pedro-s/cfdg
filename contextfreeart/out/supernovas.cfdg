@@ -1,0 +1,35 @@
+startshape SECT
+background {b -1}
+
+rule SECT1 {
+3 * {x 10} {3 * {y 10} SECT {}}
+}
+
+rule SECT {
+47 * {r 1.5 hue .2} SQ { y 6 }
+SECT {}
+}
+
+rule SECT {
+97 * {r -1 hue .2} SQ { y 2}
+SECT {}
+}
+
+rule SECT {
+168 * {r -.5 hue .2} SQ { y 5 }
+SECT {}
+}
+
+rule SECT {
+SECT {r 19 s .8}
+}
+
+rule SECT {
+SECT {r 19 s 1.2}
+}
+
+rule SECT 0.01 {}
+
+rule SQ {
+SQUARE {s .05 4 b 1 sat 1 a -.95}
+} 

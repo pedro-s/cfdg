@@ -1,0 +1,49 @@
+startshape FISH
+
+background {h 0.92 sat 1.0000 b 0.0000 }
+
+rule FISH
+
+{
+
+14* {r 50 y 1 skew 20 5}
+TRIANGLE {s 0.35 h 108.81 sat 1.0000 b 0.9724}
+
+
+
+21* {r 50 x 0.5 y 1 skew 20 5 }
+TRIANGLE {s 0.30 h 57.06 sat 0.9400 b 0.9724}
+
+45* {r 50 skew 40 5 }
+TRIANGLE {s 0.80 h 176.39 sat 1.0000 b 0.9724}
+
+100* {r 50 skew 40 5}
+TRIANGLE {s 0.90 y 0.9 x -0.12 h 104.04 sat 0.2291 b 0.0000 }
+
+45* {r 50 skew 40 5 }
+TRIANGLE {s 0.80 x -0.9 h 176.39 sat 1.0000 b 0.9724}
+
+100* {r 50 skew 40 5}
+TRIANGLE {s 0.90 y -0.9 x -0.12 h 104.04 sat 0.2291 b 0.0000 }
+
+45* {r 50 skew 40 5 }
+TRIANGLE {s 0.80 x -2 h 176.39 sat 1.0000 b 0.9724}
+
+100* {r 50 skew 40 5}
+TRIANGLE {s 0.90 y -2 x -0.12 h 104.04 sat 0.2291 b 0.0000 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

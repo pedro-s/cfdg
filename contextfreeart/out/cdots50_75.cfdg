@@ -1,0 +1,19 @@
+startshape circles
+background {b -1}
+
+rule circles
+{
+	cdots{b 1 sat 1 hue 200 x 1 alpha -.9}
+}
+
+rule cdots
+{
+	CIRCLE{}
+	2*{r 180}cdots{ x .5 s .75 r 50 z -1 alpha .1}
+}
+rule cdots 10
+{
+	2*{r 180}cdots{ x .5 s .75  r 50 hue 10 z -1 alpha .1}
+}
+
+

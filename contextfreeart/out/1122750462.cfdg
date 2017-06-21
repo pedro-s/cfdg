@@ -1,0 +1,79 @@
+startshape world {color alpha}
+
+rule world {
+	globe	{x 0 y 0 s 315 
+		hue = 220 b =.7 sat =.8 
+		alpha =.8 }
+	spiral	{ x 40 y -40 }
+	land	{ x 0 y 0 s 3
+ }
+}
+
+rule globe {
+	CIRCLE	{  }
+	globe		{s .99 b 0.005}	
+}
+
+rule spiral {	
+	land { s 1 }
+	spiral [ x 1 y 1 r 2  s .999   ]
+}
+
+
+//	leave gaps
+rule land 33 {}
+
+rule land {
+	blip { x 0 y 0 }
+	blip { x 1 y 1 }
+	blip { x -1 y 1 }
+	blip { x 1 y -1 }
+	blip { x -1 y -1 }
+}
+
+rule blip {
+	rounded_square { b 0.5 hue =20 sat =.5 alpha =0.3}
+	blip [ s 0.999 x -1.5 y 1.5 ]
+}
+
+rule blip {
+	rounded_square { b 0.5  hue =60 sat =.5 alpha =0.4 }
+	blip [ s 0.999 x 1.5 y -1.5 ]
+}
+
+rule blip {
+	rounded_square { b 0.5 hue =110 sat =.5 alpha =0.5 }
+	blip [ s 0.999 x 1.5 y 1.5 ]
+}
+
+rule blip {
+	rounded_square { b 0.5 hue =100 sat =.5 alpha =0.5 }
+	blip [ s 0.999 x -1.5 y -1.5 ]
+}
+
+rule blip 0.01 {
+	blip [ s 1 x -20 y 20 ]
+}
+
+rule blip 0.01 {
+	blip [ s 1 x 20 y -20 ]
+}
+
+rule blip 0.01 {
+	blip [ s 1 x 20 y 20 ]
+}
+
+rule blip 0.01 {
+	blip [ s 1 x -20 y -20 ]
+}
+
+rule rounded_square {
+	SQUARE	{ s 2 x -0.5 }
+	SQUARE	{ s 2 y -0.5 }
+	SQUARE	{ s 2 x 0.5 }
+	SQUARE	{ s 2 y 0.5 }
+	CIRCLE	{ s 1 x 1 y 1 }
+	CIRCLE	{ s 1 x -1 y 1 }
+	CIRCLE	{ s 1 x 1 y -1 }
+	CIRCLE	{ s 1 x -1 y -1 }
+}

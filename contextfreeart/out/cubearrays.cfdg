@@ -1,0 +1,150 @@
+startshape CUBICCOMPLEX
+
+background {b -1}
+
+rule CUBICCOMPLEX .1  {CUBEARRAYS{}}
+rule CUBICCOMPLEX {CUBEARRAYS{} CUBICCOMPLEX{x -1 y .58 z -1}}
+
+rule CUBEARRAYS {CUBE5NEXT{}}
+rule CUBEARRAYS {CUBE4NEXT{}}
+rule CUBEARRAYS {CUBE3NEXT{}}
+rule CUBEARRAYS .5 {CUBE5UP{}}
+rule CUBEARRAYS .5 {CUBE4UP{}}
+rule CUBEARRAYS .5 {CUBE3UP{}}
+rule CUBEARRAYS .5 {CUBEZ{}}
+
+//pick a random cube array size//
+rule CUBEZ {CUBEZ3{}}
+rule CUBEZ {CUBEZ4{}}
+rule CUBEZ {CUBEZ5{}}
+
+//place 5x5x5 cube array and stack another array on top//
+//5x5x5//
+rule CUBE5UP {CUBEZ5{}CUBE5UP {y 5 z 5}}
+//4x4x4//
+rule CUBE5UP {CUBEZ5{} CUBE4UP{y 5 z 5}}
+rule CUBE5UP {CUBEZ5{} CUBE4UP{y 5.58 x 1 z 4}}
+rule CUBE5UP {CUBEZ5{} CUBE4UP{y 5.58 x -1 z 4}}
+rule CUBE5UP {CUBEZ5{} CUBE4UP{y 6.16 z 3}}
+//3x3x3//
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 5 z 5}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 5.58 x 1 z 4}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 5.58 x -1 z 4}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 6.16 x 2 z 3}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 6.16 x -2 z 3}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 6.16 z 3}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 6.74 x 1 z 2}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 6.74 x -1 z 2}}
+rule CUBE5UP {CUBEZ5{} CUBE3UP{y 7.32 z 1}}
+//cube5up is 5x5x5//
+rule CUBE5UP {CUBEZ5{}}
+
+//place 4x4x4 cube array and stack another array on top//
+//4x4x4//
+rule CUBE4UP {CUBEZ4{}CUBE4UP {y 4 z 4}}
+//3x3x3//
+rule CUBE4UP {CUBEZ4{} CUBE3UP{y 4 z 4}}
+rule CUBE4UP {CUBEZ4{} CUBE3UP{y 4.58 x 1 z 3}}
+rule CUBE4UP {CUBEZ4{} CUBE3UP{y 4.58 x -1 z 3}}
+rule CUBE4UP {CUBEZ4{} CUBE3UP{y 5.16 z 2}}
+//cube4up is 4x4x4//
+rule CUBE4UP  {CUBEZ4{}}
+
+//place 3x3x3 cube array and stack another array on top//
+//3x3x3//
+rule CUBE3UP .5 {CUBEZ3{}CUBE3UP{y 3 z 3}}
+//cube3up is 3x3x3//
+rule CUBE3UP {CUBEZ3{}}
+
+//place 5x5x5 cube array followed by another unspecified array//
+rule CUBE5NEXT 1.2 {CUBEZ5{}CUBEARRAYS{x 5 y 2.9  z -5}}
+rule CUBE5NEXT {CUBEZ5{}CUBEARRAYS{x -5 y 2.9 z -5}}
+
+//place 4x4x4 cube array followed by another unspecified array//
+rule CUBE4NEXT 1.2 {CUBEZ4{}CUBEARRAYS{x 4 y 2.32 z -4}}
+rule CUBE4NEXT {CUBEZ4{}CUBEARRAYS{x -4 y 2.32 z -4}}
+
+//place 3x3x3 cube array followed by another unspecified array//
+rule CUBE3NEXT 1.2 {CUBEZ3{}CUBEARRAYS{x 3 y 1.74 z -3}}
+rule CUBE3NEXT {CUBEZ3{}CUBEARRAYS{x -3 y 1.74 z -3}}
+
+//cube array 3x3x3//
+rule CUBEZ3 {3*{x 1 y .58 z -1}CUBEX3{}}
+rule CUBEX3 {3*{x -1 y .58 z -1}CUBEY3{}}
+rule CUBEY3 {3*{y 1 z 1}CUBECCSA{}}
+
+//cube array 4x4x4//
+rule CUBEZ4 {4*{x 1 y .58 z -1}CUBEX4{}}
+rule CUBEX4 {4*{x -1 y .58 z -1}CUBEY4{}}
+rule CUBEY4 {4*{y 1 z 1}CUBECCSA{}}
+
+//cube array 5x5x5//
+rule CUBEZ5 {5*{x 1 y .58 z -1}CUBEX5{}}
+rule CUBEX5 {5*{x -1 y .58 z -1}CUBEY5{}}
+rule CUBEY5 {5*{y 1 z 1}CUBECCSA{}}
+
+//basic cube's alpha//
+rule CUBECCSA  {CUBECCS{}}
+//rule CUBECCSA .1 {CUBECCS{a -.6}}
+
+//basic cube's saturation//
+rule CUBECCS {CUBECC{sat .2}}
+rule CUBECCS {CUBECC{sat .15}}
+rule CUBECCS {CUBECC{sat .1}}
+rule CUBECCS {CUBECC{sat .05}}
+
+//basic cube's hue//
+rule CUBECC {CUBEC{hue 0}}
+rule CUBECC {CUBEC{hue 1}}
+rule CUBECC {CUBEC{hue 2}}
+rule CUBECC {CUBEC{hue 3}}
+rule CUBECC {CUBEC{hue 4}}
+rule CUBECC {CUBEC{hue 5}}
+rule CUBECC {CUBEC{hue 6}}
+rule CUBECC {CUBEC{hue 7}}
+rule CUBECC {CUBEC{hue 8}}
+rule CUBECC {CUBEC{hue 9}}
+/*rule CUBEC {CUBE{hue 0}}
+rule CUBEC {CUBE{hue 10}}
+rule CUBEC {CUBE{hue 20}}
+rule CUBEC {CUBE{hue 30}}
+rule CUBEC {CUBE{hue 40}}
+rule CUBEC {CUBE{hue 50}}
+rule CUBEC {CUBE{hue 60}}
+rule CUBEC {CUBE{hue 70}}
+rule CUBEC {CUBE{hue 80}}
+rule CUBEC {CUBE{hue 90}}
+rule CUBEC {CUBE{hue 110}}
+rule CUBEC {CUBE{hue 120}}
+rule CUBEC {CUBE{hue 130}}
+rule CUBEC {CUBE{hue 140}}
+rule CUBEC {CUBE{hue 150}}
+rule CUBEC {CUBE{hue 160}}
+rule CUBEC {CUBE{hue 170}}
+rule CUBEC {CUBE{hue 180}}
+rule CUBEC {CUBE{hue 190}}*/
+rule CUBEC {CUBE{hue 200}}
+rule CUBEC {CUBE{hue 210}}
+rule CUBEC {CUBE{hue 220}}
+/*rule CUBEC {CUBE{hue 230}}
+rule CUBEC {CUBE{hue 240}}
+rule CUBEC {CUBE{hue 250}}
+rule CUBEC {CUBE{hue 260}}
+rule CUBEC {CUBE{hue 270}}
+rule CUBEC {CUBE{hue 280}}
+rule CUBEC {CUBE{hue 290}}
+rule CUBEC {CUBE{hue 300}}
+rule CUBEC {CUBE{hue 310}}
+rule CUBEC {CUBE{hue 320}}
+rule CUBEC {CUBE{hue 330}}
+rule CUBEC {CUBE{hue 340}}
+rule CUBEC {CUBE{hue 350}}
+*/
+
+//basic cube//
+rule CUBE{ SIDE{s -1 1 b .19}SIDE{s 1 b .39}TOP{b .64}}
+rule CUBE{ SIDE{s -1 1 b .2}SIDE{s 1 b .4}TOP{b .65}}
+rule CUBE{ SIDE{s -1 1 b .21}SIDE{s 1 b .41}TOP{b .66}}
+rule SIDE {FACE{skew 0 30}}
+rule TOP {FACE[s 1.413 .816 r 135]}
+rule FACE {SQUARE{x .5 y -.5}}

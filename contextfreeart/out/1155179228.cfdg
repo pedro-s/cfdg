@@ -1,0 +1,33 @@
+startshape GO
+
+rule GO {
+ xxx { r 45 alpha -0.3 hue 200}
+}
+
+rule xxx {
+   yyy  {s 5}
+   xxx2 {x 1.1 size 0.5 r 90 alpha -0.2 b 0.1 sat 0.5 hue -85}
+   xxx  {y 1.1 size 0.5 r 90 alpha -0.2}
+   xxx  {y -1.1 size 0.5 r 85 alpha -0.2 b 0.1 sat 1 hue 5}
+}
+
+rule xxx2 {
+   yyy2 {s 2  r 35}
+   xxx3 {x 1.1 size 0.5 r -90 alpha -0.2}
+   xxx3 {x -1.1 size 0.5 r -90 alpha -0.2}
+   xxx3 {y 1.1 size 0.5 r -90 alpha -0.2}
+}
+
+rule xxx3 {
+   yyy2 {s 3  r 35}
+}
+
+rule yyy {
+  CIRCLE { size 1 sat 0.5 b 0.3 hue 50}
+  CIRCLE { size 0.9 b 1}
+}
+
+rule yyy2 {
+   SQUARE{ size 1 1.5}
+   SQUARE { size 0.9 1.35 b 1}
+}

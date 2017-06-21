@@ -1,0 +1,61 @@
+// MUX TRI WUS XRU MUO MUY | others: WUN COE MUX 
+
+startshape go
+background {b -1}
+
+rule go 
+{
+	go2{hue 46 saturation 1 brightness 1}
+}
+
+rule go2{ treechoice{} } // choose a tree type
+
+rule treechoice { tree {} }
+rule treechoice { tree {flip 90} } // mirrored
+rule treechoice { treechoice{r 1} } // floppy rotation
+rule treechoice{ treechoice {x 1} }  // spaced erratically
+
+
+// TREE PROPER:
+rule tree
+{
+	SQUARE {s .4}
+	tree {saturation -.005 y .15 s .998} // change y for thinner/thicker
+}
+
+rule tree .07 // branch
+{
+	tree {s .5 r 45}
+	tree{}
+}
+
+rule tree .07 // branch other way
+{
+	tree {s .5 r -45}
+	tree {}
+}
+
+rule tree .8 // the curl is here
+{
+	tree {s .998 skew 2.1 0 r 3} // skew adds some freak
+}
+
+rule tree // curl adjustment
+{
+	tree {s .998 r 4}
+}
+
+rule tree // curl adjustment
+{
+	tree {s .998 r -4}
+}
+
+rule tree   // negative curl influence (straightens tree a little)
+{
+	tree {s .998 r -1}
+}
+
+rule tree .001 // end it, cap it
+{
+	CIRCLE {s .4}
+}

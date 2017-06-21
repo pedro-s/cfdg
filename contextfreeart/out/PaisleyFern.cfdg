@@ -1,0 +1,17 @@
+startshape Fern
+
+background { b -1}
+
+rule Fern 
+{
+TRIANGLE {hue 1 sat 1}
+TRIANGLE {size .9 hue 1 sat 1 b 1}
+Fern {x .5 y .5 r 10 size .9 hue 5 sat 1}
+Fern2 {x .5 y .5 r 2 size .9 hue 5 sat 1}
+}
+
+rule Fern2
+{
+Fern {flip -90 rotate 10 s .5}
+Fern {flip 90 rotate 10 s .5}
+}

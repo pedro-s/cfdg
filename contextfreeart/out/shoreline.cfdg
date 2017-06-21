@@ -1,0 +1,125 @@
+background {sat .4 b -.2 hue 190}
+
+startshape SHORELINE
+
+rule SHORELINE {
+	SQUARE {z -1 s 20 10 y -5 sat .8 b .5 hue 210}
+	20 * {s 1 1.1 y -.1} WATER {sat .5 b .5 hue 200}
+	FOREST {y .25 s 4 sat .5 b .5 hue 120 a -.9}
+	REEDS {z 1 y .15 sat .8 b .8 hue 60 a -.5}
+}
+
+rule REEDS {
+	100 * {x -.1} REED {x -.05}
+	100 * {x .1} REED {x .05}
+}
+
+rule REED {
+	REED {r 1 hue 3 s .9}
+}
+rule REED {
+	REED {r -1 b -.1 s .95}
+}
+rule REED {
+	TRIANGLE {s .1 .6 y -.1}
+}
+rule REED .1 {
+	TRIANGLE {s .1 .8 y .1}
+	SQUARE {s .1 .2 y .3 b -.3 hue -30 sat -.5}
+}
+
+rule FOREST {
+	20 * {x -.1} MAYBE_TREE {x -.25}
+	20 * {x .1} MAYBE_TREE {x .25}
+}
+
+rule MAYBE_TREE {
+	TREE_WITH_REFLECTION {}
+}
+rule MAYBE_TREE 4 {
+	MAYBE_TREE {s .9 hue -5}
+}
+rule MAYBE_TREE {}
+
+rule TREE_WITH_REFLECTION {
+	TREE {z -2}
+	REFLECTION {b -.2 hue 20 sat .4 z 1 r 180}
+}
+
+rule REFLECTION {
+	TRIANGLE {a -.9 s .8 2.5 y .8}
+	REFLECTION {s .9 r 5 y .01}
+}
+rule REFLECTION {
+	TRIANGLE {a -.9 s .8 2.5 y .8}
+	REFLECTION {s .9 r -5 y .01}
+}
+
+// Water elements:
+rule WATER {
+	10 * {x -1} WAVE {x -.5}
+	10 * {x 1} WAVE {x .5}
+}
+
+rule WAVE {
+	WAVE {hue 10 x .5}
+}
+rule WAVE {
+	WAVE {hue -10 s .9 1}
+}
+rule WAVE {
+	WAVE {sat -.05 s 1 .9}
+}
+rule WAVE {
+	WAVE {b .05 x -.5}
+}
+rule WAVE {
+	TRIANGLE {a -.9 s 3 1 r 180}
+	WAVE {s .2 b .2}
+}
+
+// Tree elements:
+rule TREE {
+	BRANCHES {hue 1}
+	TREE {s .9 y .1 hue -2 sat .1}
+}
+
+rule BRANCHES {
+	NEEDLES {s .5}
+	BRANCH {r 90 s .4 a .1}
+	BRANCH {r -90 s .4 a .1}	
+}
+
+rule BRANCH {
+	TREE {r 25 s .7 b .2} 
+}
+rule BRANCH { 
+	TREE {r 15 s .9 b -.1} 
+}
+rule BRANCH { 
+	TREE {r 5 s .8 b -.3} 
+}
+rule BRANCH {
+	TREE {r -10 s .9 b .2} 
+}
+rule BRANCH { 
+	TREE {r -20 s .7 b -.3} 
+}
+rule BRANCH { 
+	TREE {r -30 s .8 b -.1} 
+}
+
+rule NEEDLES {
+	TRIANGLE {s 1 .1}
+	TRIANGLE {y .1 r 10 s 1 .1}
+	TRIANGLE {y .2 r -20 s 1 .1}
+	TRIANGLE {y -.15 r 25 s 1 .1}
+	TRIANGLE {y -.25 r -15 s 1 .1}	
+}
+rule NEEDLES {
+	TRIANGLE {s 1 .1}
+	TRIANGLE {y .2 r 15 s 1 .1}
+	TRIANGLE {y .1 r -25 s 1 .1}
+	TRIANGLE {y -.25 r 20 s 1 .1}
+	TRIANGLE {y -.15 r -10 s 1 .1}	
+}

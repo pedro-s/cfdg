@@ -1,0 +1,27 @@
+startshape anemoneb
+background { b -1 }
+rule anemoneb {
+	anemone { hue 196.0 sat 0.8324 b 1.0000 }
+}
+
+rule anemone {
+	tentacle { }
+	anemone { x 10 r -11 s .995 b -.002 }
+}
+
+rule tentacle {
+	CIRCLE { }
+	tentacle { y .23  s .99 b .002 }
+}
+
+rule tentacle {
+	CIRCLE { }
+	tentacle { y .17  r 2 s .99 b .002 }
+}
+
+rule tentacle {
+	CIRCLE { }
+	tentacle { y .12  r -2 s .99 b .001 }
+}
+
+      

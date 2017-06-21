@@ -1,0 +1,93 @@
+startshape CIR
+
+background {b -1}
+
+rule CIR {
+	P {}
+	R {}
+}
+
+rule R {
+	CIR {s .99 x .0005}
+}
+
+rule R {
+	CIR {s .99 x -.0005}
+}
+
+rule R {
+	CIR {s .99 y -.0005}
+}
+
+rule R {
+	CIR {s .99 y .0005}
+}
+
+rule R .03 {
+	CIR {s .75 y .085 x .085}
+}
+
+rule R .03 {
+	CIR {s .75 y -.085 x .085}
+}
+
+rule R .03 {
+	CIR {s .75 y -.085 x -.085}
+}
+
+rule R .03 {
+	CIR {s .75 y .085 x -.085}
+}
+
+//--------------------------------------
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 80}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 78}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 76}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 80}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 65}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 50}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 35}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 20}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue -10}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 2}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue 4}
+}
+
+rule P {
+	CIRCLE {a -.9 b 1 sat 1 hue -14}
+}
+
+rule P  15 {
+	CIRCLE {a -1}
+}

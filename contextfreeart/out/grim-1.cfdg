@@ -1,0 +1,87 @@
+startshape INIT_SUN
+background { b -0.1 hue 45 sat 1 }
+
+rule INIT_SUN {
+	SUN{y 4}
+	INIT_RECURSE {}
+}
+
+rule INIT_RECURSE {
+	SQUARE { s 1 0.1 r 1 }
+
+	GROUND{x 1 r 1}
+	GROUND{x -1 r 180 flip 180}
+	
+	INIT_NORECURSE { y -4 s 1.7 alpha -0.5 }
+}
+
+rule INIT_NORECURSE {
+	SQUARE { s 1 0.1 r 1 }
+
+	GROUND{x 1 r 1}
+	GROUND{x -1 r 180 flip 180}
+}
+
+rule INIT_NORECURSE 2 { }
+
+
+
+rule SUN 2 {
+	CIRCLE {hue 60 b 1 sat 0.1 alpha -0.5 s 4.5 y 4 x 2}
+	CIRCLE {hue 60 b 1 sat 0.5 s 4 y 4 x 2}
+}
+
+rule SUN {
+	SUN{ y 1 }
+}
+
+rule GROUND {
+	SQUARE { s 1 0.1 r 1 }
+	GROUND { x 1 r 1 }
+}
+
+rule GROUND {
+	SQUARE { s 1 0.1 r -1 }
+	GROUND { x 1 r -1 }
+}
+
+rule GROUND {
+	SQUARE { s 1 0.1 }
+	GROUND { x 1 }
+}
+
+rule GROUND {
+	SQUARE { s 1 0.1 }
+	GROUND { x 1 }
+	POLE_INIT {}
+}
+
+rule GROUND 0.2 {}
+
+rule POLE_INIT     { POLE_INIT {r  2} }
+rule POLE_INIT     { POLE_INIT {r -2} }
+rule POLE_INIT 0.5 { POLE {} }
+
+rule POLE {
+	SQUARE { s 0.1 1 }
+	POLE { y 1 }
+}
+rule POLE 0.5 {
+	SQUARE { s 0.1 1 }
+	POLE { y 1 }
+	BRANCH { s 0.5 }
+}
+rule POLE 0.5 {
+	SQUARE { s 0.1 1 }
+	POLE { y 1 }
+	BRANCH { s 0.5 r 180 flip 180 }
+}
+
+rule POLE 0.3 {}
+
+rule BRANCH {
+	SQUARE { s 1 0.1 }
+	BRANCH {x 1}
+}
+
+rule BRANCH {}

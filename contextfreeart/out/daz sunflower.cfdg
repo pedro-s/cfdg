@@ -1,0 +1,25 @@
+startshape Thing
+
+background {b 0}
+
+rule Thing {
+	40*{r 9} Twist {b .25 a -.9 h 40}
+	Bloom {s 300 sat .75 h 20 b .75 z -1 a -0.9}
+	Bloom {s 600 sat 1 b 1 h 58 z -2 a -0.95}
+}
+
+rule Bloom {
+	CIRCLE {}
+	Bloom {s 0.95}
+}
+
+rule Twist {
+	Bits {}
+	Twist {x 5 r 1 s 0.995}
+}
+
+rule Bits {
+	CIRCLE {s 1 10}
+	CIRCLE {s 10 1}
+	Bits {y 5 r 1 s 0.995 sat 0.025 b 0.025}
+}

@@ -1,0 +1,82 @@
+startshape BubbleART
+CF::Background=[h 170 b -.5 sat 1]
+CF::Size=[s 9.5  x -4 y -4]
+//Var BUBB
+
+path BUBBLE
+{
+MOVETO (.5,0) 
+ARCREL (-1 ,0, .5) ARCREL (1 ,0, .5)
+STROKE(.01) [ ] FILL [h 200 b 1]
+}
+
+shape BUBBLE3D
+{
+loop 2500 [x .0004 s .999 b .005 h .0001] BUBBLE [ ]
+}
+
+shape FOAM
+rule {BUBBLE3D [s 1]} 
+rule {BUBBLE3D [s .9 x .1]}
+rule {BUBBLE3D [s .8 y .1]} 
+rule {BUBBLE3D [s .7 x .1 y .1]}
+rule {BUBBLE3D [s .6 x -.1]} 
+rule {BUBBLE3D [s .5 y -.1]}
+rule {BUBBLE3D [s .4 x -.1 y -.1]} 
+rule {BUBBLE3D [s .3 x .6 y .3]}
+
+shape Shamp
+{
+loop 10 [y 1 z -1 a -.1] 
+loop 6 [x 1] FOAM [ ]
+}
+
+shape ShampOO
+{
+loop 6 [s .85 x 1.5 y 1 a -.1 sat .1 z -1] Shamp [ ]
+}
+
+shape CAGE
+{
+GLASSright [y -.5 x 6 h 180 b 1 sat 1]
+GLASSright [x -.5 y -.5 h 180 b 1 sat 1 z -100] //left
+
+GLASSfront [s 1 1 x -.5 y -.5 h 180 b .2 sat 1 z 1]
+GLASSfront [s 1 .934 x 2 y 1 h 190 b -1 sat 1 a 1 z -101] //back
+
+GLASStop [x -.5 y 5.5 a -1]
+GLASStop [x -.5  y -.5 b .8 z -100]//bottom
+}
+
+path GLASSright
+{
+MOVETO (0,0)
+LINEREL ( 2.5 , 1.5) LINEREL (0,  5.6)
+LINEREL (-2.5 ,-1.1) LINEREL (0,-5.6) 
+CLOSEPOLY ( )
+STROKE(.04 ) [b 1 sat 1] FILL [a -.6 ]
+}
+
+path GLASSfront
+{
+MOVETO (0,0) 
+LINEREL ( 6.5,0) LINEREL (0,6) 
+LINEREL (-6.5,0) LINEREL (0,-6) 
+CLOSEPOLY ( )
+STROKE( .04 ) [b 1 sat 1] FILL [a -.7]
+}
+
+path GLASStop
+{
+MOVETO (0,0) 
+LINEREL (6.5,0) LINEREL ( 2.5 ,1.5) 
+LINEREL (-6.5,0) LINEREL (-2.5 ,-1.5) 
+CLOSEPOLY ( )
+STROKE(.03) [ ] FILL [ ]
+}
+
+shape BubbleART
+{
+CAGE [ ]
+ShampOO [ ]
+}

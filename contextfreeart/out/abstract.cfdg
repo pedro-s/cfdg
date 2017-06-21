@@ -1,0 +1,7 @@
+startshape abstracts
+
+background { b -1 }
+
+rule abstracts { abstract { a -.5 } abstracts { x .75 s .999 hue 10 a -.1 r 45 } }
+
+rule abstract { SQUARE{ hue 20 a -.5 b .5 sat .5 } abstract{ s .99 b .5 r 1 hue .05 } }

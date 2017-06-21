@@ -1,0 +1,39 @@
+startshape SS4
+
+background {h 200 sat 1 b 1}
+
+rule SS4 {
+FRED {h 50 sat 1 b 0.6}
+BARNEY {h 50 sat 1 b 0.6}
+WILMA {h 50 sat 1 b 0.6}
+BETTY {h 50 sat 1 b 0.6}
+FRED {r 45 h 46.5 sat 1 b 0.6}
+BARNEY {r 45 h 46.5 sat 1 b 0.6}
+WILMA {r 45 h 46.5 sat 1 b 0.6}
+BETTY {r 45 h 46.5 sat 1 b 0.6}
+}
+
+rule FRED {
+SQUARE {b 0}
+SQUARE {s 0.999 b 1}
+FRED {x -0.03 s 0.99 r 0.3}
+}
+
+rule BARNEY {
+SQUARE {b 0}
+SQUARE {s 0.999 b 1}
+BARNEY {x 0.03 s 0.99 r 0.3}
+}
+
+rule WILMA {
+SQUARE {b 0}
+SQUARE {s 0.999 b 1}
+WILMA {y -0.03 s 0.99 r 0.3}
+}
+
+rule BETTY {
+SQUARE {b 0}
+SQUARE {s 0.999 b 1}
+BETTY {y 0.03 s 0.99 r 0.3}
+} 
+

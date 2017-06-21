@@ -1,0 +1,38 @@
+startshape THING
+
+background{ b -.125 }
+
+rule THING
+	{
+	THING1{}
+	THING2{}
+	}
+
+rule THING1 { START {} THING1{ x .125 y .09375 size .995 b .001 hue .1 sat 5 r -.5 } }
+rule THING2 { START {} THING2{ x -.125 y -.09375 size .995 b .001 hue .1 sat 5 r -.5 } }
+
+rule START
+	{
+	LEFTRIGHT{}
+	}
+
+rule LEFTRIGHT { LEFT{} }
+rule LEFTRIGHT { RIGHT{} }
+
+rule LEFT { SEED{} LEFT{ y .3 r 5 size .99 b .01 hue .05 } }
+rule LEFT { SEED{} LEFT{ y .3 r 5 size .99 b .01 hue .05 } }
+rule LEFT { SEED{} LEFT{ y .3 r 5 size .99 b .01 hue .05 } }
+rule LEFT { SEED{} LEFT{ y .3 r 10 size .99 b .01 hue .05 } }
+rule LEFT { SEED{} LEFT{ y .3 r 10 size .99 b .01 hue .05 } }
+rule LEFT { SEED{} LEFT{ y .3 r 20 size .99 b .01 hue .05 } }
+rule LEFT { SEED{} RIGHT{} }
+
+rule RIGHT { SEED{} RIGHT { y .3 r -5 size .99 b .01 hue .05 } }
+rule RIGHT { SEED{} RIGHT { y .3 r -5 size .99 b .01 hue .05 } }
+rule RIGHT { SEED{} RIGHT { y .3 r -5 size .99 b .01 hue .05 } }
+rule RIGHT { SEED{} RIGHT { y .3 r -10 size .99 b .01 hue .05 } }
+rule RIGHT { SEED{} RIGHT { y .3 r -10 size .99 b .01 hue .05 } }
+rule RIGHT { SEED{} RIGHT { y .3 r -20 size .99 b .01 hue .05 } }
+rule RIGHT { SEED{} LEFT{} }
+
+rule SEED { CIRCLE{} }

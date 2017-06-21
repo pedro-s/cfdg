@@ -1,0 +1,48 @@
+// Arturo,
+// a cfdg script ( http://contextfreeart.org/ ) 
+// 
+// AlpT (@freaknet.org)  
+// Jul 14 2008 - Militello
+//
+// Other scripts:
+// http://freaknet.org/alpt/misc/fatrial/math-exp/cfdg
+//
+
+
+startshape S
+background {b -1}
+
+rule S {
+	start { b 0.7 a 1 }
+}
+
+rule start {
+	start4 { }
+	start { r 18 s 0.3 a -0.8 }
+}
+
+rule start4 {
+	 36*{r 10 } start2 { s 2 x 50  a -0.5 b 0.6 }
+}
+
+rule start2 {
+	36*{r 10 } start3 { s 2 }
+}
+
+rule start3  {
+	rsquare { }
+	start3  { x 10 y 10 s 0.5 a -0.2 }
+}
+
+rule rsquare {
+trside {  }
+trside { x 8 y -1.8 r 90 }
+}
+rule trside {
+rside { }
+rside { x 10 f 90 }
+}
+
+rule rside { 
+	101 * { r 1.8 x 0.1 } SQUARE { s 0.1 }
+}

@@ -1,0 +1,13 @@
+startshape cool
+background{b -1} 
+rule cool{
+8*{x 1 y 1 r 45}
+{1000*{ x .1 y .1 s .9 r 10  z .01 }
+CIRCLE{x -1 y -1 h 57.30 sat 1.0000 b rand(.3)}
+
+1000*{ x .1 y .1 s .9 r 10  z .01 }
+CIRCLE{x 1 y 1  h 57.30 sat 1.0000 b rand(1)  }}
+
+cool{ x rand(8) y rand(8) r rand (2) s rand(.98)}
+}
+

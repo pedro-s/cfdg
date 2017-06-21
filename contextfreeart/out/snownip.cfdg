@@ -1,0 +1,14 @@
+startshape snow
+
+background {b -1}
+
+rule snow {
+	6*{r 60 x -.5 y .2887}
+	nip {}
+}
+
+rule nip {
+	TRIANGLE {b .2}
+	snow {s .382 x 1 y .3568}
+	nip {r 180 s .618 x .5 y .0681 b .2}
+}

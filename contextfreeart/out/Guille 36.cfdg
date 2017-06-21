@@ -1,0 +1,21 @@
+startshape Argui
+background{b 1}
+
+rule Argui {
+	ARM{ r 30 }
+	Argui{ r 30 s 0.66}
+}
+rule ARM 5 {
+	SHAPE{ s 1 1}
+	ARM { x 2 s -1 alpha -0.03}
+}
+rule ARM {
+	SHAPE{ s 1 1}
+	ARM { x 3 s 0.5 r 10 alpha -0.07}
+	ARM {x 2 s 0.77 r -60 alpha -0.03}
+}
+rule ARM 0.01 {}
+
+rule SHAPE{
+	CIRCLE{ hue 161.1881 sat 1.0000 b 0.5804}
+}

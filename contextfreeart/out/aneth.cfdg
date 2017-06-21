@@ -1,0 +1,20 @@
+startshape SPIKE
+
+shape SPIKE {
+	ONE_LINE [y 1 x -2]
+	OTHER_LINE [r 89 x 1 y -1 hue 0.05]
+	SPIKE [r -10 sat 0.01 x 2 y 4]
+}
+
+shape ONE_LINE {
+	SQUARE [hue 1 sat 0.5 b 0.7 size 0.08 10]
+       OTHER_LINE[r 2 x 1 y 4 hue 0.1 size 0.9]
+}
+
+shape OTHER_LINE {
+	SQUARE [hue 1 sat 0.8 b 0.6 size 0.05 10]
+	SPIKE[ r 5 x -1 y 4]
+}
+
+
+

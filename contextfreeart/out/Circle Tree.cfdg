@@ -1,0 +1,38 @@
+startshape start
+background {b -1}
+
+rule circles  {
+	CIRCLE { }
+}
+ 
+rule circles  { 
+	CIRCLE { y 0.5  }
+	CIRCLE { y -0.5 }
+}
+
+rule circles  { 
+	CIRCLE { y 0  }
+	CIRCLE { y -1 }
+	CIRCLE { y 1 }
+}
+
+rule rstem {
+	circles {}
+	rstem { x -1 r 3  s 0.98 hue 1}
+}
+
+rule trunk .03 {
+	rstem {}
+	trunk { x -.5 s .985 hue 10 }
+}
+
+
+rule trunk {
+	circles {}
+	trunk { x -.5 s .985}
+}
+
+
+rule start { 
+	trunk { r 270 b 1 sat 100 hue 40}
+}

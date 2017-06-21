@@ -1,0 +1,88 @@
+startshape SpaceInvaders
+
+background {b -1}
+
+rule SpaceInvaders {
+    4*{y 4} AlienLine{}
+    Ship {y -14 x 6 s 0.4 }
+}
+
+rule AlienLine{
+	
+	7*{y 0.3} MidBitLine{s .3}
+	7*{y 0.3} Bit1Line{s .3}
+	7*{y 0.3} Bit2Line{s .3}
+	7*{y 0.3} Bit3Line{s .3}
+	7*{y 0.3} Bit4Line{s .3}
+}
+
+
+rule MidBitLine 0.2 {
+	10*{x 14} SQUARE{}
+}
+rule MidBitLine{
+	10*{x 14} SQUARE{b 1}
+}
+
+rule Bit1Line 0.4 {
+	10*{x 14} SQUARE{x -1}
+    10*{x 14} SQUARE{x 1}
+} 
+rule Bit1Line{
+    10*{x 14} SQUARE{b 1 x -1}
+    10*{x 14} SQUARE{b 1 x 1}
+}
+
+rule Bit2Line 0.4 {
+	10*{x 14} SQUARE{x -2}
+    10*{x 14} SQUARE{x 2}
+} 
+rule Bit2Line {
+	10*{x 14} SQUARE{b 1 x -2}
+    10*{x 14} SQUARE{b 1 x 2}
+}
+
+rule Bit3Line 0.6 {
+	10*{x 14} SQUARE{x -3}
+    10*{x 14} SQUARE{x 3}
+} 
+rule Bit3Line {
+	10*{x 14} SQUARE{b 1 x -3}
+    10*{x 14} SQUARE{b 1 x 3}
+}
+
+rule Bit4Line 0.8 {
+	10*{x 14} SQUARE{x -4}
+    10*{x 14} SQUARE{x 4}
+} 
+rule Bit4Line {
+	10*{x 14} SQUARE{b 1 x -4}
+    10*{x 14} SQUARE{b 1 x 4}
+}
+
+
+rule Ship{
+	6*{y 1} Bit{}
+	5*{y 1} BitMid{}
+	3*{y 1} BitExt{}
+	3*{y 1} BitExtExt{}
+}
+
+rule Bit{
+	SQUARE{b 1}
+}
+
+rule BitMid{
+	SQUARE{b 1 x -1}
+    SQUARE{b 1 x 1}
+}
+
+rule BitExt{
+	SQUARE{b 1 x -2}
+    SQUARE{b 1 x 2}
+}
+
+rule BitExtExt{
+	SQUARE{b 1 x -3}
+    SQUARE{b 1 x 3}
+}

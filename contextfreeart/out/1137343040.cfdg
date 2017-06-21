@@ -1,0 +1,91 @@
+startshape start
+
+background {b -1}
+
+rule item {
+	CIRCLE{}
+}
+
+rule start {
+
+	startQ{sat 1}
+	startQ{h 90 r 90 sat 1}
+	startQ{h 180 r 180 sat 1}
+	startQ{h 270 r 270 sat 1}
+}
+
+
+rule startQ {
+	startW {}
+	startW {h 22.5 r 22.5}
+	startW {h 45 r 45}
+	startW {h 67.5  r 67.5}
+}
+
+rule startW {
+	block_S{}
+	block_S{h 11.25  r 11.25}
+}
+
+rule block_S {
+	item {}
+	block_AL{y 1 x -0.2 s 0.99 b 0.01 }
+	block_AR{y 1 x 0.2 s 0.99 b 0.01 }
+}
+
+rule block_AL{
+	item {}
+	block_AL{y 1 x -0.2 s 0.99 b 0.01 }
+}
+
+rule block_AL 0.03{
+	item {}
+	block_AL{y 1 x -0.2 s 0.99 b 0.01 }
+	block_R{y 1 x 0.2 s 0.99 b 0.01 }
+}
+
+
+rule block_AR{
+	item {}
+	block_AR{y 1 x 0.2 s 0.99 b 0.01 }
+}
+
+rule block_AR 0.03{
+	item {}
+	block_AR{y 1 x 0.2 s 0.99 b 0.01 }
+	block_L{y 1 x -0.2 s 0.99 b 0.01 }
+}
+
+rule block_L{
+	item {}
+	block_L{y 1 x -0.2 s 0.99 b 0.01 }
+}
+
+rule block_L 0.05{
+	item {}
+	block_R{y 1 x 0.2 s 0.99 b 0.01 }
+}
+
+rule block_L 0.01{
+	item {}
+	block_L{y 1 x -0.2 s 0.99 b 0.01 }
+	block_R{y 1 x 0.2 s 0.99 b 0.01 }
+}
+
+
+rule block_R{
+	item {}
+	block_R{y 1 x 0.2 s 0.99 b 0.01 }
+}
+
+rule block_R 0.05{
+	item {}
+	block_L{y 1 x -0.2 s 0.99 b 0.01 }
+}
+
+rule block_R 0.01{
+	item {}
+	block_L{y 1 x -0.2 s 0.99 b 0.01 }
+	block_R{y 1 x 0.2 s 0.99 b 0.01 }
+}
+

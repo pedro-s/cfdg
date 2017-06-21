@@ -1,0 +1,1422 @@
+Error in 1121744655.cfdg at line 37 - syntax error
+Error in 1121744744.cfdg at line 1 - syntax error
+Error in 1121744881.cfdg at line 4 - syntax error
+Error in 1121769136.cfdg at line 6 - Warning: this term is being dropped
+Error in 1121769136.cfdg at line 8 - Warning: this term is being dropped
+Error in 1122311092.cfdg at line 1 - syntax error
+Error in 1122315607.cfdg at line 1 - syntax error
+Error in 1122343276.cfdg at line 1 - syntax error
+Error in 1122350226.cfdg at line 1 - syntax error
+Error in 1122351081.cfdg at line 1 - syntax error
+Error in 1122416025.cfdg at line 1 - syntax error
+Error in 1122447090.cfdg at line 9 - syntax error
+Error in 1122496837.cfdg at line 1 - syntax error
+Error in 1122507850.cfdg at line 1 - syntax error
+Error in 1122513757.cfdg at line 1 - syntax error
+Error in 1122531168.cfdg at line 1 - syntax error
+Error in 1122563705.cfdg at line 1 - syntax error
+Error in 1122569991.cfdg at line 1 - syntax error
+Error in 1122626772.cfdg at line 1 - syntax error
+Error in 1122654165.cfdg at line 1 - syntax error
+Error in 1122750462.cfdg at line 1 - syntax error
+Error in 1122907109.cfdg at line 1 - syntax error
+Error in 1122971451.cfdg at line 1 - syntax error
+Error in 1123585788.cfdg at line 1 - syntax error
+Error in 1123977201.cfdg at line 24 - syntax error
+Error in 1124051633.cfdg at line 2 - syntax error
+Error in 1124218045.cfdg at line 40 - syntax error
+Error in 1124340578.cfdg at line 1 - syntax error
+Error in 1125628170.cfdg at line 13 - syntax error
+Error in 1126380592.cfdg at line 8 - syntax error
+Error in 1126459308.cfdg at line 14 - syntax error
+Error in 1126701173.cfdg at line 18 - Warning: this term is being dropped
+Error in 1127264943.cfdg at line 131 - syntax error
+Error in 1128043764.cfdg at line 33 - syntax error
+Error in 1128232244.cfdg at line 32 - Warning: this term is being dropped
+Error in 1130041821.cfdg at line 34 - syntax error
+Error in 1130471535.cfdg at line 29 - syntax error
+Error in 1130793040.cfdg at line 6 - syntax error
+Error in 1130833689.cfdg at line 47 - syntax error
+Error in 1131512604.cfdg at line 18 - syntax error
+Error in 1131616968.cfdg at line 12 - syntax error
+Error in 1131786933.cfdg at line 9 - syntax error
+Error in 1131953966.cfdg at line 29 - syntax error
+Error in 1133131745.cfdg at line 6 - syntax error
+Error in 1133131835.cfdg at line 4 - syntax error
+Error in 1133287677.cfdg at line 9 - Warning: this term is being dropped
+ Reading rules file 1133711426.cfdg  Couldn't open rules file i_pix.cfdg
+ Reading rules file 1135196599.cfdg   Couldn't open rules file i_polygons.cfdg  Couldn't open rules file i_pix.cfdg
+ Reading rules file 1135263773.cfdg   Couldn't open rules file i_polygons.cfdg
+ Reading rules file 1136334575.cfdgCouldn't open rules file i_pix.cfdg 
+Error in 1136403483.cfdg at line 52 - syntax error 
+Error in 1137009679.cfdg at line 19 - Invalid UTF-8 encoding: sequence extends past end of buffer
+Error in 1137009679.cfdg at line 20 - syntax error
+Error in 1137009846.cfdg at line 19 - Invalid UTF-8 encoding: sequence extends past end of buffer
+Error in 1137009846.cfdg at line 20 - syntax error
+ Reading rules file 1138389477.cfdg   Couldn't open rules file i_pix.cfdg
+Error in 1143170546.cfdg at line 1 - syntax error
+Error in 1144197463.cfdg at line 114 - syntax error
+Error in 1145291513.cfdg at line 1 - syntax error
+Error in 1145352186.cfdg at line 15 - Warning: this term is being dropped
+Error in 1145829955.cfdg at line 15 - Warning: this term is being dropped
+Error in 1146186355.cfdg at line 6 - syntax error
+Error in 1146242247.cfdg at line 5 - syntax error
+Error in 1146411370.cfdg at line 19 - Warning: this term is being dropped
+Error in 1146412104.cfdg at line 19 - Warning: this term is being dropped
+Error in 1146412104.cfdg at line 34 - Warning: this term is being dropped
+Error in 1146412104.cfdg at line 49 - Warning: this term is being dropped
+Error in 1146412104.cfdg at line 64 - Warning: this term is being dropped
+Error in 1146427822.cfdg at line 5 - syntax error
+Error in 1146892517.cfdg at line 6 - syntax error
+Error in 1147615019.cfdg at line 20 - syntax error
+Error in 1147708384.cfdg at line 15 - syntax error
+Error in 1149030947.cfdg at line 12 - Warning: this term is being dropped
+Error in 1149500644.cfdg at line 18 - Not enough adjustment parameters
+ Reading rules file 1151398377.cfdg  Shape with no rules encountered: TR .
+Error in 1151499535.cfdg at line 2 - syntax error
+Error in 1151499670.cfdg at line 11 - syntax error
+Error in 1151499706.cfdg at line 5 - syntax error
+Error in 1153187999.cfdg at line 1 - syntax error
+Error in 1153188114.cfdg at line 1 - syntax error
+Error in 1153674433.cfdg at line 6 - syntax error
+Error in 1156234151.cfdg at line 10 - syntax error
+Error in 1157540739.cfdg at line 12 - syntax error
+Error in 1158702869.cfdg at line 115 - syntax error
+Error in 1158807578.cfdg at line 13 - syntax error 
+Error in 1161361647.cfdg at line 1 - syntax error
+Error in 1161932805.cfdg at line 10 - syntax error
+Error in 1161933177.cfdg at line 14 - syntax error
+Error in 1162666379.cfdg at line 1 - Invalid UTF-8 encoding: unexpected continuation byte
+Error in 1162666379.cfdg at line 2 - syntax error
+Error in 1162890056.cfdg at line 35 - The target operator can only be applied to color adjustments
+Error in 1162942671.cfdg at line 1 - Invalid UTF-8 encoding: unexpected continuation byte
+Error in 1162942671.cfdg at line 2 - syntax error
+Error in 2 layers of 2x2.cfdg at line 1 - syntax error
+ Reading rules file 2nd.cfdg  Couldn't open rules file i_curves.cfdg
+Error in 2nd.cfdg at line 157 - syntax error
+Error in 2x2matrix.cfdg at line 1 - syntax error
+Error in 3d fractal generator.cfdg at line 47 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 48 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 49 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 52 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 53 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 54 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 57 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 58 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 59 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 79 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 52 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 79 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 80 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 53 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 80 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 81 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 54 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 81 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 85 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 73 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 86 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 74 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 87 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 75 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 88 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 76 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 89 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 77 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 90 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 78 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 91 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 57 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 91 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 92 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 58 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 92 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 93 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 59 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 93 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 99 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 64 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 100 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 65 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 102 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 67 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 103 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 68 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 104 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 69 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 105 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 70 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 108 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 85 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 108 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 73 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 109 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 86 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 109 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 74 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 110 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 87 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 110 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 75 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 111 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 88 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 111 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 76 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 112 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 89 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 112 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 77 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 113 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 90 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 113 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 78 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 114 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 47 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 114 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 115 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 48 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 115 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 116 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 49 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 116 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 120 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 108 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 120 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 85 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 120 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 73 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 121 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 109 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 121 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 86 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 121 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 74 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 122 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 110 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 122 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 87 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 122 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 75 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 123 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 111 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 123 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 88 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 123 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 76 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 124 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 112 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 124 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 89 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 124 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 77 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 125 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 113 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 125 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 90 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 125 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 78 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 126 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 91 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 126 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 57 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 126 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 127 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 92 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 127 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 58 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 127 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 128 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 93 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 128 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 59 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 128 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 27 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 135 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 99 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 135 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 64 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 136 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 100 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 136 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 65 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 138 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 102 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 138 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 67 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 139 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 103 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 139 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 68 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 140 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 104 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 140 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 69 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 141 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 105 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 141 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 70 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 144 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 120 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 144 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 108 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 144 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 85 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 144 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 73 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 145 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 121 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 145 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 109 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 145 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 86 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 145 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 74 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 146 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 122 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 146 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 110 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 146 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 87 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 146 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 75 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 147 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 123 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 147 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 111 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 147 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 88 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 147 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 76 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 148 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 124 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 148 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 112 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 148 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 89 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 148 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 77 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 149 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 125 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 149 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 113 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 149 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 90 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 149 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 78 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 150 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 114 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 150 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 47 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 150 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 151 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 115 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 151 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 48 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 151 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 152 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 116 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 152 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 49 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 152 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 25 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 156 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 144 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 156 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 120 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 156 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 108 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 156 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 85 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 156 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 73 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 157 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 145 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 157 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 121 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 157 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 109 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 157 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 86 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 157 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 74 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 158 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 146 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 158 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 122 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 158 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 110 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 158 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 87 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 158 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 75 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 147 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 123 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 111 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 88 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 76 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 148 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 124 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 112 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 89 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 77 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 149 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 125 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 113 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 90 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 78 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 162 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 79 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 162 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 52 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 162 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 163 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 80 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 163 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 53 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 163 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 164 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 81 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 164 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 54 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 164 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 26 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 135 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 99 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 64 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 176 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 136 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 176 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 100 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 176 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 65 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 138 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 102 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 67 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 139 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 103 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 68 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 180 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 140 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 180 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 104 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 180 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 69 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 181 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 141 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 181 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 105 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 181 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 70 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 184 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 156 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 184 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 144 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 184 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 120 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 184 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 108 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 184 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 85 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 184 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 73 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 185 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 157 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 185 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 145 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 185 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 121 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 185 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 109 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 185 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 86 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 185 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 74 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 186 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 158 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 186 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 146 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 186 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 122 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 186 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 110 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 186 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 87 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 186 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 75 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 187 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 159 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 187 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 147 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 187 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 123 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 187 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 111 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 187 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 88 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 187 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 76 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 188 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 160 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 188 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 148 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 188 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 124 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 188 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 112 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 188 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 89 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 188 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 77 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 189 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 161 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 189 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 149 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 189 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 125 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 189 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 113 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 189 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 90 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 189 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 78 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 184 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 156 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 144 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 120 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 108 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 85 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 73 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 185 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 157 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 145 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 121 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 109 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 86 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 74 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 197 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 186 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 197 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 158 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 197 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 146 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 197 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 122 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 197 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 110 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 197 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 87 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 197 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 75 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 198 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 187 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 198 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 159 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 198 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 147 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 198 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 123 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 198 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 111 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 198 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 88 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 198 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 76 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 199 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 188 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 199 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 160 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 199 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 148 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 199 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 124 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 199 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 112 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 199 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 89 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 199 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 77 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 189 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 161 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 149 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 125 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 113 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 90 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 78 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 258 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 226 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 259 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 227 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 260 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 228 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 263 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 252 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 264 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 253 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 265 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 254 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 266 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 255 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 267 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 256 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 268 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 257 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 269 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 234 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 270 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 235 - previous variable/parameter declared here
+Error in 3d fractal generator.cfdg at line 271 - Scope of name overlaps variable/parameter with same name
+Error in 3d fractal generator.cfdg at line 236 - previous variable/parameter declared here
+Error in albero.cfdg at line 5 - Unknown configuration parameter
+Error in American Flag.cfdg at line 52 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 58 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 64 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 70 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 76 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 82 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 85 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 88 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 52 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 58 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 64 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 70 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 76 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 82 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 85 - Warning: this term is being dropped
+Error in American Flag.cfdg at line 88 - Warning: this term is being dropped
+Error in boxycontinents1.cfdg at line 95 - syntax error
+Error in Bubble Octopus.cfdg at line 7 - Warning: this term is being droppedError in cities.cfdg at line 15 - syntax error
+Error in context free art own.cfdg at line 10 - syntax errorriation HULEB...
+Error in dancingstar.cfdg at line 40 - syntax error
+Error in drip-grid-1.cfdg at line 4 - syntax errorError in expiriment.cfdg at line 10 - syntax error
+Error in facer1.cfdg at line 23 - syntax error
+Error in faces 8-16-07 02.cfdg at line 364 - syntax error 
+Error in flofree2.cfdg at line 16 - syntax error
+Error in flow.color.tile.cfdg at line 20 - Warning: this term is being dropped
+Error in flower family.cfdg at line 14 - syntax error
+Error in Forrest at Night.cfdg at line 46 - Warning: this term is being dropped
+Error in gamer_textually.cfdg at line 14 - syntax error
+Error in Guille 35.cfdg at line 5 - Warning: this term is being dropped
+Error in iqtest.cfdg at line 40 - syntax error  Writing 500w x 500h pixel image...
+Error in modcastle_colored_a.cfdg at line 98 - Warning: this term is being dropped
+Error in modcastle_colored_a.cfdg at line 99 - Warning: this term is being dropped
+Error in mountaint.cfdg at line 1 - syntax error
+Error in my masterpiece.cfdg at line 4 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 4 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 5 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 5 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 6 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 6 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 7 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 7 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 8 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 8 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 9 - Warning: this term is being dropped
+Error in my masterpiece.cfdg at line 9 - Warning: this term is being dropped
+Error in Natty Boh.cfdg at line 36 - Warning: this term is being dropped
+Error in Natty Boh.cfdg at line 37 - Warning: this term is being dropped
+Error in Octoshape Color Flexlegs.cfdg at line 31 - syntax error G
+Error in Out_of_the_blue.cfdg at line 6 - Illegal vector size (<1 or >9)
+Error in pack man.cfdg at line 21 - Warning: this term is being dropped
+Error in pack man.cfdg at line 22 - Warning: this term is being dropped
+Error in pack man.cfdg at line 23 - Warning: this term is being dropped
+Error in pack man.cfdg at line 24 - Warning: this term is being dropped
+Error in pack man.cfdg at line 25 - Warning: this term is being dropped
+Error in pack man.cfdg at line 26 - Warning: this term is being dropped
+Error in pack man.cfdg at line 27 - Warning: this term is being dropped
+Error in pack man.cfdg at line 31 - Warning: this term is being dropped
+Error in pack man.cfdg at line 32 - Warning: this term is being dropped
+Error in pack man.cfdg at line 33 - Warning: this term is being dropped
+Error in pack man.cfdg at line 34 - Warning: this term is being dropped
+Error in pack man.cfdg at line 35 - Warning: this term is being dropped
+Error in pack man.cfdg at line 36 - Warning: this term is being dropped
+Error in pack man.cfdg at line 37 - Warning: this term is being dropped
+Error in pack man.cfdg at line 39 - syntax error
+Error in pegasus.cfdg at line 10 - Too many adjustment parameters 
+Error in phi.cfdg at line 5 - Warning: this term is being dropped
+Error in rainbowsmear.cfdg at line 28 - syntax error
+Error in raincloud.cfdg at line 20 - Warning: this term is being droppedError in random.cfdg at line 10 - Warning: this term is being droppedError in RAWR dragon.cfdg at line 7 - Warning: this term is being dropped
+Error in RECONSTRUCTED TWISTY THING.cfdg at line 17 - Warning: this term is being dropped
+Error in RHCP.cfdg at line 41 - syntax error Writing 500w x 500h pixel image...
+Error in rope.cfdg at line 27 - Unknown path command/operation
+Error in rope.cfdg at line 35 - Unknown path command/operation 
+Error in sin_pat2.cfdg at line 7 - Expression does not evaluate to a legal natural number500w x 500h pixel image.Error in sin_pat.cfdg at line 7 - Expression does not evaluate to a legal natural number500w x 500h pixel image.
+  Reading rules file snailtree.cfdg  Couldn't open rules file i_curves.cfdg
+Error in snailtree.cfdg at line 32 - syntax error
+Error in spaghetti-chair.cfdg at line 36 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 35 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 37 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 27 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 41 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 37 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 41 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 27 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 42 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 41 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 42 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 37 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 42 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 27 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 46 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 27 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 54 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 36 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 54 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 35 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 56 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 45 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 92 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 64 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 93 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 64 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 94 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 64 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 99 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 93 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 99 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 64 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 103 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 92 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 103 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 64 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 104 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 99 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 104 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 93 - previous variable/parameter declared here
+Error in spaghetti-chair.cfdg at line 104 - Scope of name overlaps variable/parameter with same name
+Error in spaghetti-chair.cfdg at line 64 - previous variable/parameter declared here
+Error in spike.cfdg at line 8 - Warning: this term is being dropped
+Error in SPIKES.cfdg at line 15 - syntax error
+Error in spoke.cfdg at line 8 - Warning: this term is being droppedError in spyraleyes2.cfdg at line 110 - Warning: this term is being dropped
+Error in star 5.cfdg at line 8 - Warning: this term is being dropped
+Error in Wallpaper2.cfdg at line 10 - Warning: this term is being dropped
+Error in Wallpaper-revisited.cfdg at line 72 - syntax error
+Error in whiteflower.cfdg at line 8 - syntax error
+Error in wing.cfdg at line 8 - Warning: this term is being dropped
+Error in wire.cfdg at line 62 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 63 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 64 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 67 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 68 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 69 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 72 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 73 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 74 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 98 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 62 - previous variable/parameter declared here
+Error in wire.cfdg at line 98 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 99 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 63 - previous variable/parameter declared here
+Error in wire.cfdg at line 99 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 100 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 64 - previous variable/parameter declared here
+Error in wire.cfdg at line 100 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 104 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 105 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 106 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 108 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 109 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 110 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 112 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 67 - previous variable/parameter declared here
+Error in wire.cfdg at line 112 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 113 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 68 - previous variable/parameter declared here
+Error in wire.cfdg at line 113 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 114 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 69 - previous variable/parameter declared here
+Error in wire.cfdg at line 114 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 118 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 104 - previous variable/parameter declared here
+Error in wire.cfdg at line 118 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 119 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 105 - previous variable/parameter declared here
+Error in wire.cfdg at line 119 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 120 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 106 - previous variable/parameter declared here
+Error in wire.cfdg at line 120 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 122 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 108 - previous variable/parameter declared here
+Error in wire.cfdg at line 122 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 123 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 109 - previous variable/parameter declared here
+Error in wire.cfdg at line 123 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 124 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 110 - previous variable/parameter declared here
+Error in wire.cfdg at line 124 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 126 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 72 - previous variable/parameter declared here
+Error in wire.cfdg at line 126 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 127 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 73 - previous variable/parameter declared here
+Error in wire.cfdg at line 127 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 128 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 74 - previous variable/parameter declared here
+Error in wire.cfdg at line 128 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 135 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 80 - previous variable/parameter declared here
+Error in wire.cfdg at line 136 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 81 - previous variable/parameter declared here
+Error in wire.cfdg at line 138 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 83 - previous variable/parameter declared here
+Error in wire.cfdg at line 139 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 84 - previous variable/parameter declared here
+Error in wire.cfdg at line 140 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 85 - previous variable/parameter declared here
+Error in wire.cfdg at line 141 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 86 - previous variable/parameter declared here
+Error in wire.cfdg at line 145 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 118 - previous variable/parameter declared here
+Error in wire.cfdg at line 145 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 104 - previous variable/parameter declared here
+Error in wire.cfdg at line 145 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 146 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 119 - previous variable/parameter declared here
+Error in wire.cfdg at line 146 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 105 - previous variable/parameter declared here
+Error in wire.cfdg at line 146 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 147 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 120 - previous variable/parameter declared here
+Error in wire.cfdg at line 147 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 106 - previous variable/parameter declared here
+Error in wire.cfdg at line 147 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 149 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 122 - previous variable/parameter declared here
+Error in wire.cfdg at line 149 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 108 - previous variable/parameter declared here
+Error in wire.cfdg at line 149 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 150 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 123 - previous variable/parameter declared here
+Error in wire.cfdg at line 150 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 109 - previous variable/parameter declared here
+Error in wire.cfdg at line 150 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 151 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 124 - previous variable/parameter declared here
+Error in wire.cfdg at line 151 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 110 - previous variable/parameter declared here
+Error in wire.cfdg at line 151 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 153 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 98 - previous variable/parameter declared here
+Error in wire.cfdg at line 153 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 62 - previous variable/parameter declared here
+Error in wire.cfdg at line 153 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 154 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 99 - previous variable/parameter declared here
+Error in wire.cfdg at line 154 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 63 - previous variable/parameter declared here
+Error in wire.cfdg at line 154 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 155 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 100 - previous variable/parameter declared here
+Error in wire.cfdg at line 155 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 64 - previous variable/parameter declared here
+Error in wire.cfdg at line 155 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 145 - previous variable/parameter declared here
+Error in wire.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 118 - previous variable/parameter declared here
+Error in wire.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 104 - previous variable/parameter declared here
+Error in wire.cfdg at line 159 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 146 - previous variable/parameter declared here
+Error in wire.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 119 - previous variable/parameter declared here
+Error in wire.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 105 - previous variable/parameter declared here
+Error in wire.cfdg at line 160 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 147 - previous variable/parameter declared here
+Error in wire.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 120 - previous variable/parameter declared here
+Error in wire.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 106 - previous variable/parameter declared here
+Error in wire.cfdg at line 161 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 163 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 149 - previous variable/parameter declared here
+Error in wire.cfdg at line 163 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 122 - previous variable/parameter declared here
+Error in wire.cfdg at line 163 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 108 - previous variable/parameter declared here
+Error in wire.cfdg at line 163 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 164 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 150 - previous variable/parameter declared here
+Error in wire.cfdg at line 164 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 123 - previous variable/parameter declared here
+Error in wire.cfdg at line 164 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 109 - previous variable/parameter declared here
+Error in wire.cfdg at line 164 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 165 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 151 - previous variable/parameter declared here
+Error in wire.cfdg at line 165 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 124 - previous variable/parameter declared here
+Error in wire.cfdg at line 165 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 110 - previous variable/parameter declared here
+Error in wire.cfdg at line 165 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 167 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 112 - previous variable/parameter declared here
+Error in wire.cfdg at line 167 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 67 - previous variable/parameter declared here
+Error in wire.cfdg at line 167 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 168 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 113 - previous variable/parameter declared here
+Error in wire.cfdg at line 168 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 68 - previous variable/parameter declared here
+Error in wire.cfdg at line 168 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 169 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 114 - previous variable/parameter declared here
+Error in wire.cfdg at line 169 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 69 - previous variable/parameter declared here
+Error in wire.cfdg at line 169 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 173 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 159 - previous variable/parameter declared here
+Error in wire.cfdg at line 173 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 145 - previous variable/parameter declared here
+Error in wire.cfdg at line 173 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 118 - previous variable/parameter declared here
+Error in wire.cfdg at line 173 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 104 - previous variable/parameter declared here
+Error in wire.cfdg at line 173 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 174 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 160 - previous variable/parameter declared here
+Error in wire.cfdg at line 174 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 146 - previous variable/parameter declared here
+Error in wire.cfdg at line 174 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 119 - previous variable/parameter declared here
+Error in wire.cfdg at line 174 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 105 - previous variable/parameter declared here
+Error in wire.cfdg at line 174 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 161 - previous variable/parameter declared here
+Error in wire.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 147 - previous variable/parameter declared here
+Error in wire.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 120 - previous variable/parameter declared here
+Error in wire.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 106 - previous variable/parameter declared here
+Error in wire.cfdg at line 175 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 177 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 163 - previous variable/parameter declared here
+Error in wire.cfdg at line 177 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 149 - previous variable/parameter declared here
+Error in wire.cfdg at line 177 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 122 - previous variable/parameter declared here
+Error in wire.cfdg at line 177 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 108 - previous variable/parameter declared here
+Error in wire.cfdg at line 177 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 164 - previous variable/parameter declared here
+Error in wire.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 150 - previous variable/parameter declared here
+Error in wire.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 123 - previous variable/parameter declared here
+Error in wire.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 109 - previous variable/parameter declared here
+Error in wire.cfdg at line 178 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 165 - previous variable/parameter declared here
+Error in wire.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 151 - previous variable/parameter declared here
+Error in wire.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 124 - previous variable/parameter declared here
+Error in wire.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 110 - previous variable/parameter declared here
+Error in wire.cfdg at line 179 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 181 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 126 - previous variable/parameter declared here
+Error in wire.cfdg at line 181 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 72 - previous variable/parameter declared here
+Error in wire.cfdg at line 181 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 182 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 127 - previous variable/parameter declared here
+Error in wire.cfdg at line 182 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 73 - previous variable/parameter declared here
+Error in wire.cfdg at line 182 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 183 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 128 - previous variable/parameter declared here
+Error in wire.cfdg at line 183 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 74 - previous variable/parameter declared here
+Error in wire.cfdg at line 183 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 190 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 135 - previous variable/parameter declared here
+Error in wire.cfdg at line 190 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 80 - previous variable/parameter declared here
+Error in wire.cfdg at line 191 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 136 - previous variable/parameter declared here
+Error in wire.cfdg at line 191 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 81 - previous variable/parameter declared here
+Error in wire.cfdg at line 193 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 138 - previous variable/parameter declared here
+Error in wire.cfdg at line 193 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 83 - previous variable/parameter declared here
+Error in wire.cfdg at line 194 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 139 - previous variable/parameter declared here
+Error in wire.cfdg at line 194 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 84 - previous variable/parameter declared here
+Error in wire.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 140 - previous variable/parameter declared here
+Error in wire.cfdg at line 195 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 85 - previous variable/parameter declared here
+Error in wire.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 141 - previous variable/parameter declared here
+Error in wire.cfdg at line 196 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 86 - previous variable/parameter declared here
+Error in wire.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 173 - previous variable/parameter declared here
+Error in wire.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 159 - previous variable/parameter declared here
+Error in wire.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 145 - previous variable/parameter declared here
+Error in wire.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 118 - previous variable/parameter declared here
+Error in wire.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 104 - previous variable/parameter declared here
+Error in wire.cfdg at line 200 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 201 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 174 - previous variable/parameter declared here
+Error in wire.cfdg at line 201 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 160 - previous variable/parameter declared here
+Error in wire.cfdg at line 201 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 146 - previous variable/parameter declared here
+Error in wire.cfdg at line 201 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 119 - previous variable/parameter declared here
+Error in wire.cfdg at line 201 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 105 - previous variable/parameter declared here
+Error in wire.cfdg at line 201 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 202 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 175 - previous variable/parameter declared here
+Error in wire.cfdg at line 202 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 161 - previous variable/parameter declared here
+Error in wire.cfdg at line 202 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 147 - previous variable/parameter declared here
+Error in wire.cfdg at line 202 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 120 - previous variable/parameter declared here
+Error in wire.cfdg at line 202 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 106 - previous variable/parameter declared here
+Error in wire.cfdg at line 202 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 204 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 177 - previous variable/parameter declared here
+Error in wire.cfdg at line 204 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 163 - previous variable/parameter declared here
+Error in wire.cfdg at line 204 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 149 - previous variable/parameter declared here
+Error in wire.cfdg at line 204 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 122 - previous variable/parameter declared here
+Error in wire.cfdg at line 204 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 108 - previous variable/parameter declared here
+Error in wire.cfdg at line 204 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 205 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 178 - previous variable/parameter declared here
+Error in wire.cfdg at line 205 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 164 - previous variable/parameter declared here
+Error in wire.cfdg at line 205 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 150 - previous variable/parameter declared here
+Error in wire.cfdg at line 205 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 123 - previous variable/parameter declared here
+Error in wire.cfdg at line 205 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 109 - previous variable/parameter declared here
+Error in wire.cfdg at line 205 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 206 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 179 - previous variable/parameter declared here
+Error in wire.cfdg at line 206 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 165 - previous variable/parameter declared here
+Error in wire.cfdg at line 206 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 151 - previous variable/parameter declared here
+Error in wire.cfdg at line 206 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 124 - previous variable/parameter declared here
+Error in wire.cfdg at line 206 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 110 - previous variable/parameter declared here
+Error in wire.cfdg at line 206 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 208 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 153 - previous variable/parameter declared here
+Error in wire.cfdg at line 208 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 98 - previous variable/parameter declared here
+Error in wire.cfdg at line 208 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 62 - previous variable/parameter declared here
+Error in wire.cfdg at line 208 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 209 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 154 - previous variable/parameter declared here
+Error in wire.cfdg at line 209 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 99 - previous variable/parameter declared here
+Error in wire.cfdg at line 209 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 63 - previous variable/parameter declared here
+Error in wire.cfdg at line 209 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 210 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 155 - previous variable/parameter declared here
+Error in wire.cfdg at line 210 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 100 - previous variable/parameter declared here
+Error in wire.cfdg at line 210 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 64 - previous variable/parameter declared here
+Error in wire.cfdg at line 210 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 30 - previous variable/parameter declared here
+Error in wire.cfdg at line 214 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 200 - previous variable/parameter declared here
+Error in wire.cfdg at line 214 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 173 - previous variable/parameter declared here
+Error in wire.cfdg at line 214 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 159 - previous variable/parameter declared here
+Error in wire.cfdg at line 214 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 145 - previous variable/parameter declared here
+Error in wire.cfdg at line 214 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 118 - previous variable/parameter declared here
+Error in wire.cfdg at line 214 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 104 - previous variable/parameter declared here
+Error in wire.cfdg at line 214 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 215 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 201 - previous variable/parameter declared here
+Error in wire.cfdg at line 215 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 174 - previous variable/parameter declared here
+Error in wire.cfdg at line 215 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 160 - previous variable/parameter declared here
+Error in wire.cfdg at line 215 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 146 - previous variable/parameter declared here
+Error in wire.cfdg at line 215 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 119 - previous variable/parameter declared here
+Error in wire.cfdg at line 215 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 105 - previous variable/parameter declared here
+Error in wire.cfdg at line 215 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 216 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 202 - previous variable/parameter declared here
+Error in wire.cfdg at line 216 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 175 - previous variable/parameter declared here
+Error in wire.cfdg at line 216 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 161 - previous variable/parameter declared here
+Error in wire.cfdg at line 216 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 147 - previous variable/parameter declared here
+Error in wire.cfdg at line 216 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 120 - previous variable/parameter declared here
+Error in wire.cfdg at line 216 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 106 - previous variable/parameter declared here
+Error in wire.cfdg at line 216 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 218 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 204 - previous variable/parameter declared here
+Error in wire.cfdg at line 218 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 177 - previous variable/parameter declared here
+Error in wire.cfdg at line 218 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 163 - previous variable/parameter declared here
+Error in wire.cfdg at line 218 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 149 - previous variable/parameter declared here
+Error in wire.cfdg at line 218 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 122 - previous variable/parameter declared here
+Error in wire.cfdg at line 218 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 108 - previous variable/parameter declared here
+Error in wire.cfdg at line 218 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 219 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 205 - previous variable/parameter declared here
+Error in wire.cfdg at line 219 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 178 - previous variable/parameter declared here
+Error in wire.cfdg at line 219 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 164 - previous variable/parameter declared here
+Error in wire.cfdg at line 219 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 150 - previous variable/parameter declared here
+Error in wire.cfdg at line 219 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 123 - previous variable/parameter declared here
+Error in wire.cfdg at line 219 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 109 - previous variable/parameter declared here
+Error in wire.cfdg at line 219 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 220 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 206 - previous variable/parameter declared here
+Error in wire.cfdg at line 220 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 179 - previous variable/parameter declared here
+Error in wire.cfdg at line 220 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 165 - previous variable/parameter declared here
+Error in wire.cfdg at line 220 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 151 - previous variable/parameter declared here
+Error in wire.cfdg at line 220 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 124 - previous variable/parameter declared here
+Error in wire.cfdg at line 220 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 110 - previous variable/parameter declared here
+Error in wire.cfdg at line 220 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 222 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 167 - previous variable/parameter declared here
+Error in wire.cfdg at line 222 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 112 - previous variable/parameter declared here
+Error in wire.cfdg at line 222 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 67 - previous variable/parameter declared here
+Error in wire.cfdg at line 222 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 223 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 168 - previous variable/parameter declared here
+Error in wire.cfdg at line 223 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 113 - previous variable/parameter declared here
+Error in wire.cfdg at line 223 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 68 - previous variable/parameter declared here
+Error in wire.cfdg at line 223 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 224 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 169 - previous variable/parameter declared here
+Error in wire.cfdg at line 224 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 114 - previous variable/parameter declared here
+Error in wire.cfdg at line 224 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 69 - previous variable/parameter declared here
+Error in wire.cfdg at line 224 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 31 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 214 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 200 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 173 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 159 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 145 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 118 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 104 - previous variable/parameter declared here
+Error in wire.cfdg at line 228 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 90 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 215 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 201 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 174 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 160 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 146 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 119 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 105 - previous variable/parameter declared here
+Error in wire.cfdg at line 229 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 91 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 216 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 202 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 175 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 161 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 147 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 120 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 106 - previous variable/parameter declared here
+Error in wire.cfdg at line 230 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 92 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 218 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 204 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 177 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 163 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 149 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 122 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 108 - previous variable/parameter declared here
+Error in wire.cfdg at line 232 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 94 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 219 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 205 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 178 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 164 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 150 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 123 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 109 - previous variable/parameter declared here
+Error in wire.cfdg at line 233 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 95 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 220 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 206 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 179 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 165 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 151 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 124 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 110 - previous variable/parameter declared here
+Error in wire.cfdg at line 234 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 96 - previous variable/parameter declared here
+Error in wire.cfdg at line 236 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 181 - previous variable/parameter declared here
+Error in wire.cfdg at line 236 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 126 - previous variable/parameter declared here
+Error in wire.cfdg at line 236 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 72 - previous variable/parameter declared here
+Error in wire.cfdg at line 236 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 237 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 182 - previous variable/parameter declared here
+Error in wire.cfdg at line 237 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 127 - previous variable/parameter declared here
+Error in wire.cfdg at line 237 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 73 - previous variable/parameter declared here
+Error in wire.cfdg at line 237 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 238 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 183 - previous variable/parameter declared here
+Error in wire.cfdg at line 238 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 128 - previous variable/parameter declared here
+Error in wire.cfdg at line 238 - Scope of name overlaps variable/parameter with same name500w x 500h pixel image.
+Error in wire.cfdg at line 74 - previous variable/parameter declared here
+Error in wire.cfdg at line 238 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 32 - previous variable/parameter declared here
+Error in wire.cfdg at line 250 - Scope of name overlaps variable/parameter with same name
+Error in wire.cfdg at line 33 - previous variable/parameter declared here
+Error in wouldbeefi31.cfdg at line 3 - syntax errorError in xmastree.cfdg at line 6 - Warning: this term is being dropped
+Error in xmastree.cfdg at line 7 - Warning: this term is being dropped
+Error in xmastree.cfdg at line 8 - Warning: this term is being dropped
+Error in xmastree.cfdg at line 9 - Warning: this term is being dropped
+Error in xmastree.cfdg at line 140 - Illegal argument
+Error in xmastree.cfdg at line 140 - Illegal argument
+Error in xmastree.cfdg at line 141 - Illegal argument
+Error in xmastree.cfdg at line 141 - Illegal argument
+Error in zz.cfdg at line 15 - syntax error

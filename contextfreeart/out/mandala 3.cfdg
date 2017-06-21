@@ -1,0 +1,15 @@
+startshape principal
+background{h 196.82 sat 0.9983 b -1} 
+rule principal{
+CIRCLE{ x -1 y .1 h 252.85 sat 0.9419 b 0.9376 alpha -0.5}#circulo azul
+CIRCLE{ x -1 y -.1 h 252.85 sat 0.9419 b 0.9376 alpha -0.5}
+CIRCLE{ x -1 y -.1 s 0.8 h 52.85 sat 0.9419 b 0.9376 alpha -0.5}
+
+CIRCLE{ x -1 y -.1 s .5 h 25.85 sat 0.9419 b 0.9376 alpha -0.5}
+CIRCLE{ x -1 y -.1 s .3 h 0.85 sat 0.9419 b 0.9376 alpha -0.5}
+SQUARE{x -1.5 y -0.1 s 0.2 h 0.85 sat 0.9419 b 0.9376 alpha -0.5 skew 2 8}
+principal{ r -89 s .99 x .01 y .03 b .1}
+
+
+}
+// playing with the r angle and s you can get a lot of variations

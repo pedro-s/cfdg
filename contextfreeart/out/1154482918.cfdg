@@ -1,0 +1,68 @@
+startshape BOMB
+
+rule BOMB
+{
+	CIRCLE{z 1000}
+	CIRCLE{z 1001 y 0.03 x -0.03 s 0.9 b 0.15}
+	SHINE[y 0.14 x -0.14 s 0.3 sat -1 z 1002 b 0.15]
+	STRING{y 0.57 s 0.6}
+}
+
+rule SHINE
+{
+	CIRCLE{}
+	SHINE{s 0.9992 b 0.001}	
+}
+
+rule STRING
+{
+	STRING_L{}	
+}
+
+rule STRING_L 4
+{
+	SEGMENT{}
+	STRING_L[x 0.02 y 0.2 r -10.0 z -1]
+}
+
+rule STRING_L
+{
+  SEGMENT{}
+  STRING_R[x 0.02 y 0.2 r -10.0 z -1]
+}
+
+rule STRING_L 0.6
+{
+	FIRE{hue 10.0 sat 1.0 b 1.0 z 500 alpha -0.2}
+}
+
+rule STRING_R 
+{
+	SEGMENT{}
+	STRING_L[x -0.02 y 0.2 r 10.0 z -1]
+}
+
+rule STRING_R 4
+{
+  SEGMENT{}
+  STRING_R[x -0.02 y 0.2 r 10.0 z -1]
+}
+
+rule STRING_R 0.6
+{	
+	FIRE{hue 10.0 sat 1.0 b 1.0 z 500 alpha -0.2}
+}
+
+rule SEGMENT
+{
+	SQUARE{s 0.1 0.3}
+   SQUARE{s 0.09 0.29 hue 50.0 sat 0.2 b 1.0 alpha -0.5}
+   SQUARE{s 0.04 0.27 hue 40.0 sat 0.4 b 1.0 alpha -0.3}
+   SQUARE{s 0.04 0.22 hue 50.0 sat 0.4 b 1.0}
+}
+
+rule FIRE
+{
+	TRIANGLE { s 1.5 0.15 r 21 }
+	FIRE { s 0.9 r 27 hue 1.0}
+}

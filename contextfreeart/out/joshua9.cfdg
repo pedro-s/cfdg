@@ -1,0 +1,17 @@
+startshape A
+
+background { b -1 }
+
+rule A {
+  TRIANGLE { a -0.97 sat 1 b 0.8 s 0.3}
+  B { x 0.01 s 0.99 hue 0.2 r 2 }
+}
+
+rule B {
+  A {}
+}
+
+rule B 0.01 {
+  A { f 180 }
+  A {  }
+}

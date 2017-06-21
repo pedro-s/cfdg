@@ -1,0 +1,18 @@
+startshape FLOWER
+
+background {b -1}
+
+rule FLOWER {FIL {} FLOWER {y 0.1 r 10 s 0.995 hue -0.1 b -0.1}}
+
+rule FIL {CIRCLE {hue 280 sat 0 b 0.75 a -0.85} FIL {x 0.1 s 0.996 sat 0.003}}
+rule FIL 0.01 {CIRCLE {s 3 hue 280 sat 0 b 0.75 a -0.65} FIL {x 0.1 s 0.996 sat 0.003}}
+rule FIL 0.005 {CIRCLE {s 4 hue 280 sat 0 b 0.75 a -0.65} FIL {x 0.1 s 0.996 sat 0.003}}
+
+rule FIL 0.5 {CIRCLE {hue 280 sat 0 b 0.75 a -0.9} FIL {x 0.1 r 1 s 0.996 sat 0.003}}
+rule FIL 0.5 {CIRCLE {hue 280 sat 0 b 0.75 a -0.9} FIL {x 0.1 r -1 s 0.996 sat 0.003}}
+rule FIL 0.001 {CIRCLE {s 2 hue 0 sat 0 b 0.75} FIL {x 0.1 r -1 s 0.996 sat 0.003}}
+
+rule FIL 0.00006 {STAR {s 21 y 0.3 hue 340 sat  1 b 1} FIL {x 0.1 s 0.996 sat 0.003}}
+rule FIL 0.00006 {STAR {s 23 hue 320 sat 1 b 1} FIL {x 0.1 s 0.996 sat 0.003}}
+
+rule STAR {TRIANGLE {s 0.1 1} TRIANGLE {x -0.2 y -0.1 s 0.1 1 r 50} TRIANGLE {x -0.3 y -0.3 s 0.1 1 r 100} TRIANGLE {x -0.15 y -0.5 s 0.1 1 r 150} TRIANGLE {y -0.5 x 0.05 s 0.1 1 r 190} TRIANGLE {x 0.15 y -0.4 s 0.1 1 r 220} TRIANGLE {x 0.25 y -0.25 s 0.1 1 r 260} TRIANGLE {x 0.15 y -0.1 s 0.1 1 r 300}}

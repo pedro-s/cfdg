@@ -1,0 +1,64 @@
+startshape hilb5
+
+rule hilb5 {
+	hilb4 { s 0.5 x -0.25 y 0.25 }
+	hilb4 { s 0.5 x 0.25 y 0.25 }
+	hilb4 { s 0.5 r -90 x -0.25 y -0.25 }
+	hilb4 { s 0.5 x 0.25 y -0.25 r 90 }
+
+	SQUARE { s 0.0015625 0.0171875 x -0.4921875 z 1 }
+	SQUARE { s 0.0171875 0.0015625 y 0.0078125 z 1 }
+	SQUARE { s 0.0015625 0.0171875 x 0.4921875 z 1 }
+}
+
+rule hilb4 {
+	hilb3 { s 0.5 x -0.25 y 0.25 }
+	hilb3 { s 0.5 x 0.25 y 0.25 }
+	hilb3 { s 0.5 r -90 x -0.25 y -0.25 }
+	hilb3 { s 0.5 x 0.25 y -0.25 r 90 }
+
+	SQUARE { s 0.003125 0.034375 x -0.484375 z 1 }
+	SQUARE { s 0.034375 0.003125 y 0.015625 z 1 }
+	SQUARE { s 0.003125 0.034375 x 0.484375 z 1 }
+}
+
+rule hilb3 {
+	hilb2 { s 0.5 x -0.25 y 0.25 }
+	hilb2 { s 0.5 x 0.25 y 0.25 }
+	hilb2 { s 0.5 r -90 x -0.25 y -0.25 }
+	hilb2 { s 0.5 x 0.25 y -0.25 r 90 }
+
+	SQUARE { s 0.00625 0.06875 x -0.46875 z 1 }
+	SQUARE { s 0.06875 0.00625 y 0.03125 z 1 }
+	SQUARE { s 0.00625 0.06875 x 0.46875 z 1 }
+}
+
+rule hilb2 {
+	hilb1 { s 0.5 x -0.25 y 0.25 }
+	hilb1 { s 0.5 x 0.25 y 0.25 }
+	hilb1 { s 0.5 r -90 x -0.25 y -0.25 }
+	hilb1 { s 0.5 x 0.25 y -0.25 r 90 }
+
+	SQUARE { s 0.0125 0.1375 x -0.4375 z 1 }
+	SQUARE { s 0.1375 0.0125 y 0.0625 z 1 }
+	SQUARE { s 0.0125 0.1375 x 0.4375 z 1 }
+}
+
+rule hilb1 {
+	curve { s 0.5 x -0.25 y 0.25 }
+	curve { s 0.5 x 0.25 y 0.25 }
+	curve { s 0.5 r -90 x -0.25 y -0.25 }
+	curve { s 0.5 x 0.25 y -0.25 r 90 }
+
+	SQUARE { s 0.025 0.275 x -0.375 z 1 }
+	SQUARE { s 0.275 0.025 y 0.125 z 1 }
+	SQUARE { s 0.025 0.275 x 0.375 z 1 }
+}
+
+rule curve
+{
+	SQUARE { b 1 }
+	SQUARE { s 0.05 0.55 x -0.25 }
+	SQUARE { s 0.55 0.05 y 0.25 }
+	SQUARE { s 0.05 0.55 x 0.25 }
+}

@@ -1,0 +1,39 @@
+startshape START
+
+background { b -1 }
+
+rule START {
+	CIRCLE { }
+	CARRES1 { }
+	CARRES2 { }
+	CARRES3 { }
+	CARRES4 { }
+}
+
+rule CARRES1 {
+	CIRCLE { x -1 y -1 hue 2 sat 1 b 1  }	
+	CARRES1 { x -0.97 y -0.97 s 0.6 hue 8 sat 1 b 1 }
+	CARRES2 { x 0.2 y -0.1 s 0.6 hue 8 sat 1 b 1 }
+	CARRES3 { x -0.2 y 0.2 s 0.6 hue 8 sat 1 b 1 }
+}
+
+rule CARRES2 {
+	CIRCLE { x 1 y -1 hue 2 sat 1 b 1  }
+	CARRES2 { x 0.97 y -0.97 s 0.6 hue 2 sat 1 b 1 }
+	CARRES1 { x -0.2 y -0.2 s 0.6 hue 2 sat 1 b 1 }
+	CARRES4 { x 0.2 y 0.2 s 0.6 hue 2 sat 1 b 1 }
+}
+
+rule CARRES3 {
+	CIRCLE { x -1 y 1 hue 2 sat 1 b 1  }
+	CARRES3 { x -0.97 y 0.97 s 0.6 hue 2 sat 1 b 1 }
+	CARRES1 { x -0.2 y -0.2 s 0.6 hue 2 sat 1 b 1 }
+	CARRES4 { x 0.2 y 0.2 s 0.6 hue 2 sat 1 b 1 }
+}
+
+rule CARRES4 {
+	CIRCLE { x 1 y 1 hue 2 sat 1 b 1  }
+	CARRES4 { x 0.97 y 0.97 s 0.6 hue 8 sat 1 b 1 }
+	CARRES2 { x 0.2 y -0.2 s 0.6 hue 8 sat 1 b 1 }
+	CARRES3 { x -0.2 y 0.2 s 0.6 hue 8 sat 1 b 1 }
+}

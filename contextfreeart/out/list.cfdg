@@ -1,0 +1,29 @@
+startshape SPP
+
+rule SPP
+{
+SP {}
+}
+
+rule SP{
+SP4 { hue 124 sat 0.6 b 0.2 }
+3*[r 30] SP3 {hue 124 sat 0.6 b 0.2 }
+3*[r -30] SP3 {flip 90 hue 124 sat 0.6 b 0.2}
+}
+
+rule SP3 {
+SP2 {s 0.9}
+SP2 {flip 90}
+SP3 {s 0.9 y .9 r 5 b .05 hue -1.2}
+}
+
+rule SP2 {
+CIRCLE {r -12 size 0.9 1.5}
+SP2 { r -5 x 0.15 y 0.35 s 0.9}
+}
+
+rule SP4 {
+SP2 {s 0.9}
+SP2 {flip 90}
+SP4 {s 0.9 y .8 r 0.5 b .05 hue -1.2}
+}

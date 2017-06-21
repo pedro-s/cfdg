@@ -1,0 +1,38 @@
+startshape ESTRELLIN
+background {b -1}
+
+rule ESTRELLIN{
+	STARYOU{r -15}
+}
+
+//ESTRELLAS
+
+rule TRIANGULIN{
+	RODEAR{}
+	RODEAR{f 0 r 180}
+	TRIANGLE{r 60}
+}
+
+rule RODEAR{
+	CIRCLE{y 0.295 x 0.51 size 0.05 hue 200 sat 70 b 50}
+	RODEAR{y 0.025 x -0.001 s 0.913}
+}
+
+rule STARYOU{
+	TRIANGULIN{f 60}
+	TRIANGULIN{f 120}
+	TRIANGULIN{f 180}
+	STARYOU{s 0.99 r 71 y 1}
+}
+
+
+//CALIZ
+
+rule CALIX {
+	CIRCLE{x -0.7 s 0.1}
+	CALIX{s 0.98 y -0.1 r -1}
+}
+
+
+//TOTAL
+

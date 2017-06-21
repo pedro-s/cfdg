@@ -1,0 +1,39 @@
+startshape MINGE
+
+background{hue 15 sat .5 b 1}
+
+rule ELEM{
+	SQUARE{s .5 1 y .5}
+	CIRCLE{y 1 s .5}
+}
+
+rule HAIR 100{
+	ELEM{}
+	HAIR{y 1 r 8}
+}
+
+rule HAIR 100{
+	ELEM{}
+	HAIR{y 1 r 3}
+}
+
+rule HAIR 7{
+	ELEM{}
+	HAIR{s .9 y 1 r 1}
+}
+
+rule HAIR 5{}
+
+rule ISHAIR 10{}
+rule ISHAIR 1{HAIR{}}
+rule ISHAIR 50{ISHAIR{r 7}}
+rule ISHAIR 50{ISHAIR{r -7}}
+
+rule AROUND{
+	720*[r .5]ISHAIR{y 40}
+}
+
+rule MINGE{
+	AROUND{}
+	MINGE{s .9 y -5}
+}

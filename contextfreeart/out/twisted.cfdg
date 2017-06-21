@@ -1,0 +1,23 @@
+startshape BRANCH
+background { b-1 }
+
+rule BRANCH {
+TWIG { }
+TWIG { flip 30 }
+TWIG { flip 60 }
+TWIG { flip 90 }
+TWIG { flip 120 }
+TWIG { flip 150 }
+TWIG { flip 180 }
+}
+
+rule TWIG 98 {
+SQUARE { h 240.24 sat 1.0000 b 1.0000 }
+TWIG { y 0.4 size 0.994 rotate 3 }
+}
+
+rule TWIG 2 {
+SQUARE { h 240.24 sat 1.0000 b 1.0000 }
+TWIG { y 0.4 size 0.994 flip 90 }
+TWIG { y 0.4 size 0.7 brightness 0.2 }
+}

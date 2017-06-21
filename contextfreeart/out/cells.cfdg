@@ -1,0 +1,59 @@
+startshape ITER
+
+background {hue 40 sat 1 b -1.0}
+tile {s 6 6}
+
+rule ITER {
+
+15 * {}  PLANE{} 
+
+}
+
+rule PLANE{3 * {y 2} LINE {}
+}  rule LINE {6* {x 1} DOT { b 1 hue 40}
+6* {x 1} DOT { b 1 y 1 x +0.5 hue 40}
+
+} 
+
+
+rule DOT {
+DOT{x .02 }
+}
+
+rule DOT {
+DOT{y .02 }
+}
+
+rule DOT {
+DOT{x -.02 }
+}
+
+rule DOT {
+DOT{y -.02 }
+}
+
+rule DOT .001{
+}
+
+
+rule DOT {
+DOT{s .999901 }
+}
+
+
+
+
+
+rule DOT .1 {
+
+SHADOW { }
+
+
+}
+
+
+rule SHADOW {CIRCLE {s 1.8 sat .1}SHADOW {s .971  sat .01 r .4 y .000511 b -.02510586531 z .1}}
+
+
+
+

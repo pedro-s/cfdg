@@ -1,0 +1,48 @@
+startshape bars
+
+rule bars {
+	bar {}
+	bars { x -2 }
+}
+
+rule bars 0.005 {
+	// End of the line!
+}
+
+rule bar {
+	CIRCLE {}
+	bar {
+		y .5
+		s .999
+	}
+}
+
+rule bar 0.00075 {
+	curve {}
+}
+
+rule curve {
+	clock {}
+}
+
+rule curve {
+	counterclock {}
+}
+
+rule clock {
+	CIRCLE {}
+	clock {
+		y .5
+		s .999
+		r .25
+	}
+}
+
+rule counterclock {
+	CIRCLE {}
+	counterclock {
+		y .5
+		s .999
+		r -.25
+	}
+}

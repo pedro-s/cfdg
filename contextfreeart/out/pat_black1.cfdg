@@ -1,0 +1,19 @@
+startshape MAIN [sat 1 h 205]
+CF::Background = [b -1]
+
+shape MAIN{
+	loop 200 [ x 1]
+		loop 100 [ y 1] SUB[]
+}
+
+shape SUB
+rule {
+	SQUARE[]
+	SUB[s .45 b .25]
+}
+rule .4{
+	CIRCLE[]
+	SUB[s .65 b .28]
+}
+rule .28{
+}

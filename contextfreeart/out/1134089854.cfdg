@@ -1,0 +1,45 @@
+startshape START
+
+rule START {
+	CIRCLE { y -0.5 }
+	CIRCLES {}
+	GROW_L { sat 1 }
+}
+
+rule GOD 0.01 {
+	GROW_R {}
+	CIRCLES {}
+}
+rule GOD 0.005 {
+	CIRCLES {}
+	GROW_L {}
+}
+rule GOD {
+}
+
+rule GROW_L {
+	SQUARE { }
+	GROW_L { r 2 y 0.2 size 0.99 b 0.01 alpha -0.01 }
+	GOD {}
+}
+
+rule GROW_R {
+	SQUARE { }
+	GROW_R { r -2 y 0.2 size 0.99 alpha -0.01 }
+	GOD {}	
+}
+
+rule CIRCLES { 
+	CIRCLE { y -1.2 size 0.3 }
+	CIRCLES { y -1.2 size 0.3 }
+
+	CIRCLE { y 1.2 size 0.3 }
+	CIRCLES { y 1.2 size 0.3 }
+
+	CIRCLE { x 0.7 y -0.5 size 0.3 }
+	CIRCLES { x 0.7 y -0.5 size 0.3 }
+
+	CIRCLE { x -0.7 y -0.5 size 0.3 }
+	CIRCLES { x -0.7 y -0.5 size 0.3 }
+}
+

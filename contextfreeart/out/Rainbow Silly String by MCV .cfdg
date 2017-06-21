@@ -1,0 +1,22 @@
+// Rainbow Silly String by MCV
+
+startshape outerloop
+
+background { b -1 }
+ 
+rule outerloop {
+    CIRCLE {r -2 sat 1 b 1 }
+    outerloop { x .5 r 4 hue 2 } // Endless recursion from CF help example
+}
+
+rule outerloop {
+    CIRCLE {r 2 sat 1 b 1 }
+    outerloop { x .5 r -1 hue -3 }
+}
+ 
+rule outerloop 0.01 {
+    CIRCLE { r -45 sat 1 b 1 }
+    outerloop { y -.5 r -90 hue 2 }
+}
+ 
+rule outerloop 0.0005 {} // bale out rule

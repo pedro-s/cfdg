@@ -1,0 +1,22 @@
+startshape x6x
+
+background {b -1}
+
+rule x6x {
+	6*{r 60 x 1.3591 y 1.118}
+	x2x {}
+	x6x {s .3207 y 1.1793 x -.1961 b .2}
+}
+
+rule x2x {
+	2*{f 90 x -.5774}
+	tri {}
+	x2x {s .618 x -.1102 y -.8091 b .1}
+}
+
+rule tri {
+	TRIANGLE {r 30 b .1}
+	tri{ s .618 r 60 x .3989 y -.309 b .1}
+	tri {s .618 r -60 x .0681 y .5 b .1}
+	x6x {s .0858 x 1.2433 y -1.0399}
+}

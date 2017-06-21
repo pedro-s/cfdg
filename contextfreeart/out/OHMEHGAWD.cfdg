@@ -1,0 +1,17 @@
+startshape start
+background{ b -1 } 
+
+rule start {
+	starburst {}
+	spiral {s .01 x .786 y -.04}
+}
+
+rule starburst { 
+TRIANGLE {b 1 hue 120.0 sat 1.0000 b 1.0000} 
+starburst {s .999 h .2 r 88}
+}
+
+rule spiral {
+	SQUARE {s 10 2}
+	spiral {s .999 y 2.2 r 1.6}
+}

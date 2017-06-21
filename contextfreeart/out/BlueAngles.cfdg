@@ -1,0 +1,42 @@
+startshape HUB
+
+background {b -1}
+
+rule HUB
+{
+    36 * {r 10} LINE {y -.7 h 220}
+}
+
+rule BASE
+{
+    CIRCLE {z 0 s 1   sat .7 b .8}
+    CIRCLE {z 1 s .7  sat .7 b .6}
+    CIRCLE {z 2 s .4  sat .7 b .4}
+    CIRCLE {z 3 s .25 sat .7 b .3}
+    CIRCLE {z 4 s .1 sat .7 b -1}
+}
+
+rule LINE .01
+{
+    RING {}
+    BASE {}
+    LINE {r -90 s .995 y -.1 a -.01}
+}
+
+rule LINE .01
+{
+    RING {}
+    BASE {}
+    LINE {r 90 s .995 y -.1 a -.01}
+}
+
+rule LINE
+{
+    BASE {}
+    LINE {s .995 y -.1 a -.01}
+}
+
+rule RING
+{
+    45 * {r 8} BASE {y -1}
+}

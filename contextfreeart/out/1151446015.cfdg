@@ -1,0 +1,64 @@
+startshape SEED
+background { b -1}
+
+
+rule SEED {
+
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 1.0000 }
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 1.0000 flip 150}
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 1.0000 rotate 190}
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 1.0000 rotate -190} 
+
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 0.6561 }
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 0.6561 flip 180}
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 0.6561 rotate 90}
+BRANCH {y 5 x 5 size 0.8 hue 360.0 sat 1.0000 b 0.6561 rotate -90}
+
+BRANCH {y 5 x 5 size 0.7 hue 25.4 sat 1.0000 b 0.9457 rotate 45 flip 180}
+BRANCH {y 5 x 5 size 0.7 hue 25.4 sat 1.0000 b 0.9457 rotate -45 flip 180}
+BRANCH {y 5 x 5 size 0.7 hue 25.4 sat 1.0000 b 0.9457 rotate 45}
+BRANCH {y 5 x 5 size 0.7 hue 25.4 sat 1.0000 b 0.9457 rotate -45}
+
+BRANCH {y 5 x 5 size 0.6 hue 47.3 sat 1.0000 b 0.9457 }
+BRANCH {y 5 x 5 size 0.6 hue 47.3 sat 1.0000 b 0.9457 flip 180}
+BRANCH {y 5 x 5 size 0.6 hue 47.3 sat 1.0000 b 0.9457 rotate 90}
+BRANCH {y 5 x 5 size 0.6 hue 47.3 sat 1.0000 b 0.9457 rotate -90}
+
+BRANCH {y 5 x 5 size 0.8 hue 15.1 sat 1.0000 b 1.0000 }
+BRANCH {y 5 x 5 size 0.8 hue 15.1 sat 1.0000 b 1.0000 flip 180}
+BRANCH {y 5 x 5 size 0.8 hue 15.1 sat 1.0000 b 1.0000 rotate 90}
+BRANCH {y 5 x 5 size 0.8 hue 15.1 sat 1.0000 b 1.0000 rotate -90}
+
+BRANCH {y 5 x 5 size 0.7 hue 54.7 sat 1.0000 b 1.0000 rotate 45 flip 180}
+BRANCH {y 5 x 5 size 0.7 hue 54.7 sat 1.0000 b 1.0000 rotate -45 flip 180}
+BRANCH {y 5 x 5 size 0.7 hue 54.7 sat 1.0000 b 1.0000 rotate 45}
+BRANCH {y 5 x 5 size 0.7 hue 54.7 sat 1.0000 b 1.0000 rotate -45}
+
+BRANCH {y 5 x 5 size 0.6 hue 44.5 sat 1.0000 b 1.0000 }
+BRANCH {y 5 x 5 size 0.6 hue 44.5 sat 1.0000 b 1.0000 flip 180}
+BRANCH {y 5 x 5 size 0.6 hue 44.5 sat 1.0000 b 1.0000 rotate 90}
+BRANCH {y 5 x 5 size 0.6 hue 44.5 sat 1.0000 b 1.0000 rotate -90}
+
+}
+
+rule BRANCH { 
+   SQUARE { } 
+   BRANCH { y 1 s 0.99 r 10 z 100 } 
+} 
+
+rule BRANCH 0.5 { BRANCH { flip 90 }}
+
+rule BRANCH 1 {
+	SQUARE{}
+	BRANCH { y 1 s 0.99 r 10 z 100 } 
+}
+
+rule BRANCH 1.5 {
+ SQUARE { }  
+ BRANCH {y 5 s 0.99 r 1.5 flip 90 b 1 }
+ BRANCH { s 0.6 r -45 }
+ BRANCH  { s 0.5 r 45 flip 90 }
+}
+
+
+

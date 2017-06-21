@@ -1,0 +1,17 @@
+startshape thing
+background { b -1 }
+rule thing { do {h 267.97 sat 1.0000 b 0.5193} }
+rule do {
+TRIANGLE {s 1.01 b -1}
+TRIANGLE{r 3 b 1}
+TRIANGLE{r 1 b -1}
+TRIANGLE{r 2 b 1}
+TRIANGLE{r 4 b 1}
+TRIANGLE{r 5 b 1}
+TRIANGLE{r 3 b 1}
+TRIANGLE{r 1 b -1}
+TRIANGLE{r 2 b 1}
+TRIANGLE{r 4 b 1}
+TRIANGLE{r 5 b 1}
+do {r 2 s.98 h 8.62 sat 1.0000 b 0.0000 }
+} 

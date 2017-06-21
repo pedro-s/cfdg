@@ -1,0 +1,27 @@
+startshape square_star
+background { b -1} 
+
+rule square_star{
+	squarestar { r 45}
+}
+rule squarestar{
+	square {  }
+	square { flip -1}
+}
+
+rule square{
+	star{ }
+	square{ r 20  s .8 b 1 alpha -.1}
+}
+
+rule star{ 
+	sun { y 20 }
+	sun{ r 90 x -20 }
+	sun{ r 180 y -20 }
+	sun { r -90  x 20  }
+}
+
+rule sun{
+	SQUARE{ s 1 40}
+	SQUARE{r 90 s 2 20 y 9.5 } 
+}

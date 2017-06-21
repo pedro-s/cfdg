@@ -1,0 +1,33 @@
+startshape STICKFIGURE
+
+rule STICKFIGURE{
+
+2* { s .7  y -.25 }
+
+CIRCLE { s 1}
+
+CIRCLE { s .2 y.2 x .2 h 0.00 sat 0.0000 b 1.0000 }
+
+CIRCLE { s .2 y.2 x  -.2 h 0.00 sat 0.0000 b 1.0000 }
+
+CIRCLE {s.1 y -.05 x .03 h 0.00 sat 0.0000 b 1.0000 }
+
+CIRCLE { s.1 y -.05 x -.03 h 0.00 sat 0.0000 b 1.0000 }
+
+CIRCLE { skew 50 -15 s .3 y -.3 h 0.00 sat 0.0000 b 1.0000 }
+
+TRIANGLE { s.1 h 0.00 sat 0.0000 b 1.0000 } 
+
+CIRCLE { skew 30 40 s .03 y .15 x .2 }
+
+CIRCLE { skew -30 -40 s .03 y .15 x -.2 }
+
+CIRCLE { skew 50 -15 s .2 y -.29  }
+
+CIRCLE { skew 50 -15 s .15 y -.29 h 0.00 sat 0.0000 b 1.0000  }
+
+  
+
+
+
+}

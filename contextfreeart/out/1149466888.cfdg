@@ -1,0 +1,188 @@
+include i_pix.cfdg
+
+startshape start
+
+rule start
+{
+	block{sat 1 b 1 z 1}
+	title{hue 120 sat 1 b 1 z 2 s 100 x 100}
+}
+
+rule start 720
+{
+	start{hue 1}
+}
+
+rule title 10
+{
+	letter{}
+	title{x 2}
+}
+
+rule title 2
+{
+	letter{}
+	title{x 4}
+}
+
+rule title
+{
+	letter{}
+}
+
+rule block
+{
+	halfblock{}
+	halfblock{flip 180 y 30}
+}
+
+rule halfblock
+{
+	1000*{x 2} line{s 10}
+}
+
+rule line
+{
+	SQUARE{}
+	line{y 2 r .1 s 0.99 sat -0.005}
+}
+
+rule line
+{
+	SQUARE{}
+	line{y 3 r -.1 s 0.9 sat -0.02}
+}
+
+// weight values are from Scrabble
+// seemed to make sense
+
+rule letter 9
+{
+	A_5by5 {}
+}
+
+rule letter 2
+{
+	B_5by5 {}
+}
+
+rule letter 2
+{
+	C_5by5 {}
+}
+
+rule letter 4
+{
+	D_5by5 {}
+}
+
+rule letter 12
+{
+	E_5by5 {}
+}
+
+rule letter 2
+{
+	F_5by5 {}
+}
+
+rule letter 3
+{
+	G_5by5 {}
+}
+
+rule letter 2
+{
+	H_5by5 {}
+}
+
+rule letter 9
+{
+	I_5by5 {}
+}
+
+rule letter 1
+{
+	J_5by5 {}
+}
+
+rule letter 1
+{
+	K_5by5 {}
+}
+
+rule letter 4
+{
+	L_5by5 {}
+}
+
+rule letter 2
+{
+	M_5by5 {}
+}
+
+rule letter 6
+{
+	N_5by5 {}
+}
+
+rule letter 8
+{
+	O_5by5 {}
+}
+
+rule letter 2
+{
+	P_5by5 {}
+}
+
+rule letter 1
+{
+	Q_5by5 {}
+}
+
+rule letter 6
+{
+	R_5by5 {}
+}
+
+rule letter 4
+{
+	S_5by5 {}
+}
+
+rule letter 6
+{
+	T_5by5 {}
+}
+
+rule letter 4
+{
+	U_5by5 {}
+}
+
+rule letter 2
+{
+	V_5by5 {}
+}
+
+rule letter 2
+{
+	W_5by5 {}
+}
+
+rule letter 1
+{
+	X_5by5 {}
+}
+
+rule letter 2
+{
+	Y_5by5 {}
+}
+
+rule letter 1
+{
+	Z_5by5 {}
+}
+

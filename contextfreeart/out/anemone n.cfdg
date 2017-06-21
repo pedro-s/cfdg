@@ -1,0 +1,87 @@
+startshape begin
+ 
+CF::Background = [b -1]
+CF::Impure = 1 
+ 
+ 
+max = 40
+total=400
+teta=360*(sqrt(5)-1)/2
+ 
+ 
+ 
+ 
+//-------------------------------------------------------------
+ 
+shape leaf (number thisele, number dist) 
+rule {
+ 
+if (thisele>max) {}
+else
+{
+ 
+delta= (sqrt(total) - dist *4) / sqrt(total) + .5
+ 
+newsize = sin(thisele/max * 180)
+ 
+brg = (thisele/max) * (delta)
+ 
+ 
+leaf (thisele+1, dist) [ y (2 * dist * newsize/max) r (5*
+thisele/max) sat (.3/max) h 1 z 1]
+ 
+CIRCLE [s (newsize*2 * delta) h (- max) b brg]
+ 
+ 
+}
+ 
+}
+
+ 
+rule .04 {
+ 
+leaf (thisele, dist)[f 90]
+ 
+}
+
+ 
+ 
+//-------------------------------------------------------------
+ 
+ 
+shape fibo (number pos)
+rule
+{
+ 
+
+dist=sqrt(pos)
+ 
+ang=teta*pos
+ 
+yy=sin(ang)*dist
+xx=cos(ang)*dist
+ 
+hh = pos/6 + rand_static(360)
+ 
+leaf (0, dist/4) [ y yy x xx s 1 h hh r (ang -90) b -1]
+
+CIRCLE[s 1 b -1 sat 1] // <-------- WHY I NEED THIS ??? 
+ 
+}
+ 
+ 
+//-------------------------------------------------------------
+ 
+ 
+shape begin{
+ 
+  loop j = 1,total, 1 [] fibo(j) []
+ 
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 

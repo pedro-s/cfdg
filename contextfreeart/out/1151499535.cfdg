@@ -1,0 +1,39 @@
+startshape fig4
+background { b -1}
+
+rule fig4 {
+fig3 { }
+fig3 {flip -90}
+fig3 { r 45 }
+fig3 { r 45 flip -90 }
+fig3 {r 90}
+fig3 {r 90 flip -90}
+fig3 { r 135 }
+fig3 { r 135 flip -90 }
+fig3 { r 180 }
+fig3 { r 180 flip -90}
+fig3 { r 225 }
+fig3 { r 225 flip -90 }
+fig3 { r 270}
+fig3 { r 270 flip -90}
+fig3 { r 315}
+fig3 { r 315 flip -90}
+}
+
+rule fig3 {
+fig2 { r 90}
+fig3 { s .94 x 1.5 y .55 r 20 hue 4}
+}
+
+rule fig2 {
+fig1 {r 0 y .5}
+fig1 {r 180 y -.5}
+}
+
+
+rule fig1 {
+TRIANGLE { x +.7 y -.35 a -.3 hue 20 sat 1 b 1}
+TRIANGLE { x -.5 y .4 a -.5 hue 1 sat 1 b 1}
+TRIANGLE { a -0.5 x -.0 hue 40 sat 1 b 1}
+fig1 {x 0.5 r -27 s .8 hue 1 sat 1 b 1}
+}

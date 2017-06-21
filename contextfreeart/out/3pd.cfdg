@@ -1,0 +1,17 @@
+startshape x3
+
+background {b -1}
+
+rule x3 { 3 * {r 120}
+	trr { x .5 y -.29}
+	TRIANGLE {s .64 f 0  b 1 a -.4}
+}
+
+rule trr {
+	TRIANGLE {b .2 a -.1}
+	TRIANGLE {s .64 b -1 a -.6}
+	TRIANGLE {s .4 b .6 a -.6}
+	TRIANGLE {s .64 f 0 y .6 x .2 b 1 a -.4}
+	trr {s .94 r 18 x .86 y .12 a -.024}
+	x3 {s .24 x 3.5 z 1 b .08}
+}

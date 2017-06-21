@@ -1,0 +1,30 @@
+startshape TUNNEL
+background {b -1}
+rule TUNNEL {
+//swoosh add on left
+10*{ x -.5 y -.5 s .99 h 2 skew 10 5   h 0.00 sat 1.0000 b 1.0000 } 
+SQUARE { h 0.00 sat 1.0000 b 1.0000 }
+
+//swoosh add on right
+10*{ x .5 y .5 s .99 h 2 skew 10 5    h 0.00 sat 1.0000 b 1.0000 } 
+SQUARE { h 0.00 sat 1.0000 b 1.0000 }
+
+//bottem swoosh
+15*{ x 0 y -.5 s .99 h 2 skew 10 5   h 0.00 sat 1.0000 b 1.0000 } 
+SQUARE { h 0.00 sat 1.0000 b 1.0000 }
+
+//top swoosh
+15*{ x 0 y .5 s .99 h 2 skew 10 5   h 0.00 sat 1.0000 b 1.0000 } 
+SQUARE { h 0.00 sat 1.0000 b 1.0000 }
+
+//left swoosh
+14*{ x -.5 y 0 s .99 h 2 skew 10 5   h 0.00 sat 1.0000 b 1.0000 } 
+SQUARE { h 0.00 sat 1.0000 b 1.0000 }
+
+//right swoosh
+14*{ x .5 y 0 s .99 h 2 skew 10 5   h 0.00 sat 1.0000 b 1.0000 } 
+SQUARE { h 0.00 sat 1.0000 b 1.0000 }
+
+3000*{ s .99 x .5 y .5 r 100 h .55  h 0.00 sat 1.0000 b 1.0000 } 
+SQUARE { x 1 y 1 }
+}

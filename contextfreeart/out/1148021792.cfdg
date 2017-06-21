@@ -1,0 +1,38 @@
+startshape init
+background {hue 64.9 sat 0.23936 b -0.73686}
+rule init
+{
+spin{hue 70}
+}
+
+rule spin
+{
+bud{}
+spin{r 1.1 s 0.9996 alpha -0.0005 hue 0.001 sat 0.0001 b 0.0003}
+}
+
+rule spin
+{
+spin{x 5 }
+}
+
+
+rule bud
+{
+CIRCLE{s 2}
+bud {s 0.99 y 5}
+}
+
+rule bud
+{
+CIRCLE{s 5}
+bud{s 0.99 x 3}
+}
+
+
+rule bud
+{
+CIRCLE{s 10}
+bud{s 0.99 x 5}
+
+}

@@ -1,0 +1,8 @@
+startshape Peptide
+
+shape Peptide
+{
+	CIRCLE [ ]
+	w = rand(0, 360)
+	Peptide [[ r w x 1 z -1 b 0.0004 s 0.999 ]]
+}

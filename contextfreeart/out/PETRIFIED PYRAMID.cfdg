@@ -1,0 +1,13 @@
+startshape petrifiedpyramid
+
+rule petrifiedpyramid {
+30* { } fract { hue 80 sat .6 a -.8 } }
+ 
+rule fract {
+TRIANGLE { }
+fract { y .288 s .5 b 1}
+fract { s .5 r 180 b -1 }
+fract { x -.25 y -.144 s .5 b 1}
+fract { x .25 y -.144 s .5 b 1}
+}
+rule fract .7 {}

@@ -1,0 +1,15 @@
+startshape an
+
+background {b -1}
+
+rule an {
+	veg{}
+	an{s .9 1 x 6 r 24 h 1}
+}
+
+rule veg {
+	9*{s .618 1.618 y -.03 h -2}
+	CIRCLE {b .1 h 120 sat .1}
+	veg {s .99 b .008 r -1 x .05 y .05 h .1 sat .01}
+	an {s .05 y -18 x -1}
+}

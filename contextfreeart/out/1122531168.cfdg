@@ -1,0 +1,110 @@
+startshape rotating_rays {
+	color
+	alpha
+}
+
+rule rotating_rays {
+	CIRCLE { s 23 hue =180.0 sat =1.0000 b =1.0000 }
+	faces90 { }
+	faces90 { s .875 r 5 }
+	faces90 { s .75 }
+	faces180 { s .6 }
+	faces180 { s .525 r 5 }
+	faces180 { s .45 }
+}
+
+rule faces90 {
+	spaced_diamond90 { }
+	spaced_diamond90 { r 10 }
+	spaced_diamond90 { r 20 }
+	spaced_diamond90 { r 30 }
+	spaced_diamond90 { r 40 }
+	spaced_diamond90 { r 50 }
+	spaced_diamond90 { r 60 }
+	spaced_diamond90 { r 70 }
+	spaced_diamond90 { r 80 }
+	spaced_diamond90 { r 90 }
+	spaced_diamond90 { r 100 }
+	spaced_diamond90 { r 110 }
+	spaced_diamond90 { r 120 }
+	spaced_diamond90 { r 130 }
+	spaced_diamond90 { r 140 }
+	spaced_diamond90 { r 150 }
+	spaced_diamond90 { r 160 }
+	spaced_diamond90 { r 170 }
+	spaced_diamond90 { r 180 }
+	spaced_diamond90 { r 190 }
+	spaced_diamond90 { r 200 }
+	spaced_diamond90 { r 210 }
+	spaced_diamond90 { r 220 }
+	spaced_diamond90 { r 230 }
+	spaced_diamond90 { r 240 }
+	spaced_diamond90 { r 250 }
+	spaced_diamond90 { r 260 }
+	spaced_diamond90 { r 270 }
+	spaced_diamond90 { r 280 }
+	spaced_diamond90 { r 290 }
+	spaced_diamond90 { r 300 }
+	spaced_diamond90 { r 310 }
+	spaced_diamond90 { r 320 }
+	spaced_diamond90 { r 330 }
+	spaced_diamond90 { r 340 }
+	spaced_diamond90 { r 350 }
+	spaced_diamond90 { r 360 }
+}
+
+rule faces180 {
+	spaced_diamond180 { }
+	spaced_diamond180 { r 10 }
+	spaced_diamond180 { r 20 }
+	spaced_diamond180 { r 30 }
+	spaced_diamond180 { r 40 }
+	spaced_diamond180 { r 50 }
+	spaced_diamond180 { r 60 }
+	spaced_diamond180 { r 70 }
+	spaced_diamond180 { r 80 }
+	spaced_diamond180 { r 90 }
+	spaced_diamond180 { r 100 }
+	spaced_diamond180 { r 110 }
+	spaced_diamond180 { r 120 }
+	spaced_diamond180 { r 130 }
+	spaced_diamond180 { r 140 }
+	spaced_diamond180 { r 150 }
+	spaced_diamond180 { r 160 }
+	spaced_diamond180 { r 170 }
+	spaced_diamond180 { r 180 }
+	spaced_diamond180 { r 190 }
+	spaced_diamond180 { r 200 }
+	spaced_diamond180 { r 210 }
+	spaced_diamond180 { r 220 }
+	spaced_diamond180 { r 230 }
+	spaced_diamond180 { r 240 }
+	spaced_diamond180 { r 250 }
+	spaced_diamond180 { r 260 }
+	spaced_diamond180 { r 270 }
+	spaced_diamond180 { r 280 }
+	spaced_diamond180 { r 290 }
+	spaced_diamond180 { r 300 }
+	spaced_diamond180 { r 310 }
+	spaced_diamond180 { r 320 }
+	spaced_diamond180 { r 330 }
+	spaced_diamond180 { r 340 }
+	spaced_diamond180 { r 350 }
+	spaced_diamond180 { r 360 }
+}
+
+rule spaced_diamond90 {
+	diamond { x 10 r 90 }
+}
+
+rule spaced_diamond180 {
+	diamond { x 10 r -90 }
+}
+
+rule diamond {
+	SQUARE { x -.1 r 45 b 1 s 1.01 }
+	SQUARE { x .1 r 45 b 0 s 1.01 }
+	SQUARE { r 45 hue =0.0 sat =1.0000 b =0.75 }
+	CIRCLE { x .45 y .1 s .1 b 1 }
+	CIRCLE { x .45 y -.1 s .1 b 1 }
+}

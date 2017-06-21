@@ -1,0 +1,150 @@
+startshape picture
+ 
+background{b -1}
+size{s 10 y -5 x -2}
+ 
+rule picture{
+    startgalaxy{y 7 x 5 z -3}
+    starttree{}
+    starttree{s .8 x 5}
+    starttree{s .6 x -3 y -2}
+    moon{y 7 x 5 z -2}
+   
+}
+ 
+rule starttree{
+    tree{a -1}
+}
+ 
+rule tree{
+    leaf{s 1.1}
+    CIRCLE{s 1 }
+    SQUARE{s .5 1 y .5 a 1}
+    tree{y 1 s .9 r 5 a .05 hue 100 b -.7 saturation .1}
+    tree{y .5 s .4 r 50 h 0.00 sat 0.0000 b 0.0000}
+    tree{y .5 s .4 r -50}
+}
+ 
+rule tree{
+    tree{f 90}
+}
+ 
+rule leaf{
+    SQUARE{s .1 1 y .5   }
+    leaf{y -1 s  .99 r 10 b .02 }
+}
+ 
+rule leaf{
+    leaf{f 0 }
+}
+ 
+ 
+rule startgalaxy{
+    glow{h 2.49 sat 0.5116 }
+    glow{h 225.00 sat 0.0157}
+ 
+}
+
+rule glow{
+    SQUARE{b 1 a -.99 }
+    glow{s .999 x .1 r 10}
+    wings{s .1 a -.99}
+    wings{s .1 a -.99 flip 90}
+    star{s .02 b 1 z -1}
+}
+ 
+rule glow{
+    glow{ x -.1 r -10}
+}
+ 
+rule glow{
+    glow{ y -.1 r 10}
+}
+ 
+rule glow{
+    glow{ y .1 r -10}
+}
+ 
+rule wings{
+    30*{x .9 r 5 s .9}SQUARE{s 1 2}
+ 
+}
+ 
+rule star{
+    CIRCLE{}
+ 
+}
+ 
+rule star{
+CIRCLE{}
+ 
+    star{  s .9}
+}
+ 
+rule star{
+CIRCLE{}
+ 
+    star{s 1.5}
+}
+ 
+rule star 2{
+ 
+}
+
+ 
+rule stars{
+    36*{r 10}{10*{x 2}base{b 1 }}
+}
+ 
+rule base{
+    CIRCLE{}
+}
+ 
+rule base{
+ 
+}
+ 
+rule base .1 {
+    stars{s .4 a .02 }
+}
+ 
+rule base{
+    base {x 5}
+}
+
+ 
+rule moon{
+    100*{s .99 b .1 }CIRCLE{s 2 }
+30 * {r 12} AA {}
+}
+
+rule AA {
+CIRC {s 1 1.5}
+AA {s .9 .95 r 5 x .1}
+}
+
+rule AA {
+CIRC {s 1 1.5}
+AA {s .9 .95 r -5 x .1}
+}
+
+rule AA .03 {
+AA {r 5}
+AA {r -10}
+}
+
+rule AA .03 {
+AA {r 10}
+AA {r -5}
+}
+
+
+rule CIRC {
+SQUARE {s .05 .2}
+CIRC {s 1 .9 y .1 b .05}
+}
+
+rule CIRC {
+SQUARE {s .05 .2}
+CIRC {s 1 .9 y -.1 b .05}
+}

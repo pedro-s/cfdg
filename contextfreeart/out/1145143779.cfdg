@@ -1,0 +1,49 @@
+startshape start
+background{b -1}
+
+rule start
+{
+	spiraal{}
+	//CIRCLE{hue 280 s 10 y 58 x -8}
+}
+
+rule start 100
+{
+	start{hue 5 sat 1 b 1}
+}
+
+rule spiraal
+{
+	driehoek{}
+	spiraal{x 5 y 1 r 100 s 0.999 hue 0.01 sat 1 b 1}
+}
+
+rule driehoek
+{
+	dots{r 5}
+	driehoek{x 2 y 2 r -10 s 0.9 sat -.001}
+}
+
+rule driehoek
+{
+	dots{r -5 s 10}
+	driehoek{x 2 y 2 r 10 s 0.9 sat -.001}
+}
+
+rule dots
+{
+	CIRCLE{}
+	dots{x 5 r 20 s 0.9 b -.05 alpha -0.05}
+}
+
+rule dots
+{
+	CIRCLE{}
+	dots{x 5 r 18 s 0.9 b -.05 alpha -0.05}
+}
+
+rule dots
+{
+	CIRCLE{}
+	dots{x 5 r 22 s 0.9 b -.05 alpha -0.05}
+}

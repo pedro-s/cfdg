@@ -1,0 +1,19 @@
+startshape ebene1
+
+rule ebene1 { 
+360* { r 1} INNEN  {hue 104.0000 sat 0.7813 b 0.4980  } 
+}
+
+rule INNEN  {
+171.428* { r 2.1 } AUSSEN  { x 1.2 s 0.1245 b -0.5  }
+}
+
+
+
+rule AUSSEN .1245  {
+ SQUARE { }  AUSSEN { x -10 y 1 s .5  r -2} 
+}
+
+rule AUSSEN  {
+SQUARE { }  AUSSEN { y -10 s .9  r -2} 
+}

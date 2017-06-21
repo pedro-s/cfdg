@@ -1,0 +1,51 @@
+startshape C
+
+background { b -1 sat  1 h -40}
+
+rule C{ 
+    A{}
+    A{x 5}
+}
+
+rule A {
+    30*{y 1 r -12}  B{ sat 1  h  0}
+}
+
+rule B {
+	
+	10 *{ s .95  x .26    z -.1 hue 5  sat -.001 a -.1}  YC { b  .5 }
+}
+
+rule YC{  
+    Y1{} 
+    YH{} 
+}
+
+path Y1{
+    MOVETO {x 0 y 1}
+    ARCTO {y 0 r 1}
+    ARCTO {y 1 r 1}
+    FILL { width .01}
+}
+
+rule YH {
+	AA{s .5  flip 90 x -.3 y .5}
+}
+
+rule AA {
+CIRCLE {s .8 }
+AA {s .98  r 7  x .1 z  1 }
+}
+
+rule AA   {
+CIRCLE {s .8 }
+AA {flip 0 s .98  r 7  x  .4  z 1 b  .05}
+}
+rule AA  .03  {
+CIRCLE {s .8 }
+AA { s .98  r 7  x  .4  b  .05}
+AA {flip 0 s .98  r 7  x  .4  z 1 b  .05}
+
+}
+
+

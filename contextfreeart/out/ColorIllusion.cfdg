@@ -1,0 +1,13 @@
+startshape BOB
+
+background { a -1 }
+
+rule BOB {
+	YAY { x 10 s 6 sat 1 b 1 }
+	BOB { r 137.5078 s .99 h 20 sat 1 b 1 }
+}
+
+rule YAY {
+	CIRCLE { s 50 }
+	YAY { s .1 x 10 y 10 }
+}

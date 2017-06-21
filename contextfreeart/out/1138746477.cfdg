@@ -1,0 +1,10 @@
+startshape Follow_arrow
+
+background{  hue 43.8 sat 0.6931 b 0.8159 }
+
+rule Follow_arrow {
+TRIANGLE [s 8  y -1.2 r 60]
+SQUARE {s 15 4 r 90 }
+Follow_arrow [  y 25 s 0.999 r 8 b 0.009 h 90 sat 0.2 alpha -0.003 ]
+}
+

@@ -1,0 +1,15 @@
+startshape START
+
+rule START {
+	FROND{}
+}
+
+rule FROND {
+	CIRCLE{}
+	FROND {y 1.3 rotate 33 b 0.01 s 0.95}
+}
+
+rule FROND {
+	CIRCLE{}
+	FROND {y 1.3 rotate -3 b 0.01 s 0.95}
+}

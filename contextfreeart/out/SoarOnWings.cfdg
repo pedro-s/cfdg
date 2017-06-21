@@ -1,0 +1,8 @@
+startshape A background {b -.2 sat .2}
+rule A{B{}2*{y -70}
+ CIRCLE{b 1 sat .5 h 60 y 15 s 15} }
+rule B{ L{r 165} R{r -165} B{s .9} }
+rule L{ 30*{r -1 y 2 h 2.2} 
+ CIRCLE{s 12 sat .5 b 1} L{r -6 y 2 x 12 s .96} }
+rule R{ 30*{r 1 y 2 h 2.2} 
+ CIRCLE{s 12 sat .5 b 1} R{r 6 y 2 x -12 s .96} }

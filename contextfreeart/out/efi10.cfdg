@@ -1,0 +1,17 @@
+startshape F
+
+rule F {8*{y 8}E{}}
+
+rule E 6 {20*{x 5}D{}}
+rule E {18 *{x 5}D{}}
+rule E {17 *{x 5}D{}}
+
+rule D {C{sat 1 b .5 a -.975}}
+
+rule C {B {} B {f 90}}
+
+rule B {B {x .1 s .99 a .001} A {}}
+
+rule B .1{B{ r 30} 100*{x .1 s .95 b -.02}A{b -.3}}
+
+rule A {CIRCLE {} CIRCLE {s 1.2 a -.3} SQUARE {s 3 a -.6 h 100} }

@@ -1,0 +1,10 @@
+startshape r1
+background {b -1}
+rule r1 {3600*{r 0.1} {r2{}}}
+rule r2 {200*{x 1} {r25{}}}
+rule r25 {r3 {}}
+rule r25 50 {}
+rule r3 {r3 {size 1.01 x 1 z -1 }}
+rule r3 0.1 {r4{b 1}}
+rule r4 {brush{} r4 {size 0.95 x -1 z -1}}
+rule brush {CIRCLE{a -0.95}}

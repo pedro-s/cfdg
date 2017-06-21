@@ -1,0 +1,16 @@
+startshape start
+
+rule start {
+	eighth {}
+}
+
+rule eighth {
+	CIRCLE {}
+	eighth {x .9 s .9 r 25}
+}
+
+rule eighth .2 {
+	CIRCLE {}
+	eighth {x .9 s .9 r 10}
+	eighth {x .9 s .9 r 280}
+}

@@ -1,0 +1,20 @@
+startshape freedom
+
+background {b -1}
+
+rule freedom {
+	3*{r 120 x -.86603 y -.5}
+	{2*{f 90 x -.57736 b .1}
+	is{}}
+}
+
+rule is{
+	patience{}
+	is{s .43017 f 180 x .70153 y .53977 b -.1}
+}
+
+rule patience{
+	TRIANGLE {r 30 b .1}
+	patience{s .75486 r 60 x .35944 y .37743  b .1}
+	is{s .56985 r 120 x .24835 b .1}
+}

@@ -1,0 +1,20 @@
+startshape INICIO
+background { b -1 }
+rule INICIO {
+RECTA { hue 0 sat 0.0 b 5 }
+}
+rule RECTA  {
+SQUARE  { b 0.5 } 
+RECTA  { s 0.99 y -1 hue -1 r -1 }
+}
+rule RECTA  0.02 {
+RECTA { s 0.99 r 15 }
+RECTA  { s 0.99 r -15 }
+}
+rule RECTA  0.05 {
+RECTA { flip 9 }
+}
+rule RECTA {
+SQUARE  { b 0.5 } 
+RECTA  {y 0.99 y -1 hue -1 r -1 }
+}

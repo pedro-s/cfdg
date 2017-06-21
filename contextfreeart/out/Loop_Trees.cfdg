@@ -1,0 +1,27 @@
+startshape bar []
+CF::Background = [b -0.9]
+
+shape bar {
+	loop 2 [r 180] foo[sat 0.3 h 240]
+}
+
+shape foo
+	rule 50 {
+		dr [s 0.8]
+		foo [y 0.1 r 5 s 0.995 b 0.001]
+}
+
+	rule 0.1 {
+		foo [flip 90]
+}
+
+	rule 0.1 {
+		foo []
+		foo [flip 90]
+}
+
+shape dr {
+	CIRCLE [y 0.1 s 1.1 a -0.9 b -0.8]
+	CIRCLE []
+}
+

@@ -1,0 +1,113 @@
+startshape cityscape
+
+background {b -0.9 hue 210 sat 1}
+
+rule cityscape {
+ cityblock { }
+}
+
+rule cityblock {
+ buildings{ }
+ postponecityblock {y -0.1 s 1.1 x 3}
+}
+rule cityblock 0.1 { }
+
+rule postponecityblock {postponecityblock { }}
+rule postponecityblock 0.0001 {cityblock { }}
+
+rule buildings {
+building {x 0}
+building {x 10}
+building {x 20 }
+building {x 30 }
+}
+
+rule building 500 {building {r 0.1}}
+rule building 500 {building {r -0.1}}
+
+rule building {
+ building_1 { }
+ building_1 {x 5 b -1}
+}
+rule building {
+ building_2 { x 3 }
+}
+
+///---------------------------------------------------//
+
+rule building_1 {
+ building_side_1 { }
+ building_1 {y 1 b 0.1 r 0.05}
+}
+rule building_1 {
+ building_side_1 { }
+ building_1 {y 1 b 0.1 r -0.05}
+}
+
+rule building_1 0.1 { building_finish_1 { } }
+
+rule building_finish_1 { building_top_1 {b -1 } }
+
+rule building_top_1 { SQUARE { skew -26.5 0 s 3 y 1 x -0.75} }
+
+rule building_side_1 {
+ building_side_layer_1 { }
+ building_side_layer_1 {x -2.25 y 1.5 skew 0 -45 s 0.5 1 b 1 hue 30}
+}
+
+rule building_side_layer_1 {
+ building_side_layer_background_1 {sat 1}
+ random_window_1{x -1 s 0.3 0.5 hue 50 sat 1}
+ random_window_1{x 0 s 0.3 0.5 hue 50 sat 1}
+ random_window_1{x 1 s 0.3 0.5 hue 50 sat 1}
+}
+
+rule building_side_layer_background_1 {
+ SQUARE {s 3 1}
+}
+
+rule random_window_1 0.1 { SQUARE { } }
+rule random_window_1 {random_window_1 {b -0.5}}
+rule random_window_1 0.1 {random_window_1 {b 1}}
+
+///---------------------------------------------------//
+
+rule building_2 {
+ building_side_2 { }
+ building_2 {y 1 b 0.01 r -0.1}
+}
+rule building_2 {
+ building_side_2 { }
+ building_2 {y 1 b 0.01 r 0.1}
+}
+
+rule building_2 0.1 { building_finish_2 { } }
+
+rule building_finish_2 { building_top_2 { } }
+rule building_finish_2 { building_top_2 { } building_1 {x -0.75 y 1 } }
+
+rule building_top_2 { SQUARE { skew -26.5 0 s 5 y 2 x -1.25 b -1 } }
+
+rule building_side_2 {
+ building_side_layer_2 { }
+ building_side_layer_2 {x -3.75 y 2.5 skew 0 -45 s 0.5 1 b 0.6 hue 0}
+}
+
+rule building_side_layer_2 {
+ building_side_layer_background_2 {sat 1}
+ random_window_2{x -2 s 0.5 0.5 hue 50 sat 1}
+ random_window_2{x -1 s 0.5 0.5 hue 50 sat 1}
+ random_window_2{x 0 s 0.5 0.5 hue 50 sat 1}
+ random_window_2{x 1 s 0.5 0.5 hue 50 sat 1}
+ random_window_2{x 2 s 0.5 0.5 hue 50 sat 1}
+}
+
+rule building_side_layer_background_2 {
+ SQUARE {s 5 1}
+}
+
+rule random_window_2 0.1 { SQUARE { } }
+rule random_window_2 {random_window_2 {b -1}}
+rule random_window_2 0.1 {random_window_2 {b 0.1}}
+rule random_window_2 0.1 {random_window_2 {b 1}}
+

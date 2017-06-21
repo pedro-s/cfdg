@@ -1,0 +1,48 @@
+// Vento2,
+// a cfdg script ( http://contextfreeart.org/ ) 
+//
+// ** Instructions
+// Use the following python script to generate sin.cfdg
+//	import math
+//	print "rule sin {"
+//	for i in range(-500,500):
+//	        print "point { x", i, "y %0.9f"%(math.sin(i/100.)*100), "}"
+//	print "}"
+// 
+// AlpT (@freaknet.org)  
+// Fri Nov  2 15:53:41 CET 2007
+//
+// Other scripts:
+// http://freaknet.org/alpt/misc/fatrial/math-exp/cfdg
+//
+
+startshape START
+include sin.cfdg
+
+rule START {
+	A0 {  }
+}
+
+rule A0 {
+	A { b -1 }
+	A { b -1 flip -90 }
+}
+
+rule A {
+//	cartesian { }
+	10 * { r 9 } sin { } 
+	A { s 0.9 b 0.1 z -1 }
+}
+
+rule cartesian {
+	line { x -500 y 0}
+	line { x 0 y -500 r 90 }
+}
+
+rule line { 
+	1000 * { x 1 } CIRCLE { }
+}
+
+rule point {
+	CIRCLE { }
+}

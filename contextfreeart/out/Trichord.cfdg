@@ -1,0 +1,69 @@
+// Title:  Trichord
+// Author: epmoyer
+// Date:   12/26/06
+// Reference Pic Seed: NJJ
+// Description:    
+//     A hairy bumpy tripple spined creature.  
+//
+// Intersting Concepts:
+//     Fakes 3d looking spheres by iterated shading
+//     Fakes 3d depth by using a lot of z axis tagging
+//
+
+startshape INIT
+background {b -.5 }
+
+rule INIT { 3*{r 120} START {b 0.4 sat 1} }
+
+rule START{ 
+   BUNCH{ hue 230}
+   START {y 0.5 s 0.95 r 10 sat -0.03 z -100}
+}
+
+
+// Draw a bunch of spheres clustered around the current position
+// -----------------------------------------------------------------------
+rule BUNCH{ 
+	SPHERE [r 10.2 y 1 s 0.9]
+   BUNCH  [r 34.2 z 1]
+}
+rule BUNCH{ 
+	SPHERE [r 13.2 y 0.8 s 0.8]
+   BUNCH  [r 44.4 z 1]
+}
+rule BUNCH{ 
+   SPHERE [r 15.2 y 0.6 s 0.7]
+   BUNCH  [r 54.6 z 1]
+}
+rule BUNCH{ 
+   SPHERE [r 17.2 y 0.4 s 0.6]
+   BUNCH  [r 64.8 z 1]
+}
+rule BUNCH{ 
+   SPHERE [r 19.2 y 0.2 s 0.5]
+   BUNCH  [r 74.9 z 1]
+}
+rule BUNCH{ 
+   HAIR[ hue 55 b -0.2 r 21.2 s 0.15 z -10]
+   BUNCH  [r 84.3 z 1]
+}
+rule BUNCH 0.1{}
+
+// Draw a 3d-looking shaded sphere
+// -----------------------------------------------------------------------
+rule SPHERE{
+   CIRCLE{}
+   SPHERE{x -0.003 y -0.003 b 0.02 s 0.98  } 
+}
+
+
+// Draw a randomly crinkly hair
+// -----------------------------------------------------------------------
+rule HAIR{
+   SQUARE{}
+   HAIR{y 0.9 r 4 s 0.93}
+}
+rule HAIR{
+   SQUARE{}
+   HAIR{y 0.9 r -4 s 0.93}
+}

@@ -1,0 +1,81 @@
+/*
+	Penrose tile mandala
+	Coded by AK June 2008
+
+	Most of the decimal constants here involve cos(18n) for some n.
+ */
+
+startshape START
+
+background { brightness -0.3 hue 200 saturation 0.2 } // cool blue-grey
+
+rule START {
+	BG { z -50 s 1.2}
+	Mandala{rotate -18}
+	}
+rule Mandala{
+	5* {r 72} FatThin{}
+	}
+rule FatThin{
+	Fat{}
+	Thin{x 1.61803398874989484824 rotate 108}
+	}	
+
+/*---------- main tile rules -----------------*/
+rule Fat {
+	FatTile {}
+	FatScale {	 x 1 r 144 }
+	ThinScale { x .30901699437494742411 y .95105651629515357211 r -72 }
+	FatScale {	 x 1.30901699437494742411 y .95105651629515357211 r -180 }
+	}
+rule Thin {
+	ThinTile {}
+	FatScale { x 1 r 144 }
+	ThinScale{ x .19098300562505257590 y .58778525229247312915 r -108 } 
+	}
+
+/*-------- Smaller tiles used to piece together large tile ----- */
+rule FatScale{
+	Fat{ s 0.61803398874989484820
+		z -1
+		brightness 0.2
+		saturation 0.1
+		hue -30
+		}}
+rule ThinScale{
+	Thin{ s 0.61803398874989484820
+		z -1
+		brightness 0.2
+		saturation 0.1
+		hue -30
+		}}
+
+
+/* ---------------- The actual tile elements. --------------- */
+rule FatTile{
+	SQUARE [
+		skew 18 0 
+		size 1 .95105651629515357211
+		x 0.5 y 0.5
+		size 0.9 			// 0.9 = 1 - 0.1
+		alpha -0.75
+		]
+	}
+rule ThinTile{
+	SQUARE[
+		skew -54 0
+		size 1 .58778525229247312915
+		x 0.5 y 0.5
+		size 0.83819660112501051518	 // 0.838 = 1 - 0.1*phi
+		alpha -0.75
+		]
+	}
+
+
+/* -------------- a simple glow for the background ----------------- */
+rule BG{glow { s 3 brightness 0.8 hue 200 saturation 0.2 }}
+
+rule glow{
+	5 * { r 72 } CIRCLE{ y 0.2 alpha -0.95  }
+	glow { s 0.95 b +0.2 }
+	}

@@ -1,0 +1,42 @@
+startshape STARSHAPE
+background{b -1}
+rule STARSHAPE
+{
+	SUNSHAPE{}
+	STARSHAPE{size 0.9 rotate -10}
+}
+rule SUNSHAPE
+{
+	BIGGERSHAPE{}
+	BIGGERSHAPE{rotate 200}
+}
+rule BIGGERSHAPE
+{
+	MINISHAPE{}
+	MINISHAPE{rotate 45}
+	MINISHAPE{rotate 90}
+	MINISHAPE{rotate 135}
+	MINISHAPE{rotate 180}
+}
+rule MINISHAPE
+{
+	CIRCLEZ{}
+	CIRCLEZ{rotate 5}
+	CIRCLEZ{rotate 10}
+	CIRCLEZ{rotate 15}
+	CIRCLEZ{rotate 20}
+	CIRCLEZ{rotate 25}
+	CIRCLEZ{rotate 30}
+	CIRCLEZ{rotate 35}
+	CIRCLEZ{rotate 40}
+}
+rule CIRCLEZ 90
+{
+	CIRCLE{sat 1}
+	CIRCLEZ{x 0.5 size 0.9 b +0.5 rotate 1 h +2}
+}
+rule CIRCLEZ	10
+{
+	TRIANGLE{sat 1}
+	CIRCLEZ{x 0.5 size 0.9 b +0.5 rotate -2 h -2}
+}

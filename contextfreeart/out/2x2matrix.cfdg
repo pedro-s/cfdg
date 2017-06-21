@@ -1,0 +1,24 @@
+startshape shape
+
+background {b -1}
+
+rule shape {
+   shape1 {}
+   shape2 {}
+}
+
+rule shape1 {
+	BASE {}
+	shape1 { z 1 b 0.01 x 1.5 s 0.5 rotate 14 }
+	shape2 { z 1 b 0.01 y 1.4 s 0.9 1.1 rotate -20 }
+}
+
+rule shape2 {
+	BASE {}
+	shape1 { z 1 b 0.02 x 1.3 s 0.9 1.1 rotate -11}
+	shape2 { z 1 b 0.02 y 1.2 s 0.5 rotate 25}
+}
+
+rule BASE {
+   TRIANGLE { s 0.1 skew 25 10 }
+}

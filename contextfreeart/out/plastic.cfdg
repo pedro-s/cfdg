@@ -1,0 +1,22 @@
+startshape langeweile
+
+background{b -1}
+
+rule langeweile{
+18* {r 20} blubb{b 0 hue 20 sat 1 a -1}
+}
+
+rule blubb{
+shadekreis{s 1 2}
+blubbA{s 0.8 r -2 x 1 b -.1 hue 10}
+}
+
+rule blubbA{
+shadekreis{s 1 2}
+}
+
+
+rule shadekreis{
+SQUARE{}
+shadekreis{s 0.99 b .01 a .01 z 1 hue .04}
+}

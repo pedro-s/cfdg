@@ -1,0 +1,37 @@
+background { b -1 }
+
+startshape FIRST
+
+rule FIRST { 6 * {r 60} 
+   wind {h -90 sat 1 b 0.1}
+}
+
+rule wind {
+   CIRCLE{s 7 z 0.21}
+   CIRCLE  { s 2 z 1  b -0.2 }
+   CIRCLE {s 9 b -1 z 0.1}  
+   wind { y 1 r 2.3 s 0.994 h 0.18 z -0.1 b 0.01}
+}
+
+rule wind 0.01{
+   unwind{ x -0.4  r 30}
+   unwind{ x 0.4  f 90 y 0 r -30}
+}
+
+rule unwind {
+   CIRCLE{s 7 z 0.21}
+   CIRCLE  { s 2 z 1  b -0.2 }
+   CIRCLE {s 9 b -1 z 0.1}  
+   unwind{ y 1 r 1 s 0.994 h 0.09 z -0.1 b 0.01}
+}
+
+rule unwind 0.01{
+   wind{ x -0.4  r 30}
+   wind{ x 0.4  f 90 y 0 r -30}
+}
+
+
+
+
+
+

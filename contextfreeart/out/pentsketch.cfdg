@@ -1,0 +1,12 @@
+startshape PENT
+
+background {b -.75}
+
+rule PENTAGON {
+	5*{r 72} SQUARE {b .75 sat 1 s .77 .01 x .5 y -.1625 r 72}
+}
+
+rule PENT {
+	PENTAGON {hue 80}
+	5*{r 72} PENT {y -.53 s .5 r 36 hue 10}
+}

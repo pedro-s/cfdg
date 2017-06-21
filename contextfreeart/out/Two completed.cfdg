@@ -1,0 +1,20 @@
+startshape TWO
+
+rule TWO {
+ER { r -50 }
+}
+
+rule ER { 10* { r 200 } NI {} }
+
+rule NI {
+TRIANGLE { size .3 }
+YH { y .5 s .5 }
+}
+
+rule YH { 
+CIRCLE { size .2  }
+NI { r 15 }
+NI { r 30 }
+NI { r 60 }
+NI { y 1 s 1 }
+}

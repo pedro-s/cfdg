@@ -1,0 +1,33 @@
+startshape spikers
+background {  hue 190.0 sat 0.1726 b -0.75  }
+
+rule spikers{
+	spiker {  hue 193.9 sat 0.2 b 1.0000   }
+	spiker { flip -1  hue 0 sat 0000    }
+}
+
+rule spiker {
+	spikes { }
+	spikes { r 90 }
+	spikes { r 180 }
+	spikes { r 270 }
+}
+rule spikes {
+	spike { }
+	spike { r 15}
+	spike { r 30}
+	spike { r 45}
+	spike { r 60}
+	spike { r 75}
+	spike { r 90}
+}
+
+rule spike{
+	stake { s 1 0.75 } 
+	spike { x .1 s .987 r .2 }
+}
+rule stake{
+	CIRCLE{ b -.75 }
+	CIRCLE{ s .92 b 1}
+	stake { s .9 r 25}
+}

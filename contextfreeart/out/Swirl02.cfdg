@@ -1,0 +1,23 @@
+startshape START
+background {hue 140 sat 1 b -0.9}
+
+//var grow = rand(0.1,4)
+
+rule START {
+  SWIRL []
+}
+
+rule SWIRL  {
+  BASE []
+  SWIRL [x -2 r 5 s -0.99 hue +5 b +0.01]
+}
+
+rule SWIRL 0.01 {
+  SWIRL []
+  //SWIRL [y -5 r 5 s grow hue -180 b -0.9]
+  SWIRL [y -5 r 5 s 2.1 hue -180 b -0.9]
+}
+
+rule BASE {
+  SQUARE [hue 140 sat 1 ]
+}

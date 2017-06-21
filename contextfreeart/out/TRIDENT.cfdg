@@ -1,0 +1,104 @@
+startshape CARISMA 
+background { b -1 }
+rule CARISMA {
+TRIANGLE  { s 0.99 r 1 b -1  }
+TRIANGLE  { s 0.98 r 2 b 1 h 120.00 sat 1.0000 b 1.0000}
+TRIANGLE  { s 0.97 r 3 b -1 }
+TRIANGLE  { s 0.96 r 4 b 1 h 120.00 sat 1.0000 b 1.0000}
+TRIANGLE  { s 0.95 r 5 b -1 }
+TRIANGLE  { s 0.94 r 6b 1 h 120.00 sat 1.0000 b 1.0000}
+TRIANGLE  { s 0.93 r 7 b -1 }
+TRIANGLE  { s 0.92 r 8 b 1 h 120.00 sat 1.0000 b 1.0000}
+TRIANGLE  { s 0.91 r 9 b -1 }
+TRIANGLE  { s 0.9 r 10 b 1 h 120.00 sat 1.0000 b 1.0000}
+TRIANGLE  { s 0.89 r 11 b -1 }
+TRIANGLE  { s 0.88 r 12 b 1  h 120.00 sat 1.0000 b .90000}
+TRIANGLE  { s 0.87 r 13 b -1 }
+TRIANGLE  { s 0.86 r 14 b 1 h 120.00 sat 1.0000 b .90000}
+TRIANGLE  { s 0.85 r 15 b -1 }
+TRIANGLE  { s 0.84 r 16 b 1 h 120.00 sat 1.0000 b .90000}
+TRIANGLE  { s 0.83 r 17 b -1 }
+TRIANGLE  { s 0.82 r 18 b 1 h 120.00 sat 1.0000 b .90000}
+TRIANGLE  { s 0.81 r 19 b -1 }
+TRIANGLE  { s 0.8 r 20 b 1 h 120.00 sat 1.0000 b .90000}
+TRIANGLE  { s 0.79 r 21 b -1 }
+TRIANGLE  { s 0.78 r 22 b 1 h 120.00 sat 1.0000 b .80000}
+TRIANGLE  { s 0.77 r 23 b -1 }
+TRIANGLE  { s 0.76 r 24 b 1 h 120.00 sat 1.0000 b .80000}
+TRIANGLE  { s 0.75 r 25 b -1 }
+TRIANGLE  { s 0.74 r 26 b 1 h 120.00 sat 1.0000 b .80000}
+TRIANGLE  { s 0.73 r 27 b -1 }
+TRIANGLE  { s 0.72 r 28 b 1 h 120.00 sat 1.0000 b .80000}
+TRIANGLE  { s 0.71 r 29 b -1 }
+TRIANGLE  { s 0.7 r 30 b 1 h 120.00 sat 1.0000 b .80000}
+TRIANGLE  { s 0.69 r 31 b -1 }
+TRIANGLE  { s 0.68 r 32 b 1 h 120.00 sat 1.0000 b .70000}
+TRIANGLE  { s 0.67 r 33 b -1 }
+TRIANGLE  { s 0.66 r 34 b 1 h 120.00 sat 1.0000 b .70000}
+TRIANGLE  { s 0.65 r 35 b -1 }
+TRIANGLE  { s 0.64 r 36 b 1 h 120.00 sat 1.0000 b .70000}
+TRIANGLE  { s 0.63 r 37 b -1 }
+TRIANGLE  { s 0.62 r 38 b 1 h 120.00 sat 1.0000 b .70000}
+TRIANGLE  { s 0.61 r 39 b -1 }
+TRIANGLE  { s 0.6 r 40 b 1 h 120.00 sat 1.0000 b .70000}
+TRIANGLE  { s 0.59 r 41 b -1 }
+TRIANGLE  { s 0.58 r 42 b 1 h 120.00 sat 1.0000 b .60000}
+TRIANGLE  { s 0.57 r 43 b -1 }
+TRIANGLE  { s 0.56 r 44 b 1 h 120.00 sat 1.0000 b .60000}
+TRIANGLE  { s 0.55 r 45 b -1 } 
+TRIANGLE  { s 0.54 r 46 b 1 h 120.00 sat 1.0000 b .60000}
+TRIANGLE  { s 0.53 r 47 b -1 }
+TRIANGLE  { s 0.52 r 48 b 1 h 120.00 sat 1.0000 b .60000}
+TRIANGLE  { s 0.51 r 49 b -1 }
+TRIANGLE  { s 0.5 r 50 b 1 h 120.00 sat 1.0000 b .60000}
+TRIANGLE  { s 0.49 r 51 b -1 }
+TRIANGLE  { s 0.48 r 52 b 1 h 120.00 sat 1.0000 b .50000}
+TRIANGLE  { s 0.47 r 53 b -1 }
+TRIANGLE  { s 0.46 r 54 b 1 h 120.00 sat 1.0000 b .50000}
+TRIANGLE  { s 0.45 r 55 b -1 }
+TRIANGLE  { s 0.44 r 56 b 1 h 120.00 sat 1.0000 b .50000}
+TRIANGLE  { s 0.43 r 57 b -1 }
+TRIANGLE  { s 0.42 r 58 b 1 h 120.00 sat 1.0000 b .50000}
+TRIANGLE  { s 0.41 r 59 b -1 }
+TRIANGLE  { s 0.4 r 60 b 1 h 120.00 sat 1.0000 b .50000}
+TRIANGLE  { s 0.39 r 61 b -1 }
+TRIANGLE  { s 0.38 r 62 b 1 h 120.00 sat 1.0000 b .40000}
+TRIANGLE  { s 0.37 r 63 b -1 }
+TRIANGLE  { s 0.36 r 64 b 1 h 120.00 sat 1.0000 b .40000}
+TRIANGLE  { s 0.35 r 65 b -1 }
+TRIANGLE  { s 0.34 r 66 b 1 h 120.00 sat 1.0000 b .40000}
+TRIANGLE  { s 0.33 r 67 b -1 }
+TRIANGLE  { s 0.32 r 68 b 1 h 120.00 sat 1.0000 b .40000}
+TRIANGLE  { s 0.31 r 69 b -1 }
+TRIANGLE  { s 0.3 r 70 b 1 h 120.00 sat 1.0000 b .40000}
+TRIANGLE  { s 0.29 r 71 b -1 }
+TRIANGLE  { s 0.28 r 72 b 1 h 120.00 sat 1.0000 b .30000}
+TRIANGLE  { s 0.27 r 73 b -1 }
+TRIANGLE  { s 0.26 r 74 b 1 h 120.00 sat 1.0000 b .30000}
+TRIANGLE  { s 0.25 r 75 b -1 }
+TRIANGLE  { s 0.24 r 76 b 1 h 120.00 sat 1.0000 b .30000}
+TRIANGLE  { s 0.23 r 77 b -1 }
+TRIANGLE  { s 0.22 r 78 b 1 h 120.00 sat 1.0000 b .30000}
+TRIANGLE  { s 0.21 r 79 b -1 }
+TRIANGLE  { s 0.2 r 80 b 1 h 120.00 sat 1.0000 b .30000}
+TRIANGLE  { s 0.19 r 81 b -1 }
+TRIANGLE  { s 0.18 r 82 b 1 h 120.00 sat 1.0000 b .20000}
+TRIANGLE  { s 0.17 r 83 b -1 }
+TRIANGLE  { s 0.16 r 84 b 1 h 120.00 sat 1.0000 b .20000}
+TRIANGLE  { s 0.15 r 85 b -1 }
+TRIANGLE  { s 0.14 r 86 b 1 h 120.00 sat 1.0000 b .20000}
+TRIANGLE  { s 0.13 r 87 b -1 }
+TRIANGLE  { s 0.12 r 88 b 1 h 120.00 sat 1.0000 b .20000}
+TRIANGLE  { s 0.11 r 89 b -1 }
+TRIANGLE  { s 0.1 r 90 b 1 h 120.00 sat 1.0000 b .20000}
+TRIANGLE  { s 0.09 r 91 b -1 }
+TRIANGLE  { s 0.08  r 92 b 1 h 120.00 sat 1.0000 b .10000}
+TRIANGLE  { s 0.07 r 93 b -1 }
+TRIANGLE  { s 0.06 r 94 b 1  h 120.00 sat 1.0000 b .10000}
+TRIANGLE  { s 0.05 r 95 b -1 }
+TRIANGLE  { s 0.04 r 96 b 1 h 120.00 sat 1.0000 b .10000}
+TRIANGLE  { s 0.03 r 97 b -1 }
+TRIANGLE  { s 0.02 r 98 b 1 h 120.00 sat 1.0000 b .0000}
+TRIANGLE  { s 0.01 r 99 b -1 }
+TRIANGLE  { s 0.0 r 100 b 1 h 120.00 sat 1.0000 b .0000}
+}

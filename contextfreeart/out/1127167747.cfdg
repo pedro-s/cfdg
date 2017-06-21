@@ -1,0 +1,9 @@
+startshape spew
+background { b -1}
+
+rule spew{
+	CIRCLE{ b .6 hue 160 sat 56}
+	CIRCLE{ x 1 y 1 s .9 r 5 b 1}
+	CIRCLE{ x -1 y 21 s .9 r -5 b 1}
+spew{ s .998 x 1 y 18 r 49  hue 3.3 sat 0.8814 b 0.7612}
+}

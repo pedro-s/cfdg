@@ -1,0 +1,96 @@
+startshape SQUAREPIC
+
+background { h 231.14 sat 1.0000 b 1.0000}
+
+rule SQUAREPIC
+
+
+
+{    
+
+
+
+SQUARE{ s 30 skew 1 1 }
+
+
+SQUARE { s 29  h 107.72 sat 0.8398 b 1.0000 skew 2 2 }
+
+SQUARE { s 28 h 169.07 sat 1.0000 b 1.0000 skew 3 3}
+
+SQUARE { s 27 skew 4 4  }
+
+SQUARE { s 26 skew 5 5 h 231.67 sat 1.0000 b 1.0000}
+
+
+SQUARE { s 25 skew 6 6 h 22.53 sat 1.0000 b 1.0000}
+
+SQUARE { s 24 skew 7 7 h 357.10 sat 0.8789 b 1.0000}
+
+SQUARE { s 23 skew 8 8 h 60.88 sat 0.8903 b 1.0000}
+
+SQUARE { s 22 skew 9 9 h 303.08 sat 1.0000 b 1.0000}
+
+SQUARE { s 21 skew 10 10 h 21.12 sat 0.5241 b 1.0000}
+
+SQUARE { s 20 skew 11 11 h 265.16 sat 1.0000 b 1.0000}
+
+SQUARE { s 19 skew 12 12 h 306.73 sat 0.9289 b 1.0000}
+
+SQUARE { s 18 skew 13 13 h 59.80 sat 0.8614 b 1.0000}
+
+SQUARE { s 17 skew 14 14 }
+
+SQUARE { s 16 skew 15 15 h 18.43 sat 0.0351 b 1.0000}
+
+SQUARE { s 15 skew 16 16 h 28.71 sat 1.0000 b 1.0000}
+
+SQUARE { s 14 skew 17 17  h 322.29 sat 1.0000 b 1.0000}
+
+SQUARE { s 13 skew 18 18 h 183.07 sat 0.6231 b 1.0000}
+
+SQUARE { s 12 skew 19 19 h 76.96 sat 1.0000 b 1.0000}
+
+SQUARE { s 11 skew 20 20 h 2.95 sat 1.0000 b 1.0000}
+
+SQUARE { s 10 skew 21 21 h 130.67 sat 1.0000 b 1.0000}
+
+SQUARE { s 9 skew 22 22 h 271.74 sat 1.0000 b 1.0000}
+
+SQUARE { s 8 skew 23 23 h 19.18 sat 1.0000 b 1.0000}
+
+SQUARE{ s 7 skew 24 24 }
+
+SQUARE { s 6 skew 25 25 h 333.43 sat 0.0497 b 1.0000}
+
+SQUARE { s 5 skew 26 26 h 230.58 sat 1.0000 b 1.0000}
+
+SQUARE { s 4 skew 27 27 h 128.90 sat 0.8138 b 1.0000}
+
+SQUARE { s 3 skew 28 28 h 353.40 sat 1.0000 b 1.0000}
+
+SQUARE { s 2 skew 29 29 h 113.52 sat 1.0000 b 1.0000}
+
+SQUARE { s 1 skew 30 30 }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

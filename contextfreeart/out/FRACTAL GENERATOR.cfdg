@@ -1,0 +1,21 @@
+ // MQI MQK MQL MQR MQW MRG MRH MRR MRW MRX MSD
+
+startshape chaos
+
+// size {s 1} activate to zoom in center
+
+background {b -1}
+
+
+rule chaos{
+
+CIRCLE{ h rand_static(0, 360) }
+
+100 * { r rand_static(0, 360)  s .89 h 4 sat .018  b .08}  chaos{ y 1 s.5  r (rand_static(0, 360)) f 90}
+
+}
+
+
+
+
+

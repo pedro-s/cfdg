@@ -1,0 +1,63 @@
+//draws a tall tall christmas tree from a child's perspective randomly
+//seed AAA makes a pretty nice render among others
+
+startshape TREE
+
+background{hue 240 saturation 1 b -0.75}
+
+//draw a bended branch
+rule BRANCH{
+	TRIANGLE{hue 120 saturation 1 b 0.5 r 90} //pine needle
+	BRANCH{x 0.67 r -0.5} //continue downwards
+}
+rule BRANCH{
+	TRIANGLE{hue 120 saturation 1 b 0.5 r 90} //pine needle
+	BRANCH{x 0.67 r 1} //continue upwards, bigger value than the former one when goind downwards makes branches bend up
+}
+
+//hang some christmas decorations on it
+rule BRANCH 0.01{
+	STAR{y -2.5}
+	BRANCH{}
+}
+rule BRANCH 0.01{
+	BALL{y -2.5}
+	BRANCH{}
+}
+
+//branching
+rule BRANCH 0.01{
+	BRANCH{r 15}
+	BRANCH{r -14}
+}
+
+//end branch
+rule BRANCH 0.05{
+}
+
+//the christmas tree with the trunk
+rule TREE{
+	TRIANGLE{s 5 10 hue 30 saturation 1 b 0.2 z -1}
+	BRANCH{y -0.5}
+	BRANCH{y 0.5 flip 90}
+	TREE{y 2 r 1 s 0.99} //a bit curved shape, with the top vanishing in the far far heights
+}
+rule TREE{
+	TRIANGLE{s 5 10 hue 30 saturation 1 b 0.2 z -1}
+	BRANCH{y -0.5} //right
+	BRANCH{y 0.5 flip 90} //left
+	TREE{y 2 r -1 s 0.99} //statistically go straight upwards with the same amount of left and right turns
+}
+
+//different christmas decorations
+rule STAR{
+	TRIANGLE{s 5 hue 30 saturation 1 b -0.8}
+	TRIANGLE{s 4 z 1 hue 60 saturation 0.5 b 1}
+	TRIANGLE{r 60 s 5 hue 30 saturation 1 b -0.8}
+	TRIANGLE{r 60 s 4 z 1 hue 60 saturation 0.5 b 1}
+}
+
+rule BALL{
+	CIRCLE{s 5 hue 0 saturation 1 b 0.5}
+	BALL{b 0.05 s 0.8 x 0.2 y 0.2}
+}

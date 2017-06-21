@@ -1,0 +1,39 @@
+startshape start
+
+background { b -0.8 sat 1 hue 0 }
+
+rule start {
+	3curls {rotate 0}
+}
+
+rule 3curls {
+	curl {rotate 0}
+         curl {rotate 120}
+	curl {rotate 240}
+
+	3curls {size 0.5 x 20 y 10 r 138 f 0 b -0.5 hue 2}
+
+	start {rotate 40 size 0.75}
+}
+
+rule curl {	
+	cross {x 2 y 1 brightness 1 alpha -0.45 sat 1 hue 25}
+	cross {x -1 y 2 brightness 1 alpha -0.45 sat 1 hue 30}
+	cross {x -2 y -1 brightness 1 alpha -0.45 sat 1 hue 35}
+	cross {x 1 y -2 brightness 1 alpha -0.45 sat 1 hue 40}
+	cross {brightness 1 alpha -0.45 sat 1 hue 45}
+}
+
+rule cross {
+	6cubes {}
+	cross {x 3 y 1 s 0.90 r 16 hue -2 brightness -0.125 f 0}
+}
+
+rule 6cubes {	
+	cube {x 0.57 y 0.58} // back
+         cube {x -0.714 y 0.284} // left
+	cube {x 1.288 y 0.284} // right
+	cube {x 0.285 y 1.286} // up
+	cube {x 0.285 y -0.712} // down
+	cube {} // front   
+}rule cube {	SQUARE {x 0.281 y 0.281 hue -10} // back	SQUARE [r 45 skew 45 0 x -0.5125 y 0.355 s 0.4 0.707 hue +2 ] // left	SQUARE [r -45 skew 0 45 x 0.355 y -0.5125 s 0.707 0.4 hue +14 ] // bottom	SQUARE [r 45 skew 45 0 x 0.9095 y -0.355 s 0.4 0.707 hue -20 ] // right	SQUARE [r -45 skew 0 45 x -0.355 y 0.9095 s 0.707 0.4 hue +6 ] // top	SQUARE {hue -4} // front} 

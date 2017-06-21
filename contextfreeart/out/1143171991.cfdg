@@ -1,0 +1,17 @@
+startshape disgusting_hairball
+
+rule disgusting_hairball {
+ one_hair {alpha -1}
+ disgusting_hairball {s 0.9999 r 1}
+}
+rule disgusting_hairball 2 { disgusting_hairball {x 1}}
+rule disgusting_hairball 2 { disgusting_hairball {x -1}}
+rule disgusting_hairball 2 { disgusting_hairball {y 1}}
+rule disgusting_hairball 2 { disgusting_hairball {y -1}}
+rule one_hair {
+ hair_cell { }
+ one_hair {y 3.5 size 0.99 r 3 alpha 0.0003}
+}
+rule one_hair 0.1 {one_hair {flip 90}}
+
+rule hair_cell { SQUARE {s 4}}

@@ -1,0 +1,36 @@
+startshape BLOODSPLATTER
+
+background {b-1}
+
+rule BLOODSPLATTER
+{
+DROP {}
+DROP {flip 65}
+HIT {flip 25}
+}
+
+rule DROP 1
+{
+CIRCLE {h 0.00 sat 1.0000 b 1.0000}
+CIRCLE {size .5 brightness 3 h 0.00 sat 1.0000 b 1.0000}
+DROP {y .4 size .48 r 3}
+BLOODSPLATTER {size .5 r 2 x 1 y 2}
+}
+
+rule DROP 2
+{
+CIRCLE {h 0.00 sat 1.0000 b 1.0000}
+CIRCLE {size .87 brightness 4 h 0.00 sat 1.0000 b 1.0000}
+DROP {y .7 flip 45}
+DROP {y .56 size .2 brightness .7}
+}
+
+rule HIT
+{
+CIRCLE {size .3 brightness .4 x 2 y-.3 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE {size .2 y 1 x .5 brightness 8 h 0.00 sat 1.0000 b 1.0000}
+DROP {y .2 flip 27}
+HIT {y 2.0 x -2.5 rotate 20 size 0.6}
+HIT {y 2.0 x 2.5 rotate -20 size 0.6}
+}
+

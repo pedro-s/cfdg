@@ -1,0 +1,13 @@
+startshape PHI_F
+
+
+rule PHI_F {
+	FRACT {}
+}
+
+
+rule FRACT {
+	SQUARE {a -.8 hue 0 sat .6 b .2}
+	FRACT {r 90 hue 222.5 s .618033989 x 0.809016994 y -0.190983006}
+	FRACT {r 180 hue 222.5 s .618033989 y 0.809016994 x 0.190983006}
+}

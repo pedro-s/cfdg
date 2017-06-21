@@ -1,0 +1,23 @@
+startshape pattern
+
+rule pattern 20 { pattern {x 1 r -1} shape {} }
+rule pattern { pattern {x 1} arm{r 90} }
+rule pattern { pattern {x 1} arm{r -90} arm {flip -90} }
+rule pattern { pattern {s .9 sat .1} }
+
+rule arm { arm{x 1 s .99 r 2} shape{} }
+
+rule shape {
+2*{f 45}spike{x .5 s .5 s 0.8}
+CIRCLE{s .9 b 1 a 1 z 1}
+shape {r 20 s .55 z 2 x .15}
+}
+
+rule spike {
+	SQUARE {}
+	SQUARE {s .9  b 1 z.1 a -.5}
+	SQUARE {s .5  z.2 a -.6}
+	spike { y 0.95 s 0.97 a -.1}
+}
+rule spike 0.1 { spike { y 1.5 s 0.97 h 13 sat .1} }
+rule spike 0.01 {}

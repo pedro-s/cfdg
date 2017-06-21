@@ -1,0 +1,39 @@
+startshape spiroend
+background {hue 60 sat .2}
+
+rule spiroend
+{
+	spirospin{}
+	spirospin{r 30}
+}
+
+rule spirospin
+{
+	intense{size .6}
+}
+
+rule intense
+{
+	swirly{}
+
+	swirly{size .6}
+
+	swirly{size .2}
+}
+
+rule swirly
+{
+	happy{}
+	happy{r 60 b .3}
+	happy{r 120}
+	happy{r 180 b .3}
+	happy{r 240}
+	happy{r 300 b .3}
+}
+
+rule happy
+{
+	SQUARE{}
+	happy{x 2.5 r 2 size .995}
+}
+

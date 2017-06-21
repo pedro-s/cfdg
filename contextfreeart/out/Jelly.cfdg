@@ -1,0 +1,377 @@
+startshape JELLY
+
+background {b-1}
+
+rule JELLY
+
+{
+
+400* {y .2 x .2 rotate .5 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+CIRCLE{size .0009 h 0.00 sat 0.9333 b 1.0000}
+400* {y -.2 x -.2 rotate .5 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate .6 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000 rotate 30}
+400* {y -.2 x -.2 rotate .7 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000 rotate 30}
+400* {y -.2 x -.2 rotate .8 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000 rotate 30}
+400* {y -.2 x -.2 rotate .9 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000 rotate 30}
+400* {y .2 x .2 rotate .6 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .7 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .8 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .9 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .4 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .3 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .2 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .1 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y -.2 x -.2 rotate .4 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate .3 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate .2 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate .1 h 109.71 sat 0.7908 b 1.0000}
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate -.1 h 225.00 sat 0.9114 b 1.0000 }
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate -.2 h 225.00 sat 0.9114 b 1.0000 }
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate -.3 h 225.00 sat 0.9114 b 1.0000 }
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate -.4 h 225.00 sat 0.9114 b 1.0000 }
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate -.5 h 225.00 sat 0.9114 b 1.0000 }
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate -.6 h 225.00 sat 0.9114 b 1.0000 }
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y -.2 x -.2 rotate -.7 h 225.00 sat 0.9114 b 1.0000 }
+SQUARE { size 2 h 182.97 h 235.53 sat 0.9030 b 1.0000}
+400* {y .2 x .2 rotate -.1 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.2 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.3 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.4 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.5 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.6 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.7 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.45 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.44 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.43 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.42 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.41 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.39 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.38 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.37 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.36 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.35 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.34 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.33 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.32 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.31 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.49 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.48 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.47 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.46 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.45 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.44 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.51 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.52 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.53 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.54 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.55 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.56 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.57 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.58 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.59 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.61 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.61 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.61 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.62 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.63 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.64 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.65 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.66 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.67 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.68 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.69 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+4400* {y .2 x .2 rotate -.71 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.72 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.73 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.74 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.75 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.76 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.82 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.84 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.29 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.28 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.27 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.26 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.25 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.24 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.23 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.22 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.21 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.19 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.18 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.17 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.16 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.15 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.14 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.13 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.12 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.11 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.9 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.0 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.01 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.02 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.03 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.04 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.05 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.06 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.07 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.08 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate -.09 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .01 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .02 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .03 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .04 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .05 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .06 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .07 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .08 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .09 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .11 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .12 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .13 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .14 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .15 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .16 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .17 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .18 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .19 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .21 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .22 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .23 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .24 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .25 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .26 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .27 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .28 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .29 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .31 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .32 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .33 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .34 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .35 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .36 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .37 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .38 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .39 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .41 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .42 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .43 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .44 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .45 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .46 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .47 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .48 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .49 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .51 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .52 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .53 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .54 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .55 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .56 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .57 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .58 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .59 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .61 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .62 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .62 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .63 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .64 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .65 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .67 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .68 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .69 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .71 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .72 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .73 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .74 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .75 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .76 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .77 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .78 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .79 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .85 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+400* {y .2 x .2 rotate .89 h 235.53 sat 0.9030 b 1.0000}
+SQUARE { size 2 h 182.97 sat 0.8567 b 1.0000 h 5.00 sat 0.8923 b 1.0000}
+
+}

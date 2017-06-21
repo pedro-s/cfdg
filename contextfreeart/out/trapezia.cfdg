@@ -1,0 +1,23 @@
+startshape trapezia
+background { b -1}
+rule trapezia {
+	trapez []
+}
+
+rule trapez {
+	trape []
+}
+rule trape {
+	tra []
+	trape [s 0.5 f 90 b 0.15 r 120 x -.5 y -.3 h 0]
+	trape [s 0.5 b 0.15 r 120 x -1.48 y -2.03 h 3]
+	trape [s 0.5 b 0.15 f 0 x .49 y -0.88 h -3]
+}
+rule tra {
+	tri []
+	tri [x 1]
+	tri [f 0 x 0.5 y -0.29]
+}
+rule tri {
+	TRIANGLE [a 0.5 b 0.01 sat 1 h 250]
+}

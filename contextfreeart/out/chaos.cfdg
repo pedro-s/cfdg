@@ -1,0 +1,8 @@
+/* copyright (c) 2012 by Jonas Kölker.  License: WTFPL, or contact me */
+startshape recur
+background {b -1}
+
+rule recur {
+    CIRCLE {sat 1 b 1}
+    5*{r 60 x 0.5} {recur {s 0.6 y 1.5 h 20 z -1 r 23}}
+}

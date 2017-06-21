@@ -1,0 +1,40 @@
+startshape lotus
+
+rule lotus {
+   leafTransparent [ s 1 1 x 0.5 ]
+   leafTransparent [ r 15 s 1 1 x 0.5 ]
+   leafTransparent [ r 30 s 1 1 x 0.5 ]
+   leafTransparent [ r 45 s 1 1 x 0.5 ]
+   leafTransparent [ r 60 s 1 1 x 0.5 ]
+   leafTransparent [ r 75 s 1 1 x 0.5 ]
+   leafTransparent [ r 90 s 1 1 x 0.5 ]
+   leafTransparent [ r 105 s 1 1 x 0.5 ]
+   leafTransparent [ r 120 s 1 1 x 0.5 ]
+   leafTransparent [ r 135 s 1 1 x 0.5 ]
+   leafTransparent [ r 150 s 1 1 x 0.5 ]
+   leafTransparent [ r 165 s 1 1 x 0.5 ]
+   leafTransparent [ r 180 s 1 1 x 0.5 ]
+   leafTransparent [ r 195 s 1 1 x 0.5 ]
+   leafTransparent [ r 210 s 1 1 x 0.5 ]
+   leafTransparent [ r 225 s 1 1 x 0.5 ]
+   leafTransparent [ r 240 s 1 1 x 0.5 ]
+   leafTransparent [ r 255 s 1 1 x 0.5 ]
+   leafTransparent [ r 270 s 1 1 x 0.5 ]
+   leafTransparent [ r 285 s 1 1 x 0.5 ]
+   leafTransparent [ r 300 s 1 1 x 0.5 ]
+   leafTransparent [ r 315 s 1 1 x 0.5 ]
+   leafTransparent [ r 330 s 1 1 x 0.5 ]
+   leafTransparent [ r 345 s 1 1 x 0.5 ]
+}
+
+rule leafTransparent {
+   _leafTransparent { x -0.5 b 0.2 }
+   _leafTransparent { x -0.5 flip 0 b 0.4 }
+}
+
+rule _leafTransparent {
+   TRIANGLE { x 0.5 s 1 0.0001 }
+
+   CIRCLE { x 1 s 0.01 b -1 }
+   _leafTransparent { x -0.00001 r 0.02 s .999 b 0.01}
+}

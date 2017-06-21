@@ -1,0 +1,27 @@
+startshape HEPSHRINK
+background {b -1 }
+size {s 5}
+
+rule HEPSHRINK {
+HEPSPLIT { }
+HEPSHRINK {s .8 z -1 r 3 }
+}
+
+rule HEPSPLIT {
+7*{r (360/7)}HEPSPIRAL{x 3.37} 
+}
+
+rule HEPSPIRAL {
+HEPSHAPE {b 1 sat 1}
+HEPSPIRAL {s .95 r 1 y .2 }
+}
+
+rule HEPSHAPE { 
+2*{s .97 b -1}HEPTAGON { }
+}
+
+path HEPTAGON {
+    MOVETO{x cos(90-360/7) y sin(90-360/7)}
+    6* {r (360/7)} LINETO{y 1}
+    CLOSEPOLY{}
+}

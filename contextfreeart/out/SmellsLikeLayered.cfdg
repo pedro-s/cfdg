@@ -1,0 +1,43 @@
+startshape A
+
+rule A {
+15*{x 1 r -12 hue -5 }{22*{y 2 r 12 hue 1}{5*{s.9 a .2 sat 2}B{a-.8 sat .7 hue 2 b 1}}}
+A{r 4 s .8 hue 2}
+}
+
+rule B .25 {
+  CIRCLE{ s 1.1 a 1 z -.2}
+  CIRCLE{ a 1 b 1 z -.1} 
+  CIRCLE{ b-.5 z -5 s 1.5 a 1}
+}
+rule B {
+  CIRCLE{ b .5 z 5}
+}
+rule B .1 {
+  B{hue -80}
+}
+rule B .5 {}
+rule B .05 {
+  CIRCLE{ a 1 b -1 z .1}
+  CIRCLE{ s .75 a 1 b 1 sat 1 z .2} 
+}
+rule B .1 {
+  SQUARE{s 10 a -.95}
+  TRIANGLE{s 20 a -.95 hue 20}
+}
+rule B .05 {
+  2*{}C {z -.3}
+  SQUARE {s 6 b -.5 a 1 z -.2}
+  2*{}C {z -.1}
+  SQUARE {s 5 b 1 sat -1 a 1 }
+}
+
+rule C {
+ CIRCLE { s 2}
+ C {r 1 s .91 x  1.2 skew 2 5}
+}
+
+rule C .1 {
+  CIRCLE { skew -2 -50 r 4 s 4}
+  C {flip 0 r 1 s .91 x  1.2 skew 2 5}
+}

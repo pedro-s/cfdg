@@ -1,0 +1,11 @@
+startshape dao  background {b -.3}
+path halfs{ 
+   MOVETO{y 1}
+   ARCTO{y -3}FILL{b 1} // white half
+   MOVETO{y -3}
+   ARCTO{y 1} // black half
+ }
+rule dao{ halfs{}
+   CIRCLE{s 2}CIRCLE{b 1 y -2 s 2}
+   CIRCLE{b 1 s.6}CIRCLE{y -2 s.6}
+}

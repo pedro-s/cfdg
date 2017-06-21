@@ -1,0 +1,29 @@
+startshape D
+
+shape D {
+	C []
+	E [z 1]
+}
+
+shape E {
+	F []
+	E [x 3 y 2 s 0.5]
+	E [x 3 y 2 s 0.6 r -90]
+}
+
+shape F {
+	CIRCLE [s 4 b 1 a -0.5]
+}
+
+shape C {
+	loop 3 [y 1.1 h 123] B []
+}
+
+shape B {
+	loop 5 [x 1.1 h 123] A []
+}
+
+shape A {
+	SQUARE [b 0.5 sat 1]
+}
+

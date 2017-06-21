@@ -1,0 +1,33 @@
+startshape triangles 
+background { b -1}
+rule triangles2 {
+TRIANGLE {s 2.75 1 h 15 sat .1 b .29 x 2 y 2 }
+}
+
+rule triangles3 {
+8*{r 36 x 10 y 10 skew 1 20}
+triangles2 {s 8 skew 1 9 x -1 }
+}
+
+rule triangles4 {
+	triangles3 {}
+triangles4 {r 10 s .99375 x 20 y 1  h .4}
+}
+
+rule triangles5 {
+12*{x 15 y 15 z -1 h -10}
+triangles4 {s .633 r 12 skew 12 45 alpha -.44 sat .71 b -.03}
+
+}
+
+rule triangles6 {
+
+24*{r -30 h 2 z 1 x 15 y 15 b -.1}
+triangles5{s .2 b .7 x 45}
+
+}
+rule triangles {
+12*{r 45 x 6}
+triangles6{s 25 r 1}
+}
+

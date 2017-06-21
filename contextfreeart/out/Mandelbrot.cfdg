@@ -1,0 +1,211 @@
+/*
+      Mandelbrot Set in CFDG 3.0
+
+I could never figure out how to do a Mandelbrot set 
+in the version 2 language, and I wasn't entirely 
+sure until now that I could do it in the version 3 
+language. But, this script demonstrates that it is 
+possible. The code is very simple-minded, with no 
+optimizations (for example, with some work, the 
+large black areas can be skipped over).
+
+See the Wikipedia article or other documentation on 
+how the Mandelbrot set algorithm works, and for 
+further information on it that can be used to 
+improve performance by such means as skipping the
+iterations for the two main areas inside the set.
+I haven't bothered, because my interest is in how
+to do new kinds of images in the cfdg language 
+(especially those that I couldn't figure out how
+to do at all in the version 2 language).  
+
+I'm using the usual formula: Zn+1 = (Zn * Zn) + C, 
+where Z and C are complex numbers. In the code, I 
+split each into a real and an imaginary part 
+(ZR + ZI and CR + CI).
+
+I couldn't find any way to do the iterations for 
+each point in a loop because of the way cfdg 
+variables work (I'm reminded of the saying that 
+constants aren't and variables won't), so I'm
+using recursion instead, to allow emulation of 
+actual variables. 
+
+The importance of this new power in the language
+is in the fact that it makes a whole new class 
+of fractal becomes practical. The classic Mandelbrot set 
+image is just one example (I assume that the 
+related Julia set images are also now practical).
+
+*/
+
+startshape r1[ b 1 a 1 sat 1  ] // just display plain colors. 
+ 
+CF::Background = [b -1] 
+CF::Impure = 1
+//CF::Size = [ s 2 2 x -1 y -1 ]
+
+sqr(n) = n * n // utility function; used but not really needed.
+
+/*
+Change the variables below to change the resolution, 
+the rate of color change, the accuracy, and the 
+region of the complex plane for which to generate 
+all or part of an ordinary Mandelbrot set image (the 
+visually interesting areas are actually all outside 
+the set itself). 
+*/
+
+    maxIterations = 200               // The larger this number, the fewer false positives (points 
+                                       // counted as in the set which are in fact outside of it).
+
+    hueCh = 720/maxIterations          // Controls how fast colors change as the "escape time" changes 
+                                       // (increase the denominator to increase the color-change speed).
+
+    RLeft = -1.5                       // Left side of the area to show
+    RRight = .5                        // Right side of the area to show
+
+    ITop = 1                           // Top of the area to show
+    IBottom = -1                       // Bottom of the area to show
+
+/*
+You can change the above four "variables" to 
+zoom in on just a small portion of the main image:
+
+    RLeft = .16                       
+    RRight = .21                       	
+
+    ITop = .61                         
+    IBottom = .55                      
+*/
+
+    RWidth = RRight - RLeft            // Width of area to show
+
+    RSteps =  800                      // Numer of horizontal steps (adjust this to adjust resolution) 
+    stepSz = RWidth/RSteps             // Size of each horizontal and vertical step
+  
+    initHue = 60                       // Sets inital color; each point's calculated color is added to this.
+
+shape r1
+{
+    // Below: CR and CI are the coordinates for a location on the complex 
+    // number plane. CR is the real component, CI is the imaginary component.
+
+    loop  CR = RLeft, RRight, stepSz [ x  stepSz ] {
+        loop CI = IBottom, ITop, stepSz [ y stepSz ] {
+            iterateOnC(0, 0, 0, CR, CI)[ s stepSz ]    
+        }
+    }
+}
+
+/*
+Below, iterateOnC does the part that I couldn't figure out how 
+to do in the version 2 language. This is the iterative process 
+that is carried out for each point of the image.
+
+Start with a complex number C representing a point on the 
+complex number plane (similar to the ordinary x/y plane but with 
+the imaginary dimension taking the place of the y dimension). 
+Compute a new complex number (called Z) by squaring C.
+
+Then, check to see if the new number has an absolute distance 
+from the origin less than or equal to 2, by applying the 
+pythagorean theorem, using the square (4) instead of 2 (so we 
+can avoid computing square roots). If the new point IS less than 
+2 units from the origin, we add this new complex number to C and 
+compute a new value for Z.
+
+We keep doing the above until the computed value of Z specifies 
+a point > 2 units from the origin or until some maximum number 
+of iterations is reached. If the maximum is reached, it is 
+assumed that the initial complex number C specifies a point that 
+is within the boundary of the set, even though it will 
+occasionally actually be a point that is outside the set.
+
+(The problem is that there is no fixed upper bound on how many 
+iterations might be needed to verify that a point is not within 
+the set, so, in general, unless the values of Z are cyclical, or 
+some other special conditions are met, the best we can do is 
+choose a large maximum number of iterations.)
+
+There ARE some special conditions, however, for parts of the 
+set. The two main areas of the set are a cardioid and a circle, 
+so we can write code to detect points in these areas and avoid 
+the iterative process for these areas. I've read that there are 
+other special cases as well, though I haven't researched this at 
+all.
+
+Also, though I haven't verified this, I think ContextFree 
+does not actually do recursion, or, if it does, it uses some 
+variation on "trampolining" to avoid internal call stack 
+overflows. My impression is that the ContextFree program 
+generates streams of some kind of code that has the effect of 
+flattening loops and recursion.
+*/
+
+shape iterateOnC(
+number iteration,     // iteration count, used to determine color when drawing "pixel."
+number zr, number zi, // zr and zi are the real and imaginary parts of the current complex number Z
+number cr, number ci) // cr and ci are the real and imaginary parts of the current complex number C
+{
+ 
+/*   
+Above, the parts of Z, zr and zi, are both zero on 
+the first call for a given value of C, but they will 
+only very rarely ever be zero in subsequent recursive 
+calls.
+*/
+
+/*
+Start by checking to see if we are done. If the 
+parameter named iteration is less than the maximum, 
+there will be at least one more recursive call, with 
+an incremented iteration parameter. If this parameter 
+is equal to or greater than the maximum, the point C 
+is assumed to be within the actual Mandelbrot set, and 
+processingfor that point will stop.
+*/
+    if(iteration < maxIterations){
+
+        z2r = cr + sqr(zr) + -sqr(zi) // squaring zi needs to yield a negative
+                                      // because zi is the imaginary portion of
+                                      // Z. 
+
+        z2i = ci + 2*(zr * zi)        // compute the new imaginary part of Z.
+
+        distsq = abs(z2r) + abs(z2i)  // distsq: "distance squared"
+        
+        if(distsq > 4){               // If > 4, the point C (cr + ci) is not
+                                      // in the set, so we assign it a color
+                                      // and draw a square "pixel".
+
+            color = (mod(iteration, 360) * hueCh) + initHue
+            //Above, if iteration >= 360, we start the color sequence over.
+
+            SQUARE[h 1 color ]       // Use targeting with 100% to force 
+                                     // the exact computed color.
+
+            // Recursion stops here for the current value of C.
+
+        }else{
+
+            // If distsq <= 4, we iterate by recursion:
+            iterateOnC(iteration + 1, z2r, z2i, cr, ci)[]
+
+            // Above, iteration + 1 is received as new value of iteration by the new 
+            // invocation of iterateOnC. This call starts the process over.
+              
+        }
+    }
+}
+
+ 
+      
+ 
+
+
+
+
+
+
+

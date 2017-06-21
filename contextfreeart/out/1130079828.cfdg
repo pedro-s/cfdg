@@ -1,0 +1,32 @@
+startshape wow
+background {b -1}
+
+rule wow {
+	wo { r 15 }
+}
+rule wo {
+	w { }
+	w { flip 90 }
+}
+
+rule w {
+	o { }
+	o { r 36 }
+	o { r 72 }
+	o { r 108 }
+	o { r 144 }
+	o { r 180 }
+	o { r 216 }
+	o { r 252 }
+	o { r 288 }
+	o { r 324 }
+}
+
+rule o {
+	SQUARE { s 1 0.01 }
+	CIRCLE { x -.59 s 0.0005 b -1 }
+	o [ x 0.5 r 144.04 s 0.998  b 0.003 ]
+}
+
+
+

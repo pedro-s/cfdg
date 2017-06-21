@@ -1,0 +1,39 @@
+startshape START
+background { hue 200 sat .1 b 0.86 }
+tile {s 124 216}
+
+include i_polygons.cfdg
+
+rule START {
+LINE1{}
+LINE2{x 3.1 y 5.4}}
+
+
+
+rule LINE1 {20 * {y 10.8 hue 1} RIJ1 {}}
+rule RIJ1 {20 * {x 6.2 hue 2} ELEMENT {}}
+
+rule LINE2 {20 * {y 10.8 hue 1} RIJ2 {}}
+rule RIJ2 {20 * {x 6.2 hue 2} ELEMENT {}}
+
+
+rule ELEMENT { EL1 {hue  30}}
+rule ELEMENT { EL1 {hue 150}}
+rule ELEMENT { EL1 {hue 270}}
+
+
+rule EL1 19 {
+  polygon6sided {s 7  sat .6 b 0.11 hue 4}
+  polygon6sided {s 0.6  sat .6 b 0.3 hue 4}
+}
+
+rule EL1 0.000000001 {
+  CIRCLE {s 6  sat 1 b 1 hue 100}
+  CIRCLE {s 1  sat 1 b 0.5}
+}
+
+rule EL1 14 {
+  SQUARE {s 4  sat 0.01 b 0.89}
+  SQUARE {s 0.5  sat 0.6 b 0.8 hue 20}
+}
+

@@ -1,0 +1,26 @@
+startshape cuadturn4
+
+background  {b -1 }
+
+rule cuadturn4 {
+cuadturn3 { hue 2 sat 0.7425  }
+}
+
+rule cuadturn3 {
+cuadturn2 {}
+cuadturn3  [ y 5 x 100 skew 25 1 s 0.999 0.999 r -10  ]
+
+}
+
+rule cuadturn2 {
+cuadturn {}
+cuadturn { r 90 }
+cuadturn {r 180}
+cuadturn { r 270}ç
+}
+
+rule cuadturn {
+SQUARE { hue 29.4 sat 0.7120  }
+SQUARE { y 1.1  hue 50.2 sat 0.7029 b 0.8458  }
+cuadturn [ x 1.2 s 0.999 r 3 b 0.001 ]
+}

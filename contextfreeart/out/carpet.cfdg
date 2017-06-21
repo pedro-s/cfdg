@@ -1,0 +1,22 @@
+startshape begin
+background {b -1}
+
+rule begin {
+15* {y 1} trline {}
+}
+
+rule smth {
+	TRIANGLE {s 2 b 1 alpha -0.8}
+	CIRCLE {s 1.5 b -1}
+	smth {s -0.7 r 30}
+}
+
+rule smth 0.9 {
+	CIRCLE {s 2 b 1 alpha -0.8}
+	TRIANGLE {s 1.5 b -1}
+	smth {s -0.7 r 30}	
+}
+
+rule trline {
+24* {x 1 hue 15 saturation 15} smth {}	
+}

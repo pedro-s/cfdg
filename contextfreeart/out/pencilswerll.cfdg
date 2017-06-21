@@ -1,0 +1,30 @@
+startshape PENCIL
+background{h 220.33 sat 0.7725 b 0.5525}
+rule PENCIL
+{
+	APENCIL{}
+}
+rule APENCIL
+{
+	SQUARE{h 332.30 sat 0.5020 b 1.0000}
+	SQUARE{x 1 h 236.00 sat 0.1765 b 1.0000}
+	SQUARE2{x 2}
+	SQUARE2{x 3}
+	SQUARE2{x 4}
+	SQUARE2{x 5}
+	SQUARE2{x 6}
+	SQUARE2{x 7}
+	SQUARE2{x 8}
+	SQUARE2{x 9}
+	SQUARE2{x 10}
+	SQUARE2{x 11}
+	SQUARE2{x 12}
+	TRIANGLE{x 12.75 rotate 270 h 37.30 sat 0.8800 b 0.7569}
+	TRIANGLE{x 13.05 rotate 270 size 0.5}
+	APENCIL{x 15 rotate 146.5 size 0.9 h -1}
+}
+rule SQUARE2
+{
+	SQUARE{h 54.62 sat 0.9403 b 0.9116}
+	
+}

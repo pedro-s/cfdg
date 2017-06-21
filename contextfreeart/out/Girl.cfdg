@@ -1,0 +1,69 @@
+startshape koko
+
+rule koko{
+	ripsi{y -14 r 100}
+	silma{y -20 r 6}
+	kiekurat{}
+}
+
+rule kiekurat{
+	22*{r 3}kiekura {r 60}
+	kiekura {y -2.3 x 5 r 60}
+	6*{r 3}kiekura {y -3 x -11 r 140}
+}
+
+rule kiekura{
+	CIRCLE{hue 300 sat 1}
+	kiekura{y 1  s 0.99 r  1 b 0.01}
+}
+
+rule kiekura 0.02 {
+	CIRCLE{hue 300 sat 1}
+	kiekura{y 1  s 0.99 r  2 flip 90}	
+	kiekura{y 1  s 0.99 r  2 }
+}
+
+rule kiekura 0.001{}
+
+
+
+// the eye
+
+rule silma{
+	CIRCLE{y -3 x -1.1 s 2.3 hue 300 sat 1 b 0.3 skew 30 10 r 45}
+	CIRCLE{y -3 x -0.7 s 1.5 skew 30 30 r 40}
+	yluomi{r 90}
+	aluomi{y -6 r 90}
+}
+
+rule yluomi {
+	CIRCLE{s 0.1}
+	dot1{}
+}
+
+rule dot1{
+	CIRCLE{s 0.8}
+	yluomi{y 0.8 s 0.9 r 5 }
+}
+
+rule aluomi {
+	CIRCLE{s 0.9}
+	dot2{}
+}
+rule dot2{
+	CIRCLE{s 0.8}
+	aluomi{y 0.8 s 0.9 r -5 }
+}
+
+// eye lash
+
+rule ripsi {
+	CIRCLE{s 0.9 hue 300 sat 1 b 1}
+	dot{b 0.05}
+}
+
+rule dot{
+	CIRCLE{}
+	ripsi{y 1 s 0.9 r 3 }
+}
+

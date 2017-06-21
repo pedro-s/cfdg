@@ -1,0 +1,22 @@
+startshape A
+background {b -1}
+	rule A{
+		B {s 1 x .39 y -22.91  hue 100 sat 1 b 1 flip 90}
+		B {s 1 flip 180 x -.39 y 22.91 hue 50 sat 1 b 1}
+		B {s 1 flip 45 x -22.91 y -.39 hue 1 sat 1 b 1}
+		B {flip -45 x 22.91 y .39 hue 200 sat 1 b 1}
+		
+}
+
+
+	rule B{
+		C {s .9}			
+}
+
+
+	rule C{
+		400* {r 1 x 1} CIRCLE {s .7}
+		C {s .999 r 45}	
+}
+
+

@@ -1,0 +1,63 @@
+startshape HUB
+
+background {b -1}
+
+//Base shape/color
+rule BASE
+{
+	SQUARE {z 1 s 2 2 hue 360 sat 1 b 1}
+	//SQUARE {z 0 s 2 2 hue 15 sat 1 b 1 x 2 y 2}
+}
+
+//Center/Start
+rule HUB
+{	10 * {r 36} LINE {alpha -.3 x -100}}
+
+//Basic Line
+rule LINE
+{
+	BASE {}
+	LINE {x -1}
+}
+
+//Stop
+rule LINE .0002 {}
+
+//Curve
+rule LINE .01
+{
+	BASE {}
+	LINE {r 10 x -.5}
+}
+
+//Reverse Curve
+rule LINE .01
+{
+	BASE {}
+	LINE {r -10 x -.5}
+}
+
+//Arc
+rule LINE .01
+{
+	25 * {r 10} BASE {x -7}
+	LINE {r 300 x -.7 y -.7}
+}
+
+//Angle
+rule LINE .01
+{
+	BASE {}
+	LINE {r -90 x -.5}
+}
+
+//Reverse Angle
+rule LINE .01
+{
+	BASE {}
+	LINE {r 90 x -.5}
+}
+
+//Recurse
+rule LINE .001
+{	HUB {z 1 alpha -.3 s .6 .6}}

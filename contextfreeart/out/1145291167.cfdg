@@ -1,0 +1,54 @@
+startshape MATRIX
+background { sat 1 b -1 alpha 1 }
+
+rule MATRIX
+{
+  MATRIX { s 0.5 1 x -0.25 }
+  MATRIX { s 0.5 1 x +0.25 }
+}
+
+rule MATRIX
+{
+  MATRIX { s 1 0.5 y -0.25 }
+  MATRIX { s 1 0.5 y +0.25 }
+}
+
+rule MATRIX .3
+{
+  GREENGLYPH {}
+}
+
+rule GREENGLYPH { GLYPH { hue 120 sat 1 b 0.3 } }
+rule GREENGLYPH { GLYPH { hue 120 sat 1 b 0.4 } }
+rule GREENGLYPH { GLYPH { hue 120 sat 1 b 0.5 } }
+rule GREENGLYPH { GLYPH { hue 120 sat 1 b 0.6 } }
+rule GREENGLYPH { GLYPH { hue 120 sat 1 b 0.7 } }
+
+include i_pix.cfdg
+
+rule GLYPH { A_5by5 {} }
+rule GLYPH { B_5by5 {} }
+rule GLYPH { C_5by5 {} }
+rule GLYPH { D_5by5 {} }
+rule GLYPH { E_5by5 {} }
+rule GLYPH { F_5by5 {} }
+rule GLYPH { G_5by5 {} }
+rule GLYPH { H_5by5 {} }
+rule GLYPH { I_5by5 {} }
+rule GLYPH { J_5by5 {} }
+rule GLYPH { K_5by5 {} }
+rule GLYPH { L_5by5 {} }
+rule GLYPH { M_5by5 {} }
+rule GLYPH { N_5by5 {} }
+rule GLYPH { O_5by5 {} }
+rule GLYPH { P_5by5 {} }
+rule GLYPH { Q_5by5 {} }
+rule GLYPH { R_5by5 {} }
+rule GLYPH { S_5by5 {} }
+rule GLYPH { T_5by5 {} }
+rule GLYPH { U_5by5 {} }
+rule GLYPH { V_5by5 {} }
+rule GLYPH { W_5by5 {} }
+rule GLYPH { X_5by5 {} }
+rule GLYPH { Y_5by5 {} }
+rule GLYPH { Z_5by5 {} }

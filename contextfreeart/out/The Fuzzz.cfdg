@@ -1,0 +1,115 @@
+startshape TRUCKIN
+
+background{ b -1 }
+
+rule TRUCKIN{
+ARM {}
+}
+rule ARM{
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s 1 }
+CIRCLE { h 189.36 sat 1.0000 b 1.0000 s .985 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .98 }
+CIRCLE { h 326.31 sat 0.0401 b 1.0000 s.965 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.96 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .94 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .94 }
+CIRCLE { h 351.40 sat 0.9664 b 0.8895 s .93 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .92 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.90 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.90 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .89 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .88 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .86 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .86 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.84 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.84 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .82 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .82 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .80 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .80 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.78 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.78 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .76 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .76 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .74 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .74 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.72 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.72 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .70 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .70 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .68 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .68 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.66 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.66 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .64 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .64 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .62 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .62 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.60 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.60 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .58 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .58 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .56 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .56 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.54 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.54 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .52 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .52 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .50 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .50 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.48 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.48 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .46 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .46 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .44 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .44 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.42 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.42 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .40 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .40 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .38 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .38 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .36 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.36 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .34 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .34 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .32 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .32 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.30 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.30 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .28 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .28 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .26 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .26 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.24 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.24 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .22 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .22 }
+CIRCLE { h 326.31 sat 0.0401 b 1.0000  s .2 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .20 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.18 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .18 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .16 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .16 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .14 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .14 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.12 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.12 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .10 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .10 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .08 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s .08 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.06 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.06 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.04 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.04 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s .02 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.02 }
+CIRCLE { h 105.56 sat 0.9112 b 1.0000 s.01 }
+CIRCLE { h 0.00 sat 0.0000 b 0.0000 s.01 }
+ARM { y 0.2 size 0.99 rotate 250}
+
+}
+
+

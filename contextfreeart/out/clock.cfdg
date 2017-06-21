@@ -1,0 +1,16 @@
+/* copyright (c) 2012 by Jonas Kölker.  License: WTFPL, or contact me */
+startshape clock
+
+rule clock {
+    CIRCLE {s 1.01}
+    CIRCLE {b 1}
+     4*{r 90} {tick {y 0.475}}
+    12*{r 30} {tick {y 0.4875 s 0.5}}
+    60*{r  6} {tick {y 0.495 s 0.2}}
+    CIRCLE {s 0.05}
+    pointer {r (-(7/60*360))}
+    pointer {r (-(11/12*360 + 7/60/12*360)) s 0.75}
+}
+
+rule pointer {TRIANGLE {s 0.02 0.6}}
+rule tick {SQUARE {s 0.005 -0.05}}

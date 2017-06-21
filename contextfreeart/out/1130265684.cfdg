@@ -1,0 +1,52 @@
+startshape SCENE
+background { b -0.2 hue 100 sat 0.1}
+
+rule SCENE {
+	FULL_BRANCH { b 0.3 sat 0.8 hue 50}
+	SCENE { s 0.8 r 45 alpha -0.05 hue 1 } 
+}
+
+rule BRANCH {
+	SQUARE { s 1 30 }
+	CIRCLE  { y 8 s 5 2}
+	FULL_FLOW { y 15 }
+}
+
+rule FULL_BRANCH {
+	CIRCLE { s 7}
+	BRANCH { y 20 }
+	BRANCH { r 90 x -20 }
+	BRANCH { r 180 y -20 }
+	BRANCH { r 270  x 20  }
+}
+
+rule FLOW {
+	SHAPE { }
+	FLOW { s 0.99 y 1 r 5 }
+}
+
+rule FULL_FLOW {
+	FLOW { }
+	FLOW { flip 90 }
+	CIRCLE { s 5 19 y 13 alpha -0.5}
+	CIRCLE { s 4 15 y 12}
+	CIRCLE { s 1 5 y 12 b 0.5}
+
+}
+
+rule SHAPE 0.1 { TRIANGLE { s 1 5 r -90 x 1}}
+rule SHAPE 0.05 { TRIANGLE { s 1 10 r -90 x 2.5}}
+
+rule SHAPE 0.01 { 
+	CIRCLE { s 6 alpha -0.6 }
+	CIRCLE { s 3 }
+}
+
+rule SHAPE 0.09 {ARM { r -65 }}
+rule ARM 0.5 {ARM { flip 90 }}
+
+rule ARM {
+	SQUARE { }
+	ARM { s 0.9 y 1 r 5 alpha -0.01}
+}
+

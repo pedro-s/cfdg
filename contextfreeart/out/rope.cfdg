@@ -1,0 +1,39 @@
+startshape k       
+
+background {h 170 sat .7 b .8}
+
+rule k .01{} 
+rule k  {k{x 1}fl{}}                                 // straight
+
+//rule k  {til{r 60}                                  //  left turn
+//k{x (cos(4*20))  y  (sin(4*20)) r 20}}    
+// You may uncoment this rule.
+
+rule k {                                                 // right turn
+til{x (cos(-120)+cos(-80)) y (sin(-120)+sin(-80)) f 0  r -80}
+k{x (cos(20) + cos(120)) y (sin(-20)+sin(-60)) r -20}
+}
+
+rule fl {til{r 60}til{x .5 y (sin(-60)) f 0 r -60}}
+
+path til0 {  // You may   use this path in place of til                                                     
+    LINETO { x (cos(4*20))  y  (sin(4*20))}
+    LINEREL { x (cos(5*20))  y  (sin(5*20))}
+    LINEREL { x (cos(6*20))  y  (sin(6*20))}
+    LINEREL { x (cos(14*20))  y  (sin(14*20))}
+    LINEREL { x (cos(13*20))  y  (sin(13*20))}
+    LINEREL { x (cos(12*20))  y  (sin(12*20))}
+    LINETO { x 0 y 0}
+    CLOSEPATH{}
+    FILL{h 290 sat 0.6 b 0.7}
+    STROKE{width .01}
+}
+path til{
+    ARCTO { x (cos(4*20)+cos(5*20)+cos(6*20))  y  (sin(4*20)+sin(5*20)+sin(6*20)) r 3}
+    ARCREL { x (cos(14*20)+cos(13*20)+cos(12*20))  y  (sin(14*20)+sin(13*20)+sin(12*20))r -3}
+    ARCTO { x 0 y 0 r 3}
+    CLOSEPATH{}
+    FILL{h 290 sat 0.6 b 0.7}
+    STROKE{width .01}
+}
+

@@ -1,0 +1,67 @@
+startshape curl
+
+background { b -1 }
+
+rule curl  {
+	curlleft { b 1    }
+}
+
+//left more
+rule curlleft .85 {
+	draw{}
+	curlleft { s .985  r 4 y .5  b -.001}
+}
+// go right
+rule curlleft .02 {
+	draw{}
+	curlright { s .985  r 2 y .5 }
+} // branch
+rule curlleft .02 {
+	draw{}
+	curlleft { s .985  r 4 y .5  b -.001}
+	curlright { s .985  r -4 y .5  b -.001}
+}// left with curl
+rule curlleft .1 {
+	draw{}
+	curlleft { s .98  r 4 y .5 }
+	curlrightforever {  }
+}
+
+// right more
+rule curlright .85 {
+	draw{}
+	curlright { s .985  r -4 y .5  b -.001}
+}
+// go left
+rule curlright .02 {
+	draw{}
+	curlleft { s .985  r -2 y .5 }
+}
+// branch
+rule curlright .02 {
+	draw{}
+	curlright { s .985  r -2 y .5 }
+	curlleft { s .99  r -2 y .5 }
+}
+//right with curl
+rule curlright .1 {
+	draw{}
+	curlright { s .985  r -2 y .5 }
+	curlleftforever {}
+}
+
+// righthand curl
+rule curlrightforever  {
+	draw{}
+	curlrightforever { s .95  r 5 y .5 b -.03  }
+}
+// lefthand curl
+rule curlleftforever  {
+	draw{}
+	curlleftforever { s .95  r -5 y .5  b -.03}
+}
+
+rule draw {
+	SQUARE {  s .5 }
+}
+

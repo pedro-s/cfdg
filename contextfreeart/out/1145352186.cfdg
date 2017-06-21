@@ -1,0 +1,38 @@
+startshape pattern002
+
+rule pattern002 {
+	siebenfach1 { }
+	siebenfach2 { }
+	siebenfach3 { }
+	siebenfach4 { }
+	siebenfach5 { }
+	siebenfach6 { }
+	siebenfach7 { }
+}
+
+rule stern {
+    SQUARE {h 150 sat 1 s 3 }
+    stern { r 30 s 0.9987 b 0.25 h 0.5 r 0.25}
+}
+
+rule siebenfach1 {
+	7*{x 2.5} stern [x -7.5 y 7.5]
+}
+rule siebenfach2 {
+	7*{x 2.5} stern [x -7.5 y 5]
+}
+rule siebenfach3 {
+	7*{x 2.5} stern [x -7.5 y 2.5]
+}
+rule siebenfach4 {
+	7*{x 2.5} stern [x -7.5 y 0]
+}
+rule siebenfach5 {
+	7*{x 2.5} stern [x -7.5 y -2.5]
+}
+rule siebenfach6 {
+	7*{x 2.5} stern [x -7.5 y -5]
+}
+rule siebenfach7 {
+	7*{x 2.5} stern [x -7.5 y -7.5]
+}

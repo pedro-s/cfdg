@@ -1,0 +1,20 @@
+CF::Background = [b -1] 
+
+startshape start01
+
+shape start01 { sak2[b 1 sat .5 h 130 r -30] }
+
+shape sak {
+TRIANGLE[s 1.1 z 1 b -.6] 
+ball[z 1]
+sak2[r 90 s .4]
+}
+
+shape sak2 {
+sak[z -1]
+sak2[x 1.8 y 1.5 s .8 r 45  b -.07 h 50]
+}
+shape ball {
+CIRCLE[]
+ball[b -.5 s 0.6]
+}

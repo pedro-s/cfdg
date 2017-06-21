@@ -1,0 +1,39 @@
+startshape START 
+background { b -1 }
+
+rule START {
+	FLOWER { }
+	FLOWER { flip 180 y -20}
+}
+
+rule FLOWER {
+	LEAF { }
+	LEAF {  flip 90 }
+}
+
+rule LEAF{
+	CURVE1 { r -20 }
+	CURVE2 { r -180}
+
+	LEAF { x -0.1 b 0.1 s 0.99 alpha -0.08}
+}
+
+rule CURVE1 {
+	SHAPE { }
+	CURVE1 { y 0.5 s 0.99 r 2.5 }
+}
+rule CURVE1 0.03 { CURVE1 { flip 90 }}
+
+rule SHAPE { SQUARE { }}
+rule SHAPE 0.03 {
+	CIRCLE { s 2 3 }
+	CIRCLE { s 5 6 alpha -0.5 }
+}
+
+rule CURVE2 {
+	SHAPE2 { }
+	CURVE2 { y 5 s 0.9 r -1 }
+}
+
+rule SHAPE2 {SQUARE { }}
+rule SHAPE2 0.05 { CIRCLE { s 10 alpha -0.7 }}

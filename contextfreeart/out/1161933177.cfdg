@@ -1,0 +1,19 @@
+startshape spirale
+background { b -1 }
+
+rule spirale {
+tours {b 14 x 0 y 0}
+}
+
+rule tours {
+composantes {x 10 y 10 b 14}
+tours {x 4 y 14 r -90 s .98 hue 1.4 }
+}
+
+rule composantes {
+TRIANGLE { r 85 s .99,45 x 5 y 10}
+TRIANGLE { r 70 s .99,50 x 10 y 15}
+TRIANGLE { r 55 s .99,55 x 15 y 20}
+TRIANGLE { r 40 s .99,60 x 20 y 20}
+TRIANGLE { r 25 s .99,65 x 25 y 20}
+}

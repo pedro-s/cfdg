@@ -1,0 +1,29 @@
+startshape UnitSet
+
+tile { s .94 }
+
+rule UnitSet {
+	Unit { sat 1 b 1 a -.98 }
+}
+
+rule Unit {
+	RotSq {}
+	Sq { r 45 s .37 x .47 y .47}
+}
+
+rule SubSq {Sq [s .44 y .7]}
+
+rule RotSq {8*{r 45 h 5} SubSq {}}
+rule RotSq {8*{r 45 h 10} SubSq {}}
+rule RotSq {8*{r 45 h 20} SubSq {}}
+rule RotSq {8*{r 45 h 40} SubSq {}}
+
+rule Sq {
+	SQUARE {}
+	ColCentre {s .3}
+	RotSq {s .665}
+}
+
+rule ColCentre {CIRCLE {h 10}}
+rule ColCentre {CIRCLE {h 20}}
+rule ColCentre {CIRCLE {h 40}}

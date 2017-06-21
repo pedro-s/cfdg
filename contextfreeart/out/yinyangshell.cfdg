@@ -1,0 +1,39 @@
+startshape uno[sat -1]
+
+//RQW RSB AAQ ABP ABZ
+
+
+CF::Background = [b -.3 sat 1 h 10]
+CF::Size = [s 3.9 y -.3 ] 
+CF::ColorDepth = 16
+
+shape uno {
+
+	loop i=(2000) [s .997 z 1 y rand_static( .005)]  {
+		kkk=2*i
+		YY((rand_static(360)*i))[ s rand_static(.5,1)  y (sin(kkk) ) x cos(kkk ) sat -1]
+	}
+}
+
+
+shape YY(number giro)  {
+	Y[r giro]
+}
+
+
+shape Y {
+
+	PEN [b 1  r 0  ]     // Yang
+	PEN [b  .2  r -180  sat .9]     // Yin
+ 
+}
+
+shape PEN {
+
+SQUARE[ y -.7  r 45 a -.985 s 2.6 b -.75 sat 1 z -35]
+CIRCLE[ y .5  r 45  h 180 ]
+
+}
+
+
+

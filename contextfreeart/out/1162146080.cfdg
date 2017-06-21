@@ -1,0 +1,14 @@
+startshape START
+
+rule START {
+	SQ { sat 1 b 1 }
+}
+
+rule SQ {
+	SQUARE {}
+	SQ { s 0.33333 h 10 }
+	SQ { x 0.33333 s 0.33333 h 10 }
+	SQ { y 0.33333 s 0.33333 h 10 }
+	SQ { x -0.33333 s 0.33333 h 10 }
+	SQ { y -0.33333 s 0.33333 h 10 }
+}

@@ -1,0 +1,20 @@
+startshape START
+
+rule START {
+	QSTAR {}
+} 
+
+
+rule QSTAR {
+	5 * {s 0.5 y 16 } STAR { }
+}
+
+rule STAR {
+	100 * { r 3.6 x 2} LINE {}
+}
+
+rule LINE {
+	 TRIANGLE { s 20 1 r 90 }
+}
+
+

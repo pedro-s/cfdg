@@ -1,0 +1,40 @@
+startshape START
+background {hue 0 sat 1.0 b -1.0}
+
+rule START {
+	BASE { hue 247.2 sat 1.0 b 1.0 }
+	BASE { b -1.0 r 30 s .8}
+}
+
+rule BASE {
+	7* {r 51.42857 } ARM { }
+	//10* {r 36 } ARM { r 50}
+}
+
+rule ARM {
+	// this ARM
+	PIECES_A {r 6}
+
+	// another ARM
+	ARM {s .998 x 10 y 10 r 2}
+
+}
+
+rule PIECES_A {
+	PIECE {}
+	PIECES_B {s .999 x 2 y .3 r 1 hue + .13}
+	
+}
+
+rule PIECES_B {
+	PIECE {x 10 y -10 s 7 .3 }
+	PIECES_A {s .999 x 2 y .3 r 1 hue + .13}
+
+}
+
+
+rule PIECE 200000 {
+	CIRCLE {}
+	CIRCLE { x 1 y 1 }
+	CIRCLE { x 2 y 2 s 20 .5}
+}

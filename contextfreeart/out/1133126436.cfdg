@@ -1,0 +1,149 @@
+startshape stars
+background{hue 250 sat .3 b 1}
+
+rule stars
+{
+	star2{hue 250 sat .4 b .3 size .9 x -40 y 35}
+	star1{b 1 size 1.4 x -25 y 7}
+	star3{b 1 size .7 y 45 x -10}
+	star4{b 1 size 1.4 x 35 y 40}
+	star5{b 1 size 2 x 10 y 20}
+	star3{b 1 size 1.2 y -35 x 45}	
+	star2{b 1 size 1 x 45 y 10}
+	star4{b 1 size 1.4 x -25 y -40}
+	star2{hue 250 sat .4 b .3 size 2.2 x 5 y -20}
+}
+
+
+rule star5
+{
+	line5{}
+	line5{r 60}
+	line5{r -60}
+	line5{r 120}
+	line5{r -120}
+	line5{r 180}
+}
+
+rule star4
+{
+	line4{}
+	line4{r 60}
+	line4{r -60}
+	line4{r 120}
+	line4{r -120}
+	line4{r 180}
+}
+
+
+rule star3
+{
+	line3{}
+	line3{r 60}
+	line3{r -60}
+	line3{r 120}
+	line3{r -120}
+	line3{r 180}
+}
+
+rule star2
+{
+	line2{}
+	line2{r 60}
+	line2{r -60}
+	line2{r 120}
+	line2{r -120}
+	line2{r 180}
+}
+
+
+rule star1
+{
+	line{}
+	line{r 60}
+	line{r -60}
+	line{r 120}
+	line{r -120}
+	line{r 180}
+}
+
+rule line5
+{
+	SQUARE{size .2 20}
+	SQUARE{size .2 3 r 45 y 9.1 x 1.2}
+	SQUARE{size .2 3 r -45 y 9.1 x -1.2}
+	SQUARE{size .2 3 r -45 y 6.1 x 1.5}
+	SQUARE{size .2 3 r 45 y 6.1 x -1.5}
+	SQUARE{size .2 3 r 45 y 4.1 x 1.1}
+	SQUARE{size .2 3 r -45 y 4.1 x -1.1}
+	SQUARE{size .2 5 r 45 y -4.1 x 1.8}
+	SQUARE{size .2 5 r -45 y -4.1 x -1.8}
+	
+	SQUARE{size .2 5 r 45 y -.1 x 1.1}
+	SQUARE{size .2 5 r -45 y -.1 x -1.1}
+}
+
+rule line4
+{
+	line4a{}
+	line4a{size 1.4 r 30}
+}
+
+rule line4a
+{
+	SQUARE{size .2 5 r 45 y -4.1 x 1.8}
+	SQUARE{size .2 5 r -45 y -4.1 x -1.8}	
+	SQUARE{size .2 4 r 45 y -2.1 x 1.5}
+	SQUARE{size .2 4 r -45 y -2.1 x -1.5}
+}
+
+rule line3
+{
+	SQUARE{size .2 20}
+	SQUARE{size .2 5.2 r -45 y 8.1 x 1.8}
+	SQUARE{size .2 5.2 r 45 y 8.1 x -1.8}
+	SQUARE{size .2 3 r -45 y 4.1 x 1.1}
+	SQUARE{size .2 3 r 45 y 4.1 x -1.1}
+	SQUARE{size .2 5 r 45 y -4.1 x 1.8}
+	SQUARE{size .2 5 r -45 y -4.1 x -1.8}	
+	SQUARE{size .2 4 r 45 y -2.1 x 1.5}
+	SQUARE{size .2 4 r -45 y -2.1 x -1.5}
+	SQUARE{size .2 3 r -45 y 11.1 x 1.2}
+	SQUARE{size .2 3 r 45 y 11.1 x -1.2}
+	SQUARE{size .2 3 r 45 y 13.1 x 1.1}
+	SQUARE{size .2 3 r -45 y 13.1 x -1.1}
+}
+
+rule line2
+{
+	SQUARE{size .2 20}
+	SQUARE{size .2 5.2 r -45 y 8.1 x 1.8}
+	SQUARE{size .2 5.2 r 45 y 8.1 x -1.8}
+	SQUARE{size .2 4 r -45 y 6.1 x 1.5}
+	SQUARE{size .2 4 r 45 y 6.1 x -1.5}
+	SQUARE{size .2 3 r -45 y 4.1 x 1.1}
+	SQUARE{size .2 3 r 45 y 4.1 x -1.1}
+	SQUARE{size .2 4 r -45 y 2.1 x 1.5}
+	SQUARE{size .2 4 r 45 y 2.1 x -1.5}
+	SQUARE{size .2 2 r -45 y 10.1}
+	SQUARE{size .2 2 r 45 y 10.1}
+	SQUARE{size .2 3 r -45 y 9.1 x 1.1}
+	SQUARE{size .2 3 r 45 y 9.1 x -1.1}
+}
+
+rule line
+{
+	SQUARE{size .2 20}
+	SQUARE{size .2 5.2 r 45 y 8.1 x 1.8}
+	SQUARE{size .2 5.2 r -45 y 8.1 x -1.8}
+	SQUARE{size .2 4 r 45 y 6.1 x 1.5}
+	SQUARE{size .2 4 r -45 y 6.1 x -1.5}
+	SQUARE{size .2 3 r 45 y 4.1 x 1.1}
+	SQUARE{size .2 3 r -45 y 4.1 x -1.1}
+	SQUARE{size .2 5 r -45 y -4.1 x 1.8}
+	SQUARE{size .2 5 r 45 y -4.1 x -1.8}
+	SQUARE{size .2 4 r -45 y -2.1 x 1.5}
+	SQUARE{size .2 4 r 45 y -2.1 x -1.5}
+	SQUARE{size .2 3 r -45 y -.1 x 1.1}
+	SQUARE{size .2 3 r 45 y -.1 x -1.1}
+}

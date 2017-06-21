@@ -1,0 +1,49 @@
+startshape HUB
+tile {s 5}
+background {h 91.6 b .5 sat .7}
+rule HUB
+{
+    27 * {r 15} LINE{}
+}
+
+rule BASE
+{
+    CIRCLE {s 1   h 91.6 sat .7 b .8}
+    CIRCLE {s .7  h 91.6 sat .7 b .6}
+    CIRCLE {s .5  h 91.6 sat .7 b .4}
+    CIRCLE {s .25 h 91.6 sat .7 b .3}
+    CIRCLE {s .10 h 91.6 sat .7 b .2}
+    SQUARE {s .2 b -1}
+}
+
+rule BASE1
+{
+    CIRCLE {h 91.6 sat .7 b 1}
+    BASE   {s .9 b -1.2}
+}
+
+rule LINE
+{
+    BASE {}
+    LINE {r 5 s .99 y -.1 a -.02}
+}
+
+rule LINE
+{
+    BASE {}
+    LINE {r -5 s .99 y -.1 a -.02}
+}
+
+rule LINE .005
+{
+    BASE {}
+    LINE {r 5 s .99 y -.1 a -.02}
+    HUB {x 10 y 10 s .3}
+}
+
+rule LINE .005
+{
+    BASE {}
+    LINE {r -5 s .99 y -.1 a -.02}
+    HUB {x -10 y -10 s .3}
+}

@@ -1,0 +1,195 @@
+startshape village
+background { b -1 }
+//include ../../trees/koivu/koivu_olden.cfdg
+
+rule village {
+ 9* { s .9 y .8 x .5 z -10 }  vilrow [ ] 
+}
+rule vilrow {
+  4* { x 1.8 y -.1} makebase { z 200 s 1 .4}
+}
+
+rule makebase { makebase [ r 1] }
+rule makebase { makebase [ r -1] }
+//rule makebase { makebase [ s 1 1.1] }
+rule makebase { makebase [ y -.1 z .02] }
+rule makebase { makebase [ x .1] }
+rule makebase { makebase [ x -.1] }
+rule makebase { base [ ] }
+rule makebase .8 { makebase [ x -.5 ] makebirch [ x 1.5 y .1 z -1 s .1 .3] }
+rule base { ublock [ ] alternatives [ ]}
+rule alternatives 5 { }
+rule alternatives { alternatives [ s .6 ] }
+rule alternatives { bfront [ ] }
+rule alternatives { bback [ ] }
+rule alternatives { bright [ ] }
+rule bfront { base { s 1 x -0.6 y -0.12 z 3} }
+rule bback { base { s 1 x 0.6 y 0.12 z -3} }
+rule btop { base { y 1 } }
+rule bright { base { y -0.285 x 0.9 z 3} }
+
+rule ublock { block [ ] ub [ y 1 ] }
+rule ub { ublock [ ] }
+rule ub 2 { hhroof [ ]}
+
+rule makebirch 2 { makebirch [s  1.1] }
+rule makebirch { absflow [ ] }
+rule makebirch { absflow [ ] makebirch [x 1 y -.1 z .1]}
+rule makebirch { absflow [ ] makebirch [x .5 y .4 z -.4]}
+
+rule block {
+   hwall { y 0.009 s 0.9 1 skew 0 -16 z 2 hue 45.0 sat 0.7 b .7 }
+//   SQUARE { s 0.6 1 x 0.752 y -0.072 skew 0 7 b 1 z 1}
+   hwall { s 0.6 1 x 0.752 y -0.072 skew 0 7 z 1 hue 45.0 sat 0.7 b 0.4  }
+//   SQUARE { s 0.3 0.94 skew 0 -30 r 72.5 y 0.57 x 0.31 b 0.6}
+}
+
+//
+// house wall
+rule hwall {
+15* { } vnoise [ a -.7 ]
+5* { x .2 } hwindow [ z .1 x -.4 s .1 .15] 
+}
+
+rule hwindow { hwindow [ s 1.1 ] }
+rule hwindow { hwindow [ r 1 ] }
+rule hwindow {
+window [ s 1 1.2 b .2]
+hiwindow [ y -.1 s .85 b -1]
+}
+rule hwindow .1 { hdoor [ y -1.1 s 1.3 3 ] }
+rule hwindow .3 { }
+
+rule hiwindow .2 { hiwindow [ b 1 ] vbars4 [ z .1 b -1] }
+rule hiwindow { window [ ] }
+rule hiwindow { window [ ] vbars4 [ z .1 b 1] }
+
+
+rule hhroof {
+//  TRIANGLE { s .65 .93 x .75 y -.3 skew 10 8 z 1.2 hue 49.6 sat 0.3 b 0.1 }
+//  TRIANGLE { s .41 .75 x .8 y -.325 skew 4 6 z 1.2 hue 49.6 sat 0.3 b 0 }
+15* { } vnoise [ a -.7 x .75 y -.41 s .4 .95 r 37 hue 45.0 sat 0.7 b .3]
+  SQUARE [ a -.5 b -1 x .66 y -.23 z 2 r -17 s .2 .9  ]
+  SQUARE [ a -.5 b -1 x .92 y -.2 z 2 r 17 s .05 .75  ]
+  SQUARE [ b .1 x .93 y -.15 z 2 r 17.5 s .02 .82  ]
+  hrooftiles { s 1 1.8 y -.45 hue 49.6 sat 0.3 b 0.7 z 2.2 skew 30 -10 }
+  hroofpipe [ z -1 y .1]
+}
+
+
+// house roof
+rule hroof { hroof [ r 1 ] }
+rule hroof { hrooftiles [ ] hroofpipe [ ] }
+
+rule hrooftiles { 21* {x .05} hroofcol [ x -.49 ] }
+rule hroofcol { 10* {y .05 z .1} hrooftile [ s .05 ]}
+
+rule hrooftile { hrooftile [ y .01 ] }
+rule hrooftile { hrooftile [ y -.01 ] }
+rule hrooftile {
+  window [ r 180 ]
+  window [ r 180 s .95 b -.8]
+}
+
+rule hroofpipe { hroofpipe [ x .1 y -.02] }
+rule hroofpipe { 
+15* { } vnoise [ y .4 x .1 a -.7 s .1 .2 z 2 sat .5]
+makehsmoke [ y .65 x .1 s .05 .4  |hue 49.6 sat 0.3 b -0.7  ]
+}
+
+
+
+
+
+
+// smoke pillar
+rule makehsmoke { hsmoke [ hue 1|] }
+rule makehsmoke 6 { }
+
+rule hsmoke { smokething [ ]  hsmoke [ y .21 x .05 s .99 a -.01] }
+rule hsmoke 5 { hsmoke [x .10] }
+rule hsmoke 5 { hsmoke [x -.10] }
+rule hsmoke .01 { }
+
+rule smokething { makesmoke [ ] divide [ ] }
+rule makesmoke { ball [ s 3 ] }
+rule divide 0.01 { hsmoke [ y .5 x -.15 s .9] }
+rule divide { }
+
+rule  ball { CIRCLE [ b 1 ] CIRCLE [ ] ball [ s .9 ] }
+rule ball .1 { }
+
+
+
+
+// wall & pipe tiles
+rule drawnoise { SQUARE [ b -.2 ] }
+rule drawnoise { SQUARE [ b .2 ] }
+
+rule vnoise {
+drawnoise [ ]
+vnoise [ x -.25 s .5 1]
+vnoise [ x .25 s .5 1]
+}
+rule vnoise { hnoise [ ] }
+rule vnoise .4 { drawnoise [ ] }
+
+rule hnoise { vnoise [ r 90 ] }
+
+
+
+// window & door tiles
+
+rule window { SQUARE [ y -.25 ] CIRCLE [ y .25 ] }
+rule vbars4 { 4* { x .3 } SQUARE [ x -.5 s .05 1.5 ] }
+
+rule hdoor { SQUARE [ b .2 ] SQUARE [ b -.1 s .9] SQUARE [ y -.54 s 1.1 .1 ] SQUARE [ y -.64 s 1.3 .1 ] }
+
+// ground tile
+rule eng_tile {
+  20* { y .05 s 1 .97 } eng_pole [ s 1 .05 ]
+}
+rule eng_pole { eng_pole [ r 2 ] }
+rule eng_pole { eng_pole [ r -2 ] }
+rule eng_pole { SQUARE [ b 1] SQUARE [ b -1 s 1.1 .98 ] }
+
+
+// birches
+
+rule absflow {
+dweed [ s .1]
+absflow [ y .1 s .99 r .1]
+}
+rule absflow .5 { absflow [ flip 90 ] }
+rule absflow .2 { absflow [ r 1 ] }
+rule absflow .2 { absflow [ r -1 ] }
+rule absflow .05 { absflow [ r -1 ] absflow [ s .5 r 30 ]}
+
+
+rule dweed { SQUARE [] }
+
+
+
+rule absflow .01 { 
+tcbush [ s .5 y 6 ] 
+tcbush [ s .5 y 1 ] 
+absflow [ ]}
+
+rule tcbush {
+50* { r 117 x .1 y .1} 
+threecirc [ x -3 sat 1 hue 45 sat 0.7 b 0.65 ] 
+30* { r 11 x .2  y .1} 
+threecirc [ x 3 y -2  hue 45 sat 0.7 b 0.75 ] 
+}
+
+rule threecirc 3 { threecirc [ x .2 ] }
+rule threecirc {
+3* { r 120 } twocirc [ x 1 s .3 ]
+}
+
+rule twocirc { twocirc [ b .1 ] }
+rule twocirc 3 { twocirc [ hue .3 b -.02] }
+rule twocirc {
+CIRCLE [ s 2.5 x .3 a -.6 b -.1 sat -.5 hue -3]
+TRIANGLE [ s 2.3 sat 1 a 1]
+}

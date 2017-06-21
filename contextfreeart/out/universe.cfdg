@@ -1,0 +1,17 @@
+startshape universe
+
+background{b-1}
+
+rule universe{
+  curve{y-13.6 b 1 r 25.8 x 18}shining{}}
+rule shining{curves{x-10 y 45 r 25 b 1}
+  shining{x 50 y 50 s.9 b-.05 h 210 sat.1 r 38}}
+rule curves{
+  4*{r 90}circle{}}
+rule circle{
+  curve{}3*{r 9}circle{r-20 s.7}}
+path curve{
+  MOVETO{x 0 y 35}ARCTO{x 0 y 15 rx 15 ry -10 r 29}
+  MOVETO{x 0 y 30}ARCTO{x 0 y 0 rx 15 ry -10 r 10}
+  MOVEREL{x 0 y 15}ARCTO{x 0 y 0 rx 15 ry 10 r 5}
+  STROKE{}}

@@ -1,0 +1,10 @@
+startshape B
+
+rule B {SQUARE {} B { x 2 s .92 }}
+rule B .1 { B { r -45 } B { r 45 } }
+rule B .01 { A {s .2} }
+
+rule A { CIRCLE { } A { x 2 r 1 s .9999 b .0001} }
+rule A .002 { CIRCLE { } A2 { r -90 s .9 b .0001} }
+rule A2 {CIRCLE { } A { x 2 r -1 s .9999 b .0001}}
+rule A2 .002 { CIRCLE { } A { r 90 s .9999 b .0001}}

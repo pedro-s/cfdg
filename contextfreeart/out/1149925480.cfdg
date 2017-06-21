@@ -1,0 +1,59 @@
+startshape gravestone
+
+background {
+	hue 88
+	sat .3
+	}
+
+rule gravestone {
+	atom {}
+	gravestone {
+		s 0.99
+	}
+}
+
+rule atom {
+	proton{}
+}
+
+rule atom {
+	electron {}
+}
+
+rule proton {
+	SEED{}
+	proton {
+		y .25
+		r .25
+		s .999
+		b .0009
+		alpha -0.001
+	}
+}
+
+rule proton .005 {
+	electron{}
+}
+
+rule electron {
+	SEED{}
+	electron {
+		y .25
+		r -.25
+		s .999
+		b .0009
+		alpha -0.001
+	}
+}
+
+rule electron .005 {
+	proton{}
+}
+
+rule SEED {
+	CIRCLE {
+		hue 88
+		sat 1
+		b .25
+	}
+}

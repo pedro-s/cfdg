@@ -1,0 +1,111 @@
+/* Fully randomized with eight
+different size settings */
+
+
+startshape 16er
+
+rule Rechteck1 {
+	SQUARE {x -1		h -9 sat 0.65 b 0.6}
+	SQUARE {x -1 y -1 h 56 sat 0.55 b 1  }
+   SQUARE {          h -9 sat 0.65 b 0.6}
+	SQUARE {     y -1 h 56 sat 0.55 b 1  }
+}
+
+rule Rechteck2 {
+	Rechteck1 {r 90}
+}
+
+rule Rechteck3 {
+	Rechteck1 {r 180}
+}
+
+rule Rechteck4 {
+	Rechteck1 {r 270}
+}
+
+rule Quadrat1 {
+	SQUARE {x -1      h -9 sat 0.65 b 0.6}
+	SQUARE {          h 56 sat 0.55 b 1  }
+	SQUARE {     y -1 h -9 sat 0.65 b 0.6}
+	SQUARE {x -1 y -1 h 56 sat 0.55 b 1  }
+}
+
+rule Quadrat2 {
+	Quadrat1 {r 90}
+}
+
+rule Konfig {
+	Rechteck1 {}
+}
+rule Konfig {
+	Rechteck2 {x -1}
+}
+rule Konfig {
+	Rechteck3 {x -1 y -1}
+}
+rule Konfig {
+	Rechteck4 {y -1}
+}
+rule Konfig {
+	Quadrat1  {}
+}
+rule Konfig {
+	Quadrat2  {x -1}
+}
+
+rule 1er {
+	Konfig {}
+}
+
+rule 2er{
+	1er {x -2}
+	1er {}
+}
+
+rule 4er{
+	2er {}
+	2er {y -2}
+}
+	
+rule 9er{
+	4er {x -2     }
+	4er {x -2 y -2}
+	4er {     y -2}
+	4er {         }
+}
+
+rule 16er{
+	4er {x -4     }
+	4er {x -4 y -4}
+	4er {     y -4}
+	4er {         }
+}
+
+rule 64er{
+	16er {x -8     }
+	16er {x -8 y -8}
+	16er {     y -8}
+	16er {         }
+}
+
+rule 256er{
+	64er {x -16      }
+	64er {x -16 y -16}
+	64er {      y -16}
+	64er {           }
+}
+
+rule 1024er{
+	256er {x -32      }
+	256er {x -32 y -32}
+	256er {      y -32}
+	256er {           }
+}
+
+
+
+
+
+
+
+

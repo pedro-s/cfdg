@@ -1,0 +1,15 @@
+startshape foo
+
+background {b -1}
+
+rule foo {
+	SQUARE {}
+	foo {s 1 0.2 y 1 r 3}
+	foo {s 0.2 1 x 1 r 8}
+	foo {s 0.2 1 x -1 r 3}
+	foo {s 1 0.2 y -1 h 99}
+	foo {s 0.45 b 0.8 h 123 sat 0.9 r 1 x 0.01}
+
+	foo {x 12 s 0.8 r -12}
+	foo {flip 0 s 0.2}
+}

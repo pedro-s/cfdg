@@ -1,0 +1,58 @@
+startshape INIT
+background { hue 50 sat 0.2 b -0.15}
+
+rule INIT {
+	BRANCH { hue 10 sat 1 b 1 }	
+}
+
+rule START {
+	BRANCH { hue 5 sat -0.01 b -0.05}	
+}
+
+rule BRANCH { 
+	#SQUARE { }
+	SHAPE { }
+	BRANCH { y 1 s 0.99 }
+}
+
+rule BRANCH 0.04 {
+	BRANCH_ { flip 90}
+}
+
+rule BRANCH 0.007 {
+	START { r 10 s 0.9 }
+	START { r -10 s 0.9 }
+}
+
+rule BRANCH 0.008 {
+	CIRCLE { x 5 s 3}
+	SHAPE { }
+	BRANCH { y 1 s 0.9 r 5 }
+}
+
+rule BRANCH 0.008 {
+	CIRCLE { x 5 s 3}
+	START { x 5 s 0.7}
+	SHAPE { }
+	BRANCH { y 1 s 0.9 r 1 }
+}
+
+rule BRANCH_ 0.03 { }
+
+rule BRANCH_ {
+	SHAPE { }
+	BRANCH_ { y 1 s 1.05 r 5 }
+}
+
+rule BRANCH_ 0.25 {
+	BRANCH { }
+}
+
+rule SHAPE { 
+	SQUARE { }
+}
+
+rule DRAW {
+SQUARE { }
+
+}

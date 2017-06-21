@@ -1,0 +1,23 @@
+startshape ufo background{b-1}
+rule ufo{universe{s.015 z-10 x 1.5 y-.9}
+ UFO{}UFO{s.5 x.5 y-.8 sat.3 b.1}}
+rule universe{
+  curve{y-13.6 b.1 r 25.8 x 18}shining{}}
+rule shining{curves{x-10 y 45 r 25 b 1}
+  shining{x 50 y 50 s.9 b-.05 h 210 sat.1 r 38}}
+rule curves{4*{r 90}circle{}}
+rule circle{curve{}3*{r 9}circle{r-20 s.7}}
+path curve{
+  MOVETO{x 0 y 35}ARCTO{x 0 y 15 rx 15 ry -10 r 29}
+  MOVETO{x 0 y 30}ARCTO{x 0 y 0 rx 15 ry -10 r 10}
+  MOVEREL{x 0 y 15}ARCTO{x 0 y 0 rx 15 ry 10 r 5}
+  STROKE{}}
+rule UFO{U{r-45}F{}}
+rule U{
+  CIRCLE{h 240 sat.8}
+  SQUARE{h 60 b.7 sat.8 s.75}
+  U{skew 1 1 s.985 b.5}}
+rule F{
+ 10*{s.96 sat.5 b.5 h 2 a.1 z.1}CIRCLE{s.93 h 210}
+ 20*{s.9 x.021 y.021 b.05 z.1}
+ CIRCLE{s.3 b.7 x.2 y.2 sat.5 h 240}}

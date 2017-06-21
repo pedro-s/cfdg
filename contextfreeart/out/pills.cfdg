@@ -1,0 +1,59 @@
+startshape start
+
+rule start
+{
+  ownCircle{s 1.6}
+  3*{r 1200 hue 30} seed{y 2.5 s 0.9 b 0.2 sat 0.8}
+}
+
+rule seed
+{
+  element{}
+  seed{y 2.5 r 3 s 0.9 z -1}
+}
+
+rule seed 0.11
+{
+  ownCircle{s 1.6}
+  seed{y  2.5 s 0.9 r   0 b 0.2 z -1}
+  seed{x -2.5 s 0.9 r  90 b 0.2 z -1}
+  seed{x  2.5 s 0.9 r -90 b 0.2 z -1}
+}
+
+rule element
+{
+  CIRCLE{y  0.5}
+  CIRCLE{y -0.5}
+  SQUARE{}
+  aroundElement{}
+}
+
+rule aroundElement
+{
+  50*{y 0.02} CIRCLE{x  0.65 y -0.5 s .1}
+  50*{y 0.02} CIRCLE{x -0.65 y -0.5 s .1}
+  roundingA{x  0.65 y  0.5 s .1}
+  roundingB{x -0.65 y -0.5 s .1}
+}
+
+rule roundingA
+{
+  92*{y .2269 r 2} CIRCLE{}
+}
+
+rule roundingB
+{
+  92*{y -.2269 r 2} CIRCLE{}
+}
+
+rule ownCircle
+{
+  CIRCLE{}
+  aroundCircle{x  0.65 s .1}
+}
+
+rule aroundCircle
+{
+  180*{y .2269 r 2} CIRCLE{}
+}
+

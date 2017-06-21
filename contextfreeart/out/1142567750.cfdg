@@ -1,0 +1,12 @@
+startshape A
+background {b -0.5 sat 1 hue 140}
+rule A {
+ B { }
+ A {y -50 s 0.6 r 45}
+ A {y 50 s 0.6 r 45}
+ A {x 50 s 0.6 r 45}
+ A {x -50 s 0.6 r 45}
+}
+rule B { CIRCLE {s 40} CIRCLE {s 35 b 1} }
+
+

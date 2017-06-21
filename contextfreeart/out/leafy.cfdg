@@ -1,0 +1,65 @@
+startshape trunk
+
+rule leafroot{
+	CIRCLE{}
+	leafroot{s .992 y .1 r .5}
+}
+
+rule leafroot .01 {
+	leafroot{flip 90}
+}
+
+rule leafroot .2 {
+	leafroot{}
+	leafbody{}
+	leafbody{flip 90}
+}
+
+
+rule leafbody{
+	CIRCLE{}
+	leafbody{x .1 r .9 s .98 b .01}
+}
+
+
+rule trunk{
+	CIRCLE{}
+	trunk{y .1 s .994 r 2}
+}
+
+rule trunk .05 {
+	trunk{flip 90 b .01}
+}
+
+rule trunk .003 {
+	trunk{r 30 b .03}
+	trunk{}
+}
+
+rule trunk .05 {
+	trunk{}
+	branch{r 30 s .3 x .3 b .03}
+}
+
+rule branch{
+	CIRCLE{}
+	branch {x .1 s .996 r 1}
+}
+
+rule branch .1 {
+	branch{flip 0}
+}
+
+rule branch .001 {
+	branch {}
+	leafroot{r -10 s .4 hue 10 sat 1 b .5}
+}
+
+rule branch .02 {
+	branch {}
+	leafroot{flip 0 r 10 x -3 s .4 hue 10 sat 1 b .5 alpha 90%}
+}
+
+
+
+

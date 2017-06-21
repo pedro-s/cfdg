@@ -1,0 +1,13 @@
+startshape SCENE
+
+
+shape SCENE {
+ VERT [ hue 7]
+ loop 50 [ sat 0.5  hue 9  x 0.95  b 0.52  r 9 b 0.3 z -0.3] VERT  [ ]
+ 
+}
+
+shape VERT {
+        CIRCLE []
+	 loop 50 [ sat 0.3  hue 0.1  y 0.95   b 0.52 r 13 z 0.6 b 0.2 ] CIRCLE  [b 0.8  ]	
+}

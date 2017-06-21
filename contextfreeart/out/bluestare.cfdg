@@ -1,0 +1,40 @@
+startshape AA
+background {b -.5 sat .2 h 190}
+rule Horiz {
+10*[x -2 skew 9 0]
+CIRCLE [s 1 1 ]
+10*[x 2 skew -9 0]
+SQUARE [s 1 1 ]
+}
+
+rule AA{
+Zoom {b 1 a -1 |hue 190 hue 60|}
+CIRCLE {s 4 x -23.15 y 34}
+3*{s .97 x -.55 y 1.1 b .3 alpha -.2}
+Border2 {hue 170 sat .1  x -24 y -9}
+}
+
+rule Repeat {
+Horiz {}
+Repeat {s .93 r 12 y 1.5 flip 12}
+}
+
+rule Circular {
+15*{r 24 x 12 y 12}
+Repeat{r 12}
+}
+
+rule Zoom {
+Circular {}
+Zoom {s .99 x -.232 y .34 b -.012 a .02 sat .015 hue .08| z -1}
+}
+
+rule Border {
+360*{r 1 x .75}
+CIRCLE {s 14}
+}
+
+rule Border2 {
+20*{s .996 b .9 y .21 alpha -.6}
+Border{}
+}

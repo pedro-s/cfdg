@@ -1,0 +1,11 @@
+startshape TWIRL
+
+background {b -1}
+
+rule TWIRL {
+
+
+400* { r 1 h 3.81 sat 0.8352 b 1.0000 s 1}
+TRIANGLE { x 7 skew 80 4 }
+
+}

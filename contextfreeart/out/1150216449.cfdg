@@ -1,0 +1,56 @@
+startshape book
+
+background { hue 180 sat .5 b 1 }
+
+rule book { 26 * { y -26 } staff {} }
+
+rule staff { 1080 * { x .6 } seed {} }
+
+rule seed { sew {} }
+rule seed 0.0025 { sew {} swirl { s .5 } }
+rule seed 0.0025 { sew {} swirl { y -4 s .5 } }
+rule seed 0.0025 { sew {} swirl { y -8 s .5 } }
+rule seed 0.0025 { sew {} swirl { y -12 s .5 } }
+rule seed 0.0025 { sew {} swirl { y -16 s .5 } }
+rule seed 0.005 { sew {} CIRCLE { s 2 hue 20 } }
+rule seed 0.005 { sew {} CIRCLE { y -4 s 2 hue 20 } }
+rule seed 0.005 { sew {} CIRCLE { y -8 s 2 hue 20 } }
+rule seed 0.005 { sew {} CIRCLE { y -12 s 2 hue 20 } }
+rule seed 0.005 { sew {} CIRCLE { y -16 s 2 hue 20 } }
+rule seed 0.0025 {
+	sew {}
+	snote { s .5 hue 20 r 90}
+	snote { s .5 hue 20 r 270 }
+}
+rule seed 0.0025 {
+	sew {}
+	snote { s .5 y -4 hue 20 r 90 }
+	snote { s .5 y -4 hue 20 r 270 }
+}
+rule seed 0.0025 {
+	sew {}
+	snote { s .5 y -8 hue 20 r 90 }
+	snote { s .5 y -8 hue 20 r 270 }
+}
+rule seed 0.0025 {
+	sew {}
+	snote { s .5 y -12 hue 20 r 90 }
+	snote { s .5 y -12 hue 20 r 270 }
+}
+rule seed 0.0025 {
+	sew {}
+	snote { s .5 y -16 hue 20 r 90 }
+	snote { s .5 y -16 hue 20 r 270 }
+}
+
+rule sew { 5 * {y -4 } CIRCLE { hue 180 sat 1 b .75 } }
+
+rule swirl {
+	CIRCLE { hue 180 sat 1 b 0.25 }
+	swirl { s .999 y 2 r 4 b .0025 hue 0.001 }
+}
+
+rule snote {
+	CIRCLE { hue 180 sat 1 b 0.5 }
+	snote  { y 1 r 1 s .99 }
+}

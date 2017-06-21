@@ -1,0 +1,159 @@
+include i_curves.cfdg
+
+startshape LSCAPE
+
+rule LSCAPE {
+SKY { }
+MOUNTAINS { x -50 y 10 }
+ GRASS { }
+TREELINE { }
+}
+
+rule MOUNTAINS {
+8* { s 1.1 x 5.2 } MOUNT { z 20 }
+}
+
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { s 1.1 y 0.05 z -1}
+}
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { x 0.4 s 0.8 y 0.05 z -1}
+}
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { x 1 s 0.7 y 0.1 z -1}
+}
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { x -0.5 s 0.85 y 0.1 z -1}
+}
+
+rule MBASE {
+  FUP { hue 30 b 0.6 saturation 0.3 skew 1 2}
+}
+
+rule FUP {
+  TRIANGLE { s 1.6 1 }
+  FUP { s 0.9 y 0.05 b 0.01 }
+}
+rule FUP 0.1 {
+  TRIANGLE { }
+  FUP { x 0.1 s 0.8 r -10 }
+  FUP { s 0.9 y 0.05 b 0.01 }
+}
+rule FUP 0.1 {
+  TRIANGLE { }
+  FUP { x -0.1 s 0.8 r 10 }
+  FUP { s 0.9 y 0.05 b 0.01 }
+}
+
+rule SKY {
+SQUARE { x -21 y 20 s 61 20 b 1 a 1 } 
+60* { x 1 } VSKY { z 1 x -50 y 30 hue 200 b 1 saturation 1 }
+}
+rule VSKY {
+20* { y -1 a -0.1 } HSKY { }
+}
+
+rule HSKY {
+SQUARE {s 0.95}
+}
+rule HSKY {
+SQUARE { s 2 r 10}
+}
+
+
+
+
+
+rule GRASS {
+   SQUARE { s 61 14 x -21 y 2.9 b 0.6 saturation 0.7 hue 160 a 1} 
+   60* { x 1 } DECK { x -50 y -3 hue 130 b 0.8 saturation 0.8}
+}
+
+rule DECK {
+DECK { x .1 y 1.53 s 0.9 a -0.1} 
+STUCK { r 45}
+}
+
+rule DECK {
+DECK { x -.1 y .3 s 0.9 a -0.1} 
+STUCK { r 45}
+}
+
+
+rule STUCK {
+SQUARE { s 0.8 skew 100 0.1 r 5 }
+SQUARE { s 0.8 skew 0.1 100 r 5 }
+STUCK { r 10 s 0.8 b -0.02}
+}
+
+
+rule STUCK 0.1 {
+SQUARE { s 0.8 skew 100 0.1 r 5 }
+SQUARE { s 0.8 skew 0.1 100 r 5 }
+STUCK { r 10 s 0.8 b -0.05}
+}
+
+// ******
+// TREES
+
+rule TREELINE {
+5* {x -10 } D { z 300}
+}
+
+rule D {
+  D { s 0.6 y 4 x -4 z -1 a -0.1 }
+  D { s 0.6 y 4 x 4 z -1 a -0.1}
+  C { z 100 }
+}
+
+rule C {
+   SQUARE { s 1 }
+   B { s 0.2 }
+   C { s 0.95 y 1 }
+}
+
+rule C 7 {
+   SQUARE { s 1 }
+   C { s 0.974 y 1 }
+}
+
+rule C {
+   B { s 0.2 }
+   HALF { } 
+}
+
+rule HALF { 
+  C { s 0.7 r 10 y 1 }
+}
+rule HALF { 
+  C { s 0.8 r -10 y 1 }
+}
+
+rule C {
+   SQUARE { s 1 }
+   C { s 0.90 y 0.5 r -20 saturation 0.1 hue 0.1 b 0.1}
+   C { flip 90 s 0.90 y 0.5 r 20 saturation 0.1 b 0.1}
+   C { s 0.95 y 1 saturation 0.1 hue 0.1 b 0.1}
+   B { s 0.2 hue 1 b 0.8 saturation 0.8 }
+}
+
+
+rule B {
+    A { }
+    B { s 0.9 r -10 }
+}
+
+rule A {
+//   CIRCLE { s 1 }
+   A { s 0.9 x 4 r 5}
+  curveright_0.93_5 { }
+
+}

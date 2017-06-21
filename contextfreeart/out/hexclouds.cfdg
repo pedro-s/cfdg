@@ -1,0 +1,68 @@
+startshape HEXCLOUDS
+
+background {b -.7 sat .4 hue 100}
+
+rule ColorHEXSHAPE {
+	TRIANGLE {sat 1 hue 20 b .9 a -.9}
+}
+
+rule HEXCLOUDS {
+	DOUBLE {b .1}
+}
+
+rule HEXCLOUDS 1.5  {
+	SINGLE {b .1}
+}
+
+rule HEXSHAPE {
+	6*{r 60} ColorHEXSHAPE {y .5782 flip 180}
+}
+
+rule SINGLE 1.2 {
+	HEXSHAPE {}
+	SINGLE {s .92 y 1.7 flip 60 hue 1}
+}
+
+rule SINGLE .15 {
+	HEXSHAPE {}
+	HEXCLOUDS {s .92 y 1.7 flip 60 r 60}
+}
+
+rule SINGLE .15 {
+	HEXSHAPE {}
+	HEXCLOUDS {s .92 y 1.7 flip 60 r -60}
+}
+
+rule SINGLE .15 {
+	HEXSHAPE {}
+	HEXCLOUDS {s .92 y 1.7 flip 60 r -120}
+}
+
+rule SINGLE .15 {
+	HEXSHAPE {}
+	HEXCLOUDS {s .92 y 1.7 flip 60 r -180}
+}
+
+rule DOUBLE {
+	HEXSHAPE {}
+	HEXCLOUDS {s .9 y 1.7 flip 60}
+	HEXCLOUDS {s .9 y 1.7 flip 60 r 60}
+}
+
+rule DOUBLE {
+	HEXSHAPE {}
+	HEXCLOUDS {s .9 y 1.7 flip 60 r 120}
+	HEXCLOUDS {s .9 y 1.7 flip 60 r 180}
+}
+
+rule DOUBLE {
+	HEXSHAPE {}
+	HEXCLOUDS {s .9 y 1.7 flip 60 r 240}
+	HEXCLOUDS {s .9 y 1.7 flip 60 r 300}
+}
+
+rule DOUBLE {
+	HEXSHAPE {}
+	HEXCLOUDS {s .9 y 1.7 flip 60 r 60}
+	HEXCLOUDS {s .9 y 1.7 flip 60 r -60 }
+}

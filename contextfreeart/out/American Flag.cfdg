@@ -1,0 +1,104 @@
+startshape SQ
+
+CF::Background = [b -1 ] 
+
+shape SQ
+
+{
+
+SQUARE [h 240.00 sat 1.0000 b 0.9333 s -80%]
+
+loop 80 [ x .02]
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y .351 x .45]
+
+loop 80 [ x .02]
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y .151 x .45]
+
+loop 80 [ x .02]
+
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y -.051 x .45]
+
+loop 80 [ x .02]
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y -.251 x .45]
+
+loop 120 [ x .02]
+
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y -.451 x -.35]
+
+loop 120 [ x .02]
+
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y -.451 x -.35]
+
+loop 120 [ x .02]
+
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y -.651 x -.35]
+
+loop 120 [ x .02]
+
+
+SQUARE [ h 0.00 sat 1.0000 b 1.0000 s -10% y -.851 x -.35]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .32 ]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .32  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .22 ]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .22  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .12 ]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .12  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .02 ]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y .02  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y -.08 ]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y -.08  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y -.18 ]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y -.18  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y -.28  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.00 sat 0.0000 b 1.0000 r 45 x -.32 y -.28  r  90]
+
+loop 6 [ x .12]
+SQUARE [ s -5% h 0.000 sat 0.0000 b 1.0000 r 45 x -.32 y -.28  ] 
+
+
+
+
+
+
+
+
+
+
+
+}
+

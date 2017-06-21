@@ -1,0 +1,28 @@
+startshape Main
+
+rule Main {
+	Rings { sat 0.5 b 1 }
+	DropCircles { sat 0.5 b 1 }
+}
+
+rule DropCircles 15 { DropCircles { x 15 h 30 s 1.1 } }
+rule DropCircles 15 { DropCircles { r 90 h 25 s 0.9 } }
+rule DropCircles 7 { DropCircles { r 45 h 43 s 1.2 } }
+rule DropCircles 5 { Rings { } DropCircles { h 10 } }
+rule DropCircles { }
+
+rule Rings { BCircle { } Rings { s 0.75 a -0.5 } }
+
+rule BCircle { 100*{r 3.6} Blob {y 10 a -0.75 } }
+
+rule Blob { Bobble { } 15*{r 24} Thread { } }
+rule Blob { Blob { f 90 } }
+
+rule Bobble { CIRCLE { s 0.55 } Bobble { s 0.9 b -0.1 } }
+
+rule Thread 5 {
+	CIRCLE [ s 0.1 1 ]
+	Thread [ s 0.95 y 0.25 r 2.5 a -0.05]
+}
+rule Thread { Thread { f 90 } }
+rule Thread { Thread { r 2.5 } }

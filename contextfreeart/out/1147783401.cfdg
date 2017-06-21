@@ -1,0 +1,31 @@
+startshape fig5
+background { b -1 }
+
+rule fig5 {
+fig4 { }
+fig5 {r 95 x -14 y 10 s .7}
+}
+
+rule fig4 {
+fig3 { }
+fig3 { r 90 }
+fig3 { r 180 }
+fig3 { r 270 }
+}
+
+rule fig3 {
+fig2 {  }
+fig3 { r 45 s .9 x 3}
+}
+
+rule fig2 {
+fig1 { }
+fig1 { r 45 }
+fig1 { r 90 }
+}
+
+rule fig1 {
+CIRCLE { }
+TRIANGLE {x .75 }
+fig1 {x .75 s .9 b .1 hue 3 sat 1 r 55}
+}

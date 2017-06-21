@@ -1,0 +1,76 @@
+startshape FIELD
+
+background {b -1}
+
+rule FIELD {
+	TRAIL1 {b 1 r 45 hue 15 sat .6}
+	TRAIL1 {r 225 b 1 hue 15 sat .6}
+}
+
+rule TRAIL1 {
+	CIRCLE {}
+	TRAIL1 {r 5 x 2 s 0.99 b 0.01}
+}
+
+rule TRAIL1 0.1 {
+	CIRCLE {}
+	TRAIL1{}
+	TRAIL2 {}
+}
+
+
+rule TRAIL2 {
+	CIRCLE {}
+	TRAIL2 {r -2 x 2 s 0.99  b 0.01}
+}
+
+rule TRAIL2 0.01 {
+	CIRCLE {}
+	TRAIL1 { b 0.01 h 1}
+}
+
+rule TRAIL2 0.01 {
+	CIRCLE {}
+	TRAIL3 { b 0.01}
+}
+
+rule TRAIL2 0.01 {
+	CIRCLE {}
+	TRAIL4 { b 0.01 h 2}
+}
+
+rule TRAIL2 0.01 {
+	CIRCLE {}
+	TRAIL5 { b 0.01 h 2}
+}
+
+rule TRAIL3 {
+	CIRCLE {}
+	TRAIL3 {r -6 x 2 s 0.995  b 0.01}
+}
+
+rule TRAIL3 0.01 {
+	CIRCLE {}
+	TRAIL1 { b 0.01}
+	TRAIL3 {h 2}
+}
+
+rule TRAIL4 {
+	CIRCLE {}
+	TRAIL4 {r -5 x 2 s 0.992  b 0.01}
+}
+
+rule TRAIL4 0.01 {
+	CIRCLE {}
+	TRAIL1 { b 0.01 h 2}
+}
+
+rule TRAIL5 {
+	CIRCLE {}
+	TRAIL4 {r 1.7 x 2 s 0.992  b 0.01}
+}
+
+rule TRAIL5 0.01 {
+	CIRCLE {}
+	TRAIL2 { b 0.01 h 2}
+}

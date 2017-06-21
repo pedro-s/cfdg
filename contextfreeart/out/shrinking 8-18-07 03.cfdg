@@ -1,0 +1,54 @@
+
+
+/*
+
+		(Title)
+
+*/
+
+
+background { b 1 }
+
+startshape start
+
+rule start{
+
+	shrink{ hue 0 |hue 60 sat 0.7 b 0.9 alpha 1 }
+
+}
+
+
+
+rule shrink{
+
+	shrink1 { r 20 }
+	shrink2 { r 20 }
+	shrink3 { r -20 }
+	shrink4 { r -20 }
+
+}
+
+rule shrink1{
+	SQUARE{ }
+	//CIRCLE{ }
+	shrink [x -0.25 y -0.25 s 0.5 hue -0.2| z 1 ]
+}
+
+
+rule shrink2{
+	SQUARE{ }
+	//CIRCLE{ }
+	shrink [x -0.25 y  0.25 s 0.5 hue 0 z 1 ]
+}
+
+rule shrink3{
+	SQUARE{ }
+	//CIRCLE{ }
+	shrink [x  0.25 y -0.25 s 0.5 hue 0 z 1 ]
+}
+
+rule shrink4{
+	SQUARE{ }
+	//CIRCLE{ }
+	shrink [x  0.25 y  0.25 s 0.5 hue 0.2| z 1 ]
+}

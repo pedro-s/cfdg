@@ -1,0 +1,13 @@
+startshape TRIANGLES
+background{ b -1 } 
+
+rule TRIANGLES { 
+THING {b 1 hue 120.0 sat 1.0000 b 1.0000} 
+TRIANGLES {s .99 h 100 r 8} 
+}
+
+rule THING {
+TRIANGLE{ }
+SQUARE {s .01 x -.05 y .65 h 100}
+SQUARE {s .01 r 45 x -.05 y .65 h 100}
+}

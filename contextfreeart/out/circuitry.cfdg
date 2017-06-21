@@ -1,0 +1,33 @@
+startshape GENERATE
+background { b -1}
+
+rule GENERATE {
+	STARFIELD {h 1 sat 1 b 1}
+}
+
+rule STARFIELD 5{
+	STAR{}
+	STARFIELD{r 45 s .9 a -.1 h 10}
+}
+
+rule STARFIELD .75{
+	STAR{}
+	STARFIELD{r 45 s .9 a .1 h -10}
+}
+
+rule STARFIELD 5{
+	GENERATE{h 20 a -.2}
+}
+
+rule STAR 10{ CIRCLE{b 1 s 3} STAR{x 6 s .9 a -.1} }
+rule STAR 10{ CIRCLE{b 1 s 3} STAR{x -6 s .9  a -.1} }
+rule STAR 10{ CIRCLE{b 1 s 3} STAR{y 6 s .9  a -.1} }
+rule STAR 10{ CIRCLE{b 1 s 3} STAR{y -6 s .9  a -.1} }
+rule STAR .5{ CIRCLE{b 1 s 3} STAR{x 6 s 1.1 a -.1} }
+rule STAR .5{ CIRCLE{b 1 s 3} STAR{x -6 s 1.1  a -.1} }
+rule STAR .5{ CIRCLE{b 1 s 3} STAR{y 6 s 1.1  a -.1} }
+rule STAR .5{ CIRCLE{b 1 s 3} STAR{y -6 s 1.1  a -.1} }
+rule STAR .1{ STARFIELD{r 45 y 10 s .5} }
+rule STAR .1{ STARFIELD{r 45 x 10 s .5} }
+rule STAR .1{ STARFIELD{r 45 y -10 s .5} }
+rule STAR .1{ STARFIELD{r 45 x -10 s .5} }

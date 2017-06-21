@@ -1,0 +1,32 @@
+startshape lol
+
+background{b -1}
+
+rule lol
+{
+	5*{x 5 r (360/5)}
+	{
+		HOLY{ s 0.1}
+	}
+}
+
+rule HOLY
+{
+	6*{r (360/6)}
+	{
+		circles{}
+	}
+}
+
+rule circles
+{
+	dot{s 2}
+	circles[s 0.9975 x 0.5 r 0.1 h 0.1]
+}
+
+rule dot
+{
+	CIRCLE{b 0.7 sat 1 h 120 z 1 }
+	CIRCLE{b 0 s 3}
+	CIRCLE{b 1 z -1 s 6}
+}

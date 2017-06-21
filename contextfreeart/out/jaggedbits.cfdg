@@ -1,0 +1,38 @@
+startshape hubert2
+
+
+rule squarelong {  // probability is 0.5 / (0.5 + 1 + 2), or 1/7
+    SQUARE {s 2 hue 180}
+}
+
+rule squarelong {  // probability is 0.5 / (0.5 + 1 + 2), or 1/7
+    SQUARE {x 2 s 1}
+}
+
+rule squarelong {  // probability is 0.5 / (0.5 + 1 + 2), or 1/7
+    SQUARE {y .5 s 1 hue 30}
+}
+
+//rule squarelong {  // probability is 0.5 / (0.5 + 1 + 2), or 1/7
+//    SQUARE {y 1 r 90}
+//}
+
+//rule squarelong{  // probability is 0.5 / (0.5 + 1 + 2), or 1/7
+//    SQUARE {r 90 s 1}
+//}
+
+//rule squarelong {  // probability is 0.5 / (0.5 + 1 + 2), or 1/7
+//    SQUARE {y 2}
+//}
+
+
+
+rule hubert1 {
+	12 * {x 1.5} squarelong {sat 2 hue .6 b .5}
+}
+
+rule hubert2{ 
+	60*{r 6 x 1 y 4 s .9}hubert1{alpha -.5}
+	
+60*{r 6  x 1.02 y 4 s .9}hubert1{r 4 alpha .1 z -1 b .3}
+	}

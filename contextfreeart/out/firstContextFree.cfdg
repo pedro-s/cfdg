@@ -1,0 +1,23 @@
+startshape TEST
+
+rule TEST {
+ CURL {}
+ CURL {r 120}
+ CURL {r 240}
+}
+
+rule CURL {
+ STAR {}
+ CURL {r 20 x .9 s .95}
+}
+
+rule STAR {
+ ITEM {b 1}
+ ITEM {b 1 r 40}
+ ITEM {b 1 r 80}
+}
+
+rule ITEM {
+  TRIANGLE {}
+  ITEM {r 3 s .95 b -.05}
+}

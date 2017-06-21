@@ -1,0 +1,136 @@
+startshape engraving 
+background { b -1 }
+
+
+rule engraving {
+  11* { x .5 } eng_tile [ x -.5 y -.5 s .6 4 z -100]
+  housecol [ ]
+}
+
+rule housecol { 5* { y .4 z -20 } houserow [ ] }
+rule houserow { 5* { x 1 } makehouse [ s .9 ] }
+
+
+// different kinds of houses
+
+rule makehouse { makehouse [ y .1 z -1] }
+rule makehouse 2 { makehouse [ x .1 ] }
+rule makehouse 2 { makehouse [ x -.1 ] }
+rule makehouse { house [ ] }
+rule makehouse .1 { }
+
+rule house {
+hwall [ s 1 .4 hue 45.0 sat 0.7 b 0.5  ]
+hroof [ y .15  hue 49.6 sat 0.3 b 0.7 z 1]
+}
+
+rule house .2 { tower [ ] }
+
+
+// house wall
+rule hwall {
+15* { } vnoise [ a -.7 ]
+5* { x .2 } hwindow [ z 2 x -.4 s .1 .15] 
+}
+
+rule hwindow { hwindow [ s 1.1 ] }
+rule hwindow { hwindow [ r 1 ] }
+rule hwindow {
+window [ s 1 1.2 b .2]
+hiwindow [ y -.1 s .85 b -1]
+}
+rule hwindow .1 { hdoor [ y -1.1 s 1.3 3 ] }
+rule hwindow .3 { }
+
+rule hiwindow .2 { hiwindow [ b 1 ] vbars4 [ z 1 b -1] }
+rule hiwindow { window [ ] }
+rule hiwindow { window [ ] vbars4 [ z 1 b 1] }
+
+
+
+
+
+// house roof
+rule hroof { hroof [ r 1 ] }
+rule hroof { 21* {x .05} hroofcol [ x -.49 ] hroofpipe [ ] }
+
+rule hroofcol { 10* {y .05 z .1} hrooftile [ s .05 ]}
+
+rule hrooftile { hrooftile [ y .01 ] }
+rule hrooftile { hrooftile [ y -.01 ] }
+rule hrooftile {
+  window [ r 180 ]
+  window [ r 180 s .95 b -.8]
+}
+
+rule hroofpipe { hroofpipe [ x .1 ] }
+rule hroofpipe { 
+15* { } vnoise [ y .4 x .1 a -.7 s .1 .2 z 2 sat .5]
+makehsmoke [ y .65 x .1 s .05 .1  |hue 49.6 sat 0.3 b -0.7  ]
+}
+
+
+
+
+// towers
+
+rule tower { 
+6* { y .2 } hwall [ s .4 .2 hue 45.0 sat 0.7 b 0.5  ]
+hdoor [ s .1 .15 z 4]
+hroof [ y 1 s .4 .4 z 4 ]
+}
+
+
+
+
+
+// smoke pillar
+rule makehsmoke { hsmoke [ ] }
+rule makehsmoke 3 { }
+
+rule hsmoke { smokething [ ]  hsmoke [ y .21 x .05 s .99 a -.01] }
+rule hsmoke 5 { hsmoke [x .10] }
+rule hsmoke 5 { hsmoke [x -.10] }
+rule hsmoke .01 { }
+
+rule smokething { makesmoke [ ] divide [ ] }
+rule makesmoke { ball [ s 3 ] }
+rule divide 0.01 { hsmoke [ y .5 x -.15 s .9] }
+rule divide { }
+
+rule  ball { CIRCLE [ b 1 ] CIRCLE [ ] ball [ s .9 ] }
+rule ball .1 { }
+
+
+
+
+// wall & pipe tiles
+rule drawnoise { SQUARE [ b -.2 ] }
+rule drawnoise { SQUARE [ b .2 ] }
+
+rule vnoise {
+drawnoise [ ]
+vnoise [ x -.25 s .5 1]
+vnoise [ x .25 s .5 1]
+}
+rule vnoise { hnoise [ ] }
+rule vnoise .4 { drawnoise [ ] }
+
+rule hnoise { vnoise [ r 90 ] }
+
+
+
+// window & door tiles
+
+rule window { SQUARE [ y -.25 ] CIRCLE [ y .25 ] }
+rule vbars4 { 4* { x .3 } SQUARE [ x -.5 s .05 1.5 ] }
+
+rule hdoor { SQUARE [ b .2 ] SQUARE [ b -.1 s .9] SQUARE [ y -.54 s 1.1 .1 ] SQUARE [ y -.64 s 1.3 .1 ] }
+
+// ground tile
+rule eng_tile {
+  20* { y .05 s 1 .97 } eng_pole [ s 1 .05 ]
+}
+rule eng_pole { eng_pole [ r 2 ] }
+rule eng_pole { eng_pole [ r -2 ] }
+rule eng_pole { SQUARE [ b 1] SQUARE [ b -1 s 1.1 .98 ] }

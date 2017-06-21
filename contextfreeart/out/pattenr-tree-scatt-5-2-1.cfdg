@@ -1,0 +1,66 @@
+startshape col
+background { b -.8 sat .3 }
+
+rule col { build { hue -40 |hue 100 sat .7 } }
+rule build {
+	cub { hue 20 }
+	cont { } }
+rule cont {
+	build { y .707 s 1.03 z .1 b .1}
+}
+rule cont {	cont { s .95 } }
+rule cont {	cont { r 1 } }
+rule cont {	cont { r -1 } }
+rule cont {	cont { x .1 } }
+rule cont {	cont { x -.1 } }
+rule cont .1 {
+	cont { }
+	cont { r 30 x -.05 s .75 hue .5| b -.7 sat .1}
+}
+rule cont .1 {
+	cont { }
+	cont { r -30 x .25 s .75 hue .5| b -.7 sat .1}
+}
+
+rule cont .1 { }
+
+rule cub {
+	top { b .6 s 1 .25 y .449  sat -.1}
+	2* { flip 90 b .4 hue -20} side { s .715 x .3425 skew 2.5 14 }
+}
+
+rule top {
+	d { r 45}
+}
+rule side {
+	draw { }
+} 
+
+rule draw { 
+//	SQUARE { }
+	cc  { } 
+}
+rule cc {
+	d { }
+	cc { s .5 x -.25 y -.25}
+	cc { s .5 x -.25 y .25}
+	cc { s .5 x .25 y -.25}
+	cc { s .5 x .25 y .25}
+}
+rule cc { d { } 
+	build { s .2 r -90} 
+}
+rule cc {
+	d { }
+	cc { s .75 }
+	cc { s .25 x -.375 y -.375}
+	cc { s .25 x -.375 y .375}
+	cc { s .25 x .375 y -.375}
+	cc { s .25 x .375 y .375}
+}
+
+rule d {
+
+	CIRCLE { b .5 s 1.2 }
+	SQUARE { b -.5}
+}

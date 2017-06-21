@@ -1,0 +1,179 @@
+startshape couple
+
+background{hue 0 sat .75 b -.75}
+
+rule couple{
+	pelvis{b .8} //start up white skeleton with its pelvis
+	pelvis{hue 120 sat 1 b .8 x 8 z 10} //start up green skeleton with its pelvis
+}
+
+rule pelvis 36{
+	pelvis{r 1}
+}
+
+rule pelvis 36{
+	pelvis{r -1}
+}
+
+rule pelvis{
+	TRIANGLE{r 180 s 5 2}
+	TRIANGLE{r 180 s .35 2.2 y .125 z -1 b -.4} //pelvic vertebra
+	lumbar{y 1} //continue spine
+	thigh{x 1.6 y -.5} //left leg
+	thigh{x -1.6 y -.5 flip 90} //right leg
+}
+
+rule lumbar 5{
+	lumbar{r 6}
+}
+
+rule lumbar 5{
+	lumbar{r -6}
+}
+
+rule lumbar{
+	5*{y .4}CIRCLE{s .35}
+	thoracic{y 2}
+}
+
+rule thoracic 5{
+	thoracic{r 6}
+}
+
+rule thoracic 5{
+	thoracic{r -6}
+}
+
+rule thoracic{
+	12*{y .4 s .9 1}vertebra{}
+	scapula{y 4.8 x .35 z -1} //left shoulder
+	CIRCLE{s 2 .3 y 4.8 x 1.2 z 1 b 1 r -15} //left clavicle
+	scapula{y 4.8 x -.35 z -1 flip 90} //right shoulder
+	CIRCLE{s 2 .3 y 4.8 x -1.2 z 1 b 1 r 15} //right clavicle
+	neck{y 5}
+}
+
+rule neck 5{
+	neck{r 6}
+}
+
+rule neck 5{
+	neck{r -6}
+}
+
+rule neck{
+	SQUARE{s .25 2 z -1 b -.4 y 1}
+	skull{y 2}
+}
+
+rule skull{
+	CIRCLE{s 2 3}
+	CIRCLE{s .7 x -.4 z 1 b -.6}
+	CIRCLE{s .7 x .4 z 1 b -.6}
+}
+
+rule vertebra{
+	CIRCLE{s .35}
+	rib{x .4}
+	rib{x -.4 flip 90}
+}
+
+rule rib{
+	SQUARE{s .3}
+	rib{x .25 r 2 s .9}
+}
+
+rule scapula{
+	TRIANGLE{s 2 1.8 y -.8 x .6 r 165 b -.25}
+	arm{x 2 y -.5 r 30 z 5 b 1}
+}
+
+rule arm 10{
+	arm{r 9}
+}
+
+rule arm 10{
+	arm{r -9}
+}
+
+rule arm{
+	TRIANGLE{s .35 4.8 y -1.2 r 180}
+	TRIANGLE{s .35 4.8 y -3}
+	CIRCLE{y -4.6 s .35} //elbow
+	forearm{y -4.6 r -45}
+}
+
+rule forearm 5{
+	forearm{r -18}
+}
+
+rule forearm{
+	SQUARE{s .2 4.2 y -2.35} //ulna
+	SQUARE{s .15 4.2 y -2.35 r 6 z -1 b -.4} //radius
+	hand{y -4.7}
+}
+
+rule hand 10{
+	hand{r 6}
+}
+
+rule hand 10{
+	hand{r -6}
+}
+
+rule hand{
+	CIRCLE{s .4}
+	4*{r 15 s .85}finger{y -.4}
+	finger{y -.4 s 1 .6 flip 90 r -45} //thumb
+}
+
+rule finger{
+	SQUARE{s .15}
+	finger{s .95 r -1 y -.15}
+}
+
+rule finger .1{
+	SQUARE{s .15}
+	finger{s .95 r -15 y -.15}
+}
+
+rule thigh 7{
+	thigh{r 6}
+}
+
+rule thigh 5{
+	thigh{r -6}
+}
+
+rule thigh{
+	CIRCLE{s .6} //hip
+	TRIANGLE{y -2.7 s .4 8 r 180}
+	TRIANGLE{y -5 s .4 8}
+	CIRCLE{s .6 y -7.7} //knee
+	shin{y -7.7} //leg below the knee
+}
+
+rule shin 5{
+	shin{r -6}
+}
+
+rule shin{
+	SQUARE{y -3.8 s .3 6.8} //tibia
+	SQUARE{y -3.8 s .25 6.8 r -6 z -1 b -.4} //fibula
+	CIRCLE{s .6 y -7.6}
+	foot{y -7.6}
+}
+
+rule foot{
+	5*{r 5 s .9}toe{x .6}
+}
+
+rule toe{
+	SQUARE{s .3}
+	toe{s .94 r -1 x .2}
+}
+
+rule toe .1{
+	SQUARE{s .3}
+	toe{s .94 r -10 x .2}
+}

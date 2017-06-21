@@ -1,0 +1,15 @@
+startshape Huh
+ 
+background {sat .91 hue 215}
+
+rule Huh {
+4* {r 90} TRIANGLE {}
+17* {r 21} CIRCLE {x -.65 y -.03 s .09 b 1}
+CIRCLE {s .09 b 1}
+Huh {y 10.0 size 0.99 rotate 110 brightness 0.01}
+}
+
+
+
+
+ 

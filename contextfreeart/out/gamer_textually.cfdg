@@ -1,0 +1,30 @@
+// Gamer Textually
+// variation: OFC
+
+background { b -1 }
+startshape ctt_design_start
+      rule ctt_design_start {
+				ctt_layout_snowflake_do { z -1 }
+				gamertheory {}
+			}
+
+// ----------------------------------------------
+
+// ## Fonts ##
+include ../../ctt/ctt_fontmap_default.cfdg  // default
+include ../../fonts/ctt_fontmap_block_black.cfdg
+include ../../texts/gamertheory-tags-top100.cfdg
+
+// ## Layouts ##
+include ../../ctt/ctt_layout_default.cfdg // default
+include gamertheory_22.cfdg
+include ../../layouts/ctt_layout_snowflake_p.cfdg
+
+// ## Objects ##
+include ../../ctt/ctt_object_default.cfdg // default
+
+// ## Custom Layouts and Objects ## //
+rule ctt_object { tag { b 1 s .3 a -.5 r 30 hue 60 } }
+rule ctt_object_bg 1000000000000 { }
+rule ctt_layout   .5 { ctt_layout { r   5  } }
+rule ctt_layout   .5 { ctt_layout { r  -5  } }

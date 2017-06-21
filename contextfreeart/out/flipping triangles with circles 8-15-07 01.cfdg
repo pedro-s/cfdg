@@ -1,0 +1,160 @@
+
+
+/*
+
+		"TRIANGLE FLIPPER"
+
+	Uses the "flip" command to draw a triangle with 
+	one of its sides abutting a randomly chosen side 
+	of the previously drawn triangle.
+
+	The start rule has three calls to rule flipper01, 
+	each with a different starting color, three 
+	calls to rule flipper02 and three calls to flipper03.  
+	I think the rendered image generally looks best when 
+	only one of them is used at a time.
+
+	The value of hue is changed differently in the rules 
+	flipper01, flipper02 and flipper03.  The rule flipper01 
+	uses the standard hue parameter; rules flipper02 and 
+	flipper03 use the "targeted" version of the hue parameter.  
+	Whichever version of the hue parameter is used, the values 
+	of the hue parameters need to be fiddled around with 
+	in order to get the most appealing colors for the 
+	given number of shapes generated.
+
+	Rules flipper02 and flipper03 use the "targeted" version of 
+	the hue parameters.  "hue" is the starting value of hue and 
+	"|hue" is the target value of hue.  In the rule flipper02 
+	"hue 0.003|" indicates how much the value of the hue is modified.  
+	Refer to:  
+	http://www.contextfreeart.org/mediawiki/index.php/Shape_adjustments
+
+	Flipper03 is the same as flipper02, except that a circle has 
+	been added inside of each triangle, which gives more visual variety
+	to the rendered images.
+
+	Saving movies (animations) of the rendering gives some 
+	interesting results.  You save movies under the "Render" menu item.
+	
+*/
+
+
+startshape start
+
+background { b -1 }
+
+
+
+rule start {
+
+		// Non-targeted version of hue parameter.
+
+	//flipper01 { hue 0 sat 1 b 1 alpha -0.25 }
+
+	//flipper01 { hue 120 sat 1 b 1 alpha -0.25 }
+
+	//flipper01 { hue 240 sat 1 b 1 alpha -0.25 }
+
+
+		// Targeted version of hue parameter
+
+	//flipper02 { hue 0 |hue 359 sat 1 b 1 alpha -0.25 }
+
+	//flipper02 { hue 120 |hue 200 sat 1 b 1 alpha -0.25 }
+
+	//flipper02 { hue 240 |hue 359  sat 1 b 1 alpha -0.25 }
+
+
+
+		// Circles inside of the triangles
+		// Targeted version of hue parameter
+
+	flipper03 { hue 0 |hue 200 sat 1 b 1 alpha -0.25 }
+
+	//flipper03 { hue 120 |hue 200 sat 1 b 1 alpha -0.25 }
+
+	//flipper03 { hue 240 |hue 359  sat 1 b 1 alpha -0.25 }
+
+	
+}
+
+
+
+rule flipper01 0.005 {}
+
+rule flipper01 { 
+	TRIANGLE { }
+	flipper01 [ x 0.5 y 0.2886751346 flip 60  hue .3 ]
+		/*  The value for y is h/3 where h is the height of 
+		the unit equilateral triangle.  ( The center of gravity 
+		of all triangles is h/3 above the base of the triangle.)
+			h = (1/2)/tan(30 deg).   */
+}
+
+rule flipper01 {
+	TRIANGLE { }
+	flipper01 [ x -0.5 y  0.2886751346 flip 60  hue .3 ] 
+		/*  The value for y is h/3.  */
+}
+
+rule flipper01 {
+	TRIANGLE { }
+	flipper01 [ x 0.0  y -0.5773502692 flip 0  hue .3 ] 
+		/*  The value for y is (2/3)*h.  */
+}
+
+
+/*
+	Rule flipper02 uses the target color form 
+	of the hue parameters.
+*/
+
+
+
+rule flipper02 0.005 {}
+
+rule flipper02 { 
+	TRIANGLE { }
+	flipper02 [ x 0.5 y 0.2886751346 flip 60  hue .003| ]
+}
+
+rule flipper02 {
+	TRIANGLE { }
+	flipper02 [ x -0.5 y  0.2886751346 flip 60  hue .003| ] 
+}
+
+rule flipper02 {
+	TRIANGLE { }
+	flipper02 [ x 0.0  y -0.5773502692 flip 0  hue .003|] 
+}
+
+
+
+
+//==================================================
+//==================================================
+
+
+rule flipper03 0.05 {}
+
+rule flipper03 { 
+	TRIANGLE { }
+	CIRCLE { s 0.5 alpha 1 }
+	flipper03 [ x 0.5 y 0.2886751346 flip 60  hue -0.03| ]
+}
+
+rule flipper03 {
+	TRIANGLE { }
+	CIRCLE { s 0.5 alpha 1 }
+	flipper03 [ x -0.5 y  0.2886751346 flip 60  hue -0.03| ] 
+}
+
+rule flipper03 {
+	TRIANGLE { }
+	CIRCLE { s 0.5 alpha 1 }
+	flipper03 [ x 0.0  y -0.5773502692 flip 0  hue -0.03|] 
+}
+
+
+

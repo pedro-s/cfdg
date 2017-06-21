@@ -1,0 +1,32 @@
+startshape BLACKHOLE
+
+background { b-1 }
+
+rule BLACKHOLE {
+
+500* { x 1 y 1 r 1000000000000000000000 }
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+SQUARE { }
+
+
+SQUARE { h 180.68 sat 0.9334 b 1.0000 size .01 brightness 1 }
+SQUARE { x .1 y .1 h 108.02 sat 0.9698 b 1.0000 size .01 brightness 1 }
+SQUARE { x .2 y .2 h 59.93 sat 0.7318 b 1.0000 size .01 brightness 1 }
+SQUARE { x .3 y .3 h 180.68 sat 0.9334 b 1.0000 size .01 brightness 1 }
+SQUARE { x .4 y .4 h 225.00 sat 0.0157 b 1.0000 size .01 brightness 1 }
+SQUARE { x .5 y .5 h 248.60 sat 0.8831 b 1.0000 size .01 brightness 1 }
+SQUARE { x .6 y .6 h 60.88 sat 1.0000 b 1.0000 size .01 brightness 1 }
+SQUARE { x .7 y .7 h 197.16 sat 0.7908 b 1.0000 size .01 brightness 1 }
+SQUARE { x .8 y .8 h 45.00 sat 0.0157 b 1.0000 size .01 brightness 1 }
+
+
+ARM { size .99 rotate 70 }
+
+}

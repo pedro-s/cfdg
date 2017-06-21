@@ -1,0 +1,47 @@
+startshape sign
+
+rule sign
+{
+
+white{z 1 b 0}
+
+}
+
+
+rule white{
+
+360 * {r (360 /13)} whitebrush {}
+
+}
+
+
+
+rule whitebrush{
+LINE {y 3.95 s .02  }
+CIRCLE {y 3.95 s .1  }
+}
+
+rule whitebrush{whitebrush{ r .7}}
+rule whitebrush{whitebrush{s .97}}
+
+
+
+rule LINE{
+CIRCLE{ }
+LINE{ y -1 s .999 r 3}
+}
+
+rule LINE .3{LINE{r 1.5}}
+rule LINE 5{LINE{flip 90}}
+rule LINE .5{LINE{s .997}}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+startshape LIMIT
+
+rule LIMIT {
+	4*{r 90 h 90} QUAD [r 45 x .5 y .5 h 45 sat 1 b 1 |b 0]
+}
+
+rule SHAPE {
+	SQUARE{a -.5}
+	CIRCLE{s .8 sat -1 b 1 a -.5 z 1}
+}
+
+rule QUAD {
+	SHAPE{}
+	2*{x -1 y 1} QUAD [x .5 y -.5 s .618 x .5 y .5 b .15| h 90]
+}

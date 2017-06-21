@@ -1,0 +1,12 @@
+startshape moon1
+background {sat 1 b -.9  }
+
+rule moon1
+{
+	moon{b 1 sat 1 hue 150 }
+}
+rule moon
+{
+	1000*{s 1.001   x .00047 b -.003 z -1 alpha -.002} CIRCLE{}
+}
+

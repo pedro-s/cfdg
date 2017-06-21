@@ -1,0 +1,76 @@
+//copyright Matthew Pace 2006
+//you may use any part of this code,
+//as long as you give me credit for it
+startshape thecolors
+
+rule thecolors
+{
+	start {h 37 sat 1 b 1}
+}
+
+rule oddject
+{
+	CIRCLE{}
+	CIRCLE{h 380 s .4 x -.3 y .3}
+	CIRCLE{h 380 s .4 x .3 y .3}
+	CIRCLE{h 380 s .4 x -.3 y -.3}
+	CIRCLE{h 380 s .4 x .3 y -.3}
+}
+//trunk
+rule start .7
+{
+	oddject{}
+	start { y 1.3 s .99 a .95}	
+}
+rule start .15
+{
+	oddject{}
+	start { y 1.3 s .99 a .95}
+	goright{ r 15 y 1.3 x 1 s .999 a .999 }
+}
+rule start .15
+{
+	oddject{}
+	start { y 1.3 s .99 a .95}
+	goleft{ r -15 y 1.3 x -1 s .999 a .999}
+}
+
+//first branches
+rule goleft .99
+{
+	oddject{}
+	goleft { y 1.3 s .99 a .99 h -1 r -1}
+}
+rule goright .99
+{
+	oddject{}
+	goright { y 1.3 s .99 a .99 h 1 r 1}
+}
+
+
+//second branches
+rule goleft .01
+{
+	oddject{}
+	goleft { y 1.3 s .99 a .99 h -1 r -1}
+	goright{ r 15 y 1.3 x 1 s .999 a .999 }
+}
+rule goright .01
+{
+	oddject{}
+	goright { y 1.3 s .99 a .99 h 1 r 1}
+	goright{ r 15 y 1.3 x 1 s .999 a .999 }
+}
+
+rule goleft .01
+{
+	oddject{}
+	goleft { y 1.3 s .99 a .99 h -1 r -1}
+	goleft{ r -15 y 1.3 x -1 s .999 a .999}
+}
+rule goright .01
+{
+	oddject{}
+	goright { y 1.3 s .99 a .99 h 1 r 1}
+	goleft{ r -15 y 1.3 x -1 s .999 a .999}
+}

@@ -1,0 +1,36 @@
+startshape both
+background {hue 0 b -.9 sat 1}
+
+rule both
+{
+	gradient{z -1 b -.9 sat 1 hue 0 y 1 s 1 1.1}
+	swoops{}
+}
+
+rule gradient
+{
+	1000*{y -.002 b .0002}gradpath{s 1.4 1}
+}
+rule swoops
+{
+	20*{alpha -.25 r .5 b -.1 hue 3}swoop{ b 1 sat 1 hue 40}
+	20*{alpha - .25 r .5 b -.1 hue 3}swoop{flip 0 b 1 sat 1 hue 40}
+}
+rule swoop
+{
+	30*{r 12} arcpath{}
+	swoop{r 5 s .95 b -.02 h -.5}
+}
+
+path arcpath
+{
+	MOVETO{x 0 y 1}
+	ARCTO{x -.2 y .8}
+	STROKE{width .005}
+}
+path gradpath
+{
+	MOVETO{x -1 y 0}
+	LINETO{x 1 y 0}
+	STROKE{width .005}
+}

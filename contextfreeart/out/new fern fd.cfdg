@@ -1,0 +1,76 @@
+
+startshape fern
+
+
+//size {s 10 y -1.4 }
+
+background {b -1}
+
+rule fern {
+
+tronco {a -1 b -1 h 30 sat -1 r 30}
+root   {a -1 b -1 h 20 sat -1 r (30 -180) s .9}
+}
+
+rule tronco 0.5{
+tronco{f 90}
+}
+
+rule tronco{
+
+// trunk
+//CIRCLE{ a 1 s .2 1.5 y .75 b .3 sat .3}
+
+SQUARE{ a .8 s .15 1.22  y .52 b .3 sat .3 z 50}
+SQUARE{ a .6 s .075 1.22  y .52 b -.5 sat 1 z 100}
+
+
+// leaves
+CIRCLE{y 2 
+
+s  4 1
+
+}
+
+tronco {y 1.2 s .9   r 4 a .01 z 1 h 2 b .032 a .02 sat .05} 
+rametti {s .28 a .01 y .7 h 5  sat .1 b .00}
+
+
+}
+
+
+rule rametti {
+tronco {y .4 r 70  a .7 }
+tronco {y -.4 r -70   a .7 }
+}
+
+//---------------------------------------------------------------------------
+
+rule root 0.5{
+root{f 90}
+}
+
+rule root{
+
+// trunk
+//CIRCLE{ a 1 s .2 1.5 y .75 b .3 sat .3}
+
+SQUARE{ a .8 s .15 1.22  y .52 b .3 sat .3 z 50}
+SQUARE{ a .6 s .075 1.22  y .52 b -.5 sat 1 z 100}
+
+
+// leaves
+CIRCLE{y 2 s  3 .1}
+
+root {y 1.2 s .9  r 10 a .01 h -.1 b .032 a .02 sat .05} 
+ramettiroot {s .4 a .01 y .7 h 0  sat .1 b .00}
+
+}
+
+rule ramettiroot {
+root {y .4 r 30  a .7 }
+root  {y -.4 r -40   a .7 }
+}
+
+
+//---------------------------------------------------------------------------

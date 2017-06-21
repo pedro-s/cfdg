@@ -1,0 +1,26 @@
+startshape TRI
+background{b -1}
+rule TRI{
+
+500*{x 1 h 4 r 25 s .95 h 1 y 1}
+TRIANGLE{h 23.96 sat 0.8755 b 0.9116}
+
+500*{x -1 h 4 r 25 s .95 h 1 y 1}
+TRIANGLE{h 23.96 sat 0.8755 b 0.9116}
+
+500*{x -1 h 4 r -25 s .95 h 1 y 1}
+TRIANGLE{h 23.96 sat 0.8755 b 0.9116}
+
+500*{x 1 h 4 r -25 s .95 h 1 y 1}
+TRIANGLE{h 23.96 sat 0.8755 b 0.9116}
+
+TRIANGLE{h 23.96 sat 0.8755 b 0.9116 s 2.5}
+
+
+TRIANGLE{h 23.96 sat 0.8755 b 0.9116 s 2.5 r 180 y -1.45}
+
+
+
+
+
+}

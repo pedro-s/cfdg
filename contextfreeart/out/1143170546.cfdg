@@ -1,0 +1,21 @@
+startshape path
+
+rule path {
+ onepath { }
+ path {s 0.995 alpha -0.07}
+}
+rule onepath {
+ brush { }
+ onepath {y 3.5 size 0.99 r 7}
+}
+rule brush {
+ diamonds {r 22.5 x -0.98}
+}
+rule diamonds {
+ diamond { }
+ diamond {r 45 x 1.707 y -0.707}
+}
+rule diamond {
+ SQUARE {skew 67.5 67.5}
+}
+

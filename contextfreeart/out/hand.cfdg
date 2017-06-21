@@ -1,0 +1,45 @@
+startshape HANDSET
+
+rule HANDSET{
+	HANDS{sat 0.1 h 30}
+}
+
+rule HANDS{
+	HAND{}
+	HANDS{y +2 x +3 r +30 z 5}
+}
+
+rule HANDS{
+	HAND{}
+	HANDS{y -2 x -3 r -30 z 3}
+}
+
+rule HANDS{
+	HAND{y -3 x +2}
+	HANDS{flip 90 z 2}
+}
+
+rule HANDS 0.2{
+	HAND{}
+}
+
+rule HAND{
+	12*{s 1.02 b 0.1}HAND2{b 0.1}
+}
+
+rule HAND{
+	12*{s 1.02 b 0.1}HAND2{b 0.1 s 0.8}
+}
+
+rule HAND2{
+	SQUARE{s 0.8}
+	FINGER{y 0.05 x 0.05 r 8}
+	4*{x 0.212}FINGER{y 0.7 x 0.05 s 0.8}
+	CIRCLE{s 0.85 0.5 y -0.4 x -0.05}
+}
+
+rule FINGER{
+	SQUARE{s 0.2 0.5 y -0.2 x -0.5 r 10}
+	SQUARE{s 0.2 0.5 x -0.578 y 0.15 r 15}
+	CIRCLE{s 0.2 y 0.4 x -0.65}
+}

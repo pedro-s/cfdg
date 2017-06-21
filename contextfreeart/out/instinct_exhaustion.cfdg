@@ -1,0 +1,23 @@
+startshape exhaustion
+
+background { b -.95 }
+
+rule exhaustion {
+	70* { r (360/70) } trip { sat 0 b .1 }
+}
+
+rule trip { acid { } }
+rule shrooms { acid { } }
+rule acid { shrooms { } }
+rule shrooms 5 {
+  pix { }
+  shrooms { x .5 r 4 s .997 b .0003 }
+}
+rule acid 10 {
+  pix { }
+  acid { x .35 y .35 r 4 s .997 b .0003 }
+}
+
+rule pix {
+  CIRCLE { a -.5 }
+}

@@ -1,0 +1,75 @@
+startshape init
+background { hue 300 b -0.8 sat .5 }
+
+rule init {
+	surfarm { r 00 }
+	surfarm { r 10 }
+	surfarm { r 20 }
+	surfarm { r 30 }
+	surfarm { r 40 }
+	surfarm { r 50 }
+	surfarm { r 60 }
+	surfarm { r 70 }
+	surfarm { r 80 }
+	surfarm { r 90 }
+	surfarm { r 100 }
+	surfarm { r 110 }
+	surfarm { r 120 }
+	surfarm { r 130 }
+	surfarm { r 140 }
+	surfarm { r 150 }
+	surfarm { r 160 }
+	surfarm { r 170 }
+	surfarm { r 180 }
+	surfarm { r 190 }
+	surfarm { r 200 }
+	surfarm { r 210 }
+	surfarm { r 220 }
+	surfarm { r 230 }
+	surfarm { r 240 }
+	surfarm { r 250 }
+	surfarm { r 260 }
+	surfarm { r 270 }
+	surfarm { r 280 }
+	surfarm { r 290 }
+	surfarm { r 300 }
+	surfarm { r 310 }
+	surfarm { r 320 }
+	surfarm { r 330 }
+	surfarm { r 340 }
+	surfarm { r 350 }
+	CIRCLE { s 8 hue 200 b 0.8 sat 0.5 }
+	CIRCLE { s 7 }
+}
+
+rule surfarm {
+	arm { y 6 hue 200 b 0.8 sat 0.5 }
+}
+
+rule arm { arml {} }
+rule arm { arml { flip 90 } }
+
+rule arm-rotate { arml { r 2 } }
+rule arm-rotate { arml { r 3 } }
+rule arm-rotate { arml { r 4 } }
+rule arm-rotate { arml { r 5 } }
+
+rule arml {
+	SQUARE {}
+	arm-rotate { y 1.2 hue -3
+		s 0.97 alpha -0.02 }
+}
+rule arml 0.01 { branch {} }
+rule arml 0.05 { arm {} }
+
+rule branch {
+	CIRCLE { y 2 s 3.5 }
+	arm { y 5 s 1.2 }
+	arml [ y 2 r -90 y 3 s 1.2 ]
+	arml [ y 2 r 90 y 3 s 1.2 flip 90 ]
+}
+rule branch {
+	CIRCLE { y 2 s 3.5 }
+	arml [ y 2 r 60 y 3 s 1.2 flip 90 ]
+	arml [ y 2 r -60 y 3 s 1.2 ]
+}

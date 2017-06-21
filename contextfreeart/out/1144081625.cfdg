@@ -1,0 +1,6 @@
+startshape SPIRAL
+
+rule SPIRAL {
+ 	CIRCLE {s 1 .006}
+	SPIRAL  {s 0.993   x 0.1  r 8.5}
+}

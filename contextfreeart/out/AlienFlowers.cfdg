@@ -1,0 +1,50 @@
+CF::Background = [hue 180 sat 0.25 b -0.3]
+CF::Impure = 1
+
+startshape Field[sat 0.75 b 1]
+N=1000
+
+shape Field {
+  Flower(-150, 88, 1.52, 17.1) [flip 90 x -25 r 33]
+  Flower(45, 25, -1.52, 45) [x 0 r -3]
+  Flower(150, -88, -1.2, 17.1) [x 24 r -33]
+}
+
+
+shape Flower(A1, H1, H2, H3) { 
+  loop Z=200,10,-0.1 []
+    loop R=Z*0.7,Z,(Z/N) []
+      Practicle(A1, R/4, rand(360), Z, 0.5, H1, H2, H3) []
+}
+
+shape Practicle(A1, R1, A, Z, S, H1, H2, H3) {
+  R = (R1*R1)/50+R1/2
+  X = R*cos(A) + 0.1*Z*cos(A1+5*Z)
+  Y = R*sin(A) + 0.1*Z*sin(A1+5*Z)
+  H = H1 + H3*sin(A*10+45+50*sin(A*10))+23.1*sin(Z*15)+H2*Z
+  Point(X, Y, Z) [s S h H b (0.25+3.75*(4*R1/Z-1)) ]
+}
+
+shape Point(X, Y, Z) {
+  Xcoord = X + Y * 0.5
+  Ycoord = Y * 0.5 + Z
+  S = ((rand(100)/30)+.5 + Z*0.01)*0.75
+  F1 = ((Z*1.2-0.5*sqrt(abs(Y*X))-abs(X*2)-Y)/Z)^4
+  F2 = ((Z-0.5*sqrt(abs(Y*X))-abs(X*2)-Y)/Z)^14
+  F = (F1+F2)/2
+  Sat = Z*0.0015-0.3 - F*0.052
+  B = F*0.2-0.5275
+
+  Point2 [
+    s S
+    x Xcoord y Ycoord 
+    b B
+    sat Sat
+    z (-Y*100-S*2)
+  ]
+}
+ 
+shape Point2 {
+  loop I=1,0.1,-0.1 []
+    CIRCLE [s (I*1.25) b (1.2-I*1.65) z((1-I)*10) sat(I*0.5)]
+}

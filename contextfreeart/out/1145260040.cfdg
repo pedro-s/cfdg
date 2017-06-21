@@ -1,0 +1,44 @@
+startshape pattern001
+
+rule pattern001 {
+
+	dreifach1 { }
+	dreifach2 { }
+	dreifach3 { }
+	
+	vierfach1 { }
+	vierfach2 { }
+	vierfach3 { }
+	vierfach4 { }
+}
+
+rule stern {
+    SQUARE {h 150 sat 1 s 3 }
+    stern { r 30 s 0.9987 b 0.25 h 0.5 }
+}
+
+rule vierfach1 {
+	4*{x 5} stern [x -7.5 y 7.5]
+}
+rule vierfach2 {
+	4*{x 5} stern [x -7.5 y 2.5]
+}
+rule vierfach3 {
+	4*{x 5} stern [x -7.5 y -2.5]
+}
+rule vierfach4 {
+	4*{x 5} stern [x -7.5 y -7.5]
+}
+
+rule dreifach1 {
+	3*{x 5} stern [x -5 y 5]
+}
+rule dreifach2 {
+	3*{x 5} stern [x -5 y 0]
+}
+rule dreifach3 {
+	3*{x 5} stern [x -5 y -5]
+}
+
+
+

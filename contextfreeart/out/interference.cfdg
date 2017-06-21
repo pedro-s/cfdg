@@ -1,0 +1,24 @@
+startshape INTERFERENCE
+
+background {b -.25}
+
+rule INTERFERENCE {
+	7* {r 51.43 hue 51.43} TRIPLEBRANCH {x -.75 a -.92 b 1 sat 1}
+}
+
+rule TRIPLEBRANCH {
+	BRUSH {}
+	TRIPLEBRANCH [r -17 s .5 x 1 hue 30 b -.001]
+	TRIPLEBRANCH [r 17 s .5 x 1.05 hue 60 b -.001]
+	DOUBLEBRANCH [r 51 s .5 x 1.1 hue 90 b -.001]
+}
+
+rule DOUBLEBRANCH {
+	BRUSH {}
+	TRIPLEBRANCH [r -34 s .5 x 1.2 hue 120 b -.001]
+	DOUBLEBRANCH [r 0 s .5 x 1.15 hue 150 b -.001]
+}
+
+rule BRUSH {
+	10* {s .8} CIRCLE {a -.5}
+}

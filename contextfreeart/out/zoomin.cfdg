@@ -1,0 +1,33 @@
+startshape x4x 
+
+background {b -1}
+
+size {s 14}
+
+rule x4x {
+	sque {}
+	4 * {r (360/4)}
+	fract {s .7 r 45  x -1.8}
+}
+
+rule fract {
+	sqr {}
+	fract {s .7 r -22.5 x -1.45  y 1.7 b .1 h 5 sat .1}
+}
+
+rule sqr {
+	sque {}
+	fract {s .7 r 45  x -1.8 b .2 h 5 sat .2 z 1}
+}
+
+rule sque {
+	4 * {r (360/4)}
+	sq {s .8 b .2 a -.1}
+}
+
+rule sq {
+	SQUARE {b .1 h 5 sat.1}
+	sque {s .5 r 45 x .75 y .75 b .2 a -.2 h 55 sat .1}
+	x4x {s .2 x 4 h -15 sat -.5}
+}
+

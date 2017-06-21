@@ -1,0 +1,96 @@
+startshape field
+tile{s 150}
+background{hue 83.1 sat 0.4664 b -0.1255}
+
+rule field
+{
+	grass{hue 97.6 sat 0.7282 b 0.7647}
+}
+
+rule grass 5
+{
+	seedling{}
+	grass{}
+}
+
+rule grass
+{
+	grass{b 0.2}
+}
+
+rule grass
+{
+	grass{b -0.1}
+}
+
+rule grass
+{
+	grass{hue 0.1}
+}
+
+rule grass
+{
+	grass{hue -.1}
+}
+
+rule grass
+{
+	grass{sat 0.01}
+}
+
+rule grass
+{
+	grass{sat -.01}
+}
+
+rule grass 10
+{
+	grass{r 5}
+}
+
+rule grass 10
+{
+	grass{r -5}
+}
+
+rule grass
+{
+	grass{r 180}
+}
+
+rule grass
+{
+	grass{x 10}
+}
+
+rule grass
+{
+	grass{x -10}
+}
+
+rule grass
+{
+	grass{y 10}
+}
+
+rule grass
+{
+	grass{y -10}
+}
+
+rule grass 0.01
+{
+	// end
+}
+
+rule seedling
+{
+	SQUARE{}
+	seedling{y 1 r -2 s 0.991}
+}
+
+rule seedling
+{
+	SQUARE{}
+	seedling{y 1 r 2 s 0.991}
+}

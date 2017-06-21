@@ -1,0 +1,50 @@
+startshape clr
+background {b -1}
+
+rule clr{ 12* {r 50 s 05 y -90}
+ 
+a1 { x -3  flip 30 r -50}
+
+	DIBUJA { }
+B{}
+}
+
+rule DIBUJA{
+tetraehrdron{ }
+}
+
+
+rule tetraehrdron {
+    C { }
+   tetraehrdron { s .96 y 0.99 r 1.90 b 99 sat 0.10 x 1 y 2}
+}
+
+
+  
+rule a1 { 
+    a1 { s 0.99 x 1 r 6 b .1 hue 10 sat 2 }
+block{ r -1 }
+}
+
+
+rule block{ 2*{r 18}B{x 3 b 1}
+B{s 3 b 1}
+}
+ 
+rule B {
+15*{x .5 s 1 .9 r 4}C{a -.5 b .1 z 1}
+}
+rule B {
+1*{x .5 s 1 .9 r -4}C{a -.5 b .1 z 1}
+}
+ 
+rule C {
+1*{s .95}CIRCLE{ a -.8}
+1*{s .95}TRIANGLE{ s .9 b 5 x 1 sat 1}
+}
+rule C .05 {
+B{r 90}
+}
+rule C .05 {
+B{r -90}
+}

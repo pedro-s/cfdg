@@ -1,0 +1,50 @@
+startshape HAZARD
+background { b -1 }
+rule HAZARD {
+FLIP {}
+}
+rule FLIP {
+
+CIRCLE { h 357.44 sat 1.0000 b 1.0000 }
+CIRCLE { size .9 b -1 }
+CIRCLE { size .8 sat 1.0000 b 1.0000 }
+CIRCLE { size .7 b -1 }
+CIRCLE { size .6 sat 1.0000 b 1.0000 }
+CIRCLE { size .5 b -1}
+CIRCLE { size .4 sat 1.0000 b 1.0000 }
+CIRCLE { y 0.4 size .4 b -1 }
+CIRCLE { y -0.4 size .4 b -1 }
+CIRCLE { x -.4 size .4 b -1 }
+CIRCLE { x .4 size .4 b -1 }
+CIRCLE { size .3 b -1 }
+CIRCLE { size .2 sat 1.0000 b 1.0000 }
+CIRCLE { x -.3 y -.3 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x -.3 y -.3 size .05 b -1 }
+CIRCLE { x .3 y -.3 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x .3 y -.3 size .05 b -1 }
+CIRCLE { x -.3 y .3 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x -.3 y .3 size .05 b -1 }
+CIRCLE { x .3 y .3 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x .3 y .3 size .05 b -1 }
+CIRCLE { x .4 size .3 h 357.44 sat 1.0000 b 1.0000 }
+CIRCLE { y -.4 size .3 h 357.44 sat 1.0000 b 1.0000 }
+CIRCLE { x -.4 size .3 h 357.44 sat 1.0000 b 1.0000 }
+CIRCLE { y .4 size .3 h 357.44 sat 1.0000 b 1.0000 }
+CIRCLE { x .4 size .2 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { y -.4 size .2 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x -.4 size .2 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { y .4 size .2 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x -.2 y -.2 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x .2 y -.2 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x -.2 y .2 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x .2 y .2 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x -.1 y -.1 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x .1 y -.1 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x -.1 y .1 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { x .1 y .1 size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { size .1 h 120.00 sat 1.0000 b 1.0000 }
+CIRCLE { size .05 b -1 }
+FLIP { y 1 size .99 rotate 455555 hue 50 }
+}
+
+

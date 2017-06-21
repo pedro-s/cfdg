@@ -1,0 +1,53 @@
+startshape final
+
+rule final { 
+	6*[r 30 ]change { r -95 }
+}
+
+rule change 1 { 
+	2*[ flip 90]leaf{ h 100 sat .8 b .7 r -25}
+	change{ s .8 .9 y 4 r 5}
+}
+
+rule change 1 { 
+	2*[ flip 90 ]leaf{ h 100 sat .8 b .65 r -25}
+	change{ s .81 .9 y 4 r -5}
+}
+
+rule change 1 { 
+	2*[ flip 90 ]leaf{ h 100 sat 1 b .6 r -25}
+	change{ s .82 .9 y 4 r 10}
+}
+
+rule change 1 { 
+	2*[ flip 90 ]leaf{ h 100 sat 1 b .75 r -25}
+	change{ s .83 .9 y 4 r -10}
+}
+
+rule change 1 { 
+	2*[ flip 90 ]leaf{ h 100 sat 1 b .6 r -25}
+	change{ s .84 .9 y 4 r 15}
+}
+
+rule change 1 { 
+	2*[ flip 90 ]leaf{ h 100 sat 1 h 80 b .6 r -25}
+	change{ s .85 .9 y 4 r -15}
+}
+
+rule leaf 1 {
+	nerve{ x -1}
+	nerve{flip 50 x -2}
+	leaf { s .9 r 5 x 1 y 1}
+}
+
+rule leaf 1 {
+	nerve{ x -1 }
+	nerve{flip 40 x -2}
+	leaf { s .9 r 10 x 1 y 1}
+}
+
+
+rule nerve {
+	CIRCLE { }
+	nerve { s .9 x .5 r 4 }
+}

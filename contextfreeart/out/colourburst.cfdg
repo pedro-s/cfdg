@@ -1,0 +1,25 @@
+startshape Main
+
+background { b -1 }
+
+rule Main {
+  18*{r 20 h 20} {
+  	Spiral {r 90 b 1 sat 1 y 3}
+  }
+}
+
+rule Spiral 2 {
+	SemiCircle {}
+	Spiral {r 180 s .95 x (1-.95)}
+}
+
+rule Spiral {
+  SemiCircle {}
+  Spiral {f 0 s .95 x (1+.95)}
+}
+
+path SemiCircle {
+	MOVETO {x -1 y 0}
+	ARCTO {x 1 y 0}
+	STROKE {width 0.05 p roundcap}
+}

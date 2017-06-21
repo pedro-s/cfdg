@@ -1,0 +1,26 @@
+startshape FINAL
+
+background  { b -1}
+
+rule LOLLIPOP{
+	CIRCLE { x 0 y 0 size 1 sat 1 }
+}
+rule OG {
+	LOLLIPOP {}
+	OG { y .6 x .9 r 20 size .95 b .07 h 15 }
+	//SQUARE { y -1 s .95 .05 z 1 r 90 b 1 a -.5 }
+}
+
+rule OTHER {
+	OG { }
+	OTHER { x .8 y .7 size -.95 r 17 }
+}
+
+rule ANOTHER{
+	OTHER { }
+	ANOTHER { x 2 y 15 size -.75 r 17 b .01}
+}
+
+rule FINAL {
+	ANOTHER { r 90 }
+}

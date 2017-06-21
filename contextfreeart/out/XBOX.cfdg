@@ -1,0 +1,20 @@
+startshape XBOX
+background {b-1}
+rule XBOX
+
+{
+
+2* {flip 180 r 180}
+CIRCLE {h 120.00 sat 1.0000 b 1.0000  skew 0 5}
+
+CIRCLE {h 0.00 sat 0.0000 b 0.0000}
+
+CIRCLE {h 120.00 sat 1.0000 b 1.0000 s.3 y-.05}
+
+CIRCLE {h 0.00 sat 0.0000 b 0.0000 s.25 y-.05}
+
+CIRCLE {h 0.00 sat 0.0000 b 0.0000 s.12 y .07}
+
+CIRCLE {h 120.00 sat 1.0000 b 1.0000 s.12 y.1 skew -50 -50 r 135}
+
+}

@@ -1,0 +1,82 @@
+startshape SCENE
+
+background {
+  hue 188.1 sat 0.1 b 1.0  
+}
+
+rule SCENE {
+	START {b 0.9 r 21}
+	SCENE {s 0.87 r -34}
+}
+
+rule START
+{	
+	CIRCLE {x 12 y 2.2 s 3.1}
+	START {		  
+		y 0.8 r -0.29 s 0.95
+	}	
+	ONE { b 0.3 s 0.92}	
+	TWO {s 0.5}
+}
+
+rule START
+{
+	CIRCLE {x 1 y 2 s 3}
+	START {y 0.6 r -0.31 s 0.99}
+	ONE { b 0.9  s 0.92}
+}
+
+rule ONE 4
+{
+	CIRCLE {x 1.01 y 3.01 s 2.09}	
+	TWO {}
+	SCENE {x 0.3 y 1.5 s 0.18}
+}
+
+rule ONE 3
+{
+	CIRCLE {
+		 sat 0.3 b 1.0 
+		x 1.1 y 2.01 s 2.09
+	}	
+}
+
+rule ONE 2.8
+{
+	CIRCLE {x 2.01 y 2.1 s 2.09}	
+	SCENE {y 1.2 s 0.2}
+}
+
+rule ONE 1.5
+{
+	CIRCLE {x 1.01 y 2.01 s 2.9}	
+	TWO {
+		 sat 1.0 b 0.7  
+		r 20 s 0.7
+	}
+}
+
+rule TWO 3
+{
+	CIRCLE {x 3. y 2.01 s 2.9}	
+}
+
+rule TWO 2
+{
+	CIRCLE {x 1 y 1 s 1.1}
+	TWO {
+		 b 1.2 
+		y 2.5 s 0.93
+	}
+}
+
+rule TWO 1
+{
+	TWO {
+		sat 0.61
+		s 0.7
+	}
+	START {
+		s 0.2
+	}
+}

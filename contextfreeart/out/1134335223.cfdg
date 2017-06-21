@@ -1,0 +1,62 @@
+startshape europeancity
+
+
+rule europeancity {
+	block{}
+	curvedsidestreet{}
+	europeancity {r 90.2
+}
+}
+
+rule europeancity 0.01{
+	river{}
+	river{flip 180}
+	europeancity {flip 90}
+}
+
+rule europeancity 0.01{end{}}
+
+rule river {
+	paint_river{}
+	curve_river {}
+}
+
+rule curve_river {river {y 2 rotate 16}}
+rule curve_river {river {y 2 flip 90}}
+rule curve_river 0.08 {end{}}
+
+rule paint_river {SQUARE {s 1 2.2  y 1 hue 180 b .8 sat 0.3}}
+
+rule curvedsidestreet {
+	pave{}
+	lot {}
+	house{}
+	curve_street {}
+}
+
+rule curve_street {curvedsidestreet {y 1 rotate 20}}
+rule curve_street 2 {curvedsidestreet {y 1 flip 90}}
+rule curve_street 0.24 {end{}}
+
+rule pave {SQUARE {y 0.5 s 0.4 1.1  b 0.5}}
+rule lot {SQUARE { x 0.7 y 0.5 hue 90 b .8 sat 0.3}}
+rule house {SQUARE {s 0.5 x 0.7 y 0.5 hue 10 b 0.8 sat 0.9}}
+
+rule block {
+	block_pave{}
+	block_house{}
+	block_edge {}
+}
+
+rule block_edge {block {y 3 flip 90}}
+rule block_edge 3 {block {rotate 90}}
+rule block_edge 0.5 {end{}}
+
+rule block_pave {SQUARE {s 0.4 3 y 1.5 b 0.5}}
+rule block_house {
+	SQUARE {s 0.8 2.6 y 1.5 x 0.6 hue 10 b 0.8 sat 0.9}
+	SQUARE {s 2.6 0.8 y 0.6 x 1.5 hue 10 b 0.8 sat 0.9}
+	}
+rule block_house 0.5 {}
+
+rule end {}

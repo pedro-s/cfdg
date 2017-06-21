@@ -1,0 +1,35 @@
+startshape FLOWER
+
+background { b-1 }
+
+rule FLOWER {
+
+25* { x .01 y .99 r 290000000000000000000000 }
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+CIRCLE { }
+
+CIRCLE { h 239.50 sat 0.9414 b 1.0000 size 1 brightness 1 }
+
+ARM { size .99 rotate 20 }
+
+CIRCLE { size 1 h 60.68 sat 0.9303 b 1.0000}
+
+CIRCLE { size .99 h 3.45 sat 0.9239 b 1.0000 }
+
+CIRCLE { size .5 x .05 y .05 r .99 h 302.23 sat 0.6042 b 1.0000 }
+
+CIRCLE { size .5 x .06 y .06 r .99 h 60.52 sat 0.8807 b 1.0000 }
+
+CIRCLE { size .01 x .5 y .5 r .99 h 60.52 sat 0.8807 b 1.0000 }
+CIRCLE { size .01 x .44 y .44 r .99 h 58.24 sat 0.8233 b 1.0000 }
+CIRCLE { size .01 x .06 y .06 r .99 h 308.37 sat 1.0000 b 1.0000 }
+
+
+}

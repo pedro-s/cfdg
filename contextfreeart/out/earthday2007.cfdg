@@ -1,0 +1,41 @@
+startshape init
+//also looks good on a dark non black background
+
+rule init
+{
+	
+	72* {r 5}  trunknocenter { b .78 sat .9 hue 210 alpha -1}
+} 
+rule trunknocenter 	// the center white spot was looking 
+				//horrendous in the original version
+				//where init just made 72 trunks
+{
+	trunk {y .67 s .92 hue -1.2}
+}
+
+rule trunk 100
+{
+	baseshape{}  	//recomment this and you get my other
+				//file, earthday2007a
+	trunk {y .67 s .92 hue -1.2}
+}
+rule trunk 3
+{
+	baseshape{}
+	trunk {y .67 r 23 s .92 hue -1.2}
+	trunk {y .67 s .92 r 3 hue -1.2}
+	trunk { y .67 s .92 r -7 hue -1.2}
+} 
+
+rule trunk 3
+{
+	baseshape{}
+	trunk {y .67 r 13 s .92 hue -1.2}
+	trunk {y .67 s .92 r -33 hue -1.2}
+	trunk { y .67 s .92 r -17 hue -1.2}
+} 
+rule baseshape
+{
+	CIRCLE{}
+	baseshape { s .9 alpha .1 b .1 sat -.02}
+}

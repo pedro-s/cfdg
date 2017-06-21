@@ -1,0 +1,12 @@
+startshape donuts
+background {b -1}
+
+rule donuts { 1* { x 10 r 30 } ring { r -45 } } 
+rule ring{    4* { x 1.6 r 90} round{ sat .8} } 
+rule round { 36*{ r 10 } lines { x 1 } }
+rule lines {  2* { x .5 y .2 } mines { r -30} }
+rule mines { mthing { } lines { s .3 y 1 hue 10 b -.2} }
+rule mthing {16* { r 22.5 b .1 hue 1.5 y 0.1} thing { } }
+rule thing { draw { s .2 3 }  draw { s 5 .1} }
+rule thing .005 {  }
+rule draw { CIRCLE [] CIRCLE [ z -.1 s 1.1 y -.1 b -1 ] }

@@ -1,0 +1,69 @@
+startshape towers
+background { b -.23 }
+//include hex.cfdg
+
+rule towers {
+hfade [ z -40 x 7 y 2 s 19 12 hue 268 b .3 sat 1]
+5* { x 3 } towcol [ sat 1]
+}
+
+rule towcol { 4* { z 2 y -1 } towcol_ [ ] }
+rule towcol_ { 2* { z 1 y -.5 x 1.5 } tower [ ] }
+
+rule tower .1 { 20* { y .5 z .05 s .98 } hex [ ] }
+rule tower .5 { 8* { y .5 z .05 s .999 .95} hex [ ] }
+rule tower .5 { 15* { y .5 z .05 s .999 .95} hex [ ] }
+rule tower .17 { 15* { y .5 z .05 s .99 .95} hex [ ] }
+rule tower .17 { 15* { y .5 z .05 s .9 .85} hex [ ] }
+rule tower 2 { 8* { y .5 z .05 s .9 1 } hex [ ] }
+rule tower { 4* { y .5 z .05 s .95 } hex [ ] }
+rule tower { 3* { y .5 z .05 s .9 } hex [ ] }
+rule tower { 1* { y .5 z .05 s .9 } hex [ ] }
+rule tower .1 { 6* { y 1 z .05 s .98 } hex_ [ a -.7] }
+// modulation rules (towers)
+rule tower 4 { tower [ hue 13 sat -.4 ] }
+rule tower 6 { tower [ hue -3 b -.4 sat -.2] }
+rule tower 6 { tower [ s .8] }
+rule tower 6 { tower [ s 1.2] }
+rule tower 6 { tower [ r -9] }
+rule tower 6 { tower [ r 7] }
+rule tower 7 { }
+
+
+rule hex { hex_ [ s 1 .5 a -.3] }
+rule hex_ { hex_ [ s .9 ] }
+rule hex_ { hex_ [ s 1.1 ] }
+rule hex_ {
+    fill_ [ b .05 ]
+    fill_[ b .15 x -.75 y .29 s .5 1 skew 0 -30 ]
+    fill_[ x .75 y .29 s .5 1 skew 0 30 ]
+    TRIANGLE [ a .5 b .8 sat -1 x -.663 y 1.08 r 90 s 1.16 .58 ]
+    SQUARE [ a .5  b .8 sat -1 y 1.08 s 1 1.15 ]
+    TRIANGLE [ b 1 sat -1 x .663 y 1.08 r -90 s 1.16 .58 ]
+}
+
+rule fill_ {
+SQUARE [ sat .8 b .6 hue 260]
+1* { } transparent [ ]
+}
+
+// pillar texture
+rule transparent { A [a 1 ] }
+rule A { draw [ ] A [ z -1 r 90] }
+rule A {
+A [ x -.25 y .25 s 0.5 ]
+A [ x -.25 y -.25 s 0.6 ]
+A [ x .25 y .25 s 0.5 ]
+A [ x .25 y -.25 s 0.5 ]
+}
+rule A { }
+
+rule draw { 10* { x .1 } SQUARE [ x -.5 s .05 1 hue 261.3402 sat -.266 b .8 ] }
+rule draw { 10* { x .1 } SQUARE [ x -.45 s .05 1  hue 245.0 sat -.4 b .6 ] }
+rule draw 1 { }
+
+// sky
+rule hfade { 100* { y -.01 sat -.02 b .006} SQUARE [ y .5 s 1 .01 ] }
+
+
+

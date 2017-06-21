@@ -1,0 +1,113 @@
+startshape Q
+
+background {b -.65 sat .7 hue 75}
+
+rule Q {
+	SQUARE {sat .5 b .3 hue 10}
+	QUADBOX {}
+}
+
+rule QUADBOX {
+	QUr {x -.25 y .25}
+	QUADBOX {s .5 x -.25 y .25}
+	QUr {x .25 y -.25}
+	QUADBOX {s .5 x .25 y .25}
+	QUr {x .25 y -.25}
+	QUADBOX {s .5 x .25 y -.25}
+	QUr {x -.25 y -.25}
+	QUADBOX {s .5 x -.25 y -.25}
+}
+
+rule QUr {
+	QUs {r 2}
+}
+rule QUr {
+	QUs {r -2}
+}
+
+rule QUs {
+	QUb {s .5}
+}
+rule QUs  {
+	QUb {s .4}
+}
+rule QUs  {
+	QUb {s .3}
+}
+rule QUs 2 {
+	QUb {s .2}
+}
+rule QUs 3   {
+	QUb {s .1}
+}
+
+rule QUb 10 {
+	QUsat {b 1}
+}
+rule QUb 5 {
+	QUsat {b .9}
+}
+rule QUb 4 {
+	QUsat {b .8}
+}
+rule QUb 3 {
+	QUsat {b .7}
+}
+rule QUb 2 {
+	QUsat {b .6}
+}
+rule QUb {
+	QUsat {b .5}
+}
+
+rule QUsat 4 {
+	QUhue {sat 1}
+}
+rule QUsat 2 {
+	QUhue {sat .75}
+}
+rule QUsat {
+	QUhue {sat .5}
+}
+
+rule QUhue .01 {
+	QUa {hue 10}
+}
+rule QUhue {
+	QUa {hue 35}
+}
+rule QUhue {
+	QUa {hue 45}
+}
+rule QUhue {
+	QUa {hue 55}
+}
+rule QUhue {
+	QUa {hue 65}
+}
+rule QUhue {
+	QUa {hue 70}
+}
+
+rule QUa {
+	SHAPE{}
+}
+rule QUa {
+	SHAPE {alpha -.2}
+}
+rule QUa {
+	SHAPE {alpha -.5}
+}
+rule QUa {
+	SHAPE {alpha -.7}
+}
+rule QUa {
+	SHAPE {alpha -.9}
+}
+rule QUa {
+	SHAPE {}
+}
+
+rule SHAPE {
+	SQUARE {}
+}

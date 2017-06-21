@@ -1,0 +1,32 @@
+startshape POPEYE
+
+
+
+rule POPEYE{
+
+
+4800 * {r (360/4800)} GO{}
+
+}
+
+
+
+rule GO{LINE{y 9 a 1 b 0 h 110}}
+
+
+
+
+
+rule LINE{
+CIRCLE{s  .8 1.2}
+LINE{ y -.6 s .94 r  5 b .036 a .1 sat .1 h -1}
+LINE{ y -.6 s .95 r 2   sat .1 flip 90 h 1}
+LINE{ y -.6 s .93 r  8 b - .0091}
+}
+
+rule LINE 1.92{}
+
+
+
+
+

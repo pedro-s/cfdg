@@ -1,0 +1,25 @@
+startshape anemoneb
+
+rule anemoneb {
+	anemone { b .9 }
+}
+
+rule anemone {
+	tentacle { }
+	anemone { x 1 r -10 s .995 b -.002 }
+}
+
+rule tentacle {
+	CIRCLE { }
+	tentacle { y .1 s .99 b .001 }
+}
+
+rule tentacle {
+	CIRCLE { }
+	tentacle { y .1 r 2 s .99 b .001 }
+}
+
+rule tentacle {
+	CIRCLE { }
+	tentacle { y .1 r -2 s .99 b .001 }
+}

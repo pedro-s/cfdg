@@ -1,0 +1,15 @@
+startshape s0
+background { b -1 }
+rule s0 {s1{sat 1 b 1 a -0.97}}
+rule s1 9999 { s1 { x 1 z 1}}
+rule s1 99 {s1{} s2{s -1 -1 1}}
+rule s1 1 {}
+rule s2 999 {s2 {y 1 s 1 1 -1}}
+rule s2 50{s3{} s1{r 90}}
+rule s2 1 { s1{x 1000 h 60}}
+rule s3 {
+CIRCLE{s 1000 x 0.5 y 0.5}
+100  * { x 10 } {100 * { y 10 } { s4 { b -1 s 10 sat -1}}}
+}
+rule s4 100 {}
+rule s4 1 { CIRCLE { s 1 100 1}}

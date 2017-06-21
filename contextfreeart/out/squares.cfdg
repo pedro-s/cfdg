@@ -1,0 +1,14 @@
+startshape FLATCUBE
+
+background {h 303.69 sat 0.8413 b 1.0000}
+
+rule FLATCUBE
+
+{ 
+
+ 300* {x .05  r 5  h 90 b 1 }
+SQUARE {h 264.49 sat 0.9265 b 0.6796}
+
+
+
+ }

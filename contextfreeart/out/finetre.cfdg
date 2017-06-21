@@ -1,0 +1,34 @@
+// Finetre,
+// a cfdg script ( http://contextfreeart.org/ ) 
+// 
+// AlpT (@freaknet.org)  
+// Fri Nov  2 04:26:23 CET 2007
+//
+// Other scripts:
+// http://freaknet.org/alpt/misc/fatrial/math-exp/cfdg
+//
+
+startshape A
+background {b -1}
+rule A {
+	AC {h 120}
+	BC {h -120}
+}
+rule CIRC {
+	CIRCLE { b -1 a -0.7}
+	CIRCLE { s 0.94 b 1 }
+}
+rule AC {
+	CIRC { x 5 y 0 size 10 }
+	CIRC { x -5 y 0 size 10 }
+	CIRC { x 0 y 5 size 10 }
+	CIRC { x 0 y -5 size 10 }
+	AC { r 1 s 0.9925 h 1 sat 1 } 
+}
+rule BC {
+	CIRC { x 5 size 10 }
+	CIRC { x -5 size 10 }
+	CIRC { y 5 size 10 }
+	CIRC { y -5 size 10 }
+	BC { r -1 s 0.9925 h -1 sat 1} 
+}

@@ -1,0 +1,24 @@
+startshape JIMMY
+background {b -1}
+
+rule BASE         {	SQUARE {}}
+
+//Transpositions
+rule JIMMY        {	BASE {}	JIMMY {x -1}}
+rule JIMMY        {	BASE {}	JIMMY {y -1}}
+rule JIMMY        {	BASE {}	JIMMY {x 1}}
+rule JIMMY        {	BASE {}	JIMMY {y 1}}
+
+//Variations
+rule JIMMY        {	JIMMY {skew 0 3}}
+rule JIMMY        {	JIMMY {skew -3 0}}
+rule JIMMY .0005  {	JIMMY {r 5}}
+rule JIMMY        {	JIMMY {alpha -.3}}
+rule JIMMY        {	JIMMY {alpha .1}}
+rule JIMMY        {	JIMMY {s 1.25}}
+rule JIMMY        {	JIMMY {s .8}}
+rule JIMMY        {	JIMMY {h 5  sat 1 b 1}}
+rule JIMMY        {	JIMMY {h -5 sat 1 b 1}}
+
+//Stop
+rule JIMMY .00005 {}

@@ -1,0 +1,7 @@
+startshape s0
+tile {s 2000 4000 }
+background { b -1 }
+rule s0 { s1{b -1 a -1 y 2000 x 1000 sat 1 h 180}}
+rule s1 {2000*{x 1} {4000*{y 1 s 0.999 1 sat -0.0005 b 0.001 a 0.0005} {s2{}}}}
+rule s2 {SQUARE{s 1000 1 r 0.0001}}
+rule s2 1000 {}

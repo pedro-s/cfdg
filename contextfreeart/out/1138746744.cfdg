@@ -1,0 +1,24 @@
+startshape cuadturn
+
+background { b -1 }
+
+rule cuadturn {
+burbujain {}
+
+cuadturn [ x  -1 s 0.5   b 1 h 10 sat 1 alpha -0.5  ]
+cuadturn [ x   1 s 0.5   b 1 h 10 sat 1 alpha -0.5  ]
+
+cuadturn [ y 1 s 0.5  b 1 h 190 sat 1 alpha -0.5  ]
+cuadturn [ y -1 s 0.5  b 1 h 190 sat 1 alpha -0.5  ]
+
+}
+
+rule burbujain {
+CIRCLE {s 1.9}
+CIRCLE {s 1.6 b 1 }
+CIRCLE {s 1.4  hue 6.8 sat 0.8459 b 0.6}
+CIRCLE {s 1.1 b 0 }
+CIRCLE {s 0.7 hue 30.6 sat 0.8201 b 0.7313 }
+CIRCLE {s 0.5 }
+
+}

@@ -1,0 +1,36 @@
+startshape TRIANGLES
+
+background {b-1}
+
+rule TRIANGLES
+
+{
+
+
+25*{ x 1 y 1 s .78  h 25 r 20}
+
+TRIANGLE {h 57.13 sat 0.8599 b 1.0000 }
+100* { x 2 y 2 s .99 }
+TRIANGLE {h 231.34 sat 0.8537 b 1.0000}
+10* { x 3 y 2 s .98 r -12}
+TRIANGLE{ h 64.08 sat 0.8895 b 1.0000}
+10* { x 3 y 4 s .97 r -15}
+TRIANGLE {h 222.42 sat 0.8730 b 1.0000}
+12* { x 1 y 4 s .97 r 15 }
+TRIANGLE {h 175.66 sat 0.8803 b 1.0000}
+15* { x 1 y 4 s .97 r 8}
+TRIANGLE {h 64.08 sat 0.8895 b 1.0000}
+30* { x 2 y 4 s .97 r 3}
+TRIANGLE {h 352.79 sat 0.8848 b 1.0000}
+35* { x 4 y 4 s .97 r -2}
+TRIANGLE {h 59.30 sat 0.8270 b 1.0000}
+30* { x 4 y 4 s .97 r -5}
+TRIANGLE {h 289.56 sat 0.8962 b 1.0000}
+33* { x 1 y 4 s .97 r 4}
+TRIANGLE {h 156.25 sat 0.9104 b 1.0000}
+
+TRIANGLE {s 10 h 20.56 sat 0.2848 b 1.0000}
+
+CIRCLE { x 5 y 100 s 20  h 0.00 sat 0.0000 b 1.0000}
+
+}

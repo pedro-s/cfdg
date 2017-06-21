@@ -1,0 +1,54 @@
+startshape FINAL
+
+background  { b -1}
+
+rule SPIRAL {
+	CIRCLE { y -1 s .05 }
+	SPIRAL { y .1 x .9 r 70 size .99 b .99 h 15 }
+}
+
+rule GALAXY {
+	SPIRAL { }
+	GALAXY { x 1.5 y 1.5 size -.99 r 17 skew 5 10 }
+}
+
+rule NEB {
+	CIRCLE { s 5 sat .5 h 10 a .5 }
+	NEB { y 1 r 30 s -.90 b .01 h .5 }
+}
+
+rule NEB {
+	CIRCLE { s 5 sat .5 h 278 a .5 }
+	NEB { y 1 r 30 s -.90 b .03 h .5 }
+}
+
+rule STARFIELD {
+	CIRCLE { s .1 b 1 }
+	STARFIELD { s .90 x 8 y 4 r 70 }
+}
+
+rule STARFIELD {
+	CIRCLE { s .15 b 1 }
+	STARFIELD { s .90 x 4 y 8 r 34 }
+}
+
+rule ANOTHER{
+	GALAXY { }
+	NEB { z -1 x -2 y 4 s .5 }
+	ANOTHER { x 2 y 15 size -.75 r 17 }
+}
+
+rule ANOTHER{
+	GALAXY { }
+	ANOTHER { x -1 y 20  size .90 r 30 }
+}
+
+rule ALL {
+	ANOTHER { }
+	ANOTHER {  x 5 y -4 r 95 }
+	STARFIELD { z -2 x -2.5 }
+}
+
+rule FINAL {
+	ALL { r 90 }
+}

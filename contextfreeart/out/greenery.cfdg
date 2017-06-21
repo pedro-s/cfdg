@@ -1,0 +1,40 @@
+startshape GREENERY
+background { hue 104.1 sat 0.5953 b -0.4099 }
+tile { size 200 } 
+
+rule GREENERY {
+	2 * { x 100 } VINE2 { r 45 b 1 sat -1 }
+}
+
+rule TESTV {
+	10 * { x 9.1 r -15 y -1.2 } SEGMENT { b 1 sat -1}
+}
+
+
+rule VINE2 { SEGMENT { } VINE2 { x 9.1 r -15 y -1.2 } }
+rule VINE2 0.5 { VINE2 { flip 0 } }
+rule VINE2 0.01 { }
+
+rule SEGMENT { STEM { } }
+rule SEGMENT { STEM { } LEAF { y -10 x 5  r 20 s 0.8 } }
+rule SEGMENT { STEM { } LEAF { y 9 x 9  r 140 s 0.8 } }
+rule SEGMENT { FLOWERET { x 4.5 y -0.5 size 2.5 r 20 } }
+
+rule STEM { 30 * { x 0.3 r -0.5 } CIRCLE { } }
+
+path LEAF {
+	MOVETO { x 0 y 0 }
+	CURVETO {
+		x 0 y 10
+		x1 5 y1 10
+	}
+	CURVETO {
+		x 0 y 0
+		x1 -5 y1 10
+	}
+}
+
+rule FLOWERET { 
+	6 * { r 60 } CIRCLE { size 0.8 x 1.2 }
+	FLOWERET { r 30 size 0.5 }
+}

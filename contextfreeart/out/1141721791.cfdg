@@ -1,0 +1,48 @@
+startshape NEW
+background {b -1}
+
+rule NEW {
+	TREE_ONE{rotate 180}
+	TREE_ONE{ }
+	TREE_ONE{rotate 180 flip 90}
+	TREE_ONE{flip 90}
+}
+
+rule TREE_ONE 15 {
+	BLOCK_ONE { }
+	TREE_ONE {y 1
+		size .99
+		rotate 2
+		hue .8
+		sat 1
+		b .05
+		alpha -.01}
+}
+
+rule TREE_ONE .5 {
+	CIRCLE {size 3}
+	SPLIT { }
+}
+
+rule SPLIT {
+	SPLIT_LEFT { }
+	SPLIT_RIGHT { }
+}
+
+rule SPLIT_LEFT {
+	TREE_ONE {rotate 45}
+}
+
+rule SPLIT_RIGHT {
+	TREE_ONE {rotate -45}
+}
+
+rule BLOCK_ONE {
+	SQUARE {x 1.5 size .1 1}
+	SQUARE {x 1 size .1 1}
+	SQUARE {x .5 size .1 1}
+	SQUARE {size .1 1}
+	SQUARE {x -.5 size .1 1}
+	SQUARE {x -1 size .1 1}
+	SQUARE {x -1.5 size .1 1}
+}

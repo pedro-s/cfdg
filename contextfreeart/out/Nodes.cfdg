@@ -1,0 +1,17 @@
+startshape NUDITOS
+
+rule NUDITOS{
+	LINEA{}
+	LINEA{r 90}
+	LINEA{r 270}
+	LINEA{r 180}
+}
+
+rule LINEA{
+	CIRCLE{}
+	LINEA{y -2 s 0.999995}
+}
+
+rule LINEA 0.5{
+	LINEA{r 45}
+}

@@ -1,0 +1,35 @@
+startshape start
+
+background {hue 32 sat 1 b -0.05}
+
+rule start {
+	shape {b 1 hue 128 sat 1 a -0.75}
+}
+
+rule shape {
+	curl_circles {}
+	shape { r 30 s 0.8 x 3}
+	curl_circles {f 0 x 2 y -2.5}
+}
+
+rule curl_circles {
+	circles {x 2.365}
+	curl_circles {r 25 s 0.9}
+}
+
+rule circles {
+	off_circle {r 60}
+	off_circle {r 120 }
+	off_circle {r 180 }
+	off_circle {r 240 }
+	off_circle {r 300 }
+	off_circle {r 360 }
+
+	circles {s 0.5 x 1}
+}
+
+rule off_circle {
+	CIRCLE {x 0.5 b -0.9}
+	TRIANGLE {x 2.5 s 3 b -0.75 a -0.75}
+	SQUARE {y 7 s 3 b 1 sat 1 a -0.65 hue -64}
+}

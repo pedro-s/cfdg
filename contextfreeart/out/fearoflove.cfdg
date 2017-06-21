@@ -1,0 +1,22 @@
+startshape  fear 
+
+background {b -1}
+
+rule fear {
+	3*{r 120}
+	{2*{f 90}
+	 of {}
+	2*{f 90}
+	love {s .5774 r 30 x -.3333 y .5774 z -1 b .1}}
+}
+
+rule  of {
+	TRIANGLE {b .1}
+	 of {s .382 r 90 x -.1103 y .3864 b .1}
+	 of {s .618 r -90 x -.3216 y .0203 b .2}
+}
+
+ rule love {
+	2*{f 90}
+	of {}
+}

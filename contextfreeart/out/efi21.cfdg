@@ -1,0 +1,32 @@
+startshape WORLD
+background {b 1}
+
+rule WORLD {
+	20*{r 3.6}STARTWYRM{}
+}
+
+rule STARTWYRM {
+	WYRM{}
+}
+
+rule WYRM {
+	WYRMSEGMENT{}
+	WYRMNEXT{x .5 s .9992}
+}
+
+
+rule WYRMNEXT 20 {WYRMNEXT{r 1}}
+rule WYRMNEXT 20 {WYRMNEXT{r -1}}
+rule WYRMNEXT 1 {WYRM{}}
+
+rule WYRMSEGMENT {
+	CIRCLE{s 1.5}
+	3*[s .5 x .01]CIRCLE{s 10 a -.997 b 1}
+}
+
+rule WYRMSEGMENT .002{
+	WORLD[z -1 a -.3 s .5 b 1 hue 10 sat 1]
+	WORLD[z 1 a -.3 s .5 b 1 hue -10 sat 1]
+}
+
+rule WYRMSEGMENT .2{}

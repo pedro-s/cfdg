@@ -1,0 +1,7 @@
+startshape HIY
+CF::Background = [b -1]
+shape HIY{
+SQUARE[h 240 sat 1.0000 b 0.3702]
+SQUARE[s .97 ]
+HIY[s .99 h -20 r 10]
+}

@@ -1,0 +1,66 @@
+startshape PIR
+background {hue 50 sat 0.5 b 2}
+
+rule PIR{
+	pyramid{hue 50 sat 0.5 r 45 skew -5 -5}
+}
+
+rule pyramid{
+	Side{r 0 y 0.5 s 1 0.6 skew -22 -0}
+	Side{r 270 x 0.5 s 1 0.6 skew 22 0 b 0.1}
+	Side{r 90 x -0.5 s 1 1.4 skew -22 0 b 0.2}
+	Side{r 180 y -0.5 s 1 1.4 skew 22 0 b 0.3}
+	SQUARE{r 180 x -0.46 s 0.07 0.05 skew 0 18 b 0.2}
+	Plane{r 180 y 0.5 b 0.9 z -1 skew 15 0 }
+}
+
+rule Side{
+	SQUARE{s 1 0.01}
+	Plane{b 0.4 z -1}
+	Dots{}
+	Dots{}
+	Dots{}
+	Dots{}
+	Dots{}
+	Dots{}
+	Dots{}
+	Side{s 0.90 y -.05}
+}
+
+rule Plane{
+	SQUARE{s 1 0.01}
+	Plane{s 0.98015 y -.01}
+}
+
+rule Dots{
+	Lot{x 0.1}
+}
+rule Dots{
+	Lot{x -0.1}
+}
+rule Dots{
+	Lot{x 0.2}
+}
+rule Dots{
+	Lot{x -0.2}
+}
+rule Dots{
+	Lot{x 0.3}
+}
+rule Dots{
+	Lot{x -0.3}
+}
+rule Dots{
+	Lot{x 0.4}
+}
+rule Dots{
+	Lot{x -0.4}
+}
+rule Dots{
+	Lot{}
+}
+
+rule Lot{
+	SQUARE{s 0.01 y -0.01}
+	Lot{s 0.8 y -0.01}
+}

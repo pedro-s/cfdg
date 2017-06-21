@@ -1,0 +1,31 @@
+startshape gonz
+rule gonz{
+ CIRCRIJ{x 0.09 s 0.8 r 1 a 0.1}
+	gonz{x 5 s .95 h 2.5 r 15 b -.8 a -.01}
+	gonz{y 1 s .4 h 3 r -3 b -.1 }
+}
+
+rule CIRCRIJ {
+30 * {y -.5} CIRCCOL {}
+}
+rule CIRCCOL {
+5 * {x .5} CIRCLES {}
+}
+ 
+rule CIRCLES {
+CIR {}
+CIRCLES {s .5 h 2 a -0.5}
+}
+ 
+rule CIRCLES 0.5 {
+CIRCLES {s .8}
+}
+ 
+rule CIR  {
+CIRCLE {b 0 s 0.5 skew 3 3}
+}
+ 
+
+rule CIR 2 {
+CIRCLE {b 1 h 250 sat 1 a -0.5}
+}

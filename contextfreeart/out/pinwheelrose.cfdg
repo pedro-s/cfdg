@@ -1,0 +1,21 @@
+startshape cr2
+background {b -.5}
+
+rule circlea {
+	CIRCLE {x -.25 b 1 a -.5 sat .1}
+	circlea {s .667 r 120 hue 90}
+}
+
+rule circleb {
+	CIRCLE {x .25 b .1 a -.5 sat 1}
+	circleb {s .667 r -120 hue -90}
+}
+
+rule cr {
+	circlea {}
+	circleb {}
+}
+
+rule cr2 {
+	3*{r 120}cr {}
+}

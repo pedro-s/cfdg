@@ -1,0 +1,53 @@
+startshape photo
+background { b -.5}
+ 
+size {s 20} 
+
+rule photo {
+  field{ r -20 x -35 y -10}
+//  SQUARE{b 1 a -.5 s 18  }
+  noise{ x -10 y -10 }
+}
+
+rule field {
+25*{y 1.5 x -2 }{ 20*{x 4} pit{} }
+}
+
+rule pit  { empty{} }
+rule pit .1{ ss{} }
+rule pit { s_{} }
+rule pit { s_{} }
+rule pit { L{} }
+
+path s_{ 
+ MOVETO{x 0 y 0}
+ LINETO{x .3 y 0}
+ STROKE{ x .1 y .2 p roundcap width .7 b 0 a -.4}
+ STROKE{ x -.1 y -.2 p roundcap width 1 b .7 a -.5}
+ STROKE{ x -.1 y -.1 p roundcap width .7 b 1 a -.5}
+ STROKE{p roundcap width .5 b .4}
+}
+rule _s{ s_{x 1.5}}
+rule ss{s_{} _s{}}
+path L{
+ MOVETO{x 0 y 0}
+ LINETO{x 2 y 0}
+ STROKE{ x .1 y .1 p roundcap width .7 b 0 a -.4}
+ STROKE{ x -.1 y -.2 p roundcap width 1 b .7 a -.5}
+ STROKE{ x -.1 y -.1 p roundcap width .7 b 1 a -.5}
+ STROKE{p roundcap width .5 b .4}
+}
+rule empty{}
+
+rule noise {
+  220 * { x .1} trail {s .09 a -.95}
+  220 * { x .1} trail { y 12 r 180 s .08 a -.95 b 1} 
+  220 * { x .1} trail {s .09 a -.85 b .3}
+}
+
+rule trail { 200    * [y 2 a 0.004] grain {} }
+rule grain { gr {} }
+rule gr { gr { x .5 } }
+rule gr { gr { x -.5}  } 
+rule gr 3.5 { gr { x -.3 y -.3 s .7} gr {x .3 y .3 s .7} }
+rule gr {SQUARE {s 1.5}}

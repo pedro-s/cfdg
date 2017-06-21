@@ -1,0 +1,18 @@
+startshape T
+
+rule T{
+	4*{r 90}{
+		SU{}
+		//T{y 30 s .5}
+	}
+}
+
+rule SU{
+	S{}
+	SU{x -2.2 y 3.4 s .8 r -31.1}
+}
+
+rule S{
+	CIRCLE{}
+	S{y .2 r 3 s .994}
+}

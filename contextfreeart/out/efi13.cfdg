@@ -1,0 +1,33 @@
+startshape G
+background {a -1}
+
+rule G {2*{y 25 h 180}F{}}
+
+rule F {20*{x 5 h 3}D{}}
+
+rule D {2* {flip 180}C{a -.5}}
+
+rule C {4*{r 90}B{}}
+
+rule B { B{s .5 x 2 y .5 r 5} A {} }
+rule B { B{s .6 x 2 y .5 r 5} A {} }
+rule B { B{s .7 x 2 y .5 r 5} A {} }
+rule B { B{s .8 x 2 y .5 r 5} A {} }
+rule B { B{s .9 x 2 y .5 r 5} A {} }
+
+
+rule A {
+5*{x .5 y .5 s .9}SQUARE{s .46 b 1 a -.8}
+3*{x 1 y 1}SQUARE{z -1}
+SQUARE{z -2 a -.5 s 3 x 1 y 1}
+}
+
+rule A {
+A{}
+E{a -.6}
+}
+
+rule E {
+E{ s .99 a -.1 x .1 sat 1 b 1}
+CIRCLE {}
+}

@@ -1,0 +1,16 @@
+startshape aa2
+background {hue 200 b -.6 sat .6}
+rule aa1
+{
+	CIRCLE{}
+	9*{r 40}CIRCLE{s .6 x -.2 }
+}
+rule aa
+{
+	5*{s .8 r 20 sat .1  }aa1{}
+	
+}
+rule aa2
+{
+	aa{sat 0 hue 30 b 1 alpha -.95}
+}

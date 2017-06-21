@@ -1,0 +1,79 @@
+/** Typical variations:
+   POM, ABA, ABT, TUP, TVQ, ZGB **/
+
+startshape RANDOMTREE
+
+rule RANDOMTREE
+{
+	TREE{hue 120.0}
+   BACKGROUND{z -20}
+	ROCK{z -10 y -8}
+}
+
+rule ROCK
+{
+	CIRCLE{s 20}
+   ROCK{y -4.7 x -10 s 0.8}
+   ROCK{y -4.6 x 7 s 0.8}
+}
+rule ROCK
+{
+	CIRCLE{s 20}
+   ROCK{y -5.6 x -6 s 0.85}
+   ROCK{y -6.7 x 3 s 0.8}
+}
+rule ROCK
+{
+	TRIANGLE{s 20}
+   ROCK{y -4.7 x 5 s 0.8}
+   ROCK{y -5 x -2 s 0.8}
+}
+rule ROCK
+{
+	CIRCLE{s 20}
+   ROCK{y -5.5 x 11 s 0.8}
+   ROCK{y -5.7 x -8 s 0.8}
+}
+
+/** TREE RULES **/
+
+rule SEGMENT
+{
+	SQUARE{y 4 size 1 8}
+}
+
+rule TREE 0.05
+{
+}
+
+rule TREE
+{
+	SEGMENT{}
+	TREE{y 7.9 hue -15.0 r -20 s 0.95 sat 0.04 b 0.02}
+	TREE{y 7.9 hue 10.0 r 20 s 0.95 sat 0.04 b 0.02}
+}
+
+rule TREE
+{
+	SEGMENT{}
+	TREE{y 7.9 hue -10.0 r 18 s 0.89 sat -0.07 b 0.02}
+}
+
+rule TREE
+{
+	SEGMENT{}
+	TREE{y 7.9 hue 10.0 r -22 s 0.89 sat -0.07 b 0.02}
+}
+
+/*********************/
+
+rule FIRE
+{
+	TRIANGLE { s 1.5 0.15 r 21 }
+	FIRE { s 0.995 r 9 hue 0.05}
+}
+
+rule BACKGROUND
+{
+	FIRE{alpha -0.9 hue 10.0 sat 1.0 b 1.0 s 50.0}
+}

@@ -1,0 +1,76 @@
+startshape SUN
+background { b -1 }
+
+rule SUN {
+180* {r 9} LINER { y 1.9   hue 0 sat 2  b 0.7 
+ 				|hue 60   |sat 1 |b 1 }
+}
+
+rule LINER { LINER1 { } }
+rule LINER { LINER2 { } }
+rule LINER { LINER3 { } }
+rule LINER { LINER4 { } }
+rule LINER { LINER5 { } }
+rule LINER { LINER6 { } }
+
+rule LINER1 {
+	UTRIANGLE { y 1 }
+	LINER1 { r -1 b 0.1| hue 267.90 sat 0.9117 b 1.0000|
+		y 0.99 x .05
+		 s 0.99 }
+ }
+rule LINER2 {
+	UTRIANGLE { y 1 }
+	LINER2 { r -2 b 0.1| hue 180.00 sat 0.4863 b 1.0000|
+		y 0.99 x .05
+		 s 0.99 }
+ }
+rule LINER3 {
+	UTRIANGLE { y 2 }
+	LINER3 { r -3 b 0.1| hue 267.90 sat 0.9117 b 1.0000|
+		y 0.99 x .05
+		 s 0.99 }
+ }
+rule LINER4 {
+	UTRIANGLE { y 3 }
+	LINER4 { r 1 b 0.1| hue 267.90 sat 0.9117 b 1.0000|
+		y 0.99 x .05
+		 s 0.99 }
+ }
+rule LINER5 {
+	UTRIANGLE { y 4 }
+	LINER5 { r 2 b 0.1| hue 180.00 sat 0.4863 b 1.0000|
+		y 0.99 x 0.4330125
+		 s 0.99 }
+ }
+rule LINER6 {
+	UTRIANGLE { y 5 }
+	LINER6 { r 3 b 0.1| hue 0 |
+		y 0.99 x 0.4330125
+		 s 0.99 }
+ }
+
+rule LINER1 .1 { LINER { } }
+rule LINER2 .1 { LINER { } }
+rule LINER3 .1 { LINER { } }
+rule LINER4 .1 { LINER { } }
+rule LINER5 .1 { LINER { } }
+rule LINER6 .1 { LINER { } }
+
+// 0.754877 is the solution to
+// x^2 + x^3 = 1
+
+
+rule UTRIANGLE {
+	TRIANGLE { r 42.5 s 0.525 }
+}
+rule TRIANGLE{ 
+	ARM { r 20 }
+	ARM { r 1200 }
+	ARM { r -1200 }
+} 
+
+rule ARM {
+	CIRCLE {}
+	ARM { y 0.99 s 0.7 r 2 }
+}

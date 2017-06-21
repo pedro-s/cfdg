@@ -1,0 +1,41 @@
+startshape DRIZZLE
+background {hue 0.0000 sat 0.0000 b -1.0000}
+
+
+rule DRIZZLE { 
+
+10*{x 1}
+SQUARE { hue 0.0000 sat 0.0000 b 0.5000}
+10* {y 1}
+SQUARE {  hue 0.0000 sat 0.0000 b 0.5000}
+SQUARE { s .5 x 5 y 5 hue 183.4064 sat 0.8765 b 0.9765}
+SQUARE { s .5 x 5 y 5.5 hue 183.4064 sat 0.8765 b 0.9765}
+SQUARE { s .5 x 5 y 6 hue 183.4064 sat 0.8765 b 0.9765}
+SQUARE { s .5 x 5.5 y 5 hue 183.4064 sat 0.8765 b 0.9765}
+SQUARE { s .5 x 6 y 5 hue 183.4064 sat 0.8765 b 0.9765}
+SQUARE { s .5 x 3 y .75 hue 36.3844 sat 0.9834 b 0.9765}
+SQUARE { s .5 x 3.5 y .75 hue 36.3844 sat 0.9834 b 0.9765}
+SQUARE { s .5 x 3 y 1.7 hue 36.3844 sat 0.9834 b 0.9765}
+SQUARE { s .5 x 3 y 1.2 hue 36.3844 sat 0.9834 b 0.9765}
+ SQUARE { s .5 x .75 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+SQUARE { s .5 x 1.2 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+SQUARE { s .5 x 1.7 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+SQUARE { s .5 x 4 y .75 hue 36.3844 sat 0.9834 b 0.9765}
+SQUARE { s .5 x 2.2 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+ SQUARE { s .5 x 2.5 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+SQUARE { s .5 x 6.5 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+SQUARE { s .5 x 7 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+SQUARE { s .5 x 7.5 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+SQUARE { s .5 x 8 y .75 hue 2.6630 sat 0.8968 b 0.9765}
+ SQUARE { s .5 x 3.5 y 1.25 hue 126.6667 sat 1.0000 b 0.9176}
+SQUARE { s .5 x 4 y 1.25 hue 126.6667 sat 1.0000 b 0.9176}
+SQUARE { s .5 x 3.5 y 1.7 hue 126.6667 sat 1.0000 b 0.9176}
+SQUARE { s .5 x 4 y 1.7 hue 126.6667 sat 1.0000 b 0.9176}
+
+
+
+
+
+
+
+}

@@ -1,0 +1,110 @@
+startshape contset
+
+rule contset .2 {
+	//stop
+}
+rule contset {
+	yarg {}
+	contset {}
+}
+rule contset {
+	yarg { x 15.75 }
+	contset {}
+}
+rule contset {
+	yarg { x -15.75 }
+	contset {}
+}
+rule contset {
+	yarg { y 15.75 }
+	contset {}
+}
+rule contset {
+	yarg { y -15.75 }
+	contset {}
+}
+
+rule yarg .05 {}
+rule yarg 10 {
+	block {}
+	yarg { x 1.05 }
+}
+rule yarg 10 {
+	block {}
+	yarg { x -1.05 }
+}
+rule yarg 10 {
+	block {}
+	yarg { y -1.05 }
+}
+rule yarg 10 {
+	block {}
+	yarg { y 1.05 }
+}
+
+rule yarg 1 {
+	block {}
+	block { x -1.05}
+	block { x -1.05 y 1.05 }
+	yarg { y 1.05 }
+}
+rule yarg 1 {
+	block {}
+	block { x -1.05}
+	yarg { y -1.05 }
+}
+rule yarg 1 {
+	block {}
+	block { x -1.05}
+	block { x -2.10}
+	block { x -3.15}
+	block { x -1.05 y 1.05 }
+	block { x -2.10 y 1.05 }
+	block { x -3.15 y 1.05 }
+	yarg {}
+}
+
+rule block {
+	construct {
+		//brown
+		sat 1
+		hue 50	
+	}
+}
+rule block {
+	construct {
+		//teal
+		sat 1
+		hue 175
+	}
+}
+rule block {
+	construct {
+		//green
+		sat 1
+		hue 100	
+	}
+}
+
+
+rule construct {
+	SQUARE { b 0.4 }
+	SQUARE {
+		b .8
+		x -.475
+		s .05,1
+	}
+	SQUARE {
+		b .8
+		y 0.475
+		s 1,.05
+	}
+	SQUARE {
+		x .475
+		s .05,1
+	}
+	SQUARE {
+		y -0.475
+		s 1,.05
+	}
+}

@@ -1,0 +1,29 @@
+startshape angles2
+
+background {b -1}
+
+rule angles2 {
+	tri{r 30}
+}
+
+rule tri {
+	3*{r 120 x -1}
+	{2*{f 180 y -.5774}
+	more {}
+}}
+
+rule more {
+	much {}
+	more {s .618 x .809 y -.1103 b .1}
+}
+
+rule much {
+	tendril {}
+	much {s .618 r 60 x .5 y .0681  h -14}
+	much {s .382 f 60 x .191 y .467 h -14}
+}
+
+rule tendril{
+	TRIANGLE {b .1 h 150}
+	tendril {s .99 b .01 y -.0029 x .005 r -1 h .005 sat.01}
+}

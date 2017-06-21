@@ -1,0 +1,15 @@
+startshape rot
+
+background {b -1}
+
+rule rot { 8* {r(360/8)}
+	um {}
+	rot {s .14 r 22.7}
+}
+
+rule um {
+	um {s .4 y .16 b .1}
+	um {s .6 x -.4 y 2  r -30 b .1}
+	um {s .6 x .4 y 2 r 30 b .1}
+	CIRCLE {b .1}
+}

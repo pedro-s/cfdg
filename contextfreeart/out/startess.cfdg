@@ -1,0 +1,80 @@
+startshape RECC
+
+background {hue 40 sat .3 b 1}
+
+rule TRI {
+    TRIANGLE {s 1 4 h 100 sat .3}
+}
+
+rule SPI {
+    CIRCLE {s 2 h 100 sat .3}
+    TRI {y 2.4 }
+    TRI {r 22.5 x -.95 y 2.2}
+    TRI {r 45 x -1.7 y 1.7}
+    TRI {r 67.5 x -2.2 y .95}
+    TRI {r 90 x -2.4}
+    TRI {r 112.5 x -2.2 y -.95}
+    TRI {r 135 x -1.7 y -1.7}
+    TRI {r 157.5 x -.95 y -2.2}
+    TRI {r 180 y -2.4}
+    TRI {r 202.5 x .95 y -2.2}
+    TRI {r 225 y -1.7 x 1.7}
+    TRI {r 247.5 y -.95 x 2.2}
+    TRI {r 270 x 2.4}
+    TRI {r 292.5 y .95 x 2.2}
+    TRI {r 315 x 1.7 y 1.7}
+    TRI {r 337.5 x .95 y 2.2}
+}
+
+rule RECA {
+    //SPI { }
+    SPI {x 2.4 y 5.7 s .5}
+    SPI {x -2.4 y 5.7 s .5}
+    SPI {x -2.4 y -5.7 s .5}
+    SPI {x 2.4 y -5.7 s .5}
+}
+
+rule RECA2 {
+    RECA { }
+    RECA {r 90}
+}
+
+rule RECB {
+    RECA2 { }
+    RECB {s .59 r 22.5}
+}
+
+rule RECC {
+    RECB { }
+    RECC {s .95 r 22.5 b .1 a -.4}
+}
+
+rule RECC {
+    RECB { }
+    RECC {s 1.2 r 67.5 b 1.5}
+}
+
+rule RECC 3 {
+    RECB { }
+    RECC {s .85 r -22.5 b .5 a -.3}
+}
+
+rule RECC 2 {
+    RECB { }
+    RECC {s .65 r 45 b .1}
+}
+
+rule RECC 4 {
+    RECB { }
+    RECC {s .99 r 22.5 b .1}
+}
+
+rule RECC 5 {
+    RECB { }
+    RECC {s .99 r 15 b .1}
+}
+
+rule RECC 6 {
+    RECB { }
+    RECC {s .99 r -66 b .1 a -.1}
+}

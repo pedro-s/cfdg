@@ -1,0 +1,18 @@
+startshape START
+
+background {b -1}
+
+rule START {
+	100 * {} A {}
+}
+
+rule A {
+	SQUARE {sat 1 b 1}
+	A {y 1 s 0.999 r 1 h 0.1}
+}
+
+rule A {
+	SQUARE {sat 1 b 1}
+	A {y -10 s 0.9999 r -5 h 0.1}
+}
+

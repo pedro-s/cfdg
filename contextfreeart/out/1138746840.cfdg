@@ -1,0 +1,30 @@
+startshape universe
+
+background{    hue 357.3 sat 0.8609 b -0.3 }
+
+rule universe {
+
+burbuja{  }
+
+}
+
+rule burbuja {
+
+CIRCLE {s 1.9}
+CIRCLE {s 1.6 b 1 }
+CIRCLE {s 1.4  hue 6.8 sat 0.8459 b 0.6}
+CIRCLE {s 1.1 b 0 }
+CIRCLE {s 0.7 }
+CIRCLE {s 0.5 }
+
+
+burbuja{ s 0.3333333333  x 0 y 0}
+burbuja{ s 0.3333333333  x 1 y 0}
+burbuja{ s 0.3333333333  x -1 y 0}
+burbuja{ s 0.3333333333  x 0.5 y 1}
+burbuja{ s 0.3333333333  x -0.5 y 1}
+burbuja{ s 0.3333333333  x 0.5 y -1}
+burbuja{ s 0.3333333333  x -0.5 y -1}
+}
+
+rule burbuja 0.5 {}

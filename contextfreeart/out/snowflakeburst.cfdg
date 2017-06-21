@@ -1,0 +1,16 @@
+startshape zzz
+
+background {b -1}
+
+rule zzz {
+	10* {r 36} zz {h 23 sat 0.1 b 0.1}
+}
+
+rule zz {
+	CIRCLE {}
+	zz{ b 0.01 s 0.89 x 1}
+}
+
+rule zz 0.02 {
+	zzz {}
+}

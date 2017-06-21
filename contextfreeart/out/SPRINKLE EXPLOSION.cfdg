@@ -1,0 +1,20 @@
+startshape SprinkleExplosion
+background {b  1}
+rule  SprinkleExplosion{
+    15000*{}box {}
+}
+rule box 100 {
+    box {x 1}
+}
+rule box 100 {
+    box {y 1 h 118.51 sat 1.0000 b 1.0000}
+}
+rule box 100 {
+    box {y -1 h 118.51 sat 1.0000 b 1.0000}
+}
+rule box 100 {
+    box {x -1}
+}
+rule box {
+    SQUARE {b 1 sat 1}
+}

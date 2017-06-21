@@ -1,0 +1,78 @@
+startshape start [b 1 r 180]
+
+CF::Background = [hue 240 sat 1 b 0.2]
+CF::Size=[s 4.5  x .9 y .3]
+
+vector4 Bern(t)=
+(1-t)^3, 
+3*(1-t)^2*t,
+3*(1-t)*t^2,
+t^3
+
+vector2 P(t,vector8 B) =let (v=Bern(t);v[0]*B[0,1]+v[1]*B[2,1]+v[2]*B[4,1]+v[3]*B[6,1], v[0]*B[0+1,1]+v[1]*B[2+1,1]+v[2]*B[4+1,1]+v[3]*B[6+1,1])
+
+shape start
+{ 
+   flower(45)[]
+    flower(85)[r 30 s .8 x 2 y .45] 
+    bg[hue -40 sat 1 b -1 a 1 z -10]
+    stem1 [s 1.5 b -.3  x 0 y 0] 
+    stem2 [s 1.5 b -.5  x 2 y .45]
+}
+
+shape stem1
+{   
+    loop i=-10,10,.1 [] 
+    {
+      B0=(0,i*0.0011),  (.45, i*.0012), (.75,.8+i*0.0012),  (1.5,.95+i*.0014)  
+      bezier(B0,i,1,0) [  sat .8  h (140+(-20..20))  ]
+    }
+}
+
+shape stem2
+{   
+    loop i=-10,10,.1 [] 
+    {
+      B0=(0,i*0.0012),  (.25,.2+ i*.004), (.25,.8+i*0.004),  (.4,1.57+i*.008)  
+      bezier(B0,i,1,0) [  sat .8  h (140+(-20..20))  ]
+    }
+}
+
+shape flower(alpha1) 
+{
+   CIRCLE[ s .1 .03 b 1 h 60 sat 1 z 0]
+    loop k=0,13[] 
+    {  
+    B=-.3..0.3
+    loop i=-20,20,.1 [] 
+    {
+      A=rand_static(-.2,-.2) 
+      B0=(0,0),  (0.15,A+i*0.01), (.75,B+i*0.01),  (1,0)  
+      bezier(B0,i,k,alpha1) [  sat .2  h (0+(-20..20))  ]
+    }
+  }
+}
+
+shape bezier(vector8 P4,i,k,alpha1)
+{
+    loop j=0,1,.0005 [] {
+        P2=P(j,P4)
+        PX=P2[0]
+        PY=P2[1]
+         P1=(PX,PY,j^2/1)
+       CIRCLE [x Rot(P1,k*30+12,alpha1) s 0.003 a -.9 b (-abs(i)/40+j/10)]
+   }
+} 
+
+shape bg {
+  loop 200 []
+    CIRCLE[s .3..1 x -1..3 y -2..4 hue 260 sat 1 b 0.1..0.7 a -0.94 z -4]
+}
+
+vector3 Rot(vector3 V,A,B)
+=    let (CosA=cos(A);SinA=sin(A); CosB=cos(B);SinB=sin(B);
+ 
+CosA*V[0]     -SinA*V[1]
+,CosB*SinA*V[0]+CosB*CosA*V[1]-SinB*V[2]
+,SinB*SinA*V[0]+SinB*CosA*V[1]+CosB*V[2]
+ )

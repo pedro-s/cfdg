@@ -1,0 +1,120 @@
+startshape GIZA
+CF::Size=[s 380 y -55 x 45]
+CF::Background=[b -.1 h 60 sat .5]
+//Var:GIZA
+
+C(phi)=cos(phi)
+S(phi)=sin(phi)
+
+//3D rotation al(pha) be(ta) ga(mma)
+//rotation matrix
+
+vX11(al,be,ga)=(C(ga)*C(be)*C(al)-S(ga)*S(al)) 
+vX12(al,be,ga)=(C(ga)*C(be)*S(al)+S(ga)*C(al)) 
+vX13(al,be,ga)=(-C(ga)*S(be))
+
+vY21(al,be,ga)=(-S(ga)*C(be)*C(al)-C(ga)*S(al)) 
+vY22(al,be,ga)=(-S(ga)*C(be)*S(al)+C(ga)*C(al)) 
+vY23(al,be,ga)=(S(ga)*S(be))
+
+vZ31(al,be,ga)=(S(be)*C(al)) 
+vZ32(al,be,ga)=(S(be)*S(al)) 
+vZ33(al,be,ga)=(C(be))
+
+//rotated vectors
+
+X(al, be, ga, x1, y1, z1)=
+vX11(al,be,ga)*x1+vX12(al,be,ga)*y1+vX13(al,be,ga)*z1
+
+Y(al, be, ga, x1, y1, z1)=
+vY21(al,be,ga)*x1+vY22(al,be,ga)*y1+vY23(al,be,ga)*z1
+
+Z(al, be, ga, x1, y1, z1)=
+vZ31(al,be,ga)*x1+vZ32(al,be,ga)*y1+vZ33(al,be,ga)*z1
+
+H(x1)=sqrt(3*x1^2) //Height of equal sided triangle of base 2xHWT
+STep=1.5
+RU=sqrt(3)
+S3=1,1,.3
+
+shape CIRci
+{
+CIRCLE [s STep h 0..30 ]
+CIRCLE [s (1.25*STep)  b -1 z -1 y (-STep/2)]
+}
+
+//HWT=half width triangle
+//Equal sided triangles for constructing tetrahedrons
+
+shape TRI_zpl(HWT,al,be,ga)
+{
+loop x1=-HWT,HWT,STep [h 0]
+loop y1=1,H(abs(x1)-HWT),STep [h 0]
+CIRci 
+[s S3
+x X(al,be,ga,x1,y1,y1/RU)
+y Y(al,be,ga,x1,y1,y1/RU) 
+z Z(al,be,ga,x1,y1,y1/RU)
+]
+}
+shape TRI_zmi(HWT,al,be,ga)
+{
+loop x1=-HWT,HWT,STep [h 0]
+loop y1=1,H(abs(x1)-HWT),STep [h 0]
+CIRci
+[s S3
+x X(al,be,ga,x1,y1,-y1/RU)
+y Y(al,be,ga,x1,y1,-y1/RU) 
+z Z(al,be,ga,x1,y1,-y1/RU)
+]
+}
+
+shape TRI_xpl(HWT,al,be,ga)
+{
+TR=HWT*sqrt(3)
+loop z1=-HWT,HWT,STep [h 0]
+loop y1=1,H(abs(z1)-HWT),STep [h 0]
+CIRci
+[s S3
+x X(al,be,ga,y1/RU,(TR-y1),-z1)
+y Y(al,be,ga,y1/RU,(TR-y1),-z1) 
+z Z(al,be,ga,y1/RU,(TR-y1),-z1)
+]
+}
+
+shape TRI_xmi(HWT,al,be,ga)
+{
+TR=HWT*sqrt(3)
+loop z1=-HWT,HWT,STep [h 0]
+loop y1=1,H(abs(z1)-HWT),STep [h 0]
+CIRci 
+[s S3 b 0..1
+x X(al,be,ga,-y1/RU,(TR-y1),-z1)
+y Y(al,be,ga,-y1/RU,(TR-y1),-z1) 
+z Z(al,be,ga,-y1/RU,(TR-y1),-z1)
+]
+}
+
+//final tetrahedron shape
+shape TRIangled(HWT,al,be,ga)
+{
+TRI_zpl(HWT,al,be,ga) [sat 1 b 1]
+TRI_zmi(HWT,al,be,ga) [sat 1 b .8 h 100 z -2]
+TRI_xpl(HWT,al,be,ga) [sat 1 h 60 b 1]
+TRI_xmi(HWT,al,be,ga) [ ] 
+}
+
+shape DESert
+{
+loop 2000 [y -.1  b .001 z .18 a -.003  ] SQUARE [s 500 1  b 0    sat 1 h 60]
+loop 4000 [y .15 b .001 z .07 a -.0025] SQUARE [s 500 .5 b 0.3 sat 1 h 0  ]
+}
+
+shape GIZA
+{
+loop K=-135,136,45 [h -45 z (K/3) x -15 y 5] 
+TRIangled(120,-(.6*K),-(1.35*K),(1.9*K)) [ ]
+DESert [y -6 z -100 a 1]
+}
+
+

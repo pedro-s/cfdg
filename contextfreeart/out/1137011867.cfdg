@@ -1,0 +1,23 @@
+startshape lastnite
+
+background {b -1}
+
+rule lastnite {constelacion{  hue 223.2 sat 0.6721 b 0.9154 }}
+rule lastnite {constelacion{  hue 107.9 sat 0.7463 b 0.9154 }}
+rule lastnite {constelacion{  hue 351.2 sat 0.9108 b 0.7910 }}
+rule lastnite {constelacion{  hue 51.0   sat 0.8746 b 0.9204 }}
+rule lastnite {constelacion{  hue 27.7   sat 0.6888 b 0.9204 }}
+rule lastnite {constelacion{  hue 187.5 sat 0.9985 b 0.9204 }}
+rule lastnite {constelacion{  hue 86.0   sat 0.4310 b 0.9204 }}
+rule lastnite {constelacion{  hue 17.3   sat 0.8065 b 0.5174 }}
+rule lastnite {constelacion{  hue 246.6 sat 0.9809 b 0.6716 }}
+rule lastnite {constelacion{  hue 301.2 sat 0.8884 b 0.9104 }}
+rule lastnite {constelacion{  hue 108.2 sat 0.8001 b 0.5274 }}
+rule lastnite {constelacion{  hue 38.7   sat 0.0640 b 0.2239 }}
+
+rule constelacion {
+CIRCLE { r 35 s 0.3 b 1 }
+SQUARE   { s 0.2 b -0.5 hue 35 sat 0.6721 }
+CIRCLE { r 35 s 0.15 b 0.5 hue 155 sat 0.6721 }
+constelacion {x 0.3 y 0.5 r 22 s 0.989   hue 223.2 sat 0.6721 b 0.9154 }
+}

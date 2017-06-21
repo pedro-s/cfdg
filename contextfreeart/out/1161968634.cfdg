@@ -1,0 +1,12 @@
+startshape START
+
+rule START { TRIA{sat 1 b 1} }
+
+rule TRIA {
+	TRIANGLE {}
+	TRIA { s 0.5 x -0.252 y -0.1445}
+	TRIA { s 0.5 x +0.252 y -0.1445}
+	TRIA { s 0.5 h 10 r 180}
+	TRIA { s 0.5 y 0.29}
+}
+

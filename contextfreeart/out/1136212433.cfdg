@@ -1,0 +1,57 @@
+startshape scene
+
+rule scene {
+fur{ x 0 y 0 r 210 alpha 1 b 0.2 sat 0.3 hue 27 }
+
+}
+
+
+rule fur{
+
+hair [ r -0.03 s 0.999 y 0.5 alpha 0 b 0.002 sat 0.2 hue 0]
+
+
+ distr{s 0.999 alpha -0.003}
+
+}
+
+
+
+rule distr{
+     fur[ x 1  ]
+}
+
+rule distr{
+     fur[ x -1  ]
+}
+
+rule distr{
+     fur[  y 1 ]
+}
+
+rule distr{
+     fur[  y -1  ]
+}
+
+rule distr{
+     fur[  r 1 ]
+}
+
+rule distr{
+     fur[  r -1  ]
+}
+
+
+rule distr{
+     fur[  b 0.1 ]
+}
+
+rule distr{
+     fur[  b -0.1  ]
+}
+
+rule hair{
+CIRCLE{  }
+hair [ r -0.1 s 0.995 y 0.5 alpha -0.001 b 0.0001 sat 0.0 hue 0]
+
+}

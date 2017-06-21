@@ -1,0 +1,18 @@
+startshape RAWR
+background {h 349.33 sat 0.9556 b -0.7133}
+
+rule RAWR{
+	30*{x 10.1 r 12} RAWRR {}
+}
+rule RAWRR{
+	4*{r 90} STRIPE {}
+	CIRCLE {s 1.45 b -1}
+	RAWRR {x 2  y 2 s 0.96 r 3.2}
+}
+rule STRIPE {
+	SSTRIPE {y 0.8}
+}
+rule SSTRIPE {
+	TRIANGLE {}
+	SSTRIPE {y 1.04 s 0.8777 h 368.33 sat 0.9556 b 0.6133}
+}

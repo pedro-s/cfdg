@@ -1,0 +1,21 @@
+startshape SF
+background{b -0.85 h 210 sat 1}
+
+rule SF {
+	ARM{ r 30 }
+	SF{ r 30 s 0.25}
+}
+rule ARM 5 {
+	SHAPE{ s 1 1}
+	ARM { x 2 s 0.94 alpha -0.03}
+}
+rule ARM {
+	SHAPE{ s 1 1}
+	ARM { x 2 s 0.99 r 60 alpha -0.03}
+	ARM {x 2 s 0.99 r -60 alpha -0.03}
+}
+rule ARM 0.01 {}
+
+rule SHAPE{
+	CIRCLE{ h 60 b 1}
+}

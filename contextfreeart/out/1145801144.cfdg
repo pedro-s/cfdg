@@ -1,0 +1,26 @@
+startshape sudokuform
+
+rule sudokuform{
+
+	SQUARE {s 946}
+
+	3*[x 312]SQUARE {x -312 y    0 s 302 b 1}
+	3*[x 312]SQUARE {x -312 y -312 s 302 b 1}
+	3*[x 312]SQUARE {x -312 y  312 s 302 b 1}
+
+	946*[y 1]SQUARE {x -362 y -473}
+	946*[y 1]SQUARE {x -261 y -473}
+	946*[y 1]SQUARE {x  362 y -473}
+	946*[y 1]SQUARE {x  261 y -473}
+	946*[y 1]SQUARE {x  -51 y -473}
+	946*[y 1]SQUARE {x   51 y -473}
+
+	946*[x 1]SQUARE {x -473 y -362}
+	946*[x 1]SQUARE {x -473 y -261}
+	946*[x 1]SQUARE {x -473 y  362}
+	946*[x 1]SQUARE {x -473 y  261}
+	946*[x 1]SQUARE {x -473 y  -51}
+	946*[x 1]SQUARE {x -473 y   51}	
+}
+
+	

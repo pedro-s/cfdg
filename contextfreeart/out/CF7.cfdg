@@ -1,0 +1,50 @@
+startshape TriPack
+
+path Triangle {
+	MOVETO(0, 0)
+	LINETO(0, 5)
+	LINETO(5, 5)
+	CLOSEPOLY() 
+	FILL()[]
+}
+
+shape VioletTriangle {
+	Triangle [ hue 304 sat 0.67 b 0.56 skew 20 20]
+}
+
+shape BlueTriangle { 
+	Triangle [ hue 192 sat 97 b 0.82 skew 5 50]
+}
+
+shape YellowTriangle {
+	Triangle [ hue 35 sat 0.74 b 0.96 skew 65 8 flip 10]
+}
+
+shape TriPack {	
+	loop 10  
+		[x 1 y 2 a -0.1 r 5] VioletTriangle []
+	loop 10   
+		[x 1.5 y 1 a -0.06  s 1.1] BlueTriangle []
+	loop 10   
+		[x -2 y 1 a -0.03  s 1.1 r 2] YellowTriangle []
+}
+
+shape Shape2 {
+	loop 3 [ r 10 s 1.2  ]
+		TriPack []
+}
+
+shape Shape1 {
+	loop 2 [ x 20..40 y 1..10 ] 
+		Shape2 [ r 280 ]
+}
+
+shape Shape0 {
+	plusMinusZero = -1..1
+	loop 8 [ x 10..200 y 10..200 r (60*plusMinusZero) ] 
+		Shape1 [ r 45 ]
+}
+
+
+
+

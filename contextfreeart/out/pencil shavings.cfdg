@@ -1,0 +1,301 @@
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+10* { x 1 y 1 r 10 }
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { y 0.2 size 0.99 rotate 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+20* { x 1 y 1 r 10 }
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { y 0.2 size 0.99 rotate 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+20* { x 1 y 1 r 50 }
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { y 0.2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+20* { x 1 y 1 r 10 }
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { y 0.2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}
+
+startshape TENDRILS
+
+background { b-1}
+
+rule TENDRILS {
+
+
+ARM { }
+
+}
+
+rule ARM {
+
+TRIANGLE { }
+
+TRIANGLE { size 0.9 brightness 1 h 61.93 sat 0.9444 b 1.0000 }
+
+ARM { x 2 y 2 size 0.99 rotate 70}
+
+}

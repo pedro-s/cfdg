@@ -1,0 +1,17 @@
+startshape start
+background { b -.5 }
+
+rule start { 
+	spiral { r 270 b 1 }
+}
+
+rule spiral { 
+	CIRCLE { }
+	spiral { x 1 size .99 r 3 }
+}
+
+rule spiral .01 { 
+	CIRCLE { }
+	spiral { x 1 size .99 f 180 b .1 }
+	spiral { x 1 size .99 b .1 }
+}

@@ -1,0 +1,19 @@
+startshape TEN
+background [b - 1]
+rule TEN {
+ARM []
+ARM [flip 90]
+
+
+}
+rule ARM 99 {
+CIRCLE [h 116.57 sat 0.0248 b 0.8785]
+CIRCLE [s 2 brightness 1 h 116.57 sat 0.0248 b 0.8785]
+ARM [y .8 s .99 r .9]
+}
+rule ARM 8 {
+CIRCLE []
+CIRCLE [s .2 brightness 1 h 116.57 sat 0.0248 b 0.8785]
+ARM {y .2 s .99 flip 90}
+ARM [y .2 s .6 b .2 h 116.57 sat 0.0248 b 0.8785]
+}

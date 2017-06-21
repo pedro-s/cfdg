@@ -1,0 +1,48 @@
+startshape tre()
+ 
+CF::Size = [s 400]
+CF::Background = [b 1]
+CF::Impure = 1 
+CF::ColorDepth = 16 
+ 
+total=80000
+ 
+teta=360*(sqrt(5)-1)/2
+ 
+ 
+ 
+//-------------------------------------------------------------
+ 
+shape fibo (number pos)
+rule
+{
+ 
+dist=sqrt(pos)
+ 
+ang=teta*pos
+ 
+yy=sin(ang)*dist
+xx=cos(ang)*dist
+ 
+hh= rand_static(3600)
+ 
+brg=(sin(pos /20 -80)+1)/2 + cos(pos*100)/2 + cos(ang+dist)*.2
+
+satu= (cos(ang+45) + pos*pos / 590000000) +.6
+
+//hhh=cos(pos*100)*181
+hhh=cos(pos/2000)*360
+
+SQUARE [y yy x xx s 1.9 h hh r (ang +45) b brg h hhh sat satu]
+ 
+}
+ 
+//-------------------------------------------------------------
+ 
+shape tre
+{
+  loop j = 0, total [] fibo(j) [a -.25]
+}
+ 
+//-------------------------------------------------------------
+ 

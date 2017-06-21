@@ -1,0 +1,37 @@
+startshape ax
+
+background {b -.2}
+
+rule ax{
+bx{}
+dx{s .5 a -.3 x 3}
+}
+
+rule bx{
+cx{}
+cx{x 1.1}
+cx{y .9}
+}
+
+rule cx{
+TRIANGLE{}
+cx{s .9 sat 1 b 1}
+bx{x 1 s .9}
+}
+
+rule cx{
+TRIANGLE{}
+cx{s .9 sat -1 b 1}
+bx{x 1 s .9}
+}
+
+rule dx{
+ex{z 2}
+ex{x 11 z 2}
+ex{y 9 z 2}
+}
+
+rule ex{
+TRIANGLE{s 10}
+TRIANGLE{s 9.5 b 1 a 1}
+}

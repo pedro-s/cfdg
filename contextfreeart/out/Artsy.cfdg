@@ -1,0 +1,45 @@
+startshape C
+
+rule C{
+D{}
+D{r 45 s .8}
+D{r 22.5 s .6}
+D{r -22.5 s .6}
+CIRCLE {s 5}
+}
+
+rule D {
+4*{r 90} E {}
+}
+
+rule E {
+F{h 19 r 1 z-.01}
+E{y .985 s .985}
+}
+
+rule E { E{r -.3} }
+
+rule E 0.01{ E{r -90 z 10} }
+rule E 0.001{ E{r 90} }
+rule E 0.001{ E{r 45} }
+
+
+rule F{
+	CIRCLEX{x-1}
+	CIRCLEX{a .1 b 1 sat -1}
+	CIRCLEX{x 1}
+}
+
+rule F 0.003{
+	CIRCLEX{}
+	C{r 90 s 0.9 a -.75 b .3 sat 1}
+	C{r -90 s 0.9 a -.75 b .3 sat 1}
+}
+
+rule CIRCLEX {
+CIRCLE{}
+CIRCLE{x -1.5 a -.5 b .2}
+CIRCLE{x 1.5 a -.5 b .2}
+CIRCLE{y -1.5 a -.5 b .2}
+CIRCLE{y 1.5 a -.5 b .2}
+}

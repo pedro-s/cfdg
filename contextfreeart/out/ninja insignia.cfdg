@@ -1,0 +1,12 @@
+startshape B
+background {b -.7}
+
+rule A {
+TRIANGLE { }
+3*{r 120 } A {s .5 b .07 r 60 x .01 y .25}
+}
+
+rule B {
+2*{r 80}A {r - 100 }
+}
+

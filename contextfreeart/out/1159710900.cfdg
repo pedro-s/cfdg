@@ -1,0 +1,33 @@
+startshape LEAF
+
+// EVERYONE'S FAVORITE
+
+rule LEAF{
+	PROCESS {s 1.1 b -.1}
+	PROCESS {s 1.1 r 120 b -.1}
+	PROCESS {r 240 b -.1}
+	PROCESS {s .8 r 60 b -.1}
+	PROCESS {s .8 r 300 b -.1}
+	MEMBRANE {}
+	NUCLEUS {}
+	}
+
+
+rule PROCESS {
+	FORMATION {r 2 s .8 }
+	}
+
+rule MEMBRANE {
+	LEAF {b .4 s .9}
+	}
+
+rule NUCLEUS {
+	CIRCLE { s .9}
+	}
+
+
+rule FORMATION {
+	CIRCLE {s .5 }
+	PROCESS {y .2}
+	}
+

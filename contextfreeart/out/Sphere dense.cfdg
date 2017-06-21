@@ -1,0 +1,36 @@
+startshape GLOBE
+//this rule allows us to control an aspect of all 4 sets of rings at once
+	rule GLOBE{
+	//this rotates all 4 parts of the circles into alignment
+		A {r -1}
+}
+
+//this rule adjusts the positions of the rings.
+	rule A{
+	//this adjusts the placement & orientation of the green set of rings
+		B {s 1 x .399999 y -22.92  hue 100 sat 1 b 1 flip 90}
+	//this adjusts the placement & orientation of the yellow set of rings
+		B {s 1 flip 180 x -.399999 y 22.92 hue 50 sat 1 b 1}
+	//this adjusts the placement & orientation of the red set of rings
+		B {s 1 flip 45 x -22.92 y -.399999 hue 1 sat 1 b 1}
+	//blue
+		B {flip -45 x 22.92 y .399999 hue 200 sat 1 b 1}
+}
+
+//this rule allows us to isolate the distance between sets without affecting individual cirle size
+	rule B{
+	//increasing the size overlaps the circles and vice versa 
+		C {}			
+}
+
+//this rule changes features of the entire image
+	rule C{
+	//this effect multiplies (^) the amount of times a transformation is applied to an image (in this case 250)
+		250* {r 2 x .8 } 
+	//this element controls the properties of the shape chosen to be used in drawing the image (a circle in this case)
+		CIRCLE {s .4}
+	//this element controls the number of rings per set where s < 1.  {s .99} creates a neat diffraction pattern while {s .9} allows us to see the basic structure}
+		C {s .997}	
+}
+
+

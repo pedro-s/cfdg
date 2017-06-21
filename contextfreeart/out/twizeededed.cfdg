@@ -1,0 +1,19 @@
+startshape tweed3
+
+rule tweed1 {
+	 SQUARE { x 1 y 1 size 2 b .15 sat 100 hue 75}    
+tweed1 { x 1.07 s 0.87 skew .5 2 b .10 flip 2 sat -.2 hue 1.5} 
+tweed1 { r 45 s .428  b .01  flip 180} // draws on top of both
+}
+
+rule tweed2 {
+	tweed1 {r 0}
+	tweed1 {r 45}
+tweed1 {r 90}
+tweed1 {r 135}
+tweed1 {r 180}
+}
+
+rule tweed3 {
+		tweed2 {r -2.45}
+}

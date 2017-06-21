@@ -1,0 +1,13 @@
+startshape tapestry
+background{h 0 sat .01 b .01}
+
+rule tapestry{
+2*{flip 180 y -1}levy{}
+tapestry{y -0.333 s 0.333}
+}
+
+rule levy {
+SQUARE{}
+levy{s (1/sqrt(2)) r -45 x .5 b .1 sat .1}
+levy{s (1/sqrt(2)) r 45 x -.5 b .1 sat .1}
+}

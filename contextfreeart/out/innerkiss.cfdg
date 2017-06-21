@@ -1,0 +1,12 @@
+startshape you
+
+background {b -1}
+
+rule you {
+	2*{f 90 x -.5774}
+	TRIANGLE {r -90 b .14}
+	2*{f 90 x -.5774}
+	{2*{f 180}
+	you {s .382 r 60 x .4671 y -.191}}
+	you {s .618 x -.1103 b .14}
+}

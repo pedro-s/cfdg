@@ -1,0 +1,129 @@
+startshape COMIC
+
+include i_pix.cfdg
+
+rule COMIC {
+	FIGHT {}
+	ONE {x -4.4 y 1.4 s .6}
+
+	FIGHT {y -7}
+	TWO {x -4.4 y -5.6 s .6}
+
+	FIGHT {y -14}
+	THREE {x -4.4 y -12.6 s .6}
+}
+
+rule FIGHT {
+	SQUARE {y -1 s 10 6}
+	SQUARE {y -1 s 9.7 5.7 b 1}
+	ROTMAN1 {x -2 b .4 sat 1 hue 100}
+	ROTMAN2 {x 2}
+
+}
+
+rule ONE {
+	O_5by5 {}
+	N_5by5 {x 1.2}
+	E_5by5 {x 2.4}
+}
+
+rule TWO {
+	T_5by5 {}
+	W_5by5 {x 1.2}
+	O_5by5 {x 2.4}
+}
+
+rule THREE {
+	T_5by5 {}
+	H_5by5 {x 1.2}
+	R_5by5 {x 2.4}
+	E_5by5 {x 3.6}
+	E_5by5 {x 4.8}
+}
+
+
+rule ROTMAN1 8 {MAN1{ }}
+rule ROTMAN1 4 {MAN1{r 25}}
+rule ROTMAN1 2 {MAN1{r 50}}
+rule ROTMAN1    {MAN1{r 75}}
+
+rule ROTMAN2 8 {MAN2{ }}
+rule ROTMAN2 4 {MAN2{r -25}}
+rule ROTMAN2 2 {MAN2{r -50}}
+rule ROTMAN2    {MAN2{r -75}}
+
+
+
+
+rule MAN1 {
+
+	// draw body
+	SQUARE {y -1 s .3 2 alpha -.3}
+	CIRCLE {y -2 s .8 .5}
+
+	// Draw Head
+	CIRCLE {}
+	CIRCLE {x .15 y .15 s 0.3 b 1}
+	CIRCLE {x -.15 y .15 s 0.35 b 1}
+	CIRCLE {x .24 y .15 s 0.1}
+	CIRCLE {x -.08 y .15 s 0.15}
+	SQUARE {y -.22 s .65 .02 b 1}
+
+	// draw arms
+	ROT1{r 90  y -.5}
+	ROT1{r -90 y -.5}
+	// draw legs
+	ROT3{r 45  y -2}
+	ROT3{r -45 y -2}
+}
+
+rule MAN2 {
+
+	// draw body
+	SQUARE {y -1 s .3 2 alpha -.3}
+	CIRCLE {y -2 s .8 .5}
+
+	// Draw Head
+	CIRCLE {}
+	CIRCLE {x .15 y .15 s 0.3 b 1}
+	CIRCLE {x -.15 y .15 s 0.35 b 1}
+	CIRCLE {x .08 y .15 s 0.1}
+	CIRCLE {x -.24 y .15 s 0.15}
+	SQUARE {y -.22 s .65 .02 b 1}
+
+	// draw arms
+	ROT1{r 90  y -.5}
+	ROT1{r -90 y -.5}
+	// draw legs
+	ROT3{r 45  y -2}
+	ROT3{r -45 y -2}
+}
+
+
+rule ROT1 {SEGM1 {       }}
+rule ROT1 {SEGM1 {r -30}}
+rule ROT1 {SEGM1 {r -60}}
+rule ROT1 {SEGM1 {r  30}}
+rule ROT1 {SEGM1 {r  60}}
+
+rule SEGM1 {
+	SQUARE {y -.5 s .2 1 alpha -.3}
+	CIRCLE {y -1 s .3}
+	ROT2 {y -1}
+}
+
+rule ROT2 {SEGM2 {r -30}}
+rule ROT2 {SEGM2 {r -60}}
+rule ROT2 {SEGM2 {r  30}}
+rule ROT2 {SEGM2 {r  60}}
+
+rule SEGM2 {
+	SQUARE {y -.5 s .2 1 alpha -0.3}
+	CIRCLE {y -1 s .3}
+}
+
+rule ROT3 {SEGM1 {       }}
+rule ROT3 {SEGM1 {r -30}}
+rule ROT3 {SEGM1 {r -15}}
+rule ROT3 {SEGM1 {r  30}}
+rule ROT3 {SEGM1 {r  15}}

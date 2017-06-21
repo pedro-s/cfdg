@@ -1,0 +1,22 @@
+startshape goldshell 
+
+background {b -1}
+
+rule fin {
+	3 * {r (360/3) x -.64}
+	goldshell {}
+}
+
+rule goldshell {
+	8 * {s .6 y .1 h -4.2 r -14}
+	goldwave {}
+	goldshell {s .8 r 63 x .5 h .5 sat .1  z 1}
+}
+
+rule goldwave {
+	goldwave {s 1 .99 r 180.3 x -.004 y .0133 b .004 h .1 sat .024 a -.001 z .5}
+	CIRCLE {s 1 b .6 h 5 z .1 sat .4 a -.2}
+	CIRCLE {s 1.01 b .2 h -15 sat .4 a -.2}
+}
+
+//rule goldwave .5 {goldwave {r -180.3 s .99 1}}

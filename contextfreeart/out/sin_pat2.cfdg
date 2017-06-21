@@ -1,0 +1,14 @@
+startshape MAIN [ b 1 ]
+CF::Background = [ b - 1]
+
+shape MAIN
+{
+	xx = 0
+	loop i = 90 [x -42 h (255*1.5/90) r 4] SinWave(6000, xx * i )[ sat 1 b 1]
+}
+
+shape SinWave ( natural len, natural phase)
+{
+	SQUARE[ s 2 1 b 1 x (6* sin(phase)) ]
+	if (len) SinWave( len --1, phase + 20)[ h .1 y -.5 r .09]
+}

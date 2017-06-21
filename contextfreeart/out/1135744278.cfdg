@@ -1,0 +1,162 @@
+startshape init
+background {b -0.6}
+rule init
+{
+ child{}
+ init{r 10 x 18 s 0.93 alpha -0.15}
+}
+
+rule init
+{
+ child{}
+ init{r -10 x -18 s 0.93 alpha -0.15}
+}
+
+rule init
+{
+ child{}
+ init{r 10 y 10 s 0.93 alpha -0.25}
+}
+
+rule init
+{
+ child{}
+ init{r -10 y -10 s 0.93 alpha -0.25}
+}
+
+rule init 0.01
+{
+ init{s 5}
+}
+
+
+rule child
+{
+ center{}	
+}
+
+rule center
+{
+ arm{
+	s 0.95
+	b 0.9
+	}
+ arm{
+	s 0.95
+	b 0.9
+	r 60
+	}
+ arm{
+	s 0.95
+	b 0.9
+	r -60
+	}
+ arm{
+	s 0.95
+	b 0.9
+	r 120
+	}
+ arm{
+	s 0.95
+	b 0.9
+	r -120
+	}
+ arm{
+	y 0.5
+	b 0.9
+	r 180
+	}
+}
+
+rule arm
+{
+ segment{}
+ arm{
+	y 1
+	s 0.95
+	r 5
+	b 0.9
+	}
+}
+
+rule arm
+{
+ segment{}
+ arm{
+	y 1
+	s 0.95
+	r -5
+	b 0.9
+	}
+}
+
+rule arm 0.065
+{
+ branch{alpha -0.3}
+ arm{
+	y 0.5
+	s 0.95
+	b 0.9
+	}
+ arm{
+	y 0.5
+	s 0.95
+	b 0.9
+	r 60
+	}
+ arm{
+	y 0.5
+	s 0.95
+	b 0.9
+	r -60
+	}
+ arm{
+	y 0.5
+	s 0.95
+	b 0.9
+	r 120
+	}
+ arm{
+	y 0.5
+	s 0.95
+	b 0.9
+	r -120
+	}
+
+}
+
+rule branch
+{
+ CIRCLE{
+	hue 10
+	sat 0.5
+	b 0.6
+	alpha -0.8
+	}
+
+ SQUARE{
+	s 0.2 1
+	hue 200 
+	sat 0.9 
+	b 0.8 
+	alpha -0.3}
+}
+
+
+rule segment
+{
+ SQUARE{
+	hue 40
+	sat 0.7
+	b 0.6
+	alpha -0.7
+}
+
+ SQUARE{
+	s 0.2 1
+	hue 200
+	sat 0.2 
+	b 0.2 
+	alpha -0.5}
+}
+

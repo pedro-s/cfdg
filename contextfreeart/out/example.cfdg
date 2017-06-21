@@ -1,0 +1,11 @@
+startshape G
+background { b -1}
+rule G{
+TRIANGLE { size 4 h 270.00 sat 0.8667 b 1.0000}
+TRIANGLE { size 3.9 h 229.30 sat 0.7327 b 1.0000}
+TRIANGLE { size 3.8 h 126.09 sat 0.8112 b 1.0000}
+TRIANGLE { size 3.7 h 19.07 sat 0.9523 b 1.0000}
+TRIANGLE { size 3.6 h 53.27 sat 0.9289 b 1.0000}
+TRIANGLE { size 3.5 h 3.27 sat 0.7790 b 1.0000}
+G { r 200 s .99}
+}

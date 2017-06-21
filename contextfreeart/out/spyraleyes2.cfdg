@@ -1,0 +1,116 @@
+startshape Start	
+
+rule Start {
+trunk {}
+trunk {size 0.7}
+CIRCLE {size 1.3}
+}
+rule spyralr{
+
+TRIANGLE {}
+spyralr { x +0.2 y +0.2 size 0.99 rotate -5}
+}
+
+rule spyralr{
+
+TRIANGLE {}
+spyralr { x +0.2 y +0.2 size 0.99 rotate +0.5}
+}
+
+rule spyrall{
+
+TRIANGLE {}
+spyrall { x +0.2 y +0.2 size 0.99 rotate +5}
+}
+
+rule spyrall{
+
+TRIANGLE {}
+spyrall { x +0.2 y +0.2 size 0.99 rotate -0.5}
+}
+
+
+rule trunk 49{
+TRIANGLE {}
+trunk { x +0.2 y +0.2 size 0.99 rotate -10}
+}
+
+
+rule trunk 49 {
+TRIANGLE {}
+trunk { x +0.2 y +0.2 size 0.99 rotate +10}
+}
+
+rule trunk 0.7{
+TRIANGLE {}
+spyralr{}
+trunk { x +0.2 y +0.2 size 0.99 rotate -10}
+}
+
+
+rule trunk 1{
+TRIANGLE {}
+spyrall{}
+trunk { x +0.2 y +0.2 size 0.99 rotate +10}
+}
+
+rule trunk 1{
+TRIANGLE {}
+trunk {}
+trunk { x +0.2 y +0.2 size 0.99 rotate +10}
+}
+
+rule trunk 1{
+Eye {x +0.5 z 0.1 r 120 size 3}
+}
+
+
+rule Eye {
+iris {size 0.8}
+pupille {size 0.8}
+rand {r 120 y +0.5}
+rand {r 300 y -0.5}
+CIRCLE {b 1 size 1.5 1}
+}
+
+rule iris {irisblau {}}
+rule iris {irisbraun {}}
+rule iris {irisgruen {}}
+
+rule irisblau {
+CIRCLE {hue 220 sat 1 b 0.5}
+irisblau {size 0.99 hue -1 z +0.001}
+}
+
+rule irisbraun {
+CIRCLE {hue 50  sat 1 b 0.5}
+irisbraun {size 0.99 hue +0.3 z +0.001}
+}
+
+rule irisgruen {
+CIRCLE {size 1.02 z -1}
+CIRCLE {hue 100  sat 0.5 b 0.5}
+irisgruen {size 0.99 hue +1 z +0.001}
+}
+
+rule pupille {
+CIRCLE {size 0.4 z 1}
+72* {r 5} TRIANGLE {size 0.01 x +0.2 z 1}
+}
+
+
+rule rand {
+
+240* {r 0.5} CIRCLE {y+1 size 0.02}
+31* {r 4} wimper {r 45 y+1 size 0.02}
+}
+
+rule wimper {
+TRIANGLE {}
+wimper {r 45 size 0.99 r 1 x+0.1 y+0.1}
+}
+
+rule wimper {
+TRIANGLE {}
+wimper {size 0.994 r -1 x+0.1 y+0.1}
+}

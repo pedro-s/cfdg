@@ -1,0 +1,15 @@
+startshape turd
+
+rule turd {
+stroke {hue 30 sat 1 b 0.4}
+}
+
+rule stroke {
+CIRCLE {}
+stroke {x 0.04 s 0.99 r 2}
+}
+
+rule stroke 0.3 {
+stroke {flip 75}
+}
+

@@ -1,0 +1,44 @@
+startshape GO
+
+background { b -0.3 }
+//background { b 0.2 sat 0.2 hue 350 }
+
+rule GO {
+	STUMP {z -1 b 0 sat 0.5 hue 260}
+	STALK {b 0 sat 0.5 hue 260}
+	SEGMENTS {b 0.2 sat 1 hue 240}
+	FRUIT { size 0.8 x 6.45 y 3.1 z 10 }
+}
+
+rule FRUIT {
+	CIRCLE { size 0.6 0.7 x 0.1 r 5 b 0.8 sat 1 }
+	CIRCLE { x -0.06 y 0.18 r -35 size 0.1 0.25 b 0.95 sat 0.05 }
+	TRIANGLE { size 0.2 x 0.03 y 0.37 r 15 b 0.4 sat 1 }
+}
+
+rule SEGMENTS {
+	SEGMENT {}
+	SEGMENTS { z 0.03 y 2.55 size 0.9 r -20.8 }
+}
+
+rule SEGMENT {
+	SPIRAL {}
+	SPIRAL {flip 90}
+}
+
+rule SPIRAL {
+	CIRCLE { b -0.5 size 1.01 }
+	CIRCLE {}
+	SPIRAL { z 0.01 |b 1 b 0.025| hue -0.0065| x -0.034 y 0.077 r 0.6 size 0.996}
+}
+
+rule STALK {
+	SQUARE { x 0.15 y 1.5 size 0.4 3 r 0}
+	SQUARE { x -0.2 y 1.5 size 0.4 3 r -2}
+	STALK { z -0.01 y 2.55 size 0.9 r -20.8}
+}
+
+rule STUMP {
+	SQUARE { x 0.28 y -1.5 size 0.55 3 r 2}
+	SQUARE { x -0.18 y -1.5 size 0.55 3 r -2}
+}

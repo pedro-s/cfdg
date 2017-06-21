@@ -1,0 +1,12 @@
+startshape ALPHA
+
+CF::Background=[b-1]
+
+shape ALPHA
+{
+loop 60[x -1 y -1 r 10 ]
+TRIANGLE[h 357.27 sat 1.0000 b 1.0000]
+loop 40[x -1 y -1 r 10 h 1 ]
+loop 10[y 2.5 x .3 s 2]
+TRIANGLE[s .5 h 357.27 sat 1.0000 b 1.0000 skew 60 70]
+}

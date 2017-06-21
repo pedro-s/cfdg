@@ -1,0 +1,54 @@
+startshape SPERM
+
+background {b -1}
+
+rule SPERM {
+
+ESPERMATOZOIDE_HORIZ { x 0  y 0  r -4 }
+ESPERMATOZOIDE_HORIZ { x 25  y 10  r 6  }
+ESPERMATOZOIDE_HORIZ { x 8  y -6 r -3 }
+ESPERMATOZOIDE_HORIZ { x 2  y 5  r  8 }
+ESPERMATOZOIDE_HORIZ { x 7  y 8  r -4 }
+ESPERMATOZOIDE_HORIZ { x 2  y 16  r  8 }
+ESPERMATOZOIDE_HORIZ { x -7  y -8  r -4 }
+ESPERMATOZOIDE_HORIZ { x 22  y -8  r -4 }
+ESPERMATOZOIDE_HORIZ { x 24 y 2 r -3 }
+
+
+}
+
+rule ESPERMATOZOIDE_HORIZ {
+ESPERMATOZOIDE{ r 90}
+}
+
+rule ESPERMATOZOIDE{
+// head
+CIRCLE { s 2.2 6.3  b 0  }
+CIRCLE { s 2 6  b 1   }
+// tail
+LATIGO { y 2 }
+} 
+
+rule LATIGO {
+LATIGO_IZQ {}
+}
+rule LATIGO {
+LATIGO_DER {}
+}
+
+rule LATIGO_IZQ {
+CIRCLE { s 1 2 y 1 b 1}
+CIRCLE{ s 0.8 2 r -15 y 1.8 b 1}
+CIRCLE{ s 0.8 2 r -15 x .5 y 1.8 b 1}
+CIRCLE{ s 0.8 2 r -20 x 1 y 1.8 b 0}
+LATIGO { y 1.8 s 0.9 r -30 }
+}
+
+rule LATIGO_DER {
+CIRCLE{ s 1 2 y 1 b 1}
+CIRCLE{ s 0.8 2 r 15 y 1.8 b 1}
+CIRCLE{ s 0.8 2 r 15 x -.5 y 1.8 b 1}
+CIRCLE{ s 0.8 2 r 20 x -1 y 1.8 b 0}
+LATIGO { y 1.8 s 0.9 r 30}
+}
+

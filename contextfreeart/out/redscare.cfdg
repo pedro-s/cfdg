@@ -1,0 +1,23 @@
+startshape go
+
+background {hue 47.5 b -.05 sat 1}
+
+rule go
+{
+	2* {flip 90} pointy {flip 0 sat 1 b .6}
+}
+
+rule pointy
+{
+	cupola{}
+	pointy{x 1.1 y 1 r 10 s .6}
+	pointy{x 1.1  r 10 s .7 flip 90 }
+}
+
+rule cupola
+{
+	CIRCLE{} // backlight
+	CIRCLE{y .05 b -.55  } 
+
+	cupola {y -.325 s .48 .85}
+}

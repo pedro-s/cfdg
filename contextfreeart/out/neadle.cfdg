@@ -1,0 +1,11 @@
+startshape warpspeed
+ 
+background {b -1 }
+
+rule warpspeed{
+50*{ r rand(29) s .95.9 h 10 }
+{50*{ r rand(29) s .95.9}
+{2*{ r rand(29)}
+{200*{s .98.99  x .03 y .03 h 1.33 sat 1.0000 b 1.0000 }
+CIRCLE{h 109.23 sat 1.0000 b 1.0000}}}
+}}

@@ -1,0 +1,47 @@
+startshape start
+background{b -1}
+
+rule start
+{
+	CIRCLE{sat 0 b 1 s 5 x -5}
+	spiral{hue .1 sat 1 b 1}
+}
+
+rule spiral
+{
+	hair{}
+	spiral{hue .1 sat -0.0008 y 1 r 10 s 0.9992}
+}
+
+rule hair 10
+{
+	SQUARE{}
+	hair{y 1 r 5 s 0.99}
+}
+
+rule hair 10
+{
+	SQUARE{}
+	hair{y 1 r -5 s 0.99}
+}
+
+rule hair 0.005
+{
+	hair{}
+	hair{r 10 hue 180}
+	//smallspiral{hue 180 b 1}
+}
+
+/*
+rule smallspiral
+{
+	SQUARE{}
+	smallspiral{y 1 r 1 s 0.99 hue 1}
+}
+
+rule smallspiral
+{
+	SQUARE{}
+	smallspiral{y 1 r -1 s 0.99 hue 1}
+}
+*/

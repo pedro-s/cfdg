@@ -1,0 +1,39 @@
+startshape HEART 
+background {b-1}
+rule HEART
+
+{
+
+
+1000* {x 50  y 0 r 25 s .9 h 5}
+SQUARE { s 40 y -60 h 1.68 sat 1.0000 b 1.0000}
+
+1000* {x 50  y 0 r 20 s .9 h 5}
+SQUARE { y -120 s 40 h 1.68 sat 1.0000 b 1.0000 }
+
+1000* {x 50  y 0 r 15 s .9 h 5}
+SQUARE {  y -180 s 40  h 1.68 sat 1.0000 b 1.0000}
+
+1000* {x 50  y 0 r 10 s .9 h 5}
+SQUARE {y -240 s 40 h 1.68 sat 1.0000 b 1.0000}
+
+1000* {x 50  y 0 r 5 s .9 h 5}
+SQUARE {y -300  s 40 h 1.68 sat 1.0000 b 1.0000}
+
+1000* {x -50  y 0 r -5  s .9 h 5}
+SQUARE {y -300  s 40 h 1.68 sat 1.0000 b 1.0000 }
+
+1000* {x -50  y 0 r -10 s .9 h 5}
+SQUARE {y -240 s 40 h 1.68 sat 1.0000 b 1.0000}
+
+1000* {x -50  y 0 r -15 s .9 h 5}
+SQUARE {  y -180 s 40  h 1.68 sat 1.0000 b 1.0000}
+
+1000* {x -50  y 0 r -20 s .9 h 5}
+SQUARE { y -120 s 40 h 1.68 sat 1.0000 b 1.0000}
+
+1000* {x -50  y 0 r -25 s .9 h 5}
+SQUARE { s 40 y -60 h 1.68 sat 1.0000 b 1.0000}
+
+
+}

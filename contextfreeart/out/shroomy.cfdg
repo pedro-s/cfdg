@@ -1,0 +1,146 @@
+startshape MUSHROOM
+
+rule MUSHROOM{
+//=======================
+
+6*{x 1}
+SQUARE{}
+
+2*{x 7}
+SQUARE{x -1 y 1}
+
+
+2*{x 9}
+SQUARE{x -2 y 2}
+
+2*{x 9}
+SQUARE{x -2 y 3}
+
+2*{x 9}
+SQUARE{x -2 y 4}
+
+2*{x 7}
+SQUARE{x -1 y 4}
+
+2*{x 11}
+SQUARE{x -3 y 4}
+
+8*{x 1}
+SQUARE{x -1 y 5}
+
+2*{x 3}
+SQUARE{x 1 y 4 h 63.43 sat 0.0497 b 0.9882}
+
+2*{x 3}
+SQUARE{x 1 y 3 h 63.43 sat 0.0497 b 0.9882}
+
+6*{y 1}
+SQUARE{x -4 y 5}
+
+6*{y 1}
+SQUARE{x 9 y 5}
+
+2*{x 11}
+SQUARE{y 11 x -3}
+
+2*{x 9}
+SQUARE{y 12 x -2}
+
+2*{x 7}
+SQUARE{y 12 x -1}
+
+6*{x 1}
+SQUARE{y 13 x 0}
+//=====================
+
+//Colors
+
+6*{x 1}
+SQUARE{h 46.47 sat 0.6130 b 0.6851 x 0 y 1}
+
+8*{x 1}
+SQUARE{h 46.47 sat 0.6130 b 0.6851 x -1 y 2}
+
+2*{x 1}
+SQUARE{y 3 x -1 h 46.47 sat 0.6130 b 0.6851}
+
+2*{x 1}
+SQUARE{y 3 x 2 h 46.47 sat 0.6130 b 0.6851}
+
+2*{x 1}
+SQUARE{y 3 x 5 h 46.47 sat 0.6130 b 0.6851}
+
+SQUARE{x 0 y 4 h 46.47 sat 0.6130 b 0.6851}
+
+2*{x 1}
+SQUARE{x 2 y 4 h 46.47 sat 0.6130 b 0.6851}
+
+
+SQUARE{x 5 y 4 h 46.47 sat 0.6130 b 0.6851}
+
+12*{x 1}
+SQUARE{y 6 x -3 h 313.19 sat 0.7468 b 0.6851}
+
+2*{x 1}
+SQUARE{h 313.19 sat 0.7468 b 0.6851 y 5 x -3}
+
+2*{x 1}
+SQUARE{h 313.19 sat 0.7468 b 0.6851 y 5 x 7}
+
+12*{x 1}
+SQUARE{y 7 x -3 h 313.19 sat 0.7468 b 0.6851}
+
+12*{x 1}
+SQUARE{y 8 x -3 h 313.19 sat 0.7468 b 0.6851}
+
+12*{x 1}
+SQUARE{y 9 x -3 h 313.19 sat 0.7468 b 0.6851}
+
+12*{x 1}
+SQUARE{y 10 x -3 h 313.19 sat 0.7468 b 0.6851}
+
+10*{x 1}
+SQUARE{y 11 x -2 h 313.19 sat 0.7468 b 0.6851}
+
+6*{x 1}
+SQUARE{y 12 x -0 h 313.19 sat 0.7468 b 0.6851}
+
+4*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 7 x -3}
+
+4*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 7 x -2}
+
+4*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 8 x 3}
+
+4*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 8 x 4}
+
+2*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 8 x -1}
+
+2*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 7 x 8}
+
+2*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 9 x 5}
+
+2*{y 1}
+SQUARE{h 170.54 sat 0.0676 b 1.0000 y 9 x 2}
+
+
+2*{x 1}
+SQUARE{y 1 x 2 h 170.54 sat 0.0676 b 0.1050}
+
+SQUARE{s .4 h 356.35 sat 1.0000 b 0.9882 x  1.7 y .7}
+
+SQUARE{s .5 y 3.8 x 1}
+
+SQUARE{s .5 y 3.8 x 4}
+
+
+
+
+
+}

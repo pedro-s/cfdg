@@ -1,0 +1,19 @@
+startshape fig3
+background { b -1}
+
+rule fig3 {
+fig2 { }
+fig2 { flip -90}
+fig3 { r 45 x -.75 y -2 s .9 hue 20}
+}
+
+rule fig2 {
+fig1 { }
+fig1 { flip -90}
+fig2 { r 20 s .9 hue 0}
+}
+
+rule fig1 {
+TRIANGLE { a -.55 hue 2 sat 1}
+fig1 { s .94 r 17 x .5 hue 0.1 b .03}
+}

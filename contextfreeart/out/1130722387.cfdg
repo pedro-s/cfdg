@@ -1,0 +1,40 @@
+startshape START
+background { hue 400 sat 0.2 b -1 }
+
+rule START {
+	SCENE { hue 900 sat 1 b 1 }
+	FUXIA {hue 400 sat 1 b 1}
+	START {y 100 r 90  s 0.29}
+}
+
+rule FUXIA{
+	CIRCLE { s 10 x -10  }
+	CIRCLE { x 50 s 5  }
+	CIRCLE { x 15 y 15  size 5 }
+	//CIRCLE { x 50 y 15  size 10 alpha -0.7}
+	FUXIA {y 50 r 88  s 0.59 alpha -0.15}
+}
+rule FUXIA 0.45 {
+	FUXIA{flip -50}
+	FUXIA {flip -10}
+}
+rule SCENE {
+	CIRCLE {  size 20 }
+	CIRCLE {  size 30 alpha -0.7 }
+	CIRCLE {  size 40 alpha -0.7 }
+	FLOW { }
+	FLOW { }
+	FLOW { flip -50 }
+	FLOW { flip -50 }
+	FLOW { flip -10 }
+	FLOW { flip -10 }
+}
+rule FLOW 0.008 {
+	SQUARE { }
+	CIRCLE { s 5 alpha -0.7 }
+	FLOW { x 1 s 0.995 r 2}
+}
+rule FLOW 0.0001 {
+	FLOW { flip 2 }
+}
+

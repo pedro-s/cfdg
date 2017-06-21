@@ -1,0 +1,87 @@
+startshape GO
+
+background {b -1}
+
+rule SPEAR {
+	TRIANGLE {s 0.05 1}
+}
+
+rule STAR {
+	SPEAR{}
+	SPEAR{r 45}
+	SPEAR{r 90}
+	SPEAR{r 135}
+	SPEAR{r 180}
+	SPEAR{r 225}
+	SPEAR{r 270}
+	SPEAR{r 315}
+}
+
+rule GO {
+	FIELD {h 60}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {x 1 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {x 2 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {x 3 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {x -1 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {x -2 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {x -3 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {y 1 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {y 2 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {y 3 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {y -1 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {y -2 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {y -3 s 0.9 h 5}
+}
+
+rule FIELD {
+	STAR{}
+	FIELD {r 17 s 5 sat 1 b 1 hue 40 a -0.05}
+}

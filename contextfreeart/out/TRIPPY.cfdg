@@ -1,0 +1,9 @@
+startshape TRIPPY
+background {h 118.11 sat 1.0000 b 1.0000}
+
+rule TRIPPY {
+TRIANGLE {s.1}
+TRIPPY {z 5 s.9  r 45 h -123.38 sat 1.0000 b 1.0000}
+TRIPPY {z 5 s.9  h -123.38 sat 1.0000 b 1.0000}
+}
+

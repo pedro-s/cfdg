@@ -1,0 +1,45 @@
+startshape START
+background { b -0.4 }
+
+rule START {
+	NODE { hue 40 sat 0.8 b 0.3 }
+	NODE { hue 40 sat 0.8 b 0.3 r 90 }
+	NODE { hue 40 sat 0.8 b 0.3 r 180}
+	NODE { hue 40 sat 0.8 b 0.3 r 270}
+}
+
+rule NODE {
+	STAR { skew 0 20 }
+	NODE { s 0.89 y 1.2 r 35 hue -20.5 alpha -0.02 skew 5 0 }
+}
+
+rule NODE 0.2 { 
+	NODE { flip 197 skew 8 0}
+}
+
+rule NODE 0.2 { 
+	NODE { flip 17 skew 0 5}
+}
+
+rule STAR {
+	SHAPE { }
+	SHAPE { flip 180 alpha -0.3}
+	SHAPE { r 90 alpha -0.4}
+	SHAPE { r -90 alpha -0.2}
+	STAR { s 0.65 b 0.35 }
+}
+
+rule SHAPE {
+	TRIANGLE { x -1.5 y 1 }
+	CIRCLE { x 1 }
+	SQUARE{ s 1.5 0.09 x 3}
+	SQUARE{ s 1.5 0.09 x 3 r 5 alpha -0.5}
+}
+
+rule SHAPE 0.2 {
+	SHAPE { skew 10 0 }
+}
+
+rule SHAPE 0.2 {
+	SHAPE { skew 0 10}
+}

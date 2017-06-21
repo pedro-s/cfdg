@@ -1,0 +1,25 @@
+startshape START
+background { b -0.5 }
+
+rule START {
+	STAR { sat 1 b 0.95 alpha -0.27 hue 1 }
+	STAR { x 0.3 sat 1 b 0.95 alpha -0.27 hue 210 }
+}
+
+rule STAR {
+	DRAW {  }
+	DRAW { y -2 flip 180 }
+	DRAW { x 2 flip 90}
+	DRAW { y -2 r 180 x 2}
+	SHAPE { x 1 y -1 }
+}
+
+
+rule DRAW {
+	SHAPE { }
+	DRAW { y 1 s 0.95 r 29}
+}
+
+rule SHAPE {
+	CIRCLE {  }
+}

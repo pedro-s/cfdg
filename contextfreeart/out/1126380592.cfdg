@@ -1,0 +1,160 @@
+startshape INIT
+background{hue 220 sat .1 b 1}
+
+rule INIT
+{
+TREE{}
+LINE {x 15}
+SQUARE {y -2 hue 50 sat 1 b 1 s 15,4}
+}
+
+rule LINE 5
+{
+TREE{}
+LINE {x 15}
+SQUARE {y -2 hue 50 sat 1 b 1 s 15,4}
+}
+
+rule LINE
+{
+}
+
+rule TREE 1
+{
+TRUNKSTART {hue 20 sat 1 b .7}
+}
+
+rule TRUNKSTART
+{
+TRUNKSEGMENT{}
+TRUNKSEGMENT{y 2.5}
+TRUNKSEGMENT{y 5}
+TRUNKSEGMENT{y 7.5}
+TRUNKSEGMENT{y 10}
+TRUNKSEGMENT{y 12.5}
+TRUNK{y 15}
+}
+
+rule TRUNK 2
+{
+TRUNKSEGMENT{}
+TRUNK{y 2 s .99 r 2}
+}
+
+rule TRUNK 5
+{
+TRUNKSEGMENT{}
+TRUNK{y 2 s .99 r -2}
+}
+
+rule TRUNK
+{
+TRUNKTOP{y -.5}
+}
+
+rule TRUNKTOP 2000
+{
+TRUNKTOP{}
+}
+
+rule TRUNKTOP
+{
+HEAD{s .2 hue 50}
+HEAD{s .2 hue 50}
+HEAD{s .2 hue 50}
+HEAD{s .2 hue 50}
+}
+
+rule HEAD
+{
+LEAVES{r 100 s .9}
+LEAVES{flip 0 r 80 s .9}
+
+LEAVES{r 60 s .7}
+LEAVES{flip 0 r 120 s .7}
+
+BITSATEND{}
+}
+
+rule BITSATEND 2000
+{
+}
+
+rule BITSATEND
+{
+LEAVES{r 155}
+LEAVES{flip 0 r 25}
+}
+
+rule LEAVES 4
+{
+STEM{}
+LEAVES{r -5 s .985}
+}
+
+rule LEAVES
+{
+}
+
+rule TRUNKSEGMENT 50
+{
+TRUNKSUBSEGMENT {alpha -.5}
+TRUNKSEGMENT {s .98,1 b .01}
+}
+
+rule TRUNKSUBSEGMENT 
+{
+TRIANGLE {x -1 s .4,3}
+SQUARE {y .445 s 2,2.62}
+TRIANGLE {x 1 s .4,3}
+SQUARE{y -.89 s 2.4,.05 b -1}
+}
+
+
+
+rule STEM 20
+{
+STEMSEGMENT {}
+STEM {y 2.5 r 2 s 0.985}
+}
+
+rule STEM 5
+{
+STEMSEGMENT {}
+STEM {y 2.5 r -2 s 0.985}
+}
+
+rule STEM
+{
+BRANCH{y -1.5 r -37.5 s .5}
+BRANCH{r -30 y -1 s .5}
+BRANCH{r -20 s .5}
+BRANCH{r -10 s .5}
+BRANCH{s .5}
+BRANCH{r 10 s .5}
+BRANCH{r 20 s .5}
+BRANCH{r 30 y -1 s .5}
+BRANCH{y -1.5 r 37.5 s .5}
+}
+
+rule STEMSEGMENT
+{
+TRIANGLE {x -1 s .1,3}
+SQUARE {y .445 s 2,2.62}
+TRIANGLE {x 1 s .1,3}
+BRANCH {r 45 x -.5 s .5}
+BRANCH {r -45 x .5 s .5}
+}
+
+rule BRANCH
+{
+BRANCHSEGMENT {b -.5}
+}
+
+rule BRANCHSEGMENT
+{
+TRIANGLE {x -1 s .1,3}
+SQUARE {y .445 s 2,2.62}
+TRIANGLE {x 1 s .1,3}
+BRANCHSEGMENT {y 2.5 s .95 b .05}
+}

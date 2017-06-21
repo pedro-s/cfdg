@@ -1,0 +1,66 @@
+startshape LINES
+
+rule LINES {
+//80*{x 0.8 r 5}CIRCLE{s 2 0.5 hue 7.5494 sat 0.8721 b 0.9216}
+11*{x -8}ALL{hue 218 sat .3 b 0.2}
+}
+
+rule ALL {
+CIRCLE {s 6}
+LINE {}
+LINE_C{b 0}
+}
+
+
+
+
+rule LINE{
+CIRCLE{}
+LINE {s .999  y -.5 }
+}
+
+rule LINE{
+CIRCLE{}
+LINE {s .998  y -0.7 b 0.01}
+}
+
+
+rule LINE .005{
+CIRCLE{s 3}
+LINE {s .999 y 0.4 r 1 b .01}
+LINE_C {}
+}
+
+rule LINE .005{
+CIRCLE{s 3}
+LINE {s .999 y 0.4 r 1 b .01}
+LINE_C {flip 90}
+}
+
+
+
+rule LINE_C{
+CIRCLE{}
+LINE_CCURVE {s .9999  hue -.01 b .03}
+}
+
+rule LINE_C{
+CIRCLE{s 2}
+LINE_CCURVE {s .9999   flip 180}
+}
+
+
+rule LINE_C{
+CIRCLE{s 2}
+LINE_CCURVE {s .9999}
+}
+
+rule LINE_CCURVE{
+CIRCLE{}
+LINE_CCURVE{x -.6 r 2 s .9991 hue -.01 b .04}
+}
+
+rule LINE_CCURVE .03{
+CIRCLE{}
+LINE_C{s .9999}
+}

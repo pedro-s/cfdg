@@ -1,0 +1,58 @@
+startshape strandsrot
+background{hue 60 sat .5 b 1}
+
+rule strandsrot
+{
+	5*{r 72 z 2} strands{}
+}
+
+rule strands
+{
+//	60*{y .3} hstrand{b .6 sat 1 hue 190  y -9 x - 9}
+//	60*{x .3} vstrand{b 1 sat 1 hue 20   x -9 y - 9}
+
+	20*{y .9} hstrand{b .6 sat 1 hue 190  y -9 x - 9}
+	20*{x .9} vstrand{b 1 sat 1 hue 20   x -9 y - 9}
+
+	20*{y .9} hstrand{b .6 sat 1 hue 190  y -8.7 x - 9}
+	20*{x .9} vstrand{b 1 sat 1 hue 20   x -8.7 y - 9}
+
+	20*{y .9} hstrand{b .6 sat 1 hue 190  y -8.4 x - 9}
+	20*{x .9} vstrand{b 1 sat 1 hue 20   x -8.4 y - 9}
+
+}
+
+rule vstrand
+{
+	hstrand{r 90 }
+}
+rule strandseg
+{
+	strandpath{}
+	strandpath2{x 1.5 z -2}
+//	strandpath{x 1.5 z -2}
+
+}
+rule hstrand
+{
+	15*{y -.01 b -.1} hstrandsingle{ }
+}
+rule hstrandsingle
+{
+	6*{x 3} strandseg{}
+}	
+
+path strandpath
+{
+	MOVETO{x 0 y 0}
+	CURVETO{x 1.5 y 0  x1 .75  y1 .5  }
+	//CURVETO{x 1.5 y 0  x1 .6  y1 .55}
+	STROKE{width .02}
+}
+path strandpath2
+{
+	MOVETO{x 0 y 0}
+	CURVETO{x 1.5 y 0  x1 .75  y1 -.5  }
+	//CURVETO{x 1.5 y 0  x1 .6  y1 .55}
+	STROKE{width .02}
+}

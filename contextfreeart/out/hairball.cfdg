@@ -1,0 +1,18 @@
+startshape seesaw
+
+rule seesaw
+{
+	plank{b .75 sat 1 hue 30 alpha -.75}
+}
+rule plank
+{
+	plank_p{}
+	plank{s .7 .99 x -.3 r 10 y .15}
+	plank{s .7 .99 x .3 r -10 y .15}
+}
+path plank_p
+{
+	MOVETO{x -1 y 0}
+	LINETO{x 1 y 0}
+	STROKE{width .01}
+}

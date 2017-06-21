@@ -1,0 +1,63 @@
+startshape scene
+
+background {b -0.8}
+
+rule scene {
+	grasses {h 120 b 0.5 sat 1 z 0 s 0.1 y -7}
+	wings {z 1}
+}
+
+rule wings {
+	wing {x 1}
+	wing {f 90 x -1}
+	wings {s 0.3 f 0 y 8}
+}
+
+rule wing {
+	CIRCLE {s 1 10}
+	wing {x 1 r 10 s 0.9}
+}
+
+
+rule grass {
+	CIRCLE {}
+	grass {y 0.1 s 0.999}
+}
+
+rule grass {
+	grass {r 1}
+}
+
+rule grass {
+	grass {r -1}
+}
+
+rule grass {
+	grass {s 1.0001}
+}
+
+rule grasses {
+	grass {h 1}
+	grasses {x 10}
+}
+
+rule grasses {
+	grasses {x -3 h -1}
+}
+
+rule grasses {
+	grasses {x 3}
+}
+
+rule grasses {
+	grasses {x -10}
+}
+
+rule grasses 0.1 {
+	grasses {s 0.8 b -0.1}
+}
+
+rule grasses 0.1 {
+	grasses {y 1 z -1}
+	grasses {y -1 z -1}
+}

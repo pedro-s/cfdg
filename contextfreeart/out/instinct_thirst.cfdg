@@ -1,0 +1,23 @@
+startshape thirst
+
+background { b -.95 }
+
+rule thirst {
+	130* { r (360/100) } trip { |h 240 h 200 sat 1 b 0 }
+}
+
+rule trip { acid { } }
+rule shrooms { acid { } }
+rule acid { shrooms { } }
+rule shrooms 10 {
+  pix { }
+  shrooms { x .5 r 20 s .99 h .0005| sat -.0002 b .002 }
+}
+rule acid 50 {
+  pix { }
+  acid { x -.5 r 12 s .999 h .0005| sat -.0002 b .002 }
+}
+
+rule pix {
+  CIRCLE { a -.81 }
+}

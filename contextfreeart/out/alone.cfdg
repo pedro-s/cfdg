@@ -1,0 +1,16 @@
+startshape one
+
+background {b -1}
+
+rule one {
+	al{r 30}
+}
+
+rule al {
+	CIRCLE {b .1 h 162}
+	2*{f 180}
+	{2*{f 90}
+	{12*{s .618 1 h 12 sat .0618}
+	al{s .191 x -.4045 y -.4045 b .1 h 1}}}
+	al{s .618 1 r 90 b .1 h -1}
+}

@@ -1,0 +1,19 @@
+startshape PHI
+
+rule PHI {
+	PHI_BOX {}
+	PHI_SPIRAL {s .5 r 112.24 x .6605 y .304 s .618033989 a -.99}
+}
+
+rule PHI_BOX {
+	SQUARE {a -.5}
+	PHI_BOX {r 90 s .618033989 x 0.809016994 y -0.190983006}
+}
+
+rule PHI_SPIRAL {
+	397.5*{r .222492236 s .99908} CIRCLE {b 0 s .1 x 1 y 1.618033989}
+	PHI_SPIRAL {r 90 s .6180339894 x -.1013 y .11 }
+}
+
+//      (1-(1/phi))/2 = 0.190983006
+// 1-((1-(1/phi))/2) = 0.809016994

@@ -1,0 +1,35 @@
+startshape A2
+
+rule A2{
+TRIANGLE{ b 1.0 r 180}
+TRIANGLE{r 180 x -1 y 1}
+TRIANGLE{y 1}
+TRIANGLE{r 180 x 1 y 1}
+TRIANGLE{ x -1}
+TRIANGLE{x 1}
+TRIANGLE{r 180 x -1 y -1}
+TRIANGLE{ y -1}
+TRIANGLE{r 180 x 1 y -1}
+A2{b .1 s.33 x -2 y 2}
+A2{b .2 s.33 y 2}
+A2{b .3 s.33 x 2 y 2}
+A2{b .4 s.33 x 2}
+A2{b .5 s.33 x 2 y -2 }
+A2{b .6 s.33 y -2}
+A2{b .7 s.33 x -2 y -2}
+A2{b .8 s.33 x -2}
+A2{r 45  s .33} 
+A2{ b 0 r 10 s .10 x -5}
+A2{b 0 r -10 s .10 x 5}
+A2{b 0 r 20  s .10 y 5}
+A2{b 0 r -20 s .10 y -5}
+A2{b 0 r 30 s  .10 x 10 y 10}
+A2{b 0 r -30 s .10 x 10 y -10}
+A2{b 0 r 60 s .10 x -10 y -10}
+A2{b 0 r -60 s .10 x -10 y 10}
+A2{ s .50 y 10}
+A2{ s .50 x 10}
+A2{ s .50 y -10}
+A2{ s .50 x -10}
+
+}

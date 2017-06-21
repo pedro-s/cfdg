@@ -1,0 +1,50 @@
+tile {s 20 20}
+startshape START
+
+background {b -0.5 sat .0 h 20}
+
+
+rule START {
+
+20 * {y 1 h .1} row{ h 290}
+
+}
+
+
+rule row{
+
+2035 * {x 1 hue .051 b.002 } vline{ }
+
+}
+
+
+rule vline .021{
+
+SQUARE{s .7 1  y - 9.5 a 1}
+
+}
+
+rule vline { 
+vline{s  .93 1 b -.1 sat .9 }
+}
+
+rule vline { 
+vline{s  1.01 1 b .1 sat  -.9}
+}
+
+rule vline { 
+vline{x -.33}
+}
+
+rule vline { 
+vline{x -.07}
+}
+
+
+rule vline { 
+vline{x .57}
+}
+
+
+
+

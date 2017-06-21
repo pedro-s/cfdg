@@ -1,0 +1,29 @@
+startshape PRISMA
+CF::Background = [b -1]
+
+//play with these values (revert save to set back to randoms)
+fuzz = randint()
+splay = randint(1,10)
+edge = randint(2,6)
+seph = randint(1,18)
+spread = rand_static(1,5)
+stick = randint(25,80)
+//seph: change to rand(1,18) for more combinations
+//stick: if fuzz on, best results 20 to 40
+
+shape PRISMA{
+	loop i = edge [] AB(i) []
+}
+
+shape AB (number i){ 
+	loop (2*i) [r (180/i)] Spk[]
+}
+
+shape Spk{
+	POINT[]
+	Spk[y spread s .95 h 3]
+}
+
+shape POINT{
+	loop i = 200 [r (seph*5) h .2] SQUARE[s .01 stick r (fuzz*i) h 205 sat 1 b .9 y (splay*10)]
+}

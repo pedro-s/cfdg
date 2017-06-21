@@ -1,0 +1,138 @@
+startshape do
+background { b -.2 }
+
+
+rule do { c_u { hue 140 b 0 sat 1 } }
+
+rule CUBE {
+	2*{s -1 1 b .4 hue -20}SIDE{ b -.4 hue 10}
+	FACE { s .25 x -.23 y .25 b .4 }
+	TOP{ b .5}
+}
+rule SIDE {
+	FACE{skew 0 30 }
+}
+rule TOP {FACE[s 1.413 .816 r 135 ]}
+rule FACE { 10* { s .9 b .05 } CIRCLE{x .5 y -.5 s 1.25}}
+
+rule d { CUBE { } }
+
+
+
+rule c_u_D {
+	d { }
+	c_u { }
+}
+rule c_u {
+	c_u_D { y .75 s .93 r 6 }
+	c_ucont { s .75}
+}
+rule c_ucont .3 {	c_dl { }}
+rule c_ucont .3 {	c_dr { }}
+rule c_ucont .3 {	c_ul { }}
+rule c_ucont .3 {	c_ur { }}
+rule c_ucont { }
+
+
+
+
+rule c_dl_D {
+	d { }
+	c_dl { }
+}
+rule c_dl {
+	c_dl_D { x -1 y -.5 s .9 z .2}
+	c_dlcont { s .75}
+}
+rule c_dlcont .3 {	c_u { }}
+rule c_dlcont .3 {	c_d { }}
+rule c_dlcont .3 {	c_ul { }}
+rule c_dlcont .3 {	c_ur { }}
+rule c_dlcont .3 {	c_dr { }}
+rule c_dlcont { }
+rule c_dlcont .3 {	c_dlcont { x .1}}
+rule c_dlcont .3 {	c_dlcont { x -.1}}
+
+
+
+
+
+rule c_dr_D {
+	d { }
+	c_dr { }
+}
+rule c_dr {
+	c_dr_D { x 1 y -.5 s .9 z .2}
+	c_drcont { s .75 }
+}
+rule c_drcont .3 {	c_u { }}
+rule c_drcont .3 {	c_d { }}
+rule c_drcont .3 {	c_ul { }}
+rule c_drcont .3 {	c_ur { }}
+rule c_drcont .3 {	c_dl { }}
+rule c_drcont { }
+rule c_drcont .3 {	c_drcont { x .1}}
+rule c_drcont .3 {	c_drcont { x -.1}}
+
+
+
+
+
+rule c_ur_D {
+	d { }
+	c_ur { }
+}
+rule c_ur {
+	c_ur_D { x .5 y .25 s .9 z -.2}
+	c_urcont { s .5}
+}
+rule c_urcont .3 {	c_u { }}
+rule c_urcont .3 {	c_d { }}
+rule c_urcont .3 {	c_ul { }}
+rule c_urcont .3 {	c_dr { }}
+rule c_urcont .3 {	c_dr { }}
+rule c_urcont { }
+rule c_urcont .3 {	c_urcont { x .1}}
+rule c_urcont .3 {	c_urcont { x -.1}}
+
+
+
+
+
+rule c_ul_D {
+	d { }
+	c_ul { }
+}
+rule c_ul {
+	c_ul_D { x -.5 y .25 s .9 z -.2}
+	c_ulcont { s .5 }
+}
+rule c_ulcont .3 {	c_u { }}
+rule c_ulcont .3 {	c_d { }}
+rule c_ulcont .3 {	c_dr { }}
+rule c_ulcont .3 {	c_ur { }}
+rule c_ulcont .3 {	c_dr { }}
+rule c_ulcont { }
+rule c_ulcont .3 {	c_ulcont { x .1}}
+rule c_ulcont .3 {	c_ulcont { x -.1}}
+
+
+
+
+
+rule c_d_D {
+	d { }
+	c_d { }
+}
+rule c_d {
+	c_d_D { y -.6 s .9 z -.01}
+	c_dcont { s .5}
+}
+rule c_dcont .3 {	c_u { }}
+rule c_dcont .3 {	c_dr { }}
+rule c_dcont .3 {	c_ul { }}
+rule c_dcont .3 {	c_ur { }}
+rule c_dcont .3 {	c_dr { }}
+rule c_dcont { }
+rule c_dcont .3 {	c_dcont { x .1}}
+rule c_dcont .3 {	c_dcont { x -.1}}

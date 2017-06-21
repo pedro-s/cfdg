@@ -1,0 +1,41 @@
+startshape TRI
+
+CF::Background=[b-1]
+
+shape TRI
+{
+TRIANGLE [h 0.00 sat 0.0000 b 1.0000 ]
+
+TRIANGLE [ b-1 s .9]
+
+//triangle in the middle
+TRIANGLE [r 120 s .255 h 0.00 sat 0.0000 b 1.0000 skew 45 .1 y .25 x .07]
+
+//left strand of triangles
+loop 125 [x-.01 y -.002]
+TRIANGLE [h 0.00 sat 0.0000 b 1.0000 s .02 y .3 x -.16]
+
+//red
+loop 200 [x .005 y -.0009]
+TRIANGLE [h 356.07 sat 1.0000 b 1.0000 s .04 r 180 x .156 y .33]
+
+//orange
+loop 193 [x .005 y -.0009]
+TRIANGLE [h 28.78 sat 0.9001 b 1.0000 s .04 r 180 x .176 y .296] 
+
+//yellow
+loop 186 [x .005 y -.0009]
+TRIANGLE [h 61.13 sat 1.0000 b 1.0000 s .04 r 180 x .195 y .263]
+
+//green 
+loop 180 [x .005 y -.0009]
+TRIANGLE [h 114.82 sat 0.9794 b 0.9116 s .04 r 180 x .212 y .232]
+
+//blue
+loop 174 [x .005 y -.0009]
+TRIANGLE [h 179.12 sat 0.7223 b 0.7624 s .04 r 180 x .230 y .2]
+
+//purple
+loop 167 [x .005 y -.0009]
+TRIANGLE [h 267.99 sat 0.6337 b 0.7735 s .04 r 180 x .252 y .165]
+}

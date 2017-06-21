@@ -1,0 +1,19 @@
+startshape fract
+
+background {b -1}
+
+rule fract {
+	penta {}
+	5*{r 72}
+	fract {s .618 r 108 y 1.3764 a -.1}
+}
+
+path penta {
+	MOVETO {x -.5 y -.6882}
+	LINETO {x -.809 y .2629}
+	LINETO {y .8507}
+	LINETO {x .809 y .2629}
+	LINETO {x .5 y -.6882}
+	CLOSEPOLY {}
+	STROKE {width .0236 p roundjoin b 1}
+}

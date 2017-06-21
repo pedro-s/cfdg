@@ -1,0 +1,1552 @@
+startshape preview 
+
+background {b -1}
+
+rule preview {
+	3 * {x - 32 a -.45 h -55 sat .2}
+	{4 * { y 8 a -.45 h 55 sat .2}
+	title { x 76 y -64 s 1 .55}}
+	3 * {s .5 y -22}
+	digitveda{}
+}
+
+rule digitveda{
+	beginend {x -1.5}
+	empty {x -2} 
+	aa {}
+	bb { x 4}
+	cc { x 8}
+	dd { x 12}
+	ee { x 16}
+	ff { x 20}
+	gg { x 24}
+	hh { x 28}
+	ii { x 32}
+	jj { x 36}
+	kk { x 40}
+	ll { x 44}
+	mm { x 48}
+	nn { x 52}
+	oo { x 56}
+	pp { x 60}
+	qq { x 64}
+	rr { x 68}
+	ss { x 72}
+	tt { x 76}
+	uu { x 80}
+	vv { x 84}
+	ww { x 88}
+	xx { x 92}
+	yy { x 96}
+	zz { x 100}
+	beginend {x 104.5}
+
+//______digits, punctuation and others
+
+	beginend {x -1.5 y -13}
+	empty {x -2 y -13} 
+	zero { y -13}
+	one { x 4 y -13}
+	two { x 8 y -13}
+	three { x 12 y -13}
+	four { x 16 y -13}
+	five { x 20 y -13}
+	six { x 24 y -13}
+	seven { x 28 y -13}
+	eight { x 32 y -13}
+	nine { x 36 y -13}
+	dot { x 40 y -13}
+	colon{ x 44 y -13}
+	comma  { x 48 y -13}
+	semicolon { x 52 y -13}
+	minus { x 56 y -13}
+	plus { x 60 y -13}
+	equal { x 64 y -13 }
+	o_bracket { x 68 y -13}
+	c_bracket { x 72 y -13}
+	exclam { x 76 y -13}
+	quest { x 80 y -13 }
+	at { x 84 y -13 }
+	bullet { x 88 y -13 }
+	degree { x 92 y -13 }
+	apostrophe { x 96 y -13 }
+	quote { x 100 y -13 }
+	beginend {x 104.5 y -13}
+}
+
+rule front_sq {
+	SQUARE {b .8}
+}
+
+rule front {
+	lmnt {b .8}
+//	front {s .9 b .1}
+}
+
+rule back {
+	lmnt {b .2}
+}
+
+rule sq {
+	SQUARE { b .24}
+}
+
+rule triang {
+	tr { b .24}
+}
+
+path tr {
+	LINETO {x .5 y .5}
+	LINETO {y 1}
+	CLOSEPOLY {}
+	FILL {}
+}
+
+path lmnt {
+	MOVETO {x -.5 y .5}
+	LINETO {x .5 y .5}
+	LINETO {x 1}
+	LINETO {x .5 y -.5}
+	LINETO {x -.5 y -.5}
+	LINETO {x -1}
+	CLOSEPOLY {}
+	STROKE {width 0}
+	FILL {}
+}
+
+rule aa {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule bb {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule cc {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule dd {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	front { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule ee {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule ff {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	front { r 90 x .5 y -2.5}
+	front { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule gg {
+	front { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	front { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	front { r 90 x 2.5 y -2.5}
+	front { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule hh {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule ii {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule jj {
+	front { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	front { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	front { r 90 x 2.5 y -2.5}
+	front { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	front { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule kk {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { r 90 x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	2 * {y 2}
+	{2 * {f 90 x 3}
+	triang { x 1 y 1}}
+	2 * {f 90 x 3}
+	triang {f 90 x 1 y 2}
+	2 * {f 180 y 5}
+	triang {r 90 x 2 y 1}
+	2 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+	empty {x 2}
+}
+
+rule ll {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule mm {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front {r 90 x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	2 * {y 2}
+	{2 * {f 90 x 3}
+	triang { x 1 y 1}}
+	2 * {f 90 x 3}
+	triang {f 90 x 1 y 2}
+	2 * {f 180 y 5}
+	triang {r 90 x 2 y 1}
+	2 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+	empty {x 2}
+}
+
+rule nn {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule oo {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule pp {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	front { r 90 x .5 y -2.5}
+	front { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule qq {
+	front { x 1.5 y -3.5}
+	front { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	front { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	front { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule rr {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule ss {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule tt {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule uu {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule vv {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { r 90 x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	2 * {y 2}
+	{2 * {f 90 x 3}
+	triang { x 1 y -1}}
+	2 * {f 90 x 3}
+	triang {f 90 x 1}
+	2 * {f 180 y 1}
+	triang {r 90 x 2 y -1}
+	sq { x 1.5 y -2.5 }
+	3 * { y 2 }
+	sq { x 1.5 y 3.5 }
+	empty {x 2}
+}
+
+rule ww {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	front { r 90 x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	2 * {y 2}
+	{2 * {f 90 x 3}
+	triang { x 1 y 1}}
+	2 * {f 90 x 3}
+	triang {f 90 x 1 y 2}
+	2 * {f 180 y 5}
+	triang {r 90 x 2 y 1}
+	2 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+	empty {x 2}
+}
+
+rule xx {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { r 90 x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	2 * {y 2}
+	{2 * {f 90 x 3}
+	triang { x 1 y 1}}
+	2 * {f 90 x 3}
+	triang {f 90 x 1 y 2}
+	2 * {f 180 y 5}
+	triang {r 90 x 2 y 1}
+	2 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+	empty {x 2}
+}
+
+rule yy {
+	front { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	front { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	front { r 90 x 2.5 y -2.5}
+	front { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule zz{
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	front { r 90 x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	2 * {y 2}
+	{2 * {f 90 x 3}
+	triang { x 1 y 1}}
+	2 * {f 90 x 3}
+	triang {f 90 x 1 y 2}
+	2 * {f 180 y 5}
+	triang {r 90 x 2 y 1}
+	2 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+	empty {x 2}
+}
+
+rule empty {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule space {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+
+rule beginend {
+	back { r 90  y -2.5}
+	back { r 90  y -.5}
+	back { r 90  y 1.5}
+	back { r 90  y 3.5}
+	back { r 90  y 5.5}
+	back { r 90  y 7.5}
+}
+
+rule zero {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule one {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule two {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule three {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule four {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	back  { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule five {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule six {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule seven {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule eight {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule nine {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule dot {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	sq { x 1.5 y -2.5 }
+	front_sq { x 1.5 y -.5 }
+	4 * { y 2 }
+	sq { x 1.5 y 1.5 }
+}
+
+rule colon {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	2 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	front_sq { x 1.5 y 1.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+}
+
+rule comma {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	front { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule semicolon {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	front { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	3 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	front_sq { x 1.5 y 3.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+}
+
+rule minus {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule plus {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	2 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	front_sq { x 1.5 y 1.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+}
+
+rule equal {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule o_bracket {
+	back { x 1.5 y -3.5}
+	front { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	front { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	front { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule c_bracket {
+	back { x 1.5 y -3.5}
+	front { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	front { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	front { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	front { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule exclam {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	sq { x 1.5 y -2.5 }
+	4 * { y 2 }
+	front_sq { x 1.5 y -.5 }
+	sq { x 1.5 y 7.5 }
+}
+
+rule quest {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	sq { x 1.5 y -2.5 }
+	2 * { y 2 }
+	front_sq { x 1.5 y -.5 }
+	3 * { y 2 }
+	sq { x 1.5 y 3.5 }
+}
+
+rule at {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	front { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	front { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	front { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	front { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	front { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule bullet {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	front { x 1.5 y 2.5}
+	front { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	front { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	front { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	back { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	3 * { y 2 }
+	sq { x 1.5 y -2.5 }
+	front_sq { x 1.5 y 3.5 }
+	2 * { y 2 }
+	sq { x 1.5 y 5.5 }
+}
+
+rule degree {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	front { x 1.5 y 6.5}
+	front { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	front { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+
+rule apostrophe {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	back { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	front { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+rule quote {
+	back { x 1.5 y -3.5}
+	back { x 1.5 y -1.5}
+	back { x 1.5 y .5}
+	back { x 1.5 y 2.5}
+	back { x 1.5 y 4.5}
+	back { x 1.5 y 6.5}
+	back { x 1.5 y 8.5}
+	back { r 90 x .5 y -2.5}
+	back { r 90 x .5 y -.5}
+	back { r 90 x .5 y 1.5}
+	back { r 90 x .5 y 3.5}
+	back { r 90 x .5 y 5.5}
+	front { r 90 x .5 y 7.5}
+	back { r 90 x 2.5 y -2.5}
+	back { r 90 x 2.5 y -.5}
+	back { r 90 x 2.5 y 1.5}
+	back { r 90 x 2.5 y 3.5}
+	back { r 90 x 2.5 y 5.5}
+	front { r 90 x 2.5 y 7.5}
+	empty {x 2}
+	6 * { y 2 }
+	sq { x 1.5 y -2.5 }
+}
+
+//_____digitveda
+
+rule title {
+	beginend {x -1.5 y 14 }
+	empty {x -2 y 14 } 
+	vv { y 14 }
+	ee { x 4 y 14 }
+	dd { x 8 y 14 }
+	ii { x 12 y 14 }
+	gg { x 16 y 14 }
+	ii { x 20 y 14 }
+	tt { x 24 y 14 }
+	beginend {x 28.5 y 14}
+}

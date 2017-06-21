@@ -1,0 +1,39 @@
+startshape SKY  
+background {b -1}
+rule SKY 
+{
+20* { z .1}
+SQUARE { size .25 h 186.34 sat 1.0000 b 1.0000}
+20* { z .1}
+SQUARE { size .23 h 66.89 sat 0.9906 b 1.0000  r 2}
+20* { z .1}
+SQUARE { size .21 h 31.30 sat 0.9623 b 1.0000 r 4}
+20* { z .1}
+SQUARE { size .19  h 355.65 sat 1.0000 b 1.0000 r 6}
+20* { z .1}
+SQUARE { size .17 h 309.64 sat 1.0000 b 1.0000  r 8}
+20* { z .1}
+ SQUARE { size .15 h 287.01 sat 0.9876 b 1.0000 r 10}
+20* { z .1}
+SQUARE { size .13 r 12 h 229.73 sat 1.0000 b 1.0000}
+20* { z .1}
+SQUARE { size .11 r 14 h 163.87 sat 0.9600 b 1.0000}
+20* { z .1}
+SQUARE { size .09  r 16 h 62.27 sat 0.9791 b 1.0000}
+20* { z .1}
+SQUARE { size .07 r 18 h 29.59 sat 1.0000 b 1.0000}
+20* { z .1}
+SQUARE { size .05 r 20 h 4.86 sat 1.0000 b 1.0000}
+20* { z .1}
+SQUARE { size .03 r 22 h 246.24 sat 1.0000 b 1.0000}
+20* { z .1}
+SQUARE { size .01 r 24 h 300.79 sat 1.0000 b 1.0000}
+}
+ 
+  
+ 
+ 
+ 
+ 
+ 
+            

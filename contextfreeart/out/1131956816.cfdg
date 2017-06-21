@@ -1,0 +1,25 @@
+startshape cosmic_starfish
+background{b -1}
+
+rule cosmic_starfish
+{
+	double_dot{}
+	double_dot{r 60}
+	double_dot{r 120}
+	double_dot{r 180}
+	double_dot{r 240}
+	double_dot{r 300}
+
+}
+
+rule double_dot
+{
+	dot{}
+	double_dot{hue 20 x 2 r 1 size .95}
+}
+
+rule dot
+{
+	CIRCLE{}
+	dot{hue 15 sat 1 b 1 x 1.2 r 6 size .95}
+}

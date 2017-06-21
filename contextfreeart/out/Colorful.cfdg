@@ -1,0 +1,9 @@
+startshape Colorful
+
+background { b -0.9 } # dark gray
+
+rule Colorful
+{6*{s .7 x .175 y .925 h 60} # shrink, move, and change color
+{18*{x 1.1 r 20 h 20} # move, rotate, and change color
+CIRCLE{b .9 sat .9} # default red with brightness and saturation
+}}

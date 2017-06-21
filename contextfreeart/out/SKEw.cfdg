@@ -1,0 +1,28 @@
+startshape SKEW
+background { b-5}
+
+rule SKEW{
+CIRCLE { size 5 h 241.28 sat 0.9249 b 1.0000}
+ }
+rule SKEW{ CIRCLE { skew 0 305 h 359.31 sat 0.9223 b 0.8232 }
+  TRIANGLE { skew 5 850 h 239.28 sat 0.8918 b 1.0000 }
+  SQUARE { skew 15 550 h 116.27 sat 0.9541 b 0.6077}
+  TRIANGLE { skew 5 550 h 316.52 sat 0.8881 b 0.8564}
+  CIRCLE { skew 55 550 h 175.97 sat 0.7908 b 0.8564}
+  SQUARE { skew 1 225 h 71.88 sat 0.6430 b 1.0000}
+TRIANGLE { skew 10 950 h 225.00 sat 0.0314 b 1.0000}
+  SQUARE { skew 15 550 h 116.27 sat 0.9541 b 0.6077}
+  TRIANGLE { skew 5 550 h 316.52 sat 0.8881 b 0.8564}
+  CIRCLE { skew 55 550 h 175.97 sat 0.7908 b 0.8564}
+  SQUARE { skew 25 215h 268.70 sat 0.9780 b 1.0000}
+}
+ 
+
+
+
+
+
+
+
+
+

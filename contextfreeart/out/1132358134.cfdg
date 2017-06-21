@@ -1,0 +1,20 @@
+startshape PHI
+background {b -1}
+
+rule PHI {
+PH {hue 324}
+PH {hue -223594564636}
+PH {hue 23113215212}
+PH {hue 1412252391739358319}
+}
+
+rule PH {
+CIRCLE {alpha -.95 hue 125 saturation .7 b 1}
+PH {s 0.6180339887}
+PH {y 0.6180339887 s 0.6180339887}
+PH {x 0.6180339887 s 0.6180339887}
+PH {y -0.6180339887 s 0.6180339887}
+PH {x -0.6180339887 s 0.6180339887}
+}
+
+rule PH {}

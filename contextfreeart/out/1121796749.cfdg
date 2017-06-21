@@ -1,0 +1,35 @@
+startshape footprint 
+
+rule footprint {
+	paw { }
+	paw { y 1.5 x 1 }
+	footprint { y 3 }
+}
+
+rule footprint {
+	paw { }
+	paw { y 1.5 x 1 }
+	footprint { r 35 y 3 }
+}
+
+rule footprint {
+	paw { }
+	paw { y 1.5 x 1 }
+	footprint { r -35 y 3 }
+}
+
+rule footprint .5 {
+}
+
+rule paw {
+	ball { }
+	ball { x .5 y .5 s .5 }
+	ball { y .65 s .5 }
+	ball { x -.5 y .5 s .5 }
+}
+
+rule ball {
+	CIRCLE { }
+	ball { x .0005 y 0.0005 b .01 s .995 }
+}
+

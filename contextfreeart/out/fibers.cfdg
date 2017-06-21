@@ -1,0 +1,92 @@
+// shading idea from Forelle by tungee 
+
+tile {s 40 40}
+startshape START
+
+background {b -0.5 sat .5 h 20}
+rule START {
+
+
+8 * {x 5 y 5} BIS {}
+8 * {x 5 y 5} BIS {x 2.5 y 20}
+
+
+}
+
+
+
+rule BIS 4 {BIS {h 1.5}}
+rule BIS 4 {BIS {h -1.5}}
+
+rule BIS {BIS {x -.07}}
+rule BIS {BIS {x  .02}}
+
+rule BIS {BIS {y 22}}
+rule BIS {BIS {y 15}}
+rule BIS {BIS {y 6}}
+
+
+
+
+rule BIS .3{
+BI {r 0 s 1.3 2.8 }
+//BI {r 90 s 1.3 2.8 }
+}
+
+
+
+rule BI {
+STRUT{}
+STRUTA{r 180 y .2}
+}
+
+
+
+rule STEP{
+
+STRUT{r 90}
+STRUTA{r 180}
+
+STRUT{}
+STRUTA{r 270}
+
+}
+
+
+rule TRIP {
+TRIANGLE{ a -.5  y .284}
+}
+
+
+rule STRUT {
+
+CIRCLE{s 5.1  a  -.3  y .2  sat .5 b .5   h 10 z -1}
+TRIP{s 1 3  a -.9  r 90 y .2 }
+TRIP{s 1 3  a -.9  r 90 y .2 flip 180 b 1 }
+STRUT {s .978075 y .25 r .013535 }
+
+}
+
+rule STRUT .1 {
+STRUTA {flip 90}
+}
+
+
+rule STRUTA {
+CIRCLE{s 5  a  -.3  y .2  sat .5 b .5  h 10 z -1}
+TRIP{s 1 3  a -.9  r 90 y .2 b 1 }
+TRIP{s 1 3  a -.9  r 90 y .2 flip 180  }
+STRUTA{s .978075 y .25 r .013535 }
+
+}
+
+
+rule STRUTA .1 {
+STRUT {flip 90}
+}
+
+rule STRUTA  {STRUTA {x .03}}
+rule STRUTA  {STRUTA {x -.03}}
+
+rule STRUT  {STRUT {x .03}}
+rule STRUT  {STRUT {x -.03}}

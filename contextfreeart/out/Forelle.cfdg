@@ -1,0 +1,28 @@
+startshape A
+
+background { b -1 }
+
+rule A {
+  TRIANGLE { sat 1 hue 200 a -0.9 }
+  A { x 0.1 s 0.992 r 1 b 0.002 }
+}
+
+rule A 0.004 {
+CIRCLE {x 0.1 s 6 sat 1 hue 12 a -0.1 }
+  A { flip 180 }
+  B {flip 120 }
+}
+
+rule B {
+  A { r 90 x 0.1 s 3}
+  C { r -90 }
+}
+
+rule C {
+  SQUARE { s .3 sat 1 hue 200 a -0.7 }
+  C { x 0.1 s 0.5 r 0.2 }
+}
+
+rule C 0.00005 {
+  B {}
+}

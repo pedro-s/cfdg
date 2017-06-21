@@ -1,0 +1,20 @@
+startshape SIX
+background { hue 200 sat 0.8 b -0.8 }
+
+rule SIX {
+ONE { r 30 b 1}
+SIX { x 0.45 y 7 s 0.8 alpha -0.25 flip 32 }
+SIX { x 7.45 s 0.8 alpha -0.25 flip 32 } 
+}
+
+rule ONE { 
+SQUARE { y 4.2 s 10 0.5  }
+SQUARE { x -7.34 r 60 s 10 0.5 }
+SQUARE { x -7.34 y -8.4 r 120 s 10 0.5 }
+SQUARE { y -12.6 s 10 0.5  }
+SQUARE { x 7.34 y -8.4 r 60 s 10 0.5 }
+SQUARE { x 7.34 r  120 s 10 0.5 }
+SQUARE { s 10 0.5 r -60  x -2.5 }
+SQUARE { s 10 0.5 r 60 y -8.4 x -2.5 }
+SQUARE { s 10 0.5 x 4.9 y -4.2 }
+}

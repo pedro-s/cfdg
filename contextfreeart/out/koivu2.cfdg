@@ -1,0 +1,54 @@
+startshape birches
+//background { hue 133.5 sat 0.9 b -0.7 }
+
+rule birches {
+sky2 { y 6 s 24 20  z -20 hue 203.5 sat 0.7 b 0.9 }
+sky2 { y 6 s 24 20  r 180.6 z -20  hue 74.8 sat 0.5 b 0.9 }
+10* {x 2 } absflow [ x -9.5]
+}
+
+rule sky2 {
+2000* { y -.0005 a -.001 } 
+SQUARE [ y .5 s 1 .00045 ]
+}
+
+rule absflow {
+dweed [ s .1]
+absflow [ y .1 s .99 r .1]
+}
+rule absflow .5 { absflow [ flip 90 ] }
+rule absflow .2 { absflow [ r 1 ] }
+rule absflow .2 { absflow [ r -1 ] }
+rule absflow .05 { absflow [ r -1 ] absflow [ s .5 r 30 ]}
+
+
+rule dweed {
+SQUARE []
+dweed [ y .25 s 1 .5]
+dweed [ y -.25 s 1 .5]
+}
+rule dweed 4 { dweed [b .06 ] }
+
+
+rule absflow .002 { tcbush [ s 1 z -1] absflow [ ]}
+
+rule tcbush {
+50* { r 117 } 
+threecirc [ x 1 sat 1 b 1 hue 45] 
+30* { r 11 } 
+threecirc [ x 3 y -2 sat 1 hue 55 b 1] 
+
+}
+
+rule threecirc 10 { threecirc [ x .2 ] }
+rule threecirc {
+3* { r 120 } twocirc [ x 1 s .5 ]
+}
+
+rule twocirc { twocirc [ b .1 ] }
+rule twocirc 3 { twocirc [ hue .3 b -.02] }
+rule twocirc {
+CIRCLE [ s 2.5 x .3 a -.6 b -.1 sat -.5 hue -3]
+CIRCLE [ s 2.2 x .07 a -.5 sat -1]
+TRIANGLE [ s 2.3 sat 1 a 1]
+}

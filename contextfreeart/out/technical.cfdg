@@ -1,0 +1,60 @@
+startshape r0
+background { b -1}
+tile { s 120 90 }
+rule r0 { paper{s 0.3 h 180} frame {s 0.3 z 10 } r1 { x -50 y -35 b -1}}
+rule r1 { 100*{x 1} {70* {y 1} r2{}}}
+rule r2 200 {}
+rule r2 { r3{}}
+rule r3 20 { r3{ r 225 }}
+rule r3 { r9{}}
+rule r3 { r9{} r9{r 90 } r9{r 45} r9{r -45}}
+
+rule r9 10 { r4{ z 0.3}}
+rule r9 3 { r5{ z 0.1}}
+rule r9 { r5{ z 0.5}}
+rule r9 2 { r6{ z 0.1 }}
+
+rule r4 { brush{} r4 {x 0.1}}
+rule r4 0.1 { r4 [z -1 size 1 1 -1]}
+rule r4 0.001 {r9{}}
+rule r4 0.003 {}
+
+rule r5 { brush{x 10} r5 { r 0.5}}
+rule r5 0.1 { r5 [z -1 size 1 1 -1]}
+rule r5 0.001 {r9{}}
+rule r5 0.002 {}
+
+rule r6 { brush{x 15} r6 { r 0.2}}
+rule r6 0.1 { r6 [z -1 size 1 1 -1]}
+rule r6 0.001 {r9{}}
+rule r6 0.001 {}
+
+rule brush { 2*{z -0.2 x -8 } CIRCLE[s 0.15] }
+rule brush { 2*{z -0.2 x -8 } CIRCLE[s 0.1] }
+rule brush { 2*{z -0.2 x -8 } CIRCLE[s 0.2] }
+
+
+rule paper {
+	SQUARE { s 400 300 b 1}
+	40*{x 10}{SQUARE[sat 0.8 b 0.95 x -60 s 0.2 300]}
+     80*{x 5}{SQUARE[sat 0.8 b 0.85 x -60 s 0.12 300]}
+     400*{x 1}{SQUARE[sat 0.8 b 0.8 x -60 s 0.05 300]}
+	30*{y 10}{SQUARE[sat 0.8 b 0.95 x -60 s 400 0.2]}
+	60*{y 5}{SQUARE[sat 0.8 b 0.85 x -60 s 400 0.12]}
+	300*{y 1}{SQUARE[sat 0.8 b 0.8 x -60 s 400 0.04]}
+}
+
+rule frame {
+	f2 [b -1  x -1 y -1]
+	f2 [b -1  x 1 y -1]
+	f2 [b -1  x -1 y 1]
+	f2 [b -1  x 1 y 1]
+	f2 [b 1 z 0.1]
+}
+rule f2{
+	SQUARE[x -200 s 10 300]
+	SQUARE[x 200 s 10 300]
+	SQUARE[y -150 s 400 10]
+	SQUARE[y 150 s 400 10]
+	SQUARE[x 159 y -136 s 69 15]
+}

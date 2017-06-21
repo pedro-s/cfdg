@@ -1,0 +1,12 @@
+startshape M
+ 
+rule M {CIR{}M{r 3 s .99 x 1}} 
+rule M .01{N{}}
+ 
+rule N {CIR{}N{s .99 x 1}} 
+rule N .01{M{}}
+rule N .01{N{r 90}N{r -90}}
+ 
+rule CIR {CIR{}M{s 1 -1}} 
+rule CIR 20{} 
+rule CIR 60{CIRCLE{}}

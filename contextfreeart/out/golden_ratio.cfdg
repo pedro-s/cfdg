@@ -1,0 +1,29 @@
+startshape GoldenRatio
+
+CF::Background = [b -0.2]
+
+IPHI = 2/(sqrt(5) + 1) 
+
+shape GoldenRatio{
+    isocelesAndArc(0.5, IPHI)[alpha -0.9]
+} 
+ 
+shape isocelesAndArc(number nm, phi) {
+   isoceles(nm) [alpha nm]
+   Arc(nm)[alpha nm]
+   isocelesAndArc(=) [alpha 0.1 s phi x (nm + nm*phi) y (nm - nm*phi) r -90 ]
+}
+ 
+path Arc(number nm) {
+    MOVETO(nm, nm)
+    ARCTO( -nm,  -nm, 1, 1, 90)
+    CLOSEPOLY()
+}
+
+path isoceles(number nm) {
+    MOVETO( nm ,nm)
+    LINETO( -nm , -nm)
+    LINETO( nm , -nm)
+    CLOSEPOLY()
+}
+

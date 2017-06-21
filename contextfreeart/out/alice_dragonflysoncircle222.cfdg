@@ -1,0 +1,37 @@
+startshape AB
+background { }
+
+rule AB {
+16 * {r 95.5} AA {}
+}
+
+rule AA .000090 {
+TAK {}
+//AA {}
+AA {s .9 r 22.5  b .04}
+AA {s .6 r -22.5 b .04 }
+
+}
+
+
+rule AA {
+TAK {}
+AA {x .99 s .19 }
+
+}
+
+rule AA .02{
+BAL {}
+AA {b .04}
+}
+
+
+rule TAK {
+SQUARE {s .75 b .09 }
+TAK {s .95 b .07 }
+}
+
+rule BAL {
+CIRCLE { s .09 }
+BAL {s .9  x .09 b .09 }
+}

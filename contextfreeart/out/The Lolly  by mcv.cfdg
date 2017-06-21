@@ -1,0 +1,24 @@
+// The Lolly by mcv
+//
+background { b -1 }
+//
+startshape sucker
+//
+rule sucker { HR {} // Candy
+              stem { s .08 .2 y -1.15 z -1 } }
+//
+rule HR { ovals {} // Create candy sucker body via recursive spiral
+          HR { s .99 .99 r 10 sat .9 b .5 hue +0.2  } }
+//
+rule ovals { ovalA{} ovalB{} } // Mix candy colors
+// Candy color 1, double rule gives striped variation
+rule ovalA { CIRCLE { x -.1 s 1 1.1 b .5 sat .9 hue 220 } }
+rule ovalA { CIRCLE { x -.1 s 1 1.1 b .5 sat .9 hue 215 } }
+// Candy color 2
+rule ovalB { CIRCLE { x .1 s 1 1.1 b .5 sat .9 hue 360 } }
+rule ovalB { CIRCLE { x .1 s 1 1.1 b .5 sat .9 hue 330 } }
+//
+rule stem { SQUARE { s 1 6 b .5 } 
+            stem { s .99 1 b +.01 } } // recursion with added brightness
+                                      // toward center gives cheap 3D effect
+//

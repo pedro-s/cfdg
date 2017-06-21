@@ -1,0 +1,27 @@
+startshape spirale 
+ 
+rule spirale { 
+rr {hue 245.0 sat 0.6 b 1} 
+} 
+ 
+rule rr { 
+rr1 {hue 10 sat 1 b 0.1 a -0.55} 
+rr2 {hue 10 sat 1 b 0.1 a -0.44} 
+rr3 {hue 10 sat 1 b 0.1 a -0.33} 
+rr {x 1 y 2.8 s .9914 r 45 hue 0.7 } 
+} 
+ 
+rule rr1 { 
+CIRCLE {x -14 y 14} 
+rr2 {x .14 y -14 s .99 r .15} 
+} 
+ 
+rule rr2 { 
+TRIANGLE {s 1,10 hue 1 sat 0 b 0.5} 
+rr3 {} 
+} 
+ 
+rule rr3 { 
+//SQUARE {x 2 y 18 hue 5 sat 1 b 0.8} 
+//rr3 {} 
+}

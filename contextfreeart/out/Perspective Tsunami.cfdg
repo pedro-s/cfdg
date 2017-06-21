@@ -1,0 +1,15 @@
+startshape Result
+
+rule Result{
+	Composite{hue 231.9112 sat 0.9794 b 0.4392}
+}
+
+rule Composite{
+	SQUARE{skew 0 30}
+	2*{r 20}Composite{x 0.7  s .7 b .15}
+}
+
+rule Composite{
+	SQUARE{skew 0 30}
+	2*{r 30}Composite{x 0.7 skew 0 10 s .7 b .0001}
+}

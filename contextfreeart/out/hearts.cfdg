@@ -1,0 +1,49 @@
+startshape start
+
+rule start
+{
+  3*{r 120} seed{y 1.5 z -2 sat .1 hue 0}
+  3*{r 120} seed[r 60 s .5 y 1.5 z -2 sat .1 hue 100]
+}
+
+rule seed
+{
+  element{}
+  seed[r  30 y 1.7 s .7 b .2 z -2]
+  seed[r -30 y 1.7 s .7 b .2 z -2]
+}
+
+rule element
+{
+  CIRCLE{s 0.6 x  0.236}
+  CIRCLE{s 0.6 x -0.236}
+  TRIANGLE{r 180 y -.43}
+
+  aroundElement{}
+}
+
+rule aroundElement
+{
+  rounding1{x  0.65 s .1}
+  rounding1{x -0.65 s .1 flip 90}
+  rounding2{x  0.65 s .1}
+  rounding2{x -0.65 s .1 flip 90}
+
+  line{x  0.59 y -.23 s .1 r -30}
+  line{x -0.59 y -.23 s .1 r  30}
+}
+
+rule rounding1
+{
+  41*{y .2269 r 3.1} CIRCLE{}
+}
+
+rule rounding2
+{
+  11*{y -.2269 r -3.1} CIRCLE{}
+}
+
+rule line
+{
+  119*{y -.1} CIRCLE{}
+}

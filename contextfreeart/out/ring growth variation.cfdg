@@ -1,0 +1,40 @@
+startshape spinstart
+
+rule spinstart{
+	spin{hue 90}
+}
+
+rule spin {
+	CIRCLE{ s 5 sat 0 b 0 z -5}
+	//CIRCLE{ s 15 sat 1 b 0 z -8}
+	CIRCLE{ sat 1 b .8}
+
+	spin[x .1 r 1]
+}
+
+rule spin 0.005 {
+	spin{ flip 0 hue .1 z -.1}
+}
+
+rule spin 0.009 {
+	spin{}
+	tree{}
+}
+
+rule spin 0.0001 {}
+
+rule tree {
+	curl{ flip 0 z -6}
+}
+rule tree {
+	curl{z -3}
+}
+
+rule curl{
+	CIRCLE{hue 0 sat 1 b .3}
+	curl {x .1 s 0.995 r .7}
+}
+
+rule curl 0.002 {
+	curl{flip 0}
+}

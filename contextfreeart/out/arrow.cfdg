@@ -1,0 +1,11 @@
+startshape ARROW
+background {h 240.00 sat 1.0000 b 1.0000 }
+rule ARROW {
+30*{r 10 y .1 x .1 h 10 }
+TRIANGLE {r 10 y .1 x .1 hue 10  h 300.26 sat 1.0000 b 1.0000 }
+
+30*{ r 10  x -.1  y - .5 h 10 } 
+TRIANGLE { hue 1000  h 191.02 sat 1.0000 b 1.00000000}
+
+}
+

@@ -1,0 +1,16 @@
+startshape onehundred 
+
+background {b -1}
+
+rule onehundred {
+	3*{r 120 x 2.927 y 2.2673}
+	{2*{f -60 x 2.927 y 1.6899 b .1}
+	clown  {}}
+}
+
+rule clown {
+	TRIANGLE {b .1}
+	clown {s .618 x .809 y -.1103 b .1}
+	clown {s .618 f 180 x .309 y .3989 b .1}
+	clown {s .618 x .309 y .7558 b .1}
+}

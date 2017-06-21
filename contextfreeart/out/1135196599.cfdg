@@ -1,0 +1,31 @@
+startshape BIRDMA
+include i_polygons.cfdg
+include i_pix.cfdg
+background { hue 200 sat 0.8 b -0.8 }
+
+rule BIRDMA {
+BIRDMAN { y 8 hue 113.9 sat .9625 b 1 }
+BIRDMANA { hue 113.9  sat .9625 b 1 }
+}
+
+rule BIRDMAN { 
+B_5by5 { }
+I_5by5 { x 1.2 }
+R_5by5 { x 2.4 }
+D_5by5 { x 3.6 }
+M_5by5 { x 4.8 }
+A_5by5 { x 6.0 }
+N_5by5 { x 7.2 }
+BIRDMAN { y 2 s 0.95 r 15 alpha -.038}
+}
+
+rule BIRDMANA { 
+B_5by5 { }
+I_5by5 { x 1.2 }
+R_5by5 { x 2.4 }
+D_5by5 { x 3.6 }
+M_5by5 { x 4.8 }
+A_5by5 { x 6.0 }
+N_5by5 { x 7.2 }
+BIRDMANA { y -2 s 0.95 r -15 alpha -.038}
+}

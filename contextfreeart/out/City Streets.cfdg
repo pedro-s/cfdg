@@ -1,0 +1,15 @@
+startshape design
+
+rule design {
+	foo {}
+	design {x 1 s 0.9}
+}
+
+rule design 0.1 {
+	design {r 90}
+	design {r -90}
+}
+
+rule foo {
+	CIRCLE {}
+}

@@ -1,0 +1,50 @@
+startshape full_cube
+
+shape full_cube {
+	big = 1..10
+
+	loop big [x 0.9 y -0.52 z 1]
+		loop big [y 1.04 z 1]
+			loop big [x -0.9 y -0.52 z 1]
+				cubie []
+}
+
+shape cubie {
+	unit_face []
+	unit_face [rotate 120]
+	unit_face [rotate 240]
+}
+
+shape unit_face {
+	diamond [y 0.518 b 0.2]
+	diamond [y 0.508 z 0.01 s 0.98]
+	sticker [y 0.508 z 0.02 s 0.85]
+}
+
+shape sticker {
+	diamond [h 0 sat 1 b 0.9]	// red
+}
+
+shape sticker {
+	diamond [h 30 sat 1 b 1]		// orange
+}
+
+shape sticker {
+	diamond [h 55 sat 1 b 1]		// yellow
+}
+
+shape sticker {
+	diamond [h 120 sat 1 b 0.7]	// green
+}
+
+shape sticker {
+	diamond [h 240 sat 0.8 b 0.85]	// blue
+}
+
+shape sticker {
+	diamond [h 0 sat 0 b 1]		// white
+}
+
+shape diamond {
+	SQUARE [skew 15 15 rotate -45 ]
+}

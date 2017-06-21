@@ -1,0 +1,20 @@
+startshape soft 
+
+background {b -1}
+
+rule soft {
+	2* {r 180 y .5774 h 180}	
+	ttt {}
+	soft {s .854 r 15 x .0638 y .0505}
+}
+
+rule ttt {
+	ouch {}
+	ttt {s .8541 r -15 x .1513 y -.006 h 15}
+}
+
+rule ouch {
+	TRIANGLE {r 60 b .1 h 382 sat .1}
+	ouch {s .618 r 30 x -.5352 y -.2684 b .1 a -.1 h 10 sat .014}
+	ouch {s .7136 f 60 x -.3568 y -.3714 b .1 a -.1 h 10 sat .014}
+}

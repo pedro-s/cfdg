@@ -1,0 +1,99 @@
+startshape SQUAREART
+
+background { b -1 }
+
+rule SQUAREART {
+
+100* { r 60 s 1   skew 10 70  h 20 }
+
+CIRCLE { s 30 h 304.16 sat 1.0000 b 1.0000 } 
+
+ 
+
+550* { rotate 5 skew  1 7 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -1  x 3 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+550* { rotate 5 skew  1 7 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -2  x 5 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+550* { rotate 5 skew  1 7 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -3  x 8 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+550* { rotate 5 skew  1 7 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -4  x 11 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+
+550* { rotate 5 skew  1 70 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -15  x 13  h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+1000* { rotate 5 skew  1 70 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -5  x 15 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+1000* { rotate 5 skew  4.5 70 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -12  x 5 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+550* { rotate 5 skew  1 60 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -13  x 8 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+550* { rotate 5 skew  1 60 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -14  x 20 h 58.95 sat 1.0000 b 1.0000 }
+
+
+
+
+550* { rotate 5 skew  1 60 s 1  h 29 x .2 y .3 }
+
+SQUARE { y -5  x 13  h 58.95 sat 1.0000 b 1.0000 }
+
+500* { s -1 r 20 h 5 }
+
+SQUARE {x 25  s 1 h 1.05 sat 1.0000 b 1.0000 }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

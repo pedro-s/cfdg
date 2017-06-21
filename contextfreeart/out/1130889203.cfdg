@@ -1,0 +1,57 @@
+startshape DAC2
+background { hue 700 sat 0.1 b 1}
+
+rule DAC2  {
+	HEART {hue 300 sat 0.6 b 0.5}
+	LINES {hue 700 sat 0.5 b 1}
+	DAC2 {s 0.95}
+
+}
+
+rule HEART{
+CIRCLE {}
+CIRCLE {y 0.2 x 0.5}
+CIRCLE {y 0.5 x 0.9}
+CIRCLE {y 0.9 x 1.3}
+CIRCLE {y 1.3 x 1.6}
+CIRCLE {y 1.7 x 1.7}
+CIRCLE {y 2.1 x 1.7}
+CIRCLE {y 2.5 x 1.6}
+CIRCLE {y 2.9 x 1.4}
+CIRCLE {y 3.1 x 1.2}
+CIRCLE {y 3.2 x 1.0}
+CIRCLE {y 3.3 x 0.8}
+CIRCLE {y 3.2 x 0.55}
+CIRCLE {y 3.1 x 0.3}
+CIRCLE {y 2.8 }
+CIRCLE {y 0.2 x -0.5}
+CIRCLE {y 0.5 x -0.9}
+CIRCLE {y 0.9 x -1.3}
+CIRCLE {y 1.3 x -1.6}
+CIRCLE {y 1.7 x -1.7}
+CIRCLE {y 2.1 x -1.7}
+CIRCLE {y 2.5 x -1.6}
+CIRCLE {y 2.9 x -1.4}
+CIRCLE {y 3.1 x -1.2}
+CIRCLE {y 3.2 x -1.0}
+CIRCLE {y 3.3 x -0.8}
+CIRCLE {y 3.2 x -0.55}
+CIRCLE {y 3.1 x -0.3}
+CIRCLE {y 2.8}
+}
+
+rule LINES  {
+	CURVE { }
+	CURVE { }
+	CURVE { flip -90 }
+	CURVE { flip -90 }
+	LINES{ s 0.3 flip 180}
+
+}
+rule CURVE 0.008 {
+	CIRCLE { alpha -0.7 }
+	CURVE { x 1 s 0.988 r 2}
+}
+rule CURVE 0.0001 {
+	CURVE { flip 2 }
+}

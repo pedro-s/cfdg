@@ -1,0 +1,33 @@
+startshape TENDRILS
+background {h 220.49 sat 0.5990 b 1.0000}
+rule TENDRILS {
+CIRCLE {z -1 s 5 }
+CIRCLE {z -1 s 4.75 h 353.74 sat 0.9166 b 1.0000}
+CIRCLE {z -1 s 3 h 4.71 sat 1.0000 b 1.0000}
+//top
+ARM {y 2}
+//left top
+ARM {x -1.5 y 1.5}
+//left middle
+ARM {x -2 flip -45}
+//left bottom
+ARM {x -1.5 y -1.5 flip 180}
+//right top
+ARM {y 1.5 x 1.5 flip 90}
+//right middle
+ARM {x 2 flip 45}
+//right bottom
+ARM {x 1.5 y -1.5 flip -150}
+ARM {y -2 flip 180}
+}
+rule ARM 98 {
+CIRCLE {}
+CIRCLE {s 0.9 h 353.74 sat 0.9166 b 1.0000}
+ARM {y 0.2 s 0.99 r 3}
+}
+rule ARM 2 {
+CIRCLE {}
+CIRCLE {s 0.9 h 353.74 sat 0.9166 b 1.0000}
+ARM {y 0.2 s 0.99 flip 90}
+ARM {y 0.2 s 0.6 b 0.1}
+}

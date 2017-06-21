@@ -1,0 +1,30 @@
+startshape fish
+
+rule fish {
+	eye {  a -.5 b -1 y .2 x -.3 z .1 s .2 .15 }
+	ss { hue 195 sat .75 }
+}
+rule ss {
+	four { b .5}
+	ss { x .775 y .5565 s .835 .5 skew -30 0 r -21.75 }
+	ss { x .775 y -.5565 s .835 .5 skew 30 0 r 21.75 }
+}
+
+rule four {
+	2* { flip 0 b -1}
+	tr2 { y .2875 }
+
+}
+rule tr2 {
+	2 * {flip 90 b .25}
+	TR_ { x .3325 skew -30 0 |hue 60}
+	tr2 { s .425 .565 x -.165 y .145 r 90}
+}
+rule TR_ {
+	30* { s .95 b .025 y -.01 x -.01 hue -.06| a -.05} TRIANGLE { a -.25}
+}
+
+rule eye {
+	CIRCLE { b 1 s 1.1 }
+	30* { b .06 s .93 }
+	CIRCLE { } }	

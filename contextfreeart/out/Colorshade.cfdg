@@ -1,0 +1,31 @@
+startshape test
+
+background { b -1}
+
+rule test{
+4* {r 90} linie {hue 0 sat 255 b 255}
+4* {r 90} arm {hue 0 sat 255 b 255 z 1}
+}
+
+rule linie{
+2* {r 45} SHADE{}
+linie {x 2 r 20 s 0.9 hue 10}
+}
+
+
+rule SHADE{
+//SQUARE{}
+CIRCLE{x 1.5}
+CIRCLE{x -1.5}
+SHADE{r 5 s 0.98 b -.1}
+}
+
+rule arm {
+kreis{b -1}
+arm {x 2 r 20 hue 10 s 0.9}
+}
+
+rule kreis{
+CIRCLE{}
+kreis {b .1 s 0.9}
+}

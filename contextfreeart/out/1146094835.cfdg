@@ -1,0 +1,45 @@
+startshape ALL
+background { b -1 }
+
+rule ALL {
+	PART1 { h 0 sat 0.35 b 1 }
+}
+
+
+rule PART1 {
+	PART3 { }
+}
+
+rule PART1 0.5 {
+	2*[r 180] PART3 { }
+}
+
+rule PART1 {
+	3*[r 120] PART3 { }
+}
+
+rule PART1 0.1 {
+	5*[r 72] PART3 { }
+}
+
+rule PART3 {
+	SHAPE { }
+	PART2 [ y 0.5 r 25 ]
+}
+
+
+rule PART2 {
+	PART1 { 
+		s 0.5
+		a -0.1 
+		hue 3 sat 0.25
+		z 1 
+	}
+}
+
+rule SHAPE {
+// switch these for a bit different style
+//	CIRCLE { s 1 b 1 }
+//	CIRCLE { s 0.95 b -1 }
+	60*[ r 6 ] SQUARE { s 0.035 y 0.5 }
+}

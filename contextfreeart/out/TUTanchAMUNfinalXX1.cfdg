@@ -1,0 +1,171 @@
+startshape TutAnchAmuNenRoute
+background { b -.7}
+size {s 45 55y 5}
+
+rule STRIPE_blueH
+{SQUARE {hue 245 b 0 sat 1}
+STRIPE_blueH {s 1 .99 b .03}}
+
+rule STRIPE_goldH
+{SQUARE {hue 60 b 0 sat 1}
+STRIPE_goldH {s 1 .99 b .03}}
+
+rule STRIPEpatternHEAD
+{9*{y 2} STRIPE_blueH { }
+9*{y 2} STRIPE_goldH {y 1}}
+
+rule STRIPhead
+{STRIPEpatternHEAD {x -11 y -5 s 16 1.2 skew  1.3 0}
+STRIPEpatternHEAD {x  11 y -5 s 16 1.2 skew -1.3 0}}
+
+rule STRIPE_blueV
+{SQUARE {hue 245 b 0 sat 1}
+STRIPE_blueH {s 1 .99 b .03}}
+
+rule STRIPE_goldV
+{SQUARE {hue 60 b 0 sat 1}
+STRIPE_goldH {s 1 .99 b .03}}
+
+rule STRIPforehead
+{6*{r 7.9 x -1.1 y .7 s .95} STRIPE_blueV {    s 8.2  1.1 y 10.5  r 90 z 2}
+6*{r 7.9 x -1.1 y .7 s .95} STRIPE_goldV {x 1 s 8.0  2.5 y 10.6 r 90 z 1}}
+
+rule STRIPEpatternSHOULDER
+{4*{y 2} STRIPE_blueH { }
+4*{y 2} STRIPE_goldH {y 1}}
+
+rule STRIPshoulder
+{STRIPEpatternSHOULDER {x -6.65 s 14 1.3 skew -3 0 z 0}
+STRIPEpatternSHOULDER {x  6.65 s 14 1.3 skew  3 0}}
+
+rule BEARD
+{SQUARE {s 5 18 hue 45 b 0 sat 1}
+BEARD {y .1 s .98 .991 b .01}}
+
+rule NECK
+{SQUARE { s 10 12 hue 60 b 0 sat 1}
+NECK {s .99 1 b .01}}
+
+rule SHIRT
+{5*{s .8 b .5} CIRCLE {hue 0 b .5 sat 1}}
+
+rule EllipsENDneck
+{CIRCLE {s 5 .5 hue 60 b 0 sat 1}
+EllipsENDneck {s .99 1 b .01}}
+
+rule EllipsENDbeard
+{CIRCLE {s 5 .5 hue 45 b 0 sat 1}
+EllipsENDbeard {s 1 .99 b .002}}
+
+rule EllipsENDlips
+{CIRCLE {s 5 .5 hue 45 b 0 sat 1}
+EllipsENDlips {y .001 s .998 .99 b .005}}
+
+rule EYES
+{EYESleft { x -3 y 7 z 2}
+EYESleft {flip 90 x 3 y 7 z 2 }
+EYEball {s 2.2 x -2.8 y 7.1 z 3}
+EYEball {s 2.2 x  2.8 y 7.1 z 3}
+EYEcover { s 5 3 y 7.9 x -2.8 z 5}
+EYEcover { s 5 3 y 7.9 x  2.8 z 5}
+EYEcover { s 6.5 6 y 8.5 x -3.2 z 4}
+EYEcover { s 6.5 6 y 8.5 x  3.2 z 4}}
+
+rule EYESleft
+{CIRCLE {hue 245 s 5 2 b 1 sat 0}
+EYESleft { x .03 s .99 sat .004}}
+
+rule EYEball
+{CIRCLE {hue 245 b 0 sat 1}
+EYEball{s .9 b .3}}
+
+rule EYEcover
+{CIRCLE {s 1.09 .6 hue 60 b 0 sat 1}
+EYEcover {s .99 b .01}}
+
+rule NOSE
+{CIRCLE {s 20 15 hue 60 b 0 sat 1}
+NOSE {s .91 1 b .3}}
+
+rule FACE
+{CIRCLE {s 18.5 26 hue 60 b 0 sat 1}
+FACE {s .985 .99 b .02}}
+
+path SNAKE
+{MOVETO {x 2}
+ARCREL {x 0 y 5 r 12 p cw}
+ARCREL {x -.1 y 1.5 r 1.2}
+ARCREL {y .4 r 10 p cw}
+ARCREL {x -1.4 r .4}
+ARCREL {y -.4 r 10}
+ARCREL {x .1 y -1.5 r 1.2}
+ARCREL {y -5 r 12 p cw}
+ARCREL {x -1.5 y -2 r 3 p cw}
+ARCREL {y -1 r .6 }
+ARCREL {x 4.4 r 10}
+ARCREL {y 1 r .6}
+ARCREL {x -1.5 y 2 r 3 p cw}
+ARCREL {x .5 y 2 r 3 p cw}
+ARCREL {y 4.5 x -.6 r 3.5}
+ARCREL {y .4 r 10}
+ARCREL {x -.55 y .7 r .6}
+ARCREL {y 1 r 10 p cw}
+LINEREL {y -.3 x -.15}
+LINEREL {y .3 x -.15}
+ARCREL {y -1 x .0 r 10 p cw}
+ARCREL {x -.55 y -.7 r .6}
+ARCREL {y -.4 r 10}
+ARCREL {y -4.5 x -.4 r 3.5}
+ARCREL {x .5 y -2 r 3 p cw}
+CLOSEPOLY { }
+FILL {p evenodd h 0 b 1 sat 1}
+FILL { h 20 b 1 sat .6}
+STROKE {width .3 h 0 b 1 sat 1 }}
+
+rule WHEELs
+{120*{s .99 b .04} CIRCLE {s 1 h 0 b 0 sat 0}
+100*{s .99 sat .01} CIRCLE {s .7 h 0 b 1 sat 0.3}
+CIRCLE {s .2 h 0 b 0 sat 1}}
+
+rule TutAnchAmuNenRoute
+{STRIPhead { a -.8 z -2}
+STRIPforehead { y 4.9 z 0}
+STRIPforehead { y 4.9 z 0 flip 90}
+STRIPshoulder {y -16 z -2 }
+BEARD { y -15 z 0}
+NECK {y -10 z -1}
+FACE { y 6 z 0}
+STRIPEpatternHEAD  {y -29 s 23.5 1 z -3 a -.5}
+SHIRT {s 38.5 y -9 z -2 }
+
+EllipsENDneck {s 2 5 z -1 y -16}
+EllipsENDbeard {s 1.1 5 z -1 y -23.5}
+EllipsENDlips {x -1 s .6 3 y -1.7 z 1}
+EllipsENDlips {x  1 s .6 3 y -1.7 z 1}
+
+EYES { }
+NOSE { y 4 z 0}
+
+STRIPE_goldV {y -17 x -5.5 s 21 1.5 r 90 z -1}
+STRIPE_goldV {y -17 x  5.5 s 21 1.5 r 90 z -1}
+
+STRIPE_goldV {y -6 x -12.1 s 14 1 z -1}
+STRIPE_goldV {y -6 x 12.1 s 14 1 z -1}
+
+SNAKE {s .6 x 1 y 15 z 15 }
+SNAKE {s .4 x -2 y 15 z 15 }
+
+2*{x 20} WHEELs {s 12 z 20 y -25 x -10}} 
+
+
+
+
+
+
+
+
+
+
+
+
+

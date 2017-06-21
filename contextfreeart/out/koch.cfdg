@@ -1,0 +1,46 @@
+startshape kochs
+background{b -1}
+
+
+rule kochs{
+3*{r 120 h -120} koch1{sat 60 b 1 x -1.5 y .86}
+}
+
+rule koch1 {
+  koch2{x 0.00 y 0.00 r 0 h 0 s .3333}
+  koch2{x 1.00 y 0.00 r 60 h 30.0 s .3333}
+  koch2{x 1.50 y 0.87 r 300 h 60.0 s .3333}
+  koch2{x 2.00 y 0.00 r 0 h 90.0 s .3333}
+}
+
+rule koch2 {
+  koch3{x 0.00 y 0.00 r 0 h 0 s .3333}
+  koch3{x 1.00 y 0.00 r 60 h 7.5 s .3333}
+  koch3{x 1.50 y 0.87 r 300 h 15.0 s .3333}
+  koch3{x 2.00 y 0.00 r 0 h 22.5 s .3333}
+}
+
+rule koch3 {
+  koch4{x 0.00 y 0.00 r 0 h 0 s .3333}
+  koch4{x 1.00 y 0.00 r 60 h 1.875 s .3333}
+  koch4{x 1.50 y 0.87 r 300 h 3.75 s .3333}
+  koch4{x 2.00 y 0.00 r 0 h 5.625 s .3333}
+}
+
+rule koch4 {
+  koch5{x 0.00 y 0.00 r 0 h 0 s .3333}
+  koch5{x 1.00 y 0.00 r 60 h 0.46875 s .3333}
+  koch5{x 1.50 y 0.87 r 300 h 0.9375 s .3333}
+  koch5{x 2.00 y 0.00 r 0 h 1.40625 s .3333}
+}
+
+rule koch5 {
+  line{x 0.00 y 0.00 r 0 h 0}
+  line{x 1.00 y 0.00 r 60 h 0.1171875}
+  line{x 1.50 y 0.87 r 300 h 0.234375}
+  line{x 2.00 y 0.00 r 0 h 0.3515625}
+}
+rule line {
+  CIRCLE{s .2}
+  SQUARE{s 1 .3 x .5}
+}

@@ -1,0 +1,29 @@
+/*
+	Combustion
+	www.lazymoon.org
+	combustion.cfdg
+*/
+
+startshape A
+background {b 0}
+
+rule A {
+	32*[x -0.5 r 5 h 1] S[sat 1 b 1 h 00 |h 60]
+}
+
+rule S {
+	C[]
+	R[]
+}
+
+rule R{S[h 0.01| s 0.99 x  1]}
+rule R{S[h 0.01| s 0.99 x -1]}
+rule R{S[h 0.01| s 0.99 y  1]}
+rule R{S[h 0.01| s 0.99 y -1]}
+
+rule C {
+	CIRCLE[]
+	CIRCLE[z -100 s 3 a 0 b -1]
+	CIRCLE[z -200 s 6 a 0 b -0.1 sat -1]
+	CIRCLE[z -300 s 7 a 0 b -1 sat -1]
+}

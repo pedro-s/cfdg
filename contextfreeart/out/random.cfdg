@@ -1,0 +1,11 @@
+startshape ROSS
+background { b-1 }
+
+rule ROSS { 
+TRIANGLE { size 60  rotate 1775 h 0.88 sat 1.0000 b 1.0000 }
+CIRCLE { size 67 h 2639.62 sat 1.0000 b 1.0000 flip 40 skew 3880 0 }
+TRIANGLE { size 60  rotate 1775 h 0.88 sat 1.0000 b 1.0000  }
+SQUARE { size 60  rotate 1485 }
+TRIANGLE { size 80  rotate 1485 }
+ROSS { skew 50 0 r 60 h 8 sat 12 b 1.0000  r 12002 s .99 x 19 h 8 sat 12 b 1.70000  }
+}

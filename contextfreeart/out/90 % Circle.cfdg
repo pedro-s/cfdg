@@ -1,0 +1,32 @@
+startshape THING
+
+background {b-1}
+
+rule THING
+
+
+{
+
+CIRCLE { h 0.00 sat 0.0000 b 0.2320}
+
+CIRCLE { size .23 x .25 y .25 b-1}
+
+CIRCLE { size .23 x -.25 y -.25 b-1}
+
+CIRCLE { size .23 x- .25 y .25 b-1}
+
+CIRCLE { size .23  x .25y -.25 b-1}
+
+CIRCLE { size .23 y .35  b-1}
+
+CIRCLE { size .20 y .35  h 30.30 sat 0.9909 b 0.6354}
+
+CIRCLE { size .10 y .35  h 30.30 sat 0.9909 b 0.4365}
+
+CIRCLE { size .23 x- .35   b-1}
+
+CIRCLE { size .23 x .35  b-1}
+
+CIRCLE { size .23  y- .35 b-1}
+
+}

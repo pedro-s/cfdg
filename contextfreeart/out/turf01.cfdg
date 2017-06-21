@@ -1,0 +1,32 @@
+startshape lawn
+
+rule sod {
+	100 * {x .05} blade { }
+}
+
+rule lawn {
+	100 * { y .05 b -.02 } sod { }
+}
+
+rule blade 40 {
+	CIRCLE { s .1 1 h 130 sat .7 b .1 }
+	blade { y .1 s .92 }
+}
+
+rule blade 40 {
+	blade { r -4 b .002 }
+}
+
+rule blade 19 {
+	blade { r 6 b .005 }
+}
+
+rule blade 1 {
+	blade  { r 2 h -15  b .002 }
+}
+
+rule blade 1 {
+	blade  { r -2 h 5  b .002 }
+}
+
+

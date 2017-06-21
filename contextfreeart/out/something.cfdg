@@ -1,0 +1,6 @@
+startshape brady
+background { b -1}
+rule brady {
+CIRCLE { flip 40 size 250  h 337.87 sat 1.0000 b 1.0000 }
+brady { skew 30 0 r 30 h 8 sat 12 b 1.0000 }
+}

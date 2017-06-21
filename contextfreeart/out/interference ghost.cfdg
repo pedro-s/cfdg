@@ -1,0 +1,10 @@
+startshape SCARAB
+
+rule SCARAB{
+2* {f 90} PART {r 90}
+}
+
+rule PART {
+PART {s .99992 y .02 r 1}
+CIRCLE {s 1 .005}
+}

@@ -1,0 +1,5 @@
+/* copyright (c) 2012 by Jonas Kölker.  License: WTFPL, or contact me */
+startshape board
+rule board {half {x 1} half {y 1}}
+rule half {4*{y 2} row {}}
+rule row {4*{x 2} SQUARE {}}

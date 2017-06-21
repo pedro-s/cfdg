@@ -1,0 +1,61 @@
+startshape figG
+background {b -1}
+
+rule figG
+{
+fig2 { x 2 y -2 s 1.2}
+fig4 { x -1.3 y -2.3}
+fig5 { y 2 x 2 s 2.3}
+fig7 { x -2 y 2}
+}
+
+//*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+
+//----start 4th flower----
+rule fig7
+{
+fig6 { s 1.3}
+fig7 {r 45 s .997 b .002 sat .002 a -.005}
+}
+
+rule fig6
+{
+SQUARE { a -.33 hue 99 b .1 sat .1}
+TRIANGLE {r 15 x .5 hue 12 sat .7 b .001}
+fig6 {r 45 sat .1 b .15 s .9 x .25 a -.05}
+}
+//----end 4th flower----
+//----start 3rd flower----
+rule fig5
+{
+SQUARE {hue 45 }
+fig5 { s .998 r 12 hue .002 b .001 sat .001}
+}
+//----end 3rd flower----
+//----start 2nd flower----
+rule fig4
+{
+fig3 { }
+fig4 {s .997 r 45.3 x .1 y .72 b .002 sat .002 a -.005}
+}
+
+rule fig3
+{
+CIRCLE { hue 1 b .1 sat 2}
+CIRCLE { s .5 x .50 sat 1 hue 35 b .2 a -.55}
+}
+//----end 2nd flower----
+//----start 1st flower----
+rule fig2
+{
+fig1 { }
+fig2 {r 49 s .9975 b .002 sat .002 a -.005}
+}
+
+rule fig1
+{
+SQUARE { a -.33 hue 312 b .1 sat .1}
+TRIANGLE {r 15 x .5}
+fig1 {r 32 sat .1 b .1 s .9 x .25 a -.05}
+//----end 1st flower----//
+}

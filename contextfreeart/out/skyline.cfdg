@@ -1,0 +1,49 @@
+startshape INIT
+
+rule INIT {
+  SKYLINE {x -1}
+  SKYLINE {x 15 s -1 1}
+  SQUARE {x 7 y 5.47 sat 200 b 0.2 hue 180 s 16 11}
+  CIRCLE {hue 38 sat 1 b 0.81 x 5 y 6 s 3}
+}
+
+rule SKYLINE {
+  WINDOWS {y -1 s 0.1}
+  HOUSE {}
+  SKYLINE {x 0.9 s 0.90 0.8}
+}
+
+rule HOUSE {
+  WINDOWS {s 0.1}
+  HOUSE {y 1}
+}
+
+rule HOUSE 0.01 {
+  6 * {y 1}
+  WINDOWS {s 0.1}
+}
+
+rule HOUSE 0.25 {}
+
+rule WINDOWS {
+  SQUARE {x 3.5 y 4.5 s 10 10}
+  4 * {y 2.2 hue 10.5}
+  ROW {y 1.2 x 0.1 s 0.9}
+}
+
+rule ROW {
+  4 * {x 2.5 hue 10}
+  BRICK {}
+}
+
+rule BRICK {
+   S {s 0.125 sat 2.0}
+}
+rule S {
+  INIT {x -7 y -3}
+}
+
+rule BRICK 2 {}
+
+
+

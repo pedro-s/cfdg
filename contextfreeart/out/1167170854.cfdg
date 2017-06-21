@@ -1,0 +1,38 @@
+// Title:  Squirley 1
+// Author: epmoyer
+// Date:   12/26/06
+// Reference Pic Seed: NPO
+// Description:    
+//     Drunken squirley tangle
+//
+// Intersting Concepts:
+//     Uses skew to add an extra element of deformity to a random tangle.
+//     Was exploring some the concepts behind momo's masterful Ooozescape.
+//
+
+startshape INIT
+background {b -1 }
+
+rule INIT{ SQUID{b 0.5 sat 1 hue 230 |hue 100 }}
+
+rule SQUID{
+   ARM_PREP{} 
+	SQUID {r 20 s 0.95 hue -0.2 b 0.004}
+}
+
+rule ARM_PREP{ARM{}}
+
+
+rule ARM{
+   SQUARE{} 
+   ARM{y 1.0 s 0.999 r 3 hue -0.0004|  }
+}
+
+rule ARM 0.1 { 
+   SQUARE{}
+   ARM{y 0.5 s 0.999 r -10 hue -0.0004| skew 2 0}}
+
+rule ARM 0.005{  
+   CIRCLE{s 4 } 
+   ARM{y 1 s 0.98 r 10 }
+}

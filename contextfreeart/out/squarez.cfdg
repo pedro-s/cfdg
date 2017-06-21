@@ -1,0 +1,25 @@
+startshape sqsp
+background{b -.8 hue 200 sat 1}
+rule sqsp 
+{
+	square{b 1 sat 1 hue 100}
+	sqsp{s .98 x .9}
+}
+rule sqsp 
+{
+	sqsp{r -37}
+}
+rule square
+{
+	squarepath{b 1 sat 1 hue 100}
+	square{s .8 x .1 y .1}
+}
+path squarepath
+{
+	MOVETO{x -1 y 1}
+	LINETO{x 1 y 1}
+	LINETO{x 1 y -1}
+	LINETO{x -1 y -1}
+	CLOSEPOLY{}	
+	STROKE{width .01}
+}

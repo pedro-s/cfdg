@@ -1,0 +1,57 @@
+startshape orange_blossoms
+background {hue 50 sat .2 b 1}
+rule orange_blossoms
+{
+	more_flower{size .8  hue 50 sat .5 b .9}
+	little_flower{}
+	little_flower{r 72}
+	little_flower{r 144}
+	little_flower{r -72}
+	little_flower{r -144}
+	more_flower{size .2 h 30 sat 1 b .4}	
+}
+
+rule little_flower
+	{more_flower{size .2 x -40 y 30 hue 30 sat 1 b .9}
+}
+
+rule more_flower
+{
+	flower{}
+	flower{size .9}
+	flower{size .8}
+	flower{size .7}
+	flower{size .6}
+	flower{size .5}
+	flower{size .4}
+	flower{size .3}
+	flower{size .2}
+	flower{size .1}
+}
+
+rule flower
+{
+	line{r 72}
+	line{r 144}
+	line{r -72}
+	line{r -144}
+	line{}
+}
+
+rule line
+{
+	curl_left{}
+	curl_right{}
+}
+
+rule curl_left
+{
+	SQUARE{}
+	curl_left{x 1 size .995 r -.6}	
+}
+
+rule curl_right
+{
+	SQUARE{}
+	curl_right{x 1 size .995 r .6}	
+}

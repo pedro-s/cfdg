@@ -1,0 +1,27 @@
+startshape START
+background { b -0.9 sat 0.7 hue 200}
+
+rule START {
+CURVE { hue 190 sat 0.7 b -0.5}
+CURVE { b 1 alpha -0.5 }
+START { x 0.7 s 0.995 r 3}
+}
+
+rule START 0.05 { START {flip 180 }}
+
+rule CURVE {
+SHAPE { }
+CURVE { y 0.8 s 0.99 r 2.5 b 0.005 alpha -0.03 }
+}
+
+rule CURVE .1 {
+SHAPE { }
+CURVE { y 0.8 s 0.89 r -2.5 b 0.003 alpha -0.03 }
+CURVE { y 0.8 s .4 r 20 b 0.003 alpha -0.1 }
+CURVE { y 0.8 s .8 r -10 b 0.003 alpha -0.1 }
+}
+
+rule SHAPE { SQUARE { }}
+rule SHAPE 0.05 { SQUARE { s 10 alpha -0.5 }}
+rule SHAPE 0.01 { SQUARE { s 2 r 45 }}
+rule SHAPE .001 { TRIANGLE{ s 30 alpha -.4 hue 400}}

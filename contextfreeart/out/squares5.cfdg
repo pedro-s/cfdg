@@ -1,0 +1,28 @@
+startshape start
+tile{s 4}
+background{b -1}
+rule start
+{
+	rec{h 240 a 1}
+}
+
+rule rec
+{
+	square{}
+	rec{x -1 y -1 s .5 z -.1 h 30 r 3 a -.1}
+	rec{x 1 y -1 s .5 z -.1 h -50 r 3 a -.1}
+	rec{x -1 y 1 s .5 z -.1 h -50 r 3 a -.1}
+	rec{x 1 y 1 s .5 z -.1 h 30 r 3 a -.1} 
+
+}
+
+path square
+{
+	MOVETO{x -1 y -1}
+	LINETO{x 1 y -1}
+	LINETO{x 1 y 1}
+	LINETO{x -1 y 1}
+	CLOSEPOLY{}
+	STROKE{width .3}
+	FILL{sat 1 b 1}	
+}

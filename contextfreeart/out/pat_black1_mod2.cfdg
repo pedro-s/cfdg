@@ -1,0 +1,34 @@
+startshape PRE [ s 5 1 sat 1 h 205]
+CF::Background = [b -1]
+
+shape PRE{
+	loop 2 [ r 180 y -3 x 350] MAIN[]
+}
+
+shape MAIN{
+	loop 350 [ x 1]
+		loop 25 [ y 1] PLANT[]
+}
+
+shape PLANT
+rule {
+	SUB[]
+	PLANT[y 1]
+}
+
+rule .02{
+}
+
+shape SUB
+rule {
+	SQUARE[]
+	SUB[s .45 b .25]
+
+}
+rule .4{
+	CIRCLE[]
+	SUB[s .65 b .28]
+
+}
+rule .8{
+}

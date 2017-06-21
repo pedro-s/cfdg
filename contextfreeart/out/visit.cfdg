@@ -1,0 +1,18 @@
+startshape r0
+background {h 215 sat 0.37 b 1}
+rule r0{
+4*{x 3}{4*{y 3}r1{s 0.7 b 1}}
+sun[x 0 y 0 a -100 b 1 sat 0.4 h 60]
+}
+
+rule r1 {r2[] r1[x 2]}
+rule r1 {r2[] r1[y 2]}
+rule r1 0.3 {r1 {r 80} r1 {r -80}}
+rule r1 {r1[s 0.85]}
+
+rule r2 {r4{a -100}}
+rule r4 {CIRCLE[b 1 a 0.03  s 10]}
+
+rule sun{180*{r 2} ray{}}
+rule ray{ray[s 1.05] CIRCLE[x 0.5 a 0.03]}
+rule ray 0.1 {}

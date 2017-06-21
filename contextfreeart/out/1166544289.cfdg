@@ -1,0 +1,209 @@
+startshape human
+
+background{hue 60 sat .25 b 1}
+
+rule human{
+	pelvis{hue 15 sat .5 b .5} //start up white skeleton with its pelvis
+}
+
+rule pelvis{
+	bump{y 1 s 4.2} //belly high
+	bump{y .4 s 4.8 3.6} //belly middle
+	CIRCLE{y 1 s .3 z 2 b -.5 alpha -.8} //belly button
+	bump{s 2.2 4.5 y .3} //belly low
+	bump3d{x 1.4 y -.5 s 2.5 z -2} //hip left
+	bump3d{x -1.4 y -.5 s 2.5 2.5 2 z -4} //hip right
+	
+	lumbar{y 1} //continue spine
+	thigh{x 1.6 y -.5 z -2} //left leg
+	thigh{x -1.6 y -.5 flip 90 z -4} //right leg
+}
+
+rule lumbar 5{
+	lumbar{r 6}
+}
+
+rule lumbar 5{
+	lumbar{r -6}
+}
+
+rule lumbar{
+	bump{y 2 s 3.8}
+	thoracic{y 2}
+}
+
+rule thoracic 5{
+	thoracic{r 6}
+}
+
+rule thoracic 5{
+	thoracic{r -6}
+}
+
+rule thoracic{
+	bump{y 1.5 s 4.5 7.3} //chest
+	bump{y 2.5 x 1 s 3.5 4 10} //left breast
+	CIRCLE{y 2 x 1.5 s .5 b -.25 z 3 alpha -.5} //left nipple
+	bump{y 2.5 x -1 s 3.5 4 10} //right breast
+	CIRCLE{y 2 x -1.5 s .5 b -.25 z 3 alpha -.5} //right nipple
+
+	scapula{y 4.6 s 1 1 4} //left shoulder
+	scapula{y 4.6 flip 90 s 1 1 8} //right shoulder
+	neck{y 5}
+}
+
+rule neck 5{
+	neck{r 6}
+}
+
+rule neck 5{
+	neck{r -6}
+}
+
+rule neck{
+	bump{s 1.5 2}
+	bump{s 1.5}
+	skull{y 2 z 2}
+}
+
+rule skull{
+	hair{b -1 s 3.3 y .6 z -10}
+	bump{y -1.2 s 1.5 1.2} //chin
+	bump{y -.25 s 1.7 2.4 x -.3} //right face
+	bump{y -.25 s 1.7 2.4 x .3} //left face
+	bump{s .6 1.5 3} //nose
+	bump{s 1.3 .8 3 y -.3} //nose
+	bump{s .4 1.3 x -1.1 r 6 z -2} //left ear
+	bump{s .4 1.3 x 1.1 r -6 z -2} //right ear
+	bump{x -.4 y .5 s 1.6 .6} //left eyebrows
+	bump{x .4 y .5 s 1.6 .6} //right eyebrows
+	CIRCLE{s 2.4 1.9 4 y .8 b -1} //forehead
+}
+
+rule hair{
+	CIRCLE{}
+	hair{r 6 y -.1 s .95}
+}
+
+rule scapula{
+	bump3d{x 2 y -.7 s 1.5} //shoulder
+	arm{x 2 y -.7 z 2 r 30}
+}
+
+rule arm 10{
+	arm{r 9}
+}
+
+rule arm 10{
+	arm{r -9}
+}
+
+rule arm{
+	bump{s 1.5 5 y -2 r -8}
+	bump{s 1.2 4 y -3 x -.2 r 6}
+	bump{s .6 4 y -3 x .4 r -6}
+	bump{y -4.6 s 1} //elbow
+	forearm{y -4.6}
+}
+
+rule forearm 5{
+	forearm{r -12}
+}
+
+rule forearm{
+	bump{s 1.2 4.8 y -2 r -6}
+	bump{s 1 4.8 y -2.5 x -.2 r 4}
+	bump{y -4.7 s .8} //wrist
+	hand{y -4.7}
+}
+
+rule hand 10{
+	hand{r 6}
+}
+
+rule hand 10{
+	hand{r -6}
+}
+
+rule hand{
+	CIRCLE{s 1 1.9 y -.7}
+	4*{r 10 s .85}finger{y -1.6}
+	finger{y -.8 x -.4 s 1 .8 flip 90 r -45} //thumb
+}
+
+rule finger{
+	bump{s .4 1}
+	finger{s .9 r -1 y -.15}
+}
+
+rule finger .1{
+	bump{s .4 1}
+	finger{s .95 r -30 y -.15}
+}
+
+rule thigh 7{
+	thigh{r 6}
+}
+
+rule thigh 5{
+	thigh{r -6}
+}
+
+rule thigh{
+	bump{y -4 s 2.5 8}
+	bump{y -2.8 s 2.3 7 x -.4 r 10}
+	bump{y -1.5 s 2 5 .01 x .5} //anus
+	bump{s 2 3.5 y -7} //knee up
+	bump{s 2 y -7.7} //knee
+	shin{y -7.7} //leg below the knee
+}
+
+rule shin 5{
+	shin{r -6}
+}
+
+rule shin{
+	bump{y -3.5 s 1.8 7.2 r -5}
+	bump{x -.3 y -2.5 s 1.6 5.5 r 10}
+	bump{s 1 4.4 y -6 x -.6}
+	bump{s 1.8 y -7.6 x -.3} //ankle
+	foot{y -7.6 x -.3}
+}
+
+rule foot 5{
+	foot{r 3}
+}
+
+rule foot 2{
+	foot{r -15}
+}
+
+rule foot{
+	bump{x .8 y .15 s 2.5 1 r -30}
+	bump{x 1 y -.2 s 3.8 1 r -15}
+	toe{x 2.5 y -.4}
+}
+
+rule toe 5{
+	toe{r 3}
+}
+
+rule toe{
+	bump{x .2 s 1.2 .8}
+}
+
+rule bump{
+	CIRCLE{}
+	bump_r{b .1 s .9 z .02}
+}
+
+rule bump_r{
+	CIRCLE{alpha -.5}
+	bump_r{b .1 s .9 z .02}
+}
+
+rule bump3d{
+	CIRCLE{}
+	bump{alpha -.75}
+	bump{alpha -.75 z 2}
+}

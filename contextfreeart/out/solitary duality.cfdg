@@ -1,0 +1,16 @@
+startshape duality
+
+background {b -1}
+
+rule duality {
+	2*{r 180 x 1.866 y .5 h 120}
+	solitary {}
+}
+
+rule solitary {
+	SQUARE {b .1 h -10 sat .1}
+	2*{f 90}
+	TRIANGLE {r 30 b .1 x .7887  h -10 sat .1}
+	2*{f 15 x -.866 y -.183 h 180}
+	solitary {s .7071 r 15 x .433 y -.25 b .1 a -.1 sat .01}
+}

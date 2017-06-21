@@ -1,0 +1,15 @@
+startshape Main
+background{b -1}
+rule Main {
+	Shape{|h 60}
+}
+
+rule Shape {
+	Draw{}
+	12*{r 30}Shape{y 0.75 h 0.24| s 0.5 a -0.6 r 15}
+}
+
+
+rule Draw {
+	CIRCLE{sat 1 b 1}
+}

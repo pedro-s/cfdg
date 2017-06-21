@@ -1,0 +1,94 @@
+startshape ascape
+
+
+rule ascape { scape [ ] ascape [ x 20 ] }
+rule ascape .4 { scape [ ] ascape [ y 20 ] ascape [ x 20] }
+//rule ascape { scape [ ] ascape [ y -40 ] }
+// rule ascape 10 { ascape [ r 10 ] }
+rule ascape 1 { }
+
+
+rule scape {
+
+weedscape [ ]
+}
+
+rule weedscape {
+flplant [ ]
+weedscape [ x -4.6 s .8 z -2]
+weedscape [ x 4.6 s .8 z -2]
+}
+rule weedscape .4 { }
+rule weedscape { weedscape [ y -.1 z .1] }
+
+rule flplant { flplant [ r 2 ] }
+rule flplant .05 { flplant [ flip 90 ] }
+rule flplant 2{
+drawflpt [ ]
+flplant [ y 1 s .99 .99 ]
+}
+rule flplant {
+flptleaf [ ]
+flplant [ ]
+}
+
+rule flplant .2 {
+drawflpt [ ]
+flplant [ r -10 y .3 s .99 .95 ]
+flplant [ r 10 y .3 s .99 .95 ]
+}
+rule flplant .1 { }
+
+rule flplant .1 { 3* { y -1.5} makeflower [ s 2 r -50 x .5] }
+
+rule flptleaf { flptleaf [ x 1 r -20 ] }
+rule flptleaf { flptleaf [ x -1 r 20 ] }
+rule flptleaf { CIRCLE [ b -1 a -.9 z -1 s 3 ] makeflptleaf [ s 3 hue 126.3 sat 0.8 b 0.4 ] }
+
+rule makeflptleaf { makeflptleaf [ b .1 ] }
+rule makeflptleaf { makeflptleaf [ b -.1 ] }
+rule makeflptleaf { makeflptleaf [ x .1 r 15 ] }
+rule makeflptleaf {
+CIRCLE [ s 1 .1] 
+makeflptleaf [ r 9 s .95 ]
+}
+rule drawflpt { SQUARE [ s .1 1 hue 126.3 sat 0.8 b 0.4 ] }
+
+rule makeflower 3 { makeflower [ x .3 r -4] }
+
+rule makeflower {
+CIRCLE [ b -1 a -.8 s 1.1 .4 ] 
+flower1 [ s 1 .3  ]
+3* { y -.2 s .6 } flower2 [ z -1 flip 180 y .2  s .8 .1 hue 126.3 sat 0.8 b 0.4 ]
+drawflpt [y -.6 s .4 1]
+}
+rule makeflower {
+CIRCLE [ b -1 a -.8 s 1.2 ] 
+flower1 [ s 1 .7  ]
+drawflpt [y -.6 s .4 1]
+}
+
+
+//rule flower1 { flower [ hue 50.0 sat 1.0 b 1.0 ] }
+//rule flower1 { flower [ hue 10.0 sat 1.0 b 1.0 ] }
+//rule flower1 { flower [ hue -10.0 sat 1.0 b 0.9 ] }
+rule flower1 { flower [ hue 210.0 sat 1.0 b 0.9 ] }
+
+rule flower {
+20* { r 18 } petal1 [ y .5 s .2 1 ]
+flower [ y .2 s .65 hue -.45 ]
+}
+
+rule flower2 {
+80* { r 4.52 } dpetal [ y .5 s .1 1 ]
+flower2 [ r 2 s .85 hue .45 ]
+}
+
+
+
+rule petal1 { petal1 [ hue 6 ] }
+rule petal1 { petal1 [ b .01 ] }
+rule petal1 { petal1 [ r 2 ] }
+rule petal1 { dpetal [ ] }
+rule dpetal { CIRCLE [ hue 15 b 0] CIRCLE [ s .9]}
+

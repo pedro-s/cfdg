@@ -1,0 +1,21 @@
+startshape AVATAR
+rule AVATAR {
+
+CIRCLE {h 37.87 sat 0.5067 b 1.0000}
+
+TRIANGLE { size 0.25 r 180 y .25 h -147.58 sat 0.9740 b 1.0000}
+SQUARE { size 0.12 y .37 h -147.58 sat 0.9740 b 1.0000}
+SQUARE { size 0.12 y .43 h -147.58 sat 0.9740 b 1.0000}
+CIRCLE { size 0.18 x .25 y 0.10}
+CIRCLE { size 0.15 x .25 y 0.10 h 0.00 sat 0.0222 b 1.0000}
+CIRCLE { size 0.18 x -.25 y .12}
+CIRCLE { size 0.15 x -.25 y .12 h 0.00 sat 0.0222 b 1.0000}
+
+CIRCLE { size 0.05 x -.25 y .12 b-1}
+CIRCLE { size 0.05 x .25 y 0.10 b-1}
+CIRCLE { size 0.04 x - .05 y -.03 b-1}
+CIRCLE { size 0.04 x .05 y - .03 b-1}
+CIRCLE { size 0.25 y -.25}
+SQUARE { size 0.10 h 0.00 sat 0.8778 b 1.0000 y -.31}
+CIRCLE { size 0.10 h 0.00 sat 0.8778 b 1.0000 y -.36}
+}

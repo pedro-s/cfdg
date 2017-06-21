@@ -1,0 +1,97 @@
+startshape NEURON;
+
+rule NEURON
+{
+  CIRCLE { s 3 }
+
+  MED_CURVE_LEFT { r 90 }
+  MED_CURVE_RIGHT [ r 101 y 9.94981 r 9 ]
+  NEURON [ r 101 y 9.94981 r -2 y 9.94981 r 109 s 0.85 b 0.05 ]
+
+  HARD_CURVE_LEFT { r 180 }
+  HARD_CURVE_RIGHT [ r 211.5 y 9.55039 r 28.5 ]
+  NEURON [ r 211.5 y 9.55039 r -3 y 9.55039 r 128.5 s 0.85 b 0.05 ]
+}
+
+rule NEURON
+{
+  CIRCLE { s 3 }
+
+  HARD_CURVE_RIGHT { }
+  MED_CURVE_LEFT [ r -31.5 y 9.55039 r -28.5 ]
+  SOFT_CURVE_RIGHT [ r -31.5 y 9.55039 r -17.5 y 9.94981 r 9 ]
+  NEURON [ r -31.5 y 9.55039 r -17.5 y 9.94981 r 3.5 y 9.98744 r -154.5 s 0.85 b 0.05 ]
+
+  SOFT_CURVE_LEFT [ r -132 ]
+  SOFT_CURVE_LEFT [ r -126.5 y 9.98744 r 4.5 ]
+  SOFT_CURVE_RIGHT [ r -126.5 y 9.98744 r 10 y 9.98744 r 4.5 ]
+  NEURON [ r -126.5 y 9.98744 r 10 y 9.98744 r -1 y 9.98744 r -154.5 s 0.85 b 0.05 ]
+
+  HARD_CURVE_LEFT [ r 100 ]
+  HARD_CURVE_LEFT [ r 131.5 y 9.55039 r 28.5 ]
+  MED_CURVE_RIGHT [ r 131.5 y 9.55039 r 60 y 9.55039 r 28.5 ]
+  HARD_CURVE_RIGHT [ r 131.5 y 9.55039 r 60 y 9.55039 r 17.5 y 9.94981 r -9 ]
+  NEURON [ r 131.5 y 9.55039 r 60 y 9.55039 r 17.5 y 9.94981 r -40.5 y 9.55039 r -158.5 s 0.85 b 0.05 ]
+}
+
+rule NEURON
+{
+  CIRCLE { s 3 }
+
+  MED_CURVE_LEFT [ r 75 ]
+  HARD_CURVE_RIGHT [ r 86 y 9.94981 r 9 ]
+  NEURON [ r 86 y 9.94981 r -22.5 y 9.55039 r -158.5 s 0.85 b 0.05 ]
+
+  MED_CURVE_RIGHT [ r 160 ]
+  HARD_CURVE_LEFT [ r 149 y 9.94981 r -9 ]
+  HARD_CURVE_RIGHT [ r 149 y 9.94981 r 22.5 y 9.55039 r 28.5 ]
+  NEURON [ r 149 y 9.94981 r 22.5 y 9.55039 r -3 y 9.55039 r -158.5 s 0.85 b 0.05 ]
+
+  HARD_CURVE_LEFT [ r -160 ]
+  HARD_CURVE_RIGHT [ r -128.5 y 9.55039 r 28.5 ]
+  NEURON [ r -128.5 y 9.55039 r -3 y 9.55039 r -158.5 s 0.85 b 0.05 ]
+}
+
+rule NEURON 2 { CIRCLE { s 3 } CIRCLE { s 2 b 1 } }
+
+rule SOFT_CURVE_LEFT
+{
+  // after last block, offset is:
+  //  r 5.5 y 9.98744 r 4.5
+  10*[r 1 y 1] SQUARE { }
+}
+
+rule MED_CURVE_LEFT
+{
+  // after last block, offset is:
+  //  r 11 y 9.94981 r 9
+  10*[r 2 y 1] SQUARE { }
+}
+
+rule HARD_CURVE_LEFT
+{
+  // after last block, offset is:
+  //  r 31.5 y 9.55039 r 28.5
+  20*[r 3 y 0.5] SQUARE { }
+}
+
+rule SOFT_CURVE_RIGHT
+{
+  // after last block, offset is:
+  //  r -5.5 y 9.98744 r -4.5
+  10*[r -1 y 1] SQUARE { }
+}
+
+rule MED_CURVE_RIGHT
+{
+  // after last block, offset is:
+  //  r -11 y 9.94981 r -9
+  10*[r -2 y 1] SQUARE { }
+}
+
+rule HARD_CURVE_RIGHT
+{
+  // after last block, offset is:
+  //  r -31.5 y 9.55039 r -28.5
+  20*[r -3 y 0.5] SQUARE { }
+}

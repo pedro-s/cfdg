@@ -1,0 +1,50 @@
+startshape SPIKES
+background {h 291.80 sat 0.5385 b 1.0000 }
+
+rule SPIKES {
+	4* {r 90} SPIKE {}
+}
+
+rule SPIKE {
+	LSPIKE {}
+}
+rule SPIKE {
+	LSPIKE { flip 900}
+}
+rule LSPIKE {
+	SQUARE {}
+	LSPIKE { y 0.92 s 0.92 r 4}
+}
+rule Zig {
+	Seg { x -0.5 r -45 }
+	Zag { y 1 s 0.97 }
+}
+rule Zig {
+Seg { x -0.7 r -25}
+Zag { y 2 s 0.87}
+}
+rule Zag {
+	Seg { x 0.5 r 45 }
+	Zig { y 1 s 0.97 }
+}
+rule ZigL {
+	Seg { x -0.8 r -45 }
+	ZagL { y 1 s 0.97 r 2 }
+}
+rule LSPIKE 0.02 {
+	SPIKE { r 95 }
+	SPIKE { r -70 }
+	LSPIKE { y 0.98 s 0.99  r 1}
+}
+rule CIRCLE {
+CIRCLE { r 80}
+CIRCLE { y 0.98 s 0.9 r 1}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+startshape startbackground { b -0.85 hue 250 sat 1}rule start { 
+	curl { hue 0 sat 1 b 1 alpha -0.5}
+	curl { hue 0 sat 1 b 1 alpha -0.5 r 120}
+	curl { hue 0 sat 1 b 1 alpha -0.5 r 240}
+}
+
+rule start2 { 
+	curl { hue 0 sat 1 b 1 }
+	curl { hue 0 sat 1 b 1 r 120}
+	curl { hue 0 sat 1 b 1 r 240}
+}
+rule curl {
+          edge {}
+}
+
+rule edge {
+	line {}
+}
+
+rule line 0.01 {
+	line {s 0.95 x 0.5 r 20 b 0.0005}
+
+	curl { s 1.0 b -0.1 r 90}
+	curl { s 0.5 b -0.1 r -90 f 0}
+}
+
+rule line 0.5 {
+	blob {}
+	line {s 0.95 x 0.5 r 20 b 0.005}
+}
+
+rule line 0.02 {
+	curl { s 0.5 b -0.2 r 90}
+	curl { s 0.5 b -0.2 r -90}
+	curl { s 0.5 b -0.2 r 0}
+	curl { s 0.5 b -0.2 r 180}
+}
+
+rule blob 0.999 {
+	CIRCLE {}
+	blob { s 0.625 hue 10 b 1 a -0.3}
+}
+rule blob 0.001 {
+	start2 {s 0.9 alpha -0.1}
+}

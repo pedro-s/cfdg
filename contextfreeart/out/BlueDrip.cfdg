@@ -1,0 +1,45 @@
+startshape HUB
+
+background {b -1}
+
+rule HUB
+{
+    10 * {x 1} LINE {y -.7 h 220}
+}
+
+rule BASE
+{
+    CIRCLE {z 0 s 1   sat .7 b .2}
+    CIRCLE {z 1 s .7  sat .7 b .3}
+    CIRCLE {z 2 s .4  sat .7 b .4}
+    CIRCLE {z 3 s .25 sat .7 b .6}
+    CIRCLE {z 4 s .08 sat .7 b .8}
+}
+
+rule LINE
+{
+    PUTRING {}
+    BASE {}
+    LINE {s .995 y -.1 a -.01}
+}
+
+rule LINE .01
+{
+    PUTRING {}
+    BASE {}
+    LINE {r 45 s .995 y -.1 a -.01}
+}
+
+rule LINE .01
+{
+    PUTRING {}
+    BASE {}
+    LINE {r -45 s .995 y -.1 a -.01}
+}
+
+rule PUTRING {}
+rule PUTRING .005 {RING {}}
+rule RING
+{
+    360 * {r 1} BASE {y -1}
+}

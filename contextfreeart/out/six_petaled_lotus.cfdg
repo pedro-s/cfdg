@@ -1,0 +1,10 @@
+startshape SIX_PETALED_LOTUS
+
+rule SIX_PETALED_LOTUS{
+OPENCIRCLE{}
+6*{r 60 } SIX_PETALED_LOTUS {s 0.5 x 0.5 sat -0.5 h 10 z -1}
+}
+
+rule OPENCIRCLE {
+360*{r 1} CIRCLE {s 0.04 sat 1 h 25 b 0.8 x 1}
+}

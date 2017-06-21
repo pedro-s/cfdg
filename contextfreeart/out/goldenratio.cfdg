@@ -1,0 +1,19 @@
+startshape GoldenRatio[]
+
+shape GoldenRatio{
+	SquareAndArc[alpha -0.9]
+} 
+
+shape SquareAndArc {
+   SQUARE []
+   Arc[alpha 1]
+   phi = 2/(1+sqrt(5))
+   SquareAndArc[alpha 0.1 s phi x (0.5+0.5*phi) y (0.5-0.5*phi) r -90 ]
+}
+ 
+path Arc {
+    MOVETO(0.5, 0.5)
+    ARCTO( -0.5,  -0.5, 1, 1, 90)
+    CLOSEPOLY()
+}
+

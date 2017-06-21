@@ -1,0 +1,19 @@
+startshape q
+
+rule q {
+	d { a -.95 }
+	d { a -.97 s .75 x -.125 b 1 }
+	halo { z -.1 s 2 a -.99 sat .5 b .8}
+	q { r 180.4 y .5 }
+}
+rule q .01 { q { flip 90  } }
+rule q .001 { }
+rule q .01 { q { x 2 } }
+rule d { 
+	SQUARE { s 1 1}
+	CIRCLE { x .5 s .5 1}
+}
+rule halo { 
+	CIRCLE { }
+	halo { s .9 r 10 y 1}
+}

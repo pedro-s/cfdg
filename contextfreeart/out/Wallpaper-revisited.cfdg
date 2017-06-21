@@ -1,0 +1,220 @@
+// Once time I've found nice clouds...
+// Rev 1.2
+
+size { s 60 40 }
+startshape main
+
+rule main { 
+	air {y 0.3 h 210 sat .1 b .975 z 3000000 }
+	//airx { s 1 .5 x 6.875 y .28 hue 210 sat .1084 b .975 z 1100000 a-.2 }
+	SQUARE { s 40 .6 x -13.2 y .4 hue 210 sat .1084 b .975 z 1000000 } 
+	
+	SQUARE { s 40 20.5 x 10 y -10 b 0.7 hue 50 sat .3 b 1 z -9000000 } 
+	BackGreen { x -2.5 y -30 z - 100000 }
+	Sea { r 11 x -8 y -20 sat .02 b 1 }
+    CloudsMatrix { x -40 y 22 z  4000000  }
+}
+
+rule CloudsMatrix {
+	60*{ x 1.5 } { 20 *{ y -1 s 0.999 0.997 } Clouds { s 6 1 } }
+}
+
+rule Clouds {}
+rule Clouds 0.01 { startclouds {} }
+
+rule air {
+    1000 * { y 0.02 sat 0.001 } SQUARE { s 60 0.1 }
+}
+
+rule airx {
+    80 * { x 0.01 a -0.05 } SQUARE { s .05 1.5 r -37 }
+}
+
+rule BackGreen {
+	650*{ x 0.05 } { 1850 *{ y 0.1 x 0.01 s 0.999 0.9967 h +0.002 a 0.0001 b-.01 z -100 } 
+    {
+		StartField { x -1 s 5  sat 0.6 b .4 a -0.99 } 
+		StartField { x -1 s 5  sat 0.7 b .3 a -0.985 } 
+		StartField { x -1 s 5  sat 0.8 b .5 a -0.98 }    }
+}
+}
+
+rule StartField { Field { h 88 sat -0.1 } }
+rule StartField { Field { h 20 b 0.2 sat 0.45 } }
+rule StartField { Field { h 50 b 0.1 } }
+rule StartField { Plant { b 0.9 h 45 a -0.1 z 800 } }
+
+rule Field {}
+rule Field 0.00375 { DrawField { } }
+
+rule DrawField {
+	CIRCLE {}
+	DrawField { s 0.8 y 0.1 b -0.1 }
+}
+
+rule Hubble {}
+rule Hubble 0.00375 { DrawHubble { } }
+
+rule DrawHubble {
+	CIRCLE {}
+	DrawHubble { s 0.8 y 0.1 b -0.035 }
+}
+
+rule Plant {}
+rule Plant 0.1 { 
+	DrawPlant { } 
+	DrawPlant { r -5 } 
+}
+
+rule DrawPlant 0.2 {	DrawPlant { b -0.05 flip 90 } }
+rule DrawPlant 0.8 {	DrawPlant { s 0.9 y 0.02 b -0.05 } }
+rule DrawPlant 2 { 
+	CIRCLE { s 0.01 0.05 sat=-0.4 b=1 a=.4 } 
+	DrawPlant { s 0.95 y 0.01 r 3.75 sat -0.05 b -0.05 a 0.005 z 1 }
+}
+
+rule Sea {
+    200*{ r -0.347 s 0.99  y 0.205 x 0.01  skew 0.5 0.3 sat 0.00 z 1 } 
+		Coast { s 0.99 }
+}
+
+rule Coast {
+	Waves { sat -1 a 1 }
+    BeachLane { sat 0.25 b 1 }
+	ShoreBreak { s 0.5 x 7 y -2 b 1 z 10000 a 1 }
+	AlgaeStart { x -10  y - 5 skew 1 -4 r -2  h 100 b 0.8  sat 0.8 z 50000 }
+}
+
+rule Waves {
+	980*{ x -0.7 s 0.9985 1.001 sat 0.03 b -0.0008 h 0.05 a 0.25 } 
+		Wave { x 1 s 1.2 h 210 sat -0.0 z 10001}
+}
+
+rule BeachLane {
+	280*{ x 0.03 sat 0.001 b -0.001 a -0.002 } 
+		Hubble { s 4 x 1 y -2 r -90 h 25 sat 0.35 b 1 a -0.97 z 20000 }
+
+    325*{ x 0.03 sat 0.002 h -0.05 a -0.01 }
+		CIRCLE_RND { s 5 h 50 b 1 a -0.7  z 10000 } 
+}
+
+rule CIRCLE_RND {}
+rule CIRCLE_RND 0.01 { CIRCLE {} }
+
+rule ShoreBreak {
+	250 *{ x 0.015 y 0.02 s 1.0015 z 1 h -0.01 b -0.02 } 
+	{	Field { x 0.5 y +1 s 5 h 20 sat 0.6 a -0.98 b 0.5 }
+		Hubble { x 6.5 y -7 s 7 h 25 sat 0.8 a -0.975 b 0.55 }
+	}
+
+	1250 *{ x 0.09 y -0.02 s .9995 r 0.01 z 1 h -0.01 b -0.02 } 
+		Plant2 { x 7 y 0 s 4.1 r 30 b -0.5 h 45 sat 0.6 a -0.4 z 300 }
+}
+
+rule Plant2 1 {Plant2 { x .1 y -0.05 r 0.1 } }
+rule Plant2 0.1 {Plant3 {} }
+
+rule Plant3 {Plant3 { r -1.27 } }
+rule Plant3 {Plant3 { r .7 } }
+rule Plant3 0.01 { Plant { s 0.5 2 r 15 } } 
+
+rule AlgaeStart 		{ AlgaeStart { s 0.999  x -10 y -1 } }
+rule AlgaeStart 0.05 	{ }
+rule AlgaeStart 0.01 	{ Algae { s 1 sat -0.5 a -0.99 } }
+rule AlgaeStart 0.02 	{ Algae { s 0.2 0.1 sat -0.5 a -0.99 } }
+rule AlgaeStart 0.01 	{ Algae { s 1 0.4 sat -0.5 a -0.99 h 50 } }
+rule AlgaeStart 0.01 	{ Algae { s 0.67 sat -0.5 a -0.99 } }
+
+rule Algae { CIRCLE { s 20 10 skew 2 1 a -0.1 }  Algae { s 0.92 y 0.01 } }
+
+rule Wave 		{ CIRCLE { s 2 z -2 } }
+rule Wave 0.1 	{ CIRCLE { s 3.3 h -1  } }
+rule Wave 0.1 	{ CIRCLE { s 3.3 h -2  } }
+rule Wave 0.1 	{ CIRCLE { s 3.3 h -3  } }
+rule Wave 0.1 	{ CIRCLE { s 3.3 h -4  } }	
+
+// definitelly we need rnd() here...
+// why I should repeat the same many times?
+
+rule Wave 0.5 { Flare { s 0.5 r -3  a -0.99 b 1 x 2 z 100000 } }
+ 
+rule Flare 0.1 { }
+rule Flare 0.5 { Flare { flip 90 } }
+rule Flare 	{ 
+	GAUSS { s 0.5 sat -1  z +10 } 
+	Flare { y -0.1 r 13 } 
+}
+
+rule GAUSS {
+	CIRCLE {}
+	GAUSS { s 0.75 a 0.005 }
+}
+
+rule GAUSS 0.1 {}
+
+rule Flare 0.02 { 
+	Flare { y -0.05 r -30 } 
+	Flare { y -0.05 r 300 } 
+}
+
+////////////////////////////////////////////////////////////
+// Here clouds by erthad (http://www.contextfreeart.org/gallery/view.php?by=erthad)
+
+rule startclouds {
+    10* { x 1 } startcloud { a -1 }
+}
+ 
+rule startcloud {
+    side { y -0.5 }
+}
+ 
+rule startcloud {
+    side { y 0.5 }
+}
+ 
+rule cloud {
+    step { }
+    horiz { s 0.7 }
+    side { }
+}
+ 
+rule side {
+    step { }
+    cloud { x -1 a 0.002 } 
+}
+ 
+rule side {
+    step { }
+    cloud { x 1 a 0.002 }
+}
+ 
+rule side {}
+ 
+rule horiz {
+    step { }
+    rotatecloud { y -1 }
+}
+ 
+rule horiz {
+    step { }
+    rotatecloud { y 1 }
+}
+ 
+rule rotatecloud {
+    cloud { r 15 }
+}
+ 
+rule rotatecloud {
+    cloud { r -15 }
+}
+ 
+rule step {
+    SQUARE { b 1 }
+}
+ 
+rule step {
+    CIRCLE { b 1 }
+}
+ 
+rule step 0.13 {}
+rule cloud 0.13 {}

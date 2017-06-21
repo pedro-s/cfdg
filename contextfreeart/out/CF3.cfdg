@@ -1,0 +1,61 @@
+startshape Shape0
+
+// orange = hue 20 sat 0.82 b 0.89
+// blue = hue 191 sat 1 b 0.82
+// green = hue 84 sat 0.73 b 0.68
+// brick = hue 358 sat 0.76 b 0.86 
+
+path Line {
+	t = (1..3)/100
+	MOVETO(0, 0)
+	LINETO(1, 1)
+	STROKE(t)[]
+}
+
+shape OrangeLine {
+	Line [ hue 20 sat 0.82 b 0.89 ]
+}
+
+shape BlueLine {
+	Line [ hue 191 sat 1 b 0.82 ]
+}
+
+shape GreenLine {
+	Line [ hue 84 sat 0.73 b 0.68 ]
+}
+
+shape BrickLine {
+	Line [ hue 358 sat 0.76 b 0.86 ]
+}
+
+shape DandelionSeed {	
+	loop 1..rand(1,1..100)  
+		[r 1..360 ] OrangeLine []
+	loop 1..rand(1,1..100)   
+		[r 1..360 ] BlueLine []
+	loop 1..rand(1,1..100)   
+		[r 1..360 ] GreenLine []
+	loop 1..rand(1,1..100)   
+		[r 1..360 ] BrickLine []
+}
+
+shape Shape2 {
+	scaleFactor = (80..160)/100
+	loop 6 [ x 1..10 r 5..10 s scaleFactor ]
+		DandelionSeed []
+}
+
+shape Shape1 {
+	loop 6 [ x 1..10 y 1..10 ] 
+		Shape2 [ r 280 ]
+}
+
+shape Shape0 {
+	plusMinusZero = -1..1
+	loop 6 [ x 1..10 y 1..10 r (60*plusMinusZero) ] 
+		Shape1 [ r 20 ]
+}
+
+
+
+

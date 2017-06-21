@@ -1,0 +1,38 @@
+startshape grid
+
+
+rule grid{ 17*{y 1.732050808} row {} }
+rule row { 10*{x 3} hexShape {} }
+
+rule hexShape {
+    shapeA1 {}
+    shapeB1 {x 1}
+    shapeB2 {x -.5 y 0.866025404}
+    shapeA2 {x 1.5 y 0.866025404}
+    shapeE {x .5 y 0.866025404}
+    shapeF {x 2}
+}
+
+rule shapeA1 {shape {}}
+rule shapeB1 {shape   {}}
+rule shapeB2 {shapeB1 {r 180}}
+rule shapeA2 {shapeA1 {r 180}}
+rule shapeE  {sqr   {s .8 r 90}}
+rule shapeF  {shapeE  {}}
+
+
+
+rule shape {drip {r  270}}
+rule shape {drip {r  90}}
+
+
+
+
+
+rule sqr {SQUARE {s .4 r 30}}
+rule sqr {SQUARE {s .4 }}
+rule sqr {SQUARE {s .4 r 60}}
+    
+
+rule drip { 40* {x .1  s .91} CIRCLE {s .4} }
+

@@ -1,0 +1,63 @@
+startshape tausta
+background {b -0.3}
+rule tausta{
+	pallo{s 4}
+	pallo{y 2 x 4 s 3}
+	teePallot1{}
+	teePallot1{y -1x 4 r 90}
+	teePallot2{r 45}
+	teePallot2{x 3 r -45}
+}
+
+rule teePallot1{
+	pallo1{}
+	teePallot1{y 3 s 0.8 r 100}
+}
+
+rule pallo1{
+	CIRCLE{b -1 s 2}
+	pallo1{s 0.8}
+}
+rule pallo1 0.9{
+	CIRCLE{b 1 s 1.9 hue 90 sat 1}
+	pallo1{s 0.5}
+}
+rule pallo1 0.5{
+	CIRCLE{b 1 s 1.7}
+	pallo1{s 0.5}
+}
+
+rule teePallot2{
+	pallo2{}
+	teePallot2{y 3 s 0.8 r 100}
+}
+
+rule pallo2{
+	CIRCLE{b -1 s 2}
+	pallo2{s 0.8}
+}
+rule pallo2 0.9{
+	CIRCLE{b 1 s 1.9 hue 50 sat 1}
+	pallo2{s 0.5}
+}
+rule pallo2 0.5{
+	CIRCLE{b 1 s 1.7}
+	pallo2{s 0.5}
+}
+
+rule teePallot{
+	pallo{}
+	teePallot{y 3 s 0.5}
+}
+rule pallo{
+	CIRCLE{b 0.5 s 2}
+	pallo{s 0.8}
+}
+rule pallo 0.9{
+	CIRCLE{b 0.2 s 1.9}
+	pallo{s 0.5}
+}
+rule pallo 0.5{
+	CIRCLE{b 0.8 s 1.7}
+	pallo{s 0.5}
+}

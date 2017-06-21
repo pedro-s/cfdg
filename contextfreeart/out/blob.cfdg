@@ -1,0 +1,27 @@
+startshape Main
+ 
+background { b - 1} 
+
+ 
+rule Main {
+  20*{r 10 h 15} {
+	Spiral {r 100 b 1 sat 1 y 3}
+  }
+}
+ 
+rule Spiral 4 {
+    Circle {}
+    Spiral {r 180 s .95 x (1-.95)}
+}
+ 
+rule Spiral {
+  Circle {}
+  Spiral {f 0 s 1 x (1+1)}
+}
+ 
+path Circle {
+    MOVETO {x -1 y 0}
+    ARCTO {x 1 y 0}
+    STROKE {width 12 p roundcap}
+}
+ 

@@ -1,0 +1,17 @@
+startshape TREE
+CF::Background=[b -1]
+shape TREE
+rule {
+ SQUARE[]
+ TREE [y 1.2 s 0.99 r 1.5 h 0.00 sat 1.0000 b 1.0000]
+}
+
+rule 0.05 {TREE [flip 90]}
+
+rule 0.05 {
+ SQUARE[]
+ TREE [y 1 s 0.99 r 1.5 h 300.00 sat 1.0000 b 1.0000  flip 90]
+ TREE [y 1 x 1 s 0.6 r -60 h 300.00 sat 1.0000 b 1.0000]
+ TREE [y 1 x -1 s 0.5 r 60 h 300.00 sat 1.0000 b 1.0000 flip 90]
+}
+

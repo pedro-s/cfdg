@@ -1,0 +1,102 @@
+# This file is suitable for inclusion in other
+# documents that wish to have access to the
+# "dragon1" through "dragon20" rules below. 
+# Make sure to pass in a "sat" and "b" value to 
+# get the colors to show up, as illustrated in the 
+# top_dragon rule.
+
+startshape top_dragon
+
+background { b -1 }
+
+rule top_dragon {
+	dragon20 { sat 1 b 1 }
+}
+
+rule dragon20 {
+	dragon19 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon19 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon19 {
+	dragon18 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon18 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon18 {
+	dragon17 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon17 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon17 {
+	dragon16 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon16 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon16 {
+	dragon15 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon15 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon15 {
+	dragon14 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon14 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon14 {
+	dragon13 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon13 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon13 {
+	dragon12 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon12 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon12 {
+	dragon11 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon11 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon11 {
+	dragon10 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon10 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon10 {
+	dragon9 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon9 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon9 {
+	dragon8 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon8 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon8 {
+	dragon7 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon7 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon7 {
+	dragon6 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon6 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon6 {
+	dragon5 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon5 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon5 {
+	dragon4 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon4 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon4 {
+	dragon3 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon3 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon3 {
+	dragon2 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon2 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon2 {
+	dragon1 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon1 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon1 {
+	dragon0 { s 0.707 x -0.25 y 0.25 r 45 h 5 }
+	dragon0 { s 0.707 x 0.25 y 0.25 r 135 }
+}
+rule dragon0 {
+	line{ }
+}
+
+rule line {
+	CIRCLE{ s 0.707 r 45 }
+}

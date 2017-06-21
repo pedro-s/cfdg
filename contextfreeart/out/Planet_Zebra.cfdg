@@ -1,0 +1,26 @@
+startshape eye
+
+background {b -1}
+
+rule eye{
+36*{r 10 z -100}tree{}
+}
+
+rule tree{
+block{}
+tree{r 1 s 0.99 y 0.1}
+}
+rule tree 0.01{
+block{}
+tree{r 1 s 0.99 y 0.1}
+tree{r 1 s 0.99 y 0.1 flip -90}
+}
+
+
+rule block{
+CIRCLE{s 4 b -1 z -3}
+CIRCLE{s 3 b 1 z -2}
+CIRCLE {s 2 b -1 z -1}
+CIRCLE {s 1 b 1}
+CIRCLE {s 0.5 b -1 z 1}
+}

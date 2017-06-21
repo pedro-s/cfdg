@@ -1,0 +1,29 @@
+startshape SUNoaBRIDGE
+CF::Size=[s 8.4 6.3]
+CF::Background=[sat .5 b -.4 h 160]
+
+shape BRidge (natural RECurs)
+{
+if(RECurs>0)
+SQUARE [s 2.05 .06 x  1]
+SQUARE [s .06 1 x 2 .5]
+loop 2 [flip 90 x 4]
+BRidge(RECurs--1) [s .618 x 2 1]
+}
+
+shape SUNbridge
+{
+loop 2 [flip 0 y 6]
+loop 2 [flip 90]
+BRidge(15) [ ]
+}
+
+shape SUNoaBRIDGE
+{
+CIRCLE [s .3 sat 1 b 1 y .02 z -11]
+trans [s 1 1.5]
+loop 100 [s .95 b .08 z -1]
+SUNbridge [y -2.605]
+}
+
+

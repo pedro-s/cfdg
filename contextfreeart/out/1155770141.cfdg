@@ -1,0 +1,21 @@
+startshape nautilus
+
+background { b -1 }
+
+rule nautilus { 
+	aa { b 1 }
+}
+rule aa {
+	bb { s .2  x .7  }
+	//cc { }
+	aa {  r 5  y .2  s .99 }
+}
+rule bb .5 { 
+	SQUARE{ s .1 1 h 47 sat 47}
+	bb {  r .99   y .9 s .99  }
+}
+rule bb  .5 { 
+	SQUARE{ s .1 1 }
+	bb {  r .99   y .9 s .99  }
+}
+

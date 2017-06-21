@@ -1,0 +1,18 @@
+startshape SIX
+background { b -1 }
+
+rule SIX 0.5 { 
+FIVE { }
+SIX { y 0.3 r 1.4 s 0.995 }
+}
+
+rule FIVE { ONE { r 240 }}
+rule FIVE { ONE { r 310 }}
+rule FIVE 8 { CIRCLE { b 0 alpha -1 }}
+
+rule ONE { 
+FOUR { }
+ONE { y 0.1 s 0.998 hue 0.5  alpha -0.01 }
+}
+
+rule FOUR { CIRCLE { hue 60 sat 0.2 b 1 }}

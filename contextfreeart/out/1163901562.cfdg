@@ -1,0 +1,157 @@
+startshape CQUEUE
+
+background{hue -60 sat .25 b -.75}
+
+rule CQUEUE 6{
+	CQUEUE{hue 60}
+}
+rule CQUEUE 6{
+	CQUEUE{hue -60}
+}
+rule CQUEUE 1{
+	QUEUE{}
+}
+
+rule QUEUE{
+	LQUEUE{}
+}
+rule QUEUE{
+	RQUEUE{}
+}
+
+rule LQUEUE .2{} //end
+
+rule LQUEUE 1{
+	CQUEUE{} //state change
+}
+
+rule LQUEUE 10{
+	FALLENDOMINO{}
+	LQUEUE{x 2 z 1 r 3}
+}
+
+rule LQUEUE 100{
+	LQUEUE{x -.05}
+}
+
+rule RQUEUE .2{} //end
+
+rule RQUEUE 1{
+	CQUEUE{} //state change
+}
+
+rule RQUEUE 10{
+	FALLENDOMINO{}
+	RQUEUE{x 2 z 1 r -3}
+}
+
+rule RQUEUE 100{
+	RQUEUE{x -.05}
+}
+
+rule FALLENDOMINO{
+	DOMINO{r -6 sat .8 b .7}
+}
+
+rule DOMINO{
+	SQUARE{s .1 1 skew 0 -4 x -1.05 y .035 b -.1}
+	SQUARE{s 2 .075 skew -3 0 x -.05 y 0.535 b -.3}
+	SQUARE{s 2 1 b -.2}
+	NUM{z .1 s .9 x -.5}
+	NUM{z .1 s .9 x .5}
+}
+
+//nine
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x -.3 y -.3 b -1 s .2}
+	CIRCLE{y -.3 b -1 s .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{x -.3 b -1 s .2}
+	CIRCLE{b -1 s .2}
+	CIRCLE{x .3 b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+	CIRCLE{y .3 b -1 s .2}
+	CIRCLE{x .3 y .3 b -1 s .2}
+}
+
+//eight
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x -.3 y -.3 b -1 s .2}
+	CIRCLE{y -.3 b -1 s .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{x -.3 b -1 s .2}
+	CIRCLE{x .3 b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+	CIRCLE{y .3 b -1 s .2}
+	CIRCLE{x .3 y .3 b -1 s .2}
+}
+
+//seven
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x -.3 y -.3 b -1 s .2}
+	CIRCLE{y -.3 b -1 s .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+	CIRCLE{y .3 b -1 s .2}
+	CIRCLE{x .3 y .3 b -1 s .2}
+}
+
+//six
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x -.3 y -.3 b -1 s .2}
+	CIRCLE{y -.3 b -1 s .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+	CIRCLE{y .3 b -1 s .2}
+	CIRCLE{x .3 y .3 b -1 s .2}
+}
+
+//five
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x -.3 y -.3 b -1 s .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+	CIRCLE{x .3 y .3 b -1 s .2}
+}
+
+//four
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x -.3 y -.3 b -1 s .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+	CIRCLE{x .3 y .3 b -1 s .2}
+}
+
+//three
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+}
+
+//two
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{x .3 y -.3 b -1 s .2}
+	CIRCLE{x -.3 y .3 b -1 s .2}
+}
+
+//one
+rule NUM{
+	SQUARE{b .2}
+	CIRCLE{b -1 s .2}
+}
+
+//zero
+rule NUM{
+	SQUARE{b .2}
+}

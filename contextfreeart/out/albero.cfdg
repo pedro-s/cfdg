@@ -1,0 +1,32 @@
+startshape albero
+
+import i_pix.cfdg
+CF::Background = [b -1]
+CF::MaximumSize = 0.1
+
+shape albero 
+
+rule 10 {
+   P_5by5 []
+   albero [y 1.1 s 0.99 r 10 hue 10 sat 1 b 1]
+}
+
+rule {
+   A_5by5[]
+   albero [y 1.1 s 0.90 r 360 x -0.1]
+}
+
+rule {
+   R_5by5[]
+   albero [y 1.1 s 0.90 r -90 x 0.2]
+}
+
+rule {
+   I_5by5[]
+   albero [y 1.1 s 1 r 180 x 0.1]
+}
+
+rule {
+   S_5by5[]
+   albero [y 1.1 s 0.90 r -90 x 0.1]
+}

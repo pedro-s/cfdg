@@ -1,0 +1,61 @@
+startshape SPHERE
+
+background {b-1}
+
+rule SPHERE
+
+{
+
+CIRCLE { skew 23 20  h 6.04 sat 0.9497 b 0.6796 y -.03 }
+
+CIRCLE { skew 23 20  b-1 s .94 y -.03 }
+
+CIRCLE {h 18.65 sat 0.9381 b 1.0000 s .6 y .02}
+
+CIRCLE {h 18.65 sat 0.9381 b 0.9392 s .5 y .02 }
+
+CIRCLE {h 18.65 sat 0.9381 b 0.8453 s .4 y .02}
+
+CIRCLE {h 18.65 sat 0.9381 b 0.7845 s .3 y .02}
+
+CIRCLE {h 18.65 sat 0.9381 b 0.6519 s .2 y .02}
+
+CIRCLE {h 18.65 sat 0.9381 b 0.5746 s .1 y .02}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02 x -1 y .5 }
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02 x -.5  y .6}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02 x - .7 }
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02 y .9 }
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x .9  y .9 }
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02 x -.9  y .87 }
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .2  x .5 y .8 }
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x -.9 y -.4}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x .5 y .6}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x .8 y .3}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x .4 y -.2}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  y -.7}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x .9 y -.5}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x -.7 y -.8}
+
+CIRCLE {h 55.43 sat 0.9986 b 1.0000 s .02  x .5 y -.6}
+
+SQUARE {h 55.43 sat 0.9986 b 1.0000 s .17 x .5 y .8 }
+
+SQUARE {h 55.43 sat 0.9986 b 1.0000 s .17 x .5 y .8 r 45 }
+
+
+}
+

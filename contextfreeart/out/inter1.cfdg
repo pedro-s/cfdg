@@ -1,0 +1,13 @@
+rule r1 {
+  24*[ r 105 x 30 s -1] {
+    10*[ h 72 r 36 ] {
+      36*[ r 1 ] {
+        12*[ s 1.02 x 0.15 y 0.3 z 1]
+          brush[ r 132 h 150 sat 0.9 x 15 ]
+} } } }
+rule brush {
+          SQUARE[  b 0.15 s 0.5 a -0.78 ]
+          SQUARE [ b 0.8 s 0.7 a -0.98 z 200 ]
+}
+startshape r1
+background { sat 0.5 h 60 }

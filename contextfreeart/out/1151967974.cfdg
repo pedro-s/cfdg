@@ -1,0 +1,25 @@
+/*ethylene : ESL - ethylamine : MMQ - but-1-ene : AES - ethanol : AFQ - butanal : ZUS - acide propanoique : MMZ - propan-2-ol : MOE - methyl-dog-ene : EXB - ... :-) */
+/*Good variations : CN - FJK - MPH - AGQ - XAT - XDD*/
+
+startshape MOLECD
+
+rule MOLECD {LIAISON {x 1.582} ATOM {} MOLEC {x 3.165}}
+rule MOLECD {LIAISON {x 1.58} LIAISON {x -1.59 r 180} ATOM {hue 1 sat 1} MOLEC {x 3.16} MOLEC {x -3.16 r 180}}
+rule MOLECD 0.6 {LIAISON {s 1 0.5 x 1.56 y 0.2} LIAISON {s 1 0.5 x 1.56 y -0.2} ATOM {hue 1 sat 1} MOLEC1 {x 3.12}}
+rule MOLECD {LIAISON {x 1.58} LIAISON {x -0.8 y 1.38 r 120} LIAISON {x -0.8 y -1.38 r 240} ATOM {hue 240 sat 1} MOLEC {x 3.16} MOLEC {x -1.58 y 2.76 r 120} MOLEC {x -1.58 y -2.76 r 240}}
+rule MOLECD {LIAISON {x 1.582} ATOMC {} MOLEC {x 3.165} LIAISON {r 90 y 1.58} MOLEC {r 90 y 3.17} LIAISON {r 270 y -1.58} MOLEC {r 270 y -3.17} LIAISON {x -1.59 r 180} MOLEC {x -3.18 r 180}}
+rule MOLECD 0.4 {LIAISON {s 1 0.5 x 1.56 y 0.2} LIAISON {s 1 0.5 x 1.56 y -0.2} LIAISON {r 120 x -0.8 y 1.38} LIAISON {r -120 x -0.8 y -1.38} ATOMC {} MOLEC1 {x 3.12} MOLEC {x -1.58 y 2.76 r 120} MOLEC {x -1.58 y -2.76 r -120}}
+
+rule MOLEC {ATOM {}}
+rule MOLEC 0.1 {LIAISON {x 1.58} ATOM {hue 1 sat 1} MOLEC {x 3.16}}
+rule MOLEC 0.1 {LIAISON {x 0.8 y 1.37 r 60} LIAISON {x 0.8 y -1.37 r 300} ATOM {hue 240 sat 1 x 0.01} MOLEC {x 1.58 y 2.76 r 60} MOLEC {x 1.58 y -2.76 r 300}}
+rule MOLEC 0.15 {LIAISON {x 1.582} ATOMC {} MOLEC {x 3.165} LIAISON {r 90 y 1.58} MOLEC {r 90 y 3.17} LIAISON {r 270 y -1.58} MOLEC {r 270 y -3.17}}
+rule MOLEC 0.1 {LIAISON {s 1.02 0.5 x 0.62 y 1.48 r 60} LIAISON {s 1.02 0.5 x 0.97 y 1.28 r 60} ATOMC {} LIAISON {x 0.8 y -1.38 r -60} MOLEC1 {x 1.58 y 2.76 r 60} MOLEC {x 1.58 y -2.76 r -60}}
+
+rule MOLEC1 {ATOM {hue 1 sat 1}}
+rule MOLEC1 {LIAISON {r 60 x 0.8 y 1.38} LIAISON {r -60 x 0.8 y -1.38} ATOMC {} MOLEC {x 1.58 y 2.76 r 60} MOLEC {x 1.58 y -2.76 r -60}}
+
+rule ATOM {CIRCLE {s 1.3 b 0.4} ATOM {x -0.01 y 0.01 s 0.97 b 0.1}}
+rule ATOMC {CIRCLE {s 1.3 b 0.1} ATOMC {x -0.008 y 0.008 s 0.97 b 0.05}}
+
+rule LIAISON {SQUARE {s 2 0.6 b 0.4} LIAISON {s 1 0.9 y 0.01 b 0.1}}

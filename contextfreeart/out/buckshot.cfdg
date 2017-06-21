@@ -1,0 +1,44 @@
+startshape BUCKSHOT
+
+rule BUCKSHOT {
+	12* {} SCATTER {}
+}
+
+rule SCATTER 4 {
+	SCATTER {x 2}
+}
+rule SCATTER {
+	SCATTER {s .6}
+}
+rule SCATTER 4 {
+	SCATTER {r 47}
+}
+rule SCATTER {
+	SHOT {}
+}
+
+rule SHOT {
+	15* {r 72} CRACK {}
+}
+
+rule CRACK 19 {
+	RING {}
+	CRACK {r 4}
+}
+rule CRACK 2 {
+	CRACK {r 137 s .9}
+	CRACK {r 83 flip 0 s .8}
+}
+rule CRACK {
+	LINE {}
+	CRACK {s .8 r 20}
+}
+rule CRACK {}
+
+rule LINE {
+	SQUARE {y 3 s .15 r 10 skew 0 80}
+}
+
+rule RING {
+	SQUARE {y 2 s .05 r -15 skew 75 0}
+}

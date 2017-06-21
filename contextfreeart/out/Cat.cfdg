@@ -1,0 +1,75 @@
+startshape cat
+
+background [hue 240 sat 0.4]
+
+rule cat {
+	HEAD [ b 0.6]
+	HEADTWO [ b .9]
+	EYE []
+	EYE [ flip 90]
+	EARS[]
+	EARS[ flip 90]		
+	INNEREARS[ flip 90 ]
+	INNEREARS[]
+	BODY[b .9 r 90]
+	STOMACH[b .6 r 90]
+	PAWS[]
+	PAWS[flip 90]
+	FEET[]
+	FEET[ flip 90 ]
+	TAIL[]
+	MOON[]
+	
+}
+
+rule HEAD {
+	CIRCLE[s 3]
+}
+
+rule HEADTWO{
+	CIRCLE[s 0.9 y -0.6]
+}
+
+rule EYE {
+	CIRCLE [ s .1 1 y 0.4 x 7]
+}
+
+rule EARS{
+	TRIANGLE [ s 0.87 hue 332 sat 1 b 1 y 1.6  x 1.15  r -30]
+}
+
+rule INNEREARS{
+	TRIANGLE [ y 1.4 x 1 r -30]
+		
+}
+
+rule BODY{
+	CIRCLE[s 4 3 x -1]
+}
+
+rule STOMACH{
+	CIRCLE[s 5 4 x -0.8]
+}
+
+rule PAWS{
+	CIRCLE[y -2.2 x -2]
+}
+
+rule FEET{
+	CIRCLE[y -6.3 x -1.6]
+}
+
+
+rule TAIL {
+	SQUARE [ r -30 s 1 8 trans 2 b 0.6 skew 5 10]
+}
+
+rule MOON{
+	CIRCLE[ s 3 3 y 1.5 x 1 b 1]
+}
+
+
+
+
+
+

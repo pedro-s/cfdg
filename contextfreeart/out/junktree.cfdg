@@ -1,0 +1,42 @@
+// BEX BGD BHM XEZ XGK
+startshape tree
+ 
+background { hue 250 sat .5 b -.8}
+
+rule tree {
+  branch {a -0.98 hue 180 sat .3 b 1}
+}
+
+rule branch { // deviate to right
+  element {}
+  branch {y 1.1 r 15}
+}
+
+rule branch { // deviate to left
+  element {}
+  branch {y 1.1 r -15}
+}
+
+rule branch .4 { // straight
+  element {}
+  branch {y 1.1}
+}
+
+rule branch 0.9 { // branching
+  branch {}
+  branch {r 10 s .96}
+} 
+
+rule branch .3 { // reduce diameter
+   branch {s .9}
+}
+
+rule branch 0.9 {}  // end branch here
+
+rule element {  // can
+45*{s .93 1}SQUARE{}
+}
+
+rule element {  // ball 
+45*{s .93 }CIRCLE{}
+}

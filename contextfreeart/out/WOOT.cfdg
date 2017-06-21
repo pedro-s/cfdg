@@ -1,0 +1,76 @@
+startshape WOOT
+
+background {h 233.64 sat 0.9934 b 1.0000}
+rule SPIRAL {
+
+WOOT { } 
+SPIRAL { y 0 x 0 rotate 40 size .5}
+}
+rule WOOT
+
+{
+
+CIRCLE { x 1 y 1 size .5}
+CIRCLE { x 1 y 1 size .33h 188.13 sat 0.5500 b 1.0000}
+
+CIRCLE { x -1 y -1 size .5}
+CIRCLE { x -1 y -1 size .33h 188.13 sat 0.5500 b 1.0000}
+
+CIRCLE { x -1 y 1 size .5}
+CIRCLE { x -1 y 1 size .33h 188.13 sat 0.5500 b 1.0000}
+
+CIRCLE { x 1 y -1 size .5}
+CIRCLE { x 1 y -1 size .33h 188.13 sat 0.5500 b 1.0000}
+
+CIRCLE {size .25   x .5 y 1 h 315.00 sat 0.0314 b 1.0000}
+CIRCLE {size .19   x.5   y 1 h 355.67 sat 0.7354 b 1.0000}
+
+CIRCLE {size .25   x -.5 y 1 h 315.00 sat 0.0314 b 1.0000}
+CIRCLE {size .19   x-.5   y 1 h 355.67 sat 0.7354 b 1.0000}
+
+CIRCLE {size .25   x -.5 y -1 h 315.00 sat 0.0314 b 1.0000}
+CIRCLE {size .19   x-.5   y -1 h 355.67 sat 0.7354 b 1.0000}
+
+CIRCLE {size .25   x .5 y -1 h 315.00 sat 0.0314 b 1.0000}
+CIRCLE {size .19   x.5   y -1 h 355.67 sat 0.7354 b 1.0000}
+
+
+SQUARE { h 190.67 sat 0.7802 b 1.0000 }
+
+SQUARE { x .75 y .75size .5  h 190.67 sat 0.7802 b 1.0000 }
+SQUARE { x .60 y .60 size .5 h 144.62 sat 0.9403 b 1.0000 }
+
+SQUARE { x -.75 y .75size .5  h 190.67 sat 0.7802 b 1.0000 }
+SQUARE { x -.60 y .60 size .5 h 144.62 sat 0.9403 b 1.0000 }
+
+
+SQUARE { x -.75 y -.75size .5  h 190.67 sat 0.7802 b 1.0000 }
+SQUARE { x -.60 y -.60 size .5 h 144.62 sat 0.9403 b 1.0000 }
+
+SQUARE { x .75 y -.75size .5  h 190.67 sat 0.7802 b 1.0000 }
+SQUARE { x .60 y -.60 size .5 h 144.62 sat 0.9403 b 1.0000 }
+
+SQUARE { x .5 y -.5size .5  h 239.98 sat 0.5775 b 1.0000}
+SQUARE { x .7 y -.7 size .5 h 318.09 sat 0.5822 b 1.0000}
+
+SQUARE { x -.5 y -.5size .5  h 239.98 sat 0.5775 b 1.0000}
+SQUARE { x -.7 y -.7 size .5 h 318.09 sat 0.5822 b 1.0000}
+
+
+SQUARE { x -.5 y .5size .5  h 239.98 sat 0.5775 b 1.0000}
+SQUARE { x -.7 y .7 size .5 h 318.09 sat 0.5822 b 1.0000}
+
+
+SQUARE { x .5 y .5size .5  h 239.98 sat 0.5775 b 1.0000}
+SQUARE { x .7 y .7 size .5 h 318.09 sat 0.5822 b 1.0000}
+
+SPIRAL { y 0 x 0 rotate 40 size .5}
+
+
+
+
+
+
+
+
+}

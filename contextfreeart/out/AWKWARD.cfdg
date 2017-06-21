@@ -1,0 +1,15 @@
+startshape QUAD
+background { b -1 }
+
+rule QUAD {
+SQUARE { }
+QUAD { y .345 s .6  1 h 169.63 sat 0.9262 b 1.0000 }
+TRIANGLE {y 9h 61.39 sat 0.5569 b 1.0000 }
+CIRCLE {  y 17h 359.27 sat 0.8778 b 1.0000 }
+TRIANGLE {  y 13h 274.71 sat 0.9476 b 1.0000 }
+TRIANGLE { y 5h 239.26 sat 0.9566 b 1.0000 }
+TRIANGLE { y 21.5h 92.12 sat 0.9006 b 1.0000}
+TRIANGLE { y 26h 319.67 sat 0.7725 b 1.0000}
+TRIANGLE { y 30.3h 39.04 sat 1.0000 b 1.0000 }
+
+}

@@ -1,0 +1,23 @@
+startshape wordspiral
+
+background { b -1 }
+
+// ## Fonts ##
+// include contexttree/ctt/ctt_fontmap_default.cfdg  // default
+include contexttree/fonts/ctt_fontmap_block_black.cfdg
+include st-markovchain.cfdg
+include st-words.cfdg
+
+// ## Layouts ##
+// include contexttree/ctt/ctt_layout_default.cfdg // default
+
+// ## Objects ##
+// include contexttree/ctt/ctt_object_default.cfdg // default
+
+// ## Custom Layouts and Objects ## //
+rule ctt_object_bg 1000000000000 { }
+rule stback {}
+
+rule wordspiral { spiralstart { s .0088 b 1 sat 1 x .5 r -3} }
+
+rule spiralstart { stTHE { r -3 s .998 y -3 } }

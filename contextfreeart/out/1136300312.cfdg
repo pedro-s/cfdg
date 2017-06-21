@@ -1,0 +1,14 @@
+startshape TESTX
+
+background { hue 0 brightness 1 } 
+
+rule TESTX
+{
+	TEST  { h 0 sat 1 b 1 }
+}
+
+rule TEST
+{
+	CIRCLE { s 0.67 }
+	TEST { h 1 r 1.004 y 1 alpha -0.000025 s 0.99997 }
+}

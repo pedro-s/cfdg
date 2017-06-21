@@ -1,0 +1,58 @@
+startshape LIFE
+
+rule LIFE {
+	LIFE2{}
+	LIFE2{r 90}
+	LIFE2{ r 180}
+	LIFE2{r 270}
+	EGG{ s 50 saturation 1}
+}
+
+rule LIFE2{
+	PATH[r 0 y 40] 
+	PATH[r 10 y 40]
+	PATH[r 20 y 40]
+	PATH[r 30 y 40]
+	PATH[r 40 y 40]
+	PATH[r 50 y 40]
+	PATH[r 60 y 40]
+	PATH[r 70 y 40]
+	PATH[r 80 y 40]
+}
+rule PATH 50{
+	PATH{r -5  y 2}
+}
+
+rule PATH 50{
+	PATH{r 5 y 2}
+}
+
+rule PATH 1 {
+	CIRCLE{}
+	PATH2{ s 0.99 y 2}
+	HEAD{s 7 b -1}
+}
+
+rule PATH2{
+	CIRCLE{}
+	PATH2{r -5 s 0.99  y 2}
+}
+
+rule PATH2{
+	CIRCLE{}
+	PATH2{r 5 s 0.99 y 2}
+}
+
+rule HEAD {
+	HEAD_R { b 0 s 1.2}
+	HEAD_R { b 1}
+}
+
+rule HEAD_R {
+	CIRCLE {skew 30 30 r 45}
+}
+
+rule EGG {
+	CIRCLE {}
+	EGG {r 1 s 0.99 b .02 }
+}

@@ -1,0 +1,54 @@
+startshape RAWR
+background {b -1}
+
+rule RAWR {
+2*{r 180}RAWRR { r 80 s 1.1}
+	LIGHT {}
+	MOUTH { x -80 y -47.5 r -90 skew 10 10 r -45}
+}
+rule RAWRR {
+	CIRCLE {x 0.6 y -1.2 s 2.5}
+	CIRCLE {x -1.2 y 0.6 s 2.8}
+	SQUARE {s 2}
+	RAWRR { x -5 s 0.994 r -7.93 h 356.71 sat 0.9683 b 1}
+	2*{flip 0} RAWRRR {flip 135}
+}
+rule RAWRRR{
+	SQUARE {x 0.6 y -1.2 s 2.5}
+	CIRCLE {x -1.2 y 0.6 s 2.8}
+	SQUARE {s 2}
+	RAWRRR {x 1 y 1 s 0.915 r 8.13 h 356.71 sat 0.9683 b 1}
+	RAWRRRR {}
+}
+rule RAWRRRR {
+	SQUARE {x 0.6 y -1.2 s 2.5}
+	CIRCLE {x -1.2 y 0.6 s 2.8}
+	SQUARE {s 2}
+	RAWRRR { x 3 s 0.3 r 6.3 h 357.71 sat 0.9683 b 1 a -0.1}
+}
+rule LIGHT {
+	CIRCLE { b 1 s 12}
+	12*{r 30} SPIKE {r 2}
+	12*{r 30} SPIKEE {r -12}
+}
+rule SPIKE {
+	SPIKKE {}
+}
+rule SPIKKE {
+	SQUARE { b 1  s 1.2}
+	SPIKKE {y 0.99999999 s 0.992 z -1}
+}
+rule SPIKEE {
+	SPIKKEE {}
+}
+rule SPIKKEE{
+	SQUARE { b 1 }
+	SPIKKEE {y 0.9999999 s 0.97 r 0.2}
+}
+rule MOUTH{
+	120*{ x 9.4 r 6} TEETH {}
+}
+rule TEETH {
+	SQUARE {s 2.5 b 1}
+	TEETH {y 1.3 s 0.99 h 350 sat 0.1 r 1.1 z -0.5}
+}

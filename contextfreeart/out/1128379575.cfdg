@@ -1,0 +1,14 @@
+startshape turned
+
+rule turned
+{
+	skewed {b 0}
+	skewed{size .99 b 1}
+	turned{size .98 r 3 b 0}
+}
+
+rule skewed
+{
+	SQUARE{hue 85 sat 1 b 0}
+	SQUARE{skew 10 0 b 1}
+}

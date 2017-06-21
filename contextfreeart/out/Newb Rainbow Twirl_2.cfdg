@@ -1,0 +1,46 @@
+startshape A
+
+rule A 
+{
+
+	B [sat 1 b 1]
+	C [sat 1 b 1]		
+	D [sat 1 b 1]
+	E [sat 1 b 1]
+
+}
+
+rule B
+{
+
+	SQUARE {s 1 0.075}
+	B {y  0.5 s 0.995 r -1 h 1}
+	C []		
+	D []
+	E []
+
+} 
+
+rule C
+{
+
+	SQUARE {s 1 0.075}
+	C {y -0.5 s 0.995 r -1 h 1}		
+	
+} 
+
+rule D
+{
+
+	SQUARE {s 1 0.075}
+	D {y  0.5 s 0.995 r  1 h 1}	
+
+} 
+
+rule E
+{
+
+	SQUARE {s 1 0.075}
+	E {y -0.5 s 0.995 r  1 h 1}
+
+} 

@@ -1,0 +1,23 @@
+tile {s  1500 1000}
+startshape multi
+
+rule multi {spiral {r 45 x 200 y +300 s 2} spiral {r 45 x -200 y -300 s 1}}
+
+rule spiral {  thing {r +45} thing {flip 90} thing {r 180}}
+
+rule thing {dot {s 2 .5 z +1} thing {r .03  y .1 s   .999962 b +.00001 }}
+
+rule thing .0001 {dot {s 2 1 z +1} thing { flip 90 r .03  y .1 s .999962 b +.0001 } }
+
+rule thing .00001 {dot {s 2 1 z+1} thing { flip 90 r .03  y .1 s .999962 b +.0001 } thing {  r -90 y .1 s .85 b +.0001 }}
+
+rule dot  2{ SQUARE {s 1 .1}}
+
+rule dot .5{ SQUARE {x +3 s 2 .5 b -.3}}
+
+rule dot .5 { SQUARE { x -3 s 2 .5 b -.3}}
+
+rule dot .5 { SQUARE { x -8 s 7 .1 b -.3 r 45}}
+
+rule dot .5 { SQUARE { x +8 s 7 .1 b -.3 r -45}}
+

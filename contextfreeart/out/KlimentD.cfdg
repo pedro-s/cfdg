@@ -1,0 +1,59 @@
+startshape KlimentD
+
+tile {s 2 }
+
+background {b -1}
+
+rule KlimentD {
+	2*{y 1}
+	{2*{x 1}
+	x2x{}}
+}
+
+rule kliment {
+	SQUARE {b 0}
+	SQUARE {s .382 z 2 b .2}
+	kliment {s .618 skew 0 31.721  x .191 b .1 z 1}
+	kliment {s .618 skew 0 31.721  x -.191 b .1 z 1}
+}
+
+rule OUT {
+	SQUARE {b 0}
+	SQUARE {s .382 z 2 b .2}
+	OUT {s .618 skew 0 -31.721  x .191 b .1 z 1}
+	OUT {s .618 skew 0 31.721  x -.191 b .1 z 1}
+}
+
+rule disham {
+	SQUARE {b 0}
+	SQUARE {s .382 z 2 b .2}
+	disham {s .618 skew 0 31.721  x -.191 b .1 z 1}
+	disham {s .618 skew 0 -31.721  x -.191 b .1 z 1}
+}
+
+rule visuau {
+	SQUARE {b 0}
+	SQUARE {s .382 z 2 b .2}
+	visuau {s .618 skew 31.721 0  y -.191 b .1 z 1}
+	visuau {s .618 skew 0 31.721  x -.191 b .1 z 1}
+}
+
+rule x2x {
+	4*{r 90}
+	kliment{}
+}
+
+rule x2x {
+	4*{r 90}
+	OUT{}
+}
+
+rule x2x {
+	4*{r 90}
+	visuau{}
+}
+
+rule x2x {
+	4*{r 90}
+	disham{}
+}

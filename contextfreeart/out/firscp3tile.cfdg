@@ -1,0 +1,116 @@
+startshape do
+tile { s 6 y -2}
+rule do 100 {  do { hue 17 } }
+rule do {
+	tower { sat .6 hue -100 s 1.5 }
+}
+
+rule CUBE {
+	TOP{ b .7 a -.7}
+}
+rule TOP {FACE[s 1.413 .816 r 135 ]}
+rule FACE {SQUARE{x .5 y -.5 }}
+
+
+rule tower {
+	CUBE { s 2 1}
+	tower { s .5 x 1.25 y -.25 sat .1}
+	tower { s .5 x -1.25 y -.25  sat .1}
+	tower { s .5 .6 y .85 sat .1}
+}
+rule tower {
+	tower {}
+	maketree { y .6 x -.6 s .025 }
+}
+rule tower .1 { }
+
+
+rule maketree { fir { s 10 } }
+
+rule fir { c_u { |hue 140 b 0 hue 30} }
+rule fir { fir { s 1.1 } }
+rule fir 5 { fir { s 0.9 } }
+rule fir .1 { fir { hue -100 } }
+
+rule dsno { CIRCLE { sat -.9 b .8 } }
+rule dsno { dsno { y .5 } }
+rule dsno { dsno { x .2 } }
+rule dsno { dsno { x -.2 } }
+
+rule dsno_ { dsno { s 5 } }
+rule d { 
+10 * { x .01 s .92 1 b .03 sat .06 } SQUARE { s .7 1.5 }
+ }
+ 
+ 
+ 
+rule c_u_D {
+    d { }
+    c_u { z .001}
+}
+rule c_u {
+    c_u_D { y .75 s .93 r 1 }
+    c_ucont { s .75}
+}
+rule c_u {
+    c_u_D { y .75 s .93 r -1 }
+    c_ucont { s .75}
+}
+
+rule c_ucont .1 {	c_dl { }}
+rule c_ucont .1 {	c_dl { flip 90}}
+rule c_ucont .4 {	c_dl { } c_dl { flip 90 }}
+rule c_ucont .4 {	c_ul { s .8 y .5 }}
+rule c_ucont .4 {	c_ul { flip 90 s .8 y .5}}
+rule c_ucont .01 { }
+ 
+ 
+ 
+ 
+rule c_dl_D {
+	3* { } dsno_ { z .3 s .3}
+    d { r 120 }
+    c_dl { }
+}
+rule c_dl {
+    c_dl_D { x -1 y -.5 s .9 z .2}
+    c_dlcont { s .75 hue 1| b .1}
+}
+
+rule c_dl { c_dl { r -2 } }
+rule c_dlcont .2 {	c_ul { }}
+rule c_dlcont .2 {	c_dl { flip 90 }}
+rule c_dlcont .4 { }
+rule c_dlcont .2 {	c_dlcont { x .1}}
+rule c_dlcont .2 {	c_dlcont { x -.1}}
+ 
+ 
+
+rule c_ul_D {
+3* { } dsno_ { z .3 s .3}
+    d { r 90}
+    c_ul { }
+}
+rule c_ul {
+    c_ul_D { x -.5 y 0 s .9 z -.2}
+    c_ulcont { s .5 hue 1|}
+}
+rule c_ul { c_ul { r -1 } }
+rule c_ulcont .2 {	c_dl { }}
+rule c_ulcont .2 {	c_ul { flip 90 }}
+rule c_ulcont .9 { }
+rule c_ulcont .2 {	c_ulcont { x .1}}
+rule c_ulcont .2 {	c_ulcont { x -.1}}
+rule c_ulcont .4 {
+		frost { z -1 b 1 hue 50 sat .7 a -.9 s 30 x 2.25 y 9}
+		c_ulcont { } 
+} 
+ 
+ 
+ 
+rule frost {
+	CIRCLE { s 1 }
+	frost { y 2.5 s .5 r 35 }
+	frost { x 2 s .5 r 15 }
+}
+ 

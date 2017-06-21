@@ -1,0 +1,118 @@
+// Octoshape Color Flexlegs
+// by Mcv
+// Version 16 Oct 2007
+//
+// Comment line below with // to get white background
+// rather than black
+
+background { b -1 }
+
+//
+startshape SHAPES4  // x and y offsets for 4 "octii"
+rule SHAPES4 { SHAPES{}
+               SHAPES{ x 30 }
+                    SHAPES{ y 30 }
+                    SHAPES{ x 30 y 30 }
+}
+
+// Comment 6 lines above and uncomment below to
+// get single octopus rather than mutiples
+
+// startshape SHAPES
+
+// Each rule below makes one of eight legs
+// Separate rules rather than 8 * allows each leg
+// to be different. r angle set to 360 / number of legs
+//
+// Comment 3 lines below to get 5 leg starfish
+// but consider r change to 72 if you do!
+//
+rule SHAPES {
+SHAPEC {sat =1 b =1 alpha =1}
+SHAPED {sat =1 b =1 alpha =1 r 45}
+SHAPEB {sat =1 b =1 alpha =1 r 90}
+SHAPE {sat =1 b =1 alpha =1 r 135}
+SHAPEB {sat =1 b =1 alpha =1 r 180}
+SHAPE {sat =1 b =1 alpha =1 r 225}
+SHAPEB {sat =1 b =1 alpha =1 r 270}
+SHAPEC {sat =1 b =1 alpha =1 r 315}
+}
+
+// Triple rule sets below duplicated to allow easy changing color hue
+// settings for plus or minus color change values
+//
+// Three rules rather than one to allow program to
+// pick random rotation angle "r" for each bit of leg
+// Thisgives legs a more life like wiggly pose!
+
+// Hue values set low to get nice color fade effect
+// and varied between and along legs to add visual interest
+
+//rule SHAPE { A{ } SHAPE{x 2.1 s 0.9 hue 5 r 12}}
+//rule SHAPE { A{ } SHAPE{x 2.1 s 0.9 hue 5 r -10}}
+//rule SHAPE { A{ } SHAPE{x 2.1 s 0.9 hue 5 r 14}}
+
+rule SHAPE { A{ } SHAPE{x 2.1 s 0.9 hue -12 r 12}}
+rule SHAPE { A{ } SHAPE{x 2.1 s 0.9 hue -12 r -10}}
+rule SHAPE { A{ } SHAPE{x 2.1 s 0.9 hue -12 r 14}}
+
+
+// Code below makes nice tight spirals - not by me
+//
+rule A { B { } A { x 1 s 0.9 r 55} }  // s is scale size reduction along the legs
+
+// Again 3 rules with different base shape to allow pick one, two, or all three
+// Comment and uncomment to try versions until you are happy with results
+
+//rule B { SQUARE{} B { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+//rule B { CIRCLE{} B { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+rule B { TRIANGLE{} B { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+
+
+// END 1st Leg variation
+
+// SHAPEB, C, etc. rules same as SHAPE rule except for
+// rotation angle "r" variation, gives us 4 different leg overall looks
+
+
+//rule SHAPEB { C{ } SHAPEB{x 2.1 s 0.9 hue 5 r 14}}
+//rule SHAPEB { C{ } SHAPEB{x 2.1 s 0.9 hue 5 r 12}}
+//rule SHAPEB { C{ } SHAPEB{x 2.1 s 0.9 hue 5 r 16}}
+
+rule SHAPEB { C{ } SHAPEB{x 2.1 s 0.9 hue -12 r 14}}
+rule SHAPEB { C{ } SHAPEB{x 2.1 s 0.9 hue 12 r -12}}
+rule SHAPEB { C{ } SHAPEB{x 2.1 s 0.9 hue -12 r 16}}
+
+rule C { D { } C { x 1 s 0.9 r 57} } // froms leg joints w size reduction "s"
+
+
+//rule D { CIRCLE{} D { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+rule D { TRIANGLE{} D { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+//rule D { SQUARE{} D { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+
+// End second leg variation
+
+rule SHAPEC { E { } SHAPEC{x 2.1 s 0.9 hue 10 r 9}}
+rule SHAPEC { E { } SHAPEC{x 2.1 s 0.9 hue -10 r -10}}
+rule SHAPEC { E { } SHAPEC{x 2.1 s 0.9 hue 10 r 11}}
+
+rule E { F { } E { x 1 s 0.9 r 45} }
+
+//rule F { SQUARE{} F { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+//rule F { CIRCLE{} F { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+rule F { TRIANGLE{} F { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+
+// End 3rd leg variation
+
+rule SHAPED { G { } SHAPED{x 2.1 s 0.9 hue 5 r -12}}
+rule SHAPED { G { } SHAPED{x 2.1 s 0.9 hue 5 r 14}}
+rule SHAPED { G { } SHAPED{x 2.1 s 0.9 hue 5 r -10}}
+
+rule G { H { } G { x 1 s 0.9 r 60} }
+
+//rule H { CIRCLE{} H { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+rule H { TRIANGLE{} H { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}} 
+//rule H { SQUARE{} H { x 0.002 y 0.002 s 0.99 sat -0.01 alpha -0.01}}
+
+// End 4th leg variation
+// End: Octoshape Color Flexlegs - by Mcv - version 16 Oct 2007

@@ -1,0 +1,38 @@
+startshape TUBE
+background {b -1}
+
+rule TUBE {
+SQUARE {size 2 h 231.03 sat 0.9718 b 1.0000 }
+SQUARE {s 1.8 h 317.86 sat 0.9440 b 1.0000 }
+SQUARE { s 1.6 h 59.57 sat 0.8118 b 1.0000 }
+SQUARE { s 1.4 h 111.67 sat 0.8728 b 1.0000 }
+SQUARE { s 1.2 h 179.23 sat 0.8223 b 1.0000 }
+SQUARE { s 1 }
+SQUARE { s .8 h 240.34 sat 0.9206 b 1.0000 }
+SQUARE { s .6 h 314.50 sat 0.9036 b 1.0000 }
+SQUARE { s .2 y -.1 }
+SQUARE { s .2 y .1 }
+CIRCLE { s .04 x .07 y .01 h -135.00 sat 0.0157 b 1.0000 }
+SQUARE { s .1 y .1 h 225.00 sat 0.0157 b 1.0000 }
+SQUARE { s .01 y .1 }
+SQUARE { s .01 y .11 }
+SQUARE { s .01 y .12 }
+SQUARE { s .01 y .13 }
+SQUARE { s .01 y .14 }
+SQUARE { s .01 y .15 }
+SQUARE { s .01 y .09 }
+SQUARE { s .01 y .08 }
+SQUARE { s .01 y .07 }
+SQUARE { s .01 y .06 }
+SQUARE { s .01 y .05 }
+SQUARE { s .01 y .1 x .05}
+SQUARE { s .01 y .1 x .04}
+SQUARE { s .01 y .1 x .03}
+SQUARE { s .01 y .1 x .02}
+SQUARE { s .01 y .1 x .01}
+SQUARE { s .01 y .1 x -.05}
+SQUARE { s .01 y .1 x -.04}
+SQUARE { s .01 y .1 x -.03}
+SQUARE { s .01 y .1 x -.02}
+SQUARE { s .01 y .1 x -.01}
+}

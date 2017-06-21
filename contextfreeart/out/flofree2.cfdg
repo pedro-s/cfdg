@@ -1,0 +1,59 @@
+startshape flofree2 
+
+background {b -1}
+
+//size { s 4}
+
+rule flofree2 {
+	floout {}
+	floin {s .65 r 30}
+	seeds {s .3 x .2 y -.55 z -200}
+}
+
+rule seeds {
+	seeds {s .99 r 137.5 y 3.6 x 0 b .01 z .1}
+	CIRCLE { b .1 h 55 sat .4}
+	CIRCLE { s .9 y -..5 b -1 a -.6 z .05}
+	CIRCLE { s .6 b -1 a -.9 z .08}
+}
+
+rule floin {
+	6 * {r (360/6)}
+	sepal {s .5 r -14.5 y -1.8}
+}
+
+rule floout {
+	6 * {r (360/6)}
+	petal { r -14.5 y -3.5}
+}
+
+rule sepal{
+	2 * {s .6 y 1.2 x -.35  b .3 a -.4}
+	spikes {s 1 2 f 180 h 55 sat .4}
+}
+
+
+rule petal{
+	2 * {s .6 y 1.2 x -.35  b .2 z 1}
+	spikes {s 1 2}
+//	2 * {s .6 y -1 x -.35  f 0 a -.2}
+//	spikes {s 1 2}
+}
+
+rule spikes {
+	10 * {s .6 1.042 a -.2 x -.352 y .06}
+	{2 * {f 90 x -1.76}
+	rainbow {r 190}
+}}
+
+rule rainbow {
+	rainbow {s 1 .9769 r .69 x -.004 y .0133 b .004 h -.01 sat .00042 a -.001}
+	CIRCLE {s 1.1 b -1 a -.992}
+	CIRCLE {s .3  y  -.45 b .5 a -.8 h 55 sat .1 z .5}
+	CIRCLE {s .4  x .1939 y  -.4061 b .4  h 65 sat .2 a -.8 z .4}
+	CIRCLE {s .4  x -.1939 y  -.4061 b .4  h 65 sat .2 a -.8 z .4}
+	CIRCLE {s .3  x .4037 y  -.1987 b .3 h 75 sat .3  a -.8 z .3}
+	CIRCLE {s .5  x -.3499 y  -.283 b .3 h 75 sat .3 a -.8 z .3}
+}
+
+//rule rainbow .5 {rainbow {x -.01 r 24 f 180}}

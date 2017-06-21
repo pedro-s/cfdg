@@ -1,0 +1,87 @@
+startshape eggs
+background{hue 200 sat .1}
+
+rule eggs
+{
+	eggspiral{r -35}
+}
+rule eggspiral
+{
+	100*{r 37 s .95 } eggstar{x 3 }
+	//eggstar{}
+}
+
+rule eggstar
+{
+	10*{r 36 x .2}egg{}
+}
+
+rule egg
+{
+	egg_full{b 1 sat 1 hue 30  }
+	//egg{s .9 hue 30}
+}
+rule egg_full
+{
+	egg_top{s .65 1 alpha -.9 }
+	egg_bottom{ s .65 .75 y .0005 alpha -.9}
+
+	egg_top_lines{s .65 1 alpha -.5 }
+	egg_bottom_lines{s .65 .75 y .0005 alpha -.5}
+}
+
+rule egg_top_lines
+{
+	egg_bottom_lines{flip 0}
+
+}
+rule egg_bottom_lines
+{
+	egg_bottom_linesV{}
+	egg_bottom_linesH{}
+}
+rule egg_bottom_linesV
+{
+	egg_bottom_lines_path{}
+	egg_bottom_linesV{s 1 .9}
+}
+rule egg_bottom_linesH
+{
+	egg_side_lines{flip 0}
+	egg_side_lines{r 180}
+
+}
+path egg_bottom_lines_path
+{	
+	MOVETO{x -.5 y 0}
+	ARCTO{x .5 y 0 rx .5 ry .5  }
+	STROKE{width .005}
+}
+rule egg_bottom
+{
+	egg_bottom_path{}
+
+}
+path egg_bottom_path
+{
+	MOVETO{x -.5 y 0}
+	ARCTO{x .5 y 0 rx .5 ry .5  }
+	CLOSEPOLY{}
+}
+
+rule egg_top
+{
+	egg_bottom{flip 0}
+}
+rule egg_side_lines
+{
+	egg_side_lines_path{}
+	egg_side_lines{s .9 1}
+}
+
+path egg_side_lines_path
+{
+	MOVETO{x .5 y 0}
+	ARCTO{x 0 y .5 r .5}
+	STROKE{width .005}
+}

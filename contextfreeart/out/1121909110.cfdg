@@ -1,0 +1,84 @@
+startshape plant
+
+rule plant {
+	CIRCLE { }
+	plant { y .1 s .99 }
+}
+
+rule plant {
+	CIRCLE { }
+	plant { y .1 r 1 s .99 }
+}
+
+rule plant {
+	CIRCLE { }
+	plant { y .1 r -1 s .99 }
+}
+
+rule plant 0.025 {
+	plant { r 30 }
+	plant { r -30 }
+}
+
+rule plant 0.025 {
+	branch { r 60 }
+	branch { r -60 }
+	plant { }
+}
+
+rule branch {
+	CIRCLE { }
+	branch { y .1 s .99 }
+}
+
+rule branch {
+	CIRCLE { }
+	branch { y .1 r 1 s .99 }
+}
+
+rule branch {
+	CIRCLE { }
+	branch { y .1 r -1 s .99 }
+}
+
+rule branch 0.01 {
+	leaf { x -.7 s .3 r 60 b .25 }
+	leaf { x .7 s .3 r -60 b .25 }
+	branch { }
+}
+
+rule leaf {
+	leaf_border { y 17.5 r -30 }
+	leaf_border { y 17.5 flip 90 r 30 }
+	CIRCLE { }
+	stem { }
+	vessels { }
+}
+
+rule leaf_border {
+	CIRCLE { }
+	leaf_border { y -.1 r .16 s .995 }
+}
+
+rule stem { 
+	CIRCLE { }
+	stem { y .1 s .99448 }
+}
+
+rule vessels {
+	vessel { }
+	vessel { flip 90 }
+	vessel { y 2.75 s 1.1 }
+	vessel { flip 90 y 2.75 s 1.1 }
+	vessel { y 5.5 s .95 }
+	vessel { flip 90 y 5.5 s .95 }
+	vessel { y 8.25 s .78 }
+	vessel { flip 90 y 8.25 s .78 }
+	vessel { y 11 s .565 }
+	vessel { flip 90 y 11 s .565 }
+}
+
+rule vessel {
+	CIRCLE { s .75 }
+	vessel { x .1 y .1 s .97 b .01 }
+}

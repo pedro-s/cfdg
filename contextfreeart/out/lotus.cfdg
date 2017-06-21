@@ -1,0 +1,10 @@
+startshape C
+rule C {
+7 * {r 51.4286} A { }
+}
+
+rule A {
+100*{r 1.5 y  .055 } CIRCLE {s .075 1 }
+CIRCLE {s .5 x -4 y 1}
+155*{y .03 r 1} CIRCLE {s .1 x -4 y 1 }
+}

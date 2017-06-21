@@ -1,0 +1,39 @@
+startshape S
+
+background { hue 70 sat .1 b .5 }
+
+rule S {
+	stem { hue 50 sat 1 b .75 }
+}
+
+rule stem {
+	SQUARE { }
+	stemRight { r -1 }
+}
+
+rule stem {
+	SQUARE { }
+	stemLeft { r .1 }
+}
+
+rule stemRight {
+	SQUARE { }
+	stemRight { hue .5 y 1 r -.5 s .98 }
+}
+
+rule stemRight 0.1 {
+	SQUARE { }
+	stemRight { y 1 r 20 s .75 }
+	stem { y 1 r -.5 s .99 }
+}
+
+rule stemLeft {
+	SQUARE { }
+	stemLeft { hue .5 y 1 r .5 s .98 }
+}
+
+rule stemLeft 0.1 {
+	SQUARE { }
+	stemLeft { y 1 r -20 s .75 }
+	stem { y 1 r .5 s .99 }
+}

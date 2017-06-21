@@ -1,0 +1,143 @@
+/*
+	Micropul.cfdg
+
+	Inspired by the boardgame micropul, found at:
+	http://neutralbox.com/micropul/
+*/
+
+startshape game_board
+
+tile {s 34}
+
+rule game_board {
+	10 * {y 3.4} {
+		10 * {x 3.4} tile_corners {}
+	}
+}
+
+rule tile_corners {
+	rotated_corner_symbols {}
+	grid_lines {}
+}
+
+# Random orientation
+rule rotated_corner_symbols {corner_symbols {}}
+rule rotated_corner_symbols {corner_symbols {r 90}}
+rule rotated_corner_symbols {corner_symbols {r 180}}
+rule rotated_corner_symbols {corner_symbols {r 270}}
+
+#  OO
+#  OO
+rule corner_symbols 4 {
+	white_pul {x -0.8 y 0.8}
+	white_pul {x -0.8 y -0.8 r 90}
+	white_pul {x 0.8 y -0.8 r 180}
+	white_pul {x 0.8 y 0.8 r 270}
+}
+
+#  **
+#  **
+rule corner_symbols 4 {
+	black_pul {x -0.8 y 0.8}
+	black_pul {x -0.8 y -0.8 r 90}
+	black_pul {x 0.8 y -0.8 r 180}
+	black_pul {x 0.8 y 0.8 r 270}
+}
+
+#  O?
+#  OO
+rule corner_symbols 4 {
+	white_pul {x -0.8 y 0.8}
+	white_pul {x -0.8 y -0.8 r 90}
+	white_pul {x 0.8 y -0.8 r 180}
+	non_pul {x 0.67 y 0.67 r 270}
+}
+
+#  *?
+#  **
+rule corner_symbols 4 {
+	black_pul {x -0.8 y 0.8}
+	black_pul {x -0.8 y -0.8 r 90}
+	black_pul {x 0.8 y -0.8 r 180}
+	non_pul {x 0.67 y 0.67 r 270}
+}
+
+#  p?
+#  ?p
+rule corner_symbols 8 {
+	any_pul {x -0.8 y 0.8}
+	non_pul {x -0.67 y -0.67 r 90}
+	any_pul {x 0.8 y -0.8 r 180}
+	non_pul {x 0.67 y 0.67 r 270}
+}
+
+#  O?
+#  O?
+rule corner_symbols 4 {
+	white_pul {x -0.8 y 0.8}
+	white_pul {x -0.8 y -0.8 r 90}
+	non_pul {x 0.67 y -0.67 r 180}
+	non_pul {x 0.67 y 0.67 r 270}
+}
+
+#  *?
+#  *?
+rule corner_symbols 4 {
+	black_pul {x -0.8 y 0.8}
+	black_pul {x -0.8 y -0.8 r 90}
+	non_pul {x 0.67 y -0.67 r 180}
+	non_pul {x 0.67 y 0.67 r 270}
+}
+
+#  p?
+#  ??
+rule corner_symbols 12 {
+	any_pul {x -0.8 y 0.8}
+	non_pul {x -0.67 y -0.67 r 90}
+	non_pul {x 0.67 y -0.67 r 180}
+	non_pul {x 0.67 y 0.67 r 270}
+}
+
+path grid_lines {
+	MOVETO {x -6.8 y 0}
+	LINETO {x 6.8 y 0}
+	STROKE {size 0.25}
+	MOVETO {x 0 y -6.8}
+	LINETO {x 0 y 6.8}
+	STROKE {size 0.25}
+}
+
+rule any_pul {
+	black_pul {}
+}
+
+rule any_pul {
+	white_pul {}
+}
+
+rule black_pul {
+	CIRCLE {s 1}
+}
+
+rule white_pul {
+	CIRCLE {}
+	CIRCLE {b 1 size 0.68}
+}
+
+rule non_pul 8 {
+	SQUARE {size 0.73 0.2}
+	SQUARE {size 0.2 0.73}
+}
+
+rule non_pul 28 {
+	CIRCLE {b 1 size 0.34 x -0.2 y 0.2}
+	CIRCLE {size 0.34 x 0.2 y -0.2} 
+}
+
+rule non_pul 6 {
+	CIRCLE {size 0.34 x -0.2 y -0.2}
+	CIRCLE {size 0.34 x 0.2 y 0.2} 
+}
+
+rule non_pul 34 {
+}

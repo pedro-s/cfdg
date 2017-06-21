@@ -1,0 +1,29 @@
+/*
+	Lure
+	www.lazymoon.org
+	lure.cfdg
+*/
+
+startshape S
+background {b -1}
+
+rule S {
+	CIRCLE[s 200 b 1]
+	45*[s 1.1] I[b 1 h 20 r -180]
+}
+
+rule I {
+	SQUARE[skew 1 50]
+	I[y 0.9 r 1 sat 0.01 z -1]
+}
+rule I 0.03 {
+	C[s 2.5]
+	I[s 0.75 flip 90 h -10]
+}
+
+rule C {
+	12*[x 1.2 a -0.2 sat 0.2 h -5 z -1] CIRCLE[]
+}
+rule C {
+	12*[x -1.2 a -0.2 sat 0.2 h -5 z -1] CIRCLE[]
+}

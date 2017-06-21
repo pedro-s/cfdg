@@ -1,0 +1,25 @@
+startshape fleur
+
+rule fleur{
+	
+	sapin {}
+	petale { s 0.6 y 32}
+	tronc {}
+}
+
+
+
+
+rule sapin{
+	TRIANGLE {s 28 x 0 y 0  hue 109.8 sat 0.7 b 1.0 }
+	sapin { s 0.64 y 10 }
+}
+
+rule petale{
+	TRIANGLE {s 6 r 0 x 0 y 4.5  hue 59.3 sat 0.7 b 1.0 }
+	petale {r 60 y 0 s 0.999}
+} 
+
+rule tronc{
+	SQUARE { s 6 10 x 0 y -13  hue 43.6 sat 0.8 b 0.8 }
+}

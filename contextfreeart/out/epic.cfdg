@@ -1,0 +1,147 @@
+startshape CENT
+background { b -1 }
+rule CENT { OUTC {s 10 }
+ARM { s 2 }
+SUN { }
+}
+
+rule SUN {
+	72* {r 5} LINER { y 5   hue 0 sat 1  b 0.3 
+ 				|hue 60   |sat 1 |b 1 }
+}
+
+rule LINER { LINER1 { } }
+rule LINER { LINER2 { } }
+rule LINER { LINER3 { } }
+rule LINER { LINER4 { } }
+rule LINER { LINER5 { } }
+rule LINER { LINER6 { } }
+
+rule LINER1 {
+	UTRIANGLE { y 0.5 }
+	LINER1 { r -1 b 0.1| hue 0.1|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER2 {
+	UTRIANGLE { y 0.5 }
+	LINER2 { r -2 b 0.1| hue 0.1|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER3 {
+	UTRIANGLE { y 0.5 }
+	LINER3 { r -3 b 0.1| hue 0.1|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER4 {
+	UTRIANGLE { y 0.5 }
+	LINER4 { r 1 b 0.1| hue 0.1|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER5 {
+	UTRIANGLE { y 0.5 }
+	LINER5 { r 2 b 0.1| hue 0.1|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER6 {
+	UTRIANGLE { y 0.5 }
+	LINER6 { r 3 b 0.1| hue 0.1|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+
+rule LINER1 .1 { LINER { } }
+rule LINER2 .1 { LINER { } }
+rule LINER3 .1 { LINER { } }
+rule LINER4 .1 { LINER { } }
+rule LINER5 .1 { LINER { } }
+rule LINER6 .1 { LINER { } }
+
+// 0.754877 is the solution to
+// x^2 + x^3 = 1
+// this allows double backed
+// triangles to exactly line up!
+
+
+rule UTRIANGLE {
+	TRIANGLE { r 42.5 s 0.525 }
+}
+rule TRIANGLE{ 
+	ARM { r 0 }
+	ARM { r 120 }
+	ARM { r -120 }
+} 
+
+rule ARM {
+CIRCLE { size 5 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 4.8 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 4.6 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 4.4 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 4.2 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 4 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 3.8 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 3.6 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 3.4 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 3.2 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 3 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 2.8 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 2.6 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 2.4 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 2.2 h 237.78 sat 0.9587 b 1.0000 }
+ CIRCLE { size 2 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 1.8 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 1.6 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 1.4 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 1.2 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 1 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 0.8 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 0.6 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 0.4 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 0.2 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 0.08 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 0.06 h 237.78 sat 0.9587 b 1.0000 }
+CIRCLE { size 0.04 h 112.31 sat 0.9368 b 1.0000 }
+CIRCLE { size 0.02 h 2.02 sat 0.9450 b 1.0000 }
+CIRCLE { size 0.01 h 237.78 sat 0.9587 b 1.0000 }
+
+}
+
+rule OUTC { CIRCLE { size 5 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 4.8 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 4.6 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 4.4 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 4.2 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 4 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 3.8 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 3.6 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 3.4 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 3.2 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 3 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 2.8 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 2.6 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 2.4 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 2.2 h 208.18 sat 0.3529 b 1.0000}
+ CIRCLE { size 2 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 1.8 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 1.6 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 1.4 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 1.2 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 1 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 0.8 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 0.6 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 0.4 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 0.2 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 0.08 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 0.06 h 208.18 sat 0.3529 b 1.0000}
+CIRCLE { size 0.04 h 61.82 sat 0.3529 b 1.0000 }
+CIRCLE { size 0.02 h 352.69 sat 0.4369 b 1.0000 }
+CIRCLE { size 0.01 h 208.18 sat 0.3529 b 1.0000}
+
+}
+
+
+	

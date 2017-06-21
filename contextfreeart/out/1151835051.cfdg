@@ -1,0 +1,21 @@
+startshape fig3
+background { b -1}
+
+rule fig3
+{
+fig2 { }
+fig1 { }
+fig3 { s .9 x .5 r 45}
+}
+
+ rule fig2
+{
+fig1 {hue 0 b .1 sat 1 }
+fig2 { s .7 r 45 hue 0}
+}
+
+rule fig1
+{
+TRIANGLE {hue 1 sat 1 b .1}
+fig1 { s .9 b .1 r 3 hue 5}
+}

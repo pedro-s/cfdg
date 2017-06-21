@@ -1,0 +1,16 @@
+startshape go
+
+background {b -1}
+
+rule go {
+	3*{r 120}
+	letit [r 30 x .5 y .2887]
+	go {s .382 r 60 b .1}
+}
+
+rule letit {
+	2*{f 180 y -.5771}
+	{TRIANGLE {b .1}
+	letit {s .618 x .809 y -.1103 b .1}
+	letit {s .382 x .191 y .6876 b .1}}
+}

@@ -1,0 +1,13 @@
+startshape SPIRAL
+
+rule SPIRAL {
+
+	spirale {}
+	
+}
+
+rule spirale {
+	SQUARE {b 0 }
+	SQUARE {s 0.9925 hue 214.9025 sat 0.5462 b 1.0000}
+	spirale {x 0.02 s 0.995 r 1}
+}

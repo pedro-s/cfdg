@@ -1,0 +1,61 @@
+startshape imagine
+
+background {}
+
+rule imagine {
+
+weave {y 1}
+weave {x -7}
+weave {x 7 y 1}
+weave {x -14 y 2}
+bird { y 25 r 14 b .6 sat 1 h 40}
+bird { y 23 x 6 b .5 sat 1 h 50}
+bird { y 21 x -7 r -30 b .4 sat 1 h 60}
+}
+rule weave {
+trunk { sat 1 b .1 h 200 flip 90 y 1.1}
+trunk { sat 1 b .1 h 10 x 2 y -.9}
+trunk { sat 1 b .1 h 80 x -2 flip 90}
+trunk { sat 1 b .1 h 300 x -4 y .8}
+trunk { sat 1 b .1 h 120 x 1.5 y 2 flip 90}
+trunk { sat 1 b .1 h 340 x 5.3 y -.5}
+trunk { sat 1 b .1 h 40 x 4}
+trunk { sat 1 b .1 h 240 x -3 y 3 flip 90}
+trunk { sat 1 b .1 h 260 x -3.2 y 1.4}
+trunk { sat 1 b .1 h 25 x -4.8}
+trunk { sat 1 b .1 h 180 x -.4 y -1.7}
+trunk { sat 1 b .1 h 330 x 2.3 y -2}
+trunk { sat 1 b .1 h 135 x 1}
+
+}
+
+rule trunk 80{
+    CIRCLE { s 1.5 }
+    trunk { y 0.2 s 0.99 b .01 h 0.02 a -.009}
+}
+
+rule trunk {
+   CIRCLE { } 
+   SPIRAL { }
+}
+
+rule SPIRAL 100{
+    CIRCLE { s 1.5}
+    SPIRAL { y 0.2 r -2 s 0.99 b .01 h .02 a -.009}
+}
+
+rule SPIRAL 1{
+     SPIRAL { }
+     SPIRAL1 { }
+}
+
+rule SPIRAL1 {
+    SPIRAL {flip 90}
+}
+
+rule bird {
+   CIRCLE { s 2 1 x -.5}
+   CIRCLE { s 2 1 x -.4 y -.5 b 1 sat -1}
+   CIRCLE { s 2 1 x .5 }
+   CIRCLE { s 2 1 x .4 y -.5 b 1 sat -1}
+}

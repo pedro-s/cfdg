@@ -1,0 +1,13 @@
+startshape FRACTAL
+
+rule FRACTAL {
+	scene {b 0.2}
+}
+
+
+rule scene {
+	TRIANGLE {s 0.95}
+	scene { x  0.75 s 0.5   r -90 b 0.05}
+	scene { x  -0.75 s 0.5 r 90 b 0.05}
+	scene { y 0.75 s 0.5 b 0.05}
+}

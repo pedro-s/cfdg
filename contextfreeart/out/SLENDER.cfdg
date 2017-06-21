@@ -1,0 +1,36 @@
+startshape SLENDER
+background { a -1 }
+rule SLENDER {
+2*  { y 1 }
+SQUARE {  } 
+SQUARE { y 2 h 352.80 sat 1.0000 b 1.0000 }
+SQUARE { y 2.80  s .8 h 260.54 sat 0.0676 b 1.0000 }
+SQUARE { x .4 y 2 }
+SQUARE { x - .4 y  2 }
+SQUARE { y 1.5 }
+SQUARE {  x - .4  y 1 }
+SQUARE { x -.4 }
+SQUARE { y 2. h 356.14 sat 0.9911 b 1.0000 s.5}
+SQUARE { y 2.25 h 356.14 sat 0.9911 b 1.0000 s.5}
+SQUARE { x .4 }
+SQUARE { x .4 y 1 }
+5* {  y -.5 }
+SQUARE { x .6 y - .75 s.6.5}
+5* { y -.5 }
+SQUARE { x -.6 y - .75 s.6 }
+SQUARE { x 1.3 y 2.2 s.6 }
+7* { y -.5 }
+SQUARE { x 1.3 y 1.7 s.6 }
+SQUARE { x .7 y 2.2 s.6 }
+SQUARE { x 1.3 y- 1.8   s .6 h 260.54 sat 0.0676 b 1.0000  }
+SQUARE { x - 1.2 y 2.2 s.6 }
+SQUARE { x - 1.3 y 2.2 s.6 }
+7* { y -.5 }
+SQUARE { x - 1.3 y 1.7 s.6 }
+SQUARE { x -1.3 y -1.8   h 260.54 sat 0.0676 b 1.0000 s.6 }
+10* {  x.1 y .3 r -10  }
+SQUARE { x 1 y 2.7 s .6  }
+10* { x- .1 y .3 r 10 }
+SQUARE { x - 1 y 2.7 s.6 }
+}
+

@@ -1,0 +1,19 @@
+startshape rain
+
+background { b -1 }
+rule rain
+{   
+    Tick{r 60}
+    rain{x -1 y -.5 size .5 b 1 h 20 sat 1 alpha -0.5}
+    rain{x 1 y -.5 size .5 b 1 h 20 sat 1 alpha -0.5}
+  
+}
+
+rule Tick {
+   Arm { }
+}
+
+rule Arm {
+   CIRCLE {b 1 h 20 sat 1 }
+   Arm { y 0.1 s 0.9 }
+} 

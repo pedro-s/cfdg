@@ -1,0 +1,97 @@
+// WZR BDN BEA BBT
+// others:   SGS XAU WYZ XBV BBM XAF XBI  LAF  BDQ BBO MMF MMT MMW 
+// about 1 in 20 produces an interesting tree.
+
+startshape go
+// background {hue 43.3 saturation .1 brightness 1}
+background {b 1}
+
+
+rule go
+{
+	treechoice{}
+//	treechoice{z -1 hue 0 saturation 1 brightness .35} // just for fun; a second maroon tree
+
+// cap the trunk:
+	CIRCLE {y -.75 s 1.3 .5}
+	SQUARE {y -.5 s 1.3 .5}
+
+	gradient {} // gradient background because some eyes need candy
+
+}
+
+rule gradient // sometimes better without
+{gradient_orange {z -1 b .1 hue 2 saturation .8 } }
+
+rule gradient_orange
+{
+
+	150* {y .2 b .017 sat .002 hue .22} SQUARE {y -.5 z -2 s 10 2}
+	150* {y .2} SQUARE {y -.5 z -3 s 10.15 1.9} // for some reason, a scaled square produces a tiny render
+}
+
+
+rule treechoice { tree {} } // left or right leaning?
+rule treechoice{ tree { flip 90}}
+
+rule BRANCH
+{
+	tree {x .175 y -.3536 s .52 r -45}
+	tree {}
+}
+
+rule BRANCH
+{
+	tree {x -.175 y -.3536 s .52 r 45}
+	tree {}
+}
+
+// only occassionally cool (remove iksnay_ to enable):
+rule iksnay_BRANCH  .5 // fork.
+{
+	tree {x -.3536 y -.3536 s .6 r 45}
+	tree {x .3536 y -.3536 s .6 r -45}
+}
+
+rule tree 0.08 { BRANCH {}} // .03 gives abstract twig, .08 is "normal"; .06 for curlmania variations
+rule tree .002 {angle{flip 90}} // on a blue moon, create a defiant reverse curly
+rule tree { angle{} } // main character of tree
+
+rule treedraw { JOINT {s 1.3 .51} } // sometimes fatter (x scale > 1) is good, but can lead to gaps, and must change trunk cap and branch cap sizes as well.
+
+// this "angle" junk folds the squares properly to avoid gaps, burrs, and lumps:
+// calculated these probablities from previous try:
+rule angle 0.189834 { angle_left{} }
+rule angle 0.560912 { angle_right{} }
+rule angle 0.249253 { treedraw{} tree{y .5 s .991}}
+
+// to fold without artifacts at square scale of y*.5:
+// turn { x (sin(angle)/4) y (sin(angle)/2) r angle}
+// with positive angles, hinge is the lower right corner of the square
+rule angle_left  1.0 { angle_left {x -.00872 y -.017449748  r 2} } // increase for taller tree; I like 1.0 and 1.8
+rule angle_left  { angle_left {x -.004363102 y -.0087262 r 1} }
+rule angle_left .55 { treedraw {} tree{y .5 s .991}} // lower prob = more crooked, but taller // .55 was decent, .8 was nice curly
+
+// with negative angles, hinge is the lower left corner of the square.
+rule angle_right  .58 { angle_right {x  .00872 y -.01745  r -2}} // increase for curly ends. I like .86 for a funky tree, .58 for sorta normal
+rule angle_right { angle_right {x .004363102 y -.0087262  r -1}}
+rule angle_right .01 {angle_right{ x .034793275 y -.069586550 r -8} } // abrupt turn
+rule angle_right .6 { treedraw{} tree{y .5 s .991}} // higher prob = straighter tree. I like .5 or .6
+
+rule tree .001 // prune it; increase for thinner and broken up. 0.03 makes it twiggy. my choice : .001
+{
+	SQUARE{s 1.3 .5}
+	CIRCLE {y .25 s 1.3 .5}
+}
+
+rule iksnay_tree  .3 // shrink; for less branches without pruning
+{
+	treedraw{}
+	tree {y .5 s .98}
+}
+
+
+rule JOINT
+{
+	SQUARE{} // other approaches manufactured The Ugly
+}

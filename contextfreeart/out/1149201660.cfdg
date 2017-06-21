@@ -1,0 +1,37 @@
+startshape START
+
+rule START
+{
+	SPIRAL{r 140}
+   SHADOW{x 0.08 y -0.08 r 140 sat 0.2 b 0.4 alpha -0.96 z -1}
+}
+
+rule SPIRAL
+{
+	TRIANGLE{}
+	TRIANGLE{x 0.02 y 0.02}
+	TRIANGLE{x 0.04 y 0.04}
+	TRIANGLE{sat 0.4 r 1.0 b 1.0 s 0.95}
+	TRIANGLE{sat 0.2 r 1.0 b 1.0 s 0.90}
+	TRIANGLE{sat 0.1 r 1.0 b 1.0 s 0.75}
+	SPIRAL[hue 6.4 y 0.578 r 10.0 y -0.578 s 0.98]
+}
+
+rule SPIRAL
+{
+	TRIANGLE{}
+	TRIANGLE{x 0.02 y 0.02}
+	TRIANGLE{x 0.04 y 0.04}
+	TRIANGLE{sat 0.5 r 1.0 b 1.0 s 0.95}
+	TRIANGLE{sat 0.4 r 1.0 b 1.0 s 0.90}
+	TRIANGLE{sat 0.2 r 1.0 b 1.0 s 0.75}
+	SPIRAL[hue -6.4 y 0.578 r 10.0 y -0.578 s 0.98 z 0.03]
+}
+
+rule SHADOW
+{
+	TRIANGLE{}
+	TRIANGLE{x 0.02 y 0.02}
+	TRIANGLE{x 0.04 y 0.04}
+	SHADOW[y 0.578 r 10.0 y -0.578 s 0.98]
+}

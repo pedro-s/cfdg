@@ -1,0 +1,32 @@
+startshape flowers {color alpa}
+
+rule flowers {
+	flower { hue =20.1 sat =0.6784 b =1.0000 }
+	flower { r 22.5 s .85  hue =20.1 sat =0.6784 b =.85  }
+}
+
+rule flower {
+	double_lines { }
+	double_lines { r 45 }
+	double_lines { r 90 }
+	double_lines { r 135 }
+	double_lines { r 180 }
+	double_lines { r 225 }
+	double_lines { r 270 }
+	double_lines { r 315 }
+}
+
+rule double_lines {
+	lines { }
+	lines { flip 180 } 
+}
+
+rule lines {
+	CIRCLE { x .5 s .00145 hue =46.1 sat =0.7072 b =0.9254 }
+	line { }
+	lines { x .00002 s .999 r .02 b .001 hue -0.001 }
+}
+
+rule line {
+	SQUARE { s 1 .00001 }
+}

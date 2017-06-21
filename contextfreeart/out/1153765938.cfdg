@@ -1,0 +1,41 @@
+# Experimental Fractal 001: Color twister
+# 
+# This is a Context Free (www.contextfreeart.org)
+# script made by Jonas John (www.jonasjohn.de)
+# 
+# Feel free to use the whole code, parts of it 
+# or the created figure for your own projects.
+# But please credit me in some way -- Thanks :-)
+
+startshape start
+background { b -1 }
+
+rule start {
+    two_circles { }
+    start { s -0.99 r 88 x 6 }
+}
+
+rule two_circles {
+    colored_circle { }
+    two_circles { x 1 r 1 s -0.9 }
+}
+
+# these are the different 
+# colored circles:
+
+rule colored_circle { 
+	CIRCLE { hue 49.4 sat 1 b 1 }
+}
+rule colored_circle { 
+	CIRCLE { hue 9.4 sat 1 b 1 } 
+}
+rule colored_circle { 
+	CIRCLE { hue 76.8 sat 1 b .4 } 
+}
+rule colored_circle { 
+	CIRCLE { hue 216.2 sat 1 b .3 } 
+}
+rule colored_circle { 
+	CIRCLE { hue 189.5 sat .6 b .9 } 
+}
+

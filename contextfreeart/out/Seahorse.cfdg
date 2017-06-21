@@ -1,0 +1,58 @@
+startshape START
+
+rule START {
+CIRCLE{}
+RAINBOW_SPLIT{hue 0 sat 0 b 0}
+RAINBOW_SPLIT{r 180 hue 120 sat 0}
+}
+
+rule RAINBOW_SPLIT{
+RAINBOW{}
+}
+
+rule RAINBOW_SPLIT{
+RAINBOW_MINI{alpha -.9 y -.4 s .2 flip 1 b -1}
+RAINBOW{}
+}
+
+rule RAINBOW{
+ SHADOW{}
+CIRCLE{}
+HIGHLIGHT{}
+
+RAINBOW_SPLIT{hue 1.5 sat .1  s .99 b .001 x .09 r 2.8 }
+}
+
+
+rule RAINBOW_MINI{
+ SHADOW{}
+CIRCLE{}
+  HIGHLIGHT{}
+
+
+RAINBOW_MINI{alpha .1 hue 2 s .98  x .3 r 2.8 }
+}
+
+
+rule RAINBOW_MINI .04{
+ SHADOW{}
+CIRCLE{}
+ HIGHLIGHT{}
+ 
+
+RAINBOW_MINI{flip 1 alpha .1 hue 5 s .99  x .3 r 2.8 }
+}
+
+
+
+rule SHADOW {
+CIRCLE{hue 3 b -1 sat -.6 s 1.1 y .04 alpha -.7}
+
+}
+
+rule HIGHLIGHT {
+CIRCLE{ hue 3 b .7 sat -.3 s .98 y .05}
+CIRCLE{ hue 3 b 2 sat -.7 s .9 y .01}
+}
+
+

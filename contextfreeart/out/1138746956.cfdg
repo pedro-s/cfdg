@@ -1,0 +1,50 @@
+startshape MECAPULPO
+
+background {b -1}
+
+rule MECAPULPO{
+
+LATIGO { y 2 }
+LATIGO { y 2 flip 90}
+LATIGO { y 0 flip 180}
+LATIGO { y 0 flip 180}
+
+LATIGO { y 0 r 90}
+LATIGO { y 0 flip 90 r 90}
+LATIGO { y 0 flip 180 r 90}
+LATIGO { y 0 flip 180 r 90}
+
+LATIGO { y 2 r 90}
+LATIGO { y 2 flip 90 r 90}
+LATIGO { y 2 flip 180 r 90}
+LATIGO { y 2 flip 180 r 90}
+
+} 
+
+rule LATIGO {
+LATIGO_IZQ {}
+}
+rule LATIGO {
+LATIGO_DER {}
+}
+
+rule LATIGO_IZQ {
+CIRCLE  { s 0.35 b 1}
+TRIANGLE{ s 1.8  b 1 }
+TRIANGLE{  s 1.5  r 90 b 1}
+TRIANGLE{ s 1.5  r -90 b 1}
+TRIANGLE{  s 1.3  r 180 }
+
+LATIGO { y 1.8 s 0.9 r -30 }
+}
+
+rule LATIGO_DER {
+CIRCLE  { s 0.35 b 1}
+TRIANGLE{ s 1.8  b 1 }
+TRIANGLE{  s 1.5  r 90 b 1}
+TRIANGLE{  s 1.5  r -90 b 1}
+TRIANGLE{ s 1.3  r 180 }
+
+LATIGO { y 1.8 s 0.9 r 30}
+}
+

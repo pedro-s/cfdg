@@ -1,0 +1,39 @@
+startshape KREIS
+
+background {b -1}
+
+rule KREIS{
+CIRCLE{b 1}
+ARM{}
+KREIS{b 1 x 1 y 1 r 20 s 0.99 a -0.01}}
+
+rule ARM1{
+CIRCLE{}
+ARM1{r -2 x 1 s 0.98}}
+
+rule ARM2{
+CIRCLE{}
+ARM2{r -1 x 1 s 0.98}}
+
+rule ARM3{
+CIRCLE{}
+ARM3{r -0.5 x 1 s 0.98}}
+
+rule ARM4{
+CIRCLE{}
+ARM4{r 2 x 1 s 0.98}}
+
+rule ARM5{
+CIRCLE{}
+ARM5{r 1 x 1 s 0.98}}
+
+rule ARM6{
+CIRCLE{}
+ARM6{r 0.5 x 1 s 0.98}}
+
+rule ARM{ARM1{}}
+rule ARM{ARM2{}}
+rule ARM{ARM3{}}
+rule ARM{ARM4{}}
+rule ARM{ARM5{}}
+rule ARM{ARM6{}}

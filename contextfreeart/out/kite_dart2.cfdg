@@ -1,0 +1,74 @@
+startshape start [ sat 1 b 1 ]
+
+CF::Background = [hue 40 sat 1 b 1]
+CF::Size=[s 3.5 ]
+R=3.01
+
+
+shape start
+{
+  rhomb_circle[r 11.25 h 40 b .9 z 1 ]
+  kite_circle[]
+}
+
+shape kite_circle
+{
+    loop 16 [r 22.5 h 0 ]     
+      kite_iter[ y R]
+}
+
+shape kite_iter
+{
+     loop 8 [ h 120  y (-cos(25)-tan(42)*sin(25)) s (sin(25)/cos(42))]
+     {
+        kite_rek[ ]  
+      }
+}
+
+shape kite_rek
+{
+    kite[r -90  ]
+    kite[r -90 s .85 sat - 1  y -.125]
+    kite_rek[s 0.7 y -.25]
+}
+
+shape rhomb_circle
+{
+   loop 16 [r 22.5 h 0]
+   rhomb_iter[ y (R-cos(25)+.04)]
+}
+
+shape rhomb_iter
+{
+     loop 8 [ h 60  y (-2*cos(73/2)*sin(25)/cos(42)) s (sin(25)/cos(42))]
+        rhomb_rek[ ]
+}
+
+shape rhomb_rek
+{
+    rhomb[r -90 b  1 ]
+    rhomb[r -90 s .75 b - 1  y -.125]
+    rhomb_rek[s 0.5 y -.25]
+}
+
+path kite {
+    MOVETO(0, 0)
+    LINETO(cos(25),-sin(25))
+    LINETO(cos(25)+tan(42)*sin(25),0) 
+    LINETO(cos(25),sin(25))
+    CLOSEPOLY()
+    STROKE( 0.02,  CF::RoundJoin  )[ b -1] 
+    FILL(CF::EvenOdd)[hue 3 ]
+}
+
+ 
+path rhomb {
+C=sin(25)/cos(42)
+    MOVETO(0, 0)
+    LINETO(cos(73/2)*C,-sin(73/2)*C)
+    LINETO( cos(73/2)*C*2,0)
+    LINETO(cos(73/2)*C,sin(73/2)*C)
+    CLOSEPOLY()
+    STROKE(0.01,  CF::RoundJoin )[b -1 ] 
+    FILL(CF::EvenOdd)[hue 3 ]
+}

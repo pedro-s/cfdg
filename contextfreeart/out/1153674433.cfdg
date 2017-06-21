@@ -1,0 +1,11 @@
+startshape penis
+background {b -1}
+
+rule penis {
+CIRCLE { size 1 hue 13 sat .3 b .95}
+CIRCLE {x = 1 size 1 hue 13 sat .3 b .95}
+
+SQUARE { x .5 y 1 size 1 2 b 1 hue 13 sat .3 b .95}
+CIRCLE {x .5 y 2 size 1 b 1 hue 13 sat .3 b .9}
+
+}

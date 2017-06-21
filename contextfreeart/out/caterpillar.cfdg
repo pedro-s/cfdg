@@ -1,0 +1,24 @@
+startshape CATERPILLAR
+
+background { h 204.70 sat 0.6115 b 1.0000 }
+
+rule CATERPILLAR { 
+// APPLE 
+CIRCLE { s 10 x 4. y 0.5 h 4.24 sat 1.0000 b 1.0000 }
+//body 
+12* { x 1.5 s 0.94 }
+CIRCLE {  h 76.94 sat 0.7870 b 1.0000 s 2 } 
+//eyes
+2* { x 0.75  }
+CIRCLE {b -1}
+//pupils
+2* { x 0.75 } 
+CIRCLE { s 0.3  h 0.00 sat 0.0000 b 1.0000 }
+// bite
+CIRCLE { s 3.5 y 4 h 204.70 sat 0.6115 b 1.0000 } 
+//stem
+5.0* { s 1 y 0.2 r 7 } 
+CIRCLE {  y 6 x 4 h 120.00 sat 1.0000 b 0.4420 } 
+//eyebrows
+CIRCLE {r 143x 0.40 skew 50 35 y 0.53 } 
+} 

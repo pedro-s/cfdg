@@ -1,0 +1,28 @@
+startshape Test
+background {h 120.00 sat 1.0000 b 1.0000}
+rule Test{
+50* { x -2 y .2 s .9 r 5 rotate 7.5 rotate 300} TRIANGLE { h 240.00 sat 1.0000 b 1.0000}
+50* { x 2 y .2 s .9 r 5 rotate -7.5 rotate 300} TRIANGLE { h 240.00 sat 1.0000 b 1.0000}
+50* { x -2 y .2 s .9 r 5 rotate 7.5 rotate -300} TRIANGLE { h 240.00 sat 1.0000 b 1.0000}
+50* { x 2 y .2 s .9 r 5 rotate -7.5 rotate -300} TRIANGLE { h 240.00 sat 1.0000 b 1.0000}
+50* { x .05 y .2 s .9 r 5 rotate 7.5 rotate 360} TRIANGLE { h 240.00 sat 1.0000 b 1.0000}
+50* {x -.05 y .2 s .9 r 5 rotate -7.5 rotate 360} TRIANGLE { h 240.00 sat 1.0000 b 1.0000}
+
+CIRCLE { x 1.78 y 3.15 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x .32 y 3.05 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -.32 y 3.05 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x 0 y .83 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x 2.75 y 1.9 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -2 y .15 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x 2 y .2 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -1.78 y  3.15 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -2.75 y 1.9 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x 3.05 y -1.25 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x 2.4 y -2.79 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -2.4 y -2.79 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -3.05 y -1.25 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x .93 y -2.86 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -.93 y -2.86 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x .17 y -1.86 s .1 h 0.00 sat 1.0000 b 1.0000}
+CIRCLE { x -.17 y -1.86 s .1 h 0.00 sat 1.0000 b 1.0000}
+}

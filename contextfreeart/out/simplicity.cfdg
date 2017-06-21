@@ -1,0 +1,9 @@
+startshape start
+tile {s 2 2}
+
+rule start {
+SQUARE {x -0.5 b 0.6 y 0.5}
+SQUARE {x 0.5 b 0.9 y 0.5}
+SQUARE {x 0.5 b 0.6 y -0.5}
+SQUARE {x -0.5 b 0.9 y -0.5}
+}

@@ -1,0 +1,11 @@
+startshape start
+
+rule start {
+	50 * {r 10}
+	minta {}
+}
+
+rule minta {
+	500 * {x 2 r 2 s 1 1.023 flip 45}
+	CIRCLE {}
+}

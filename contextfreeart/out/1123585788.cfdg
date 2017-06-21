@@ -1,0 +1,37 @@
+startshape START { color }
+
+rule START {
+	SHAPE { b 0.7 sat 0.7 alpha -0.3}
+	SHAPE { r 180 b 0.7 sat 0.7 alpha -0.3}
+	SHAPE { r 90 b 0.7 sat 0.7 alpha -0.3}
+	SHAPE { r -90 b 0.7 sat 0.7 alpha -0.3}
+}
+
+rule SHAPE {
+	LINE {  }
+	SHAPE { r -45 x 10 s 0.7517 alpha 0.5}
+	SHAPE { r 45 x 10 s 0.7517  alpha 0.5 hue -25}	
+}
+
+rule SHAPE {
+	LINE {  }
+	SHAPE { r -45 x 10 s 0.7517 alpha -0.5 hue 25}
+	SHAPE { r 45 x 10 s 0.7517  alpha -0.5}	
+}
+
+rule LINE {
+	SQ { s 1.5 }
+	SQUARE { x 1 }
+	SQUARE { x 2 }
+	SQUARE { x 3 }
+	SQUARE { x 4 }
+	SQUARE { x 5 }
+	SQUARE { x 6 }
+	SQUARE { x 7 }
+	SQUARE { x 8 }
+	SQUARE { x 9 }
+}
+
+rule SQ {CIRCLE { s 1.2 alpha -0.1 }}
+rule SQ {CIRCLE { s 2.2 alpha -0.3 }}
+rule SQ {CIRCLE { s 1.7 alpha -0.2 }}

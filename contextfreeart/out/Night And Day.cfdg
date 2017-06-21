@@ -1,0 +1,146 @@
+startshape NightAndDay
+
+//Time of day (in hours) at the beginning of the animation
+startTime = 5
+
+//Length (in hours) of the period to export in the animation
+length = 24
+
+//Number of clouds visible in a 24 hour period
+cloudsPerDay = 10
+
+//Rotation of the space objects movement
+rotation = -10
+
+//CF configuration
+CF::Size = [ s 0.98 0.98 x 0 y -0.5 ]
+CF::FrameTime = 6.5
+CF::Background = [b -1]
+
+//Returns the time of day at the current frame time
+dayTime() = mod(ftime() + startTime, 24)
+
+//Returns start before t1, end after t2 and an interpolated value between t1 and t2
+move (start, end, t1, t2, cur) =
+	if (cur < t1,
+		start,
+		if (cur > t2,
+			end,
+			start + ((end - start) * (cur - t1) / (t2 - t1))))
+
+//Like move, but symmetric with respect to 15 (eg. move in time 13-14 is reversed at time16-17)
+symMove (start, end, t1, t2, cur) =
+	if (cur < 3,
+		move(start, end, t1, t2, 6 - cur),
+		if (cur < 15,
+			move(start, end, t1, t2, cur),
+			move(start, end, t1, t2, 30 - cur)))
+
+//Returns the minimum of 2 values
+min(v1, v2) = if (v1 <= v2, v1, v2)
+
+//Returns the maximum of 2 values
+max(v1, v2) = if (v1 >= v2, v1, v2)
+
+shape NightAndDay {
+	dt = dayTime()
+	Sky [[ y 0.5 r rotation h 210 time 0 (length - 1) ]]
+	Stars [[ x -0.1 r rotation y move(0, 0.5, 0, length, ftime()) b 1 sat 1 z 1 time 0 (length - 1) ]]
+	SpaceObjects [[ r rotation y move(0, 3, 0, 24, dt) time 0 (length - 1) ]]
+	Mountain [ z 6 h 120 sat 0.7 b symMove(0.15, 0.7, 7, 12, dt) time 0 (length - 1) ]
+	loop ((length * cloudsPerDay) / 24) [] {
+		t = rand(-18, length)
+		cloudY = rand(0.25, 0.9)
+		cloudS = 0.1 + (cloudY - 0.25) / 10
+		Cloud [ s cloudS x move(-1.5, 1, t, t + 18, ftime()) y cloudY time max(t, 0) min(t+18, length-1) ]
+	}
+}
+
+shape SpaceObjects {
+	mx = rand(-0.3, 0.3)
+	Moon [ s 0.05 x mx y 0.7 h 60 sat 0.1 b 1 z 2 ]
+	Moon [ s 0.05 x mx y -2.3 h 60 sat 0.1 b 1 z 2 ]
+	Sun(move(0.1, 1.3, 8.5, 13, dayTime())) [ z 3 x (rand(-0.25, 0.25)) y -0.8 s move(0.08, 0.09, 8.5, 13, dayTime()) ]
+}
+
+shape Sky {
+	transform [ y -0.705 ] {
+		loop i=141 [ y 0.01 b -0.008 ] {
+			dt = dayTime()
+			if (dt < 12) {
+				SQUARE [
+					s 1.4 0.01
+					b move(0.3, 1, 6 + i * 0.007, 11 + i * 0.007, dt)
+					sat move(0.9, 0.25, 7 + i * 0.007, 11 + i * 0.007, dt)
+				]
+			} else {
+				SQUARE [
+					s 1.4 0.01
+					b move(1, 0.3, 18 + i * 0.007, 23 + i * 0.007, dt)
+					sat move(0.25, 0.9, 18 + i * 0.007, 22 + i * 0.007, dt)
+				]
+			}
+		}
+	}
+}
+
+shape Moon {
+	ShinyCircle [ ]
+	CIRCLE [ z 2 s 0.35 y -0.2 x -0.1 b -0.05 ]
+}
+
+shape Stars {
+	loop (1 + length / 24) [ y -1 ]
+		loop 50 []
+			Star [ x rand(-0.7, 0.7) y rand(0, 1) s 0.01 a symMove(0, -1, 7, 11, dayTime()) ]
+}
+
+shape Star 
+rule 3 { ShinyCircle [ sat -1 s 0.1 ] }
+rule 2 { ShinyCircle [ sat -1 s 0.2 ] }
+rule 1 { ShinyCircle [ sat -1 s 0.3 ] }
+rule 1 { }
+
+shape ShinyCircle {
+	loop 20 [ s 1.05 a -0.003 ] {
+		CIRCLE [ a -0.95 ]
+	}
+	CIRCLE []
+}
+
+shape Sun(number diameter) {
+	loop 200 [ s 0.98 ]
+		CIRCLE [ s (9 * diameter) b 1 a -0.98 ]
+	loop 8 [ r 45 ]
+		SunRay [ s (rand(0.9, 1.2) * diameter) (rand(2, 3) * diameter) ]
+	CIRCLE [ b 1 z 2 ]
+}
+
+shape SunRay {
+	loop 100 [ x 0.02 s 1.01 a -0.05 ]
+		CIRCLE [ s 0.1 b 1 a -0.3 ]
+}
+
+path Mountain {
+	MOVETO ( -0.5, 0 )
+	LINETO ( -0.5, 0.3 )
+	CURVETO ( 0.5, 0.2, -0.1, 0.5, 0.3, 0.1 )
+	LINETO ( 0.5, 0 )
+	CLOSEPOLY ( )
+	FILL [ ]
+}
+
+shape Cloud {
+	dt = dayTime()
+	loop 20 [ z 1 ] {
+		transform [ r 90 x rand(0, 3) y rand(0, 0.5) s rand(1,1.5) ] {
+			loop i=72 [ r 5 ] {
+				dA =  0 //symMove(0, 0.2, 12, 15, dt)
+				minA = 0.9 - dA
+				maxA = 0.95 - dA
+				cb = symMove(0.2, 0.9, 6.5, 11.5, dt) + symMove(0, 0.05, 11.5, 15, dt)
+				CIRCLE [[ x 0.2 z 10 s rand(0.4, 0.5) rand(0.2, 0.3) b cb a -rand(minA, maxA) ]]
+			}
+		}
+	}
+}

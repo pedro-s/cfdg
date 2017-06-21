@@ -1,0 +1,42 @@
+startshape deepflower
+
+rule deepflower
+{
+	petal{}
+	petal{r  72}
+	petal{r 144}
+	petal{r 216}
+	petal{r 288}
+}
+
+rule petal
+{
+	curve{}
+	curve{size .9}
+	curve{size .8}
+	curve{size .7}
+	curve{size .6}
+	curve{size .5}
+	curve{size .4}
+	curve{size .3}	
+	curve{size .2}
+	curve{size .1}
+}
+
+rule curve
+{
+	curveright{}
+	curveleft{}
+}
+
+rule curveright
+{
+	SQUARE{}
+	curveright{x .9 r 1 size .995}
+}
+
+rule curveleft
+{
+	SQUARE{}
+	curveleft{x -.9 r -1 size .995}
+}

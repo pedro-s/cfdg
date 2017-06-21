@@ -1,0 +1,29 @@
+startshape holes 
+
+background {b -1}
+//tile {s 280 320}
+
+path lin {
+    MOVETO {x 4.2 y 1}
+   LINETO {x -4.2 y 1}
+    STROKE {width 0.7 } //p roundjoin}
+}
+ 
+path gap {
+    MOVETO {x 4 y .9}
+    ARCTO  {x 4 y -.9 r 1.6}
+    STROKE {width 0.7   p roundcap}
+}
+ 
+rule lines 3{ lin {} lin {flip 0}}
+rule lines { gap{} gap{flip 90 }}
+ 
+rule part {lines {}lines {x -7 y -4 r 240}lines {x 7 y -4 r 120}
+lines {x -7 y 4 r 120}lines {x 7 y 4 r 240}lines {x 14 y 8 }
+}
+
+rule holes {
+    20 * {y 16 } {
+        10 * {x 28} part {b 1}
+    }
+}

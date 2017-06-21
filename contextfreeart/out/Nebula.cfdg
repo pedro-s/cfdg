@@ -1,0 +1,32 @@
+startshape S
+background{b -1}
+rule S 50 {
+    T{b 1 sat 1}
+    T{flip 120 b 1 sat 1}
+    S{y 30 r 5 s 0.95 b 1 hue 66 sat 1}
+}
+rule S 70 {
+    T{b 1 sat 1}
+    T{flip -45 b 1 sat 4}
+    S{y 30 r 5 s 0.95 b 1 hue 22 sat 1}
+}
+rule S 120 {
+    T{b 1 sat 1}
+    T{flip -15 b 1 sat 1}
+    S{y 90 r 45 s 0.95 b 1 hue 12 sat 1}
+}
+rule S {
+    T{b 1}
+    T {flip 560 b 1}
+    S{y 20 r 5 s 0.95 b 1 flip 90}
+}
+ 
+rule T {
+    U{}
+    T{y 6 r 8 s 0.992 hue 3}
+}
+ 
+rule U {
+    SQUARE{}
+    U{y 3 r 2 s 0.99}
+}

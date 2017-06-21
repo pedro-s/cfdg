@@ -1,0 +1,42 @@
+startshape rot 
+
+background {b -1}
+
+rule rot {
+	3*{r 120 x -1.183 y -2.049}
+	{ty {}
+	doodle {r 150 x .7887}
+	tri{}}
+}
+
+rule ty {
+	2*{f -60 x  -1.183 y -.683}
+	{try {}
+	doodle {r -150 x -.7887}
+	ty {s .5774 r -30 x .3943 y .8943}}
+}
+
+rule try {
+	SQUARE {}
+	try {s .99 x -.0025 y -.0093 b .01}
+}
+
+rule tri {
+	TRIANGLE {s 1.7321 r -30 y -1.366}
+	tri {s .99 x -.0025 y -.0093 b .01}
+}
+
+rule doodle {
+	doo{}
+	doodle {s .5774 r -30 x .3333 y -.5774}
+}
+
+rule doo {
+	dle {}
+	doo {s .5774 r 30 x -.3333 y -.5774}
+}
+
+rule dle {
+	TRIANGLE {}
+	dle {s ..99 y -.0058 b .01}
+}

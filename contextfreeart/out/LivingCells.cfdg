@@ -1,0 +1,13 @@
+startshape CELLS background {b -1}
+rule CELLS
+{20*{} P_CELL{h 120 b 0.7 s 0.3 sat 0.5}}
+rule P_CELL{P_CELL{x 0.7}}
+rule P_CELL{P_CELL{x -0.7}}
+rule P_CELL{P_CELL{y 0.7}}
+rule P_CELL{P_CELL{y -0.7}}
+rule P_CELL 3{CELL{}}
+rule CELL{CIRCLE{} S_CELL{b 0.04 s 0.98 h 1}}
+rule S_CELL{CELL{x 0.01 y 0.01}}
+rule S_CELL{CELL{x -0.01 y 0.01}}
+rule S_CELL{CELL{x 0.01 y -0.01}}
+rule S_CELL{CELL{x -0.01 y -0.01}}

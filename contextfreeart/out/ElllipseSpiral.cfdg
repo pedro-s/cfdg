@@ -1,0 +1,18 @@
+startshape ELLIPSESPIRAL 
+
+rule ELLIPSESPIRAL {
+
+	18 * {  r 10  	s .85 h -5  } DRAWELLIPSE {  hue 120  }
+}
+
+path DRAWELLIPSE {
+	MOVETO { x 1 y 0 }
+	ARCTO {  x 0 y .5  rx 1 ry .5 }
+	ARCTO {  x -1 y 0  rx 1 ry .5 }
+	ARCTO {  x 0 y -.5  rx 1 ry .5 }
+	ARCTO {  x  1 y 0  rx 1 ry .5 }
+	CLOSEPOLY { }
+	STROKE {  width .01 }
+	#FILL { }
+}
+

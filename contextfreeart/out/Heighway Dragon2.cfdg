@@ -1,0 +1,20 @@
+startshape Dragon
+
+include i_polygons.cfdg
+background {b -1}
+
+rule Dragon{
+Wing{r 135 a -1}
+}
+ 
+rule Wing{
+LinedTriangle{}
+Wing{x 0.5 y 0 r 45 s .707 a 0.01 }
+Wing{x -0 y -0.5 r 135 s .707 a 0.01 }
+}
+ 
+rule LinedTriangle{
+polygonRightTriangle{}
+polygonRightTriangle[x -0.01 y 0.01 s 0.9 b 1]
+}
+ 

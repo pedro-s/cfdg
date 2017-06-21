@@ -1,0 +1,66 @@
+startshape main
+
+rule main {
+	flower { x -10 }
+	flower { x 10 r -15 }
+	flower2 { y -10 }
+}
+
+rule flower {
+	petals { r -120 }
+	center { y -1 r 100 s 1 b -10 }
+}
+
+rule flower2 { 
+	petals2 { s 1 0.8 }
+	center2 { y -1 s 1.2 b -10 }
+}
+
+rule center {
+	7* { r 23 } 	
+		petal { sat 0.75 h 90 b -10 s 1 0.9 }
+}
+
+rule center2 {
+	17* { r 31 } 	
+		petal { sat 0.75 h 90 b -10 s 1 0.9 }
+}
+
+
+rule petals {
+	100* { s 0.95 }
+		CIRCLE { s 12 x -1 y -0.5 sat 1 b 0.3 a -0.9 }
+
+	220* {r 1 s 0.99999 } 
+		punto { y 5 sat 0.5 s 1.1 }	
+
+	60* {r -2.5 s 0.99999 } 
+		punto { y 2.5 sat 0.5 s 1.1 0.9 }	
+}
+
+
+rule petals2 {
+	100* { s 0.95 }
+		CIRCLE { s 10 x -1 y -0.5 sat 1 b 0.3 a -0.9 }
+
+	360* {r 1 s 0.99999 } 
+		punto { y 5 sat 0.5 s 1.1 }	
+}
+
+rule punto { punto { y -0.06713 s 1 0.99 } }
+rule punto 0.04 { draw { s .025 } }
+
+
+rule draw {
+	petal { s 20 sat 0.5 b 0.4 a -0.9 }
+	petal { s 20 sat 0.5 b 0.4 a -0.9 }
+	petal { s 20 sat 0.5 b 0.4 a -0.9 }
+	petal { s 20 sat 0.5 b 0.4  a -0.9 }
+}
+
+rule petal { 
+	CIRCLE { s 2 b 0 }
+	petal { s 0.9 y 0.8 r 1.317 b 0.05 alpha 0.005  } 
+} 
+
+rule petal 0.21 { petal { flip 90} } 

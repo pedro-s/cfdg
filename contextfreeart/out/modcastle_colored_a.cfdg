@@ -1,0 +1,150 @@
+startshape castle 
+background { hue 51.0000 sat 0.7366 b -0.51 }
+//include ../tiles.cfdg
+//include ../tri4.cfdg
+
+rule castle {
+  3* { x 1 } blockage [ s 1.01 0.8 ]
+}
+
+//****
+
+rule blockage { blockage [ hue 50 ] }
+rule blockage {
+  blocks [ ]
+}
+
+rule blocks { circublock [ ]  soar [ ]}
+
+rule blocks .2 {  circublock [ ]  soar [ ]  wingleft [ z 4 ]}
+
+rule blocks .3 {  circublock [ ]  soar [ ]  wingright [ z -12 ]}
+
+rule blocks .4 {  circublock [ ]  soar [ ]  wingfront [ z 8 ]}
+
+rule soar {  blocks [ y 1 r 10]}
+
+rule soar {  towerend [ s 1.2 0.5 y 0.18 z 1.2]}
+
+rule soar .1 {
+  blocks [ y 0.20 x -.25 s 0.5]
+  blocks [ y 0.30 x .25 s 0.5]
+}
+
+rule wingleft {  bent [ x -.4 y -.4 s .6]}
+
+rule wingright {  bent [ flip 90 x -.4 y -.4 s .4]}
+
+rule wingfront {  bentf [ x .2 y -.4 s 1.4]}
+
+
+rule bent {
+  20* { s 1.03 1.01 x -.02 y .05 z .1} 
+     wallelement [ s .5 .5 b -.1 b .8 ]
+  blocks [ y 2 x -.5 z 2] 
+}
+
+rule bentf {
+  20* { s 1.03 1.01 x .006 y .05 z .1} 
+     wallelement [ s .5 .5 b -.1 b .8 ]
+  blocks [ y 1.8 x .14 z 2 s .9] 
+}
+
+
+rule towerend {
+  10* { s 0.95 .96 y -.055 b .1} roofelement [ s .9 7 y .3]
+}
+
+
+rule circublock {
+  20* { y -0.05 }
+     wallelement [ s 1 0.5 b 0.8 ]
+  wallornament [ z 1 y -.1]
+}
+
+rule wallelement { walltile [ ] }
+rule wallornament {
+  3* { x -.25 y .06 s .8 1} 
+    wovert [s .2 .15]
+  3* { x .25 y .06 s .8 1} 
+    wovert [s .2 .15]
+
+}
+
+rule wovert { 2* { y -4 } wo [ s .3] }
+rule wo 4 { }
+rule wo 2 { window [ ] }
+
+rule window { drawwindow [  b -1 ] }
+rule window { drawwindow [ b -.5 hue 60 sat -.4] }
+
+rule drawwindow {
+  SQUARE [ s 1 2.4]
+  CIRCLE [ s 1 2.8 y .56 ]
+}
+
+
+rule walltile {
+   brick [ s 0.15 0.2 y -2 b -.3 hue 240 sat .2]
+}
+
+
+rule shadow {
+  CIRCLE [ a -0.9 b -1 ]
+}
+
+
+rule brick {
+  5* { x -1.1 y .8 x -1 s 0.7 1 b -.08} drawbrick[ x -.5 s 3.1 .7]
+  6* { x 1.1 y .8 x 1 s 0.75 1 b -.15} drawbrick[ s 3.1 .7]
+}
+
+rule drawbrick { hvtile [ ] }
+
+rule roofelement { rooftile [ sat 0.0 b -.2] }
+rule rooftile { manyt [r 3] }
+
+
+//**** textures
+
+// wall texture
+
+rule hvtile { 3* { } vnoise [ a .3 ] }
+
+rule drawnoise { SQUARE [ b -.2 ] }
+rule drawnoise { SQUARE [ b .2 ] }
+
+rule vnoise {
+drawnoise [ ]
+vnoise [ x -.25 s .5 1]
+vnoise [ x .25 s .5 1]
+}
+rule vnoise { hnoise [ ] }
+rule vnoise .4 { drawnoise [ ] }
+
+rule hnoise { vnoise [ r 90 ] }
+
+
+// roof texture
+rule manyt {
+20* { } tri [ a -.9 s 1 1  ]
+}
+
+rule tri {
+drawtri [ ]
+tri [ y .289 s .5 ]
+tri [x -.25 y -.143 s .5 ]
+tri [ x .25 y -.143 s .5]
+tri [ s .5 flip 180 ]
+}
+rule tri 1.2{ }
+
+rule drawtri {
+TRIANGLE [ b .3]
+}
+
+rule drawtri {
+TRIANGLE [ b -.3]
+}
+
+

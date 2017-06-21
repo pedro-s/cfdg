@@ -1,0 +1,45 @@
+startshape longstemred
+background {hue 60 sat .2}
+
+rule longstemred
+{
+	flower{flip 180 r -60}
+}
+
+rule flower
+{
+	stem{hue 100 sat 1 b .7}
+	intense{hue 0 sat .8 b .7}
+}
+
+rule stem
+{
+	SQUARE{}
+	stem{x .9 r .2 size .995}
+}
+
+rule intense
+{
+	swirly{}
+
+	swirly{size .6}
+
+	swirly{size .2}
+}
+
+rule swirly
+{
+	happy{}
+	happy{r 60 b .3}
+	happy{r 120}
+	happy{r 180 b .3}
+	happy{r 240}
+	happy{r 300 b .3}
+}
+
+rule happy
+{
+	SQUARE{}
+	happy{x .9 r 2 size .995}
+}
+

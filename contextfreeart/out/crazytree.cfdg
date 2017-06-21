@@ -1,0 +1,31 @@
+startshape BL
+
+background {hue 220 b -.5 sat .5}
+
+rule BOTH {
+	BL {rotate 35}
+	BL {rotate -35 flip 90}
+}
+
+rule BL {
+	CIRC {}
+	WL {size 0.97 y .04 b .005}
+}
+rule BL {
+	CIRC {}
+	WL {size 0.99 y .05 b .004}
+}
+rule BL .9995 {
+	CIRCLE {hue 0 sat .1 b .05}
+	WL {size 0.999 y .07 b .002}
+}
+
+rule WL 30 {BL {rotate 3}}
+rule WL .5 {BOTH {}}
+rule WL 5 {BL {rotate -10 flip 90}}
+
+rule CIRC {CIRCLE {hue 30 sat 1}}
+rule CIRC {CIRCLE {hue 15 sat 1}}
+rule CIRC {CIRCLE {hue 25 sat 1}}
+rule CIRC {CIRCLE {hue 35 sat .5}}
+rule CIRC {CIRCLE {hue 45 sat 1}}

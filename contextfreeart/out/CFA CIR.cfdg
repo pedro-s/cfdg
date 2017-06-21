@@ -1,0 +1,51 @@
+startshape CIR
+
+CF::Background = [ b -1]
+
+shape CIR
+
+{
+//ISACC
+
+//Head
+CIRCLE [s 1.25 h 60.00 sat 0.3098 b 1.0000]
+
+//Face Detail
+CIRCLE [x -.4 y .4 s .1 skew 5 40 r -20 h 0.00 sat 0.0000 b 1.0000]
+
+//Body
+CIRCLE [y -.75 h 60.00 sat 0.3098 b 1.0000]
+
+//Eyes
+CIRCLE [x .3 s .3]
+
+CIRCLE [x- .3 s.3]
+
+//Eye Details
+CIRCLE [x .24 y .05 s .1 skew 5 10 h 0.00 sat 0.0000 b 1.0000]
+
+CIRCLE [x -.35 y .05 s .1 skew 5 10  h 0.00 sat 0.0000 b 1.0000]
+
+CIRCLE [x .37 y -.1 s .05 skew 5 10  h 0.00 sat 0.0000 b 1.00000]
+
+CIRCLE [x -.25 y -.1 s .05 skew 5 10 h 0.00 sat 0.0000 b 1.0000]
+
+//Tears
+CIRCLE [x .3 y -.335 s .25 skew 40 5 r 55 h 236.94 sat 1.0000 b 1.0000]
+
+CIRCLE [x -.3 y -.335 s .25 skew 40 5 r 55 h 236.94 sat 1.0000 b 1.0000]
+
+CIRCLE [y -.3 s .2 skew 5 15 r 135]
+
+//Arm
+CIRCLE [x .55 y -.7 skew 5 50 r 50 s .25 h 60.00 sat 0.3098 b 1.0000]
+
+CIRCLE [x -.55 y -.7 skew 5 50 r 10 s .25 h 60.00 sat 0.3098 b 1.0000]
+
+//Legs 
+
+CIRCLE [x .15 y -1.4 s .25 skew 1 50 r 30 h 60.00 sat 0.3098 b 1.0000]
+
+CIRCLE [x -.15 y -1.4 s .25 skew 1 50 r 30 h 60.00 sat 0.3098 b 1.0000]
+
+}

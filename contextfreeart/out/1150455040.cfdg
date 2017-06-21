@@ -1,0 +1,80 @@
+/*
+	Interesting variations:
+		BFH, STS                     - very overgrown
+		ARE, STT, FRC, ZOV, ZPA, SPK - complete variations
+		TAO, PRI, TOZ                - incomplete variations
+		BLA, ARC, ZOU                - very small variations
+*/
+
+startshape HUB
+
+rule HUB
+{
+	HAIR{hue 60.0 y 25}
+	HUB{r 3}
+}
+
+rule HUB 0.006
+{
+}
+
+rule SEGMENT
+{
+	TRIANGLE{}
+	TRIANGLE{s 4.4 b 1.0 sat 1.0 alpha -0.7}
+	TRIANGLE{s 10.0 b 1.0 sat 1.0 alpha -0.8}
+}
+
+rule SEGMENT
+{
+	TRIANGLE{}
+	TRIANGLE{x -0.08 b 1.0 sat 1.0 s 4.3 alpha -0.7}
+	TRIANGLE{s 10.0 b 1.0 sat 1.0 alpha -0.8}
+}
+
+rule SEGMENT
+{
+	TRIANGLE{}
+	TRIANGLE{x 0.04 b 1.0 sat 1.0 s 4.2 alpha -0.7}
+	TRIANGLE{s 10.0 b 1.0 sat 1.0 alpha -0.8}
+}
+
+rule HAIR
+{
+	SEGMENT{s 1 10}
+	HAIR_R{s 0.99 y 5 r 4 alpha -0.03 hue -1.8}
+}
+
+rule HAIR
+{
+	SEGMENT{s 1 10}
+	HAIR_L{s 0.99 y 5 r -4 alpha -0.03 hue -1.8}
+}
+
+rule HAIR 
+{
+	SEGMENT{s 1 10}
+	HAIR{s 0.99 y 5 alpha -0.03 hue -1.8}
+}
+
+rule HAIR_R
+{
+	SEGMENT{s 1 10}
+	HAIR_R{s 0.99 y 5 r 4 alpha -0.03 hue -1.8}	
+}
+
+rule HAIR_R 0.05
+{
+	HAIR{}
+}
+
+rule HAIR_L
+{
+	SEGMENT{s 1 10}
+	HAIR_L{s 0.99 y 5 r -4 alpha -0.03 hue -1.8}	
+}
+
+rule HAIR_L 0.05
+{
+	HAIR{}
+}

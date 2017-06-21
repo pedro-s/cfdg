@@ -1,0 +1,190 @@
+background {b -1}
+
+startshape start
+
+
+rule start {
+	curly3 {r 180 flip 90 hue 126 sat 0.84 b 0.36}
+	render {hue 126 sat 0.84 b 0.36}
+
+	curly3 {r 180 flip 90 hue 80 sat 0.84 b 0.36 x -5 y 5}
+	render {hue 80 sat 0.84 b 0.36 x -5 y 5}
+}
+
+rule render {
+	seg {}
+}
+
+//===================================
+//seg draws main stem segments
+
+rule seg {
+	//left-going segment -0.5x2
+	vineseg2 {y 1.5}
+	mem {y 0.5}
+	//new mem point
+	mem {y 1.5 x -0.2}
+	render {x -0.5 y 2 r 45 a -0.01}
+}
+
+rule seg {
+	//right-going segment 0.5x2
+	vineseg2 {y 1.5 flip 90}
+	mem { x 0.2 y 1.5 r -20}
+
+	//new mem point
+	mem {y 0.5}
+	render {x 0.5 y 2 r -45 a -0.01}
+}
+
+rule seg 0.23 {
+	//STOP
+	curly2 {}
+}
+
+rule seg 0.23 {
+	//STOP
+	curly3 {}
+}
+
+//===================================
+//mem draws features
+
+rule mem {
+	//RHS leaf
+	leaf1 {s 0.35 r -45}
+}
+
+rule mem {
+	//RHS leaf
+	leaf1 {s 0.45 r -45}
+}
+
+rule mem {
+	//RHS leaf
+	leaf1 {s 0.55 r -45}
+}
+
+rule mem {
+	//LHS leaf
+	leaf1 {s 0.35 r 60 flip 90}
+}
+
+rule mem {
+	//LHS leaf
+	curly1 {s 0.7}
+}
+
+rule mem {
+	//LHS leaf
+	curly1 {s 0.7 r 180}
+}
+
+rule mem {
+	//LHS leaf
+	curly1 {s 0.7 flip 90}
+}
+
+rule mem {
+	//LHS leaf
+	curly1 {s 0.7 flip 90 r 180}
+}
+
+rule mem {
+	//LHS flower
+	flower {r 45}
+}
+
+rule mem {
+	//LHS flower
+	flower {r 45 hue 60}
+}
+
+rule mem {
+	//LHS flower
+	flower {r -45}
+}
+
+rule mem {
+	//LHS flower
+	flower {r -45 hue 40}
+}
+
+rule mem {
+	//LHS flower
+	flower {r -45 hue 40 s 1.2}
+}
+
+rule mem {
+	//LHS flower
+	flower {r -45 hue 60 s 1.4}
+}
+
+rule mem {
+	//branch
+	render {r 45 s 0.6}
+}
+
+rule mem 0.7 {
+	//branch
+	render {r -45 s 0.98}
+}
+
+rule mem 0.7 {
+	//branch
+	render {r 270 s 0.98}
+}
+
+//===========================================
+
+rule flower {
+	lPrim {s 0.1 0.22 x 0.02 y 0.215 r 180 flip 90}
+	CIRCLE {x 0.02 y 0.625 s 0.4 h 111.93 sat 0.9223 b 0.6519}
+	CIRCLE {x 0.02 y 0.625 s 0.2 h 68.04 sat 0.7428 b 1.0000}
+	ring {x 0.02 y 0.625}
+	petals {x 0.02 y 0.625}
+}  
+
+rule ring {
+	360*{r 1} CIRCLE {y 0.1 s 0.005}
+}
+
+rule petals {
+	4*{r 90} ring {y 0.2 s 1.7 1}
+	4*{r 90} ring2 {y 0.2 s 1.7 1}
+}
+
+rule ring2 {
+	360*{r 1} CIRCLE {y 0.1 s 0.005}
+	80*{s 0.8 b 0.2 sat 0.1}	CIRCLE {s 0.2 h 258.41 sat 0.7 b 0.8}
+}
+
+path vineseg2 {
+	MOVETO {x 0 y -1.5}
+	CURVETO {x -0.5 y 0.5 x1 0 y1 0}
+	STROKE {width 0.1}
+}
+
+rule leaf1 {
+	lPrim {x 0.05 y 1.15}	//body
+	lPrim {s 0.3 0.7 b 0.6 x 0.05 y 1}	//inner bit
+	lPrim {s 0.20 0.5 y 0.25 x 0.02 r -6}  //stalk
+}
+
+rule lPrim {
+	40*{s 0.9 r 2 y 0.11}	CIRCLE {}
+}
+
+rule curly1 {
+	160*{s 0.89 r 8 x 0.07}	CIRCLE {s 0.2 x 0.1}
+}
+
+rule curly2 {
+	vineseg2 {y 1.5}
+	curly2 {x -0.5 y 2 r 45 s 0.85}
+}
+
+rule curly3 {
+	vineseg2 {y 1.5 flip 90}
+	curly3 {x 0.5 y 2 r -45 s 0.85}
+}

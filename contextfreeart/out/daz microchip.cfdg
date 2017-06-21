@@ -1,0 +1,46 @@
+startshape Chip
+
+background {b -1}
+
+rule Chip {
+	Sq {}
+	64*{x .03125} Conn [x .015 y 2.04 s .06]
+	64*{x .03125} Conn [x .015 y -.04 s .06 f 0]
+	64*{y .03125} Conn [y .015 x -.04 r 90 s .06]
+	64*{y .03125} Conn [y .015 x 2.04 r 90 s .06 f 0]
+}
+
+rule Conn {
+	SQUARE {h 175 sat 0.6 b 0.4 s 0.25 1}
+	CIRCLE {y -.3 s 0.15 z 1}
+	CIRCLE {y .3 s 0.15 b 0.5 z 1}
+	SQUARE {y 1 h 175 sat 0.6 b 0.4 s 0.1 2}
+}
+
+rule Sq {
+	Shp {}
+	Shd {}
+	SubSq {}
+}
+
+rule Shd {
+	SQUARE [x .75 y 1.5 a -.975 b 1]
+	SQUARE [x 1.5 y .75 a -.99 b 0]
+}
+
+rule Shp { CIRCLE [x 1 y 1 s 1.5 a -.9 h 112 sat 0.4 b 0.7] }
+rule Shp { SQUARE [x 1 y 1 s 1.5 a -.9 h 175 sat 0.5 b 0.8] }
+rule Shp { CIRCLE [x 1 y 1 s 1.5 a -.9 h 60 sat 0.7 b 0.8] }
+rule Shp { SQUARE [x 1 y 1 s 1.5 a -.9 b 1] }
+rule Shp { SQUARE [x 1 y 1 s 1.5 a -.995 b -1] }
+
+rule SubSq {
+	Sq {s .5 x .5 y .5}
+	Sq {s .5}
+	Sq {s .5 x 1}
+	Sq {s .5 y 1}
+	Sq {s .5 x 1 y 1}
+}
+
+rule SubSq 3 {Sq {s 1 .5} Sq {s 1 .5 y 1} }
+rule SubSq 3 {Sq {s .5 1} Sq {s .5 1 x 1} }

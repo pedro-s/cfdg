@@ -1,0 +1,93 @@
+startshape snow
+background{b 1 sat 1 h 210}
+
+// Render 0b100000000000 flakes.
+rule snow{
+  yy{s 1.0 b 1 h 210 a -0.25 }
+  yy{s 1.0 b 1 h 210 x 0.1 y 0.1}
+}
+
+rule flake{
+ f0{}
+ f1{}
+ f2{}
+ f3{}
+}
+
+rule f0{ 6*{r 60}SQUARE{s 0.25 4 y 2} }
+rule f0{ 6*{r 60}SQUARE{s 0.25 3.125 y 1.5625} }
+rule f0{ 6*{r 60}SQUARE{s 0.25 4 y 2} }
+
+rule f1{ 6*{r 60}d1{y 1.25} }
+rule f1{ 6*{r 60}u1{y 1.25} }
+rule f1{ 6*{r 60}d2{y 1.25} }
+rule f1{ 6*{r 60}u2{y 1.25} }
+rule f1{ 6*{r 60}d3{y 1.25} }
+rule f1{ 6*{r 60}u3{y 1.25} }
+rule f2{ 6*{r 60}d1{y 2.25} }
+rule f2{ 6*{r 60}u1{y 2.25} }
+rule f2{ 6*{r 60}d2{y 2.25} }
+rule f2{ 6*{r 60}u2{y 2.25} }
+rule f2{ 6*{r 60}d3{y 2.25} }
+rule f2{ 6*{r 60}u3{y 2.25} }
+rule f3{ 6*{r 60}d1{y 3.25} }
+rule f3{ 6*{r 60}u1{y 3.25} }
+rule f3{ 6*{r 60}d2{y 3.25} }
+rule f3{ 6*{r 60}u2{y 3.25} }
+rule f3{ 6*{r 60}d3{y 3.25} }
+rule f3{ 6*{r 60}u3{y 3.25} }
+
+rule u1{ 2*{flip 90}SQUARE{s 0.25 1 x -.45 r 60} }
+rule u2{ 2*{flip 90}SQUARE{s 0.25 1.25 x -.575 r 60} }
+rule u3{ 2*{flip 90}SQUARE{s 0.25 0.75 x -.325 r 60} }
+
+rule d1{ 2*{flip 90}SQUARE{s 0.25 1 x .45 r 60} }
+rule d2{ 2*{flip 90}SQUARE{s 0.25 1.25 x .575 r 60} }
+rule d3{ 2*{flip 90}SQUARE{s 0.25 0.75 x .325 r 60} }
+
+rule yy{32*{y 0.2}xx{y -3.4}}
+rule xx{32*{x 0.2}bb{x -3.4}}
+
+rule bb{cc{}}
+rule bb{cc{r 2}}
+rule bb{cc{r 5}}
+rule bb{cc{r 7}}
+rule bb{cc{r 10}}
+rule bb{cc{r 13}}
+rule bb{cc{r 15}}
+rule bb{cc{r 18}}
+rule bb{cc{r 20}}
+rule bb{cc{r 22}}
+rule bb{cc{r 25}}
+rule bb{cc{r 28}}
+rule cc{aa{s 0.1}}
+rule cc{aa{s 0.06}}
+rule cc{aa{s 0.14}}
+rule cc{aa{s 0.08}}
+rule cc{aa{s 0.12}}
+rule cc{aa{s 0.16}}
+rule cc{aa{s 0.18}}
+rule aa{ab{}}
+rule aa{ab{x 0.1}}
+rule aa{ab{x 0.2}}
+rule aa{ab{x 0.3}}
+rule aa{ab{x 0.4}}
+rule aa{ab{x 0.5}}
+rule aa{ab{x -0.1}}
+rule aa{ab{x -0.2}}
+rule aa{ab{x -0.3}}
+rule aa{ab{x -0.4}}
+rule aa{ab{x -0.5}}
+rule ab{az{}}
+rule ab{az{y 0.1}}
+rule ab{az{y 0.2}}
+rule ab{az{y 0.3}}
+rule ab{az{y 0.4}}
+rule ab{az{y 0.5}}
+rule ab{az{y -0.1}}
+rule ab{az{y -0.2}}
+rule ab{az{y -0.3}}
+rule ab{az{y -0.4}}
+rule ab{az{y -0.5}}
+
+rule az{flake{s 0.125}}

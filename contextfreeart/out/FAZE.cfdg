@@ -1,0 +1,28 @@
+startshape FAZE
+background {h 11.56 sat 0.9980 b 1.0000}
+rule FAZE
+
+{
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 skew 20 10  r -250 x -.25}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 skew -20 -10 r -290 flip 180 x 1}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 skew -20 -10 r 10 s.8 x .57 y .071}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 s .6 x .4 y -.7}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 s .6 x .4 y -1.2}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 skew -20 -10  s.65 x .4 y -1.4 r 100}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 x .8 y -1.165 r 90 s .4}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 skew -20 -10  s .535 x 1 y -1.2 r -290}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 skew -20 -10  s.435 x -.175 y -.75 r -170}
+
+SQUARE {h 340.02 sat 0.1301 b 0.0000 x -.05 y -.75 r 90 s .4}
+
+TRIANGLE {h 340.02 sat 0.1301 b 0.0000 x.76 y -1.44 s .25 r 30}
+}

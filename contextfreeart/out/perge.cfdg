@@ -1,0 +1,18 @@
+startshape sor
+
+rule doboz
+{
+	SQUARE{ }
+	SQUARE {s 0.98 b 1}
+}
+rule perge
+{
+	doboz { }
+	perge { s 0.97 r 2}
+}
+
+rule sor
+{
+	perge {hue 18 sat 0.8 }
+	sor { r 20 s 0.8 }
+}

@@ -1,0 +1,22 @@
+background {b 1 }
+
+startshape lala
+
+rule lala{
+80* {r 4.5 h 0  } uno{}}
+
+rule uno{
+30* {s 0.6 x 1.6 a -0.01 h -15  flip 35  } 
+		dos{}
+}
+
+rule dos {
+	otra{s 2 h -10 sat 0.8}
+	otra{s 2 r 45   }
+	dos{s 0.8 r 45   }
+}
+
+rule otra{
+	SQUARE{a -0.2 }
+	SQUARE{s .98 b 1 a -0.1}
+}

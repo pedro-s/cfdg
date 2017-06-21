@@ -1,0 +1,19 @@
+startshape illusion 
+
+background {b -1}
+
+rule illusion {
+	CUBE1 {}
+	CUBE2 {}
+}
+
+rule CUBE1 { 
+SQUARE{ x .5 y -.5  skew 0 20 h 200 sat 1 b .9} 
+SQUARE{ x 1.5 y -.5 skew 0 340 h 200 sat 1 b .7} 
+SQUARE { s .96 skew 25 25 r 315 x 1 y -1.18 h 200 sat 1 b .5} 
+}
+
+rule CUBE2 {
+CUBE1{x 1.297 y -.98 s .3 r 180}
+}
+

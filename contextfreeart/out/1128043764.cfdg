@@ -1,0 +1,85 @@
+startshape curvestar
+
+rule curvestar
+{
+	star{size .8 h 0 sat 1}
+	star{size .6 h 20 sat 1}
+	star{size .4 h 30 sat 1}
+	star{size .2 h 50 sat 1}
+}
+
+rule star
+{
+	curve_r_90{}
+	curve_r_90{r 45}
+}
+
+rule curve_r_90
+{
+	curve{}
+	curve{r 90}
+}
+
+
+
+rule curve
+{
+	curveright{}
+	curveright{r 180}
+}
+
+
+rule curveright{
+	curveright_0.9_5{}
+	curveright_0.9_4{}
+	curveright_0.9_3{}
+	curveright_0.9_2{}
+
+	curveleft_0.9_5{}
+	curveleft_0.9_4{}
+	curveleft_0.9_3{}
+	curveleft_0.9_2{}
+}
+
+
+
+ rule curveright_0.9_5 {
+SQUARE { } 
+ curveright_0.9_5 { rotate -5 size 0.9 x -0.0124921 y 0.909067 b .1}
+}
+
+ rule curveleft_0.9_5 {
+SQUARE { } 
+ curveleft_0.9_5 { rotate 5 size 0.9 x -0.0124921 y 0.909067}
+}
+
+ rule curveright_0.9_4 {
+SQUARE { } 
+ curveright_0.9_4 { rotate -4 size 0.9 x -0.0197055 y 0.917513 b .1}
+}
+
+ rule curveleft_0.9_4 {
+SQUARE { } 
+ curveleft_0.9_4 { rotate 4 size 0.9 x -0.0197055 y 0.917513}
+}
+
+ rule curveright_0.9_3 {
+SQUARE { } 
+ curveright_0.9_3 { rotate -3 size 0.9 x -0.0197055 y 0.917513 b .1}
+}
+
+ rule curveleft_0.9_3 {
+SQUARE { } 
+ curveleft_0.9_3 { rotate 3 size 0.9 x -0.0197055 y 0.917513}
+}
+
+
+ rule curveright_0.9_2 {
+SQUARE { } 
+ curveright_0.9_2 { rotate -2 size 0.9 x -0.0197055 y 0.917513 b .1}
+}
+
+ rule curveleft_0.9_2 {
+SQUARE { } 
+ curveleft_0.9_2 { rotate 2 size 0.9 x -0.0197055 y 0.917513}
+}

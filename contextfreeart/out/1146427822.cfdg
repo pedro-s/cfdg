@@ -1,0 +1,166 @@
+/* Fully randomized with seven
+different size settings */
+
+
+startshape 16er
+
+rule B1{
+	SQUARE{s 7 b 0.9 h 90 sat 1 b 1}
+	SQUARE{x -2 y -2.5 s 1.25 2 h 115 sat 0.9 b 0.6}
+	SQUARE{x 2 y 2.5 s 1.25 2 h 115 sat 0.9 b 0.6}
+	SQUARE{x -1 y -2 s 3 1.25 h 115 sat 0.9 b 0.6}
+	SQUARE{x 1 y 2 s 3 1.25 h 115 sat 0.9 b 0.6}
+	SQUARE{s 1.25 5 h 115 sat 0.9 b 0.6}
+	SQUARE{x 2.5625 y 1.4375 s 0.125 h 115 sat 0.9 b 0.6}
+	SQUARE{x -2.5625 y -1.4375  s 0.125 h 115 sat 0.9 b 0.6}
+	SQUARE{x 0.5625 y -2.5625 s 0.125 h 115 sat 0.9 b 0.6}
+	SQUARE{x -0.5625 y 2.5625 s 0.125 h 115 sat 0.9 b 0.6}
+	SQUARE{s 0.075 4.075 b 1 h 180 sat 0.2 b 1}
+	SQUARE{x -2 y -2.73 s 0.075 1.5375 h 180 sat 0.2 b 1  }
+	SQUARE{x 2 y 2.73 s 0.075 1.5375 h 180 sat 0.2 b 1 }
+	SQUARE{x -1 y -2 s 2 0.075 h 180 sat 0.2 b 1}
+	SQUARE{x 1 y 2 s 2 0.075 h 180 sat 0.2 b 1}
+}
+
+rule B2{
+	SQUARE{s 7 b 0.9 h 90 sat 1 b 1}						
+	SQUARE{x -2 s 1.25 7 h 115 sat 0.9 b 0.6}							
+	SQUARE{x -2 s 0.075 7 b 1 h 180 sat 0.2 b 1}
+}
+
+
+rule B3{
+	SQUARE{s 7 h 90 sat 1 b 1}	
+	SQUARE{x  2 y 0.5 s 1.25 6 h 115 sat 0.9 b 0.6}
+	SQUARE{x -0.5 y -2 s 6 1.25 h 115 sat 0.9 b 0.6}
+	SQUARE{x  2.5625 y -2.5625 s 0.125 h 115 sat 0.9 b 0.6}
+	SQUARE{x  2 y 0.74 s 0.075 5.525 h 180 sat 0.2 b 1}
+	SQUARE{x -0.74 y -2 s 5.525 0.075 h 180 sat 0.2 b 1}
+}
+
+rule B4{
+	SQUARE{s 7 b 0.9 h 90 sat 1 b 1}						
+	SQUARE{x -2 s 1.25 7 h 115 sat 0.9 b 0.6}
+	SQUARE{x -2.5 y 2 s 2 1.25 h 115 sat 0.9 b 0.6}
+	SQUARE{x -2.5 y -2 s 2 1.25 h 115 sat 0.9 b 0.6}		
+	SQUARE{x -2 s 0.075 7 b 1 h 180 sat 0.2 b 1}
+	SQUARE{x -2.74 y 2 s 1.525 0.075 h 180 sat 0.2 b 1}
+	SQUARE{x -2 s 0.075 7 b 1 h 180 sat 0.2 b 1}
+	SQUARE{x -2.74 y 2 s 1.525 0.075 h 180 sat 0.2 b 1}
+	SQUARE{x -2.74 y -2 s 1.525 0.075 h 180 sat 0.2 b 1}
+}
+
+rule B5{
+	SQUARE{s 7 h 90 sat 1 b 1}						
+	SQUARE{x -2 y 2.5 s 1.25 2 h 115 sat 0.9 b 0.6}	
+	SQUARE{x -2.5 y 2 s 2 1.25 h 115 sat 0.9 b 0.6}	
+	CIRCLE{x 2 y -2 s 1.25 h 115 sat 0.9 b 0.6}
+	SQUARE{x -1.4375 y 1.4375 s 0.125 h 115 sat 0.9 b 0.6}	
+	SQUARE{x -2 y 2.74 s 0.075 1.525 h 180 sat 0.2 b 1}	
+	SQUARE{x -2.74 y 2 s 1.525 0.075 h 180 sat 0.2 b 1}	
+	CIRCLE{x 2 y -2 s 0.115 b 1 h 180 sat 0.2 b 1}
+}
+
+rule Konfig{
+	B1{}
+}
+rule Konfig{
+	B1{r 90}
+}
+rule Konfig{
+	B1{r 180}
+}
+rule Konfig{
+	B1{r 270}
+}
+rule Konfig{
+	B2{}
+}
+rule Konfig{
+	B2{r 90}
+}
+rule Konfig{
+	B2{r 180}
+}
+rule Konfig{
+	B2{r 270}
+}
+rule Konfig{
+	B3{}
+}
+rule Konfig{
+	B3{r 90}
+}
+rule Konfig{
+	B3{r 180}
+}
+rule Konfig{
+	B3{r 270}
+}
+rule Konfig{
+	B4{}
+}
+rule Konfig{
+	B4{r 90}
+}
+rule Konfig{
+	B4{r 180}
+}
+rule Konfig{
+	B4{r 270}
+}
+rule Konfig{
+	B5{}
+}
+rule Konfig{
+	B5{r 90}
+}
+rule Konfig{
+	B5{r 180}
+}
+rule Konfig{
+	B5{r 270}
+}
+
+rule 1er{
+	Konfig{}
+}
+
+rule 2er{
+	1er{x -3.5}
+	1er{x 3.5}
+}
+
+rule 4er{
+	2er{y -3.5}
+	2er{y 3.5}
+}
+
+rule 9er{
+	4er{x -10.5 y  10.5}
+	4er{x -3.5 y 3.5}
+	4er{x -3.5 y 10.5}
+	4er{x -10.5 y 3.5}
+}
+
+rule 16er{
+	4er{x -7 y  7}
+	4er{x 7 y 7}
+	4er{x -7 y -7}
+	4er{x 7 y -7}
+}
+
+rule 64er{
+	16er{x -14 y  14}
+	16er{x 14 y 14}
+	16er{x -14 y -14}
+	16er{x 14 y -14}
+}
+
+rule 256er{
+	64er{x -28 y  28}
+	64er{x 28 y 28}
+	64er{x -28 y -28}
+	64er{x 28 y -28}
+}
+

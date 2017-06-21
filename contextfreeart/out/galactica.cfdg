@@ -1,0 +1,36 @@
+background { b -1 }
+startshape main
+
+
+rule main {
+	center { z -10 b 0.9 s 7.5 h 25 sat 0.1 a -0.5 }
+	draw { skew -40 -1 r -15 }
+	draw { skew -40 -1 r -15 y -2.5 x -2.5 }
+}
+
+rule draw {
+	spiral { z -1  x -15 y -5 sat 0.1 b 1 h 25 }
+	spiral { z -1 r 120  x 5 y -15 sat 0.1 b 1 h 25 }
+	spiral { z -1 r -100 x 5 y 5 sat 0.1 b 1 h 25 }
+}
+
+rule center {
+	20000 * { r 1 } star { }
+}
+
+rule spiral { 
+	100 * { r -5.1 y 1 s 1.02  a -0.01 sat 0.01 } 
+		stars { s 1 x 1 }
+}
+
+rule stars {
+	72* { r 5 } star {  }
+	72* { r 5 } star { x -1 }
+}
+
+rule star { star { y 0.05 s 0.9995 sat 0.005 } }
+rule star { star { x -0.06 s 0.995 sat 0.005 } }
+
+rule star 0.012 {
+	CIRCLE { s 0.1 }
+}

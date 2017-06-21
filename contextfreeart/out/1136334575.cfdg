@@ -1,0 +1,83 @@
+startshape SPIKES
+
+include i_pix.cfdg
+
+rule SPIKES {
+	Hh {r -45 b 0.6 sat 1 hue 113  }
+	
+}
+
+
+rule Hh 10 { 
+       H_5by5 {  r 90 } 			
+								Ah { y 1.5 s 0.98 r -10 hue 113}
+ }
+rule Hh 1 {
+	Hh{ x 0.5 r -20}
+ 	Hl {x -0.5 r 20}
+ }
+rule Hl 10 {
+	  H_5by5 {  r 90}			
+								Al { y 1.5 s 0.96 r 10 hue 113}
+}
+rule Hl 1 {
+	Hh{ x 0.5 r -20}
+	Hl {x -0.5 r 20}
+}
+
+
+rule Ah 10 { 
+       A_5by5 {  r 90 } 			
+								Ph { y 1.5 s 0.96 r -10 hue 113}
+ }
+rule Ah 1 {
+	 Ah{ x 0.5 r -20}
+ 	 Al {x -0.5 r 20}
+ }
+rule Al 10 {
+	 A_5by5 {  r 90}			
+								Pl { y 1.5 s 0.96 r 10 hue 113}
+}
+rule Al 1 {
+	Ah{ x 0.5 r -20}
+	Al {x -0.5 r 20}
+}
+
+
+rule Ph 10 { 
+       P_5by5 {  r 90 }
+	 P_5by5 {  y 1.5 r 90 hue 113 } 			
+								Yh {y 3 s 0.96 r -10 hue 226}
+ }
+rule Ph 1 {
+	 Ph{ x 0.5 r -20}
+ 	 Pl {x -0.5 r 20}
+ }
+rule Pl 10 {
+       P_5by5 {  r 90 }
+	 P_5by5 {  y 1.5 r 90 hue 113 } 			
+								Yl { y 3 s 0.96 r 10 hue 226}
+}
+rule Pl 1 {
+	Ph{ x 0.5 r -20}
+	Pl {x -0.5 r 20}
+}
+
+
+rule Yh 10 { 
+       Y_5by5 {  r 90 } 			
+								Hh { y 2 s 0.96 r -10 hue 113}
+ }
+rule Yh 1 {
+	 Yh{ x 0.5 r -20}
+ 	 Yl {x -0.5 r 20}
+ }
+rule Yl 10 {
+	 Y_5by5 {  r 90}			
+								Hl { y 2 s 0.96 r 10 hue 113}
+}
+rule Yl 1 {
+	  Yh{ x 0.5 r -20}
+	Yl {x -0.5 r 20}
+}
+

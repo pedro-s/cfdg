@@ -1,0 +1,19 @@
+startshape Jadeite
+background{b-.3 sat.2 hue 60}
+
+rule Jadeite{10*{z.01 b.1 s.95 h 1}
+ A{sat .8 b.2 a.5}}
+
+rule A {B{s.9}A{x.2}}
+rule A {B{s.9}A{y.2}}
+rule A 33{B{s.9}A{x.1}}
+rule A 33{B{s.9}A{y.1}}
+rule A 50{B{s.9}A{}}
+rule A 33{B{s.9}A{x-.1}}
+rule A 33{B{s.9}A{y-.1}}
+rule A {B{s.9}A{x-.2}}
+rule A {B{s.9}A{y-.2}}
+rule A{}
+
+rule B{7*{z.1 b.2 sat.4 s.98 h 12 y.08}
+ CIRCLE{h 70 s 1.3 1}}

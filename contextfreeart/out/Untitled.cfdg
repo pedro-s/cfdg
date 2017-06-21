@@ -1,0 +1,16 @@
+startshape bar
+
+rule bar {
+	foo [hue 125 b 0.2 sat 1 r 70]
+}
+
+rule foo {
+	CIRCLE []
+	SQUARE [x 1]
+	foo [s 0.95 r 16 x 2 b 0.1 h 13]
+}
+
+rule foo 0.05 {
+	foo [r 270]
+	foo [r 12]
+}

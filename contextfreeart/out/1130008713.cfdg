@@ -1,0 +1,26 @@
+startshape starfish
+
+rule starfish{
+ hexes[r 0 y 5]
+ hexes[r 72 y 5]
+ hexes[r 144 y 5]
+ hexes[r 216 y 5]
+ hexes[r 288 y 5]
+ hexed[r 36 y 4]
+ hexed[r 108 y 4]
+ hexed[r 180 y 4]
+ hexed[r 252 y 4]
+ hexed[r 324 y 4]
+}
+
+rule hexes{
+ CIRCLE{}
+ hexes{s .8 y 5}
+ hexed[r 36 y 3 s .8 ]
+ hexed[r -36 y 3 s .8 ]
+}
+
+rule hexed{
+ CIRCLE{}
+ hexed{s .8 y 2.5}
+}

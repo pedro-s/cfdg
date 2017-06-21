@@ -1,0 +1,11 @@
+startshape STARS
+background { a -1 }
+
+rule STARS {
+TRIANGLE { }
+TRIANGLE {r 30 }
+TRIANGLE {r 60 }
+TRIANGLE {r 90 }
+STARS {z - 1 s .7 h 241.34 sat 0.9497 b 1.0000 }
+STARS {z - 1 s .7 h 241.34 sat 0.9497 b 1.0000 }
+}

@@ -1,0 +1,44 @@
+startshape blob
+
+rule blob 20
+{
+bloba {}
+blob {x 1}
+}
+
+rule blob 20
+{
+bloba {}
+blob {x -1}
+}
+
+rule blob 100
+{
+blob {s .99}
+}
+
+rule blob 10
+{
+bloba {}
+blob {y -1}
+}
+
+rule bloba {
+CIRCLE {size 2}
+bloba { size .1 x .99}
+}
+
+rule bloba 20 {
+bloba {y 1 rotate 3}
+bloba {size .3}
+}
+
+rule bloba 20 {
+bloba {y 1 rotate -3}
+bloba {size .3}
+}
+
+rule bloba 1 {
+bloba {size .91}
+}
+

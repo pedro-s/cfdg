@@ -1,0 +1,12 @@
+startshape PORTAL
+background { b -1 }
+rule PORTAL {
+SWIRL { }
+}
+rule SWIRL {
+CIRCLE { y 1 }
+CIRCLE { y -1 }
+CIRCLE { x 1 }
+CIRCLE { x -1 }
+SWIRL { rotate 5 size .99 b .01 }
+}

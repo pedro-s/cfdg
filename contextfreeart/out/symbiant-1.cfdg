@@ -1,0 +1,73 @@
+startshape UNO
+
+background { b -.95 sat .2 hue 200}
+
+rule UNO
+{
+200* {  r  36  s .999999  }  SEME {}
+500* {   r  36  s .99975  }  SEMEA {}
+}
+
+rule SEMEA .003 {PUNTO2 {flip 90 y 18}}
+rule SEMEA  .01 {SEMEA {r 9.53}}
+rule SEMEA  {SEMEA {y 0.00651 x .0005}}
+
+
+
+rule PUNTO2 5 {
+RECTB{  s .071 flip 110 r -10 b 1 z -10 sat +.1 }
+CIRCLE{s .3 b 1}
+}
+
+
+rule SEME .001 {PUNTO {y 30 hue 10}}
+rule SEME  {SEME {r 19.53}}
+
+
+rule PUNTO 35 { PUNTO {r 2 b -.5  z +1} }
+rule PUNTO 35 { PUNTO {r -2 b -.5  z +1} }
+rule PUNTO 5 { PUNTO {s .80  b -.6 flip 90}}
+rule PUNTO 5 {PUNTO {y+.3}}
+rule PUNTO 5 {PUNTO {y +.11}}
+
+
+rule PUNTO {
+
+//CIRCLE {}
+
+RECTA{ s .92 b 1}
+RECTB{ s .10 flip 0 r -10 b 1 z -10 }
+RECTB{ s .10 flip 0 r 10 b 1 z -10 }
+RECTB{ s .10 flip 0 r -20 b 1 z -10 }
+RECTB{ s .10 flip 0 r 20 b 1 z -10 }
+RECTB{ s .10 flip 0 r -30 b 1 z -10 }
+RECTB{ s .10 flip 0 r 30 b 1 z -10 }
+}
+
+
+rule RECTA {
+SQUARE { } 
+RECTA { s 0.9485 y 1   b -.04 r 0.51 sat +.02 hue +.25 } 
+} 
+
+rule RECTA 0.051 {RECTA { flip 90 }} 
+
+
+
+rule RECTB { 
+SQUARE { } 
+RECTB { s 0.9975 y 1   b -.0035 r 2.317 sat +.01 hue -.025 alpha -.00121}} 
+
+rule RECTB 0.051 { RECTB { flip 90 } } 
+
+
+
+
+
+
+
+
+
+
+
+

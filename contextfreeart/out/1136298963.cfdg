@@ -1,0 +1,81 @@
+startshape START
+background { b -0.9 sat 0.7 hue 200}
+
+rule START
+{
+	PATH { }
+}
+
+rule PATH
+{
+	PATHL { }
+}
+
+rule PATH
+{
+	PATHR { }
+}
+
+rule PATH 0.4
+{
+	PATHL { r 45 }
+	PATHR { r -45 }
+}
+
+rule PATHR
+{
+	SEGMENT { b 0.8 h 12 sat 0.7 }
+	PATHR { r 5 y 1 s 0.97 h 2 }
+}
+
+rule PATHR 0.06
+{
+	PATH { }
+}
+
+rule PATHL
+{
+	SEGMENT { b 0.8 h 12 sat 0.7 }
+	PATHL { r -5 y 1 s 0.97 h 2 }
+}
+
+rule PATHL 0.06
+{
+	PATH { }
+}
+
+rule SEGMENT
+{
+	SHAPE { }
+	SHAPE { r 180 }
+}
+
+rule SEGMENT 0.05
+{
+	SHAPE { }
+	SHAPE { r 180 }
+	ARML { a -0.3 }
+	ARMR { a -0.3 r 180 }
+}
+
+rule SHAPE
+{
+	CIRCLE { }
+	CIRCLE { s 0.5 b -1 }
+	SHAPE { s 0.6 x -0.8 y -0.2 alpha -0.3 b -0.2 }
+	SHAPE { s 0.6 x +0.8 y -0.2 alpha -0.3 b -0.2 }
+}
+
+rule ARMR
+{
+	SQUARE {  }
+	SQUARE { s 0.8 b -2 }
+	ARMR { s 0.8 x 1.8 a -0.3 r 3 }
+}
+
+rule ARML
+{
+	SQUARE {  }
+	SQUARE { s 0.8 b -2 }
+	ARML { s 0.8 x 1.8 a -0.3 r -3 }
+}

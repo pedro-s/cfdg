@@ -1,0 +1,60 @@
+startshape galaxies
+
+background {b -1 }
+//tile { s 1}
+
+rule galaxies
+{
+	galaxy{s .3 1 1  r 45}
+	galaxy{s .7 .5 1 y 1 }
+	galaxy{s .1 .5 1 x 1 y .7 r -45}
+}
+
+rule galaxy
+{
+	center{s .2 b .1 sat .5 h 40}
+	//CIRCLE{s .15 b 0}
+	CIRCLE{ s .01 y .7 b 1}
+	stars{}	
+}
+rule center
+{
+	CIRCLE{}
+	center{b .15 s .9}
+}
+rule stars
+{
+	diam{s 1}
+}
+rule diam 1
+{
+	rot {s 1.02}
+}
+rule diam 1
+{
+	rot {s .98}
+}
+rule rot 1
+{
+	star{r 1}
+}
+rule rot 1
+{
+	star{r 3}
+}
+rule rot 1
+{
+	star{r -1}
+}
+rule star 1
+{
+	CIRCLE{ s .01 y .7 b 1 h 20 sat 0}
+	//CIRCLE{ s .05 y .1 b 1}
+	stars{}
+}
+rule star 1
+{
+	CIRCLE{s .005 y .6 b 1 h -20 sat 0}
+	//CIRCLE {s .05 y .1 b 1}
+	stars{}
+}

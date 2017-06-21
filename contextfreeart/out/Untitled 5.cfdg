@@ -1,0 +1,16 @@
+startshape spin
+
+background {b -0.3}
+
+rule spin {
+	CIRCLE{ s 4 sat 0 b 0 z -5}
+	//CIRCLE{ s 15 sat 1 b 0 z -8}
+	CIRCLE{ sat 1 b .9}
+	spin[x .1 r 1]
+}
+
+rule spin 0.0027 {
+	spin{ flip 0 hue 10 z -.1}
+}
+
+rule spin 0.0001 {}

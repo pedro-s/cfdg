@@ -1,0 +1,48 @@
+startshape START 
+background { b -0.7 hue 50 sat 0.5}
+
+rule START {
+	ARM { hue 50 sat 0.8 b 0.5}
+	ARM { flip 150 hue 50 sat 0.8 b 0.5}
+}
+
+rule ARM {
+	SHAPE {}
+	SHAPE { x 50 alpha -0.5 }
+	ARM { s 0.7 alpha -0.08 hue 1}
+}
+
+
+rule ARM 0.05 {
+	ARM { y 1 r 90 s 0.99 alpha -0.01}
+	ARM { y 1 r -90 s 0.99 alpha -0.01}
+}
+
+rule ARM 0.05 {
+	ARM { y 1 flip 90 s 0.99 alpha -0.01}
+}
+
+rule SHAPE {
+	CIRCLE {x -3 s 5 1}
+	CIRCLE { x 3 s 5 2}
+	CIRCLE {x -4 s 3 1 alpha -0.5}
+	CIRCLE { x 2 s 3 2 alpha -0.5}
+
+
+	SHAPE { x 15 s 0.999 b 0.05 }
+}
+
+rule SHAPE 0.5  {
+	CIRCLE {x -5 s 3 10}
+	CIRCLE { x 5 b 1 s 7 5}
+	CIRCLE {x -15 s 15 10 alpha -0.5}
+	CIRCLE { x 1 b 1 s 7 5 alpha -0.5}
+
+	SHAPE { x 1 s 0.999 b 0.05 r 20 hue -0.1}
+}
+
+rule SHAPE 0.01 {
+	SHAPE { }
+	CIRCLE { y 10 s 100 50 alpha -0.7}
+	CIRCLE { x 100 s 50 40 alpha -0.5}
+}

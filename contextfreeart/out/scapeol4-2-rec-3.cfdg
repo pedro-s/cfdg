@@ -1,0 +1,31 @@
+startshape bb
+background { hue 220 b -.6 sat 1 }
+rule scape {
+	bb { }
+	scape { x 7 y 4 s .9 z -5 a -.01}
+	scape { x -8.5 y 4.5 s .9 z -5 a -.01}
+}
+rule scape 1.5 { }
+rule bb { 8 * { y .7 z .25} monster{ hue 220 sat 1} }
+
+rule monster{
+
+	cont{ y .2 x -.6975 s 1.1 .9 .9 z -5}
+	cont{ y .2 x .6975 s 1.1 .9 .9 z -5}
+	cont{ s .9 1 x -1.3225 y -.05 r 4.75 }
+	cont{ s .9 1 x 1.3225 y -.05 r -4.75}
+}
+rule cont 6 { 	cub { b .4 }}
+rule cont { monster{ } 	cub { b .4 }}
+
+//rule cub { cub { x .251 } }
+//rule cub { cub { x -.251 } }
+// cube
+rule cub {
+	top { b .2 s 1 .25 y .449  }
+	2* { flip 90 b -.4 hue -20} side { s .715 x .3425 skew 2.5 14 }
+}
+rule top {	CIRCLE { s 1.2 r 45 b 1 sat -.9 a -.8} }
+rule side {	side { x .1} } 
+rule draw { 	SQUARE { } }
+rule side .4 { draw { } monster { s .25 1.1 .2 y -.1 z 1} }

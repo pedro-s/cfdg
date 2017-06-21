@@ -1,0 +1,23 @@
+startshape Start
+
+background{b -1}
+rule Start{
+200*{r 130 x 1 y 1} A { r 25 b 1 sat 1 hue 0}
+
+}
+
+rule A {
+CIRCLE {}
+A {hue  .9 b -.01 s .99 r 1 x .1}
+}
+rule A .3 {
+CIRCLE {}
+A {hue -1 b -.01 s .92 r -1 x .1}
+
+}
+
+rule A .7 {
+CIRCLE {}
+A {hue .1 b -.01 s .99 r -1 x .1}
+}
+

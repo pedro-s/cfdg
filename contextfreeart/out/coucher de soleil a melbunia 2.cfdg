@@ -1,0 +1,28 @@
+startshape ALL
+
+background {b -1}
+
+rule ALL {SUN {s 10 y -11} B {s 1.6} PLA {a -.5 s .8 x 1 y 30}}
+
+rule SUN {CIRCLE {hue 40 sat 1 b 1 a -0.994} SUN {x 0.1 r 5 s 0.999 hue 0.01}}
+rule SUN {CIRCLE {s 0.5 hue 40 sat 1 b 1 a -0.994} SUN {x 0.1 r 5 s 0.999 hue 0.01}}
+rule SUN {CIRCLE {s 1.5 hue 30 sat 1 b 1 a -0.994} SUN {x 0.1 r 5 s 0.999 hue 0.01}}
+
+rule B {A2 {} B { s 0.95 hue -0.5}}
+
+rule A2 {A1 {} A1 {flip 90}}
+
+rule A1 {A {x 0.5} A1 {x 1 s 0.96 1}}
+
+rule A {SQUARE {hue 180 sat 1 b 1 a -0.99} A {y -1.6 s 1 0.93}}
+rule A 0.5 {SQUARE {s 3 hue 180 sat 1 b 1 a -0.99} A {y -1.6 s 1 0.93}}
+rule A 0.1 {SQUARE {s 6 hue 180 sat 1 b 1 a -0.99} A {y -1.6 s 1 0.93}}
+rule A 0.5 {SQUARE {y -0.5 s 20 0.5 hue 200 sat 1 b 1 a -0.99} A {y -1.6 s 1 0.93}}
+
+rule PLA {PLA1 {r 30} PLA1 {r 150} PLA1 {r 270}}
+
+rule PLA1 {STARS {} PLA1 {s 0.97 x 15 r 50 hue 1 sat 1 b 1}}
+rule PLA1 {STARS {} PLA1 {s 0.97 x 5 r 50 hue 1 sat 1 b 1}}
+
+rule STARS {CIRCLE {s 0.1 5 hue 200 sat 1 b 1} STARS {r 20 s 0.95 x 0.1 hue 240 sat 1 b 1} STARS {r 80 s 0.5 x 40 hue 180 sat 1 b 1}}
+rule STARS 0.1 {CIRCLE {s 0.1 5 hue 200 sat 1 b 1} STARS {r 20 s 0.5 x 0.1 hue 240 sat 1 b 1} STARS {r 80 s 0.7 x 40 hue 180 sat 1 b 1}}

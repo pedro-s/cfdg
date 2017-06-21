@@ -1,0 +1,15 @@
+startshape Main
+
+rule Main {
+	72*{r 5} Rotor { y 15 }
+}
+
+rule Rotor {
+	72*{r 5} SubRotor { }
+}
+
+rule SubRotor {
+	CIRCLE { y 15 }
+	CIRCLE { y 15 s 0.75 b 1 z 1}
+	CIRCLE { y 15 s 0.25 z 2 }
+}

@@ -1,0 +1,7 @@
+startshape start
+background { b -1 }
+rule start {bla {b 1 sat 1 alpha -0.2 hue 90}}
+rule bla {
+CIRCLE {}
+ 12*{r 30 hue 10} bla {x 0.6 s 0.6 0.2 hue 50 alpha -0.3}
+}

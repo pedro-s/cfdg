@@ -1,0 +1,32 @@
+startshape Ingressstart
+
+background{ b -1 sat 0}
+
+rule Ingressstart{
+   Ingress { r 180 }   //Rotating so its well...rightside up :P
+}
+rule Ingress{
+   
+   CIRCLE[ s 2 b 1]
+
+   1*{r -120 hue 300 }SQU[ skew 0 30 s (sqrt(.75)) 1 x .5 y -.5 h 357.17 sat 1 b 1]
+   2*{r -120 hue -300 }SQU[ skew 0 30 s (sqrt(.75)) 1 x .5 y -.5 h 357.17 sat 1 b 1]
+   2*{r 120 hue 475 }SQU[ skew 0 30 s (sqrt(.75)) 1 x .5 y -.5 h 357.17 sat 1 b 1]
+
+   TRI[]
+   3*{  r 120 }{
+      TRI2[ s .3 sat 1 hue 200 ]
+   }
+}
+
+rule SQU{
+    SQUARE{ s .9 .9}
+}
+
+rule TRI{
+   TRIANGLE{z 10 s 1.64 b 1}
+}
+
+rule TRI2{
+   TRI[ s 2.3 .75  y -1.25  r 178 f 1]
+}

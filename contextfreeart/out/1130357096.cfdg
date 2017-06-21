@@ -1,0 +1,105 @@
+startshape flag
+//background{hue 120 b 1 sat 1}  // Used to find borders, errors, etc
+//http://www.usflag.org/flagspecs.html
+// I'm designing such that the dimension
+// is multiplied by 1000
+// Thus the flag width is 1000
+// and flag length is 1900
+// etc.
+// I followed the webpage above for the 
+// starfield, but then simply threw the
+// stripes on in a way that looked good
+// to me.
+
+rule flag{
+stripes{}
+starfield{}
+}
+
+rule stripes{
+  // Short stripes
+  shortstripe{x 712 y 431 s 70  b 1 h 0 sat 1}
+  shortstripe{x 712 y 288 s 70  b 1 h 0 sat 1}
+  shortstripe{x 712 y 144 s 70  b 1 h 0 sat 1}
+  shortstripe{x 712 y 0 s 70  b 1 h 0 sat 1}
+
+  // Long stripes
+  shortstripe{x -15 y -144 s 70  b 1 h 0 sat 1}
+  shortstripe{x 712 y -144 s 70  b 1 h 0 sat 1}
+  shortstripe{x -15 y -288 s 70  b 1 h 0 sat 1}
+  shortstripe{x 712 y -288 s 70  b 1 h 0 sat 1}
+  shortstripe{x -15 y -431 s 70  b 1 h 0 sat 1}
+  shortstripe{x 712 y -431 s 70  b 1 h 0 sat 1}
+}
+
+rule starfield{
+  // Blue background
+  // Used to be two large squares, but the interpreter
+  // appears to add a border relative the shape size 
+  // around each shape so the squares had huge 
+  // borders on the top and left of the flag.
+  //  SQUARE{s 500 hue 200 sat 1 b 1 y 216 x 200}
+  //  SQUARE{s 500 hue 240 sat 1 b 1 y 216 x 425}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y -2}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y 64}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y 129}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y 194}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y 259}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y 324}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y 389}
+  shortstripe{s 66 hue 240 sat 1 b 1 x -17 y 433}
+
+  // Stars
+  starline6{}
+  starline5{y 54 x 63}
+  starline6{y 108}
+  starline5{y 162 x 63}
+  starline6{y 216}
+  starline5{y 270 x 63}
+  starline6{y 324}
+  starline5{y 378 x 63}
+  starline6{y 432}
+}
+
+rule starline6{
+  starline5{}
+  stars{x 630}
+}
+
+rule starline5{
+  stars{}
+  stars{x 126}
+  stars{x 252}
+  stars{x 378}
+  stars{x 504}
+}
+
+rule stars{
+  star{s 15 b 1 y 5}
+}
+
+rule star {
+  // Thanks, bargonaut, for the stars.  
+  // I skewed the triangles for a regular 5 point star
+  CIRCLE { s 1.3 y -0.3 }
+  TRIANGLE { x 0 y 0.667  s 1 1.75}
+  TRIANGLE { x -0.91 r 72 s 1 1.75}
+  TRIANGLE { x -0.57 y -1.07 r 144  s 1 1.75 }
+  TRIANGLE { x 0.57 y -1.07 r 216  s 1 1.75 }
+  TRIANGLE { x 0.91 y 0 r 288 s 1 1.75  }
+}
+
+rule shortstripe{
+//  SQUARE{x 5 s 11 1}  // Shortcut, but generates large borders
+  SQUARE{}
+  SQUARE{x 1}
+  SQUARE{x 2}
+  SQUARE{x 3}
+  SQUARE{x 4}
+  SQUARE{x 5}
+  SQUARE{x 6}
+  SQUARE{x 7}
+  SQUARE{x 8}
+  SQUARE{x 9}
+  SQUARE{x 10}
+}

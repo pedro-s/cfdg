@@ -1,0 +1,13 @@
+startshape fig2
+background { b -1}
+
+rule fig2 {
+fig1 { }
+fig1 { flip -90}
+fig2 { r 20 s .9}
+}
+
+rule fig1 {
+TRIANGLE { a -.55 hue 1}
+fig1 { s .85 r 17 x .5 hue 10 sat 1 b .1}
+}

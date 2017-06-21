@@ -1,0 +1,36 @@
+startshape start
+background{b -1}
+
+rule start
+{
+	spiral{hue 0 b 1 sat 1 alpha -1}
+}
+
+rule spiral
+{
+	smallspiral{}
+	spiral{y 1 r 1 s 0.9995 hue .1}
+}
+
+rule spiral
+{
+	smallspiral{}
+	spiral{y 1 r 5§ s 0.9995 hue .1}
+}
+
+rule spiral 0.005
+{
+	//end
+}
+
+rule smallspiral
+{
+	SQUARE{r 45}
+	smallspiral{y 1 r 1 s 0.99 alpha 0.001}
+}
+
+rule smallspiral
+{
+	SQUARE{r 45}
+	smallspiral{y 1 r 10 s 0.99 alpha 0.001}
+}

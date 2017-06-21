@@ -1,0 +1,71 @@
+startshape Pot
+
+background { hue 200 sat 0.1 }
+
+rule Pot {
+	PotStructure { s 12 z 10 hue 70 sat 0.4 y 2 }
+	Plant { }
+}
+
+rule PotStructure {
+	SQUARE { s 1 0.025 b 1 y 0.1 z 11 }
+	SQUARE { s 1 0.2 b 0.75 }
+	SQUARE { s 1 0.025 b 0.25 y -0.1 a -.75 z 11 }
+	PotBody { s 0.9 1 y -0.1 b 0.75 }
+}
+
+rule PotBody { SQUARE { s 1 0.05 } PotBody { y -0.04 s 0.99 0.9 } }
+
+rule Plant { StemL { r 20 } Plant { } }
+rule Plant { StemL { r 0 } Plant { } }
+rule Plant { StemR { r 0 } Plant { } }
+rule Plant { StemR { r -20 } Plant { } }
+rule Plant 2 { StemL { } }
+rule Plant 2 { StemR { } }
+
+rule StemL 30 { StemUnitL { } StemL { y 0.5 r 1 } }
+rule StemL { StemFinal { } }
+rule StemR 30 { StemUnitL { } StemR { y 0.5 r -1 } }
+rule StemR { StemFinal { } }
+
+rule StemFinal { 15*{y 0.5} StemUnit { } Flower [ y 7.5 s 0.4 ] }
+
+rule StemUnit {
+	CIRCLE { s 0.5 1.25 hue 90 sat 0.5 b 0.75 z -5 }
+	CIRCLE { s 0.25 1 x 0.2 a -0.75 z -5 }
+	CIRCLE { s 0.25 1 x -0.2 a -0.75 b 1 z -5 }
+}
+
+rule StemUnitL { StemUnit { } MaybeLeaf { z -10 } }
+
+rule MaybeLeaf 30 { }
+rule MaybeLeaf { Leaf [ s 5 x 0.45 r 30 hue 90 sat 0.5 b 0.75 ] }
+rule MaybeLeaf { Leaf [ f 90 s 5 x 0.45 r 30 hue 90 sat 0.5 b 0.75] }
+
+rule Leaf { 2*{f 0 b 0.5} HalfLeaf { } }
+
+rule HalfLeaf { CIRCLE { s 1 0.25 } HalfLeaf [ s 0.9 0.8 y 0.0625 ] }
+
+rule Flower {
+	8*{r 45} Petal { }
+	Colour { s 20 z -1 a -0.94 }
+	Interior { s 8 z 1 a -0.9 hue 50 sat 1 b 1 }
+	Interior { s 3 z 2 a -0.95 sat 0 b 1 x -1 y 1 }
+	Interior { s 6 z 2 a -0.99 sat 0 b -1 x 1 y -1 }
+	Interior { sat -1 b 1 z -20 s 15 a -0.9 }
+}
+
+rule Colour { Interior { hue 0 sat 1 b 0.75 } }
+rule Colour { Interior { hue 45 sat 1 b 0.75 } }
+rule Colour { Interior { hue 90 sat 1 b 0.75 } }
+rule Colour { Interior { hue 135 sat 1 b 0.75 } }
+rule Colour { Interior { hue 180 sat 1 b 0.75 } }
+rule Colour { Interior { hue 215 sat 1 b 0.75 } }
+rule Colour { Interior { hue 270 sat 1 b 0.75 } }
+rule Colour { Interior { hue 315 sat 1 b 0.75 } }
+
+rule Interior { CIRCLE { } Interior { s 0.95 } }
+
+rule Petal { 2*{f 90} Curl { a -0.8 } }
+
+rule Curl { CIRCLE { } Curl { x 0.2 r 1 s 0.99 } }

@@ -1,0 +1,23 @@
+//Fart: son of father jarl
+
+startshape M
+background { b -1}
+ 
+rule M .1{CIR{} CIR{} M{z -.1 r 8 s .97 x 1 b .1 sat .03
+hue
+.005}}
+rule M {M{}N{}}
+ 
+rule CIR {CIR{} M{s 1 -1}}
+rule CIR {TRIANGLE{s 6 y 3 z -1 b -.05}3*{r 120}N{s 1}}
+ 
+rule CIR 900{CIRC{ s 1 .2}}
+ 
+rule CIRC 30{CIRC{hue .3}}
+rule CIRC{2*{y 12} CIRCLE{s 1 .5}}
+ 
+rule N 2000 {CIR{} N{s .9 y 1 hue 1}}
+rule N { A{} A{r 180}}
+
+rule A 90{ CIRCLE { s 1 sat 1 h 20 } A { s 0.995 y 0.2 b -0.01 }}
+rule A { A{r 120 z -1}}

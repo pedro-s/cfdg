@@ -1,0 +1,39 @@
+# Experimental Fractal 002: Black wings
+# 
+# This is a Context Free (www.contextfreeart.org)
+# script made by Jonas John (www.jonasjohn.de)
+# 
+# Feel free to use the whole code, parts of it 
+# or the created figure for your own projects.
+# But please credit me in some way -- Thanks :-)
+
+startshape start
+background { b -0.2 }
+
+rule start {
+	combined_wing { }
+	combined_wing { flip 45 }
+
+	# recall this routine
+	start { r 5 s -0.9 }
+}
+
+rule combined_wing {
+	wing { flip 45 }
+	wing { flip -45 }
+}
+
+rule wing {
+	line { }
+	line { flip 90 x -5 }
+}
+
+rule line {
+	60 * { y -1 r 1 } dot{}
+}
+
+# draw a black & white square:
+rule dot {
+	SQUARE { x .1 b 1 }
+	SQUARE { }
+}

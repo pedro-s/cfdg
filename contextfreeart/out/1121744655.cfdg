@@ -1,0 +1,169 @@
+startshape familytree
+
+
+rule familytree 0.5{
+  wait_bm_nr { }
+  line2 {x -1 s 0.6}
+  line2 {x -2 s 0.6}
+  female1 {x -3.1}
+  line2 {r 90 y -1 x -1.6}
+  BASTARD_children {x -1.6 y -2 b 0.7 s 0.9}
+}
+
+rule BASTARD_children {
+  bm_nr { }
+}
+
+rule wait_bm_nr {
+ wait_bm_nr { }
+}
+rule wait_bm_nr 0.001{
+ bm_nr { }
+}
+
+
+
+rule familytree {
+  bm_nr { }
+}
+
+rule bm_nr {
+  male2 { }
+  female1 {x 1.15}
+  line2 {r 90 y -1 x 0.6}
+  children {x 0.6 y -2}
+}
+
+rule children { 2children { } }
+rule children { 3children { } }
+rule children { 5children { } }
+rule children { child_eitherway { } }
+
+rule 2children {
+   line2 { }
+   line {r 90 x -0.993 y -0.5}
+   line {r 90 x 0.993 y -0.5}
+   child {x 1 y -1}
+   child {x -1 y -1 flip 90}
+}
+
+rule 3children {
+   line2 {x -1}
+   line2 {x 1}
+   line {r 90 x -1.993 y -0.5}
+   line {r 90 x 1.993 y -0.5}
+   line {r 90 x 0 y -0.5}
+   child {x 2 y -1}
+   child {x -2 y -1 flip 90}
+   child_eitherway {x 0 y -1}
+}
+
+rule 5children 0.5 {
+   line2 {x -1}
+   line2 {x 1}
+   line {r 90 x -1.993 y -0.5}
+   line {r 90 x 1.993 y -0.5}
+   line {r 90 x -1 y -0.5}
+   line {r 90 x 0 y -0.5}
+   line {r 90 x 1 y -0.5}
+   child {x 2 y -1 s 0.6}
+   child {x 1 y -1 s 0.6}
+   child {x -2 y -1 flip 90 s 0.6}
+   child {x -1 y -1 flip 90 s 0.6}
+   child_eitherway {x 0 y -1 s 0.6}
+}
+
+
+rule child {
+   bm_nr {s 0.7}
+}
+
+// DEATH!
+rule child 0.2 { female2 {s 0.8}}
+rule child 0.2 { male2 {s 0.8 }}
+
+rule child_eitherway { child { } }
+rule child_eitherway { child {flip 90 } }
+
+
+######################
+
+rule male1 {
+  SQUARE { }
+  SQUARE {s 0.9 b 1}
+}
+
+rule male2 {  
+  SQUARE {s 1.9}
+  man {s 0.1 b 1 }
+ }
+
+rule female1 {
+  CIRCLE {b 0.4 }
+  CIRCLE {s 0.9 b 0.8}
+}
+
+rule female2 { female1 { } }
+
+rule line {SQUARE {s 1 0.02} }
+
+rule line2 {
+  line {x -0.5}
+  line {x 0.5}
+}
+
+
+#############################
+
+rule man { 
+   segment {rotate 90} 
+   CIRCLE {s 5 y 6.5} 
+   double_rotated_segment { r -120} 
+   double_rotated_segment {y 4.2 s 0.8} 
+   double_rotated_segment {r -60 } 
+   double_rotated_segment {y 4.2 r 180 s 0.8} 
+} 
+
+rule pupil 0.1 { 
+ CIRCLE {x 0.1 y 0.1} 
+} 
+rule pupil { 
+ pupil {r 45} 
+} 
+rule pupil { 
+ pupil {r -45} 
+} 
+
+
+rule segment { 
+  CIRCLE {} 
+  SQUARE {x 0.5} 
+  SQUARE {x 1.5} 
+  SQUARE {x 2.5} 
+  SQUARE {x 3.5} 
+  CIRCLE {x 4} 
+} 
+
+rule rotated_segment { 
+   rotated_segment {r -9 } 
+} 
+rule rotated_segment { 
+   rotated_segment {r 10 } 
+} 
+rule rotated_segment 0.3 { 
+   segment { } 
+} 
+
+rule double_rotated_segment { 
+   double_rotated_segment {r 9} 
+} 
+
+rule double_rotated_segment { 
+   double_rotated_segment {r -10} 
+} 
+
+rule double_rotated_segment 0.3 { 
+   segment { } 
+   rotated_segment {x 4} 
+} 
+

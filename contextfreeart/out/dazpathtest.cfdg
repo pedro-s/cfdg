@@ -1,0 +1,18 @@
+startshape Main
+
+rule Main {
+	12*{r 1.5} RingSet {}
+}
+
+rule RingSet {20*{r 18} Circ {y 1}}
+rule RingSet {20*{r 18} Circ {y 2}}
+rule RingSet {20*{r 18} Circ {y 3}}
+rule RingSet {20*{r 18} Circ {y 4}}
+
+path Circ {
+	MOVETO {x 2 y 0}
+	ARCTO {x -2 y 0 r 2}
+	ARCTO {x 2 y 0 r 2}
+	CLOSEPOLY {}
+	STROKE {width 0.01 p roundjoin}
+}

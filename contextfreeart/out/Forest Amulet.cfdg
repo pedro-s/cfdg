@@ -1,0 +1,15 @@
+startshape C
+
+rule C { 
+2*{flip 90}B {}
+2*{flip 90}B {s 1.1 a -.9}
+}
+
+rule B {
+4*{r 90}A{h 100}
+}
+
+rule A { 
+TRIANGLE {sat 1 }
+2*{r 30 }A {s .5  .8 y .3 b .03 r 10 a -.1 sat -.1}
+}

@@ -1,0 +1,33 @@
+CF::Size = [s 13 13 x -7 y -7]
+
+startshape squiggles (1) [sat 1 b 1]
+
+shape squiggles (natural depth) {
+  loop hx = 14 [x 1] {
+    loop hy = 16 [x (mod(hy,2)-.5, sqrt(3)/2)] {
+      squiggle [r (60*randint(6))]
+    }
+  }
+  if (depth < 4) transform [s .5 z -1 hue 5 a -.1] {
+    squiggles (depth+1) []
+    squiggles (depth+1) [x 14]
+    squiggles (depth+1) [y (8*sqrt(3))]
+    squiggles (depth+1) [x 14 y (8*sqrt(3))]
+  }
+}
+
+shape squiggle {
+  small_arc [a -.3 y sqrt(1/3) h 40]
+  big_arc [[r 150  y 1]]
+  big_arc [[r -150 y 1]]
+}
+
+shape small_arc {
+  loop t = 120 [] CIRCLE [[r (t-60) y -sqrt(1/12) s .05]]
+}
+
+shape big_arc {
+  loop t = (-30,30) [] {
+    CIRCLE [[r t y -sqrt(3/4) s .05 h (30 + abs(t)/3)]]
+  }
+}

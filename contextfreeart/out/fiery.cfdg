@@ -1,0 +1,36 @@
+startshape walk // a random walk
+ 
+CF::Background =[b -1]
+ 
+shape walk
+{ // target yellow, increment by 0.0015
+loop 1000[hue 0.0015 60]step[]
+}
+
+shape step
+rule 30{
+step [x .5 y (sin(30) / sqrt(3)) r 60]
+}
+  
+rule 30{
+       step[x -.5 y (sin(30) / sqrt(3)) r 60]
+}
+ 
+rule 5{
+      step[y (-1/sqrt(3)) r 60]
+}
+ 
+rule {
+     triangle[b .9 sat .9]
+} 
+ 
+path triangle {
+     MOVETO ( -0.5 , (sin(-30) / sqrt(3)))
+     loop 3 [r 120] {
+         CURVEREL ( 0.5 ,0, 0.25 , 0.2)
+        CURVEREL ( 0.5,0, CF::Continuous)
+     }
+     CLOSEPOLY (CF::Align)
+     FILL[]
+     STROKE( .01 )[b -1]
+}

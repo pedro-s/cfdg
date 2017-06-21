@@ -1,0 +1,12 @@
+startshape pointails
+
+background {b -1}
+
+rule pointails {
+	12*{r(360/12) x -2.55 y -.475}
+	{24*{s .8 y .14 x -.08 b .04 h .8}
+	{142*{s .9 y -.5 x -.04 b .04 sat .08 h .8 a -.1} 
+	{2*{f 90 x -.8}
+	{14*{skew 7.5 0 b .04 s .9 x .2 r 12 sat .14 h -.8 a -.1}
+	CIRCLE{b .1 h 64 sat .2}}}}}
+}

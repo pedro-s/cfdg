@@ -1,0 +1,11 @@
+startshape SUN
+background {a-1}
+rule SUN {
+
+
+
+25* { rotate 85 x 3 h 2}
+TRIANGLE { skew 110 0 h 354.64 sat 1.0000 b 1.0000 }
+
+
+}

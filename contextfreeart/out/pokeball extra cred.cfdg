@@ -1,0 +1,53 @@
+startshape pokeball 
+
+rule pokeball 
+
+{
+
+CIRCLE { }
+
+CIRCLE { s .9 h 0.00 sat 1.0000 b 1.0000 }
+
+SQUARE { s .1 x -.15 }
+
+SQUARE { s .1 x -.2 }
+
+SQUARE { s .1 x -.25 }
+
+SQUARE { s .1 x -.3 }
+
+SQUARE { s .1 x -.35 }
+
+SQUARE { s .1 x -.4 }
+
+SQUARE { s .1 x -.45 }
+
+SQUARE { s .1 x .15 }
+
+SQUARE { s .1 x .2 }
+
+SQUARE { s .1 x .25 }
+
+SQUARE { s .1 x .3 }
+
+SQUARE { s .1 x .35 }
+
+SQUARE { s .1 x .4 }
+
+SQUARE { s .1 x .45 }
+
+SQUARE { s .1  }
+
+SQUARE { s .1 x .05 }
+
+SQUARE { s .1 x -.05 }
+
+CIRCLE { s .25 }
+
+CIRCLE { s .2 h 180.00 sat 0.0078 b 1.0000 }
+
+CIRCLE { s .1 }
+
+CIRCLE { s .08 h 180.00 sat 0.0078 b 1.0000 }
+
+}

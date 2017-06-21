@@ -1,0 +1,7 @@
+startshape arbol 
+
+rule arbol { linea{} arbol {y 1.5 s .99 r 5} }
+rule arbol { linea{} arbol {y 1.5 s .99 r -5} }
+rule arbol .4 {  circulo {}  arbol {y 1 x -1 r 10 s .8 }  arbol {y 1 x 1 r -10 s .8 } }
+rule linea { SQUARE {s .2 1} }
+rule circulo { CIRCLE {} CIRCLE {s .8 b 1 } }

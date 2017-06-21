@@ -1,0 +1,96 @@
+startshape BARCODE
+include i_pix.cfdg
+
+rule BARCODE {
+ST { }
+A { x 0.7 }
+A { x 1.5 }
+A { x 2.3 }
+A { x 3.1 }
+A { x 3.9 }
+A { x 4.7 }
+A { x 5.5 }
+A { x 6.3 }
+A { x 7.1 }
+A { x 7.9 }
+ST { x 8.7 } 
+}
+
+rule A { B { }}
+
+rule B { 
+SQUARE { s 0.1 4.6 y 0.2 }
+SQUARE { s 0.2 4.6 x 0.2 y 0.2 } 
+SQUARE { s 0.3 4.6 x 0.5 y 0.2 }
+NUM_1_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.1 4.6 y 0.2 }
+SQUARE { s 0.2 4.6 x 0.25 y 0.2 } 
+SQUARE { s 0.2 4.6 x 0.55 y 0.2 }
+NUM_2_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.3 4.6 y 0.2 } 
+SQUARE { s 0.3 4.6 x 0.4 y 0.2 }
+NUM_3_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.2 4.6 y 0.2 }
+SQUARE { s 0.1 4.6 x 0.25 y 0.2 } 
+SQUARE { s 0.2 4.6 x 0.5 y 0.2 }
+NUM_4_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.2 4.6 y 0.2 }
+SQUARE { s 0.2 4.6 x 0.3 y 0.2 } 
+SQUARE { s 0.1 4.6 x 0.55 y 0.2 }
+NUM_5_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.3 4.6 y 0.2 }
+SQUARE { s 0.1 4.6 x 0.25 y 0.2 } 
+SQUARE { s 0.2 4.6 x 0.45 y 0.2 }
+NUM_6_5by5 { y -2.5 s 0.5 x  .25 }
+}
+
+rule B { 
+SQUARE { s 0.3 4.6 y 0.2 }
+SQUARE { s 0.2 4.6 x 0.3 y 0.2 } 
+SQUARE { s 0.1 4.6 x 0.5 y 0.2 }
+NUM_7_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.2 4.6 y 0.2 }
+SQUARE { s 0.1 4.6 x 0.2 y 0.2 } 
+SQUARE { s 0.3 4.6 x 0.45 y 0.2 }
+NUM_8_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.1 4.6 y 0.2 }
+SQUARE { s 0.1 4.6 x 0.2 y 0.2 } 
+SQUARE { s 0.1 4.6 x 0.4 y 0.2 }
+SQUARE { s 0.1 4.6 x 0.6 y 0.2 }
+NUM_9_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule B { 
+SQUARE { s 0.2 4.6 y 0.2 }
+SQUARE { s 0.1 4.6 x 0.25 y 0.2 } 
+SQUARE { s 0.1 4.6 x 0.45 y 0.2 }
+SQUARE { s 0.1 4.6 x 0.55 y 0.2 b 1 }
+NUM_0_5by5 { y -2.5 s 0.5 x .25 }
+}
+
+rule ST { 
+SQUARE { s 0.1 5.25 y -0.1125 }
+SQUARE { s 0.2 5.25 x 0.2 y -0.1125 } 
+SQUARE { s 0.1 5.25 x 0.4 y -0.1125 }
+}

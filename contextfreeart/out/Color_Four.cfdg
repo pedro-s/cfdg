@@ -1,0 +1,32 @@
+startshape DD
+background { b -.3 }
+
+rule DD {
+
+	AA { x 4 y 64 r 90 }
+	C { }
+}
+
+rule AA {
+	6*{ y 1 h 1 }
+	{ 24*{ x 2 h 10 }
+	CIRCLE { x -23 h 200 sat .5 b 1 } }
+	AA { y 8 s .666 }
+	AA { y -8 s .666 }
+}
+
+rule C {
+	B { }
+	C { x 4.8 y 8 s .8 }
+}
+
+rule B {
+	A { }
+	A { x 48 y 5r 180 }
+}
+
+rule A {
+	6*{ y 1 h 1 }
+	{ 24*{ x 2 h 10 }
+	CIRCLE { x -23 h 200 sat .5 b 1 } }
+}

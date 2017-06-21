@@ -1,0 +1,63 @@
+# Experimental Fractal 003: Blue pattern
+# 
+# This is a Context Free (www.contextfreeart.org)
+# script made by Jonas John (www.jonasjohn.de)
+# 
+# Feel free to use the whole code, parts of it 
+# or the created figure for your own projects.
+# But please credit me in some way -- Thanks :-)
+
+startshape start
+
+# set background
+background { 
+	hue 192.8 sat 1.0 b 0.7
+}
+
+rule start {
+	block_figure {}
+
+	# repeat this routine
+	start { r 45 s -0.9 }
+}
+
+
+# this draws a random
+# figure containing some
+# of these little blocks
+
+rule block_figure {
+	block { }
+	block_figure { r 90 x 7 y -2 }
+}
+
+rule block_figure 0.5 {
+	block { }
+	block_figure { r 90 x -2 y 2 }
+}
+
+rule block_figure 0.009 {
+	# this routine stops
+	# the recursive function
+}
+
+
+# these two functions create
+# the colored blocks:
+
+rule block 0.5 {
+    SQUARE { x 0 s 1 5 hue 178.6 sat 0.2 b .9  }
+    SQUARE { x 1 s 1 5 hue 0 sat 0.0 b 1  }
+    SQUARE { x 2 s 1 5 hue 62.7 sat 0.9 b .9 }
+    SQUARE { x 3 s 1 5 hue 317.4 sat 0.9 b .3 }
+    SQUARE { x 4 s 1 5 hue 180 sat 0.3 b .7 }
+}
+
+rule block 0.5 {
+    SQUARE { x 3 s 1 5 hue 317.4 sat 0.9 b .3 }
+    SQUARE { x 1 s 1 5 hue 0 sat 0.0 b 1  }
+    SQUARE { x 4 s 1 5 hue 180 sat 0.3 b .7 }
+    SQUARE { x 2 s 1 5 hue 62.7 sat 0.9 b .9 }
+    SQUARE { x 0 s 1 5 hue 178.6 sat 0.2 b .9  }
+}
+

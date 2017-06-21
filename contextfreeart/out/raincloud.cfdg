@@ -1,0 +1,102 @@
+startshape cloudthing
+
+rule cloudthing{
+	cloud{}
+	face{ z 10}
+	bg{ x -3  y 6.5 z -2000}
+	stars {x -13 y 6.5 z -1999}
+}
+
+rule cloud{
+	50*[x .05] row1{}
+	row1{x 3 y .025 flip 180}
+	7* [x .75] rain{ h 210 sat 1 b 1}
+	cloud {x 4.5 y .75 s .5 z -2}
+	cloud {x -7.5 y .75 s .5 z -2}
+}
+
+rule bg{
+	SQUARE{b 0 hue 270 sat 1 s 25 1} 
+	bg {y -.5 s 1 .97 y -.5 b .015}
+}
+
+rule stars{
+	25*[x 1] starx{}
+}
+
+rule starx{
+	5* [y -1] stary{}
+}
+
+rule stary{}
+
+rule stary .1{
+	5* [ r 36] star{ s .5}
+}
+
+rule star{
+	TRIANGLE{ s .5 .1  b 1}
+}
+rule face{
+	2*[ x 2] eye{ x 2 z 4}
+	mouth{ x .1}
+}
+
+rule mouth {
+	50*[ r -.4] tongue{ x 2.5 y -1}
+	lip{ x 2.5 y -.5 z 1}
+}
+
+rule lip{
+	CIRCLE{ s 1.5 z 2}
+	CIRCLE { y .1 s 1.6 z 3 b 1}
+}
+
+rule tongue{
+	CIRCLE{ hue 360 sat 1 b 1}
+	CIRCLE{ z 1 s .9 hue 360 sat .6 b 1}
+	CIRCLE { h 360 sat 1 b 1 s .05 z 2}
+}
+
+rule eye {
+	100 * [r 1.8 y .01]lid{}
+}
+
+rule lid{
+	CIRCLE{ s .05}
+}
+rule row1{
+	CIRCLE{}
+	CIRCLE{ s .9 b 1 z 1}
+	row1{ x .05}
+}
+
+rule row1 .2{
+	CIRCLE{}
+	CIRCLE{ s .9 b 1 z 1}
+	row2{ y -.025 x .05}
+}
+
+rule row2{
+	CIRCLE{}
+	CIRCLE{ s .9 b 1 z 1}
+	row2{ x -.05}
+}
+
+
+rule row2 .2{
+	CIRCLE{}
+	CIRCLE{ s .9 b 1 z 1}
+	row1{y -.025 x -.05}
+}
+
+rule row2 .02{
+}
+rule rain{
+	5* [ y -2.5 x -1.75 s .8]
+drop[ y -2 s .4]
+}
+rule drop{
+	CIRCLE{z -1}
+	drop{y .1 x .05 s .95}
+}

@@ -1,0 +1,83 @@
+//good variations
+//VPD XPK BEO BFR BGN VHU
+
+startshape PIC
+
+rule PIC{
+	SQUARE{s 20 .16 z 1}
+	SQUARE{s 20 12 y -6 hue 30 sat .6 b 1}
+	SQUARE{s 20 12 y 6 hue 120 sat .3 b 1}
+	TREE{x -4 z 2}
+	FLOWER{x 4 flip 0 z 2}
+}
+
+rule TREE 40{
+	SQUARE{y .17 s 1 .5}
+	CIRCLE{y .42 z .5}
+	SQUARE{y .17 s .67 .504 hue 30 sat .6 b 1 z 1}
+	CIRCLE{y .42 s .67 hue 30 sat .6 b 1 z 1.5}
+	CIRCLE{s .67 y -.085 hue 30 sat .6 b 1 z 1.5}
+	TREE[y .5 s .95 r 5]
+}
+
+rule TREE 60{
+	SQUARE{y .17 s 1 .5}
+	CIRCLE{y .42 z .5}
+	SQUARE{y .17 s .67 .504 hue 30 sat .6 b 1 z 1}
+	CIRCLE{y .42 s .67 hue 30 sat .6 b 1 z 1.5}
+	CIRCLE{s .67 y -.085 hue 30 sat .6 b 1 z 1.5}
+	TREE[y .5 s .95 r -5]
+}
+
+rule TREE 8{
+	SQUARE{y .17 s 1 .5}
+	CIRCLE{y .42 z .5}
+	SQUARE{y .17 s .67 .504 hue 30 sat .6 b 1 z 1}
+	CIRCLE{y .42 s .67 hue 30 sat .6 b 1 z 1.5}
+	CIRCLE{s .67 hue 30 sat .6 b 1 z 1.5}
+	TREE[y .5 s .9 r -30 flip 90]
+	TREE[y .5 s .9 r 30]
+}
+
+rule TREE 2{}
+
+rule FLOWER 60{
+	SQUARE{y .17 s .5}
+	CIRCLE{y .42 s .5 z .5}
+	SQUARE{y .17 s .17 .504 hue 120 sat .3 b 1 z 1}
+	CIRCLE{y .42 s .17 hue 120 sat .3 b 1 z 1.5}
+	CIRCLE{s .17 y -.085 hue 120 sat .3 b 1 z 1.5}
+	FLOWER[y .5 s .95 r 5]
+}
+
+rule FLOWER 40{
+	SQUARE{y .17 s .5}
+	CIRCLE{y .42 s .5 z .5}
+	SQUARE{y .17 s .17 .504 hue 120 sat .3 b 1 z 1}
+	CIRCLE{y .42 s .17 hue 120 sat .3 b 1 z 1.5}
+	CIRCLE{s .17 y -.085 hue 120 sat .3 b 1 z 1.5}
+	FLOWER[y .5 s .95 r -5]
+}
+
+rule FLOWER 7{
+	LEAF{}
+	FLOWER{}
+}
+
+rule LEAF 40{
+	SQUARE{y .17 s .5}
+	CIRCLE{y .42 s .5 z .5}
+	SQUARE{y .17 s .17 .504 hue 120 sat .3 b 1 z 1}
+	CIRCLE{y .42 s .17 hue 120 sat .3 b 1 z 1.5}
+	CIRCLE{s .17 y -.085 hue 120 sat .3 b 1 z 1.5}
+	LEAF[y .5 s .95 r -8]
+}
+
+rule LEAF 1{}
+
+rule FLOWER 3{
+	CIRCLE{s 3}
+	CIRCLE{s 2.68 hue 120 sat .3 b 1 z 1.5}
+	10*{r 36}CIRCLE{y 2 s 1 2 r 180}
+	10*{r 36}CIRCLE{y 2 s .68 1.68 hue 120 sat .3 b 1 z 1.5 r 180}
+}

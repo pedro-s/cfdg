@@ -1,0 +1,23 @@
+startshape lessismore
+
+background {b -1}
+
+rule less {
+	2*{f 60 x .5 y .2887}
+	TRIANGLE {b .1459}
+	less {s .618 x .809 y -.1103 b .1459}
+	less {s .618 x .309 y .7558 b .1459}
+}
+
+rule more {
+	2*{f -60 x 1.118 y .6455}
+	less {s .382}
+	more {s .618 x .927 y -.0421 b .1459}
+	more {s .618 x .427 y .8239 b .1459}
+}
+
+rule lessismore {
+	6*{r 60 x -.191 y .1103}
+	more {}
+	lessismore {s .382 x -.118 y -.0681 b .1459}
+}

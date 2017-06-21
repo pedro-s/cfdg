@@ -1,0 +1,31 @@
+startshape CANVAS 
+tile {s 1 1}
+
+
+// modified hilbert from michael
+
+rule CANVAS { MODIGRID  {s 1 h 10 } }
+rule MODIGRID  {
+
+  
+    DIV2 {hue 0 r 0 x -.25 y -.25 s .5 sat  -.63 b 1}    DIV2 {hue 0 r 90 x -.25 y .25 s .5 sat  -.63 b .3}    DIV2{hue 0 r 180 x .25 y .25 s .5 sat  1 b  -.30}    DIV2{hue  1 r 270 x .25 y -.25 s .5 sat  1 b -1}
+}
+
+
+
+// Iteration control
+// Can be useful to stop never ending fractals 
+// It's tricky!
+
+// Silly idea: divide size by X then multiply by X
+// Bigger X gives less iterations
+
+
+rule DIV2 {
+CIRCLE { s 3  a -.4 }
+MULT2{ s .1}
+}
+
+rule MULT2 {
+MODIGRID {s 10 z .1}
+}

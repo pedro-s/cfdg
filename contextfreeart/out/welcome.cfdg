@@ -1,0 +1,7 @@
+startshape Square
+
+rule Square {
+	SQUARE {}
+	Square {s sqrt(2*0.5^2) r 45 x -0.5 y 0.5}
+	Square {s sqrt(2*0.5^2) r -40 x 0.5 y 2}
+}

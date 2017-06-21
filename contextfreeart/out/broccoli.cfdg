@@ -1,0 +1,31 @@
+startshape BROCCOLI
+rule BROCCOLI {
+ARM { sat 1 hue 200} 
+ARM {sat 1 hue 200 rotate 20}
+ARM {sat 1 hue 200 rotate -20}
+
+}
+rule ARM 50 {
+CIRCLE { brightness 0.8}
+ARM { y 0.15  size 0.99 rotate 2.5}
+}
+
+rule ARM 50 {
+CIRCLE { brightness 0.8}
+ARM { y 0.15  size 0.99 rotate -2}
+}
+
+rule ARM  1.4 {
+CIRCLE { brightness 0.8}
+ARM { y 0.15 sat 0.05 hue 6 size 0.92 rotate 15}
+ARM { y 0.15 size 0.9 rotate -5}
+}
+rule ARM  1.4  {
+CIRCLE { brightness 0.8}
+ARM { y 0.15 sat 0.05 hue 6 size 0.92 rotate -15}
+ARM { y 0.15 size 0.9 rotate 5}
+}
+
+rule ARM 0.04 {
+BROCCOLI  { size 0.5 hue -150 flip 90 }
+}

@@ -1,0 +1,36 @@
+background {b -.3 sat .8 hue 160}
+ 
+startshape AMAZING
+ 
+rule AMAZING {
+    3 * {r 120 hue 110} FOIL {y .65 sat 1 hue -60}
+}
+ 
+rule FOIL {
+    3 * {r 360} SEGMENT {}
+    3 * {r 360} SEGMENT {f 0}
+    3 * {r 360} HIGHLIGHTS {r 61}
+    3 * {r 360} HIGHLIGHTS {f 30}
+}
+ 
+rule SEGMENT {
+    50 * {r 1 z 1 hue 1} BRUSH {x 3 s .5}
+}
+ 
+rule HIGHLIGHTS {
+    60 * {r 45 z 5 a -.4} BLUR {x 17 z 65 a -.9 b 1 sat
+1 s 5}
+}
+ 
+rule BRUSH {
+    30 * {x .02 b 2 hue 5 s .5 1.01 z .1} SQUARE {b .2 s 1
+.1}
+    BLUR {z -5 b -95}
+}
+ 
+rule BLUR {
+    TRIANGLE {s 1}
+    TRIANGLE {s 1.5}
+    TRIANGLE {s 1.2}
+}
+

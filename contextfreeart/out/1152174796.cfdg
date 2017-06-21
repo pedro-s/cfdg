@@ -1,0 +1,16 @@
+startshape CRES_STR
+
+rule CRES {
+	CIRCLE {sat 1 b 1 hue 200}
+	CIRCLE {x 0.25 sat 0 b 1}
+}
+
+rule CRES_STR {
+	CRES{}
+	CRES_STR {x 0.55 s 0.99}
+}
+
+rule CRES_STR 0.4 {
+	CRES {}
+	CRES_STR {r 45 x 0.55 s 0.99 hue 10}
+}

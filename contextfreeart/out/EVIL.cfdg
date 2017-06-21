@@ -1,0 +1,67 @@
+startshape EVIL
+
+background {h 0.00 sat 1.0000 b 1.0000}
+rule EVIL {
+
+//body
+2* {y 1}
+SQUARE {}
+
+//head
+SQUARE {y 1.7 s.5 r 45}
+
+//right leg
+3* {y .2}
+SQUARE {y -1 s .2  x -.25}
+
+//left leg
+3* {y .2}
+SQUARE { y -1 s.2 x .25}
+
+//tentacle
+8* {y.4 r 9}
+SQUARE {x-.4 s.35 r 45 y 1 skew 19 20}
+
+//tentacle
+8* {y.4 r -9}
+SQUARE {x.4 s.35 r 45 y 1 skew  19 20}
+
+//tall tentacle
+10* {y .4 r -5}
+SQUARE {y .3s.4 x .3 r 45 skew 19 20}
+
+//tentacle
+10* {y.4 r 5}
+SQUARE {y .3 s.4 x-.3 r 45 skew 19 20}
+
+//tentacle
+10* {x .2 r 5}
+SQUARE {x -1.7 s.35 y 1.5 skew 19 20 r 45 }
+
+//tentacle
+10* {x.2 r 6.5}
+SQUARE {x .5 s.35 y .43 skew 19 20 r 125}
+
+//head
+SQUARE {r 45 h 0.00 sat 0.0000 b 0.6519s.5 y 1.7}
+
+//tie
+SQUARE {h 0.00 sat 1.0000 b 0.5746 r 45 s .2 y 1.1}
+
+SQUARE {h 0.00 sat 1.0000 b 0.5746 r 40 skew 12 200 s.4 y .8}
+
+//arm
+12* {x .1 r .1 y .2}
+SQUARE { x -1.5 s.3  y -1.0 r 10 skew 19 20}
+
+// arm
+12* {x-.1 r-.1 y.2}
+SQUARE { x 1.5 s.3 y-1.0 r 55 skew 19 20}
+
+CIRCLE {y 1.7 s.1 x -.1}
+
+CIRCLE {y 1.7 s.1 x .1}
+
+
+
+}

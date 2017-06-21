@@ -1,0 +1,61 @@
+startshape UNKNOWN
+
+background {b -1}
+
+rule UNKNOWN {
+
+
+ONE  {h 109.13 sat 0.5412 b 1.0000 }
+
+}
+
+
+rule ONE{
+20*{y 2 x 1 r 17 h 10 skew 10 50  size 1.3}
+CIRCLE {}
+
+TWO  {h 0.00 sat 1.0000 b 0.8235 r 45}
+
+}
+
+
+rule TWO{
+
+30*{y 2 x 2 r 17 h 10 skew 10 50 size 1.21 }
+
+CIRCLE {}
+
+THREE  {r 95 h 240.00 sat 1.0000 b 1.0000}
+
+}
+
+
+rule THREE{
+
+30*{y 2 x 2 r 17 h 10 skew 10 50 size 1.2 }
+
+CIRCLE {}
+
+FOUR  { h 27.76 sat 0.9543 b 1.0000 r 280}
+
+}
+
+
+rule FOUR{
+20*{y 2 x 1 r 17 h 10 skew 10 50  size 1.3}
+CIRCLE {}
+
+
+
+FIVE  { h 27.76 sat 0.9543 b 1.0000 r 90}
+}
+
+
+rule FIVE{
+20*{y 2 x 1 r 17 h 10 skew 10 50  size 1.3}
+CIRCLE {}
+
+}
+
+
+

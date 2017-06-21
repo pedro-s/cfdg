@@ -1,0 +1,41 @@
+startshape hop
+
+background { b -1 }
+
+rule hop
+{
+	72* { r 5 } skip { h 255 sat 0.6 b 1.0 }
+}
+
+rule skip { jump { } }
+rule skip { jump { flip 90 } }
+
+rule jump
+{
+	spot { }
+	jump { y -0.2 r 0.3 s 0.998 h 0.07 }
+}
+
+rule jump 0.008
+{
+	skip { r 7 s 0.6 z -0.01}
+	jump { }
+}
+
+rule jump 0.008
+{
+	skip { r -7 s 0.6 z -0.01}
+	jump { }
+}
+
+rule jump 0.01
+{
+	spot { }
+	jump { y -0.2 r 0.3 flip 90 s 0.998 h 0.07 }
+}
+
+rule spot
+{
+	SQUARE { a -0.95 }
+	SQUARE { s 0.5 a -0.9 }
+}

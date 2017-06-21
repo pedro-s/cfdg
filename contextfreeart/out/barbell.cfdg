@@ -1,0 +1,15 @@
+startshape start
+background {b -1 h 0 sat 1}
+
+rule start
+{
+	circles{b 1 sat 1 h 200 alpha -.5}
+}
+
+rule circles
+{
+	CIRCLE{}
+	circles{x .85 y -.5 s .65 r 30 h 10 z -10}
+	circles{x -.85  y -.5  s .65 r 30 h 20 z -10}
+	circles{x 0 y 1 s .65 r 30 h 30 z -10}
+}

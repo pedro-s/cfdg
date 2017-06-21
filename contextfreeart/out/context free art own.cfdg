@@ -1,0 +1,18 @@
+startshape BALL
+
+background { }
+
+rule BALL{
+CIRCLE {  }
+CIRCLE { s .2 h 358.62 sat 0.9225 b 1.0000}
+CIRCLE { s .3 x  .19  y .2 h 358.62 sat 0.9225 b 1.0000}
+CIRCLE { s .3 x - .19  y .2 h 358.62 sat 0.9225 b 1.0000}
+CIRCLE { s ..1 x - .19  y .2 }
+CIRCLE { s .1 x  .19  y .2 }
+CIRCLE { s .10 }
+CIRCLE { s.2 y -.3 h 4.64 sat 0.8249 b 0.8619}
+TRIANGLE { s.05 r 60 y -.217 h 188.13 sat 0.1571 b 0.8619}
+TRANGLE { s .2 x -5 y 5 }
+}
+
+	

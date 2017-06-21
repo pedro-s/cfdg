@@ -1,0 +1,14 @@
+startshape FLOWER
+
+rule FLOWER {
+PETAL {}
+FLOWER {r 137.5078 s .995  } 
+FLOWER {r 137.5078 s .3 } 
+}
+
+rule PETAL {
+ CIRCLE { } 
+ PETAL { rotate 1 size 0.8 x 0.0371293 y 0.946991 b 0.05 }
+ PETAL { rotate 1 size 0.8 x 0.05 y 1 b 0.05 }
+}
+

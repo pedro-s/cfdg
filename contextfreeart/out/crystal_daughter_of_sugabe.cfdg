@@ -1,0 +1,21 @@
+startshape M
+ 
+rule M {CIR{}M{r 3 s .99 x 1}} 
+rule M .01{N{}HERE{}}
+ 
+rule N {CIR{}N{s .99 x 1}} 
+rule N .03{M{}HERE {}}
+rule N .01{N{r 90}N{r -90}}
+ 
+rule CIR {CIR{}M{s 1 -1}} 
+rule CIR 20{} 
+rule CIR 60{}
+ 
+rule HERE {}
+rule HERE {SQUARE{z -1 s 20 a -.9}}
+rule HERE 3 {
+HERE{s 0.5 x 5 y 5}
+HERE{s 0.5 x -5 y 5}
+HERE{s 0.5 x 5 y -5}
+HERE{s 0.5 x -5 y -5}
+}

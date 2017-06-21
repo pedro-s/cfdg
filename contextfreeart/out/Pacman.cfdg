@@ -1,0 +1,16 @@
+startshape BOUNCE
+background {hue 61.6543 sat 0.8995 b -1.0000}
+rule BOUNCE  {
+CIRCLE {hue 61.6543 sat 0.8995 b 1.0000}
+CIRCLE {s .1 x .3 y .2}
+TRIANGLE { s .6 flip 10 x .35 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x .5 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x 1 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x 1.5 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x 2 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x 2.5 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x 3 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x 3.5 y -.1}
+CIRCLE {hue 243.4349 sat 0.0699 b 1.0000 s .2 x 4 y -.1}
+}
+

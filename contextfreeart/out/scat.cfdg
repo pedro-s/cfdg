@@ -1,0 +1,34 @@
+startshape TEST
+
+background { b -0.3 }
+
+rule TEST 10{
+  CIRCLE {}
+  SQUARE { x 1}
+  TEST { size 0.99 y 0.5 rotate 2}
+}
+
+rule TEST {
+  CIRCLE {}
+  SQUARE { x 1}
+  BL {rotate 30}
+  TEST { size 0.99 y 1 rotate -20}
+}
+
+rule BL { BRANCH {} }
+rule BL { BRANCH {flip 45} }
+  
+rule BRANCH 10 {
+  CIRCLE {}
+  BRANCH {size 0.99 x 0.5 rotate -0.5}
+}
+  
+rule BRANCH {
+  CIRCLE {}
+  BL {rotate 10}
+}
+
+rule BRANCH 0.1 {
+  CIRCLE {s 2 sat 1 b 1}
+  BRANCH {}
+}

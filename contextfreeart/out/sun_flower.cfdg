@@ -1,0 +1,31 @@
+background { b -0.4 h 90 sat 0.8 }
+startshape flower
+
+rule flower {
+	center {}
+	petals {}
+}
+
+rule center {
+	90* { r 10.03 } 
+		draw_center { y 2.3 sat 0.2 h 22.5 } 
+}
+
+rule draw_center { 
+	CIRCLE { s 5 a -0.9 b 0.0 }  
+	CIRCLE { s 4.9 a -0.95 b 0.8 }  
+}
+
+rule petals {
+	92* { r 11.7 } 
+		petal { y 5.1 s 0.8 1 sat 1 h 57 b 1 }
+}
+
+rule petal {
+	CIRCLE { s 1.1 b -0.2 h -30 a -0.9 }
+	CIRCLE { }
+	petal { y 0.1 r 2.31 s 0.95  }
+}
+
+
+rule petal 0.1 { petal { flip 90 } } 

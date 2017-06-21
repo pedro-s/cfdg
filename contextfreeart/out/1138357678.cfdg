@@ -1,0 +1,60 @@
+startshape START
+background { b -0.7 }
+
+rule START {
+	BRANCH { b 0.8 sat 0.9 hue 330}
+	BRANCH { flip 180 b 0.8 sat 0.9 hue 330}
+}
+
+rule PETAL {
+	CIRCLE { }
+	PETAL { y 0.007 s 0.99 }
+}
+
+rule FULL_PETAL {
+	PETAL { }
+	PAUSE { }
+}
+
+rule PAUSE {PETAL { s 0.99 b 1 sat -0.8}}
+
+rule FLOWER {
+	CIRCLE { s 0.3 }
+	FULL_PETAL { r -45 x -0.54 y -0.54}
+	FULL_PETAL { r 45 x 0.54 y -0.54}
+	FULL_PETAL { r -45 flip 180 y 0.54 x 0.54}
+	FULL_PETAL { r 45 flip 180 x -0.54 y 0.54}
+}
+
+rule BRANCH {
+	SQUARE { }
+	BRANCH { s 0.99 y 1 r 5 sat -0.005 alpha -0.003}
+}
+ 
+rule BRANCH 0.05 { BRANCH { flip 90 }}
+rule BRANCH 0.06 { BRANCH { flip 45 }}
+rule BRANCH 0.02 {
+SQUARE {} 
+BRANCH { r 25 s 0.9}
+BRANCH { r -25 s 0.9}
+}
+
+rule BRANCH 0.02 {
+CIRCLE { s 3 x 3 alpha -0.5} 
+BRANCH { s 0.9 }
+}
+
+rule BRANCH 0.007 { 
+BRANCH { }
+FLOWER{ r 45 s 8 }
+}
+
+rule BRANCH 0.01 { 
+BRANCH { }
+PAL {}
+}
+
+rule PAL {
+	SQUARE { s 6 0.5 x 3}
+	CIRCLE { x 6 s 6 3 }
+}

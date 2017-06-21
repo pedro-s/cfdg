@@ -1,0 +1,45 @@
+startshape grid
+
+background {hue 200 sat 1 b -.8}
+
+rule grid {
+10*{y 4} row {} 
+}
+rule row {
+10*{x 4} SMA {} 
+}
+
+rule SMA { MA {r 15}}
+rule SMA { MA {r 30}}
+rule SMA { MA {r 60}}
+rule SMA { MA {r 90}}
+rule SMA { MA {r 120}}
+rule SMA { MA {r 180}}
+rule SMA { MA {r 10}}
+rule SMA { MA {r 20}}
+rule SMA { MA {r 30}}
+rule SMA { MA {r 40}}
+rule SMA { MA {r 50}}
+rule SMA { MA {r 70}}
+rule SMA { MA {r 80}}
+
+#rule MA {2* {r 180} AA {}}
+#rule MA {3* {r 120} AA {}}
+#rule MA {4* {r 90} AA {}}
+rule MA  .2 {5* {r 72} AA {}}
+rule MA {6* {r 60} AA {}}
+
+
+rule AA {
+CIRCLE {s .8 }
+AA {s .98  r 7  x .1  }
+}
+rule AA   {
+CIRCLE {s .8 }
+AA {flip 0 s .98  r 7  x  .4  b  .05}
+}
+rule AA  .03  {
+CIRCLE {s .8 }
+AA { s .98  r 7  x  .4  b  .05}
+AA {flip 0 s .98  r 7  x  .4  b  .05}
+}

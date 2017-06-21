@@ -1,0 +1,303 @@
+startshape stamp
+
+rule stamp
+{
+	stampcor{}
+	boxdes{size 200 x 112 y 183}
+	boxdes{size 25 x 17 y 58}
+	boxdes{size 25 x 63 y 58}
+	boxdes{size 25 x 109 y 58}
+	boxdes{size 25 x 155 y 58}
+	boxdes{size 25 x 201 y 58}
+	nz45{size 15 x 10 y 25}
+}
+
+rule nz45
+{
+	N_BLOCK{b .4}
+	E_BLOCK{x 1 b .4}
+	W_BLOCK{x 2 b .4}
+
+	Z_BLOCK{x 4 b .4}
+	E_BLOCK{x 5 b .4}
+	A_BLOCK{x 6 b .4}
+	L_BLOCK{x 7 b .4}
+	A_BLOCK{x 8 b .4}
+	N_BLOCK{x 9 b .4}
+	D_BLOCK{x 10 b .4}
+
+	4_BLOCK{x 12}
+	5_BLOCK{x 13}
+	C_BLOCK{x 13.7 size .5 y -.25}
+}
+
+rule A_BLOCK {
+SQUARE { s 0.3 0.6 x -0.2 y -0.2
+	skew 45.5 0 }
+SQUARE { s 0.3 0.6 x 0.2 y -0.2
+	skew -45.5 0 }
+TRIANGLE { s 0.44 0.5 x 0 y 0.2 }
+TRIANGLE	{ s 0.2 0.25 y -0.1 
+	sat -1 b 1 }
+SQUARE { s 0.5 0.2 x 0 y -0.2 }
+}
+
+rule C_BLOCK {
+CIRCLE { s 0.95 1 }
+CIRCLE { s 0.44 b 1 }
+SQUARE { s 0.45 0.25 x .25
+	sat -1 b 1 }
+}
+
+rule D_BLOCK {
+SQUARE	{ s 0.45 1 x -0.15 }
+CIRCLE { s 0.75 1 x 0.05 }
+CIRCLE { s 0.33 0.5 x -0.05
+	sat -1 b 1 }
+SQUARE { s 0.25 0.8 x -0.2 y 0 }
+}
+
+rule E_BLOCK {
+SQUARE { s 0.25 1 x -0.275 }
+SQUARE { s 0.8 0.2 y 0.4 }
+SQUARE { s 0.8 0.2 y -0.4 }
+SQUARE	{ s 0.5 0.2 }
+}
+
+rule L_BLOCK {
+SQUARE { s 0.25 1 x -0.28 }
+SQUARE { s 0.8 0.2 y -0.4 }
+}
+
+rule N_BLOCK {
+SQUARE { s 0.25 1 x -0.25 }
+SQUARE { s 0.25 1 x 0.25 }
+SQUARE { s 0.2 1 skew -60 0 }
+}
+
+rule W_BLOCK {
+SQUARE { s 0.25 1 x -0.31 }
+SQUARE { s 0.25 1 x 0.31 }
+SQUARE { s 0.2 0.5 x -0.17 y -0.25
+	skew 42 0 }
+SQUARE { s 0.2 0.5 x 0.17 y -0.25
+	skew -42 0 }
+TRIANGLE { s 0.4 0.4 x 0 y 0.1 }
+}
+
+
+rule Z_BLOCK {
+SQUARE { s 0.8 0.25 y 0.37 }
+SQUARE { s 0.8 0.25 y -0.37 }
+SQUARE { s 0.3 0.5 skew 59.2 0 }
+}
+
+
+rule 4_BLOCK {
+SQUARE { s 0.2 0.99 x 0.175 y 0 }
+SQUARE { s 0.25 0.6 x -0.08 y 0.195
+	skew 60 0 }
+SQUARE { s 0.75 0.2 x -0.05 y -0.2 }
+}
+
+rule  5_BLOCK {
+CIRCLE { s 0.8 0.7 x 0 y -0.13 }
+CIRCLE { s 0.3 0.3 x 0 y -0.1
+	sat -1 b 1 }
+SQUARE { s 0.2 0.5 x -0.27 y 0.21 }
+SQUARE { s 0.7 0.2 x -0.02 y 0.38 }
+SQUARE{ s 0.5 0.2 x -0.2 y -0.1
+	sat -1 b 1 }
+}
+
+rule boxdes
+{
+	SQUARE{b 0}
+	SQUARE{size .99 hue 50 sat .2 b 1}
+	boxdes{r 2 size .98}
+}
+
+rule stampcor
+{
+	stampline2{}
+	stampline{flip 180 r 90 y 10 x -10}
+	stampline2{y 309 flip 180}
+	stampline{r 90 y 10 x 231}
+}
+
+rule stampline
+{
+	bottomseg{}
+bottomseg{x 17}
+bottomseg{x 34}
+bottomseg{x 51}
+bottomseg{x 68}
+bottomseg{x 85}
+bottomseg{x 102}
+bottomseg{x 119}
+bottomseg{x 136}
+bottomseg{x 153}
+bottomseg{x 170}
+bottomseg{x 187}
+bottomseg{x 204}
+bottomseg{x 221}
+bottomseg{x 238}
+bottomseg{x 255}
+bottomseg{x 272}
+bottomseg{x 289}
+}
+
+rule stampline2
+{
+	bottomseg{}
+bottomseg{x 17}
+bottomseg{x 34}
+bottomseg{x 51}
+bottomseg{x 68}
+bottomseg{x 85}
+bottomseg{x 102}
+bottomseg{x 119}
+bottomseg{x 136}
+bottomseg{x 153}
+bottomseg{x 170}
+bottomseg{x 187}
+bottomseg{x 204}
+bottomseg{x 221}
+}
+
+rule bottomseg
+{
+	bottomcor{}
+	bottomcor{flip 90}
+}
+
+rule bottomcor
+{
+	quarter{}
+SQUARE{size .3 x 5}
+SQUARE{size .3 x 5.2}
+SQUARE{size .3 x 5.4}
+SQUARE{size .3 x 5.6}
+SQUARE{size .3 x 5.8}
+SQUARE{size .3 x 6}
+SQUARE{size .3 x 6.2}
+SQUARE{size .3 x 6.4}
+SQUARE{size .3 x 6.6}
+SQUARE{size .3 x 6.8}
+SQUARE{size .3 x 7}
+SQUARE{size .3 x 7.2}
+SQUARE{size .3 x 7.4}
+SQUARE{size .3 x 7.6}
+SQUARE{size .3 x 7.8}
+SQUARE{size .3 x 8}
+SQUARE{size .3 x 8.2}
+SQUARE{size .3 x 8.4}
+SQUARE{size .3 x 8.6}
+SQUARE{size .3 x 8.8}
+SQUARE{size .3 x 9}
+SQUARE{size .3 x 9.2}
+SQUARE{size .3 x 9.4}
+SQUARE{size .3 x 9.6}
+SQUARE{size .3 x 9.8}
+SQUARE{size .3 x 10}
+}
+
+rule quarter
+{
+twocircles{}
+	twocircles{r 1}
+	twocircles{r 2}
+	twocircles{r 3}
+	twocircles{r 4}
+	twocircles{r 5}
+	twocircles{r 6}
+	twocircles{r 7}
+	twocircles{r 8}
+	twocircles{r 9}
+	twocircles{r 10}
+	twocircles{r 11}
+	twocircles{r 12}
+	twocircles{r 13}
+	twocircles{r 14}
+	twocircles{r 15}
+	twocircles{r 16}
+	twocircles{r 17}
+	twocircles{r 18}
+	twocircles{r 19}
+	twocircles{r 20}
+	twocircles{r 21}
+	twocircles{r 22}
+	twocircles{r 23}
+	twocircles{r 24}
+	twocircles{r 25}
+	twocircles{r 26}
+	twocircles{r 27}
+	twocircles{r 28}
+	twocircles{r 29}
+	twocircles{r 30}
+	twocircles{r 31}
+	twocircles{r 32}
+	twocircles{r 33}
+	twocircles{r 34}
+	twocircles{r 35}
+	twocircles{r 36}
+	twocircles{r 37}
+	twocircles{r 38}
+	twocircles{r 39}
+	twocircles{r 40}
+	twocircles{r 41}
+	twocircles{r 42}
+	twocircles{r 43}
+	twocircles{r 44}
+	twocircles{r 45}
+	twocircles{r 46}
+	twocircles{r 47}
+	twocircles{r 48}
+	twocircles{r 49}
+	twocircles{r 50}
+	twocircles{r 51}
+	twocircles{r 52}
+	twocircles{r 53}
+	twocircles{r 54}
+	twocircles{r 55}
+	twocircles{r 56}
+	twocircles{r 57}
+	twocircles{r 58}
+	twocircles{r 59}
+	twocircles{r 60}
+	twocircles{r 61}
+	twocircles{r 62}
+	twocircles{r 63}
+	twocircles{r 64}
+	twocircles{r 65}
+	twocircles{r 66}
+	twocircles{r 67}
+	twocircles{r 68}
+	twocircles{r 69}
+	twocircles{r 70}
+	twocircles{r 71}
+	twocircles{r 72}
+	twocircles{r 73}
+	twocircles{r 74}
+	twocircles{r 75}
+	twocircles{r 76}
+	twocircles{r 77}
+	twocircles{r 78}
+	twocircles{r 79}
+	twocircles{r 80}
+	twocircles{r 81}
+	twocircles{r 82}
+	twocircles{r 83}
+	twocircles{r 84}
+	twocircles{r 85}
+	twocircles{r 86}
+	twocircles{r 87}
+	twocircles{r 88}
+	twocircles{r 89}
+	twocircles{r 90}
+}
+
+rule twocircles
+{
+	SQUARE{x 5 size .3}
+}

@@ -1,0 +1,8 @@
+startshape splats
+
+rule splats { splat {} splats { x -1 r 20 size .995 } }
+
+rule splat { CIRCLE { hue 1 sat 1 b 1 } splat { s .995 y 1 r 1 skew 5 2 hue 10 } }
+rule splat 0.5 { splatter {} }
+
+rule splatter { CIRCLE { hue 1 sat 1 b 1 } splatter { s .995 y 1 r -10 skew 7 3 hue 10 } }

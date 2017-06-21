@@ -1,0 +1,31 @@
+startshape start
+
+rule start {
+  element{sat 0 h 15 b .14}
+  element{sat 0 h 15 b .14 r 180}
+}
+
+rule element{
+  SQUARE{}
+  element{s 0.99 x 0.9}
+}
+
+rule element 0.026{
+  SQUARE{}
+  element{s 0.99 x 0.9 r =  90}
+  element{s 0.99 x 0.9 r = -90}  
+}
+
+rule element 0.01{
+  SQUARE{} 
+  element{s 0.99 r 30 x 0.6 y 0.15}
+}
+
+rule element 0.01{
+  SQUARE{}
+  element{s 0.99 r -30 x 0.6 y -0.15}
+}
+
+rule element 0.001{
+ SQUARE{s 10 z 1 b -1}
+}

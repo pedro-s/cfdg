@@ -1,0 +1,32 @@
+startshape CODE
+
+background { b -1 }
+tile { s 60 }
+
+rule CODE {
+
+BOOK {}
+CODE {s .9}
+}
+rule CODE .1 {
+BOOK {}
+CODE {s .99 x .3 }
+CODE {r 60 s .99}
+}
+rule CODE .6 {
+BOOK {}
+CODE {r 1 }
+}
+rule CODE 99 {
+CODE {x .01 r 1 h 1 }
+}
+rule CODE 0.0075 {
+CODE {s 6 x 110 r 1 h 1 a 1 b 1}
+}
+rule BOOK {
+3 * {x 5 r 120} LAW {}
+}
+rule LAW {
+	CIRCLE { hue 200 sat 1 b 1 a -.69 }
+	CIRCLE { s .3 x .5 hue 180 sat 1 b 1 }
+}

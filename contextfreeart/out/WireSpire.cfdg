@@ -1,0 +1,13 @@
+startshape wIREspIRE
+CF::Size=[s 2900 y -140]
+CF::MinimumSize=.01
+
+TurN=5  RoT=TurN*360  
+Sq=10,30  Z(J,K)=sin(J+K) 
+
+shape wIREspIRE
+{
+loop J=RoT [x 1 r .4] loop K=RoT [y -1] 
+SQUARE [s Sq z Z(J,K) b ((Z(J,K)^2)) h 50 sat .1]
+CIRCLE [s 5000 sat 0.8 b 0.5 z .425]
+}

@@ -1,0 +1,34 @@
+startshape X
+background { hue 100 sat .3 b .1 }
+rule X{
+FLORESX{}
+}
+rule FLORESX{
+FLORX{}
+FLORESX{x -.6 y -2 s .5}
+}
+rule FLORX{
+TALLO{x 5.05 y -4  s .3}
+FLOR{x .77 y .65 s 1.7 r 6}
+HOJA { x 4.9  r 135}
+PASTO{x 5 y -4 s .5}
+PASTO{x 5 y -4 s .5 flip 90}
+}
+rule TALLO{
+CIRCLE{ hue 100 sat -.4  }
+TALLO{ sat .5 b .09 y +.26 s .989 r .45}
+}
+rule FLOR{
+SQUARE{hue 63.8  sat 1 b .5}
+FLOR{  sat .9 b .25     s .965 r 32 }
+}
+rule HOJA{
+CIRCLE{b .9   hue 86.3 sat 0.7 b 0.7562   r -20 }
+HOJA{ b 0.5   y +0.1 s .9  r 2}
+}
+rule PASTO
+{
+ TRIANGLE{ hue 108.0 sat 0.95  b 0.5 }
+ PASTO {  x +.25 y -.011 b .1 s .95}
+ 
+}

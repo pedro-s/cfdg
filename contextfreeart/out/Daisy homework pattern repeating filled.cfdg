@@ -1,0 +1,23 @@
+startshape DAISYALL
+
+rule DAISYALL {
+DAISYSHAPE { }
+6*{r 60 h 60}DAISYXPAND {x 1}
+6*{r 60}DAISYSHAPE {x 1}
+}
+
+rule DAISYXPAND {
+DAISYSHAPE { }
+6*{r 60}DAISYSHAPE {x 1 z-1}
+DAISYXPAND{s .5 r 60}
+}
+
+
+path DAISYSHAPE {
+    MOVETO{x -1 y 0}
+    ARCTO {x 1 y 0}
+    ARCTO {x -1 y 0}
+    STROKE{width 0.03 b -1}
+    FILL {b 1 a -.9 sat 1}
+}
+

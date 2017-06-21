@@ -1,0 +1,63 @@
+startshape MONSTER
+background{b -1}
+
+rule MONSTER{
+	Horns[]
+	Eyes[]
+	Mouth[]
+}
+
+//-------------------------------------------------------------------------
+
+rule Horns{
+	Spk[x - 50 flip 90]
+	Spk[x 50]
+}
+
+rule Spk{
+	POINT[]
+	Spk[r 5 y 2 x 6 s .90 h 0]
+}
+
+rule POINT{
+	100* {r 3.6 h 3.6} CIRCLE[s 1 5 r 40 h 105 sat 1 b 1 y 5]
+}
+
+//-------------------------------------------------------------------------
+
+rule Eyes{
+	Ball[s .5 y - 70 x -60]
+	Ball[flip 90 s .5 y - 70 x -60]
+}
+
+rule Ball{
+	POINT[]
+	Ball[s .65 b 1 h 10 10]
+}
+
+//-------------------------------------------------------------------------
+
+rule Mouth{
+	TEETH[flip 180 y 70]
+}
+
+rule TEETH{
+	POINTC[y 20]
+	POINTB[]
+}
+
+rule POINTB{
+	30* {x 5 y -1 r -.8 h 13.5 s .9} TRIANGLE[x 2.5 s 5 20 h 355 sat 1 b 1]
+	30* {x -5 y -1 r .8 h 13.5 s .9} TRIANGLE[x -2.5 s 5 20 h 355 sat 1 b 1]
+	30* {x 5 y -1 r -.8 h 13.5 s .9} TRIANGLE[x .25 s 5 20 h 355 sat 1 b 1]
+	30* {x -5 y -1 r .8 h 13.5 s .9} TRIANGLE[x -.25 s 5 20 h 355 sat 1 b 1]
+
+}
+
+rule POINTC{
+	30* {x 4.8 y -2.6 r -.8 h 13.5 s .91} TRIANGLE[ x 2.5 r 180 s 5 20 h 355 sat 1 b 1]
+	30* {x -4.8 y -2.6 r .8 h 13.5 s .91} TRIANGLE[ x -2.5 r 180 s 5 20 h 355 sat 1 b 1]
+	30* {x 4.8 y -2.6 r -.8 h 13.5 s .91} TRIANGLE[ x .25 r 180 s 5 20 h 355 sat 1 b 1]
+	30* {x -4.8 y -2.6 r .8 h 13.5 s .91} TRIANGLE[ x -.25 r 180 s 5 20 h 355 sat 1 b 1]
+}
+

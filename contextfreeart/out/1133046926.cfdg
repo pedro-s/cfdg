@@ -1,0 +1,36 @@
+startshape spiralsun
+background { b -1 }
+
+rule spiralsun { 
+spiral {} 
+spiralsun { r 30 s .9  b .25 alpha -.25} 
+spiralsun{  r 15 s .9 b .25 alpha -.5}
+} 
+
+rule spiral { 
+sun {} 
+sun {y 1} 
+sun {y -1} 
+sun {y 2} 
+sun {y -2} 
+spiral {r 90 s .925} 
+}  
+
+rule sun{
+	star { hue 6.2 sat 0.9254 b 0.8856   }
+	star { r 22.5  hue 21.0 sat 1.0000 b 0.8856 }
+	sun { s .85 r 27 }
+}
+rule star{
+	gas{}
+	gas{ r 90 }
+	gas { r -45}
+	gas { r 45 }
+}
+rule gas{
+	sphere {s .25 1}
+}
+rule sphere{
+	CIRCLE{  b -.65}
+	CIRCLE { b 1 s .92}
+}

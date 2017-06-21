@@ -1,0 +1,59 @@
+startshape B
+
+rule B{
+A{x 0.7}
+A{}
+A{y -0.7}
+}
+
+rule B{
+A{x -0.7}
+B{}
+A{y .7}
+}
+rule B{
+A{}
+B{x 1.4 flip 90}
+}
+rule B{
+A{}
+A{x -0.7}
+A{y -0.7}
+B{flip 90}
+}
+
+
+rule A{
+CIRCLE{ z -2 s 1.1}
+CIRCLE{ b 1 z -1 s 0.9}
+DRIP{z -2}
+CIRCLE{ s 0.8 sat 0.7 hue 50 b 1}
+}
+
+rule A 0.05{
+CIRCLE{ z -2 s 1.1}
+CIRCLE{ b 1 z -1 s 0.9}
+DRIP{z -2}
+CIRCLE{ s 0.8 sat 0.7 hue 50 b 1}
+B{flip 90}
+}
+
+
+rule DRIP{
+20*{y -0.03} CIRCLE{s 0.1 y -0.5}
+}
+rule DRIP{
+20*{y -0.03} CIRCLE{s 0.1 y -0.5 x .2}
+DRIP{x -.25 y .1}
+}
+rule DRIP{
+25*{y -0.03} CIRCLE{s 0.1 y -0.5}
+}
+rule DRIP 5{}
+rule DRIP{
+15*{y -0.03} CIRCLE{s 0.1 y -0.5}
+}
+rule DRIP{
+12*{y -0.03} CIRCLE{s 0.1 y -0.5}
+CIRCLE{s 0.1 y -1}
+}

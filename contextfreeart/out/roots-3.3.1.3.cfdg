@@ -1,0 +1,29 @@
+startshape START
+
+background {h 200 sat 1 b  -.8}
+#tile {s 80}
+
+rule START { 2*{f 90} WALK {h 200 sat 1 b  .2} }
+
+
+rule WALK        { ROOT {} WALK{ x 2 r 15 h 10} }
+rule WALK        { ROOT {} WALK{ x 2 r -15} }
+rule WALK .06 { ROOT {} }
+
+rule ROOT { MROOT {}}
+rule MROOT {3* {r 120} AA {}}
+
+rule AA {
+CIRCLE {s .8 }
+AA {s .989  r 7  x .2  }
+}
+rule AA   {
+CIRCLE {s .8 }
+AA {flip 0 s .989  r 7  x  .2  b  .02 sat -.1}
+}
+rule AA  .01  {
+CIRCLE {s .8 }
+AA { s .98  r 7  x  .4  b  .05}
+AA {flip 0 s .98  r 7  x  .4  b  .05 sat -.1 }
+}
+

@@ -1,0 +1,82 @@
+startshape BEGIN
+background { alpha 1 b -1 }
+
+rule BEGIN {
+	SPIKE { h 0 sat 0 b 1.0 }
+}
+
+rule OBJECT {
+	SQUARE { }
+}
+
+rule SPACE {
+	SPACE { }
+}
+
+rule SPACE 0.9 {
+	LSPIKE { }
+	RFRUIT { b -0.2 s 10 }
+	RFRUIT { b -0.2 s 10 r 90 }
+	RFRUIT { b -0.2 s 10 r 180 }
+	RFRUIT { b -0.2 s 10 r 270 }
+}
+
+rule SPACE 0.9 {
+	RSPIKE { }
+	LFRUIT { b -0.2 s 10 }
+	LFRUIT { b -0.2 s 10 r 90 }
+	LFRUIT { b -0.2 s 10 r 180 }
+	LFRUIT { b -0.2 s 10 r 270 }
+}
+
+rule RFRUIT {
+	CIRCLE { }
+	RFRUIT { sat 0.1 b -0.1 r 5 x 0.2 s 0.9 }
+}
+
+rule RFRUIT 0.001 {
+}
+
+rule LFRUIT {
+	CIRCLE {}
+	LFRUIT { sat 0.1 b -0.1 r -5 x 0.2 s 0.9 }
+}
+
+rule LFRUIT 0.001 {
+}
+
+rule RSPIKE {
+	RSPIKE { hue 1 s 0.995 y 0.4 r 0.5 }
+	OBJECT { }
+}
+
+rule RSPIKE 0.01 {
+	RSPIKE { }
+	LSPIKE { }
+}
+
+rule RSPIKE 0.01 {
+	SPACE { }
+}
+
+rule LSPIKE {
+	LSPIKE { hue 1 s 0.995 y 0.4 r -0.5 }
+	OBJECT { }
+}
+
+rule LSPIKE 0.01 {
+	RSPIKE { }
+	LSPIKE { }
+}
+
+rule LSPIKE 0.01 {
+	SPACE { }
+}
+
+rule SPIKE {
+	RSPIKE {}
+}
+
+rule SPIKE {
+	LSPIKE {}
+}

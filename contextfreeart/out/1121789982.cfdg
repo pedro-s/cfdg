@@ -1,0 +1,36 @@
+startshape lines
+
+rule lines {
+	line { }
+	lines { }
+}
+
+rule lines {
+	line { }
+	lines { r 46 }
+}
+
+rule lines {
+	line { }
+	lines { r -46 }
+}
+
+rule lines {
+	line { }
+	lines { r 91 }
+}
+
+rule lines 0.075 { }
+
+rule line 2 {
+	CIRCLE { b .5 }
+	line { x .5 r 2 }
+}
+
+rule line 2 {
+	CIRCLE { b .5 }
+	line { y .5 r -2 }
+}
+
+rule line 0.01 {
+}

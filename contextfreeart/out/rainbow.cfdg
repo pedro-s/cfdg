@@ -1,0 +1,26 @@
+startshape KATY
+background {b -1}
+
+rule KATY {
+
+ARM { }
+}
+rule ARM {
+
+
+ARM {y 0.2 size 0.99 rotate 11}
+}
+rule ARM {
+CIRCLE { }
+
+ARM {y .9 size 0.99 rotate 10 h 16.39 sat 0.5907 b 0.9059}
+}
+
+rule ARM 2 {
+
+
+ARM {y .2 size .99 flip 90}
+ARM {y .2 size .6 brightness .2}
+}
+
+

@@ -1,0 +1,39 @@
+/* ----------------------------
+
+	Flower of Life
+	consider the Script "public domain"
+	do whatever you want with it
+
+	the second parameter defines how large the Flower will be
+	the first parameter needs to be 1. I couldn't get it to work with a single parameter
+
+---------------------------- */
+
+CF::Background = [hue 50 b -.05 saturation +.12 ] 
+startshape STARTER
+
+shape STARTER {
+	fol ( 1, 4 ) [ h 110 a -0.80 b+.4 sat +1 z +1 ]
+}
+
+shape fol ( natural depth, number end ) {
+	if( depth < end )
+	{
+		loop 6 [ r 60 ] 
+		{
+			CIRCLE [ y ( 0.5 * ( depth ) ) ]
+			folRun ( depth ) [ y ( 0.5 * depth ) r 30 ]
+		}
+		fol ( depth + 1, end ) []
+	}
+	else
+	{
+		CIRCLE [ ]
+	}
+}
+
+shape folRun ( number depth ) {
+	loop ( depth -1 ) [ x - 0.5 ] {
+		CIRCLE [ x - 0.5 ]
+	}
+}

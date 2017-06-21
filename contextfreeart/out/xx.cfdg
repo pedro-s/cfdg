@@ -1,0 +1,12 @@
+startshape xx
+
+background {b -1}
+
+rule xx {
+	2* {f 90 z .5}
+	{14* {s .382 1 r 45 b .1 z 1}
+	{CIRCLE {}}}
+	2* {r 180}
+	{xx {s .3781 y -.3109 r 90 z 1}
+	xx {s .224 x .388 r 90 z .5}}
+}

@@ -1,0 +1,42 @@
+startshape PlayAround4Gallery31
+background {h 20 b .2 sat .2}
+size {s 800 900 x -90 y -110}
+
+//random generator of surface pixels
+rule SQR {SQUARE {b  1 sat 1}}
+rule SQR {SQUARE {b .9 sat 1}}
+rule SQR {SQUARE {b .8 sat 1}}
+rule SQR {SQUARE {b .7 sat 1}}
+rule SQR {SQUARE {b .6 sat 1}}
+rule SQR {SQUARE {b .5 sat 1}}
+rule SQR {SQUARE {b .4 sat 1}}
+rule SQR {SQUARE {b .3 sat 1}}
+rule SQR {SQUARE {b .2 sat 1}}
+rule SQR {SQUARE {b .1 sat 1}}
+
+rule surFACE_1
+//cube front surface with randomly generated pixels
+//hue change tuned through 360
+{200*{x 1 h (360/200)} {200*{y 1 h (360/200) } SQR { }}}
+rule surFACE_2
+//cube side surface with randomly generated pixels
+//hue change tuned through 20
+{200*{x 1 h (360/3600)} {200*{y 1 h (360/3600) } SQR { }}}
+rule surFACE_3
+//cube top surface with randomly generated pixels
+//hue change tuned through 50
+{200*{x 1 h (360/1440)} {200*{y 1 h (360/1440) } SQR { }}}
+
+rule PlayAround
+//3D cube
+{surFACE_1 { }
+surFACE_2 {skew 0 30 s .3 1 x 200 z -1}
+surFACE_3 {skew 16.6 0 s 1.0001 .57 y 200 z -3}}
+
+rule PlayAround4Gallery31
+//falling cubes b tuned
+{2*{x 300 r 30 y 100 z -10 b .2} PlayAround {y 150 flip 45 h 180 }
+1*{x 50 r 45 y 10} PlayAround {r -10 h 90 b .5}
+2*{x -100 r -45 y -100 b .9 z 10} PlayAround {y -250 b .7 r 17}}
+
+

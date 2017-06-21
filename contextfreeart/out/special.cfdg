@@ -1,0 +1,26 @@
+startshape TENDRILS
+rule TENDRILS {
+ARM { }
+ARM { flip 90 }
+}
+rule ARM 98 {
+TRIANGLE { }
+CIRCLE { size 0.9 brightness 1 }
+ARM { y 0.2 size 0.99 rotate 3 }
+}
+rule ARM 2 {
+CIRCLE { }
+CIRCLE { size 0.9 brightness 1 }
+ARM { y 0.2 size 0.99 flip 180 }
+ARM { y 0.2 size 0.6 brightness 0.2 }
+}
+rule ARM 3 {
+CIRCLE { }
+CIRCLE { size 0.9 brightness 1 }
+ARM { y 0.2 size 0.99 flip 180 }
+}
+rule ARM 4 {
+CIRCLE { }
+CIRCLE { size 0.9 brightness 1 }
+ARM { y 0.2 size 0.99 flip 180 }
+}

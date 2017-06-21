@@ -1,0 +1,25 @@
+startshape START
+background {b -1}
+
+rule START {
+CAITLIN {r -7}
+CAITLIN { x 7 y 7 r 173 }
+CAITLIN { y 7 r -97 }
+CAITLIN {x 7 r 83}
+HAZE{s 2 x 3.5 y 3.5}
+}
+
+rule CAITLIN {
+PENTAGON { b 1 sat 1}
+HAZE {r 10 a -.2}
+CAITLIN {s .92 x 3  r -17 hue 14 a -.01}
+}
+
+rule HAZE{
+SQUARE {s .03 8}
+HAZE {r 134 b .008 s .99}
+}
+
+rule PENTAGON {
+5* {r 216} SQUARE { x .69 s .15 1}
+}

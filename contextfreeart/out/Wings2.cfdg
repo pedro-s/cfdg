@@ -1,0 +1,13 @@
+startshape WING
+
+rule HI {
+CIRCLE { s 50 }
+HI { s .8 x 10 y 10 r 3 b .2 }
+SQUARE { s 40 }
+HI { s .8 x -20 y 20 r -3 }
+}
+
+rule WING {
+HI { }
+HI { flip 90 x 80 }
+}

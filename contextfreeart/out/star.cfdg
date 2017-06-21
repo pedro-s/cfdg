@@ -1,0 +1,23 @@
+startshape STAR(11,35)[b 1 sat 1]
+CF::Background = [h 134.55 sat 0.9978 b -0.8]
+
+
+shape STAR(natural n,natural l)
+{
+	if(n>=3)
+	{
+		loop n [x l r (180-((360/n)/2))]
+  		{
+			LINE(l)[]
+			STAR(n--2, l)[x l s 0.5 b -0.075 r (-1*((360/n)/2))]
+		}
+	}
+}
+
+shape LINE(natural n)
+{
+	loop n [x 1]
+	{
+		CIRCLE[]
+	}
+}

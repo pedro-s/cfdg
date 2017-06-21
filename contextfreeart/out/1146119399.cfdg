@@ -1,0 +1,51 @@
+startshape SIERPCITY
+background { b -1 }
+include i_pix.cfdg
+
+rule SIERPCITY {
+	HOLE { b 1 sat 0.1 }
+}
+
+
+rule HOLE {
+	SHAPE {}
+	3*[x 1] HOLE3 [ x -1 y -1 s 0.333 ]
+	2*[x 2] HOLE3 [ x -1 s 0.333 ]
+	3*[x 1] HOLE3 [ x -1 y +1 s 0.333 ]
+	HOLE4 [ s 0.25 ]
+}
+
+rule HOLE 0.1 {}
+
+
+rule HOLE3 {
+	HOLE2 { z -1 }
+}
+
+
+rule HOLE4 0.333 {
+	HOLE { z 2 }
+}
+
+rule HOLE4 {
+	RANDOM_ALNUM_5by5 { s 2 }
+}
+
+
+rule HOLE2 1.5 {
+	HOLE { }
+}
+
+rule HOLE2 {
+	HOLE { r 10 h 30 sat 0.15 }
+}
+
+rule HOLE2 {
+	HOLE { r -10 h -30 sat 0.15 }
+}
+
+
+rule SHAPE {
+	SQUARE { }
+	SQUARE { b -1 a -0.15 s 0.85 }
+}

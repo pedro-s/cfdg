@@ -1,0 +1,16 @@
+startshape together 
+
+background {b -1}
+
+rule together {
+	2*{r 180 y 1 x 1}
+	alone {}
+}
+
+rule alone {
+	2*{f 90}
+	{8* {s 1.4142 .7071 r -45 x .75 f -45 y -.25 b .2 h -5 sat .1 a -.1 z 1}
+	SQUARE {b .42 h 200 sat .2}}
+	alone {s .7906 x .75 y -2 r -18.4349 a -.1}
+	alone {s .7071 x 1.5 r 45 a -.1 h 1 sat -.1}
+}

@@ -1,0 +1,26 @@
+startshape planta
+rule planta
+{
+	rama{}
+	planta{s .99 r 30 h 1}
+}
+rule rama
+{
+	base{}
+	rama{r 2 s .97 y .25  }
+}
+rule rama
+{
+	base{}
+	rama{r -7 s .97 y .25  }
+}
+rule rama .2
+{
+	base{}
+	rama{flip 90 r -7 s .97 y .25 }
+}
+rule base
+{
+	CIRCLE{ hue 100 sat 1 b .7}
+	CIRCLE{b 1 s .95}
+}

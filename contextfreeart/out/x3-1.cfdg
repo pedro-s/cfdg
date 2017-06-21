@@ -1,0 +1,17 @@
+startshape WL1
+
+rule WL1 {1000*{ x 3 y 30 size 0.998 r 170.09} WL{}
+}
+
+rule WL {LINE{ hue 160 sat 3 b 0.2 a -.5 flip 180}
+}
+
+rule WL .1{LINE{ hue 160 sat 3 b 0.2 a -.5 z -.9}
+}
+
+rule LINE {	TRIANGLE [ s 2 19 y .5] }
+
+rule LINE { WL1{s .22  z -.1 hue 120 sat -.3 b .2 r 9} }
+
+
+

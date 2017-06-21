@@ -1,0 +1,74 @@
+startshape SUN
+background { b -1 }
+
+rule SUN {
+	72* {r 5} LINER { y 5   hue 284.04 sat 0.9162 b 1.0000  sat 1  b 0.3 
+ 				|hue 60   |sat 1 |b 1 }
+}
+
+rule LINER { LINER1 { } }
+rule LINER { LINER2 { } }
+rule LINER { LINER3 { } }
+rule LINER { LINER4 { } }
+rule LINER { LINER5 { } }
+rule LINER { LINER6 { } }
+
+rule LINER1 {
+	UTRIANGLE { y 0.15 }
+	LINER1 { r -1 b 0.1| hue 177.27 sat 0.9344 b 1.0000|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER2 {
+	UTRIANGLE { y 0.15 }
+	LINER2 { r -2 b 0.1| hue 177.27 sat 0.9344 b 1.0000|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER3 {
+	UTRIANGLE { y 0.15 }
+	LINER3 { r -3 b 0.1| hue 177.27 sat 0.9344 b 1.0000|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER4 {
+	UTRIANGLE { y 0.15 }
+	LINER4 { r 1 b 0.1| hue 177.27 sat 0.9344 b 1.0000|
+		y 0.75 x 0.4330125
+		 s 0.97 }
+ }
+rule LINER5 {
+	UTRIANGLE { y 0.15 }
+	LINER5 { r 2 b 0.1| hue 177.27 sat 0.9344 b 1.0000|
+		y 0.99 x 0.46535
+		 s 0.99 }
+ }
+rule LINER6 {
+	UTRIANGLE { y 0.15 }
+	LINER6 { r 3 b 0.1| hue 177.27 sat 0.9344 b 1.0000|
+		y 0.99 x .46535
+		 s 0.99 }
+ }
+
+rule LINER1 .1 { LINER { } }
+rule LINER2 .1 { LINER { } }
+rule LINER3 .1 { LINER { } }
+rule LINER4 .1 { LINER { } }
+rule LINER5 .1 { LINER { } }
+rule LINER6 .1 { LINER { } }
+
+
+
+rule UTRIANGLE {
+	TRIANGLE { r 42.5 s 0.525 }
+}
+rule TRIANGLE{ 
+	ARM { r 0 }
+	ARM { r 12 }
+	ARM { r -12 }
+} 
+
+rule ARM {
+	CIRCLE { }
+	ARM { y 0.99 s 0.7 r 2 }
+}

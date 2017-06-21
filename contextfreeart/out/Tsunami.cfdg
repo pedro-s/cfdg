@@ -1,0 +1,10 @@
+startshape Result
+
+rule Result{
+	Composite{hue 231.9112 sat 0.9794 b 0.4392}
+}
+
+rule Composite{
+	SQUARE{}
+	2*{r 30}Composite{x 1 s .7 b .15}
+}

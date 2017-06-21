@@ -1,0 +1,16 @@
+startshape planets
+background { b 0 hue 225 saturation .95 }
+rule planets
+{	
+	
+	hollow { x 1 y 1 r 45 }
+	planets { s .99 r 45 }
+}
+rule hollow
+{
+	CIRCLE {b 0 hue 210 saturation .99 }
+	CIRCLE { s .9 b 1 hue 225 saturation .95}
+}
+
+
+ 	

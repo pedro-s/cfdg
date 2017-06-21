@@ -1,0 +1,49 @@
+startshape SPHERE
+background {b -1}
+rule SPHERE
+
+
+
+{
+
+100*{ h 15  s .9 r 10}
+
+CIRCLE {skew 25 35 h 312.53 sat 1.0000 b 1.0000 x 1 y 2.5}
+
+100*{ h 15  s .9 r 10}
+
+CIRCLE {skew 25 35 h 312.53 sat 1.0000 b 1.0000 x 1 y 3}
+
+100*{ h 15  s .9 r 10}
+
+CIRCLE {skew 25 35 h 312.53 sat 1.0000 b 1.0000 x 1 y 3.5}
+
+100*{ h 15  s .9 r 10}
+
+CIRCLE {skew 25 35 h 312.53 sat 1.0000 b 1.0000 x 1 y 4}
+
+100*{ h 15  s .9 r 10}
+
+CIRCLE {skew 25 35 h 312.53 sat 1.0000 b 1.0000 x 1 y 4.5}
+
+100*{ h 15  s .9 r 10}
+
+CIRCLE {skew 25 35 h 312.53 sat 1.0000 b 1.0000 x 1 y 5}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

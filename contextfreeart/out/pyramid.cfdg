@@ -1,0 +1,10 @@
+startshape INSANE
+background {a - 1}
+rule INSANE
+{
+SQUARE { skew 45 1 }
+INSANE {y .2 s .7 b .1}
+SQUARE {skew 50 1  x -.3 y .9 s .5 b .2}
+poop
+
+ }

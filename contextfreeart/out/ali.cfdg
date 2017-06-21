@@ -1,0 +1,14 @@
+startshape ali
+background { sat 0 b -1}
+
+rule ali {
+spir {sat 1 b 1 r 30}
+spir {r -30 f 90  x 0.5 y 0 sat 1 b 1}
+}
+
+rule spir  {
+TRIANGLE {}
+spir {s 0.78   r 30 hue 2 x 0 y 0 }
+spir {s 0.68 hue 6 x 0 y 2.7}
+
+}

@@ -1,0 +1,50 @@
+startshape start
+
+rule start {
+	tree{}
+}
+
+rule cross{
+	SQUARE{}
+	SQUARE{x 1.1}
+	SQUARE{x -1.1}
+	SQUARE{y 1.1}
+	SQUARE{y -1.1}
+	cross{alpha -.03 hue .2 b -.02}
+}
+
+
+rule cross .5 {
+	cross{x 1.1}
+}
+
+rule cross .5 {
+	cross{x -1.1}
+}
+
+rule cross .4 {
+	cross{y 1.1}
+}
+
+rule cross .2 {
+	cross{y -1.1}
+}
+
+rule cross .01{}
+
+rule tree {
+	SQUARE{}
+	tree{x 1.1}
+}
+
+rule tree .03 {
+	tree { r 90}
+	tree { r -90}
+}
+
+rule tree .05 {
+	cross {hue 0 sat 1 b 1}
+	tree{}
+}
+
+rule tree .03 {}

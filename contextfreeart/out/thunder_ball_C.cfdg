@@ -1,0 +1,122 @@
+startshape seed
+
+background {b -1}
+
+rule seed {
+	flare { }
+
+	100 * { r 103 a -0.01 } tree { hue 237 sat 0 b 1 }
+
+	10 * {s 0.9} CIRCLE { s 15 b 1 a -0.7}
+	CIRCLE { s 5 b 1 a 1}
+
+}
+
+
+
+rule tree {
+	CIRCLE { s 2 hue 0 sat 100 b 1 a -0.99 }
+	SQUARE { sat 0 }
+	tree { rotate -6 size 0.999 x -0.0124921 y 0.909067 sat +0.0025 b -0.0009 a -0.005}
+}
+
+rule tree {
+	CIRCLE { s 2 hue 0 sat 100 b 1 a -0.99 }
+	SQUARE { sat 0 }
+	tree { rotate 5 size 0.999 x -0.0124921 y 0.909067 sat +0.0025 b -0.0009 a -0.005}
+}
+
+rule tree 0.005 {
+	CIRCLE { s 2 hue 0 sat 100 b 1 a -0.99 }
+	SQUARE { sat 0 }
+	leaf { }
+	tree { rotate -6 size 0.999 x -0.0124921 y 0.909067 sat +0.0025 b -0.0009 a -0.005}
+}
+
+rule tree 0.005 {
+	CIRCLE { s 2 hue 0 sat 100 b 1 a -0.99 }
+	SQUARE { sat 0 }
+	leaf { }
+	tree { rotate 5 size 0.999 x -0.0124921 y 0.909067 sat +0.0025 b -0.0009 a -0.005}
+}
+
+rule tree 0.1{
+
+	tree {r 3}
+	tree {r -3}
+}
+
+rule tree 0.105{
+
+}
+
+
+
+rule leaf {
+	CIRCLE { x 5 s 2.5 a -0.35}
+}
+
+rule leaf {
+	CIRCLE { x 10 s 5  a -0.6}
+}
+
+rule leaf {
+	CIRCLE { x 16 s 8  a -0.85}
+}
+
+rule leaf 0.75 {
+	tree { size 0.999 x 10 sat +0.0025 b -0.0009 a -0.0075 }
+}
+
+
+
+rule flare {
+	lensflare{ }
+}
+
+rule flare {
+	lensflare{ r 150 }
+}
+
+rule flare {
+	lensflare{ r -30 }
+}
+
+rule flare {
+	lensflare{ r -60 }
+}
+
+rule flare {
+	lensflare{ r -80 }
+}
+
+rule lensflare{
+
+	CIRCLE {s 70 h 340 sat 92 b 1 a -0.85}
+	CIRCLE {s 66 b -1 a 1}
+
+	CIRCLE {x -40 y -40 s 20 h 143 sat 45 b 1 a -0.8}
+	CIRCLE {x -40 y -40 s 18 b -1 a 1}
+
+	CIRCLE {x 140 y 140 s 90 b 1 a -0.95}
+	CIRCLE {x 140 y 140 s 80 b -1 a 1}
+
+	CIRCLE {x 30 y 30 s 60 h 35 sat 24 b 1 a -0.85}
+	CIRCLE {x 30 y 30 s 20 h 72 sat 15 b 1 a -0.92}
+	CIRCLE {x 35 y 35 s 30 h 64 sat 27 b 1 a -0.91}
+
+	CIRCLE {x 67 y 67 s 20 h 236 sat 55 b 1 a -0.8}
+
+	CIRCLE {x 80 y 80 s 1 h 42 sat 31 b 1 a 1}
+
+	CIRCLE {x 100 y 100 s 70 h 68 sat 18 b 1 a -0.92}
+	CIRCLE {x 120 y 120 s 40 h 103 sat 39 b 1 a -0.95}
+
+	beam { r 7 }
+
+
+}
+
+rule beam {
+	90 * { s 1 1.03 } SQUARE { s 0.5 20 b 1 a -0.9}
+}

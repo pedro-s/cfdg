@@ -1,0 +1,25 @@
+startshape anemona{color alpha}
+
+rule anemona {
+	spiral { hue =214.5 sat =0.1843 b =1.0000 }
+}
+
+rule spiral {
+	hair { }
+	spiral { y 1 r 15 s .99 b -.005  hue -.7533 sat -0.00001 b -0.0005  }
+}
+
+rule hair {
+	CIRCLE { }
+	hair { x .1 s .995 b .0025 }
+}
+
+rule hair {
+	CIRCLE { }
+	hair { x .1 r 1 s .995 b .0025 }
+}
+
+rule hair {
+	CIRCLE { }
+	hair { x .1 r -1 s .995 b .0025 }
+}

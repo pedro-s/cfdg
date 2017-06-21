@@ -1,0 +1,466 @@
+
+startshape sentences {color}
+
+include i_blockletters.cfdg
+
+rule sentences {
+ sentence {s 2 1}
+ sentence {s 2 1 y -10}
+ sentence {s 2 1 y -20}
+}
+
+
+////////////////////
+rule sentence {
+ vert_line { }
+ _sentence {b 0.7 s 17 1 y -1}
+ sentence_ {y -2}
+}
+
+rule sentence_ {
+ _the {x 0 s 1 y -1}  vert_line {x 0}
+ nounphrase {x 1.5 s 4.5 1}
+ verbphrase { x 6.5 s 4 1}
+ _the {x 11 s 1 y -1} vert_line {x 11}
+ nounphrase {x 12.5 s 4.5 1}
+ CIRCLE {x 17.1 y -0.3 s 0.3}
+}
+
+///////////////////
+
+rule verbphrase {
+  vert_line { }
+  _verbphrase{b 0.7 y -1}
+  verbphrase_ {y -2}
+}
+
+rule verbphrase_ {
+ verb{ }
+}
+
+rule verbphrase_ 0.7 {
+ adverb {s 0.5 1 }
+ verb{x 0.6 s 0.4 1}
+}
+
+//////////////////////
+
+rule nounphrase {
+ vert_line { }
+ _nounphrase {b 0.7 y -1}
+ nounphrase_ {y -2} 
+}
+
+rule nounphrase_ {
+ noun { }
+}
+
+rule nounphrase_ 0.5 {
+ adjectivephrase {s 0.5 1 }
+ noun{x 0.6 s 0.4 1}
+}
+
+
+///////////
+
+rule noun {
+ vert_line { }
+ _noun {b 0.7 y -1}
+ noun_ {y -2} 
+}
+
+rule noun_ { _cat {y -1 } vert_line {x 0} }
+rule noun_ { _dog {y -1} vert_line {x 0} }
+rule noun_ { _horse {y -1} vert_line {x 0} }
+rule noun_ { _prostitute {y -1} vert_line {x 0} }
+rule noun_ { _baby {y -1} vert_line {x 0} }
+
+
+//////////////////////
+
+rule adjectivephrase {
+ vert_line { }
+ _adjectivephrase {b 0.7 y -1}
+ adjectivephrase_ {y -2} 
+}
+
+rule adjectivephrase_ {
+ adjective { }
+}
+
+rule adjectivephrase_ 10.2 {
+ adjective {s 0.35 1 }
+ _and {y -1 x 0.4 s 0.2 0.5} vert_line {x 0.4 s 0.1 1}
+ adjective {s 0.35 1 x 0.65 }
+}
+
+///////////
+
+
+///////////
+
+rule adjective {
+ vert_line { }
+ _adjective {b 0.7 y -1}
+ adjective_ {y -2} 
+}
+
+rule adjective_ { _cold {y -1} vert_line {x 0} }
+rule adjective_ { _wet {y -1} vert_line {x 0} }
+rule adjective_ { _electric {y -1} vert_line {x 0} }
+rule adjective_ { _airborne {y -1} vert_line {x 0} }
+
+///////////
+
+
+
+///////////
+
+rule verb {
+ vert_line { }
+ _verb {b 0.7 y -1}
+ verb_ {y -2} 
+}
+
+rule verb_ { _kicked {y -1} vert_line {x 0} }
+rule verb_ { _ate {y -1} vert_line {x 0} }
+rule verb_ { _humped {y -1} vert_line {x 0} }
+rule verb_ { _jumped {y -1} vert_line {x 0} }
+
+///////////
+
+rule adverb {
+ vert_line { }
+ _adverb {b 0.7 y -1}
+ adverb_ {y -2} 
+}
+
+rule adverb_ { _calmly {y -1} vert_line {x 0} }
+rule adverb_ { _justnow {y -1} vert_line {x 0} }
+rule adverb_ { _repeatedly {y -1} vert_line {x 0} }
+rule adverb_ { _workingformoney {y -1} vert_line {x 0} }
+
+///////////
+
+///////////
+
+rule vert_line {
+ SQUARE {s 0.05 0.4}
+}
+
+
+
+rule _kicked { __kicked {s 0.16667 1} }
+rule __kicked {
+ K_BLOCK{ }
+ I_BLOCK{x 1}
+ C_BLOCK{x 2}
+ K_BLOCK{x 3 }
+ E_BLOCK{x 4}
+ D_BLOCK{x 5}
+}
+
+rule _fucked { __fucked {s 0.16667 1} }
+rule __fucked {
+ F_BLOCK{ }
+ U_BLOCK{x 1}
+ C_BLOCK{x 2}
+ K_BLOCK{x 3 }
+ E_BLOCK{x 4}
+ D_BLOCK{x 5}
+}
+
+rule _humped { __humped {s 0.16667 1} }
+rule __humped {
+ H_BLOCK{ }
+ U_BLOCK{x 1}
+ M_BLOCK{x 2}
+ P_BLOCK{x 3 }
+ E_BLOCK{x 4}
+ D_BLOCK{x 5}
+}
+
+rule _jumped { __jumped {s 0.16667 1} }
+rule __jumped {
+ J_BLOCK{ }
+ U_BLOCK{x 1}
+ M_BLOCK{x 2}
+ P_BLOCK{x 3 }
+ E_BLOCK{x 4}
+ D_BLOCK{x 5}
+}
+
+
+rule _ate { __ate {s 0.3333 1} }
+rule __ate {
+ A_BLOCK{ }
+ T_BLOCK{x 1}
+ E_BLOCK{x 2}
+}
+
+////////////////////////
+
+rule _cat { __cat {s 0.3333 1} }
+rule __cat {
+ C_BLOCK{ }
+ A_BLOCK{x 1}
+ T_BLOCK{x 2}
+}
+
+rule _dog { __dog {s 0.3333 1} }
+rule __dog {
+ D_BLOCK{ }
+ O_BLOCK{x 1}
+ G_BLOCK{x 2}
+}
+
+rule _horse { __horse {s 0.2 1} }
+rule __horse {
+ H_BLOCK{ }
+ O_BLOCK{x 1}
+ R_BLOCK{x 2}
+ S_BLOCK{x 3}
+ E_BLOCK{x 4}
+}
+
+rule _prostitute { __prostitute {s 0.1 1} }
+rule __prostitute {
+ P_BLOCK{ }
+ R_BLOCK{x 1}
+ O_BLOCK{x 2}
+ S_BLOCK{x 3}
+ T_BLOCK{x 4}
+ I_BLOCK{x 5 }
+ T_BLOCK{x 6}
+ U_BLOCK{x 7}
+ T_BLOCK{x 8}
+ E_BLOCK{x 9}
+}
+
+///////////////////////
+
+rule _sentence { __sentence {s 0.125 1} }
+rule __sentence {
+ S_BLOCK{ }
+ E_BLOCK{x 1}
+ N_BLOCK{x 2}
+ T_BLOCK{x 3}
+ E_BLOCK{x 4}
+ N_BLOCK{x 5 }
+ C_BLOCK{x 6}
+ E_BLOCK{x 7}
+}
+
+rule _verbphrase { __verbphrase {s 0.1 1} }
+rule __verbphrase {
+ V_BLOCK{ }
+ E_BLOCK{x 1}
+ R_BLOCK{x 2}
+ B_BLOCK{x 3}
+ P_BLOCK{x 4}
+ H_BLOCK{x 5 }
+ R_BLOCK{x 6}
+ A_BLOCK{x 7}
+ S_BLOCK{x 8}
+ E_BLOCK{x 9}
+}
+
+rule _nounphrase { __nounphrase {s 0.1 1} }
+rule __nounphrase {
+ N_BLOCK{ }
+ O_BLOCK{x 1}
+ U_BLOCK{x 2}
+ N_BLOCK{x 3}
+ P_BLOCK{x 4}
+ H_BLOCK{x 5 }
+ R_BLOCK{x 6}
+ A_BLOCK{x 7}
+ S_BLOCK{x 8}
+ E_BLOCK{x 9}
+}
+
+rule _noun { __noun {s 0.25 1} }
+rule __noun {
+ N_BLOCK{ }
+ O_BLOCK{x 1}
+ U_BLOCK{x 2}
+ N_BLOCK{x 3}
+}
+
+rule _verb { __verb {s 0.25 1} }
+rule __verb {
+ V_BLOCK{ }
+ E_BLOCK{x 1}
+ R_BLOCK{x 2}
+ B_BLOCK{x 3}
+}
+
+rule _adverb { __adverb {s 0.166667 1} }
+rule __adverb {
+ A_BLOCK{ }
+ D_BLOCK{x 1}
+ V_BLOCK{x 2 }
+ E_BLOCK{x 3}
+ R_BLOCK{x 4}
+ B_BLOCK{x 5}
+}
+
+rule _adjective { __adjective {s 0.1111111 1} }
+rule __adjective {
+ A_BLOCK{ }
+ D_BLOCK{x 1}
+ J_BLOCK{x 2 }
+ E_BLOCK{x 3}
+ C_BLOCK{x 4}
+ T_BLOCK{x 5}
+ I_BLOCK{x 6}
+ V_BLOCK{x 7}
+ E_BLOCK{x 8}
+}
+
+rule _adjectivephrase { __adjectivephrase {s 0.0666667 1} }
+rule __adjectivephrase {
+ A_BLOCK{ }
+ D_BLOCK{x 1}
+ J_BLOCK{x 2 }
+ E_BLOCK{x 3}
+ C_BLOCK{x 4}
+ T_BLOCK{x 5}
+ I_BLOCK{x 6}
+ V_BLOCK{x 7}
+ E_BLOCK{x 8}
+ P_BLOCK{x 9}
+ H_BLOCK{x 10}
+ R_BLOCK{x 11}
+ A_BLOCK{x 12}
+ S_BLOCK{x 13}
+ E_BLOCK{x 14}
+}
+
+///////////////////////
+
+rule _cold { __cold {s 0.25 1} }
+rule __cold {
+ C_BLOCK{ }
+ O_BLOCK{x 1}
+ L_BLOCK{x 2}
+ D_BLOCK{x 3}
+}
+
+rule _wet { __wet {s 0.333333333 1} }
+rule __wet {
+ W_BLOCK{ }
+ E_BLOCK{x 1}
+ T_BLOCK{x 2}
+}
+
+rule _electric { __electric {s 0.125 1} }
+rule __electric {
+ E_BLOCK{ }
+ L_BLOCK{x 1}
+ E_BLOCK{x 2}
+ C_BLOCK{x 3}
+ T_BLOCK{x 4}
+ R_BLOCK{x 5}
+ I_BLOCK{x 6}
+ C_BLOCK{x 7}
+}
+
+rule _baby { __baby {s 0.25 1} }
+rule __baby {
+ B_BLOCK{ }
+ A_BLOCK{x 1}
+ B_BLOCK{x 2}
+ Y_BLOCK{x 3}
+}
+
+rule _airborne { __airborne {s 0.125 1} }
+rule __airborne {
+ A_BLOCK{ }
+ I_BLOCK{x 1}
+ R_BLOCK{x 2}
+ B_BLOCK{x 3}
+ O_BLOCK{x 4}
+ R_BLOCK{x 5}
+ N_BLOCK{x 6}
+ E_BLOCK{x 7}
+}
+
+
+///////////////////////
+
+rule _the { __the {s 0.3333 1} }
+rule __the {
+ T_BLOCK{ }
+ H_BLOCK{x 1}
+ E_BLOCK{x 2}
+}
+
+
+rule _and { __and {s 0.3333 1} }
+rule __and {
+ A_BLOCK{ }
+ N_BLOCK{x 1}
+ D_BLOCK{x 2}
+}
+
+///////////////////////
+
+rule _calmly { __calmly {s 0.16667 1} }
+rule __calmly {
+ C_BLOCK{ }
+ A_BLOCK{x 1}
+ L_BLOCK{x 2}
+ M_BLOCK{x 3 }
+ L_BLOCK{x 4}
+ Y_BLOCK{x 5}
+}
+
+rule _repeatedly { __repeatedly {s 0.1 1} }
+rule __repeatedly {
+ R_BLOCK{ }
+ E_BLOCK{x 1}
+ P_BLOCK{x 2}
+ E_BLOCK{x 3 }
+ A_BLOCK{x 4}
+ T_BLOCK{x 5}
+ E_BLOCK{x 6}
+ D_BLOCK{x 7}
+ L_BLOCK{x 8}
+ Y_BLOCK{x 9}
+}
+
+rule _justnow { __justnow {s 0.125 1} }
+rule __justnow{
+ J_BLOCK{ }
+ U_BLOCK{x 1}
+ S_BLOCK{x 2}
+ T_BLOCK{x 3 }
+
+ N_BLOCK{x 5}
+ O_BLOCK{x 6}
+ W_BLOCK{x 7}
+}
+
+rule _workingformoney { __workingformoney {s 0.058824 1} }
+rule __workingformoney {
+ W_BLOCK{ }
+ O_BLOCK{x 1}
+ R_BLOCK{x 2}
+ K_BLOCK{x 3 }
+ I_BLOCK{x 4 }
+ N_BLOCK{x 5 }
+ G_BLOCK{x 6 }
+
+ F_BLOCK{x 8 }
+ O_BLOCK{x 9 }
+ R_BLOCK{x 10 }
+
+ M_BLOCK{x 12 }
+ O_BLOCK{x 13 }
+ N_BLOCK{x 14 }
+ E_BLOCK{x 15 }
+ Y_BLOCK{x 16 }
+}
+
+

@@ -1,0 +1,23 @@
+startshape tree
+
+background { b -1 }
+
+rule tree {
+	SEED { b 1 }
+	tree { s .999 y 1 }
+}
+
+rule tree 0.005 {
+	CIRCLE { s 8 b 1 }
+	CIRCLE { s 16 b 1 alpha -0.5 }
+	tree { r 45 }
+	tree { r -45 }
+}
+
+rule SEED {
+	SQUARE {}
+}
+
+rule SEED 0.05 {
+	CIRCLE { s 4 }
+}

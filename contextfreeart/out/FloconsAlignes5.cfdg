@@ -1,0 +1,96 @@
+/*
+    Flocons1
+
+    Tower principles borrewed from id #1288
+    > Voronoi
+    > By AK July 2008	
+    > 
+    > After a suggestion by pikalek
+    > on contextfreeart.org gallery.
+*/
+startshape START
+
+background { hue 182.4 sat 0.2730 b -.9 }
+
+rule START {
+  4*{y 1.2} line { } 
+}
+
+rule line {
+  4 * {x 1.2} flocon {r 15 hue 182.4 sat 0.02 b .1}
+}
+
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  quatre_sommets {r 30}
+  quatre_sommets {r 90}
+  flocon {z 15 s .8 r 15}
+}
+
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  flocon {z 15 s .83 r 15}
+}
+
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  quatre_sommets {r 30}
+  quatre_sommets {r 90}
+  flocon {z 15 s .82 r 30}
+}
+
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  flocon {z 15 s .77 r 30}
+}
+
+// suite
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  quatre_sommets {r 30}
+  quatre_sommets {r 90}
+  flocon {z 15 s .91 r 15}
+}
+
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  flocon {z 15 s .8 r 15}
+}
+
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  quatre_sommets {r 30}
+  quatre_sommets {r 90}
+  flocon {z 50 s .9 r 30}
+}
+
+rule flocon {
+  quatre_sommets {}
+  quatre_sommets {r 60}
+  flocon {z 50 s .92 r 30}
+}
+
+rule quatre_sommets {
+  tower{}
+  little_tower{r 180 y .291265 s .5 }
+  little_tower{r 60 x .25 y -.141745 s .5 }
+  little_tower{r 60 x -.25 y -.141745 s .5 }
+}
+
+rule tower {
+    TRIANGLE {}
+    tower {z 1 s 0.99 b 0.0299 }
+}
+
+rule little_tower {
+    TRIANGLE {}
+    little_tower {z 1 s 0.98 b 0.0898 }
+}
+

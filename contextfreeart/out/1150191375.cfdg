@@ -1,0 +1,82 @@
+startshape AZTEC
+
+background {b -1}
+
+rule AZTEC{
+	ROUND{}
+}
+
+rule ROUND {
+	ROUNDQ { r 0 }
+	ROUNDQ { r 45 }
+	ROUNDQ { r 90 }
+	ROUNDQ { r 135 }
+	ROUNDQ { r 180 }
+	ROUNDQ { r 225 }
+	ROUNDQ { r 270 }
+	ROUNDQ { r 315 }
+}
+rule ROUNDQ {
+	LINEX { r 0 }
+	LINEX { r 5 }
+	LINEX { r 10 }
+	LINEX { r 15 }
+	LINEX { r 20 }
+	LINEX { r 25 }
+	LINEX { r 30 }
+	LINEX { r 35 }
+	LINEX { r 40 }
+}
+
+rule LINEX { LINES {  } }
+
+rule LINES {
+	LINER { }
+	LINER { x 2 }
+	LINER { x 4 }
+	LINER { x 6 }
+	LINER { x 8 }
+	LINES { x 1 y 2 s 0.1 }
+ }
+
+rule LINER { LINE { } }
+rule LINER { LINE { } }
+rule LINER { LINE { } }
+rule LINER { LINE { } }
+rule LINER { LINE { } }
+rule LINER { LINE { } }
+
+rule LINE {
+	MULTI {x 5 }
+}
+
+rule MULTI{
+	SPIN{ }
+	MULTI{ x 2.5 s .1 r 0}
+	
+}
+
+rule SPIN {
+	OUT {}
+	SPIN { x 0 s .5 r 22.5}	
+}
+
+rule OUT {
+	MOVE{ x .75 y .75 r 315}
+	MOVE{ x -.75 y .75 r 45}
+	MOVE{ x -.75 y -.75 r 135}
+	MOVE{ x .75 y -.75 r 225}
+	MOVE{ x 0 y 1 r 0}
+	MOVE{ x -1 y 0 r 90}
+	MOVE{ x 0 y -1 r 180}
+	MOVE{ x 1 y 0 r 270}
+}
+
+rule MOVE {
+	BASE{}
+	MOVE { y .01  s .99 sat .9 hue .1 b .01 r 0 }
+}
+
+rule BASE {
+	CIRCLE {}
+}

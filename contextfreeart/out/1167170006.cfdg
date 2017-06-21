@@ -1,0 +1,30 @@
+// Title:  Spirograph2
+// Author: epmoyer
+// Date:   12/26/06
+// Reference Pic Seed: (Deterministic)
+// Description:    
+//     Was trying to mimmic the spirograph patterns of my youth.
+//
+// Intersting Concepts:
+//     Borrowed heavily from lagroue's concept of using severly squashed squares to 
+//   effectively draw lines.
+
+
+startshape INIT
+background { b -1}
+
+rule INIT{ 
+	7* {r 51.4} BASE{b 0.3 sat 1 hue 0 |hue 60 }
+}
+
+
+rule BASE{
+	WANDER {}
+   WANDER {flip 180}
+}
+
+rule WANDER 1.0 { 
+	SQUARE{s 1 0.001}
+   CIRCLE[ r 90 y 0.5  s 0.05]
+   WANDER[y 0.2 r 1 y -0.2  s 0.98 hue 0.05| b 0.05]
+}

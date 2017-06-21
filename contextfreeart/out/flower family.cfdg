@@ -1,0 +1,19 @@
+background {b -.9 sat  -.8} startshape FLOWER// from MICHAEL// 222.49224 = 360 / 1.618034 (the golden ratio)
+rule FLOWER {    SHADOW{ s 3 b -1 r 70 }
+    FLOWER {r 222.49224 s .98 x 10
+hue -.5 sat 1 z 10000}}
+
+
+rule SHADOW {CIRCLE {s rand_static(.4, 2) sat 1 hue rand_static(19360)  sat rand_static(1)}
+
+CIRCLE {s rand_static(.01, 1) b .5 z 100 a -.97}
+
+
+
+
+SHADOW {s .98    y .0411  b .028610586531 z . 1 sat - .08 r rand_static(.1, 1)}
+
+
+}
+
+rule SHADOW .3 {SHADOW {flip 90}}

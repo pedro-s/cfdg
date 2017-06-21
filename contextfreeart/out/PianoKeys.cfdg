@@ -1,0 +1,9 @@
+startshape Caligraphy
+
+include i_polygons.cfdg
+
+rule Caligraphy{
+8* {r 45} TRIANGLE {size 10 0.5x 10 rotate 90}
+8* {r 45} SQUARE {size 5.0 0.5x 10 rotate 90}
+Caligraphy{s 0.9 r 10}
+}

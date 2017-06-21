@@ -1,0 +1,155 @@
+startshape SHOW_ALL
+
+include i_pix.cfdg
+
+// rules make objects
+// recursion makes depth (and elegance)
+// shapes make geometry
+// parameters make alterations
+// weights make variations
+
+
+// known parameters
+//	rotate #		rotation in degrees 0 to 360
+//	brightness #	brightness
+//	size # #		stretch # both or # # each dimension
+//    x #				position left/right
+//    y #				position up/down
+//	flip
+//	skew # #
+
+//	color
+// 		hue
+//		saturation 
+//		brightness
+//		alpha
+//	explained at http://chriscoyne.com/cfdgforums/viewtopic.php?t=208
+
+rule SHOW_ALL {
+  SHOW_BUILT_IN {}
+  SHOW_INCLUDED {}
+}
+
+rule SHOW_BUILT_IN {
+	word_circle { x 12 y 10 }
+	CIRCLE       { x 10 y 10 s 1 }
+
+	word_oval { x 12 y 8 }
+	CIRCLE       { x 9 y 8 s 3 1 }
+
+	word_square {  x 12 y 6 }
+	SQUARE		{ x 10  y 6 s 1 }
+
+	word_rect {  x 12 y 4 }
+	SQUARE { x 9  y 4 s 3 1 }
+
+	word_triangle { x 12 y 2 }
+	TRIANGLE { x 9.5 y 1.8 s 1 3 rotate 90 }
+
+	word_color { x 6 y -2 r 90 b 1 sat 1 hue 120 s .5}
+	sat_smear {  hue -60 sat 1 b 1 }
+	hue_smear {  hue 90 sat 1 y -1 b 1 }
+	bright_smear {  hue -60 sat 1 y -2 b 1 }
+}
+
+rule sat_smear {
+	CIRCLE       {  s 1 }
+	sat_smear { x .1 s .98 sat  .03|  b 0  }
+}
+
+rule bright_smear {
+	CIRCLE       {  s 1 }
+	bright_smear { x .1 s .98 b .03|  }
+}
+
+rule hue_smear {
+	CIRCLE       {  s 1 }
+	hue_smear { x .1 s .98 hue .03|  }
+}
+
+rule word_circle  {
+	C_5by5 { x 0 }
+	I_5by5 { x 1.2 }
+	R_5by5 { x 2.4 }
+	C_5by5 { x 3.6 }
+	L_5by5 { x 4.8 }
+	E_5by5 { x 6.0 }
+}
+
+rule word_color  {
+	C_5by5 { x 0 }
+	O_5by5 { x 1.2 }
+	L_5by5 { x 2.4 }
+	O_5by5 { x 3.6 }
+	R_5by5 { x 4.8 }
+}
+
+rule word_oval  {
+	O_5by5 { x 0 }
+	V_5by5 { x 1.2 }
+	A_5by5 { x 2.4 }
+	L_5by5 { x 3.6 }
+}
+
+rule word_square  {
+	S_5by5 { x 0 }
+	Q_5by5 { x 1.2 }
+	U_5by5 { x 2.4 }
+	A_5by5 { x 3.6 }
+	R_5by5 { x 4.8 }
+	E_5by5 { x 6.0 }
+}
+
+rule word_triangle  {
+	T_5by5 { x 0 }
+	R_5by5 { x 1.2 }
+	I_5by5 { x 2.4 }
+	A_5by5 { x 3.6 }
+	N_5by5 { x 4.8 }
+	G_5by5 { x 6.0 }
+	L_5by5 { x 7.2 }
+	E_5by5 { x 8.4 }
+}
+
+rule word_rect  {
+	R_5by5 { x 0 }
+	E_5by5 { x 1.2 }
+	C_5by5 { x 2.4 }
+	T_5by5 { x 3.6 }
+	A_5by5 { x 4.8 }
+	N_5by5 { x 6.0 }
+	G_5by5 { x 7.2 }
+	L_5by5 { x 8.4 }
+	E_5by5 { x 8.4 }
+}
+
+
+include i_curves.cfdg
+include i_polygons.cfdg
+
+rule SHOW_INCLUDED {
+  curveright_0.9_2 { y 2 }
+  word_curve { x 2 y 3 rotate 80 }
+  polygon7sided { x 10 y -2  }
+  word_septagon { x 12 y -2 size .8 2 }
+}
+
+rule word_curve  {
+	C_5by5 { x 0 }
+	U_5by5 { x 1.2 }
+	R_5by5 { x 2.4 }
+	V_5by5 { x 3.6 }
+	E_5by5 { x 4.8 }
+}
+
+rule word_septagon  {
+	S_5by5 { x 0 }
+	E_5by5 { x 1.2 }
+	P_5by5 { x 2.4 }
+	T_5by5 { x 3.6 }
+	A_5by5 { x 4.8 }
+	G_5by5 { x 6.0 }
+	O_5by5 { x 7.2 }
+	N_5by5 { x 8.4 }
+}
+

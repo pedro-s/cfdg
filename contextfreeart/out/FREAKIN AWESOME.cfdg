@@ -1,0 +1,37 @@
+startshape STUPID
+background {h -140.71 sat 0.7896 b 0.9843 }
+rule STUPID {
+
+SQUARE {  size 30 }
+SQUARE { r 45 size 29 h 219.29 sat 0.7896 b 0.9843  }
+SQUARE { r 45 size 28 h 219.29 sat 0.7896 b 0.0000 }
+SQUARE {  size 27 h -140.71 sat 0.7896 b 0.9843  }
+SQUARE { r 45 size 26 h 219.29 sat 0.7896 b 0.0000 }
+SQUARE {  size 25 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 24 h 219.29 sat 0.7896 b 0.0000 }
+SQUARE {  size 23 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 22 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 21 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 20 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 19 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 18 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 17 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 16 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 15 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 14 h 0.00 sat 0.0000 b 0.0000}
+SQUARE {  size 13 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 12 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 11 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 10 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 9 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 8 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 7 h -140.71 sat 0.7896 b 0.9843}
+SQUARE { r 45 size 6 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 5 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 4 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 3 h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size 2 h 0.00 sat 0.0000 b 0.0000 }
+SQUARE {  size 1h -140.71 sat 0.7896 b 0.9843 }
+SQUARE { r 45 size .5 h 0.00 sat 0.0000 b 0.0000 }  
+}
+

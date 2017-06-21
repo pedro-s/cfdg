@@ -1,0 +1,24 @@
+
+startshape TREE
+
+rule TREE 20 {
+    CIRCLE{ size 0.25 }
+    SCRAGGLE { y 0.1 }
+}
+
+rule SCRAGGLE {
+    TREE { rotate 10 size 0.88 }
+}
+
+rule SCRAGGLE {
+    TREE { rotate -10 size 1.1 }
+}
+
+rule TREE 1 {
+    BRANCH { size 0.7}
+}
+
+rule BRANCH {
+    TREE { rotate -10 }
+    TREE { rotate 10 }
+}

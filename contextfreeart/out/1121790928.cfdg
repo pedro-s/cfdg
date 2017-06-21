@@ -1,0 +1,11 @@
+startshape SUN
+
+rule SUN {
+	CORD { }
+	SUN { x 2 r 95 s .99 b .01 }
+}
+
+rule CORD {
+	CIRCLE{ } 
+	CORD { y 1 r -5 s .9 }
+}

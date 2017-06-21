@@ -1,0 +1,28 @@
+startshape GEAR3D
+
+background {b -.5}
+
+//3D Gear
+rule GEAR3D
+{
+	GEAR {z 10000}
+	//Add depth
+	//  X/Y Offset for 3D
+	//  Smaller for non-isometric 3D
+	20 * {x .01 y .01 z 1 s .997} GEAR {}
+}
+//Gear
+rule GEAR
+{
+	//Black
+	360 * {r 1 } CIRCLE {x 2}
+	12 * {r 30} TOOTH {x 2.5 r 270}
+	//White
+	360 * {r 1 } CIRCLE {x 2 s .8 b 1}
+	12 * {r 30} TOOTH {z 1000 s .8 1.2 x 2.3 r 270 b 1}
+}
+//Gear Tooth
+rule TOOTH
+{
+	6 * {y .1 s .99} SQUARE {s 1 .1}
+}

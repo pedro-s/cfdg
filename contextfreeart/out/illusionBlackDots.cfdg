@@ -1,0 +1,14 @@
+startshape GRID
+background { b -1 }
+
+rule GRID {
+   7 * {y 8} {
+      7 * {x 8} { BAR {} }
+   }
+}
+
+rule BAR {
+SQUARE { b 0.6 size 1 8}
+SQUARE { b 0.6 size 8 1}
+CIRCLE { b 1 s 1.4}
+}

@@ -1,0 +1,84 @@
+startshape RASCACIELOS
+
+rule RASCACIELOS {
+SquareLine {}
+}
+
+rule SquareLine {
+	SQUARE {}
+      VENTANAL {x -0.5 y -0.5}
+	SquareLine [ y 0.5 s 0.75 y 0.5 ]
+}
+
+rule SquareLine 1.05 {
+	SQUARE {}
+      VENTANAL {x -0.5 y -0.5}
+	SquareLine [ y 0.5 s 1 y 0.5 ]
+}
+
+rule SquareLine 0.3 {
+	SQUARE { s 1.2 0.05 y -0.5 }
+      CIRCLE { s 0.1 x -0.5 }
+      CIRCLE { s 0.1 x 0.5 }
+      CIRCLE { s 0.1 x -0.5 y 0.1 }
+      CIRCLE { s 0.1 x 0.5 y 0.1 }
+	SquareLine [ y 0.01 s 1 y 0.05 ]
+}
+
+rule SquareLine 0.4 {
+	SQUARE { s 1.2 0.05 y -0.5 }
+      CIRCLE { s 0.1 x -0.5 }
+      CIRCLE { s 0.1 x 0.5 }
+	SquareLine [ y 0.01 s 1 y 0.05 ]
+      CIRCLE { s 0.1 x -0.5 y 0.1 }
+      CIRCLE { s 0.1 x 0.5 y 0.1 }
+}
+
+rule SquareLine 0.2 {
+	SQUARE { s 1.2 0.05 y -0.5 }
+	SQUARE { s 1.2 0.05 y -0.9 }
+	SquareLine [ y 0.01 s 1 y 0.05 ]
+}
+
+rule Ventanas_Prendidas {
+// cuadrado principal
+
+SQUARE { x 0.5 y 0.5 }
+VENTANAL {}
+
+}
+
+rule VENTANAL {
+LINEA_VENTANAS{ y 0.1}
+LINEA_VENTANAS{ y 0.3}
+LINEA_VENTANAS{ y 0.5}
+LINEA_VENTANAS{ y 0.7}
+}
+
+rule LINEA_VENTANAS {
+VENTANA [ x 0.0625 y 0.1 s 0.9 1 x 0.01]
+VENTANA { x 0.1875 y 0.1 }
+VENTANA { x 0.3125 y 0.1 }
+VENTANA { x 0.4375 y 0.1 }
+VENTANA { x 0.5625 y 0.1 }
+VENTANA { x 0.6875 y 0.1 }
+VENTANA { x 0.8125 y 0.1 }
+VENTANA [ x 0.9375 y 0.1 s 0.9 1 x -0.01]
+}
+
+
+rule VENTANA {
+// ventana "a media luz"  no se usa +
+//SQUARE { s 0.10 0.15 b 0.5}
+}
+
+rule VENTANA {
+// ventana apagada (invisible)
+SQUARE { s 0.10 0.15 b 0}
+}
+
+rule VENTANA {
+// ventana prendida
+SQUARE { s 0.10 0.15 b 1}
+}
+

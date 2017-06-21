@@ -1,0 +1,39 @@
+startshape star_flower
+background{hue 60 sat .1}
+
+rule star_flower
+{
+	blue_border{}
+	blue_border{flip 180}
+}
+
+rule blue_border
+{
+	blue_triangles{}
+	blue_triangles{r 60}
+	blue_triangles{r 120}
+	blue_triangles{r 180}
+	blue_triangles{r -60}
+	blue_triangles{r -120}
+}
+
+rule blue_triangles
+{
+	grapes{hue 200 sat .3 b 1}
+	grapes{x 3.5 y 3 flip 180 hue 200 sat .7 b .7}
+	blue_triangles{x 8 size .9 r 5}
+}
+
+rule grapes
+{
+	CIRCLE {x 1}
+	CIRCLE {x 2.1}
+	CIRCLE {x 3.2}
+	CIRCLE {x 4.3}
+	CIRCLE {x 1.6 y 1}
+	CIRCLE {x 2.7 y 1}
+	CIRCLE {x 3.8 y 1}
+	CIRCLE {x 3.3 y 2}
+	CIRCLE {x 2.2 y 2}
+	CIRCLE {x 2.8 y 3}
+}

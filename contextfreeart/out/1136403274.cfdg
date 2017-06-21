@@ -1,0 +1,38 @@
+startshape init
+
+rule init {
+	randcurve {}
+	randcurve { x 10 }
+}
+
+# Four curve rates, randomly switch
+rule randcurve { curve1 {} }
+rule randcurve { curve2 {} }
+rule randcurve { curve3 {} }
+rule randcurve { curve4 {} }
+rule randcurve { randcurve { flip 90 } }
+rule randcurve 0.1 {}
+
+rule curve1 {
+	CIRCLE {}
+	curve1 { s 0.999 y 0.2  r 1}
+}
+rule curve1 0.1 { randcurve {} }
+
+rule curve2 {
+	CIRCLE {}
+	curve2 { s 0.999 y 0.2  r 2}
+}
+rule curve2 0.1 { randcurve {} }
+
+rule curve3 {
+	CIRCLE {}
+	curve3 { s 0.999 y 0.2  r 3}
+}
+rule curve3 0.1 { randcurve {} }
+
+rule curve4 {
+	CIRCLE {}
+	curve4 { s 0.999 y 0.2  r 4}
+}
+rule curve4 0.1 { randcurve {} }

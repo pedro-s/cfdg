@@ -1,0 +1,19 @@
+startshape Top
+
+rule Top{
+	6*{x -.5 y .5 s 1 .97}Result{}
+}
+
+rule Result{
+	Composite{hue 238.8150 sat 0.9254 b 0.2745}
+}
+
+rule Composite{
+	SQUARE{skew -45 15}
+	2*{r 20}Composite{x 0.7  s .70 b .075 sat -.05}
+}
+
+rule Composite{
+	SQUARE{skew -45 15}
+	2*{r 10}Composite{x 0.7 skew 0 10 s .7 b .001 sat -.05}
+}

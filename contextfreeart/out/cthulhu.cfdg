@@ -1,0 +1,165 @@
+startshape SCENE
+background {hue 163 b -.875 saturation .75}
+
+rule SCENE {
+HBST {}
+HBST {x .05}
+HBST {x -.05}
+BULB {x 1 y -17.5 s 24 b .2}
+TNTC {y -25 s 8.75}
+}
+
+rule HBST {
+HBS {r 90}
+}
+
+rule HBS {
+HB {}
+HB {flip 180}
+}
+
+rule HB {
+CIRCLE {y 10 hue 1 b .7 saturation .75}
+H{r 90}
+HB {y 4 r 15 s .9 hue 4}
+HB {x 7 r 3 s .3 hue 3}
+}
+
+rule H {
+DC {r 45}
+H {y 10 s .9 r 100 hue 3}
+}
+
+rule DC {
+D {hue 122 b .4 saturation .75}
+}
+
+
+rule D {
+TRIANGLEY {y -.009}
+TRIANGLEY {y -.66 x -.94 r 70}
+TRIANGLEY {y -.66 x .94 r -70}
+TRIANGLEY {y -1.755 x -.578 r 26.5}
+TRIANGLEY {y -1.755 x .578 r -26.5}
+SQUAREY {y -.7962}
+SQUAREY {y -1.1 x -.141 r 56.5}
+SQUAREY {y -1.1 x .141 r -56.5}
+SQUAREY {y -.93 x -.2 r 70}
+SQUAREY {y -.93 x .2 r -70}
+}
+
+rule SQUAREY {
+SQUARE {}
+SQUAREY {s .95 r 2 b .075}
+}
+
+rule TRIANGLEY {
+TRIANGLE {}
+TRIANGLEY {s .95 r 2 b .075}
+}
+
+rule TNTC {
+BALL {hue 182 saturation .6}
+CIRCLE { y .75 x .36 s .5}
+CIRCLE {y .75 x -.36 s .5}
+CIRCLE {y .93 x .15 s .25}
+CIRCLE {y .93 x -.15 s .25}
+TNT {}
+TNT {flip 90}
+}
+
+rule TNT {
+TN {flip 180}
+TNT {x .2 r 5 s .78 .78 .78 hue 5 z -0.1 }
+}
+
+rule TN {
+T {hue 182 saturation .6}
+TN {y .6 s .92 r 35 hue -.75 b .02}
+}
+
+rule TN {
+T {hue 182 saturation .6}
+TN {y .6 s .92 r -35 hue -3.5 b .02}
+}
+
+rule T {
+BALL {}
+B {}
+B {r 90}
+B {r 45}
+B {r -45}
+BA {r 22.5}
+BA {r 67.5}
+BA {r 112.5}
+BA {r -22.5}
+}
+
+rule B {
+BALL {y .55 s .25 b .05}
+BALL {y -.55 s .25 b .05}
+}
+
+rule BA {
+BALL {y .45 s .2 b .055}
+BALL {y -.45 s .2 b .055}
+BALL {y .45 s .15 b .155}
+BALL {y -.45 s .15 b .155}
+}
+
+rule BALL {
+CIRCLE {b .05}
+BALL {s .95 b .05 z 0.05}
+}
+
+rule BULB {
+NASALSY {y -.1 x -.12 s .15 hue 162}
+BULA {}
+BULA {flip 90 x -.1}
+}
+
+rule BULA {
+BALLD {hue 162 saturation .6 b .05}
+BULA {y .2 r 30 s .9 hue -7}
+}
+
+rule BALLD {
+CIRCLE {}
+BALLD {s .95 b .025}
+}
+
+rule NASALSY {
+NASALS {}
+NASALSY {y .006 x .005 s .993}
+}
+rule NASALS {
+NASAL {x .899 r 5}
+NASAL {flip 90 r -5}
+}
+
+rule NASAL {
+NA {}
+NAS {}
+NASA {}
+NASAS {}
+}
+
+rule NASAS {
+CIRCLE {s .55}
+NASAS {y .1 s .95 r .5}
+}
+
+rule NASA {
+CIRCLE {s .85}
+NASA {y .1 s .9}
+}
+
+rule NAS {
+CIRCLE {s .9}
+NAS {y .1 s .888}
+}
+
+rule NA {
+CIRCLE {}
+NA {y .1 s .875}
+}

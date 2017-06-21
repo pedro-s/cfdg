@@ -1,0 +1,35 @@
+
+startshape sod
+
+rule sod {
+	1000 * {x .001} blade{}
+}
+
+rule blade {
+	CIRCLE { s .1 1 h 130 sat .7 b .1 }
+	blade { y .1 s .92 }
+}
+
+rule blade  {
+	blade { y -.01 r 1  b .001 }
+}
+
+rule blade  {
+	blade { r -1 b .001 h -1.5 }
+}
+
+rule blade  {
+	blade { r -.1 b .001}
+}
+
+rule blade  {
+	blade { y -.01 r .1 b .001}
+}
+
+rule blade  {
+	blade { r -.51 b .001 h 1.5}
+}
+
+rule blade  {
+	blade { r .51 b .001}
+}

@@ -1,0 +1,14 @@
+startshape Spiral
+
+background {b -1}
+
+rule Spiral{
+	SQUARE{s 2 1 a -0.3  sat 0.9 b 0.9}
+	SQUARE{s 2 1 y -1 a -0.3  sat 0 b 0.8 }
+	CIRCLE{  s 0.75 y -1 a -0.3 sat 0.8 b 0.5 h 30}
+	SQUARE{s 2 1 y -2 a -0.3  sat 0.9 b 0.8 h 90 }
+	Spiral{  s 0.998 x -1.5 y -0.30  r -2.1  }
+}
+
+
+

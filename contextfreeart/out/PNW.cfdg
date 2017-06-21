@@ -1,0 +1,18 @@
+startshape PNW
+
+shape PNW
+
+{
+
+//stem
+loop 26 [y .02 h 6]
+TRIANGLE [ s.2 y -.7 h 5.36 sat 0.7142 b 1.0000 x .01]
+
+//fins
+loop 10 [r 40 h 10]
+TRIANGLE [s .3 r 60 x .15 y .1 h 180.00 sat 0.3333 b 1.0000]
+
+//center
+CIRCLE [h 97.58 sat 0.7765 b 1.0000 s.17]
+
+}

@@ -1,0 +1,35 @@
+startshape branch
+
+rule branch {
+	SQUARE {}
+	branch {y 1 s 0.9}
+}
+
+rule branch 0.2 {
+	branch {r 20 x -0.7 y 1}
+	branch {r -30 x 0.7 y 1}
+	circ {}
+}
+
+rule circ {
+	CIRCLE {s 3}
+	CIRCLE {s 2.8 b 1 z 2}
+	CIRCLE {s 2.5 b 0 z 3}
+}
+
+
+rule branch 0.1{
+	circ {s 1.3}
+	leaf {s 2 r 10 y 2 x 1}
+	leaf {r 90 x -2 s 2}
+}
+
+rule leaf {
+	SQUARE {}
+	SQUARE {s 1 0.1 b 1 y -1 x -0.2}
+	leaf {x 0.1 y 0.2 s 0.9}
+}
+
+rule leaf {
+	leaf {r 1}
+}

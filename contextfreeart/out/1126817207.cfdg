@@ -1,0 +1,83 @@
+startshape START
+background { b -1 } 
+
+
+rule START {
+	DRAW { flip 90 x 10 r 7 hue 70 sat 0.8 b 0.8 }
+#	DRAW { flip 180 x 13 hue 70 sat 0.8 b 0.8 }
+#	DRAW { flip 180 x 15 r 15 hue 70 sat 0.8 b 0.8 }
+	DRAW { flip 180 x 9 r 15 hue 70 sat 0.8 b 0.8 }
+#	DRAW_BALL { x 50 hue 70 sat 0.8 b 0.8}
+}
+
+
+rule DRAW {
+	SHAPE { }
+	SHAPE { flip 90 }
+	DRAW { y 1 s 0.999 r 1}
+}
+
+rule DRAW 0.03 {
+	SHAPE { s 10 5 alpha -0.5 }
+	DRAW { r -10 hue 3 alpha -0.005}
+}
+
+rule DRAW 0.005 {
+	DRAW { flip 45}
+}
+
+rule DRAW 0.007 {
+	DRAW { }
+	DRAW_BALL { s 0.5 0.9 }
+}
+
+rule SHAPE {
+	LINE { }
+	SHAPE { x 1 alpha -0.2}
+}
+
+rule SHAPE 0.4 {}
+
+
+
+rule DRAW_BALL {
+
+	SHAPE { }
+	SHAPE { flip 90 }
+	SHAPE { y 10 }
+	SHAPE { y 10 flip 90 }
+	SHAPE { y 20 }
+	SHAPE { y 20 flip 90 }
+	SHAPE { y 30 }
+	SHAPE { y 30 flip 90 }
+
+	 DRAW_BALL { y 15 x 1 s 0.97 r 9 b -0.0005}
+}
+
+rule DRAW_BALL {
+	DRAW_BALL { alpha -0.5 }
+}
+
+rule DRAW_BALL {
+	DRAW_BALL { alpha 0.5 }
+}
+
+rule SHAPE {
+	LINE { }
+	SHAPE { x 0.3 alpha -0.5 r 5}
+}
+
+rule SHAPE {
+	LINE { }
+	SHAPE { x 0.3 alpha -0.5 r -5}
+}
+
+rule SHAPE 0.1 {}
+
+
+rule LINE {SQUARE { s 0.1 15 }}
+rule LINE {SQUARE { s 0.1 10 }}
+rule LINE {SQUARE { s 0.9 10 hue 20 }}
+rule LINE {SQUARE { s 0.6 5 }}
+rule LINE {SQUARE { s 0.3 15 b 0.6 }}
+

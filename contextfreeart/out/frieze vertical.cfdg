@@ -1,0 +1,25 @@
+startshape unit
+import gnomelogo.cfdg
+CF::BorderDynamic = 1
+CF::BorderFixed = 5
+
+CF::Tile = [s 0 4.4]
+CF::Symmetry = CF::p2mg, 0, 0
+
+shape unit {
+  gnomelogo[x 0.15 0.1 s 0.01 r 90]
+  SQUARE[s 0.1 2.3 b 0.5 z -1]
+}
+
+
+
+
+
+
+
+
+
+
+
+// Vertical padding
+

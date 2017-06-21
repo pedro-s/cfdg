@@ -1,0 +1,55 @@
+
+startshape HEINDEL
+ 
+background { b - 1 } 
+
+rule HEINDEL{ base { |h 130 h 100 |sat 20 sat 10 b
+.65 } }
+ 
+rule base{
+CIRCLE { h 10 sat 1.0000 b 0.9333 }
+TRIANGLE { h 120.000 sat 2.000 b 0.9333 }
+SQUARE { size .49 r 45 h 10 sat 1.0000 b 1.0000 }
+CIRCLE { size .43 h 120 sat 1.0000 b 1.0000 }
+TRIANGLE { size .44 h 10 sat 1.0000 b 1.0000 }
+SQUARE { size .24 r 45 h 120 sat 1.0000 b 1.0000 }
+CIRCLE { size .20 h 10 sat 1.0000 b 1.0000 }
+TRIANGLE { size .20 h 120 sat 1.0000 b 1.0000 }
+SQUARE { size .12 r 45 h 10 sat 1.0000 b 1.0000 }
+CIRCLE { size .10 h 120 sat 1.0000 b 1.0000 }
+TRIANGLE { size .1 h 10 sat 1.0000 b 1.0000 }
+SQUARE { size .06 r 45 h 120 sat 1.0000 b 1.0000 }
+CIRCLE { size .05 h 10 sat 1.0000 b 1.0000 }
+TRIANGLE { size .05 h 120 sat 1.0000 b 1.0000 }
+SQUARE { size .03 r 45 h 10 sat 1.0000 b 1.0000}
+CIRCLE { size .03 h 120 sat 1.0000 b 1.0000 }
+TRIANGLE { size .03 h 10 sat 1.0000 b 1.0000 }
+SQUARE { size .017 r 45 h 120 sat 1.0000 b 1.0000 }
+CIRCLE { size .012 h 10 sat 1.0000 b 1.0000 }
+TRIANGLE { size .0129 h 120 sat 1.0000 b 1.0000 }
+SQUARE { size .004 r 45 h 10 sat 1.0000 b 1.0000 }
+HEINDEL { y 1 rotate 7 size 1 }
+CIRCLE { h 10 sat 1.0000 b 0.9333 }
+TRIANGLE { h 120.000 sat 2.000 b 0.9333 }
+SQUARE { size .49 r 45 h 10 sat 1.0000 b 1.0000 }
+CIRCLE { size .43 h 120 sat 1.0000 b 1.0000 }
+TRIANGLE { size .44 h 10 sat 1.0000 b 1.0000 }
+SQUARE { size .24 r 45 h 120 sat 1.0000 b 1.0000 }
+CIRCLE { size .20 h 10 sat 1.0000 b 1.0000 }
+TRIANGLE { size .20 h 120 sat 1.0000 b 1.0000 }
+SQUARE { size .12 r 45 h 10 sat 1.0000 b 1.0000 }
+CIRCLE { size .10 h 120 sat 1.0000 b 1.0000 }
+TRIANGLE { size .1 h 10 sat 1.0000 b 1.0000 }
+SQUARE { size .06 r 45 h 120 sat 1.0000 b 1.0000 }
+CIRCLE { size .05 h 10 sat 1.0000 b 1.0000 }
+TRIANGLE { size .05 h 120 sat 1.0000 b 1.0000 }
+SQUARE { size .03 r 45 h 10 sat 1.0000 b 1.0000}
+CIRCLE { size .03 h 120 sat 1.0000 b 1.0000 }
+TRIANGLE { size .03 h 10 sat 1.0000 b 1.0000 }
+SQUARE { size .017 r 45 h 120 sat 1.0000 b 1.0000 }
+CIRCLE { size .012 h 10 sat 1.0000 b 1.0000 }
+TRIANGLE { size .0129 h 120 sat 1.0000 b 1.0000 }
+SQUARE { size .004 r 45 h 10 sat 1.0000 b 1.0000 }
+HEINDEL { y 1 rotate 2 size .2 }
+}
+

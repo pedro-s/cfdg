@@ -1,0 +1,32 @@
+startshape glasscubes
+
+rule glasscubes {
+ 18 * {x 0.2 y 0.2  r 0} cubebox {b 1 sat 0.2 alpha -0.2}
+}
+
+rule cubebox {
+  25 * {y -1.2 hue 18 sat 0.2 alpha -0.02} cuberow { }
+}
+
+rule cuberow {
+  15 * {x -1.2 hue 12 sat 0.2 alpha 0.1} randomcube {b 1 sat 1 }
+}
+
+rule randomcube 0.4 {randomcube {alpha -0.6}}
+rule randomcube {randomcube {b 0.3}}
+rule randomcube {randomcube {b -0.3}}
+rule randomcube {randomcube {hue -5}}
+rule randomcube {randomcube {hue 5}}
+
+
+rule randomcube 1 {cube {}}
+
+
+rule cube {
+ SQUARE {x 0.281 y 0.281 hue 240}
+ SQUARE [r 45 skew 45 0 x -0.5125 y 0.355 s 0.4 0.707 b -0.5 hue 120 ]
+ SQUARE [r -45 skew 0 45 x 0.355 y -0.5125 s 0.707 0.4 b -0.5 hue 40 ]
+ SQUARE [r 45 skew 45 0 x 0.9095 y -0.355 s 0.4 0.707 hue 80 ]
+ SQUARE [r -45 skew 0 45 x -0.355 y 0.9095 s 0.707 0.4 hue 160 ]
+ SQUARE { }
+}

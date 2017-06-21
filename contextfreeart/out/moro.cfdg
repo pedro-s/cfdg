@@ -1,0 +1,14 @@
+startshape do
+
+rule do { 
+	6* { r 60 } odd { hue 210 sat 1}
+}
+rule odd { d { s .1 } 
+	odd { x .4 s .5  z .0025 }
+	odd { x -.4 s .5  z .0025 }
+	odd { y -.4 s .5 r 30 z .0025 }
+}
+rule d {
+	30* { s .95 r 5 x -.01 y -.01 b .04 sat -.01 z .001}
+		CIRCLE { }
+}

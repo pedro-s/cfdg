@@ -1,0 +1,47 @@
+startshape start [ sat 1 b .51 ]
+
+CF::Background = [hue 120 sat 1 b -.51]
+
+R=3.01
+ 
+shape start
+{
+  kite_circle[]
+}
+
+shape kite_circle
+{
+    loop 16 [r 22.5 h 0 ]     
+      kite_iter[ y R]
+}
+
+shape kite_iter
+{
+     loop 7 [ h 120  y (-cos(25)-tan(42)*sin(25)) s (sin(25)/cos(42))] 
+       bezier [r -90b -.81h 0]
+}
+
+vector4 Bern(t)=
+ (1-t)^3, 
+3*(1-t)^2*t,
+3*(1-t)*t^2,
+t^3
+
+B0=(0,0)
+B1= (0.35,.01)
+B2=(.95,.95)
+B3= (cos(25)+tan(42)*sin(25),0)
+
+vector2 P(t,k) =let (v=Bern(t);v[0]*B0[0]+v[1]*B1[0]+v[2]*B2[0]+v[3]*B3[0], v[0]*B0[1]+v[1]*B1[1]*k+v[2]*B2[1]*k+v[3]*B3[1])
+
+shape bezier
+{
+   
+    loop i=0,1,.001 [b .002]
+    {
+         loop j=-1,1,0.02 [sat 1  h .81]
+   {
+       CIRCLE [x P(i,j) s (if (j==0,.081,0.02)) b (if (j>=0.3,-.3,0))]
+   }
+  }
+}

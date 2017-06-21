@@ -1,0 +1,65 @@
+startshape M
+
+background{a -1}
+
+rule M{
+
+M { z -1 s .5  y .7 x -1.5}
+M { z -1 s .5 y .7 x 1.5}
+
+
+40*{y -.06}
+CIRCLE {s .2 y -.7 x -.451}// core
+
+20*{x -.05 y -.05}
+CIRCLE {s .3 y -3 x - .451}//left leg
+
+20*{x .05 y -.05}
+CIRCLE {s .3 y -3 x - .451}//right leg
+
+15*{x -.06}
+CIRCLE {s .2 y -1.6 x -.451}//left humerous
+
+15*{x .06}
+CIRCLE {s .2 y -1.6 x -.451}//right humerous
+
+15* {y .06}
+CIRCLE{s .2 y -2.5 x -1.3}//left wrist
+
+15* {y .06}
+CIRCLE{s .2 y -2.5 x .4}//right wrist
+
+3*{x .1}
+SQUARE{s.1 y -2.5  x .3}//gun
+
+SQUARE{s .05 y -2.97 x .51 h 0.00 sat 1.0000 b 1.0000}//barrel
+
+5*{y -.1}
+SQUARE{s.13 y -2.5  x .5}//gun
+
+CIRCLE{s 2 x -.45}//head
+
+2*{x -.7}
+CIRCLE{x -.1 h 235.56 sat 0.9431 b 1.0000}//eye
+
+2*{x -.5}
+CIRCLE{s .4 x -.2 h 0.00 sat 1.0000 b 1.0000}//red eye
+
+SQUARE{s 2  y 1 x -.45 h 114.50 sat 0.9646 b 1.0000}//hat
+
+32*{x .1}
+SQUARE{s .1 x -2 y .055 h 114.50 sat 0.9646 b 1.0000}//Rim of hat
+
+5*{x -.365}
+SQUARE{s .55 y .6 x .28}//outer belt
+
+SQUARE{s .7 y .6 x -.4 h 60.00 sat 1.0000 b 1.0000}//Rim gold
+
+SQUARE{s .5 x -.4 y .6}//inner belt
+
+2*{x .1}
+SQUARE{s .1 y .5 x -.61 h 60.00 sat 1.0000 b 1.0000}//center gold
+
+
+
+}

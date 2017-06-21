@@ -1,0 +1,103 @@
+startshape INIT { color }
+
+# CFDG Tube Map. Mind the gap.
+
+rule INIT {
+	PATH{r 90 sat 1 b 1 hue 0}
+	PATH{r -90 sat 1 b 1 hue 0}
+}
+
+# Paris Metro variation
+#rule INIT {
+#	PATH{r 0 sat 1 b 1 hue 0}
+#	PATH{r 120 sat 1 b 1 hue 0}
+#	PATH{r -120 sat 1 b 1 hue 0}
+#}
+
+rule PATH {
+	SQUARE{s 0.5 1}
+	PATH_STEP {y 1}
+}
+rule PATH_STEP {
+	SQUARE{s 0.5 1}
+	PATH_R {y 1}	
+}
+
+rule PATH_R {
+	SQUARE{s 0.5 1}
+	PATH_R {y 1}	
+}
+
+# stations
+rule PATH_R 0.2 {
+	STATION{y -0.5}
+}
+
+rule PATH_R 0.025 {
+	CORNER_1{}
+}
+rule PATH_R 0.025 {
+	CORNER_2{}
+}
+
+# line divergence
+rule PATH_R 0.003 {
+	CORNER_1{}
+	CORNER_2{}
+}
+
+# corners
+rule CORNER_1 {
+	CIRCLE{s 0.5 y -0.5}
+	PATH_ADJUST { r 45 x -0.5}	
+} 
+rule CORNER_2 {
+	CIRCLE{s 0.5 y -0.5}
+	PATH_ADJUST { r -45 x 0.5}	
+} rule PATH_ADJUST { PATH{y -0.25} }
+
+# intersection
+rule STATION {
+	INTERSECTION{}
+}
+rule INTERSECTION{
+	SQUARE{s .5 1}
+	CIRCLE{s 1 sat -1 b -1}
+	CIRCLE{s .8 sat -1 b 1}
+	PATH{y 1}
+	JUNCTION_INIT { hue 64 }
+}
+
+#terminus
+rule STATION 1.5 {
+	SQUARE{s 1.5 .5}
+}
+
+#through station 1
+rule STATION {
+	SQUARE{s 1 .5 x 0.25}
+	SQUARE{s .5 1 }
+	PATH{y 1}
+}
+
+#through station 2
+rule STATION {
+	SQUARE{s 1 .5 x -0.25}
+	SQUARE{s .5 1 }
+	PATH{y 1}
+}
+
+rule JUNCTION_INIT { JUNCTION {r 90 x -1} }
+rule JUNCTION_INIT { JUNCTION {r -90 x 1} }
+
+rule JUNCTION {
+	PATH{}
+}
+rule JUNCTION 0.5 {
+	SQUARE {s 1 0.5}
+	CIRCLE{s 1 sat -1 b -1}
+	CIRCLE{s .8 sat -1 b 1}
+	PATH{r 90 x -1}
+	PATH{r -90 x 1}
+}
+rule JUNCTION{}

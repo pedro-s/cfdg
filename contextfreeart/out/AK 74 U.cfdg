@@ -1,0 +1,32 @@
+startshape RANDOM
+
+rule RANDOM
+{
+
+50* {y 1 }
+
+CIRCLE { size 5  }
+50* { y 2}
+CIRCLE { size 4 }
+9* { x 4 }
+SQUARE { size 7 x 4 }
+5* { x 3 r 15 }
+CIRCLE { size 2 y 5 }
+
+6* { y 5 }
+
+SQUARE { size 8  y 75 }
+
+
+7* {y 2  x 14 r 8 }
+SQUARE { size 10  y 55 x 3}
+
+5* {r -30 x 1 y 5 }
+CIRCLE { size 9 y 12 }
+
+6* { y 4}
+
+CIRCLE { size 2 y 78 h 0.00 sat 0.0000 b 1.0000}
+
+
+}

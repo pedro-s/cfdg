@@ -1,0 +1,12 @@
+startshape dragle 
+
+background {b -1}
+
+rule dragle {
+//	2 * {r 180  x -3.6 h 180}{
+	2 * {s .327  x -.5 y -.6635 r 270 h 24 sat -.8}
+	{12 * {s .618 x -.5 y .5 r 45  h -14 sat .1}
+	{24 * {s .7071 r 45 x 1.5 y -1}
+	{6 * {s 1.4142 .7071 r -45 x .75 f -45 y -.25 b .2 h -5 sat .1 a -.1 z 1}
+	SQUARE {b .42 h 200 sat .2}
+}}}}//}

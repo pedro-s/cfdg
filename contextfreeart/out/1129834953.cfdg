@@ -1,0 +1,32 @@
+startshape START_SCENE
+background { hue 40 sat 0.3 b 0.9 }
+
+rule START_SCENE {
+	START {hue 40 b 0.8 sat 0.7}
+}
+
+rule START {SCENE {  }}
+rule START 0.05 {START { flip 45 }}
+
+rule START 0.01 {}
+
+rule SCENE {
+	CURVE {  }	
+	START { x 2 y -2  s 0.995  r 145 }
+}
+
+rule CURVE {
+	CIRCLE { s 3 alpha -0.9 hue 1 sat 1}
+	SQUARE { s 3 0.5 b -0.3}
+	SQUARE { s 2.9 0.4 b 0.8}
+	CURVE { y 2.5 s 0.57 }
+	CURVE { y -2.5 s 0.57 }
+}
+
+rule CURVE {CURVE { sat 0.5 }}
+rule CURVE {CURVE { sat 0.2 }}
+rule CURVE {CURVE { sat -0.5 }}
+rule CURVE {CURVE { sat -0.2 }}
+
+rule CURVE {CURVE { flip 45}}
+rule CURVE 0.05 {CURVE { skew 45 0 }}

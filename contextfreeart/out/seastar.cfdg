@@ -1,0 +1,19 @@
+startshape test
+
+rule test {
+star{}
+}
+
+rule star {
+5*{r (360/5)} spiral{}
+}
+
+rule spiral {
+SQUARE {hue 5 sat 1 b 1}
+spiral{ y 1.2 s .99 r 5 sat 1 hue 1 b 1}
+}
+
+rule spiral 0.4 {
+SQUARE {hue 5 sat 1 b 1}
+spiral{ y 1.2 s .99 r -5 sat 1 hue 1 b 1}
+}

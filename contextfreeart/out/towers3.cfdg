@@ -1,0 +1,98 @@
+startshape houses
+background { hue 63.7398 sat 0.5208 b -0.502 }
+
+rule houses {
+1* {x 2.4 z 2} lall [ sat 1]
+
+}
+
+rule spawn {
+  blockage { z 200 }
+}
+
+rule blockage {
+  block { }
+  alternatives { }
+}
+rule blockage { blockage [ r 90 ] }
+
+rule alternatives  .4 { }
+
+rule alternatives {
+  top { s .96}
+}
+
+rule front { blockage { s 1 x -0.5 y -0.1 z 3} }
+rule back { blockage { s 1 x 0.6 y 0.12 z -3} }
+rule top { blockage { y 1 } }
+rule right { blockage { y -0.28 x 0.9 z 3} }
+
+rule all { blockage [ ] front [ ] back [ ] right [ ] }
+rule lall 7 { lall [ hue 33 sat -.1] }
+
+rule lall { 4* { x 0.6 y 0.12 z -3 } blockage [  ] }
+rule block {
+   windowwall { y 0.009 s 0.9 1 skew 0 -16 z 2 b 1 }
+   wall { s 0.6 1 x 0.752 y -0.072 skew 0 7 b .6 z 1}
+   mosaicborder { s 0.3 0.94 skew 0 -30 r 72.5 y 0.57 x 0.31 b 1 hue -65}
+}
+
+
+rule windowwall {
+   wall { }
+   windows { }
+}
+rule wall { mosaicborder [ ] }
+rule wall .2 {
+mosaicborder [ s 3 y .5 x -.5 r 45 z -7 b -.7 a -.8 ]
+wall [ ]
+}
+
+rule windows { 3* {x 0.3 } windowh { x -0.35 y -0.2 } }
+rule windowh { 3* {y 0.3 } window { s 0.1 }  }
+rule window { windowform { b 1 } }
+rule window 2 { windowform { b -1 } }
+rule window .1 { window [ sat .5 ] }
+rule window 1.5 { window [ sat -.5 ] }
+rule window { window [ hue 30 ] }
+rule window { window [ hue -30 ] }
+rule windowform { SQUARE [ ] CIRCLE [ y .4 ] }
+
+rule mosaicborder { 
+aa [ x .1 y -.1 s .6 .7 skew 30 0] 
+5* { x .2 } aa [ x .1 y -.1 y .472 x -.467 s .2 .22 skew 30 0] 
+5* { x .2 } aa [ x .1 y -.1 y -.332 x -.467 s .2 .22 skew 30 0] 
+3* { y .203 } aa [ x .1 y -.1 x -.467 y -.134 s .2 .228 skew 30 0] 
+3* { y .203 } aa [ x .1 y -.1 x .333 y -.134 s .2 .228 skew 30 0] 
+}
+rule mosaicborder 3 { mosaicborder [ r 90 ] }
+
+rule aa {
+manyt [ flip 180 y -.29 x -.5  hue 221.3 sat -.3]
+manyt [  hue 36.7 sat -1]
+}
+
+
+
+rule manyt {
+20* { } tri [ a -.9 s 1 1  ]
+}
+
+rule tri {
+drawtri [ ]
+tri [ y .289 s .5 ]
+tri [x -.25 y -.143 s .5 ]
+tri [ x .25 y -.143 s .5]
+tri [ s .5 flip 180 ]
+}
+rule tri 1.4{ }
+
+rule drawtri {
+TRIANGLE [ b .3]
+}
+
+rule drawtri {
+TRIANGLE [ b -.3]
+}
+
+

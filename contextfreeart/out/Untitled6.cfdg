@@ -1,0 +1,66 @@
+startshape sit
+background { h 270 sat .7 b -.8 }
+
+rule sit {
+sun {}
+it {}
+}
+
+rule sun {
+CIRCLE {r 3 y 60 x -20 s 20 sat .2 b 1 h 32}
+
+}
+
+rule it {
+SQR { s 1 h 0}
+//it { s .99 r 1 y 1 h 5}
+
+}
+
+rule SQR 1 {
+//SQUARE {s 1.1 h 4 b -0.09 sat 1}
+SQUARE {h 4 b 1 sat 1 }
+SQR { y 1 s .99 h .2}
+branch {}
+}
+
+rule SQR 20 {
+//SQUARE {s 1.1 h 4 b .99 sat 1 }
+SQUARE {h 4 b 1 sat 1}
+SQR { y 1 s .99 h .2 r 0}
+}
+
+rule SQR 20 {
+//SQUARE {s 1.1 h 4 b .99 sat 1 }
+SQUARE {h 4 b 1 sat 1}
+SQR { y 1 s .99 h .2 r -.1}
+}
+
+rule branch {
+lb {s .70}
+rb {s .7 }
+
+}
+
+rule lb {
+SQR {r 30}
+}
+rule lb {
+SQR {r 45}
+
+}
+
+rule lb {
+}
+
+rule rb {
+SQR {r -30}
+}
+
+rule rb {
+SQR {r -45}
+
+}
+
+rule rb {
+}

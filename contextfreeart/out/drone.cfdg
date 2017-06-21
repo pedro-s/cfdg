@@ -1,0 +1,16 @@
+startshape drone 
+
+background {b -1}
+
+rule drone {
+	8*{r (360/8)}
+	dr { x -8 y -8}
+	drone {s .6 r 22.5 h -4}
+}
+
+rule dr {
+	2 * {f 45 b .1} 
+	dr {s .9 .6 y 3.6 r -22.5 b .04 sat .2 h 3}
+	CIRCLE {b .1}
+	drone {s .18}
+}

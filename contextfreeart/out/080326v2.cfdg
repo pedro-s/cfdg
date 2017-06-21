@@ -1,0 +1,70 @@
+# this is a test of drawing patterns where the images sizes
+# do not iterate away to nothing. it seems that the 'problem'
+# with a context-free language is that limiting the sizes
+# requires spelling out all the size 'cases', where the language
+# really is happiest taking a shape and running off to infinity.
+
+startshape grid
+
+background { b -0.5 }
+
+rule grid
+# the grid is formed by making a 6x1 row of 1x6 columns
+{
+	6 * { x 1 } columns{}
+}
+
+rule columns
+{
+	6 * { y 1 } design {}
+}
+
+rule design
+# when this is encountered, draw a single large-sized SYMBOL
+{
+	SYMBOL{}
+}
+
+rule design 1.5
+# when this is encountered, draw a 2x2 grid to be filled with
+# medium- and small-sized SYMBOLs
+{
+	fourbyfour { s 0.5 x  0.25 y  0.25 }
+	fourbyfour { s 0.5 x -0.25 y -0.25 }
+	fourbyfour { s 0.5 x  0.25 y -0.25 }
+	fourbyfour { s 0.5 x -0.25 y  0.25 }
+}
+
+rule fourbyfour
+# when this is encountered, draw a 2x2 grid filled with
+# the smallest SYMBOLs
+{
+	SYMBOL { s 0.5 x  0.25 y  0.25 }
+	SYMBOL { s 0.5 x -0.25 y -0.25 }
+	SYMBOL { s 0.5 x  0.25 y -0.25 }
+	SYMBOL { s 0.5 x -0.25 y  0.25 }
+}
+
+rule fourbyfour
+# when this is encountered, draw a medium-sized SYMBOL
+{
+	SYMBOL{}
+}
+
+rule SYMBOL
+# this is the symbol with the black border
+{
+	CIRCLE { size 1 1 b 0 }
+	CIRCLE { size 0.9 0.9 b 1 }
+	SQUARE { s 0.25 0.95 b 0 rotate 45 }
+	SQUARE { s 0.95 0.25 b 0 rotate 45 }
+}
+
+rule SYMBOL
+# this is the symbol with the white border
+{
+	CIRCLE { size 1 1 b 1 }
+	CIRCLE { size 0.9 0.9 b 0 }
+	SQUARE { s 0.25 0.95 b 1 rotate 45 }
+	SQUARE { s 0.95 0.25 b 1 rotate 45 }
+}

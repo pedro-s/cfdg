@@ -1,0 +1,95 @@
+CF::Background  = [sat .35 h 210]
+CF::Size = [s 8 5]
+
+startshape MAIN
+
+shape MAIN {
+     loop 10 [y .35  z -100 s .95] 
+     {
+       loop 60 [x .3 z 6] SEED[x -9 y -9] 
+     }
+}
+
+shape SEED  
+  rule { BLADE [s 0.5  h 128 b .3 sat .8] }  
+  rule { SEED [flip 90] }
+
+
+shape BLADE 
+rule {
+	SQUARE [s 1 0.25]
+	GRASS_SEG [b .01]
+}
+
+rule {
+	SQUARE [s 1 0.25]
+	GRASS_SEG [sat .01]
+}
+rule 0.0011
+{
+	SQUARE [s 1 0.25]
+	GRASS_SEG [b .0 sat .01]
+	BEETLE [x 1 z 1]
+}
+
+shape GRASS_SEG   
+  rule {BLADE [y 0.2 s .985 .985 r .2] } 
+  rule {BLADE [y 0.2 s .988 .988 r .2] }
+  rule 0.01 { GRASS_SEG [flip 90] }
+
+shape BEETLE
+  rule {
+    SHELL [b 1 h -133]
+    CIRCLE [s 0.5 4 b -1]
+    HEAD [x .7 y 1.4 s 2 b -1 r 25 z 1]
+    loop 6 [y .5 r -5 x .01] TRIANGLE [x -.1 y -1.6 s .4 .5  b -1  r 100]
+  }
+  
+  rule { BEETLE [s 1.1] }
+
+
+shape HEAD
+{
+	CIRCLE []
+	MOUTHMAIN [s.2 x -.2]
+	EYE [s .35  y -.25 z 1]
+	EYE [s .35 y .3 z 1]
+	ANTENNA [s .1 y -.25 x .3 r -22]
+	ANTENNA [s .1 y .3 x .3 r 22]
+}
+
+shape ANTENNA 
+	rule {SQUARE [s .21  1]
+	ANTENNA [x .2 s.99 .98  r 2]
+	}
+	rule {SQUARE [s .21  1]
+	ANTENNA [x .2 s.99 .98  r 3]
+	}
+
+
+shape EYE
+{
+	CIRCLE [b 1 sat -1]
+	CIRCLE [s .6 b -1 sat -1]
+}
+
+shape SHELL 
+  rule 2 { SHELL [h 33] }
+  rule { SHELLPATH [] }
+
+
+path SHELLPATH
+{
+	MOVETO(0, -2)
+	LINETO(0, 2)
+	ARCTO(0, -2, 2, CF::ArcCW)
+	  CLOSEPOLY()
+	  FILL[]
+}
+
+shape MOUTHMAIN
+{
+	CIRCLE [b 1 sat -1]
+	CIRCLE [s 2 x 1 b 0]
+}
+

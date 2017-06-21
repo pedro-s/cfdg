@@ -1,0 +1,90 @@
+startshape grid
+
+//----------------------------------------------------------------------
+// Choose your collection here
+
+collection_size=7                  // change size of the collexion grid
+design_compexity=15           // change complexity of design
+
+//----------------------------------------------------------------------
+
+bkhue=rand_static(360)-100
+
+
+
+CF::Background = [b (-.6) sat (.8) h bkhue ] // h60
+
+CF::ColorDepth = 16
+CF::Tile = [s (4.8*collection_size) ]
+
+shape grid {
+	ddd=4.8
+	loop collection_size [y ddd] {
+		loop collection_size  [x ddd] {
+			wheel[]
+		}
+	}	
+}
+
+shape wheel
+{
+
+bb=rand(design_compexity)+2
+
+CIRCLE[b (.9) s .5 y 2.2 z -100 sat -1 ]
+CIRCLE[b .3 s .7 y 2.2 z -120 sat .8 h bkhue ]
+CIRCLE[b .25 s .3 y 2.2  sat .8 z 2 h bkhue]
+
+a1= floor(rand(bb))+1
+a2= floor(rand(bb))+1
+a3= floor(rand(bb))+1
+a4= floor(rand(bb))+1
+a5= floor(rand(bb))+1
+
+ele = 360/2
+	loop i=(0, 360,(360/ele)) []
+	{
+		due(i, a1, a2, a3, a4, a5)[ r (i)  z 1]
+	}
+}
+
+shape due(number giro, number a1, number a2, number a3, number a4, number a5 )
+{
+	tre( giro, a1, a2, a3, a4, a5 )[b 1 sat 1 y 1 h rand_static(-30)]
+}
+
+
+shape tre(giro, number a1, number a2, number a3, number a4, number a5 )
+{
+	ang=360
+	eles=50
+	rapp=ang/(eles)
+	loop j=(0,eles) [sat -(1/eles)] {
+		
+		fang1=j*rapp+giro*a1
+		cos1=cos(fang1)
+		sin1=sin(fang1)
+
+		fang2=j*rapp+giro*a2
+		cos2=cos(fang2)
+		sin2=sin(fang2)
+
+		fang3=j*rapp+giro*a3
+		cos3=cos(fang3)
+		sin3=sin(fang3)
+
+		fang4=j*rapp+giro*a4
+		cos4=cos(fang4)
+		sin4=sin(fang4)
+
+		fang5=j*rapp+giro*a5
+		cos5=cos(fang5)
+		sin5=sin(fang5)
+
+		costot= (((cos1+cos2+cos3+cos4+cos5)/5 )) //+rand(-.04,.04)
+
+     	CIRCLE [y (((costot)))  s  .06 .11  b (-.1)  r 0 sat -1 a -.7]    // Monile
+     	CIRCLE [y (((costot +.08)))  s  .4 b (-1) r 0 sat -1 a -.996 z -1]    // Monile
+
+	}
+}

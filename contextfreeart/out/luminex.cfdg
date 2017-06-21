@@ -1,0 +1,61 @@
+tile {s 300 400 }
+background {b -0.9 sat .5 h 40}
+
+startshape FILA
+
+
+rule FILA{
+
+3300 * {x 1 y 37} FLAME {a -.9 sat .5 h 20}
+
+1500 * {x 1 y 26} FLAME {a -.8 sat .5 h 300}
+
+
+//100 * {x 1 y 45} FLAME { z 10}
+
+600 * {x 1 } FLAME { z 10 y -195}
+
+}
+
+rule FLAME 3{ FLAME{ y 1}}
+rule FLAME 3{ FLAME{ y 3}}
+rule FLAME 3{ FLAME{ y 13}}
+rule FLAME 3{ FLAME{ y 43}}
+
+rule FLAME {
+COL {}
+COL {r 180}
+COL {}
+COL {r 180}
+}
+
+
+rule COL 1 {
+BRUSH {}
+}
+
+rule COL 3 {
+BRUSH {}
+
+COL {y 1 a -.1}
+}
+
+
+rule COL 4 {
+
+COL {y 1 a -.1}
+}
+
+
+
+rule BRUSH {
+
+
+4 * {a -.6 s 1.8} CIRCLE{b 1 s .5 .7}
+//SQUARE {b 1 s .8 .9 }
+}
+
+
+
+
+

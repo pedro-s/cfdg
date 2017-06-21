@@ -1,0 +1,50 @@
+startshape MULT
+
+background {b-1 }
+
+rule MULT
+
+{
+
+// multiply the shape 5 times with 5*
+
+20* {y 1 }
+
+
+TRIANGLE {h 121.50 sat 0.8080 b 1.0000}
+
+20* {x 1}
+TRIANGLE {h 121.50 sat 0.8080 b 1.0000}
+20* {x 1}
+TRIANGLE {h 121.50 sat 0.8080 b 1.0000}
+TRIANGLE {h 271.97 sat 0.9672 b 1.0000}
+TRIANGLE {flip 1h 274.71 sat 0.9476 b 1.0000 y 10 x 10} 
+TRIANGLE {flip 1h 274.71 sat 0.9476 b 1.0000 y 5 x 10} 
+
+TRIANGLE {flip 1h 274.71 sat 0.9476 b 1.0000 y 6 x 15} 
+
+TRIANGLE {flip 1h 274.71 sat 0.9476 b 1.0000 y 10 x 4} 
+TRIANGLE { flip 1 h 274.71 sat 0.9476 b 1.0000 y 20 x 20  } 
+CIRCLE {h 60.00 sat 1.0000 b 0.9569 y 21 x 20}
+CIRCLE {h 60.00 sat 1.0000 b 0.9569 y 5 x 7}
+CIRCLE {h 60.00 sat 1.0000 b 0.9569 y 20 x 10}
+CIRCLE {h 60.00 sat 1.0000 b 0.9569 y 14 x 4  }
+TRIANGLE {h 0.00 sat 0.0000 b 1.0000 y 0 x 5}
+TRIANGLE {b+1 y 0 x 13 }
+TRIANGLE {b+1 y 0 x 19 }
+
+100* { y .1}
+SQUARE {y .5 x 5  s .1 h 356.42 sat 1.0000 b 1.0000}
+100* { y .1}
+SQUARE {y .5 x 13  s .1 h 356.42 sat 1.0000 b 1.0000}
+100* { y .1}
+SQUARE {y .5 x 19  s .1 h 356.42 sat 1.0000 b 1.0000}
+
+}
+
+
+
+
+
+
+

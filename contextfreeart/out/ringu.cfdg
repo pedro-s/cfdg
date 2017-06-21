@@ -1,0 +1,45 @@
+startshape PLANT
+
+rule PLANT {
+	EITHER {x -2}
+	EITHER {x 2}
+	ROUND { x 4 y 11 }
+	GLOBE { x 14 y 25 }
+}
+
+rule ROUND {
+	CIRCLE { h 1 s 30 b 0 }
+	CIRCLE { h 1 s 20 b 1 }
+}
+
+rule GLOBE {
+	CIRCLE { h 1 s 1 b .1 }
+	CIRCLE { h 1 s 6 b 1 }
+}
+
+rule BOTH {
+	BL {rotate 30}
+	BL {rotate -30 flip 90}
+}
+
+rule EITHER {BL{}}
+rule EITHER {BL{flip 90}}
+
+rule BL {
+	CIRCLE {}
+	WL {size 0.96 y 1.7 b 1 }
+}
+
+rule WL {BL {rotate 3}}
+rule WL {BL {rotate 4}}
+rule WL {BL {rotate 5}}
+rule WL {BL {rotate 6}}
+rule WL {BL {rotate 7}}
+rule WL {BL {rotate 3}}
+rule WL {BL {rotate 4}}
+rule WL {BL {rotate 5}}
+rule WL {BL {rotate 6}}
+rule WL {BL {rotate 7}}
+rule WL {BOTH {}}
+rule WL {BL {rotate -10 flip 90}}
+

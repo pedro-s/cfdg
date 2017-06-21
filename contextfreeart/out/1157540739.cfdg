@@ -1,0 +1,38 @@
+startshape fig7
+background { b -1}
+
+rule fig7
+{
+fig6 { }
+}
+
+rule fig6
+{
+fig5 { x -1}
+fig5 { flip 90 x 1}
+fig5 { r 90}
+fig5 {r 90 flip 90}
+}
+
+rule fig5
+{
+fig4 { }
+fig4 { flip 180}
+}
+
+rule fig4
+{
+fig2 { }
+fig4 { s .992 r 180 y -.02 x .9 sat .02 hue 1}
+}
+
+rule fig2
+{
+fig1 { s .01}
+fig2 {s .97 r 5 y -.5}
+}
+
+rule fig1
+{
+TRIANGLE { b 1 sat 0 s 10 10}
+}

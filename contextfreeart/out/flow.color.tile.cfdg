@@ -1,0 +1,57 @@
+startshape FCOLOR
+
+tile { s 4.5 } 
+
+rule FCOLOR {
+  50 * { hue 2 r 5 } F { sat 1 b 1  }
+  FCOLOR { s 0.8 r 35 a -0.5 } 
+}
+
+rule F { flower { s 0.5 a -0.5 y -1.2 } }
+rule F { flower { s 0.3 x 2 r 15 y 1 } }
+rule F { flower { s 0.4 x -2 r 35 y 1.2 } }
+rule F { flower { s 0.2 r 45 a -0.5 } }
+rule F { flower { s 1 hue 10 x 1.2 a -0.2 } }
+rule F { flower { s 0.5 x -1 hue -10 y -0.4 } }
+rule F { flower { s 0.1 x 1 y 0.6 hue 30 a -0.3 } }
+
+
+rule F { flower { s 0.3 a -0.2 r -64 y 1.2 } }
+rule F { flower { s 0.4 hue 20 r 43 x 2 r 15 y 1 } }
+rule F { flower { s 0.7 x -2.3 r -35 y -1.2 } }
+rule F { flower { s 0.5 hue 10 r 45 a -0.5 } }
+rule F { flower { s 0.1 hue -10 x -1.2 a -0.2 } }
+rule F { flower { s 1.5 x -1.4 hue -10 y 0.4 } }
+rule F { flower { s 0.2 x 1.3 y 1.6 hue 30 a -0.3 } }
+
+
+
+rule flower {
+    // petals
+    6 * { r 60 } CIRCLE [ r  30 x 0.5 s 1 0.25 ]
+    //center
+    CIRCLE { s 0.25 h -1 sat -1 b 1 }
+}
+
+
+rule flower {
+    // petals
+    5 * { r (360/5) } CIRCLE [ r  30 x 0.5 s 1 0.25 ]
+    //center
+    CIRCLE { s 0.25 h -1 sat -1 b 1 }
+}
+
+rule flower {
+    // petals
+    4 * { r (360/4) } CIRCLE [ r  30 x 0.5 s 1 0.25 ]
+    //center
+    CIRCLE { s 0.25 h -1 sat -1 b 1 }
+}
+
+rule flower {
+    // petals
+    7 * { r (360/4) } CIRCLE [ r  30 x 0.5 s 1 0.25 ]
+    //center
+    CIRCLE { s 0.25 h -1 sat -1 b 1 }
+}
+

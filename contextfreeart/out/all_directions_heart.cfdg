@@ -1,0 +1,27 @@
+startshape AllDirHeart
+
+background {b -1}
+
+rule AllDirHeart{
+	4*{r 90}block{a -0.1 s 0.8  sat 0.8 b 0.8 }				
+}
+
+rule block{
+     	curve1{ }
+	curve2{}
+}
+
+rule curve1{
+	SQUARE{}
+	curve1{a -0.1 s 0.877 x -0.6 y 0.3  r -15  sat 0.8 b 0.8 }
+}
+
+rule curve2{
+	SQUARE{}
+	curve2{a -0.1 s 0.877 x 0.6 y 0.3  r 15  sat 0.8 b 0.8 }
+}
+
+
+
+
+

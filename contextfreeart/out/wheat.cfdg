@@ -1,0 +1,74 @@
+startshape wheat
+
+background {b -.9 sat 1 hue 34}
+
+rule wheat
+{
+	3* {x 50 hue -2} tassel{}
+}
+
+rule tassel
+{
+	tassel_side{b 1 sat 1 hue 34} // left
+	tassel_side{sat .5 b 0 a -.9 s .8} // left shading
+	tassel_side{x 15 flip 90 b 1 sat 1 hue 34} // right
+}
+
+rule tassel_side
+{
+	hatch{}
+//	line{}
+	tassel_side{r 5 s .8}
+}
+
+rule line // testing
+{
+	100*{y 1} SQUARE{}
+
+}
+
+rule hatch
+{
+	100*{y 1} hairyline{}
+}
+
+rule hairyline 
+{
+	10*{x 1 hue 1 } hair_DRAW{}
+}
+
+rule hair_DRAW
+{
+	hair_run{r 90}
+	hair_run {r -90}
+}
+
+rule hair_DRAW
+{
+	hair_DRAW{flip 45}
+}
+
+rule hair_run
+{
+	SQUARE{}
+	hair_run{x 1 s .95 a -.1 b -.1}
+}
+
+rule hair_run
+{
+	SQUARE{}
+	hair_run{x 1 s .95 a -.1 b .1}
+}
+
+
+rule backg 
+{
+	110* {y 1} backg2{ sat .5 hue 34 a -.5}
+}
+
+rule backg2
+{
+	30* {x 2 r 5} SQUARE{s 5 x -11 sat .5 hue 34 a -.5}
+}
+
+

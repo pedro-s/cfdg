@@ -1,0 +1,28 @@
+startshape DOT 
+background {a-1}
+rule DOT 
+
+{
+
+1000* {x 1 r 30 s .9 skew 5 5 }
+CIRCLE {skew 1000 1 h 0.56 sat 0.9907 b 0.8471 }
+
+1000* {x 1 r 30 s .9 skew 5 5 }
+CIRCLE { y 1 skew 1000 1 h 5.92 sat 1.0000 b 0.4696}
+
+1000* {x 1 r 30 s .9 skew 5 5  }
+CIRCLE {y -1 skew 1000 1 h 0.56 sat 0.9907 b 0.8471 }
+
+1000* {x 1 r 30 s .9 skew 5 5  }
+CIRCLE { y -2 skew 1000 1 h 5.92 sat 1.0000 b 0.4696}
+
+1000* {x 1 r 30 s .9 skew 5 5 }
+CIRCLE {y -3 skew 1000 1 h 0.56 sat 0.9907 b 0.8471 }
+
+1000* {x 1 r 30 s .9 skew 5 5 }
+CIRCLE {skew 1000 1 y -4 h 5.92 sat 1.0000 b 0.4696}
+
+1000* {x 1 r 30 s .9 skew 5 5 }
+CIRCLE { skew 1000 1 y -5 h 0.56 sat 0.9907 b 0.8471}
+
+}

@@ -1,0 +1,29 @@
+// Title:  Ribbons 2
+// Author: epmoyer
+// Date:   12/26/06
+// Reference Pic Seed: OVJ
+// Description:    
+//     Those tight loops sure remind me of the 70's.
+//
+// Intersting Concepts:
+//     Experiments with the conecept of low priority escape rules to switch between
+//   clockwise and counterclockwise rotations.   The fundamental algorithm is very 
+//   similar to randomly curving tentacles (like Cilia Sun), but once it settles in
+//   a give state (CW, or CCW)it remains there a while.
+
+
+startshape INIT
+background { b -1 }
+
+rule INIT{ MAIN{ |hue 300 |sat 0.9 |b 1  hue 230 sat 0.5 b 0.1 }}
+
+rule MAIN{ 
+	WANDER_CW {}
+	MAIN {r 21 s 0.98 }
+}
+
+rule WANDER_CW 1.0 { SQUARE{} WANDER_CW [y 0.2 r 2 hue 0.001| sat 0.001| b 0.001| s 0.9987 ]}
+rule WANDER_CW 0.005 { SQUARE{} WANDER_CCW [y 0.2 r 2 hue 0.001| sat 0.001| b 0.001| s 0.9987 ]}
+
+rule WANDER_CCW 1.0 { SQUARE{} WANDER_CCW [y 0.2 r -2 hue 0.001| sat 0.001| b 0.001| s 0.9987 ]}
+rule WANDER_CCW 0.01 { SQUARE{} WANDER_CW [y 0.2 r -2 hue 0.001| sat 0.001| b 0.001| s 0.9987 ]}

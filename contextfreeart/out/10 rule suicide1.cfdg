@@ -1,0 +1,59 @@
+startshape SUICIDE
+background { b -1 }
+rule SUICIDE {
+ARM { }
+}
+rule ARM {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 200.86 sat 1.0000 b 1.0000 }
+ARM { y 0.2 size .99 rotate 112}
+}
+rule ARM 2 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 200.86 sat 1.0000 b 0.8785 }
+ARM { y 0.2 size .99 rotate 112 }
+}
+rule ARM 3 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 200.86 sat 1.0000 b 0.7845 }
+ARM { y 0.2 size .99 rotate 112 }
+}
+rule ARM 4 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 200.86 sat 1.0000 b 0.6740 }
+ARM { y 0.2 size .99 rotate 112 }
+}
+rule ARM 5 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 200.86 sat 1.0000 b 0.5249 }
+ARM { y 0.2 size .99 rotate 112 }
+}
+rule ARM 6 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 355.17 sat 1.0000 b 0.4641 }
+ARM { y 0.2 size .99 rotate 112 }
+}
+rule ARM 7 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 355.17 sat 1.0000 b 0.3204 }
+ARM { y 0.2 size .99 rotate 112 }
+}
+rule ARM 8 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 355.17 sat 1.0000 b 0.2431 }
+ARM { y 0.2 size .99 rotate 112 }
+}
+rule ARM 9 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1 }
+TRIANGLE { h 355.17 sat 1.0000 b 0.1326 }
+ARM { y 0.2 size .99 rotate 112 }
+}

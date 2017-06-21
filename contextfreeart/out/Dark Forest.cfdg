@@ -1,0 +1,34 @@
+startshape VINE
+background {a -1 }
+
+rule VINE {
+ARM {}
+ARM {flip 90 }
+}
+
+rule ARM 98 {
+CIRCLE { }
+CIRCLE {size 0.9 brightness -5 }
+ARM {y 0.2  size 0.99  rotate 3}
+}
+
+rule ARM 2 {
+CIRCLE { }
+CIRCLE {size 0.9 brightness -5 }
+ARM {y 0.2 size 0.99 flip 90 }
+ARM {y 0.2 size 0.6 brightness 0.2 }
+}
+
+rule ARM 2 {
+CIRCLE { }
+CIRCLE {size 0.9 brightness -5 }
+ARM {y 0.2 size 0.99 flip 90 }
+ARM {y 0.2 size 0.6 brightness 0.2 }
+}
+
+rule ARM 2 {
+CIRCLE { }
+CIRCLE {size 0.9 brightness -5 }
+ARM {y 0.2 size 0.99 flip 90 }
+ARM {y 0.2 size 0.6 brightness 0.2 }
+}

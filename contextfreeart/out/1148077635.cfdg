@@ -1,0 +1,65 @@
+startshape MOSAIC
+
+background {sat 0.7 hue 100 }
+rule MOSAIC{
+        40 * { hue 15  r 90}VERTEIL{  }
+}
+rule VERTEIL 5{
+	FORM{   }
+	VERTEIL{x 2 hue 20 b -0.5}
+}
+rule VERTEIL 5{
+	FORM{ }
+	VERTEIL{ hue 20 x -2 b -0.5 }
+}
+rule VERTEIL 15{
+	FORM{ b 0.5 }
+	VERTEIL{y 2 hue -10  b -0.5 }
+}
+rule VERTEIL 15{
+	FORM{  }
+	VERTEIL{ hue -10 y -2 b -0.1 }
+}
+rule VERTEIL 15{
+	FORM{  }
+}
+
+
+rule FORM 3 {
+	Quadrat1{hue 160 s 0.67}
+	Quadrat1{hue 180 s 1 x 1}
+	Quadrat1{hue 200 s 0.67 y 1}
+	Quadrat1{hue 220 s 0.33 r 45 x 1 y 1}
+}
+
+rule FORM {
+	Kreis1{ hue 200 s 1 x 1}
+	Kreis1{hue 200 s 1 y 1}
+	Kreis1{hue 200 s .7 x 1 y 1}
+	Kreis1{hue 200 s 0.3 }
+}
+
+rule Quadrat1{
+	SQUARE { s 0.98 hue 1 sat 1 b 0.7}
+	SQUARE { s 0.92 b 1   }
+	SQUARE { s 0.86 hue 1 sat 1 b 1}
+}
+
+rule Quadrat1 0.05 {
+	SQUARE { s 0.98 hue 1 sat 1 b 0.7}
+	SQUARE { s 0.92 b 1   }
+	SQUARE { s 0.86 hue 1 sat 1 b 1}
+	Dots {hue 40 sat 1 b 1 s 0.15 }
+}
+ 
+rule Kreis1{
+	CIRCLE { s 0.98  hue 1 sat 1 b 0.7}
+	CIRCLE { s 0.92 b 1   }
+	CIRCLE { s 0.86 hue 1 sat 1 b 1 }
+}
+
+rule Dots{
+	CIRCLE { x 1 y -1 s 0.75 }
+	CIRCLE { x 1 y 1 s 0.75 }
+	CIRCLE { x 1 y 0 s 0.75}
+}

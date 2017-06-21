@@ -1,0 +1,22 @@
+startshape X
+background { b -1 }
+
+rule X {
+SQUARE { size 5 h 45.00 sat 0.6285 b 1.0000 r 35 x 1 }
+SQUARE { size 5 h 45.00 sat 0.6285 b 1.0000 r 45 x 1 }
+SQUARE { size 5 h 45.00 sat 0.6285 b 1.0000 r 55 x 1 }
+CIRCLE { size 5 b -1 r 100 x 1 }
+SQUARE { size 4 h 45.00 sat 0.6285 b 1.0000 r 0 x 1 }
+SQUARE { size 4 b -1 r 45 x 1 }
+SQUARE { size 4 b -1 r 35 x 1 }
+SQUARE { size 4 b -1 r 55 x 1 }
+CIRCLE { size 3 h 45.00 sat 0.6285 b 1.0000 r 100 x 1 }
+SQUARE { size 2.5 b -1 r 45 x 1 }
+SQUARE { size 2.5 h 45.00 sat 0.6285 b 1.0000 r 0 x 1 }
+CIRCLE { size 2.75 b -1 r 100 x 1 }
+CIRCLE { size 2 h 45.00 sat 0.6285 b 1.0000 r 100 x 1 }
+CIRCLE { size 1.5 b -1 r 100 x 1 }
+SQUARE { size 1.6 b -1 r 0 x 1 }
+SQUARE { size 1.6 b -1 r 45 x 1 }
+
+}

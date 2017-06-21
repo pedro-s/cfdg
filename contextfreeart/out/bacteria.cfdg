@@ -1,0 +1,36 @@
+startshape GENERATE
+
+background {b -1}
+
+rule GENERATE {
+
+3600 *{r 12 z .001}  CER{y .9 s .65 flip 180}
+
+}
+
+
+rule CER .021{
+SHADOW {b 1 a -.98}
+
+CER{y .47 x .2 s .95}
+CER{y .47 x -.2 s .95}
+
+}
+
+
+
+rule CER {CER {s .8 }}
+
+rule CER {CER {y .15 }}
+rule CER {CER {y .07 }}
+
+rule CER {CER {x .08}}
+rule CER {CER {x -.08}}
+
+
+
+rule CER .11{}
+
+
+
+rule SHADOW {CIRCLE {s 1.1 }SHADOW {s .97  sat -1r .4 y .000511 b -.038610586531 z .1}} 

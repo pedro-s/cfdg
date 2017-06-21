@@ -1,0 +1,19 @@
+startshape START
+
+rule START {
+	FCUK { }
+	FCUK { flip 90}
+	FCUK { flip 180}
+	FCUK { r 180}
+}
+
+rule FCUK {
+	MULTISTAR { }
+	FCUK { s 0.9 y 1 r 25 }
+}
+
+
+rule MULTISTAR {
+	SQUARE { }	
+	FCUK { s 0.5 }
+}

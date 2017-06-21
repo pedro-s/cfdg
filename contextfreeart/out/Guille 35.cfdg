@@ -1,0 +1,39 @@
+startshape start
+
+rule start
+{
+	Cil{sat 0 b 0 r 225 z 33 z 5}
+}
+
+rule Cil
+{
+	360*{y 1 r 2} Lines{sat -17}
+}
+
+rule Cil
+{
+	180*{y 1 r 0.5} Lines{sat 3}
+}
+
+rule Lines 43
+{
+	SQUARE{}
+	Lines{x -0.3}
+}
+rule Lines 20
+{
+	SQUARE{hue 241.5788 sat 1.0000 b 1.0000}
+	Lines{x 2.8}
+}
+
+rule Lines 10
+{
+	SQUARE{hue 189.5601 sat 1.0000 b 0.6275}
+	Lines{x -1.3}
+} 
+
+rule Lines
+{
+	SQUARE{}
+}
+

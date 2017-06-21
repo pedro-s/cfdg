@@ -1,0 +1,14 @@
+startshape MYSHAPE
+
+background { h 13.27 sat 1.0000 b 0.6464 }
+
+rule MYSHAPE 
+
+{
+
+
+200* { r 49 x 10 y 10 s 0.989 h 48.86 sat 1.0000 b 0.9116}
+SQUARE {skew 91 50  }
+
+
+}

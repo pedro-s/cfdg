@@ -1,0 +1,29 @@
+startshape start
+
+background{b -.5 sat .4  hue 20}
+
+rule start
+{
+	cross{b 1 sat .4 hue 200  r 35 alpha -.3  }
+	#cross{b 1 sat .4 hue 200  r 20 alpha -.3 x -12  }
+	#cross{b 1 sat .4 hue 200  r 20 alpha -.3 x -6 y -6  }
+}
+rule cross
+{
+	line{}
+	line{r 90}
+}
+
+rule line
+{
+	linepath{}
+	cross{y 1.8 x -.08 r 5 s .82 z -1  alpha 0  sat .1 b -.2 }
+	cross{y -1.8  x .08  r 5 s .82 z -1  alpha 0  sat .1 b -.2}
+}
+
+path linepath
+{
+	MOVETO{x -1 y 0}
+	LINETO{x 1 y 0}
+	STROKE{width .1}
+}

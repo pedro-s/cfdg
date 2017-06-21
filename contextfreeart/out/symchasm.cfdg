@@ -1,0 +1,19 @@
+startshape r0
+background {b -1}
+rule r0{16*{a -0.2}r1{b 1}}
+
+rule r1 {r2[] r2[s 0.5 x 2.5] r1[x 2.5]}
+rule r1 {r2[] r2[s 0.5 y 2.5] r1[y 2.5]}
+rule r1 {r1[skew 0 5]}
+rule r1 {r1[skew 0 -5]}
+rule r1 0.3 {r1 {f 0} r1 {f 45}}
+rule r1 {r1[s 0.8]}
+
+rule r2 {r4{a -100 b -100 } r3{}}
+rule r4 {CIRCLE[a 0.008 b 0.8 s 10]}
+
+rule r3 { CIRCLE{}}
+rule r3 { TRIANGLE{}}
+rule r3 { SQUARE{}}
+rule r3 { r3{b 1} r3{r 45 b -1 s 0.8}}
+rule r3 4 {r3{s 0.9}}

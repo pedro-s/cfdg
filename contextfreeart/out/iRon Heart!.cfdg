@@ -1,0 +1,17 @@
+startshape iRon_Heart
+CF::Size=[s 51 y 20]
+CF::Background=[b -1]
+
+shape iRon_Heart
+{K=100 R=360/K Z=-1 Dev=-7.5 S=2.9
+trans [r 45 sat 1 b 1]
+loop 4 [s .45 x Dev Dev Z sat -.65]
+{
+loop Y=K [r R z Z]
+loop X=K [h R r -R z Z b -.015] 
+{
+SQUARE [s S x X Y 0]
+SQUARE [s (S*1.12) x X Y (Z/10) b -1]
+}
+}
+}

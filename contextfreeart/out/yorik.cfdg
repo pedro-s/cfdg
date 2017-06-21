@@ -1,0 +1,52 @@
+// LBA LBG KYU KYW KZG KYZ
+// 800 x 1250
+
+startshape go
+
+background {hue 70 sat .7 b -.5}
+rule go
+{
+	 // to position the thing:
+	SQUARE {x -2 z -100 hue 70 sat .7 b .5}
+	SQUARE {x .5 z -100 hue 70 sat .7 b .5}
+	SQUARE {y 2 z -100 hue 70 sat .7 b .5} 
+
+	go2{}
+}
+
+rule go2
+{
+	CIRCLE {s 1 .40 r 5 skew 0 7.5 x .25 y -.75  z -20  hue 80  b -.5 a -.9} // shade
+	hat{ y .25 s 1 .95}
+}
+
+rule hat
+{
+	bendy{r 15 hue 40 sat 1 b .8 a -.8}
+	bendy{ r 15 flip 90 hue 30 sat 1 b .8 a -.6}
+
+	// collar:
+	10* {y .005 b .1 z .001} CIRCLE {s 1 .8 r 15 y -.17 x .06 z  -20 sat 1 b .1 hue 45} 
+	// collar highlight (snuck into z position):
+	CIRCLE {s 1 .8 r 15 y -.135 x .06 z  -19.992 sat .9 b 1 hue 45 a -.5}
+}
+
+rule bendydraw
+{
+	CIRCLE {z -.001 y -.05 b -.85} // shade
+	CIRCLE {z -.002 y .05 b 1} // highlight 1
+	CIRCLE {z -.0005 y .03 b .8 sat -.6} // highlight 2
+	CIRCLE {a 1 } // mid
+}
+
+rule bendy
+{
+	bendydraw{}
+	bendy { a .005 x .01 z .001 r 1 s .995} // consider adjusting x
+}
+
+rule bendy 
+{
+	bendydraw{}
+	bendy {a .005 y .01 z .001 r -1.1 s .995}
+}

@@ -1,0 +1,30 @@
+startshape URCHIN 	
+background {h 32.47 sat 1.0000 b 1.0000 }
+rule URCHIN {
+//first
+
+CIRCLE { x .07 h 20 h 350.43 sat 1.0000 b 0.6575}
+3* {x .1 h 5 }
+ SQUARE { skew 40 52 r 40 h 353.14 sat 1.0000 b 0.6685}
+
+3* {y .1 h 5}
+ SQUARE { skew 40 52 r -40 h 353.14 sat 1.0000 b 0.6685}
+
+3* {y .1 h 5}
+ SQUARE { skew 40 52 r -80 h 353.14 sat 1.0000 b 0.6685}
+
+3* {y .15 h 5 }
+ SQUARE { skew 40 52 r 70 h 353.14 sat 1.0000 b 0.6685}
+
+3* {x .1 h 5}
+ SQUARE { skew 40 52 r -163 h 353.14 sat 1.0000 b 0.6685}
+
+3* {y .1 h 5}
+ SQUARE { skew 40 52 r 170 h 353.14 sat 1.0000 b 0.6685}
+
+
+
+
+
+
+}

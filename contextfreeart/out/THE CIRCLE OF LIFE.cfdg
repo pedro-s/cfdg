@@ -1,0 +1,21 @@
+startshape TENDRILS
+background { b -1}
+rule TENDRILS{
+ARM{ }
+ARM{ flip 90 }
+}
+
+rule ARM 85 {
+CIRCLE{ }
+CIRCLE{ size 0.9 h 111.69 sat 1.0000 b 1.0000 }
+ARM{ y 0.2 size 0.99 rotate 3 }
+}
+
+rule ARM 7.5{
+CIRCLE{ }
+CIRCLE{ size 0.9 brightness -1 }
+ARM{ y 0.2 size 0.99 flip 90 }
+ARM{ y 0.2 size 0.6 h 300.58 sat 0.4604 b 1.0000 }
+}
+
+

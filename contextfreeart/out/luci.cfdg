@@ -1,0 +1,17 @@
+startshape main
+background {sat 0 b -1}
+
+rule main {
+spi { f 0 }
+spi{r 0 s 1 0.5 y -12  a -0.30}
+spi{r 0 s 1 0.5 y -12.1 x 0.05  a -0.6}
+spi{r 0 s 1 0.5 y -12.2  a -0.7}
+spi{r 0 s 1 0.5 y -12.3 x 0.05 a -0.8}
+spi{r 0 s 1 0.5 y -12.4  a -0.85}
+}
+
+rule spi {
+4 * {r 16 hue 10} CIRCLE{ x 10 hue 10 sat 1 b 1}
+spi { y 1.2 x 3.2 r 15 s 0.27}
+spi { y 0.8 x 1.5 f 90 s 0.9}
+}

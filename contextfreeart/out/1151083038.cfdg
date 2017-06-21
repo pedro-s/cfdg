@@ -1,0 +1,72 @@
+startshape sequence
+
+background{b -1}
+
+rule sequence
+{
+	 curves_m{}
+}
+
+rule curves_m
+{
+  curves{}curves{r 30}curves{r 60}curves{r 90}
+  curves{r 120}curves{r 150}curves{r 180}curves{r 210}
+  curves{r 240}curves{r 270}curves{r 300}curves{r 330}
+}
+// it is quite beautiful if you change curves_m rule to:
+// {curves{} curves_m{r 15}}
+// and add rule curves_m .05 {}
+//
+
+rule curves
+{
+ 	cen_2{}
+	 curve{size 0.9}
+	 curves{size 0.9}
+}
+
+rule curve
+{
+	 cen_2{}
+	 curve{y .15 r .1 hue .1 b .9 alpha -0.0005  size 0.9995}
+}
+
+
+rule curve 0.001
+{
+ 	curve2{}
+}
+
+rule curve2
+{
+ 	 cen_2{}
+	 curve2{y .15 r -.1 hue .1 b .9 alpha -0.0005 size 0.9995}
+}
+
+rule curve2 0.0001
+{
+	  cen_2{}
+	 curve{y .15 r -.1 hue .1 b .9 alpha -0.0005}
+}
+
+rule curve2 0.0005
+{
+	  curve3{}
+}
+
+rule curve3 
+{
+ 	 cen_2{}
+	 curve3{y .15 r -.1 hue .11 b .9 alpha -0.0005 size 0.9995}
+}
+rule curve3 0.00005 
+{
+  	curve2{}
+}
+
+
+
+rule cen_2
+{
+ CIRCLE{alpha -.75 h 150 sat .9 b .9}
+}

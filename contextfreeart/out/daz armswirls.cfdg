@@ -1,0 +1,19 @@
+startshape ThingBlock
+
+rule ThingBlock {
+	8*{ x -3.4 y 2.4 } ThingCol { }
+}
+
+rule ThingCol {
+	8*{ x 2.4 y 3.4 } Thing { }
+}
+
+rule Thing {
+	4*{ r 90 x 2.8 y .6 } Arm { }
+}
+
+rule Arm {
+	CIRCLE { s 0.1 y -0.8 }
+	SQUARE { s 0.1 1 }
+	Arm { s 0.95 x 0.2 r 5 }
+}

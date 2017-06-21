@@ -1,0 +1,39 @@
+startshape tileR 
+
+background {b -1}
+
+size {s 4 4.6188  y -6.0622}
+
+rule tileR {
+	tile1 {r 60}
+}
+
+rule tile1 {
+	6 * { x .5 y 1.4434}
+	{6 * { x 1.5 y -0.2887} 
+	fract {}
+}}
+
+rule fract {
+	sq {}
+	sq {s .5774 f 90 r -30 x -.1667 y .866 a -.2}
+//	fract {s .5774 f 90 r 150 x .6667 y -.5774 a -.2}
+}
+
+rule sq { 
+	x3x {}
+
+	2 * {f 90 r 60 x .5 y .2887}
+	{12 * {s .5774 r -90 f 180 x -.1667 y .2887 b .1 a -.2 z 1}
+	x3x {s .5774  r -90 f 180 x -.1667 y .2887  b .1 a -.2 z 1}
+}
+	2 * {f 90 r 60 x .5 y .2887}
+	{12 * {s .5774 r -90f 180 x .8333 y .2887 b .1 a -.2 z 1}
+	x3x {s .5774  r -90 f 180 x .8333 y .2887  b .1 a -.2 z 1}
+}}
+
+rule x3x {
+	2 * {f 180 x .5 y .2887 b .681}
+	TRIANGLE { b .1}
+//	CIRCLE {b .1}
+}

@@ -1,0 +1,126 @@
+//copyright matthew pace 2006
+//feel free to use this, as long as I
+//am given credit as the original
+//author for whatever part you use
+
+startshape start
+background { hue 0 b -1 sat 0}
+
+//the base shape used
+rule shape 10
+{
+	CIRCLE{s .75 3}
+}
+//the large blobs
+rule shape .1
+{
+	CIRCLE{s 20 a -.4}
+	CIRCLE{s .75 3}
+}
+
+//main run
+rule start
+{
+	run {h 210 sat 1 b 1}
+	run {h 038 sat 1 b 1}
+}
+
+//straight lines
+rule run 100
+{
+	shape{}
+	run{ y 4 s .999}
+}
+//every once in awhile, start a turn
+rule run 2
+{
+	shape{}
+	runleft{y 4 r 10 s .999 h .02 a .999}
+}
+rule run 2
+{
+	shape{}
+	runright{ y 4 r -10 s .999 h .02 a .999}
+}
+rule run 2
+{
+	shape{}
+	sharpleft{y 4 r 10 s .999 h .02 a .999}
+}
+
+rule run 2
+{
+	shape{}
+	sharpright{ y 4 r -10 s .999 h .02 a .999}
+}
+//even more rarely, split off...
+rule run .25
+{
+	shape{}
+	run{}
+	runleft{}
+}
+rule run .25
+{
+	shape{}
+	run{}
+	runright{}
+}
+rule run .25
+{
+	shape{}
+	run{}
+	sharpleft{}
+}
+rule run .25
+{
+	shape{}
+	run{}
+	sharpright{}
+}
+
+//the turns
+rule runleft 200
+{
+	shape{}
+	runleft{y 4 r 10 s .999 h .02 a .999}
+}
+rule runright 200
+{
+	shape{}
+	runright{y 4 r -10 s .999 h .02 a .999}
+}
+rule sharpleft 200
+{
+	shape{}
+	sharpleft{y 4 r 20 s .999 h .02 a .999}
+}
+rule sharpright 200
+{
+	shape{}
+	sharpright{y 4 r -20 s .999 h .02 a .999}
+}
+
+
+
+//exiting the turns
+rule runleft 2
+{
+	shape{}
+	run{y 4 s .999 h .02 a .999}
+}
+rule runright 2
+{
+	shape{}
+	run{y 4 s .999 h .02 a .999}
+}
+rule sharpleft 2
+{
+	shape{}
+	run{y 4 s .999 h .02 a .999}
+}
+rule sharpright 2
+{
+	shape{}
+	run{y 4 s .999 h .02 a .999}
+}

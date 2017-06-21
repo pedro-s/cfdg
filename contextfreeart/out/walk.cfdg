@@ -1,0 +1,80 @@
+startshape NEEN
+
+background {b -1}
+
+rule NEEN
+
+{
+
+
+CIRCLE {x -.4  h 316.64 sat 1.0000 b 1.0000}
+
+CIRCLE { x .4 size .90 h 260.87 sat 0.6302 b 1.0000}
+
+CIRCLE { x -.3 size .80 h 230.11 sat 0.9702 b 1.0000}
+
+CIRCLE { x .3 size .70 h 184.04 sat 0.9468 b 1.0000}
+
+CIRCLE { x -.2 size .60 h 158.86 sat 0.8935 b 1.0000}
+
+CIRCLE { x .2 size .50 h 316.64 sat 1.0000 b 1.0000}
+
+CIRCLE { x -.1 size .40 h 260.87 sat 0.6302 b 1.0000}
+
+CIRCLE { x .1 size .30 h 230.11 sat 0.9702 b 1.0000}
+
+CIRCLE { x -.05 size .20 h 184.04 sat 0.9468 b 1.0000}
+
+CIRCLE { x .05 size .10 h 158.86 sat 0.8935 b 1.0000}
+
+
+
+NEEN { size .7}
+
+
+CIRCLE {x -.5 y .1  h 316.64 sat 1.0000 b 1.0000}
+
+CIRCLE {x .5 y .1 size .90 h 260.87 sat 0.6302 b 1.0000}
+
+CIRCLE {x -.4 y .1 size .80 h 230.11 sat 0.9702 b 1.0000}
+
+CIRCLE {x .4 y .1 size .70 h 184.04 sat 0.9468 b 1.0000}
+
+CIRCLE {x -.3 y .1 size .60 h 158.86 sat 0.8935 b 1.0000}
+
+CIRCLE {x .3 y .1 size .50 h 316.64 sat 1.0000 b 1.0000}
+
+CIRCLE {x -.2 y .1 size .40 h 260.87 sat 0.6302 b 1.0000}
+
+CIRCLE  {x .2 y .1 size .30 h 230.11 sat 0.9702 b 1.0000}
+
+CIRCLE {x -.1 y .1 size .20 h 184.04 sat 0.9468 b 1.0000}
+
+CIRCLE {x .1 y .1size .10 h 158.86 sat 0.8935 b 1.0000}
+
+CIRCLE {x -.5 y .1  h 316.64 sat 1.0000 b 1.0000}
+
+CIRCLE {x .5 y .1 size .90 h 260.87 sat 0.6302 b 1.0000}
+
+CIRCLE {x -.4 y .1 size .80 h 230.11 sat 0.9702 b 1.0000}
+
+CIRCLE {x .4 y .1 size .70 h 184.04 sat 0.9468 b 1.0000}
+
+CIRCLE {x -.3 y .1 size .60 h 158.86 sat 0.8935 b 1.0000}
+
+CIRCLE {x .3 y .1 size .50 h 316.64 sat 1.0000 b 1.0000}
+
+CIRCLE {x -.2 y .1 size .40 h 260.87 sat 0.6302 b 1.0000}
+
+CIRCLE  {x .2 y .1 size .30 h 230.11 sat 0.9702 b 1.0000}
+
+CIRCLE {x -.1 y .1 size .20 h 184.04 sat 0.9468 b 1.0000}
+
+CIRCLE {x .1 y .1size .10 h 158.86 sat 0.8935 b 1.0000}
+
+CIRCLE {h 0.00 sat 0.0000 b 0.0000}
+
+CIRCLE {size .90 h 0.00 sat 0.0000 b 1.0000}
+
+
+}

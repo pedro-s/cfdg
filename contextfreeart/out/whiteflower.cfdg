@@ -1,0 +1,10 @@
+background {b -.9 sat .8} startshape FLOWER// from MICHAEL// 222.49224 = 360 / 1.618034 (the golden ratio)
+rule FLOWER {    SHADOW{ s 3 b -1 r 90 }
+    FLOWER {r 222.49224 s .98 x 10
+hue -1 sat 1}} rule PETAL {    TRIANGLE {x 4.1 r 15}    PETAL { s .995 a -.05 b -.04}}
+
+
+
+rule SHADOW {CIRCLE {s 1.7 }SHADOW {s .975   y .0511  b .028 z . 1 sat - .08 r 0.81}}
+
+rule SHADOW 3.051 {SHADOW {flip 90}}

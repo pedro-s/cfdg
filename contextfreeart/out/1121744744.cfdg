@@ -1,0 +1,39 @@
+startshape 3dspiral 
+
+rule 3dspiral { 
+ circlering { } 
+ 3dspiral {s 0.95 r 31.3 x 0.3} 
+} 
+
+
+rule circlering { 
+ subcirclering {r 5} 
+ subcirclering {r 10} 
+ subcirclering {r 15} 
+ subcirclering {r 20} 
+ subcirclering {r 25} 
+ subcirclering {r 30} 
+} 
+
+rule subcirclering { 
+ arm {r 30} 
+ arm {r 60} 
+ arm {r 90} 
+ arm {r 120} 
+ arm {r 150} 
+ arm {r 180} 
+ arm {r 210} 
+ arm {r 240} 
+ arm {r 270} 
+ arm {r 300} 
+ arm {r 330} 
+ arm {r 360} 
+} 
+
+rule arm { 
+ ball {x 15 s 1 } 
+} 
+
+rule ball { 
+ CIRCLE {s 0.7 } 
+} 

@@ -1,0 +1,19 @@
+//This is my first picture.
+/*If you can come up with a different way to make this,
+ 	then please tell me so. */
+startshape wut
+
+rule wut {
+	SQUARE {r 45 b 0.10}
+	SQUARE {r 40 b 0.20}
+	SQUARE {r 35 b 0.30}
+	SQUARE {r 30 b 0.40}
+	SQUARE {r 25 b 0.50}
+	SQUARE {r 20 b 0.60}
+	SQUARE {r 15 b 0.70}
+	SQUARE {r 10 b 0.80}
+	SQUARE {r 5 b 0.90}
+	SQUARE {b 1}
+	SQUARE {s 0.5 r 45 b 0.7 h 120 sat 1 z 1}
+	SQUARE { s 0.5 b 1 h 30 sat 1}
+}

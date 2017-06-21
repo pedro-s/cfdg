@@ -1,0 +1,52 @@
+startshape A
+
+background { hue 245 sat 0.873 b -0.7 }
+
+rule A {
+	B { x 10 y 10 r 20 s 0.9 }
+}
+
+rule B {
+	C { }
+	B { x 1 y 1 r 4 s 0.99 }
+	D { a 0.08 }
+}
+
+rule B 3 {
+	C { }
+	B { x 1 y -1 r 4 s 0.99 }
+	D { a 0.08 }
+}
+
+rule C {
+	C { s 0.8 hue 10 sat 1 b 1 }
+	S { }
+}
+
+rule S {
+	CIRCLE { s 0.05 0.8 b 1 }
+	CIRCLE { s 0.05 0.8 r 120 b 1 }
+	CIRCLE { s 0.05 0.8 r 240 b 1 }
+	S { x -2 y 2 r 10 s 0.95 }
+}
+
+rule S {
+	CIRCLE { s 0.05 0.8 b 1 }
+	CIRCLE { s 0.05 0.8 r 120 b 1 }
+	CIRCLE { s 0.05 0.8 r 240 b 1 }
+	S { x 2 y -2 r 10 s 0.95 }
+}
+
+rule D {
+	CIRCLE { s 7 b 0.7 a -0.95 }
+	D { s 0.5 r 5 x 1 a 0.08 }
+	D { s 0.5 r 12 x -2 a 0.08 }
+	D { s 0.7 r 5 y -6 a 0.08 }
+}
+
+rule D {
+	CIRCLE { s 7 b 0.7 a -0.95 }
+	D { s 0.4 r 5 x 3 a 0.08 }
+	D { s 0.5 r 10 x -5 a 0.08 }
+	D { s 0.6 r 9 y -5 a 0.08 }
+}

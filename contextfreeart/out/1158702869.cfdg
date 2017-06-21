@@ -1,0 +1,631 @@
+startshape Start
+
+background {b -1 hue 240 sat 0.4}
+
+/* Starting shape */
+
+rule Start
+{
+	ThreeNode  {b 1.0 hue 240.0}
+	Text		  {x -5.0 y 3.0 s 0.06}
+	Segment    [x -1.3 y 1.3 s 1.7 r -135 z 40 sat 1.0 b 1.0]
+}
+
+/* You are here */
+
+rule Text
+{
+	Marker     {z 40 sat 1.0 b 1.0}
+	Marker     {z 39  y -0.1 x 0.1 b -1.0}
+	Marker     {z 39  y -0.2 x 0.2 b -1.0}
+	Marker     {z 39  y 0.1 x -0.1 b -1.0}
+	Marker     {z 39  y 0.2 x -0.2 b -1.0}
+}
+
+rule Marker
+{
+	y_lower    {y 1}
+	o_lower    {x 10}
+   u_lower    {x 22}
+	
+	a_lower    {x 40}
+   r_lower    {x 53}
+	e_lower    {x 63}
+
+	h_lower    {x -3 y -27}
+	e_lower    {x 10 y -27}
+	r_lower    {x 24 y -27}
+	e_lower    {x 36 y -27}
+}
+
+/* Segments */
+
+rule Segment
+{
+	SQUARE     {s 0.1 0.8}
+	TRIANGLE   {y 0.3 s 0.25 0.5}
+
+}
+
+/* Nodes */
+
+rule Central
+{
+	CIRCLE     {}
+	CIRCLE     {b -1 s 0.9}
+	CIRCLE     {s 0.6}
+}
+
+rule ThreeNode
+{
+	Central    {}
+	Filament   [r 0   y 1]
+	Filament   [r 120 y 1]
+	Filament   [r 240 y 1]
+}
+
+rule Node
+{
+	ThreeNode  {}
+}
+
+/* Filaments */
+
+rule Filament 0.4
+{
+	Segment    {}
+	Filament   {r 20 s 0.99 y 1.2}
+}
+
+rule Filament 0.4
+{
+	Segment    {}
+	Filament   {r -20 s 0.99 y 1.2}
+}
+
+rule Filament 0.05
+{
+	Node       {s 0.8 b -0.1 sat 0.1 z -1}
+}
+
+rule Filament 0.025
+{
+	/* terminator */
+}
+
+/******************************
+ * Lowercase alphabet 
+ * This code by dzeni
+ ******************************/
+
+rule a_lower
+{
+   skewoval{r 45}
+   sline{x 4.7 y -5.4 size 1.5}
+}
+
+rule b_lower
+{
+   skewoval{r 45}
+   line{x -4.7 y -5.4 size 1.5}
+}
+
+rule c_lower
+{
+   3ring{r -45}
+}
+
+rule d_lower
+{
+   skewoval{r 45}
+   line{x 4.7 y -5.4 size 1.5}
+}
+
+rule e_lower
+{
+   ering{r 100}
+   eline{r 90 x 4 y .8 size 1.5}
+}
+
+rule f_lower
+{
+   jf{}
+   crossline{r 90 x 1.9 y 4.5 size 1.5}
+}
+
+
+rule g_lower
+{
+   skewoval{r 45}
+   bottomcirc{r 150 size 1.2 x -.4 y -4}
+   gline{x 4.7 y -11 size 1.2 }
+}
+
+rule h_lower
+{
+line{x -5.4 y -5.4 size 1.5}
+bottomcirc{r -35 size 1.2 x -.4 y -1.5}
+mline{x 3.4 y -5.4 size 1.5}
+}
+
+
+rule i_lower
+{
+   sdline{size 1.5 y -5.4}
+}
+
+rule j_lower
+{
+   jf{r 180}
+   SQUARE{size 1.5 y 9.5}
+}
+
+rule k_lower
+{
+   line{size 1.5 y -5.4}
+   kline{size 1.5 r -40 x 1}
+   kline{size 1.5 r -145 x 3 y .8}
+}
+
+
+rule l_lower
+{
+   line{size 1.5 y -5.4}
+}
+
+rule m_lower
+{
+sline{x -5.4 y -5.4 size 1.5}
+bottomcirc{r -35 size 1.2 x -.4 y -1.5}
+mline{x 3.4 y -5.4 size 1.5}
+bottomcirc{r -35 size 1.2 x 7.6 y -1.5}
+mline{x 11.2 y -5.4 size 1.5}
+}
+
+
+rule n_lower
+{
+sline{x -5.4 y -5.4 size 1.5}
+bottomcirc{r -35 size 1.2 x -.4 y -1.5}
+mline{x 3.4 y -5.4 size 1.5}
+}
+
+rule o_lower
+{
+   skewoval{r 45}
+}
+
+rule p_lower
+{
+   skewoval{r 45}
+   line{x -4.7 y -10.8 size 1.5}
+}
+
+rule q_lower
+{
+   skewoval{r 45}
+   line{x 4.7 y -10.8 size 1.5}
+}
+
+rule r_lower
+{
+   sline{x -5.4 y -5.4 size 1.5}
+   bottomcirc{r -35 size 1.2 x -.4 y -1.5}
+}
+
+rule s_lower
+{   
+   close_s{size 1 .65 y 3}
+}
+
+rule close_s
+{   
+   pre_s{}
+   pre_s{r 200 y -9.6}
+}
+
+rule pre_s
+{
+   half_s{}
+   half_s{r 90}
+}
+
+rule half_s
+{
+   quarter{}
+   quarter{r 90}
+}
+
+rule t_lower
+{
+   jf{flip 180 y 3}
+   crossline{r 90 size 1.5 x 1.9 y 5.5}
+}
+
+
+rule u_lower
+{
+   n_lower{r 180}
+}
+
+rule v_lower
+{
+   vwline{r -25 size 1.5 y -5.4}
+   vwline{r 25 size 1.5 y -5.4}
+}
+
+rule w_lower
+{
+   vwline{r -25 size 1.5 y -5.4}
+   vwline{r 25 size 1.5 y -5.4}
+   vwline{r -25 size 1.5 x 5 y -5.4}
+   vwline{r 25 size 1.5 x 5 y -5.4}
+}
+
+rule x_lower
+{
+   xline{skew 45 180 x -9.5 y -5.4 size 2}
+   xline{skew -45 180 y -5.4 size 2}
+}
+
+rule y_lower
+{
+   pre_y{y -2 size .9 x -4}
+}
+
+rule pre_y
+{
+   eline{size 2 r 30 y -2}
+   line{size 2 r -30 y -10 x -4}
+}
+
+rule z_lower
+{
+   z1line{r 90 y -5.4 size 1.5}
+   z1line{r 90 x .6 y 5.4 size 1.5}
+   zline{skew 45 180 size 2 x -8.5 y -3.9}
+}
+
+rule jf
+{
+   fjtline{size 1.5 y -5.4}
+   partquarter{r 70 y 4 x 2}
+}
+
+rule xline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+}
+
+rule zline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+}
+
+rule z1line
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 6}
+   SQUARE{y 6.5}
+}
+
+rule eline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+}
+
+rule kline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+}
+
+rule sline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 6}
+   SQUARE{y 7}
+}
+
+rule sdline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 6}
+   SQUARE{y 7}
+
+   SQUARE{y 10}
+}
+
+rule mline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 5.4}
+}
+
+rule gline
+{
+   SQUARE{y 3.3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 6}
+   SQUARE{y 7}
+   SQUARE{y 8}
+   SQUARE{y 9}
+   SQUARE{y 10}
+   SQUARE{y 11}
+   SQUARE{y 12}
+   SQUARE{y 13}
+}
+
+rule fjtline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 6}
+   SQUARE{y 7}
+   SQUARE{y 8}
+   SQUARE{y 9}
+}
+
+rule crossline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 2.5}
+}
+
+rule vwline
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 6}
+   SQUARE{y 7}
+   SQUARE{y 7.5}
+}
+
+rule line
+{
+   SQUARE{}
+   SQUARE{y 1}
+   SQUARE{y 2}
+   SQUARE{y 3}
+   SQUARE{y 4}
+   SQUARE{y 5}
+   SQUARE{y 6}
+   SQUARE{y 7}
+   SQUARE{y 8}
+   SQUARE{y 9}
+   SQUARE{y 10}
+}
+
+rule skew3ring
+{
+   3ring{skew 7 180}
+}
+
+rule skewoval
+{
+   ring{skew 7 180}
+}
+
+rule 3ring
+{
+   quarter{r 90}
+   quarter{r -90}
+   quarter{r 180}
+}
+
+rule ring
+{
+   quarter{}
+   quarter{r 90}
+   quarter{r -90}
+   quarter{r 180}
+}
+
+rule bottomcirc
+{
+   quarter{skew 10 180 r 90}
+}
+
+rule ering
+{
+   quarter{}
+   quarter{r 90}
+   quarter{r -90}
+   partquarter{r 180}
+}
+
+rule partquarter
+{
+twocircles{}
+   twocircles{r 1}
+   twocircles{r 2}
+   twocircles{r 3}
+   twocircles{r 4}
+   twocircles{r 5}
+   twocircles{r 6}
+   twocircles{r 7}
+   twocircles{r 8}
+   twocircles{r 9}
+   twocircles{r 10}
+   twocircles{r 11}
+   twocircles{r 12}
+   twocircles{r 13}
+   twocircles{r 14}
+   twocircles{r 15}
+   twocircles{r 16}
+   twocircles{r 17}
+   twocircles{r 18}
+   twocircles{r 19}
+   twocircles{r 20}
+   twocircles{r 21}
+   twocircles{r 22}
+   twocircles{r 23}
+   twocircles{r 24}
+   twocircles{r 25}
+   twocircles{r 26}
+   twocircles{r 27}
+   twocircles{r 28}
+   twocircles{r 29}
+   twocircles{r 30}
+   twocircles{r 31}
+   twocircles{r 32}
+   twocircles{r 33}
+   twocircles{r 34}
+   twocircles{r 35}
+   twocircles{r 36}
+   twocircles{r 37}
+   twocircles{r 38}
+   twocircles{r 39}
+   twocircles{r 40}
+   twocircles{r 41}
+   twocircles{r 42}
+}
+
+rule quarter
+{
+   twocircles{}
+   twocircles{r 1}
+   twocircles{r 2}
+   twocircles{r 3}
+   twocircles{r 4}
+   twocircles{r 5}
+   twocircles{r 6}
+   twocircles{r 7}
+   twocircles{r 8}
+   twocircles{r 9}
+   twocircles{r 10}
+   twocircles{r 11}
+   twocircles{r 12}
+   twocircles{r 13}
+   twocircles{r 14}
+   twocircles{r 15}
+   twocircles{r 16}
+   twocircles{r 17}
+   twocircles{r 18}
+   twocircles{r 19}
+   twocircles{r 20}
+   twocircles{r 21}
+   twocircles{r 22}
+   twocircles{r 23}
+   twocircles{r 24}
+   twocircles{r 25}
+   twocircles{r 26}
+   twocircles{r 27}
+   twocircles{r 28}
+   twocircles{r 29}
+   twocircles{r 30}
+   twocircles{r 31}
+   twocircles{r 32}
+   twocircles{r 33}
+   twocircles{r 34}
+   twocircles{r 35}
+   twocircles{r 36}
+   twocircles{r 37}
+   twocircles{r 38}
+   twocircles{r 39}
+   twocircles{r 40}
+   twocircles{r 41}
+   twocircles{r 42}
+   twocircles{r 43}
+   twocircles{r 44}
+   twocircles{r 45}
+   twocircles{r 46}
+   twocircles{r 47}
+   twocircles{r 48}
+   twocircles{r 49}
+   twocircles{r 50}
+   twocircles{r 51}
+   twocircles{r 52}
+   twocircles{r 53}
+   twocircles{r 54}
+   twocircles{r 55}
+   twocircles{r 56}
+   twocircles{r 57}
+   twocircles{r 58}
+   twocircles{r 59}
+   twocircles{r 60}
+   twocircles{r 61}
+   twocircles{r 62}
+   twocircles{r 63}
+   twocircles{r 64}
+   twocircles{r 65}
+   twocircles{r 66}
+   twocircles{r 67}
+   twocircles{r 68}
+   twocircles{r 69}
+   twocircles{r 70}
+   twocircles{r 71}
+   twocircles{r 72}
+   twocircles{r 73}
+   twocircles{r 74}
+   twocircles{r 75}
+   twocircles{r 76}
+   twocircles{r 77}
+   twocircles{r 78}
+   twocircles{r 79}
+   twocircles{r 80}
+   twocircles{r 81}
+   twocircles{r 82}
+   twocircles{r 83}
+   twocircles{r 84}
+   twocircles{r 85}
+   twocircles{r 86}
+   twocircles{r 87}
+   twocircles{r 88}
+   twocircles{r 89}
+   twocircles{r 90}
+}
+
+rule twocircles
+{
+   SQUARE{x 5 size 1.2}
+}

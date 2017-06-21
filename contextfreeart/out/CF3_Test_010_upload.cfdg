@@ -1,0 +1,21 @@
+startshape CF3_Test_010
+CF::Background=[b -.7]
+CF::Size=[s 1.60 y -1.4 x -.52]
+//choose version BBS !!
+
+shape ELE(number elli)
+rule {
+loop i=1,110 [y .001 b .015 z 1 h (20*elli)] SQUARE [s 1 .01 b 0 sat elli y -elli h 200]
+}
+
+shape RandWalk(number xs)
+rule 10000
+{ELE(.05) [s .1 1 x .05]
+RandWalk(xs) [r rand(-1,1.8) x .01 a -.0005 s 1 .9997 sat .0005 h xs]}
+
+shape RandWalk rule { } //stops the walks
+
+shape CF3_Test_010
+rule {
+RandWalk(1) [ ]
+RandWalk(2) [s .3 x .5 y .5 z -50]}

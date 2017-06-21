@@ -1,0 +1,45 @@
+/*
+	USB TREE
+	www.lazymoon.org
+	usbtree.cfdg
+*/
+
+startshape A
+
+rule A {
+	10*[r 36] I[]
+}
+
+rule I {
+	8*[] WIRE[]
+}
+
+rule WIRE{WIRE2[]}
+rule WIRE{WIRE2[f 180]}
+
+rule WIRE2 29{
+	SQUARE[]
+	WIRE2[x 0.5 r 2]
+}
+
+rule WIRE2 70{
+	SQUARE[]
+	WIRE2[x 0.5 s 0.99]
+}
+
+rule WIRE2 1 {
+	USB[r -90 s 5 x -0.15 y 2]
+}
+
+rule USB {
+	SQUARE[s 1 1.2]
+	SQUARE[s 0.9 1.10 b 1]
+	SQUARE[x 0.25 y 0.25 s 0.175 0.15]
+	SQUARE[x -0.25 y 0.25 s 0.175 0.15]
+	SQUARE[s 0.05 1.2]
+	SQUARE[y -1.2 s 1.21]
+	SQUARE[y -2. s 0.5]
+	SQUARE[y -2.4 x 0.21 s 0.5 1.21 skew 30 0]
+	SQUARE[y -2.4 x -0.21 s 0.5 1.21 skew -30 0]
+}
+

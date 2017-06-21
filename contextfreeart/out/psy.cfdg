@@ -1,0 +1,11 @@
+startshape psy
+
+background {b -1}
+
+rule psy 
+	{4 * {r (360/4)}
+	{42 * {s .72 1.1 y -.2 x 6 r -84 b .01 z -1}
+	{2 * {f 90 h 24 }
+	{240 * {s .99 r 44 y -1 b .01 h -.3 sat .06 z 1}
+	CIRCLE { b .001 h 185 sat .1a -.1}
+}}}}

@@ -1,0 +1,23 @@
+startshape triStart
+
+background {  hue 357.7 sat 1.0000 b 0.7264     }
+
+rule triStart {
+
+CIRCLE { s 15  hue 357.7 sat 1.0000 b 0.4 }
+
+tri2{ flip 30}
+tri2{ flip 60}
+tri2{ flip 90}
+tri2{ flip 120}
+tri2{ flip 150}
+tri2{ flip 180}
+}
+
+rule tri2 {
+CIRCLE {r 30 s 1.6}
+TRIANGLE {r -15 s 1 b 1 hue 90}
+TRIANGLE {r 0 s 1 b 1 hue 90}
+tri2 [  x 0.9 y 0.9 r 0.5 s 0.9 h 180 sat 1  alpha -0.009 ]
+}
+

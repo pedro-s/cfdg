@@ -1,0 +1,53 @@
+startshape hexagone
+
+background {  hue 0.0 sat 0.0 b -1 } 
+
+rule hexagone {
+	koin { }
+	6 * {x 160 r -60 } koin{}
+}
+
+rule koin {
+	18 * {x 9 } ligne { hue 10 b .8 sat 1}
+	18 * {x 9} ligne2 { hue 10 b .8 sat 1  r 180}
+	12 * {x 6 s 1.05} ligne {x 5  b .8 sat .6 }
+	12 * {x 6 s 1.05} ligne2 {x 5  b .8 sat .6  r 180 }
+}
+
+rule ligne2 {
+	ligne { y -.2 s 1.5 r 8}
+}
+rule ligne2 {
+	ligne {y -.2 s 1.5 r -8 }
+}
+
+rule ligne {
+	CIRCLE { hue 200 sat 1 b .6 }
+	ligne {x 0 y .2 s .998 r 4 }
+}
+rule ligne {
+	CIRCLE { hue 200 sat 1 b .6 }
+	ligne {x 0 y .2 s .998 r -4 }
+}
+
+rule ligne .5 {
+	CIRCLE { hue 200  sat 1  b .3 }
+	ligne {x 0 y .4 s .993 r 3 | hue 1}
+}
+
+rule ligne .5 {
+	CIRCLE { hue 200  sat 1  b .3 }
+	ligne {x 0 y .4 s .993 r -3  hue 1 |}
+}
+
+rule ligne .02 {
+	CIRCLE { s 4  hue 200 a -.3 b 1 z 100}
+	CIRCLE { s 2 sat 1  b 1 z 100 a -.2}
+	ligne {x 0 y .5 s .993 r -15 z 10}
+}
+rule ligne .02 {
+	CIRCLE { s 4 hue 200 a -.3 b 1 z 100}
+	CIRCLE { s 2 sat 1 b 1 z 100 a -.2}
+	ligne {x 0 y .5 s .993 r 15  z 10}
+}
+

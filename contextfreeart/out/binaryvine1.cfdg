@@ -1,0 +1,42 @@
+background {b -1}
+startshape Start
+
+/**********************/
+
+rule Start
+{
+	Vine{b 1 alpha -0.98}
+}
+
+rule Flower
+{
+	CIRCLE{}
+	Flower{x 0.42 y 0.42 r 70 s 0.94 alpha 0.02}
+}
+
+rule Vine 0.04
+{
+	Flower{s 2}
+	Vine{}
+}
+
+rule Vine 0.5
+{
+	CIRCLE{s 1 5}
+	Vine{y 0.3 r 7 s 0.99}
+}
+
+rule Vine 0.5
+{
+	CIRCLE{s 1 5}
+	Vine{y 0.3 r -7 s 0.99}
+}
+
+rule Vine 0.03
+{
+	Vine{r 50 s 0.96 alpha 0.01}
+	Vine{r -50 s 0.96 alpha 0.01}
+}
+
+rule Vine 0.004
+{}

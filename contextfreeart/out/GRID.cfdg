@@ -1,0 +1,14 @@
+startshape reck
+ 
+rule reck {
+32* {y 1} row {} 
+  }
+rule row {
+32* {x 1} core {} 
+  }
+rule core .5  {  SQUARE {b -1 }
+}
+rule core .5 {
+  SQUARE {b 1  h 180.65 sat 0.9778 b 1.0000}
+   core {s .95 }
+}

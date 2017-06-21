@@ -1,0 +1,54 @@
+startshape SpringDemo
+CF::Background = [b -1]
+
+shape SpringDemo{
+	aSpring(5, 0, 2, .5)[]
+	//regular
+	aSpring(4, .07, 2, .5)[x 9.5 y 1]
+	//bent
+	aSpring(10, .1, 2, .5)[x 20 y 5]
+	//Orbit1	
+	aSpring(5, -.2, -2, 1) [x 26 y 5]
+	//Orbit2
+	aSpring(5, -.2, 2, 1) [y -5]
+	//Orbit3
+	aSpring(1, 6, 9, 1) [x 10 y -5 s .4]
+	//Orbit4
+	aSpring(5, -.2, .2, 1.5)  [x 17 y -5 s 1.5]
+	//Orbit5	
+	aSpring(60, .06, 2, .1)  [x 30 y -5 s .5]
+	//Orbit6
+
+	bSpring (1, 0, .00086)[x 3 y 15 s 4 ]
+	//Cone
+	bSpring (.5, 0, 0)[x 14 y 15 s 4 ]
+	//Arrow
+	bSpring (1, .075, .0009)[x 26 y 15 s 4 ]
+	//Spiral
+}
+
+shape aSpring (number length, number curl, number wide, number height)
+	{
+	loop j = (length*360) [y .005 r curl h .5]
+	{ Ring [x (wide*cos(j)) y (height*sin(j))]
+	}
+}
+
+shape bSpring (number ss, number rr, number yy) 
+	{
+	loop j = 200*360 [y yy h .1 s .9995 r rr]
+	{ Ring [x cos(j) y sin(ss*j) ]
+	}
+}
+
+shape Ring{
+	CIRCLE[s .5 sat 1 b .95 h 1]
+}
+
+//------------------------ working progress---------------------------
+shape DblHelix (number length, number curl, number wide, number height)
+rule{
+	aSpring(length, curl, wide, height)[]
+	aSpring(length, curl, wide, height) [flip 90 h 180]
+}
+//------------------------ working progress---------------------------

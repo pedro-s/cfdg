@@ -1,0 +1,38 @@
+// Qerc,
+// a cfdg script ( http://contextfreeart.org/ ) 
+// To render this, launch cfdg with -m 30  or  with -m 145
+// 
+// AlpT (@freaknet.org)  
+// Fri Nov  2 04:26:23 CET 2007
+//
+// Other scripts:
+// http://freaknet.org/alpt/misc/fatrial/math-exp/cfdg
+//
+
+
+startshape INIT
+
+rule INIT {
+	C { a -0.5 b -1 sat 1 }
+// 	Color version
+//	C { a -0.5 b 0.8 sat 1 h 120 }
+}
+
+rule C {
+	CIRCLE { x 0 y 5 size 7.071067811865475244 }
+	CIRCLE { x 0 y -5 size 7.071067811865475244 }
+	CIRCLE { x 5 y 0 size 7.071067811865475244 }
+	CIRCLE { x -5 y 0 size 7.071067811865475244 }
+	C { x 0 y 5 size 0.7071067811865475244   h 120 }
+	C { x 0 y -5 size 0.7071067811865475244  h 120 }
+	C { x -5 y 0 size 0.7071067811865475244 h 120 }
+	C { x 5 y 0 size 0.7071067811865475244  h 120 }
+}
+
+//Notes
+//	R = 5	initial radius
+//
+// 	r = sqrt(2)/2*old_r	radius of the children circles
+//	
+//	bigr(n)  =  R*(1-(sqrt(2)/2)^(n+1))/(1-sqrt(2)/2)
+//	CIRCLE { x 0 y 0 s 22.07106781186547524399 b 1 }

@@ -1,0 +1,82 @@
+startshape vihart 
+
+background {b -1}
+
+rule vihart {
+	6*{r -60 x -.5 y .2887}
+	prob {}
+	vihart {s .547 r -30 x -.1579 y .3039 h 180}
+}
+
+rule prob {
+	doodle {}
+	2*{f 90}
+	prob {s .5774 r 30 x .6667 y -.5774}
+}
+
+rule doodle {
+	doo{}
+	doodle {s .5774 r -30 x .3333 y -.5774 h 60}
+}
+
+rule doo {
+	diamond {h -120}
+	doo {s .5774 r 30 x -.3333 y -.5774 h 60}
+}
+
+rule diamond {
+	frag01 {}
+	frag02 {}
+	frag03 {}
+	frag04 {}
+	frag05 {}
+	frag06 {}
+}
+
+path frag01 {
+	MOVETO {y .5774}
+	LINETO {x -.285 y -.3287}
+	LINETO {x -.5 y -.2887}
+	CLOSEPOLY {}
+	FILL {h 204.51 sat .4080 b .6824}
+}
+
+path frag02 {
+	MOVETO {y .5774}
+	LINETO {x .285 y -.3287}
+	LINETO {x .5 y -.2887}
+	CLOSEPOLY {}
+	FILL {h 204.88 sat .5256 b .6118}
+}
+
+path frag03 {
+	MOVETO {y .5774}
+	LINETO {x .285 y -.3287}
+	LINETO {x -.285 y -.3287}
+	CLOSEPOLY {}
+	FILL {h 204.38 sat .3316 b .7569}
+}
+
+path frag04 {
+	MOVETO {y -.5774}
+	LINETO {x -.285 y -.3287}
+	LINETO {x -.5 y -.2887}
+	CLOSEPOLY {}
+	FILL {h 206.17 sat .7121 b .5176}
+}
+
+path frag05 {
+	MOVETO {y -.5774}
+	LINETO {x .285 y -.3287}
+	LINETO {x .5 y -.2887}
+	CLOSEPOLY {}
+	FILL {h 205.45 sat .1336 b .9686}
+}
+
+path frag06 {
+	MOVETO {y -.5774}
+	LINETO {x .285 y -.3287}
+	LINETO {x -.285 y -.3287}
+	CLOSEPOLY {}
+	FILL {h 205.33 sat .1982 b .8902}
+}

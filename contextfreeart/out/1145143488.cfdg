@@ -1,0 +1,39 @@
+startshape start
+background{b -1}
+
+rule start
+{
+	spiral{}
+}
+
+rule start 720
+{
+	start{hue 1 sat 1 b 1}
+}
+
+rule spiral
+{
+	line{}
+	spiral{y 1 r 2 s 0.999 hue 0.1}
+}
+
+rule line 50
+{
+	SQUARE{}
+	line{y 1}
+}
+
+rule line
+{
+	line{r 90}
+}
+
+rule line
+{
+	line{r -90}
+}
+
+rule line
+{
+	//end
+}

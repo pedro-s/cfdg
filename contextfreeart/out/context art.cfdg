@@ -1,0 +1,28 @@
+startshape HYPNOSIS
+CF::Background = [b -1]
+
+shape HYPNOSIS
+{
+
+loop 9000[ h .5 s 1.05  r 100  x 10 skew 35 7]
+CIRCLE [skew 9 5 h 131.99 sat 0.2990 b 0.9176]
+
+
+loop 9000[ h .5 s 1.05  r 100  x 10 skew 7 35]
+CIRCLE [skew 9 5 h 234.19 sat 0.1325 b 0.9176]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

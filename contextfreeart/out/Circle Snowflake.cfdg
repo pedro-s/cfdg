@@ -1,0 +1,19 @@
+startshape A
+background {b -1}
+
+rule A {
+CIRCLEOUTLN { }
+6*{r 60}B{x .5 s .5 }
+}
+
+rule B {
+CIRCLEOUTLN { }
+5*{r (360/5)}B{x .5 s .5 }
+}
+
+path CIRCLEOUTLN {
+MOVETO{y .5}       
+    ARCTO{y -.5 r .5}
+    ARCTO{y .5 r .5}
+    STROKE{b 1 width 0.03}
+}

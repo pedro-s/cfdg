@@ -1,0 +1,44 @@
+startshape do
+background { b -.8 sat 1 hue 200}
+
+rule do { 
+	shapes { hue 120 }
+	CIRCLE { x -.7 y 1 s .2 2 b .7}
+	CIRCLE { x .8  y 1 s .3 2 b .7}
+}
+rule shapes {
+	fhex { b .3						sat .3}
+	fhex { b .3 f 90				sat .3}
+	fhex { b .3 f 45	x .25 	sat .3 b -.1}
+	fhex { b .3 r 90 	x -.25 	sat .3 b -.1}
+}
+
+rule fhex { 
+	hex { }
+	fhex { s .35 y .5		x .5 	r -.5 sat .1 hue |100 hue 60}
+	fhex { s .5  y .5 }
+	fhex { s .5 			x -.25 r 45 y 0 b .2 sat .1 hue 3}
+}
+
+rule hex { 
+	hex_ { s 1 .35} 
+}
+
+rule hex_ {
+    paint_ { }
+    paint_ { b .15 x -.7535 y .185    s .5 1     skew   0 -20 }
+    paint_ { b .2 hue 15 x  .7535 y .185    s .5 1     skew   0  20 }
+    paint_ { b .3  x -.5   y .69  s .5  .365  skew -45   0 }
+    paint_ { b .3  x -.5   y 1.05  s .5  .365  skew  45   0 }
+    SQUARE { b .3  x .5    y .69  s .5  .365  skew  45   0 }
+    SQUARE { b .3  x .5    y 1.05  s .5  .365  skew -45   0 }
+    SQUARE [ b .3          y .87  s .74 .51     r 45 ]
+}
+ 
+rule paint_ {
+	SQUARE { a -.9 b -.5 s 1 1.4} 
+	SQUARE { } 
+	SQUARE { x -.5 s .0125 1 b 1 sat -.5 a -.5} 
+}
+
+

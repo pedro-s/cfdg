@@ -1,0 +1,49 @@
+/* http://www.contextfreeart.org/phpbb/viewtopic.php?p=1724 */
+
+startshape M
+
+rule M{
+  Meve{}
+  Mcain{y -50 x -50}
+  Mseth{y -50}
+  Mabel{y -50 x 50}
+}
+//--------------------------------------
+rule Meve {CIReve{}Meve{r 3 s .99 x 1}}
+ 
+rule CIReve {CIReve{}Meve{s 1 -1}}
+rule CIReve 60{CIRCLE{}}
+//--------------------------------------
+/* CAIN, son of Eve */
+rule Mcain {CIRcain{}Mcain{r 3 s .99 x 1}}
+rule Mcain .01{N{}}
+rule N {CIRcain{}N{s .99 x 1}}
+rule N .01{Mcain{}}
+ 
+rule CIRcain {CIRcain{}Mcain{s 1 -1}}
+rule CIRcain 60{CIRCLE{}}
+//--------------------------------------
+/* SETH, son of Eve */
+rule Mseth {CIRseth{  }Mseth{r 3 s .99 x 1 b .005 sat .01 hue .005}}
+
+rule CIRseth {CIRseth{}Mseth{s 1 -1}} 
+rule CIRseth {CIRseth{s 12 z -1 b -.05}} 
+rule CIRseth 90{CIRCLE{ s 1 .2}}
+//--------------------------------------
+/* ABEL, son of Eve */
+rule Mabel {CIRabel{}Mabel{r 3 s .99 x 1 b .001}}
+ 
+rule CIRabel {CIRabel{}Mabel{s 1 -1}}
+rule CIRabel {CIRabel{s 12 z -1 b -.05}}
+rule CIRabel 90{CIRCLE{}}
+//--------------------------------------
+/* SETH, son of Eve */
+rule Mseth {CIRseth{  }Mseth{r 3 s .99 x 1 b .005 sat .01 hue .005}}
+
+rule CIRseth {CIRseth{}Mseth{s 1 -1}} 
+rule CIRseth {CIRseth{s 12 z -1 b -.05}} 
+rule CIRseth 90{CIRCLE{ s 1 .2}}
+//--------------------------------------
+/* ENOCH, son of Cain */
+//--------------------------------------
+/* ENOS, son of Seth */

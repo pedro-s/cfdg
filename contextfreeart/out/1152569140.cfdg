@@ -1,0 +1,15 @@
+startshape P
+
+background {b -1}
+
+rule P {R {} P {x 1 r 2 s 0.996 hue -0.05}}
+rule P 2 {R {} P {x 1 r -41 s 0.996 hue -0.05}}
+
+rule R {S {b 1 hue 190 sat 1 s 0.5 1} R {x 1 r 10 skew 2 0 s 0.99 hue 1.2}}
+rule R 0.1 {S {b 1 hue 190 sat 1 s 0.5 1} R {x 1 r 10 skew 2 0 flip 20 s 0.99 hue 1.2}}
+
+rule S {SQR {} SQR {y 2} SQR {y 4} SQR {y 6} SQR {y 8}}
+
+rule SQR {SQUARE {b 1 s 1 0.5 a -0.6}}
+rule SQR 0.5 {}
+rule SQR 0.4 {SQUARE {b 1 s 0.5 1  a -0.6}}

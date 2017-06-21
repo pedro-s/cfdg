@@ -1,0 +1,3 @@
+startshape SPIKES
+tile {s 90}
+include tangle.cfdg

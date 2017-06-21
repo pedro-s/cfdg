@@ -1,0 +1,20 @@
+
+startshape nyoro
+background { b -1 }
+ 
+rule nyoro {
+    ellipse{}
+    nyoro{x 1 s .9 r 15}
+}
+ 
+rule nyoro 0.3{
+    nyoro{}
+    nyoro{ flip 0 }
+}
+ 
+ 
+rule ellipse{
+    SQUARE{ h 80 saturation 1 b .2 h 343.70 sat 1.0000 b 1.0000}
+    SQUARE{ s .9 h 80 saturation 1 b 1 h 26.36 sat 1.0000 b 1.0000}
+}
+ 

@@ -1,0 +1,1820 @@
+// 7by13 Typeface
+// ©2006 Palicao
+// palicao@gmail.com
+// ver. 0.1 alpha
+
+startshape 7by13Typeface
+
+rule 7by13Typeface {
+	capitals_7by13 { y 14 }
+	lowercase_7by13 { y 7 }
+	numbers_7by13 { y 0 }
+	specials_7by13 { y -3 }
+
+	// real-life example:
+	Copy_7by13 { x 0 y -7.5 }
+	2_7by13 { x 0.7 y -7.5 }
+	0_7by13 { x 1.3 y -7.5 }
+	0_7by13 { x 1.9 y -7.5 }
+	6_7by13 { x 2.5 y -7.5 }
+
+	P_7by13 { x 4.0 y -7.5 }
+	a_7by13 { x 4.6 y -7.5 }
+	l_7by13 { x 5.0 y -7.5 }
+	i_7by13 { x 5.3 y -7.5 }
+	c_7by13 { x 5.8 y -7.5 }
+	a_7by13 { x 6.3 y -7.5 }
+	o_7by13 { x 6.8 y -7.5 }
+
+	p_7by13 { x 0.0 y -9 }
+	a_7by13 { x 0.6 y -9 }
+	l_7by13 { x 1.0 y -9 }
+	i_7by13 { x 1.3 y -9 }
+	c_7by13 { x 1.8 y -9 }
+	a_7by13 { x 2.3 y -9 }
+	o_7by13 { x 2.8 y -9 }
+	@_7by13 { x 3.5 y -9 }
+	g_7by13 { x 4.2 y -9 }
+	m_7by13 { x 4.9 y -9 }
+	a_7by13 { x 5.6 y -9 }
+	i_7by13 { x 6 y -9 }
+	l_7by13 { x 6.3 y -9 }
+	Dot_7by13 { x 6.6 y -9 }
+	c_7by13 { x 7.1 y -9 }
+	o_7by13 { x 7.6 y -9 }
+	m_7by13 { x 8.3 y -9 }
+
+	v_7by13 { x 0.0 y -10.5 }
+	e_7by13 { x 0.7 y -10.5 }
+	r_7by13 { x 1.4 y -10.5 }
+	Dot_7by13 { x 1.8 y -10.5 }
+
+	0_7by13 { x 2.8 y -10.5 }
+	Dot_7by13 { x 3.2 y -10.5 }
+	1_7by13 { x 3.6 y -10.5 }
+	a_7by13 { x 4.2 y -10.5 }
+	l_7by13 { x 4.6 y -10.5 }
+	p_7by13 { x 5.1 y -10.5 }
+	h_7by13 { x 5.8 y -10.5 }
+	a_7by13 { x 6.5 y -10.5 }
+}
+
+rule block_7by13 {
+	SQUARE { size 1 }
+}
+
+rule bin_7by13_0000000 {
+}
+
+rule bin_7by13_0000001 {
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0000010 {
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0000011 {
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0000100 {
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0000101 {
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0000110 {
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0000111 {
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0001000 {
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_0001001 {
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0001010 {
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0001011 {
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0001100 {
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0001101 {
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0001110 {
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0001111 {
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0010000 {
+	block_7by13 { size 0.1 x 0.2 }
+}
+
+rule bin_7by13_0010001 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0010010 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0010011 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0010100 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0010101 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0010110 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0010111 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0011000 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_0011001 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0011010 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0011011 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0011100 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0011101 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0011110 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0011111 {
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0100000 {
+	block_7by13 { size 0.1 x 0.1 }
+}
+
+rule bin_7by13_0100001 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0100010 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0100011 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0100100 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0100101 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0100110 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0100111 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0101000 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_0101001 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0101010 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0101011 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0101100 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0101101 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0101110 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0101111 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0110000 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+}
+
+rule bin_7by13_0110001 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0110010 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0110011 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0110100 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0110101 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0110110 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0110111 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0111000 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_0111001 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0111010 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0111011 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0111100 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_0111101 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_0111110 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_0111111 {
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1000000 {
+	block_7by13 { size 0.1 x 0.0 }
+}
+
+rule bin_7by13_1000001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1000010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1000011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1000100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1000101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1000110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1000111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1001000 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_1001001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1001010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1001011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1001100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1001101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1001110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1001111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1010000 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+}
+
+rule bin_7by13_1010001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1010010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1010011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1010100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1010101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1010110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1010111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1011000 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_1011001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1011010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1011011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1011100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1011101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1011110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1011111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1100000 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+}
+
+rule bin_7by13_1100001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1100010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1100011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1100100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1100101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1100110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1100111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1101000 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_1101001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1101010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1101011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1101100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1101101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1101110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1101111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1110000 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+}
+
+rule bin_7by13_1110001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1110010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1110011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1110100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1110101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1110110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1110111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1111000 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+}
+
+rule bin_7by13_1111001 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1111010 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1111011 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1111100 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+}
+
+rule bin_7by13_1111101 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule bin_7by13_1111110 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+}
+
+rule bin_7by13_1111111 {
+	block_7by13 { size 0.1 x 0.0 }
+	block_7by13 { size 0.1 x 0.1 }
+	block_7by13 { size 0.1 x 0.2 }
+	block_7by13 { size 0.1 x 0.3 }
+	block_7by13 { size 0.1 x 0.4 }
+	block_7by13 { size 0.1 x 0.5 }
+	block_7by13 { size 0.1 x 0.6 }
+}
+
+rule capitals_7by13 {
+	A_7by13 { x 0.0 y 0 }
+	B_7by13 { x 0.8 y 0 }
+	C_7by13 { x 1.6 y 0 }
+	D_7by13 { x 2.4 y 0 }
+	E_7by13 { x 3.2 y 0 }
+	F_7by13 { x 4.0 y 0 }
+	G_7by13 { x 4.8 y 0 }
+	H_7by13 { x 5.6 y 0 }
+
+	I_7by13 { x 0.0 y -1.5 }
+	J_7by13 { x 0.8 y -1.5 }
+	K_7by13 { x 1.6 y -1.5 }
+	L_7by13 { x 2.4 y -1.5 }
+	M_7by13 { x 3.2 y -1.5 }
+	N_7by13 { x 4.0 y -1.5 }
+	O_7by13 { x 4.8 y -1.5 }
+	P_7by13 { x 5.6 y -1.5 }
+
+	Q_7by13 { x 0.0 y -3 }
+	R_7by13 { x 0.8 y -3 }
+	S_7by13 { x 1.6 y -3 }
+	T_7by13 { x 2.4 y -3 }
+	U_7by13 { x 3.2 y -3 }
+	V_7by13 { x 4.0 y -3 }
+	W_7by13 { x 4.8 y -3 }
+	X_7by13 { x 5.6 y -3 }
+
+	Y_7by13 { x 0.0 y -4.5 }
+	Z_7by13 { x 0.8 y -4.5 }
+}
+
+rule A_7by13 {
+	bin_7by13_0001000 { y 0.8 }
+	bin_7by13_0001000 { y 0.7 }
+	bin_7by13_0010100 { y 0.6 }
+	bin_7by13_0010100 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0111110 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_1000001 { y 0.1 }
+	bin_7by13_1000001 { y 0.0 }
+}
+rule B_7by13 {
+	bin_7by13_0111110 { y 0.8 }
+	bin_7by13_0100001 { y 0.7 }
+	bin_7by13_0100001 { y 0.6 }
+	bin_7by13_0100001 { y 0.5 }
+	bin_7by13_0111110 { y 0.4 }
+	bin_7by13_0100001 { y 0.3 }
+	bin_7by13_0100001 { y 0.2 }
+	bin_7by13_0100001 { y 0.1 }
+	bin_7by13_0111110 { y 0.0 }
+}
+rule C_7by13 {
+	bin_7by13_0001110 { y 0.8 }
+	bin_7by13_0010000 { y 0.7 }
+	bin_7by13_0100000 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0100000 { y 0.4 }
+	bin_7by13_0100000 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0010000 { y 0.1 }
+	bin_7by13_0001110 { y 0.0 }
+}
+rule D_7by13 {
+	bin_7by13_1111100 { y 0.8 }
+	bin_7by13_1000010 { y 0.7 }
+	bin_7by13_1000001 { y 0.6 }
+	bin_7by13_1000001 { y 0.5 }
+	bin_7by13_1000001 { y 0.4 }
+	bin_7by13_1000001 { y 0.3 }
+	bin_7by13_1000001 { y 0.2 }
+	bin_7by13_1000010 { y 0.1 }
+	bin_7by13_1111100 { y 0.0 }
+}
+rule E_7by13 {
+	bin_7by13_0111110 { y 0.8 }
+	bin_7by13_0100000 { y 0.7 }
+	bin_7by13_0100000 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0111110 { y 0.4 }
+	bin_7by13_0100000 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0111110 { y 0.0 }
+}
+rule F_7by13 {
+	bin_7by13_0111110 { y 0.8 }
+	bin_7by13_0100000 { y 0.7 }
+	bin_7by13_0100000 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0111110 { y 0.4 }
+	bin_7by13_0100000 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0100000 { y 0.0 }
+}
+rule G_7by13 {
+	bin_7by13_0001110 { y 0.8 }
+	bin_7by13_0010000 { y 0.7 }
+	bin_7by13_0100000 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0010010 { y 0.1 }
+	bin_7by13_0001110 { y 0.0 }
+}
+rule H_7by13 {
+	bin_7by13_1000010 { y 0.8 }
+	bin_7by13_1000010 { y 0.7 }
+	bin_7by13_1000010 { y 0.6 }
+	bin_7by13_1000010 { y 0.5 }
+	bin_7by13_1111110 { y 0.4 }
+	bin_7by13_1000010 { y 0.3 }
+	bin_7by13_1000010 { y 0.2 }
+	bin_7by13_1000010 { y 0.1 }
+	bin_7by13_1000010 { y 0.0 }
+}
+rule I_7by13 {
+	bin_7by13_0001000 { y 0.8 }
+	bin_7by13_0001000 { y 0.7 }
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule J_7by13 {
+	bin_7by13_0000100 { y 0.8 }
+	bin_7by13_0000100 { y 0.7 }
+	bin_7by13_0000100 { y 0.6 }
+	bin_7by13_0000100 { y 0.5 }
+	bin_7by13_0000100 { y 0.4 }
+	bin_7by13_0000100 { y 0.3 }
+	bin_7by13_0000100 { y 0.2 }
+	bin_7by13_0000100 { y 0.1 }
+	bin_7by13_0011000 { y 0.0 }
+}
+rule K_7by13 {
+	bin_7by13_1000010 { y 0.8 }
+	bin_7by13_1000100 { y 0.7 }
+	bin_7by13_1001000 { y 0.6 }
+	bin_7by13_1010000 { y 0.5 }
+	bin_7by13_1100000 { y 0.4 }
+	bin_7by13_1010000 { y 0.3 }
+	bin_7by13_1001000 { y 0.2 }
+	bin_7by13_1000100 { y 0.1 }
+	bin_7by13_1000010 { y 0.0 }
+}
+rule L_7by13 {
+	bin_7by13_0100000 { y 0.8 }
+	bin_7by13_0100000 { y 0.7 }
+	bin_7by13_0100000 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0100000 { y 0.4 }
+	bin_7by13_0100000 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0111110 { y 0.0 }
+}
+rule M_7by13 {
+	bin_7by13_1000001 { y 0.8 }
+	bin_7by13_1100011 { y 0.7 }
+	bin_7by13_1010101 { y 0.6 }
+	bin_7by13_1010101 { y 0.5 }
+	bin_7by13_1001001 { y 0.4 }
+	bin_7by13_1000001 { y 0.3 }
+	bin_7by13_1000001 { y 0.2 }
+	bin_7by13_1000001 { y 0.1 }
+	bin_7by13_1000001 { y 0.0 }
+}
+rule N_7by13 {
+	bin_7by13_1000001 { y 0.8 }
+	bin_7by13_1100001 { y 0.7 }
+	bin_7by13_1010001 { y 0.6 }
+	bin_7by13_1010001 { y 0.5 }
+	bin_7by13_1001001 { y 0.4 }
+	bin_7by13_1001001 { y 0.3 }
+	bin_7by13_1000101 { y 0.2 }
+	bin_7by13_1000011 { y 0.1 }
+	bin_7by13_1000001 { y 0.0 }
+}
+rule O_7by13 {
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_1000001 { y 0.6 }
+	bin_7by13_1000001 { y 0.5 }
+	bin_7by13_1000001 { y 0.4 }
+	bin_7by13_1000001 { y 0.3 }
+	bin_7by13_1000001 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0011100 { y 0.0 }
+}
+rule P_7by13 {
+	bin_7by13_0111100 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0111100 { y 0.4 }
+	bin_7by13_0100000 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0100000 { y 0.0 }
+}
+rule Q_7by13 {
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_1000001 { y 0.6 }
+	bin_7by13_1000001 { y 0.5 }
+	bin_7by13_1000001 { y 0.4 }
+	bin_7by13_1000001 { y 0.3 }
+	bin_7by13_1000001 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0011100 { y 0.0 }
+	bin_7by13_0001000 { y -0.1 }
+	bin_7by13_0000110 { y -0.2 }
+}
+rule R_7by13 {
+	bin_7by13_1111000 { y 0.8 }
+	bin_7by13_1000100 { y 0.7 }
+	bin_7by13_1000100 { y 0.6 }
+	bin_7by13_1000100 { y 0.5 }
+	bin_7by13_1111000 { y 0.4 }
+	bin_7by13_1001000 { y 0.3 }
+	bin_7by13_1000100 { y 0.2 }
+	bin_7by13_1000100 { y 0.1 }
+	bin_7by13_1000010 { y 0.0 }
+}
+rule S_7by13 {
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0100000 { y 0.7 }
+	bin_7by13_0100000 { y 0.6 }
+	bin_7by13_0010000 { y 0.5 }
+	bin_7by13_0001100 { y 0.4 }
+	bin_7by13_0000010 { y 0.3 }
+	bin_7by13_0000010 { y 0.2 }
+	bin_7by13_0000010 { y 0.1 }
+	bin_7by13_0111100 { y 0.0 }
+}
+rule T_7by13 {
+	bin_7by13_1111111 { y 0.8 }
+	bin_7by13_0001000 { y 0.7 }
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule U_7by13 {
+	bin_7by13_1000010 { y 0.8 }
+	bin_7by13_1000010 { y 0.7 }
+	bin_7by13_1000010 { y 0.6 }
+	bin_7by13_1000010 { y 0.5 }
+	bin_7by13_1000010 { y 0.4 }
+	bin_7by13_1000010 { y 0.3 }
+	bin_7by13_1000010 { y 0.2 }
+	bin_7by13_0100100 { y 0.1 }
+	bin_7by13_0111100 { y 0.0 }
+}
+rule V_7by13 {
+	bin_7by13_1000001 { y 0.8 }
+	bin_7by13_1000001 { y 0.7 }
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0010100 { y 0.3 }
+	bin_7by13_0010100 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule W_7by13 {
+	bin_7by13_1000001 { y 0.8 }
+	bin_7by13_1000001 { y 0.7 }
+	bin_7by13_1000001 { y 0.6 }
+	bin_7by13_1000001 { y 0.5 }
+	bin_7by13_1001001 { y 0.4 }
+	bin_7by13_1010101 { y 0.3 }
+	bin_7by13_1010101 { y 0.2 }
+	bin_7by13_1100011 { y 0.1 }
+	bin_7by13_1000001 { y 0.0 }
+}
+rule X_7by13 {
+	bin_7by13_1000001 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_0010100 { y 0.6 }
+	bin_7by13_0010100 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0010100 { y 0.3 }
+	bin_7by13_0010100 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_1000001 { y 0.0 }
+}
+rule Y_7by13 {
+	bin_7by13_1000001 { y 0.8 }
+	bin_7by13_1000001 { y 0.7 }
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0010100 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule Z_7by13 {
+	bin_7by13_0111110 { y 0.8 }
+	bin_7by13_0000010 { y 0.7 }
+	bin_7by13_0000100 { y 0.6 }
+	bin_7by13_0000100 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0010000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0111110 { y 0.0 }
+}
+
+rule lowercase_7by13 {
+	a_7by13 { x 0.0 y 0 }
+	b_7by13 { x 0.8 y 0 }
+	c_7by13 { x 1.6 y 0 }
+	d_7by13 { x 2.4 y 0 }
+	e_7by13 { x 3.2 y 0 }
+	f_7by13 { x 4.0 y 0 }
+	g_7by13 { x 4.8 y 0 }
+	h_7by13 { x 5.6 y 0 }
+
+	i_7by13 { x 0.0 y -1.5 }
+	j_7by13 { x 0.8 y -1.5 }
+	k_7by13 { x 1.6 y -1.5 }
+	l_7by13 { x 2.4 y -1.5 }
+	m_7by13 { x 3.2 y -1.5 }
+	n_7by13 { x 4.0 y -1.5 }
+	o_7by13 { x 4.8 y -1.5 }
+	p_7by13 { x 5.6 y -1.5 }
+
+	q_7by13 { x 0.0 y -3 }
+	r_7by13 { x 0.8 y -3 }
+	s_7by13 { x 1.6 y -3 }
+	t_7by13 { x 2.4 y -3 }
+	u_7by13 { x 3.2 y -3 }
+	v_7by13 { x 4.0 y -3 }
+	w_7by13 { x 4.8 y -3 }
+	x_7by13 { x 5.6 y -3 }
+
+	y_7by13 { x 0.0 y -4.5 }
+	z_7by13 { x 0.8 y -4.5 }
+}
+
+rule a_7by13 {
+	bin_7by13_0011100 { y 0.6 }
+	bin_7by13_0100100 { y 0.5 }
+	bin_7by13_0000100 { y 0.4 }
+	bin_7by13_0011100 { y 0.3 }
+	bin_7by13_0100100 { y 0.2 }
+	bin_7by13_0100100 { y 0.1 }
+	bin_7by13_0110100 { y 0.0 }
+}
+rule b_7by13 {
+	bin_7by13_0100000 { y 0.9 }
+	bin_7by13_0100000 { y 0.8 }
+	bin_7by13_0100000 { y 0.7 }
+	bin_7by13_0101110 { y 0.6 }
+	bin_7by13_0110010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0111100 { y 0.0 }
+}
+rule c_7by13 {
+	bin_7by13_0011100 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0100000 { y 0.4 }
+	bin_7by13_0100000 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0100100 { y 0.1 }
+	bin_7by13_0111000 { y 0.0 }
+}
+rule d_7by13 {         
+	bin_7by13_0000010 { y 0.9 }
+	bin_7by13_0000010 { y 0.8 }
+	bin_7by13_0000010 { y 0.7 }
+	bin_7by13_0011110 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100110 { y 0.1 }
+	bin_7by13_0111010 { y 0.0 }
+}
+rule e_7by13 {
+	bin_7by13_0011100 { y 0.6 }
+	bin_7by13_0100100 { y 0.5 }
+	bin_7by13_0100100 { y 0.4 }
+	bin_7by13_0111100 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0100100 { y 0.1 }
+	bin_7by13_0111000 { y 0.0 }
+}
+rule f_7by13 {         
+	bin_7by13_0001100 { y 0.9 }
+	bin_7by13_0010000 { y 0.8 }
+	bin_7by13_0010000 { y 0.7 }
+	bin_7by13_0111100 { y 0.6 }
+	bin_7by13_0010000 { y 0.5 }
+	bin_7by13_0010000 { y 0.4 }
+	bin_7by13_0010000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0010000 { y 0.1 }
+	bin_7by13_0010000 { y 0.0 }
+}
+rule g_7by13 {         
+	bin_7by13_0011110 { y 0.6 }
+	bin_7by13_0100100 { y 0.5 }
+	bin_7by13_0100100 { y 0.4 }
+	bin_7by13_0100100 { y 0.3 }
+	bin_7by13_0011000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0011100 { y 0.0 }
+	bin_7by13_0100010 { y -0.1 }
+	bin_7by13_0100010 { y -0.2 }
+	bin_7by13_0011100 { y -0.3 }
+}
+rule h_7by13 {  
+	bin_7by13_0100000 { y 0.9 }
+	bin_7by13_0100000 { y 0.8 }
+	bin_7by13_0100000 { y 0.7 }      
+	bin_7by13_0101110 { y 0.6 }
+	bin_7by13_0110010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0100010 { y 0.0 }
+}
+rule i_7by13 {  
+	bin_7by13_0001000 { y 0.9 }
+	bin_7by13_0000000 { y 0.8 }
+	bin_7by13_0000000 { y 0.7 }      
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule j_7by13 {  
+	bin_7by13_0001000 { y 0.9 }
+	bin_7by13_0000000 { y 0.8 }
+	bin_7by13_0000000 { y 0.7 }      
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+	bin_7by13_0001000 { y -0.1 }
+	bin_7by13_0001000 { y -0.2 }
+	bin_7by13_0010000 { y -0.3 }
+}
+rule k_7by13 {  
+	bin_7by13_0100000 { y 0.9 }
+	bin_7by13_0100000 { y 0.8 }
+	bin_7by13_0100000 { y 0.7 }      
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100100 { y 0.5 }
+	bin_7by13_0101000 { y 0.4 }
+	bin_7by13_0110000 { y 0.3 }
+	bin_7by13_0101000 { y 0.2 }
+	bin_7by13_0100100 { y 0.1 }
+	bin_7by13_0100010 { y 0.0 }
+}
+rule l_7by13 {  
+	bin_7by13_0001000 { y 0.9 }
+	bin_7by13_0001000 { y 0.8 }
+	bin_7by13_0001000 { y 0.7 }      
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule m_7by13 {  
+	bin_7by13_1011011 { y 0.6 }
+	bin_7by13_1101101 { y 0.5 }
+	bin_7by13_1001001 { y 0.4 }
+	bin_7by13_1001001 { y 0.3 }
+	bin_7by13_1001001 { y 0.2 }
+	bin_7by13_1001001 { y 0.1 }
+	bin_7by13_1001001 { y 0.0 }
+}
+rule n_7by13 {  
+	bin_7by13_0101110 { y 0.6 }
+	bin_7by13_0110010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0100010 { y 0.0 }
+}
+rule o_7by13 {  
+	bin_7by13_0011110 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0111100 { y 0.0 }
+}
+rule p_7by13 {  
+	bin_7by13_0101110 { y 0.6 }
+	bin_7by13_0110010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0111100 { y 0.0 }
+	bin_7by13_0100000 { y -0.1 }
+	bin_7by13_0100000 { y -0.2 }
+	bin_7by13_0100000 { y -0.3 }
+}
+rule q_7by13 {  
+	bin_7by13_0011110 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100110 { y 0.1 }
+	bin_7by13_0111010 { y 0.0 }
+	bin_7by13_0000010 { y -0.1 }
+	bin_7by13_0000010 { y -0.2 }
+	bin_7by13_0000010 { y -0.3 }
+}
+rule r_7by13 {  
+	bin_7by13_0101100 { y 0.6 }
+	bin_7by13_0110000 { y 0.5 }
+	bin_7by13_0100000 { y 0.4 }
+	bin_7by13_0100000 { y 0.3 }
+	bin_7by13_0100000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0100000 { y 0.0 }
+}
+rule s_7by13 {  
+	bin_7by13_0011100 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0100000 { y 0.4 }
+	bin_7by13_0011000 { y 0.3 }
+	bin_7by13_0000100 { y 0.2 }
+	bin_7by13_0000100 { y 0.1 }
+	bin_7by13_0111000 { y 0.0 }
+}
+rule t_7by13 {  
+	bin_7by13_0010000 { y 0.8 }
+	bin_7by13_0010000 { y 0.7 }
+	bin_7by13_0111100 { y 0.6 }
+	bin_7by13_0010000 { y 0.5 }
+	bin_7by13_0010000 { y 0.4 }
+	bin_7by13_0010000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0010100 { y 0.1 }
+	bin_7by13_0011000 { y 0.0 }
+}
+rule u_7by13 {  
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100110 { y 0.1 }
+	bin_7by13_0111010 { y 0.0 }
+}
+rule v_7by13 {  
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0010100 { y 0.3 }
+	bin_7by13_0010100 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule w_7by13 {  
+	bin_7by13_1000001 { y 0.6 }
+	bin_7by13_1000001 { y 0.5 }
+	bin_7by13_1000001 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0101010 { y 0.2 }
+	bin_7by13_0101010 { y 0.1 }
+	bin_7by13_0010100 { y 0.0 }
+}
+rule x_7by13 {  
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0010100 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0010100 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0100010 { y 0.0 }
+}
+rule y_7by13 {  
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0010100 { y 0.3 }
+	bin_7by13_0010100 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+	bin_7by13_0001000 { y -0.1 }
+	bin_7by13_0010000 { y -0.2 }
+	bin_7by13_0010000 { y -0.3 }
+}
+rule z_7by13 {  
+	bin_7by13_0111110 { y 0.6 }
+	bin_7by13_0000100 { y 0.5 }
+	bin_7by13_0000100 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0010000 { y 0.1 }
+	bin_7by13_0111110 { y 0.0 }
+}
+
+rule numbers_7by13 {	
+	1_7by13 { x 0.0 y 0 }
+	2_7by13 { x 0.8 y 0 }
+	3_7by13 { x 1.6 y 0 }
+	4_7by13 { x 2.4 y 0 }
+	5_7by13 { x 3.2 y 0 }
+	6_7by13 { x 4.0 y 0 }
+	7_7by13 { x 4.8 y 0 }
+	8_7by13 { x 5.6 y 0 }
+	9_7by13 { x 6.4 y 0 }
+	0_7by13 { x 7.2 y 0 }
+}
+
+rule 1_7by13 {  
+	bin_7by13_0001000 { y 0.8 }
+	bin_7by13_0011000 { y 0.7 }
+	bin_7by13_0101000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule 2_7by13 {  
+	bin_7by13_0111000 { y 0.8 }
+	bin_7by13_0000100 { y 0.7 }
+	bin_7by13_0000100 { y 0.6 }
+	bin_7by13_0000100 { y 0.5 }
+	bin_7by13_0000100 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0111110 { y 0.0 }
+}
+rule 3_7by13 {  
+	bin_7by13_0111000 { y 0.8 }
+	bin_7by13_0000100 { y 0.7 }
+	bin_7by13_0000100 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0111000 { y 0.4 }
+	bin_7by13_0000100 { y 0.3 }
+	bin_7by13_0000100 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0111000 { y 0.0 }
+}
+rule 4_7by13 {  
+	bin_7by13_0001000 { y 0.8 }
+	bin_7by13_0011000 { y 0.7 }
+	bin_7by13_0101000 { y 0.6 }
+	bin_7by13_1001000 { y 0.5 }
+	bin_7by13_1001000 { y 0.4 }
+	bin_7by13_1111110 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule 5_7by13 {  
+	bin_7by13_0011110 { y 0.8 }
+	bin_7by13_0010000 { y 0.7 }
+	bin_7by13_0100000 { y 0.6 }
+	bin_7by13_0111100 { y 0.5 }
+	bin_7by13_0000110 { y 0.4 }
+	bin_7by13_0000010 { y 0.3 }
+	bin_7by13_0000010 { y 0.2 }
+	bin_7by13_0000100 { y 0.1 }
+	bin_7by13_0111000 { y 0.0 }
+}
+rule 6_7by13 {  
+	bin_7by13_0000110 { y 0.8 }
+	bin_7by13_0011000 { y 0.7 }
+	bin_7by13_0010000 { y 0.6 }
+	bin_7by13_0100000 { y 0.5 }
+	bin_7by13_0101100 { y 0.4 }
+	bin_7by13_0110010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0011100 { y 0.0 }
+}
+rule 7_7by13 {  
+	bin_7by13_0111110 { y 0.8 }
+	bin_7by13_0000100 { y 0.7 }
+	bin_7by13_0000100 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0010000 { y 0.1 }
+	bin_7by13_0010000 { y 0.0 }
+}
+rule 8_7by13 {  
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0010100 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0010100 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0011100 { y 0.0 }
+}
+rule 9_7by13 {  
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0011110 { y 0.4 }
+	bin_7by13_0000010 { y 0.3 }
+	bin_7by13_0000100 { y 0.2 }
+	bin_7by13_0001100 { y 0.1 }
+	bin_7by13_0110000 { y 0.0 }
+}
+rule 0_7by13 {  
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0010100 { y 0.7 }
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0100010 { y 0.5 }
+	bin_7by13_0100010 { y 0.4 }
+	bin_7by13_0100010 { y 0.3 }
+	bin_7by13_0100010 { y 0.2 }
+	bin_7by13_0010100 { y 0.1 }
+	bin_7by13_0011100 { y 0.0 }
+}
+
+rule specials_7by13 {
+	@_7by13 {  x 0.0 y 0 }
+	No_7by13 {  x 0.8 y 0 }
+	Slash_7by13 {  x 1.6 y 0 }
+	BackSlash_7by13 {  x 2.4 y 0 }
+	Pipe_7by13 {  x 3.2 y 0 }
+	ExclamationMark_7by13 {  x 4.0 y 0 }
+	QuestionMark_7by13 {  x 4.8 y 0 }
+	Dot_7by13 {  x 5.6 y 0 }
+	Comma_7by13 {  x 6.4 y 0 }
+	Star_7by13 {  x 7.2 y 0 }
+
+	DoubleQuotes_7by13 {  x 0.0 y -1.5 }
+	DoubleQuotesOpen_7by13 {  x 0.8 y -1.5 }
+	DoubleQuotesClose_7by13 {  x 1.6 y -1.5 }
+	Copy_7by13 {  x 2.4 y -1.5 }
+	ParentOpen_7by13 {  x 3.2 y -1.5 }
+	ParentClose_7by13 {  x 4.0 y -1.5 }
+}
+
+rule @_7by13 {  
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_1001101 { y 0.6 }
+	bin_7by13_1010101 { y 0.5 }
+	bin_7by13_1010101 { y 0.4 }
+	bin_7by13_1010101 { y 0.3 }
+	bin_7by13_1001111 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0011110 { y 0.0 }
+}
+rule No_7by13 {  
+	bin_7by13_0100100 { y 0.8 }
+	bin_7by13_0100100 { y 0.7 }
+	bin_7by13_0100100 { y 0.6 }
+	bin_7by13_1111110 { y 0.5 }
+	bin_7by13_0100100 { y 0.4 }
+	bin_7by13_1111110 { y 0.3 }
+	bin_7by13_0100100 { y 0.2 }
+	bin_7by13_0100100 { y 0.1 }
+	bin_7by13_0100100 { y 0.0 }
+}
+rule Slash_7by13 {
+	bin_7by13_0000010 { y 0.9 }
+	bin_7by13_0000010 { y 0.8 }
+	bin_7by13_0000100 { y 0.7 }
+	bin_7by13_0000100 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0010000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0100000 { y 0.1 }
+	bin_7by13_0100000 { y 0.0 }
+}
+rule BackSlash_7by13 {
+	bin_7by13_0100000 { y 0.9 }
+	bin_7by13_0100000 { y 0.8 }
+	bin_7by13_0010000 { y 0.7 }
+	bin_7by13_0010000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0000100 { y 0.3 }
+	bin_7by13_0000100 { y 0.2 }
+	bin_7by13_0000010 { y 0.1 }
+	bin_7by13_0000010 { y 0.0 }
+}
+rule Pipe_7by13 {
+	bin_7by13_0001000 { y 0.9 }
+	bin_7by13_0001000 { y 0.8 }
+	bin_7by13_0001000 { y 0.7 }
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0000000 { y 0.5 }
+	bin_7by13_0000000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule ExclamationMark_7by13 {
+	bin_7by13_0001000 { y 0.8 }
+	bin_7by13_0001000 { y 0.7 }
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_0001000 { y 0.3 }
+	bin_7by13_0000000 { y 0.2 }
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule QuestionMark_7by13 {
+	bin_7by13_0111000 { y 0.8 }
+	bin_7by13_0000100 { y 0.7 }
+	bin_7by13_0000100 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0010000 { y 0.4 }
+	bin_7by13_0010000 { y 0.3 }
+	bin_7by13_0000000 { y 0.2 }
+	bin_7by13_0010000 { y 0.1 }
+	bin_7by13_0010000 { y 0.0 }
+}
+rule Dot_7by13 {
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+}
+rule Comma_7by13 {
+	bin_7by13_0001000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+	bin_7by13_0001000 { y -0.1 }
+	bin_7by13_0001000 { y -0.2 }
+	bin_7by13_0010000 { y -0.3 }
+}
+rule Star_7by13 {
+	bin_7by13_0100010 { y 0.6 }
+	bin_7by13_0010100 { y 0.5 }
+	bin_7by13_0001000 { y 0.4 }
+	bin_7by13_1111111 { y 0.3 }
+	bin_7by13_0001000 { y 0.2 }
+	bin_7by13_0010100 { y 0.1 }
+	bin_7by13_0100010 { y 0.0 }
+}
+rule DoubleQuotes_7by13 {
+	bin_7by13_0010100 { y 0.8 }
+	bin_7by13_0010100 { y 0.7 }
+	bin_7by13_0010100 { y 0.6 }
+}
+rule DoubleQuotesOpen_7by13 {
+	bin_7by13_0010100 { y 0.8 }
+	bin_7by13_0010100 { y 0.7 }
+	bin_7by13_0001010 { y 0.6 }
+}
+rule DoubleQuotesClose_7by13 {
+	bin_7by13_0010100 { y 0.8 }
+	bin_7by13_0010100 { y 0.7 }
+	bin_7by13_0101000 { y 0.6 }
+}
+rule Copy_7by13 {
+	bin_7by13_0011100 { y 0.8 }
+	bin_7by13_0100010 { y 0.7 }
+	bin_7by13_1001101 { y 0.6 }
+	bin_7by13_1010001 { y 0.5 }
+	bin_7by13_1010001 { y 0.4 }
+	bin_7by13_1010001 { y 0.3 }
+	bin_7by13_1001101 { y 0.2 }
+	bin_7by13_0100010 { y 0.1 }
+	bin_7by13_0011100 { y 0.0 }
+}
+rule ParentOpen_7by13 {
+	bin_7by13_0000100 { y 0.7 }
+	bin_7by13_0001000 { y 0.6 }
+	bin_7by13_0001000 { y 0.5 }
+	bin_7by13_0010000 { y 0.4 }
+	bin_7by13_0010000 { y 0.3 }
+	bin_7by13_0010000 { y 0.2 }
+	bin_7by13_0010000 { y 0.1 }
+	bin_7by13_0001000 { y 0.0 }
+	bin_7by13_0001000 { y -0.1 }
+	bin_7by13_0000100 { y -0.2 }
+}
+rule ParentClose_7by13 {
+	bin_7by13_0010000 { y 0.7 } 
+	bin_7by13_0001000 { y 0.6 } 
+	bin_7by13_0001000 { y 0.5 } 
+	bin_7by13_0000100 { y 0.4 } 
+	bin_7by13_0000100 { y 0.3 } 
+	bin_7by13_0000100 { y 0.2 } 
+	bin_7by13_0000100 { y 0.1 } 
+	bin_7by13_0001000 { y 0.0 } 
+	bin_7by13_0001000 { y -0.1 }
+	bin_7by13_0010000 { y -0.2 }
+}

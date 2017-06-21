@@ -1,0 +1,18 @@
+startshape STAR 
+
+rule STAR { 
+   right { } 
+   up { } 
+   STAR { x 1 s 0.98 r 50 } 
+} 
+
+rule right { 
+   CIRCLE { s 0.25 } 
+   right { x 1 s 0.98 } 
+   STAR {s 0.2}
+} 
+
+rule up { 
+   CIRCLE { s 0.25 } 
+   up { y 1 s 0.98}
+}

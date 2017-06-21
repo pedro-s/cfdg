@@ -1,0 +1,23 @@
+startshape do
+background { sat .5 b -.8 }
+ 
+rule do {
+	3* { r 120 } tower_top { y .75 b .5 hue 200 sat .4 }
+}
+
+
+rule CUBE {
+	2*{s -1 1 b .6 hue 40}SIDE{ b -.3 hue -40}
+	TOP{ b .5}
+}
+rule SIDE {FACE{skew 0 30 }}
+rule TOP {FACE[s 1.413 .816 r 135 ]}
+rule FACE {SQUARE{x .5 y -.5 }}
+
+
+rule tower_top {
+	CUBE { s 1 1}
+	tower_top { s .5 x .75 y -.25  sat .1 b .1}
+	tower_top { s .75 x .75 y -.25  r 180 b -.1 hue -1}
+}
+

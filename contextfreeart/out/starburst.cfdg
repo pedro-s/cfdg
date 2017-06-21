@@ -1,0 +1,74 @@
+background {sat .2 hue 240}
+
+startshape STARBURST
+
+rule STARBURST {
+	CIRCLE {s 1.005 z -4}
+	CIRCLE {z -3 b 1 sat .7 hue 220}
+	SPOKES {z -2 a -.99}
+	BACKDROP {sat .7 b 1 hue 200 s .7071 z -1 a -.5}
+	LINE2 {}
+	LINE2 {r 90 a -.8}
+	SPOKES {z 1 a -.99 b 1 sat 1 hue 60}
+	FLARE {z 2 b 1 a -.9}
+}
+
+rule LINE2 {
+	LINE {}
+	LINE {f 90 a -.9}
+}
+
+rule LINE {
+	SQUARE {r 45 s .7071 a -.95}
+	DIAMOND {}
+	LINE {x -.375 s .25}
+	LINE {x -.25 y .125 s .25 r 90}
+	LINE {x -.125 y .25 s .25}
+	LINE {s .5 r -90}
+	LINE {x .125 y -.25 s .25}
+	LINE {x .25 y -.125 r 90 s .25}
+	LINE {x .375 s .25}
+}
+
+rule BACKDROP {
+	BACKDROP {hue 5 sat -.05}
+}
+rule BACKDROP {
+	BACKDROP {hue -5 b -.02}
+}
+rule BACKDROP 2 {
+	SQUARE {}
+	BACKLIM {r 45 s .05 a -.3}
+}
+rule BACKLIM {
+	BACKSPLIT {s 20}
+}
+rule BACKSPLIT {
+	4* {r 90} BACKDROP {s .5 y .3535 r 45}	
+}
+
+rule SPOKES 999 {
+	DIAMOND {}
+	SPOKES {r 222.49224}
+}
+rule SPOKES 99 {
+	SPOKES {r 5}
+}
+rule SPOKES {
+}
+
+rule FLARE 999 {
+	DIAMOND {}
+	FLARE {s .99 r 222.49224}
+}
+rule FLARE 99 {
+	FLARE {r 5}
+}
+rule FLARE {
+}
+
+rule DIAMOND {
+	TRIANGLE {y 0.00288675135 s 1 .01}
+	TRIANGLE {y -0.00288675135 s 1 .01 r 180}	
+}
+

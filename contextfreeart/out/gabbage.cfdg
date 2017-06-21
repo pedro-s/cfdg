@@ -1,0 +1,53 @@
+startshape S
+background {    hue 91.3 sat 0.5 b 0.4 }
+
+
+rule S { 3* { } C [  hue 91.3 sat 0.5 b 0.5 ] }
+
+rule C {
+B [ ]
+mC [ ]
+}
+
+rule mC .5 { C [ r -15 x 10  s .9] }
+rule mC { C [ z -5 y 5 s .7] }
+rule mC .5 { C [ r 15 x -10 s .9] }
+rule mC { C [ z 5 y -5 s .9] }
+
+//rule mC { mC [ hue 10 ] }
+rule mC 2 { }
+
+rule B { 
+2* { x 5 } A { z 3 x 4 y -3 }
+2* { x 5 } A { z 2 x 1 y -2 }
+2* { x 5 } A { z 1 x 3 y -1 }
+2* { x 5 } A [ ] 
+2* { x 5 } A { z -1 x 2 y 1 }
+}
+
+rule A {
+cross [ ]
+}
+
+rule A {
+A [ ]
+}
+
+
+rule cross { sq [   hue 4.7 sat 0.9 b 0.6 ] }
+
+rule sq {
+//draw [ ]
+draw [ x -1]
+draw [ x 1]
+draw [ y -1]
+draw [ y 1]
+}
+rule draw { mdraw [ |hue 100] }
+rule mdraw { CIRCLE[ x .1 b 1 a -.5] CIRCLE[ s 2 b -1 a -.8 z -.1] CIRCLE[ ] mdraw [ y .1 s .99 b .05 hue .01|]}
+rule mdraw .1 { mdraw [ r 90 ] }
+rule mdraw { mdraw [ r -45 ] }
+//rule draw .05 { mdraw [s 10 ] }
+rule mdraw { mdraw [ b -.1 hue -.1] }
+rule mdraw { mdraw [ b .1 ] }
+

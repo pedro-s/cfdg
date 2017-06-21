@@ -1,0 +1,51 @@
+startshape universe
+
+//background { b -1}
+
+rule universe {
+CIRCLE {x 3 y -1.8 s 3}
+sixpack_right{ hue 231.6 sat 0.6122 b 0.6816 }
+sixpack_right{ x 3 y -5   r 120 hue 231.6 sat 0.6122 b 0.6816}
+sixpack_right{ x 6 r 240 hue 231.6 sat 0.6122 b 0.6816}
+
+//sixpack_left{}
+//sixpack_left{ flip 150 }
+}
+
+
+rule sixpack_right{
+burbuja {}
+burbuja [ x 1  ]
+burbuja  [ x 2 ]
+burbuja  [ x 3 ]
+burbuja  [ x 4 ]
+burbuja  [ x 5 ]
+burbuja  [ x 6 ]
+sixpack_right [ r -3 x .5 y 0.81 s 0.9 b 0.2| ]
+}
+
+rule sixpack_left{
+burbuja {}
+burbuja [ x 1  s 0.9 ]
+burbuja  [ x -1 s 0.9 ]
+burbuja  [ x -.5 y 1 s 0.9 ]
+burbuja  [ x .5 y 1 s 0.9 ]
+burbuja  [ x  1.5 y 1 s 0.9 ]
+sixpack_left [ r 1 x -.5 y 1 s 0.9  ]
+}
+
+
+rule burbuja {
+CIRCLE {}
+CIRCLE {s 0.9 b 1 }
+}
+
+rule burbuja {
+CIRCLE {hue 231.6 sat 0.6122 }
+}
+
+
+rule burbuja {
+CIRCLE {hue 31.6 sat 0.6122 }
+}
+

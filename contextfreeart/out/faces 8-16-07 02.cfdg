@@ -1,0 +1,484 @@
+
+
+/*
+
+		Random Faces
+			by Don (deking101)
+			August 16, 2007
+
+		Notes:
+			1.  The primitive shapes used for the head, eyes and 
+			mouth can be varied by modifying the rules for shape01, 
+			shape02, etc.. These are located at the end of the code.
+*/
+
+
+background { b 1 }
+
+startshape start
+
+rule start{
+
+	face {  }
+
+	//grid01{ }			//  (used during design)
+	//group01 { }		//  arranges faces in a 5x5 array
+
+	start {s 0.95 x 1.25 r -20}	// arranges faces in a spiral
+}
+
+
+
+rule group01 {
+
+	5*{x 1.5} face {y -1.5 }
+	5*{x 1.5} face {y -3 }
+	5*{x 1.5} face {y -4.5 }
+	5*{x 1.5} face {y -6 }
+/*
+	5*{x 1.5} colorsq {y -1.5 hue 25 }
+	5*{x 1.5} colorsq {y -3 hue 75 }
+	5*{x 1.5} colorsq {y -4.5 hue 150 }
+	5*{x 1.5} colorsq {y -6 hue 250 }
+*/
+}
+
+
+rule colorsq {SQUARE { s 1.2 1.5 hue 0 sat 0.8 b 1 alpha -0.5 z 10} }
+
+rule grid01{
+
+	13*{ y 0.125} SQUARE [ y -0.75 s 1.5 0.005 hue 100 sat 0.7 b 1 z 10 ]
+	SQUARE [ s 1.5 0.007 hue 0 sat 1 b 1 z 30 ]
+
+	13*{ x 0.125} SQUARE [ r 90 x 0 y 0.75 s 1.5 0.005 hue 100 sat 0.7 b 1 z 10 ]
+	SQUARE [ r 90 s 1.5 0.007 hue 0 sat 1 b 1 z 30 ]
+}
+
+
+rule face {
+
+	head { }
+	eyes { }
+	mouth { }
+
+}
+
+
+//=========================================================
+//====== Heads ============================================
+//=========================================================
+
+
+rule head {
+
+	shape01 { s 1.03 1.3 b -1 }
+	shape01 { s 1 1.26 b 1 z 1}
+
+}
+
+rule head {
+
+	shape01 { s 1.1 1.3 b -1 }
+	shape01 { s 1.07 1.26 b 1 z 1}
+
+}
+
+rule head  {
+
+	shape01 { s 1.03 1.3 skew 2 0 b -1 }
+	shape01 { s 1 1.26 skew 3 0 b 1 z 1}
+
+}
+
+rule head {
+
+	shape01 { s 1.03 1.3 skew -2 0 b -1 }
+	shape01 { s 1 1.26 skew -3 0 b 1 z 1}
+
+}
+
+rule head {
+
+	shape01 { s 1.1 1.3 skew 2 0 b -1 }
+	shape01 { s 1.07 1.26 skew 3 0 b 1 z 1}
+
+}
+
+rule head {
+
+	shape01 { s 1.1 1.3 skew -2 0 b -1 }
+	shape01 { s 1.07 1.26 skew -3 0 b 1 z 1}
+
+}
+
+//====== end heads ========================================
+
+
+
+
+//=========================================================
+//====== Eyes =============================================
+//=========================================================
+
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x 0.0 y 0.0 s 0.07 0.065 b -1 z 2]
+
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x 0.0 y 0.0 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x 0.045 y 0.0 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x 0.045 y 0.0 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x -0.045 y 0.0 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x -0.045 y 0.0 s 0.07 0.065 b -1 z 2]
+
+}
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x 0.0 y 0.045 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x 0.0 y 0.045 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x 0.0 y -0.045 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x 0.0 y -0.045 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x 0.045 y 0.04 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x 0.045 y 0.04 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x -0.045 y 0.04 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x -0.045 y 0.04 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x -0.045 y -0.04 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x -0.045 y -0.04 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+rule eyes {
+
+		//	left eye
+	shape02 [x -0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x -0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x -0.1875 x 0.045 y -0.04 s 0.07 0.065 b -1 z 2]
+
+		//	left eye
+	shape02 [x 0.1875 s 0.2 0.22 b -1 z 2] 
+	shape02 [x 0.1875 s 0.19 0.21 b 1 z 2] 
+
+	shape03 [x 0.1875 x 0.045 y -0.04 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+	 //  cyclops eye
+
+rule eyes { 
+
+	shape02 [x 0.0 y 0.1 s 0.3 0.22 b -1 z 2] 
+	shape02 [x 0.0 y 0.1 s 0.29 0.21 b 1 z 2] 
+
+	shape03 [x 0.0 y 0.1 x 0.0 y -0.02 s 0.07 0.065 b -1 z 2]
+
+}
+
+
+//========= end Eyes ======================================
+
+
+
+
+
+//=========================================================
+//====== Mouths (and noses)================================
+//=========================================================
+
+
+
+rule mouth01{
+
+	shape04[ y -0.4 s 0.40 0.17 b -1 z 2]
+	shape04[ y -0.4 s 0.38 0.135 b 1 z 2.5]
+	SQUARE [ y -0.35 s 0.42 0.08 b 1 z 2.5]
+
+}
+
+rule mouth02{
+
+	shape04[ y -0.435 s 0.20 0.15 b -1 z 2]
+	shape04[ y -0.435 s 0.17 0.13 b 1 z 2.5]
+
+}
+
+
+rule mouth { mouth01{} nose01{} }
+
+rule mouth { mouth01{} nose02{} }
+
+rule mouth 0.75 { mouth01{ y -0.85 flip 0} nose01{} }
+
+rule mouth 0.75 { mouth01{ y -0.85 flip 0} nose02{} }
+
+rule mouth { mouth01{ x 0.03 s 0.7 1} nose01{} }
+
+rule mouth { mouth01{ x -0.03 s 0.7 1} nose02{} }
+
+rule mouth { mouth02{} nose01{} }
+
+rule mouth  { mouth02{} nose02{} }
+
+
+// Noses for use in combination with mouths.
+
+rule nose01 {
+
+	shape04 [ y -0.15 x -0.07 r -15 s 0.22 s 0.032 1 s 1.25 b -1 z 2 ]
+	shape04 [ y -0.280 x -0.045 r 95 s 0.17 s 0.03 0.6 s 1.25  b -1 z 2 ]
+
+}
+
+
+rule nose02 {
+
+	shape04 [ y -0.15 x 0.07 r 15 s 0.22 s 0.032 1 s 1.25  b -1 z 2 ]
+	shape04 [ y -0.280 x 0.045 r -95 s 0.17 s 0.03 0.6 s 1.25  b -1 z 2 ]
+
+}
+
+//====== end mouths (and noses) ===========================
+
+
+
+
+/* ===================================================================================
+		The following rules may be used to define various shapes, as indicated.
+	Then the rule(s) "shape01," "shape02," "shape03," etc., can be used in rules where
+	you may want to see how various shapes would look.  Just change the shape in 
+	 this section of code, rather than changing many instances of a basic shape 
+	in several rules.
+*/ ====================================================================================
+
+rule shape01{		
+
+	// The following shapes' transparency can be modified by other rules.
+
+	//SQUARE{ }
+	//CIRCLE{}
+	//TRIANGLE{ s 0.85 y -0.00 }  // Fits in center of unit circle.
+	TRIANGLE{ y -0.2 }	//  Base aligns with base of unit square.
+
+
+	// The following shapes are opaque, i.e., can have no transparency.
+
+	//SQUARE{ alpha 1 }
+	//CIRCLE{ alpha 1 }	
+	//TRIANGLE{ s 0.85 y -0.00 alpha 1} 	// Fits in center of unit circle.  
+	//TRIANGLE{ y -0.2 alpha 1 }	// Base aligns with base of unit square.  
+
+}
+
+rule shape02{		
+
+	// The following shapes' transparency can be modified by other rules.
+
+	SQUARE{}
+	//CIRCLE{}
+	//TRIANGLE{ s 0.85 y -0.00 }  // Fits in center of unit circle.
+	//TRIANGLE{ y -0.2 }	//  Base aligns with base of unit square.
+
+
+	// The following shapes are opaque, i.e., can have no transparency.
+
+	//SQUARE{ alpha 1 }
+	//CIRCLE{ alpha 1 }	
+	//TRIANGLE{ s 0.85 y -0.00 alpha 1} 	// Fits in center of unit circle.  
+	//TRIANGLE{ y -0.2 alpha 1 }	// Base aligns with base of unit square.  
+
+}
+
+rule shape03{		
+
+	// The following shapes' transparency can be modified by other rules.
+
+	SQUARE{}
+	//CIRCLE{}
+	//TRIANGLE{ s 0.85 y -0.00 }  // Fits in center of unit circle.
+	//TRIANGLE{ y -0.2 }	//  Base aligns with base of unit square.
+
+
+	// The following shapes are opaque, i.e., can have no transparency.
+
+	//SQUARE{ alpha 1 }
+	//CIRCLE{}	// No transparency.
+	//TRIANGLE{ s 0.85 y -0.00 alpha 1} 	// Fits in center of unit circle.  
+	//TRIANGLE{ y -0.2 alpha 1 }	// Base aligns with base of unit square.  
+
+}
+
+
+
+
+rule shape04{		
+
+	// The following shapes' transparency can be modified by other rules.
+
+	SQUARE{}
+	//CIRCLE{}
+	//TRIANGLE{ s 0.85 y -0.00 }  // Fits in center of unit circle.
+	//TRIANGLE{ y -0.2 }	//  Base aligns with base of unit square.
+
+
+	// The following shapes are opaque, i.e., can have no transparency.
+
+	//SQUARE{ alpha 1 }
+	//CIRCLE{ alpha 1 }	
+	//TRIANGLE{ s 0.85 y -0.00 alpha 1} 	// Fits in center of unit circle.  
+	//TRIANGLE{ y -0.2 alpha 1 }	// Base aligns with base of unit square.  
+
+}
+
+rule shape05{		
+
+	// The following shapes' transparency can be modified by other rules.
+
+	//SQUARE{}
+	//CIRCLE{}
+	//TRIANGLE{ s 0.85 y -0.00 }  // Fits in center of unit circle.
+	//TRIANGLE{ y -0.2 }	//  Base aligns with base of unit square.
+
+
+	// The following shapes are opaque, i.e., can have no transparency.
+
+	//SQUARE{ alpha 1 }
+	CIRCLE{ alpha 1 }	
+	//TRIANGLE{ s 0.85 y -0.00 alpha 1} 	// Fits in center of unit circle.  
+	//TRIANGLE{ y -0.2 alpha 1 }	// Base aligns with base of unit square.  
+
+}
+
+
+rule shape06{		
+
+	// The following shapes' transparency can be modified by other rules.
+
+	//SQUARE{}
+	//CIRCLE{}
+	//TRIANGLE{ s 0.85 y -0.00 }  // Fits in center of unit circle.
+	//TRIANGLE{ y -0.2 }	//  Base aligns with base of unit square.
+
+
+	// The following shapes are opaque, i.e., can have no transparency.
+
+	//SQUARE{ alpha 1 }
+	//CIRCLE{}	// No transparency.
+	TRIANGLE{ s 0.85 y -0.00 alpha 1} 	// Fits in center of unit circle.  
+	//TRIANGLE{ y -0.2 alpha 1 }	// Base aligns with base of unit square.  
+
+}
+
+

@@ -1,0 +1,39 @@
+startshape PICS
+background {b -1}
+rule PIC
+{
+	SQUARE {b 1 hue 100 sat 0.5 alpha -0.5}
+	SQUARE {x 1.1 b 1 hue 200 sat 0.5 alpha -0.5}
+	SQUARE {y 1.1 b 1 hue 300 sat 0.5 alpha -0.5}
+	SQUARE {x 1.1 y 1.1 b 1 hue 0 sat 0.5 alpha -0.5}
+}
+
+rule PICS
+{
+	PIC {}
+	PICS {x 1.1 r 90}
+}
+
+rule PICS 
+{
+	PIC {}
+	PICS {x 1.1 r -90}
+}
+
+rule PICS 
+{
+	PIC {}
+	PICS {x 1.1 r 180}
+}
+
+rule PICS 
+{
+	PIC {}
+	PICS {x 1.1 }
+}
+
+rule PICS 0.5 { 
+	PIC{}
+	PICS {x 1.1 r 4}}
+
+rule PICS 0.1 {}

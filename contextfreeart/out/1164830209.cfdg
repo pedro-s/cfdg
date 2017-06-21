@@ -1,0 +1,41 @@
+startshape start
+background{b -1}
+
+rule start{
+	spiral{x 1.5 r 60 flip 90 sat 1 b .1}
+	spiral{x -1.5 r -60 sat 1 b .1}
+	eye{x .9 y -.9 flip 90 s .4}
+	eye{x -.9 y -.9 s .4}
+	hair{y 1.8}
+}
+rule spiral{
+	CIRCLE{}
+	spiral{x -.2 r 10 s .95 b 0.05}
+}
+
+rule eye{
+	eyeMid{r 90 s .9  sat 1 b .5 }
+	eyeMid{r -90 s .9 sat 1 b .5 }
+	pupila{y -.25 s .4 b 0.5  b .9 sat 1}
+}
+rule eyeMid{
+	CIRCLE{}
+	eyeMid{s .76 x .18 y .3 r 4 b -.1}
+}
+rule pupila{
+	CIRCLE{}
+	pupila{x .1 r 10 s .99 b -0.01}
+}
+
+rule hair{
+	20 * {x .2 r -5} subhair { sat 1 b .5}
+	20 * {x -.2 r 5} subhair { sat 1 b .5}
+}
+rule subhair 1{
+	CIRCLE{}
+	subhair{y .2 r 2 s .95 b -.05}
+}
+rule subhair 1{
+	CIRCLE{}
+	subhair{y .2 r -2 s .95 b -.05}
+}

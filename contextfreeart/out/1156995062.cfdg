@@ -1,0 +1,59 @@
+//all code copyright Matthew Pace,2006 
+//Please do not copy or use this code without properly crediting me as the author
+
+
+//I like UHM
+background { b -1}
+
+startshape go
+
+rule draw
+{
+	CIRCLE {}
+	CIRCLE {x 1.4}
+	CIRCLE {x 1.4 y 1.4}
+	CIRCLE {y 1.4}
+}
+
+rule go 20
+{
+	draw { b 1 h 10  sat 1}
+	go { y 1.4 s .99 a -.005 h .5} 
+}
+rule go .1
+{
+	draw { b 1 h 10  sat 1}
+	go { r 45}
+	go { r -45}
+}
+
+rule go .1
+{
+	draw { b 1 h 10  sat 1}
+	go { r 90}
+	go { r -90}
+}
+rule go .1
+{
+	draw { b 1 h 10  sat 1}
+	go { r 60}
+	go { r -60}
+}
+rule go .1
+{
+	draw { b 1 h 10  sat 1}
+	go { r 15}
+	go { r -15}
+}
+rule go .1
+{
+	draw { b 1 h 10  sat 1}
+	go { r 30}
+	go { r -30}
+}
+
+rule go .01
+{
+	CIRCLE {b 2 sat 2 size 12 }
+	go{}
+}

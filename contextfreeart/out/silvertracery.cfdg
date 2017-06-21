@@ -1,0 +1,24 @@
+startshape f2f 
+
+background {b -1}
+
+rule f2f {
+	7 * {r (360/7) y 6.3 x 13.}
+	{8 * {s  .618 1  y 2}
+	{2*{f 90}
+	fff { x -2}}}
+}
+
+rule fff {
+	2 *{f 90 x 4}
+	ddd {x 2 y 1}
+	fff {s .816 r 14 x -2}
+}
+
+rule ddd {
+//	CIRCLE { y 24 b .1}
+	SQUARE {b .1}
+	ddd {s .816 r 14 b .1}
+	fff {s .3 r -14 y 1 b .1}
+	f2f {s .2 y -24 x -17.5 b .1}
+}

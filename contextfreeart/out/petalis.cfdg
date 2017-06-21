@@ -1,0 +1,13 @@
+startshape flower
+
+background {sat .1 hue 30}
+//background {b -.3}
+rule flower {	10* {r 36} petal { }	10* {r 36} petal {flip 90}
+	10* {r 36} CIRCLE {s .05  y .9 a -.9}
+	10* {r 36} CIRCLE {s .02  y .39 a -.9}
+	10* {r 36} CIRCLE {s .035  y -.375 x .516 a -.9}} rule petal {	SQUARE { s 1 0.0003 a -.5 hue 220 sat .3}	CIRCLE { x -0.5 s 0.001 hue 20 sat 1}	petal [ x .35 r 120.21 s 0.995 x 0.001 b 0.005 ]}
+
+rule flower2 {	10* {r 36} petal2 { }	10* {r 36} petal2 {flip 90}
+	10* {r 36} CIRCLE {s .05  y .9 a -.9 b 1}
+	10* {r 36} CIRCLE {s .02  y .39 a -.9 b 1}
+	10* {r 36} CIRCLE {s .035  y -.375 x .516 a -.9 b 1}} rule petal2 {	SQUARE { s 1 0.0003 a -.5 b .8}	CIRCLE { x -0.5 s 0.001 b .8}	petal2 [ x .35 r 120.21 s 0.995 x 0.001 b 0.995 ]}

@@ -1,0 +1,35 @@
+startshape colorwheel {color}
+
+rule colorwheel {
+ ballsarc {r 0}
+ ballsarc {r 30}
+ ballsarc {r 60}
+ ballsarc {r 90}
+ ballsarc {r 120}
+ ballsarc {r 150}
+ ballsarc {r 180}
+ ballsarc {r 210}
+ ballsarc {r 240}
+ ballsarc {r 270}
+ ballsarc {r 300}
+ ballsarc {r 330}
+ colorwheel {s 0.94 r 7.5 hue 15 alpha 0.2}
+}
+
+rule ballsarc {
+ sphere [r 0 x 15 hue 00]
+ sphere [r 5 x 15 hue 60]
+ sphere [r 10 x 15 hue 120]
+ sphere [r 15 x 15 hue 180]
+ sphere [r 20 x 15 hue 240]
+ sphere [r 25 x 15 hue 300]
+}
+
+rule sphere {
+ spherecolor {sat=0.7 b 0.5}
+}
+
+rule spherecolor {
+  CIRCLE { }
+  spherecolor {s 0.98 b 0.1 x 0.001 y 0.001 sat 0.1}
+}

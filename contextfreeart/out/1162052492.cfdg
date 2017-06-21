@@ -1,0 +1,30 @@
+startshape MOUT
+background { hue 206.9 sat 0.9 b 0.5 }
+
+
+rule MOUT{
+CIRCLE {}
+CIRCLE { skew 8 1 s 0.8 hue 59.0 sat 1.0 b 1.0 }
+LIQE {size 0.5}
+}
+rule MOUT 0.7 {
+CIRCLE {}
+CIRCLE { skew 8 1 s 0.8 hue 352.1 sat 0.9 b 1.0 }
+LIQE {size 0.8}
+}
+rule LIQE {
+MOUT {flip 90}
+LIQE {size 0.8 x 1 y 1}
+}
+rule LIQE {
+SQUARE {}
+LIQE {size 0.5 1 y 1}
+LIQE {size 1.1 x -1 y 1}
+}
+rule LIQE 0.5 {
+SQUARE {}
+MOUT {}
+}
+rule LIQE {
+LIQE {flip 90 size 0.5 x 1 y 1}
+}

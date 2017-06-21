@@ -1,0 +1,153 @@
+startshape ORIGIN
+
+rule ORIGIN {
+	GRID {}
+	GRID {
+		z -10 b 0.8 r -90
+		x 0.8 y 160 s 1.26 0.8
+	}
+}
+
+// must be seperated by [x 8] !!
+rule GRID {
+	8*{ x 8 } COL {}
+	8*{ x 8 } COL { x 72 }
+}
+rule COL {
+	8*{ y 20 } NODE2 {}
+}
+
+// select some nodes by 2's so we
+// can allow for some disjointed 
+// pieces (gaps in the col)
+rule NODE2 7 {
+	NODE {}
+	NODE { y 10 }
+}
+rule NODE2 {
+	CURVE_L {}
+	CURVE_L { x 8 y 10 }
+	BUBBLE { x 8 y 10 }
+}
+rule NODE2 {
+	CURVE_R {}
+	CURVE_R { x -8 y 10 }
+	BUBBLE { x -8 y 10 }
+}
+rule NODE2 {
+	LINE {}
+	LINE { y 10 }
+}
+
+// select the rest of the nodes
+// by 1's, so we get random links
+// between cols
+rule NODE  4 {
+	CURVE_L {}
+	CURVE_R {}
+	//BUBBLE { x -8 y 10 }
+	//BUBBLE { x 8 y 10 }
+	BUBBLE { y 10 }
+}
+rule NODE { 
+	CURVE_L  {}
+	BUBBLE { x -8 y 10 }
+	LINE {}
+}
+rule NODE { 
+	CURVE_L  {}
+	LINE {}
+}
+rule NODE 2 {
+	CURVE_L {}
+	BUBBLE { x -8 y 10 }
+	BUBBLE { y 10 }
+}
+rule NODE {
+	CURVE_R {}
+	BUBBLE { x 8 y 10 }
+	LINE {}
+}
+rule NODE {
+	CURVE_R {}
+	LINE {}
+}
+rule NODE 2 {
+	CURVE_R {}
+	BUBBLE { x 8 y 10 }
+	BUBBLE { y 10 }
+}
+rule NODE 3 {
+	BUBBLE { }
+	BUBBLE { y 10 }
+}
+rule NODE 25 {
+	LINE {}
+}
+
+
+// ***********************************
+// decorative endcaps
+rule BUBBLE {
+	CIRCLE { z 1 y -1 s 3 }
+	CIRCLE { z 2 y -1 s 2 b 1 }
+}
+
+rule BUBBLE 0.2 {
+	SQUARE { z 1 y -1 s 3 }
+	SQUARE { z 2 y -1 s 2 b 1 }
+}
+
+rule BUBBLE 0.2 {
+	TRIANGLE { z 1 y -1.4 s 4 }
+	TRIANGLE { z 2 y -1.4 s 2.5 b 1 }
+}
+
+// ***********************************
+// the Left/Right semi-circle curves
+// to move to a neighboring column
+rule CURVE_L {
+	CURVE_UL { }
+	CURVE_LU {x -4 y 4}
+	SQUARE { x -8 y 9}
+}
+
+rule CURVE_R {
+	CURVE_UR {}
+	CURVE_RU {x 4 y 4}
+	SQUARE { x 8 y 9 }
+}
+
+rule CURVE_UL {
+	CURVE_UL2 { x -4 r -90}
+}
+rule CURVE_UL2 {
+	10*{r 10} SQUARE { y 4}
+}
+
+rule CURVE_LU {
+	CURVE_LU2 { y 4 r 90 }
+}
+rule CURVE_LU2 {
+	10*{r 10} SQUARE { y 4 }
+}
+
+rule CURVE_UR {
+	CURVE_UR2 { x 4 r 90 }
+}
+rule CURVE_UR2 {
+	10*{r -10} SQUARE {y 4}
+}
+
+rule CURVE_RU {
+	CURVE_RU2 { y 4 r -90}
+}
+rule CURVE_RU2 {
+	10*{r -10} SQUARE { y 4 }
+}
+
+// ***************************
+// Basic straight-up line piece
+rule LINE {
+	5*{ y 2 } SQUARE {  s 1 4 }
+}

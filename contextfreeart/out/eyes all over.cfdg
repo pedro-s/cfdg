@@ -1,0 +1,12 @@
+startshape KING
+background {b -1}
+rule KING{
+100* {x .7 y .7 h 10 s .8 r 65}
+CIRCLE {h 0.00 sat 0.0000 b 1.0000}
+100* {x .7 y .7 h 10 s .8 r 65}
+CIRCLE { s .5 h 6.17 sat 1.0000 b 0.6022}
+100* {x .7 y .7 h 10 s .8 r 65}
+CIRCLE { s .25 b -1}
+100* {x .7 y .7 h 10 s .8 r 65}
+CIRCLE { y .2 x - .1 s .05 h 0.00 sat 0.0000 b 1.0000 skew 50 2}
+}

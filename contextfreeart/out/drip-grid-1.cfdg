@@ -1,0 +1,11 @@
+startshape grid
+
+rule grid {20* {y 1 } row{} }
+rule row  {20* {x 1 } shape{} }
+
+rule shape .1 { CIRCLE {s .4} }
+rule shape  1 { 20* {x  .1  y  .1 s .7} CIRCLE {s .45}  }
+rule shape .1 { 20* {x  .1  y -.1 s .7} CIRCLE {s .45}  }
+rule shape  1 { 20* {x -.1  y  .1 s .7} CIRCLE {s .45}  }
+rule shape .1 { 20* {x -.1  y -.1 s .7} CIRCLE {s .45}  }
+rule shape  2 { 20* {       y  .14 s .7} CIRCLE {s .45}  }

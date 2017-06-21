@@ -1,0 +1,33 @@
+startshape WEB
+background {b -1}
+
+rule WEB {
+ARM { }
+}
+rule ARM 98 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 4}
+ARM { y 0.4 size 0.999 rotate 977}
+}
+rule ARM 2 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 2}
+ARM { y 0.2 size 0.666 flip 33}
+ARM {h 1.29 sat 0.8571 b 0.4033}
+}
+rule ARM 3 {
+TRIANGLE { }
+TRIANGLE { size 0.3 brightness 2}
+ARM { y 0.6 size 0.222 flip 555}
+}
+rule ARM 4 {
+TRIANGLE { }
+TRIANGLE { size 0.9 brightness 1}
+ARM { y 0.11 size 0.1 flip 69}
+}
+rule ARM 5 {
+TRIANGLE { }
+TRIANGLE {size 0.9 brightness 1}
+ARM { y 0.1 size 0.3 flip 3}
+ARM { h 234.46 sat 0.0956 b 0.1882}
+}

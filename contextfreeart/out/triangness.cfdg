@@ -1,0 +1,34 @@
+startshape x6
+
+background {b -1}
+
+rule x6 { 6 * {r -60 y -.58 a -.06}
+	fr {}
+} 
+
+rule fr {
+	fr {s .46 flip 60 x .84 y .56 a -.4}
+	fr3 { a -.2}
+	fr {s .46 r -60 flip 60 x 1.072 y .43 a -.1}
+	fr2 {s .094 r 0  x 1.754 y -.128 a -.3}
+	triangness  {s .094 r -60  x 1.754 y -.184 a -.4}
+} 
+
+rule fr2 {
+	fr2 {s .46 r 60 flip 120 x .84 y .03 a -.2 }
+	triangness {}
+}
+
+rule fr3{
+	fr3 {s .46 r 120 flip 120 x 1.07 y .164 a -.1}
+	fr2 {}
+	fr3 {s .21 r -60  x 1.562 y -.035 a -.3}
+	fr2 {s .214 r -120  x 1.458 y -.096 a -.2}
+}
+
+rule triangness { 
+	triangness {s .68 r 60 x .5 y .1 a -.2}
+	TRIANGLE { b 1 a -.1}
+}
+
+

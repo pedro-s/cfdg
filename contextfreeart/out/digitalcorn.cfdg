@@ -1,0 +1,58 @@
+startshape SEED 
+rule SEED {
+SEED_BASE {}
+SEED_BASE {flip 180}
+}
+
+rule SEED_BASE {
+ SPROUT {hue 50 sat 1}
+ SEED_L {x -0.2 hue 48 sat 1}
+ SEED_R {x 0.2 hue 48 sat 1}
+}
+
+
+
+rule SEED_L {
+  SPROUT { }
+  SEED_L {x -0.2 s 0.95 hue 4}
+}
+
+rule SEED_L  {
+  SPROUT { }
+  SEED_L {x -0.3 s 0.95}
+}
+
+rule SEED_R {
+  SPROUT { }
+  SEED_R {x 0.2 s 0.95 hue 4}
+}
+
+rule SEED_R {
+  SPROUT { }
+  SEED_R {x 0.3 s 0.95}
+}
+
+
+rule SPROUT {
+ SQUARE { }
+ SQUARE {b 1 s 0.8}
+ SPROUT {y 0.4 s 0.99 rotate 0.75}
+}
+
+rule SPROUT {
+ SQUARE { }
+ SPROUT {y 0.4 s 0.99 rotate -0.75}
+}
+
+
+rule SPROUT 0.01 {
+  SQUARE { }
+ SPROUT {y 0.4 s 0.99}
+SPROUT {y 0.4 s 0.9 rotate 5}
+}
+
+rule SPROUT 0.01 {
+  SQUARE { }
+ SPROUT {y 0.4 s 0.99}
+SPROUT {y 0.4 s 0.9 rotate -5}
+}

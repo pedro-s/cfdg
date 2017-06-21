@@ -1,0 +1,17 @@
+startshape SNOWFLAKE
+background { sat .91 hue 215 }
+
+rule SNOWFLAKE {
+	6* {r 60} SPIKE {}
+}
+
+rule SPIKE {
+	SQUARE {}
+	SPIKE { y 0.91 s 0.98 }
+}
+rule SPIKE 0.03 {
+	SQUARE {}
+	SQUARE { r 60 }
+	SPIKE { r -60 }
+	SQUARE { y 0.91 s 0.98  }
+}

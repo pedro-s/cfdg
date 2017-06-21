@@ -1,0 +1,52 @@
+startshape start
+
+rule start
+{
+	thing{hue 0 sat 1 b 1}
+}
+
+rule start 700
+{
+	start{hue 1}
+}
+
+rule thing
+{
+	upperhalf{}
+	upperhalf{flip 180}
+}
+
+rule upperhalf
+{
+	curve{}
+	curve{flip 90}
+}
+
+rule curve
+{
+	vierkant{}
+	curve{x 0.2 r 1 s 0.99 sat -.01 hue -.05}
+}
+
+rule vierkant
+{
+	10*{y 1} rij{}
+}
+
+rule rij
+{
+	10*{x 1} blok{}
+}
+
+rule blok
+{
+	SQUARE{}
+	SQUARE{s 4 alpha -.6}
+	SQUARE{s 10 alpha -.9}
+	blok{s 0.9}
+}
+
+rule blok
+{
+	blok{hue 1}
+}

@@ -1,0 +1,37 @@
+startshape TWISTA
+background {hue 196 saturation 1 b -.89}
+
+rule TWISTA {
+TWIST {}
+TWISTA  {r 33 s .9 hue -3 b .15}
+TWISTA {y 23 r -26 s .3 hue 19 b .15}
+TWISTA {y -23 r -26 s .3 hue -13 b .15}
+}
+
+rule TWIST {
+TWIT {s 5}
+TWIT {s 4.5 r 45}
+}
+
+rule TWIT {
+BALL {}
+BALL {y 1}
+BALL {y -1}
+BALL {y 2}
+BALL {y -2}
+BALL {y 3}
+BALL {y -3}
+TWIT {r 90 s .925}
+}
+
+rule BALL .5{
+CIRCLE {s .95 hue 120 saturation 1 b .2}
+}
+
+rule BALL .5{
+CIRCLE {s .95 hue 140 saturation .75 b .2}
+}
+
+rule BALL {
+CIRCLE {s .95 hue 160 saturation .75 b .2}
+}

@@ -1,0 +1,24 @@
+startshape k
+
+background { b -.8 }
+
+rule k {10*{r 79 x 3 s .8}cube{h 200 sat .7 b .3}}
+
+rule cube{ m { s cos(75) 1  r 50}  }
+rule sq1 {SQUARE [ s tan(75)  sin(25) x -.5 y .5 ]  }
+rule sq2 {SQUARE [s  tan(75) cos(25) x -.5 y -.5] }
+rule sq3 {SQUARE { x .5 y -.5} }
+
+rule m { 
+sq1 { skew (90-25) 0 b .5 } 
+sq2 {    skew (-25) 0 b .6 }  
+sq3 { r 25 b .7}
+}
+
+// You may change the angles 75, 25 and 50
+// 0 < alfa < 90
+// 0 < beta < 90
+// alfa = 75
+// beta = 25
+
+

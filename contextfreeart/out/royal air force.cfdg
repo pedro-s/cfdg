@@ -1,0 +1,21 @@
+startshape RAINDROP
+background{h 42.99 sat 0.8962 b 0.7956    }
+rule RAINDROP{
+
+360*{r 1}
+SQUARE {h 357.31 sat 0.9455 b 0.9669 }
+
+360*{  r 1}
+SQUARE{ y 3 h 243.43 sat 0.8944 b 0.4420} 
+
+
+
+
+
+
+
+
+
+
+
+}

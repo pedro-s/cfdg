@@ -1,0 +1,34 @@
+startshape easterb0xen
+
+background { b -1 }
+
+rule easterb0xen
+{
+	// this makes a 2x2 grid of squares
+	BOX { x -0.5 y -0.5 }
+	BOX { x  0.5 y -0.5 }
+	BOX { x  0.5 y  0.5 }
+	BOX { x -0.5 y  0.5 }
+}
+
+rule BOX
+{
+	SQUARE { size 0.8 b 1}
+	SQUARE { size 0.6 b -1}
+	// this makes it a square within a square
+}
+
+rule BOX 2
+{
+	easterb0xen { size 0.5 }
+}
+
+rule BOX 0.5
+{
+	easterb0xen { size 0.25 }
+}
+
+rule BOX 0.1
+{
+	// do nossink.
+}

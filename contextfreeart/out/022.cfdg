@@ -1,0 +1,22 @@
+startshape init
+background{b -1}
+
+rule init
+{
+	3*{r 120}starter{ sat 1 b 1 h 240 |h 0}
+}
+
+rule rec
+{
+	CIRCLE{b 1 s .7}
+	rec{x (-sin(30)) y sin(60) s .99 skew 0 2 r -4 h -.001|}
+}
+
+rule starter
+{
+	rec{}
+	starter{x sin(30) y sin(60) s .99 r 1 h -.01|}
+}
+
+
+

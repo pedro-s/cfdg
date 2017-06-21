@@ -1,0 +1,32 @@
+startshape SATURN
+
+CF::Background= [ b-1 ]
+shape SATURN 
+
+{
+loop 10 [ skew 10 15 ]
+loop 10 [ skew -5 - 25 ]
+loop 5[ skew 2.5 2.5 ]
+loop 10 [ x .5 y .5 h 100  r  5 skew 15 10 ]
+SQUARE [ h 239.84 sat 0.9510 b 1.0000 ] 
+loop 10 [ skew 10 15 h 1000 ]
+loop 10 [ skew -5 - 25 flip 2 ]
+loop 5[ skew 2.5 2.5 ]
+loop 10 [ x .5 y .5 h 100  skew 10 15  r  15 ]
+SQUARE [ h 103.87 sat 0.9270 b 1.0000 ]
+loop 10 [ skew 10 15 h 1000]
+loop 10 [ skew - 5 -25 ]
+loop 5 [skew 2.5 2.5 ]
+loop 10 [ skew 5 10 flip 15 ] 
+loop 10 [ x 1 y 1 h 1000  skew 10 10  r 25 ]
+loop 15 [ x 1 y 50  skew 20 20  flip 10 ]
+SQUARE [h 312.55 sat 0.9201 b 1.0000 ]
+
+
+
+
+
+
+
+
+}

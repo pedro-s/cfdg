@@ -1,0 +1,17 @@
+startshape baz
+
+background {b -1}
+
+rule baz {
+	foo {a -1}
+}
+
+rule foo {
+	bar {r 45 h 34 b 0.9 sat 0.9 a 0.05}
+}
+
+rule bar {
+	SQUARE {}
+	foo {x 1 y 1 s 0.8}
+	foo {x -1 s 0.5}
+}

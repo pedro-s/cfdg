@@ -1,0 +1,55 @@
+startshape Main
+
+rule Main {
+	FurryBranchStraight { hue 100 sat 0.6 b 0.4 }
+}
+
+rule FurryBranchStraight 100 {
+	FurUnit { }
+	FurryBranchStraight { y 0.5 }
+}
+
+rule FurryBranchStraight 15 {
+	FurUnit { }
+	FurryBranchStraight { y 0.5 h 5 }
+}
+
+rule FurryBranchStraight 20 {
+	FurUnit { }
+	FurryBranchCurved { y 0.5 }
+}
+
+rule FurryBranchStraight 0.05 { }
+
+rule FurryBranchCurved 100 {
+	FurUnit { }
+	FurryBranchCurved { y 0.5 r 1 }
+}
+
+rule FurryBranchCurved 15 {
+	FurUnit { }
+	FurryBranchCurved { y 0.5 r 1 h 5}
+}
+
+rule FurryBranchCurved 20 {
+	FurUnit { }
+	FurryBranchStraight { y 0.5 r 1 }
+}
+
+rule FurryBranchCurved 0.05 { }
+
+rule FurUnit {
+	CIRCLE { s 0.2 1 }
+	Fur { s 0.2 r 90 b -0.1 z -1 }
+	Fur { s 0.2 r -90 b -0.1 z -1 }
+}
+
+rule Fur 10 {
+	CIRCLE { }
+	Fur { y 0.25 s 0.99 r 0.5 b 0.025 }
+}
+
+rule Fur {
+	CIRCLE { }
+	Fur { y 0.25 s 0.99 f 90 }
+}

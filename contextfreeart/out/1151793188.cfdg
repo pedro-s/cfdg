@@ -1,0 +1,7 @@
+startshape ALL
+
+rule ALL {SPIRAL {r 180}}
+
+rule SPIRAL {STAR {} SPIRAL {x 1 r 288 s 0.999 hue 0.01 sat 0.0005}}
+
+rule STAR {SQUARE {a -0.99 b 0.5 hue 200 sat 0.75} SQUARE {s 0.99 b 1 hue 180 sat 0 a -0.99} SQUARE {r 45 a -0.99 b 0.5} SQUARE {r 45 s 0.99 b 1 hue 240 sat 0 a -0.99} STAR {r 10 s 0.86}}

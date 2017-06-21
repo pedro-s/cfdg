@@ -1,0 +1,77 @@
+startshape TENDRILS
+
+background {h 220.33 sat .7725 b 0.5525}
+
+
+rule TENDRILS{
+ARM{}
+ARM{flip 180}
+TENDRILS{r 90 s .7}
+}
+
+rule ARM 10 {
+	SMILEYBOARD{}
+}
+
+rule ARM 90 {
+	CHECKERBOARD{}
+}
+ 
+path blackbox{
+    MOVETO{x 0.5 y 0.5}
+    LINETO{x -0.5 y 0.5}
+    LINETO{x -0.5 y -0.5}
+    LINETO{x 0.5 y -0.5}
+    CLOSEPOLY{}     // go back to (0.5, 0.5) and close the path
+    STROKE{b -1 width 0.01}
+    FILL {b - 1}
+}
+
+path whitebox{
+    MOVETO{x 0.5 y 0.5}
+    LINETO{x -0.5 y 0.5}
+    LINETO{x -0.5 y -0.5}
+    LINETO{x 0.5 y -0.5}
+    CLOSEPOLY{}     // go back to (0.5, 0.5) and close the path
+    STROKE{b 0 width 0.1}
+    FILL {b 1}
+}
+
+rule CHECKERROW{
+	blackbox{}
+	whitebox{x 1}
+	blackbox{x 2}
+	whitebox{x 3}
+}
+
+rule CHECKERBOARD{
+	CHECKERROW {x 3 y 1.2 size 0.99 rotate 3}
+	CHECKERROW {flip 90 x 6 y 2.4 size 0.99 rotate 3}
+	#CHECKERBOARD{y 1.8 size 0.99 rotate 3}
+	ARM{y 1.8  rotate 3}
+    }
+
+rule EYE{
+	CIRCLE{size 0.15}
+}
+
+rule SMILE{
+	CIRCLE{}
+	CIRCLE{y .1 h 60 sat 1 brightness 1}
+}
+
+
+rule SMILEYFACE{
+	CIRCLE{}
+	CIRCLE{size 0.95 h 60 sat 1 brightness 1}
+	SMILE{z 0 size 0.75}
+	EYE{z 1 x -0.2 y 0.2}
+	EYE{z 1 x 0.2 y 0.2}
+}
+
+rule SMILEYBOARD{
+	SMILEYFACE{size 4 x 28 y 3 rotate 3}
+	SMILEYBOARD{y 1 size .9 rotate 6}
+}
+
+

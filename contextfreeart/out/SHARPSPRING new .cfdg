@@ -1,0 +1,28 @@
+startshape SHARPSPRING
+background {  }
+rule SHARPSPRING {
+180* { r 12 x 0.40 y 0.40 }
+TRIANGLE { size 1.25 }
+// This is the largest black triangle ring
+180* { h 3  r 12 x 0.40 y 0.40 }
+TRIANGLE { h 227.10 sat 1.0000 b 1.0000 }
+// This is the largest blue triangle ring
+180* { r 12 x 0.30 y 0.30 }
+TRIANGLE { }
+// This is the next largest black triangle ring
+180* { h 5  r 12 x 0.30 y 0.30 }
+TRIANGLE { size 0.75 h 227.10 sat 1.0000 b 1.0000 }
+// This is the next largest blue triangle ring
+180* { r 12 x 0.20 y 0.20 }
+TRIANGLE { size 0.75 }
+// This is the third largest black triangle ring
+180* {h 5 r 12 x 0.20 y 0.20 }
+TRIANGLE { size 0.5 h 227.10 sat 1.0000 b 1.0000 }
+// This is the third largest blue triangle ring
+180* { r 12 x 0.10 y 0.10 }
+TRIANGLE { size 0.5 }
+// This is the smallest black triangle ring
+180* {h 5 r 12 x 0.10 y 0.10 }
+TRIANGLE { size 0.25 h 227.10 sat 1.0000 b 1.0000 }
+// This is the smallest blue triangle ring
+}

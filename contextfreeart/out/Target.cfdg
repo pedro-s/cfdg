@@ -1,0 +1,51 @@
+startshape TARGET
+
+background { b -1 }
+
+rule TARGET {
+
+CIRCLE { h 0.68 sat 0.9334 b 0.4751 }
+
+
+CIRCLE { s .8 h 71.57 sat 0.0351 b 0.8066 }
+
+
+CIRCLE { s .6 h 0.68 sat 0.9334 b 0.4751 }
+
+
+CIRCLE { s .4 h 71.57 sat 0.0351 b 0.8066 }
+
+
+CIRCLE { s .2 h 0.68 sat 0.9334 b 0.4751 }
+
+
+4* { y -.01 x -.01}
+TRIANGLE { r 40 s .035 y.264 x.24 h 27.90 sat 0.8549 b 0.7514}
+
+
+4* { y -.01 x -.01}
+TRIANGLE { r 40 s .035 y.255 x.24 h 132.71 sat 0.7863 b 0.3812}
+
+4* { y -.01 x -.01}
+TRIANGLE { r 105 s .035 y.238 x.263 h 27.90 sat 0.8549 b 0.7514}
+
+4* { y -.01 x -.01}
+TRIANGLE {r 105 s .035 y.238 x.255 h 132.71 sat 0.7863 b 0.3812}
+
+
+275* {x .001 y .001}
+SQUARE { s.01 b -1}
+
+
+TRIANGLE { skew 5 50 r -15 s.05 h 288.43 sat 0.0351 b 0.5359}
+
+
+SQUARE { s.06 r 45 x -.03 y -.02 h 0.68 sat 0.9334 b 0.4751 }
+
+
+
+
+
+}
+
+

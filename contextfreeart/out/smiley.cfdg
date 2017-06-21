@@ -1,0 +1,20 @@
+/* copyright (c) 2012 by Jonas Kölker.  License: WTFPL, or contact me */
+startshape face
+
+rule face {
+    CIRCLE {h 60 sat 0 b 0 s 1.01}
+    CIRCLE {h 60 sat 1 b 1}
+    eye {y +0.2 x -0.25 s 0.1}
+    eye {y +0.2 x +0.25 s 0.1}
+    120*{r 1} mouth {r 120}
+}
+
+rule eye {
+    CIRCLE {s 1.05 b 0}
+    CIRCLE {s 1.00 b 1}
+    CIRCLE {s 0.50 b 0 y -0.1}
+}
+
+rule mouth {
+    CIRCLE {y +0.35 s 0.05}
+}

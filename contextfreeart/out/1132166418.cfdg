@@ -1,0 +1,40 @@
+startshape EDERA 
+
+rule EDERA {
+	CIRCLE	{s 5}
+	CIGLIO		{}
+	EDERA		{x -5  y -1 s 0.90}
+}
+
+rule CIGLIO {
+	SQUARE	{hue 200 sat 0.5}
+	PELO		{r 5 hue 200 sat 0.5}
+	CIGLIO		{y -1 r 0.5 s 0.998 b 0.005}
+}
+rule CIGLIO {
+	SQUARE	{hue 200 sat 0.5}
+	PELO		{r 5 hue 200 sat 0.5}
+	CIGLIO		{y -1 r 0.5 s 0.998 b 0.005 flip 90}
+}
+
+rule CIGLIO .008 {
+	SQUARE	{hue 200 sat 0.5}
+	PELO		{r 5 hue 200 sat 0.5}
+	RICCIOLO	{y -1 s 0.998 b 0.005}
+}
+
+rule RICCIOLO  {
+	SQUARE	{hue 200 sat 0.5}
+	PELO		{r 5 hue 200 sat 0.5}
+	RICCIOLO	{y -1 r 3 s 0.998 b 0.005}
+}
+
+rule RICCIOLO .005 {
+	SQUARE	{hue 200 sat 0.5}
+	PELO		{r 5 hue 200 sat 0.5}
+	RICCIOLO	{y -1 r 3 s 0.998 b 0.005 flip 90}
+}
+
+rule PELO { 
+	CIRCLE {s 5 0.1}
+}

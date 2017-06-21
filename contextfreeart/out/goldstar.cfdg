@@ -1,0 +1,10 @@
+startshape goldstar
+ 
+rule goldstar{
+ CIRCLE{s 11}5*{r 72}angle{}}
+ 
+rule angle{110*{h.5 r 1 s 1.01} 
+ TRIANGLE{
+  h.5 r 180 sat 1 b 1 y-1 a-.9}
+
+}

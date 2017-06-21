@@ -1,0 +1,17 @@
+startshape r1
+background { b -1 }
+
+rule r1 { r2[ b -1 |b 1 sat 1 ] }
+rule r2 { 200*[ |b -0.01 y 0.5 s 0.99 r 0.2 z -1 ]{ 360*[ x 1 r 1 ]  r5[] } }
+
+rule r5 250 {}
+rule r5 { 12*[ |h 30 h 0.2| z -1000 sat -0.1 s 1 0.8 ] r3[] }
+
+rule r3 { r4[ x 1 r 1.1 h -0.01 ] }
+rule r3 { r4[ x 1 r 1.15 h 0.01 ] }
+rule r3 { r4[ s 0.99 h -0.05 ] }
+rule r3 0.2 { r6[ f 5 ] }
+rule r3 0.2 { r6[ f -85 ] }
+
+rule r6 { r4[ b 0.04| z 0.1 ] }
+rule r4 { SQUARE[ s 1 0.3 ] r3[] }

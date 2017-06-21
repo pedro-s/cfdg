@@ -1,0 +1,68 @@
+startshape A {color}
+
+rule A
+{
+  SQUARE {h 0 sat .89 b .25 }
+  A {y .5 r 2 s .9999 b .0002}
+}
+rule A
+{
+  SQUARE {h 0 sat .89 b .25 }
+  A {y .5 r -2 s .9999 b .0002}
+}
+rule A .05
+{
+  SQUARE {h 0 sat .89 b .25 }
+  A {y .5 r 15 s .8 sat .9 b .0002  a -.15}  
+  A {y .5 r -15 s .8 sat .9 b .0002 a -.15}  
+}
+rule A .007
+{
+  SQUARE {h 0 sat .89 b .25 }
+  B {y .5 r 15 s .9}  
+  B {y .5 r -15 s .9}  
+}
+
+rule B
+{
+  SQUARE {h 0 sat .89 b .25 }
+  B {y .5 r 2 s .99 b .0002}
+}
+rule B
+{
+  SQUARE {h 0 sat .89 b .25 }
+  B {y .5 r -2 s .99 b .0002}
+}
+
+rule B .1
+{
+  SQUARE {h 0 sat .89 b .25 }
+  ponItem {}
+  B {y .5 r 2 s .99 b .0002}
+}
+rule B .1
+{
+  SQUARE {h 0 sat .89 b .25 }
+  ponItem {}
+  B {y .5 r -2 s .99 b .0002}
+}
+
+rule ponItem { ponHoja{s 1.5} }
+rule ponItem .25 { fruto{s 5} }
+
+rule ponHoja { hoja {x 1.75 s 5 r 15} }
+rule ponHoja { hoja {x -1.75 s 5 r -15} }
+
+rule fruto 
+{
+  CIRCLE {h 0 sat .7 b .8}
+  CIRCLE {x .25 y -.25 s .9 h 0 sat .7 b .5}
+  CIRCLE {y -.5 s .8 h 0 sat .7 b .4}
+  CIRCLE {x .2 y -.75 s .7 h 0 sat .7 b .3}
+}
+
+rule hoja 
+{
+  CIRCLE {s 1 .7 h 133 sat .79 b .41 }
+  CIRCLE {s 1 .1 h 126 sat .78 b .75 }
+}

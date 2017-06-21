@@ -1,0 +1,143 @@
+
+
+startshape START
+
+background{b -.65125 sat 1 h 20}
+
+tile{s 20 20}
+
+
+rule START{
+
+80 * {y 1} ORDITO {a  -.92 b .2 sat 1}
+//20 * {y 1} ORDITO {a  -.6 b 1}
+
+20 * {y 1} ORDITO {a  -.92 y -.05 x .04 }
+
+
+DENSITY {}
+
+}
+
+
+
+rule DENSITY {
+
+65  * {} TEST{ a -.84993 x 10 h 70 b .32 sat 1}
+5  * {} TEST{ b 1  z 1 a -.1 }
+}
+
+
+
+rule TEST{ 20 * {y 1} BLOT {}}
+
+
+
+
+
+rule BLOT 8500 { BRUSH{x 1} BRUSH{x -0 flip 90}}
+rule BLOT 7000 {BRUSH{x 2} BRUSH{x -1 flip 90}}
+rule BLOT 6500 {BRUSH{x 3} BRUSH{x -2 flip 90}}
+rule BLOT 5000 {BRUSH{x 4} BRUSH{x -3 flip 90}}
+rule BLOT 4500 {BRUSH{x 5} BRUSH{x -4 flip 90}}
+rule BLOT 3000 {BRUSH{x 6} BRUSH{x -5 flip 90}}
+rule BLOT 2500 {BRUSH{x 7} BRUSH{x -6 flip 90}}
+rule BLOT 2000 {BRUSH{x 8} BRUSH{x -7 flip 90}}
+rule BLOT 1500 {BRUSH{x 9} BRUSH{x -8 flip 90}}
+rule BLOT 1000 {BRUSH{x 10} BRUSH{x -9 flip 90}}
+
+rule BLOT 512 {BRUSH{x 11} BRUSH{x -10 flip 90}}
+rule BLOT 256 {BRUSH{x 12} BRUSH{x -11 flip 90}}
+rule BLOT 128 {BRUSH{x 13} BRUSH{x -12 flip 90}}
+rule BLOT 64 {BRUSH{x 14} BRUSH{x -13 flip 90}}
+rule BLOT 32 {BRUSH{x 15} BRUSH{x -14 flip 90}}
+rule BLOT 16 {BRUSH{x 16} BRUSH{x -15 flip 90}}
+rule BLOT 8 {BRUSH{x 17} BRUSH{x -16 flip 90}}
+rule BLOT 4 {BRUSH{x 18} BRUSH{x -17 flip 90}}
+rule BLOT 2 {BRUSH{x 19} BRUSH{x -18 flip 90}}
+rule BLOT 1 {BRUSH{x 20} BRUSH{x -19 flip 90}}
+
+
+rule HAIR{
+1  * {} BLOT{}
+
+HAIR {s .93 y 1 r .1}
+}
+
+
+rule HAIR .01{
+
+HAIR {}
+
+//HAIR {flip 90}
+}
+
+
+
+rule BRUSH{10 * {a -.1} BRUSH1{}}
+
+
+rule BRUSH1{
+//CIRCLE{ s .75 a -.4 }
+SQUARE{s 1.2 .05 r 45}
+SQUARE{s 1.2 .05 r -45}
+
+}
+
+rule BRUSH1{BRUSH1{x .03 }}
+rule BRUSH1{BRUSH1{x -.02 }}
+rule BRUSH1{BRUSH1{x -.01 }}
+
+rule BRUSH1{BRUSH1{y .03 }}
+rule BRUSH1{BRUSH1{y -.02 }}
+rule BRUSH1{BRUSH1{y -.01 }}
+
+rule BRUSH1{BRUSH1{r  .6 }}
+rule BRUSH1{BRUSH1{r  -.5 }}
+
+rule BRUSH1{BRUSH1{s  1.05 }}
+rule BRUSH1{BRUSH1{s .98}}
+
+rule BRUSH1{BRUSH1{b -.1}}
+
+
+
+rule ORDITO {
+20 * {x 1} FILOX {x .5 y .5}
+}
+
+rule FILOX .2 {
+FILO { x .5  }
+FILO { y .5 r 90}
+
+ FILO {}  FILO {r 90}
+
+
+
+FILO { x .5  r 90 a -.4} FILO { y .5 a -.4}
+
+
+}
+
+rule FILO .1 {
+SQUARE{ s 1.1 .05 }
+
+}
+
+
+
+
+rule FILO{ FILO{r 1}}
+rule FILO{ FILO{r -1}}
+
+rule FILO{ FILO{r  .6}}
+rule FILO{ FILO{r  -.5}}
+
+rule FILO{ FILO{r .3}}
+rule FILO{ FILO{r -.4}}
+
+
+rule BACK{
+SQUARE {s 20 20}
+}
+

@@ -1,0 +1,65 @@
+startshape begining
+background {  hue 66.1 sat 0.7 b 0.6 }
+
+
+rule begining{
+	10*{r 36}ag1{ hue 1.2 sat 0.9 b 0.8 a -0.7 z 2}
+	10*{r 36}ag1{s 0.7 a -0.95}
+	10*{r 36}ag1{s 0.7 a -0.97}
+	10*{r 36}ag1{s 0.7 a -0.99}
+	10*{r 36}ag1{ s 0.2 hue 51.3 sat 0.9 b 1.0 z 100 a -0.5}
+//	10*{r 36}ag1{s 0.7  hue 230.8 sat 1.0 b 0.6  z 1 a -0.9}
+}
+
+
+rule ag1 0.001{
+		10*{r 36}ag1{}
+}
+
+rule ag1{
+	SQUARE{}
+	hajtasl{r -90}
+	hajtasr{r 90}
+	ag1{y 0.9 r 2 s 0.95 a -0.01}
+}
+
+rule ag1 0.3{
+	SQUARE{}
+	hajtasl{r -90}
+	hajtasr{r 90}
+	ag1{y 0.9 r 2 s 1.1}
+}
+
+rule ag1 0.1{
+	ag1{f -90}
+}
+
+rule hajtasl{
+	SQUARE{}
+	hajtasl{y 0.9 r -5 s 0.9 a -0.3}
+}
+
+rule hajtasr{
+	SQUARE{}
+	hajtasr{y 0.9 r 5 s 0.95 a -0.2}
+}
+
+rule hajtasl{
+	SQUARE{}
+	hajtasl{y 0.9 r -10 s 0.95 a -0.2}
+}
+
+rule hajtasr{
+	SQUARE{}
+	hajtasr{y 0.9 r 10 s 0.98 a -0.3}
+}
+
+rule ag1 0.01{
+	ag1{}
+	ag1{r 90}
+}
+
+rule ag1 0.01{
+	ag1{}
+	ag1{r -90}
+}

@@ -1,0 +1,50 @@
+startshape sprouting 
+background { hue 20 b -.95 sat .4 }
+
+rule PF {
+	ground { s 2 1 }
+}
+rule ground {
+	CIRCLE { }
+	ground { b .005 s .92 r 40 y .05 hue -1}
+}
+
+rule sprouting {
+	PF { s 1 1 sat .4 hue 20 b -.4}
+	sprouting { s .5 x .75 y -.25 r 15  sat .1}
+	sprouting { s .5 x -.75 y -.25 r -15 z .01 sat .1}
+	sprouting { s .5 .6 y .6 sat -.005 b .1}
+	sprouting { s .4 x .75 y .5 b -.05 sat -.05}
+	sprouting { s .4 x -.75 y .5 hue 3 sat -.05}
+	content { x -.6 y .6 }
+}
+rule sprouting .3 { }
+rule sprouting { sprouting { x .1 } }
+
+rule content {
+	tree { s .4 hue 100}
+}
+rule content 15 { }
+
+
+
+
+
+// tree
+rule tree {
+   SQUARE { }
+   dev_tree { sat 0.04 b 0.01}
+}
+
+rule dev_tree 		{ tree { s 0.95 y .95 } }
+rule dev_tree 7 	{ tree { s 0.974 y 1 z .01} }
+rule dev_tree 		{ HALF { } }
+rule HALF { tree { s 0.7 r 10 y .7 } }
+rule HALF { tree { s 0.8 r -10 y .8 } }
+rule dev_tree {
+   tree { s 0.90 y 0.5 r -20 }
+   tree { flip 90 s 0.90 y 0.5 r 20 }
+   tree { s 0.95 y .9 }
+}
+
+

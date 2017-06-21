@@ -1,0 +1,19 @@
+
+startshape GAUSS 
+
+rule GAUSS {
+
+20000 * {} BIN {}
+}
+rule BIN {
+SQUARE {s .02 1 sat 1 a -.99}
+}
+rule BIN 100 {
+BIN {x 0.01}
+}
+rule BIN 100 {
+BIN {x -0.01}
+}
+rule BIN 100{
+BIN {s 1.002 .98 y -.01}
+}

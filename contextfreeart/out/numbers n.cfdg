@@ -1,0 +1,46 @@
+ 
+startshape start
+ 
+CF::Size = [s 250]
+CF::Background = [b -1]
+CF::Impure = 1 
+ 
+ 
+total=32000
+ 
+teta=360*(sqrt(5)-1)/2
+ 
+ 
+ 
+//-------------------------------------------------------------
+  
+shape fibo (number pos)
+rule
+{
+ 
+dist=sqrt(pos)
+ 
+ang=teta*pos
+ 
+yy=sin(ang)*dist
+xx=cos(ang)*dist
+ 
+hh= rand_static(3600)
+ 
+SQUARE [y yy x xx s 1 h hh r (ang +45) b 1 sat 1]
+ 
+}
+ 
+//-------------------------------------------------------------
+ 
+shape tre(number step)
+{
+  loop j = (step * 2), total, step [] fibo(j) [a -.25]
+}
+ 
+//-------------------------------------------------------------
+ 
+shape start{
+  loop j = 2, total/2 , 1 [h (180 + 2 * 360/total) z 1]
+tre(j) []
+}

@@ -1,0 +1,19 @@
+startshape BoxsAndBalls
+ 
+background{b -1}
+ 
+rule BoxsAndBalls{
+    cube{} cube{s .3 x 1.9 y-1.19 r 180}
+    cube{x 1.2 y-1.18 s.5 r 180} cube{x.4 y-.62 s.3}
+    ball{x 1 y-1}ball{x 1.4 y-1.2 s 1.1}ball{x.9 y-.08 s.8}ball{x 1.5 y-.28 s.83}
+}
+rule cube{ 
+   SQUARE{x.5 y-.5  skew 1 20 sat 1 b.9} 
+   SQUARE{x 1.5 y-.5 skew 1 340 sat 1 b.7} 
+   SQUARE{
+   s.96 skew 25 25 r 315 x 1 y-1.18 sat 1 b.5} 
+}
+rule ball{
+    20*{b.1 s.9 z.1 h 4 x.003 y.002}
+    CIRCLE{s.3 b.95 sat .5 a.99}
+}

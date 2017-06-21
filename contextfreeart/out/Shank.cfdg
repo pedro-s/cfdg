@@ -1,0 +1,21 @@
+startshape GAR
+
+rule DISH {
+TRAINGLE { }
+DISH { r 10 x 10 y 10 s .8 }
+DISH { r -10 x -10 y -10 s .8 }
+}
+
+rule TRAINGLE {
+TRIANGLE { s 55}
+TRIANGLE { s 50 y 10 h 50 sat 1 b 1 }
+TRIANGLE { s 45 y 20 sat 1 b 1 }
+TRIANGLE { s 40 y 30 b 1 }
+}
+
+rule GAR {
+DISH { }
+DISH { flip 90 }
+DISH { flip 180 }
+DISH { flip 270 }
+}

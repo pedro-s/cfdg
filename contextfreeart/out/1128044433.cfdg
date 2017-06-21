@@ -1,0 +1,24 @@
+startshape four
+
+rule four
+{
+	flower{hue 50 sat 1}
+	flower{r 180 hue 50 sat 1}
+	flower{r 90 hue 0 sat 1}
+	flower{r -90 hue 0 sat 1}
+}
+
+rule flower
+{
+
+	trianglerose{}
+	trianglerose{x 1 y 1 r 180}
+}
+
+rule trianglerose
+{
+	TRIANGLE{b 0}
+	TRIANGLE{size .99 b 1}
+	trianglerose{size .98 r 3}
+}
+

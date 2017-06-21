@@ -1,0 +1,9 @@
+startshape little_circle
+background {b -1}
+
+rule little_circle {
+		CIRCLE {hue 199.8 sat 0.9 b 0.9 a -.6 }
+		little_circle {x 3.5 hue -3.5 s  0.99 r 22}
+		little_circle {y -.9 hue 35.5 s .30 r -45}
+}
+

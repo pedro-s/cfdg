@@ -1,0 +1,50 @@
+startshape stem
+
+rule stem { steml { hue .5 sat 1 b .1 } }
+rule stem { stemr { hue .5 sat 1 b .1 } }
+
+rule steml {
+	SQUARE {}
+	steml { y 1 r .25 s .99 }
+}
+
+rule steml 0.005 {
+	stemr {}
+}
+
+rule steml 0.025 {
+	stem { r 20 }
+	steml {}
+	CIRCLE { s 2 }
+	CIRCLE { s 8 alpha -.5 }
+}
+
+rule stemr {
+	SQUARE {}
+	stemr { y 1 r -.25 s .99 }
+}
+
+rule stemr 0.005 {
+	steml {}
+}
+
+rule stemr 0.025 {
+	stem { r -20 }
+	stemr {}
+	CIRCLE { s 2 }
+	CIRCLE { s 8 alpha -.5 }
+}
+
+rule steml 0.005 { flower { s 16 hue 80 b .75 } }
+
+rule stemr 0.005 { flower { s 16 hue 80 b .75 } }
+
+rule flower {
+	TRIANGLE {}
+	TRIANGLE { r 60 }
+	TRIANGLE { r 120 }
+	TRIANGLE { r 180 }
+	TRIANGLE { r 240 }
+	TRIANGLE { r 300 }
+	flower { s .99 r 1 hue -.25 }
+}

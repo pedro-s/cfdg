@@ -1,0 +1,28 @@
+startshape seed
+background {b -1}
+
+rule seed {
+cluster {s .38 hue 100 }
+cluster { y 1 s .38 hue 100 }
+cluster {y .5 x .866025 s .38 hue 100 }
+cluster {y -.5 x .866025 s .38 hue 100 }
+cluster {y -1 s .38 hue 100 }
+cluster {y -.5 x -.866025 s .38 hue 100 }
+cluster {y .5 x -.866025 s .38 hue 100 }
+}
+
+rule cluster{
+fadespiral {}
+fadespiral { x 1}
+fadespiral {x .5 y .866025}
+fadespiral {x -.5 y .866025}
+fadespiral {x -1}
+fadespiral {x -.5 y -.866025}
+fadespiral {x .5 y -.866025}
+}
+
+
+rule fadespiral {
+CIRCLE {}
+fadespiral {x .9 r -60.1 s .999 b .001 sat 1 hue .015}
+}

@@ -1,0 +1,48 @@
+startshape start
+background { b -1 }
+
+rule start {
+	stamm {b 0.3 sat 1 hue 80}
+}
+rule stamm 1 {
+	CIRCLE {}
+	stamm {y 0.1 b 0.01 s 0.99}
+}
+rule stamm 0.05 {
+	astl {hue 1}
+	astr {hue 1}
+}
+rule astl 1 {
+	CIRCLE {}
+	astl {y 0.2 r 2 s 0.99 h 0.1 b 0.02} 
+}
+rule astl 1 {
+	CIRCLE {}
+	astl {y 0.2 r 4 s 0.99 h 0.1 b 0.02}
+}
+rule astl 0.02 {
+	astr {}
+	astl {}
+}
+rule astl 0.01 {
+	blume {s 1.2 hue 250 z 1}
+}
+rule astr 1 {
+	CIRCLE {}
+	astr {y 0.2 r -2 s 0.99 h 0.1 b 0.02}
+}
+rule astr 1 {
+	CIRCLE {}
+	astr {y 0.2 r -4 s 0.99 h 0.1 b 0.02}
+}
+rule astr 0.02 {
+	astl {}
+	astr {}
+}
+rule astr 0.01 {
+	blume {s 1.2 hue 250 z 1}
+}
+rule blume {
+	CIRCLE {}
+	blume {hue 1 r 45 s 0.99 x 1 z 1}
+}

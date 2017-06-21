@@ -1,0 +1,36 @@
+startshape LINES
+background { b -1 }
+rule LINES {
+
+
+ALL {}
+}
+rule ALL {
+LINE {}
+}
+
+
+rule LINE {
+CIRCLE1{}
+LINE {s .99 r 63 x -11.2 y 22.2}
+}
+
+rule LINE {
+
+LINE {s .95 r -41 x 8.2 y -7.2}
+CIRCLE1{}
+}
+
+
+rule STREAK
+{
+CIRCLE{s 1 .3}
+STREAK {x .2 s .97 b -.02}
+}
+
+rule CIRCLE1 {
+4 * {r 90}STREAK{b 1}
+60 * {b .05 s .93}CIRCLE{s 5.3}
+}
+
+//

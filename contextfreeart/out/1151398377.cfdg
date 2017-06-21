@@ -1,0 +1,25 @@
+/*Good Variations : I UT AAC JSV HKJ DLF ANY*/
+
+startshape THREE
+
+background {b -1}
+
+rule THREE {ALL {} ALL {flip 120} ALL {flip 240}}
+
+rule ALL 1.6 {STARS {} ALL{x 3 r 20 b 0.05 s 1.1}}
+
+rule ALL 0.22 {ALL{flip -15} ALL {b -0.8 y 2 x 1 s 0.2 hue 360}}
+rule ALL 0.22 {ALL{flip -15} ALL {b -0.8 y 2 x 1 s 0.2 hue 240}}
+rule ALL 0.22 {ALL{flip -15} ALL {b -0.8 y 2 x 1 s 0.2 hue 118}}
+rule ALL 0.22 {ALL{flip -15} ALL {b -0.8 y 2 x 1 s 0.2 hue 287}}
+
+rule ALL 0.3 {}
+
+rule STARS {TR {s 2 b 0} TR {s 1.93 sat 1 b 0}}
+
+rule TR {TR {r 30 s 0.85} TR2 {}}
+rule TR {TR { r 5 s 0.85} TR2 {}}
+rule TR {TR {r 10 s 0.85} TR2 {}}
+rule TR {TR {r 60 s 0.85} TR2 {}}
+
+rule TR2 {TRIANGLE {} TRIANGLE {r 40} TRIANGLE {r 80}}

@@ -1,0 +1,49 @@
+startshape CRACK
+background {b -1}
+rule CRACK {
+
+LINES {b 1 hue 212 sat 111}
+//LINES {x 45 r 55}
+//LINES {y 23 x -7 s 0.9 r 15}
+}
+
+
+
+
+rule LINES {
+LINE { x -22 s 0.9 }
+LINES {x 1 s 0.9 }
+}
+rule LINES {
+LINE { x 21 s 0.9 }
+LINES {x -1 s 0.9 r 55}
+}
+
+rule LINE 0.003{
+CIRCLE {} 
+LINES {s 0.99  flip 90}
+}
+
+
+rule LINE 0.001{
+CIRCLE {} 
+LINES {s 0.99  flip -90 r .1}
+}
+
+
+rule LINE {
+CIRCLE {} 
+LINE {s 0.995   b -0.007 r .1}
+}
+
+rule LINE {
+ CIRCLE {} 
+ LINE {s 0.995 r .3  b -0.007}
+}
+
+rule LINE {
+ CIRCLE {} 
+ LINE {s 0.995 r -0.3 x -.3 b 0.001}
+}
+
+

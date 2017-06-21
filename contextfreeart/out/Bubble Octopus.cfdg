@@ -1,0 +1,25 @@
+startshape trails
+
+background {b -1}
+
+rule trail {
+	SQUARE{s 2}
+	trail{sat 0.003 a -0.002 r 0.2 y 0.5 s 0.999 y 0.5}
+}
+
+rule trail 0.002 { trail{flip 90} ring{x 15}}
+rule trail 0.002 { trail{flip 90} }
+
+rule trail 0.0001 { trails{h -200} }
+
+rule trails {
+	12*{r 30}trail{b 1 sat 0 h 200}
+}
+
+rule ring {
+	180*{r 2}SQUARE{s 6 0.5 y 6 h 200}
+}
+
+rule ring 0.7 {
+	180*{r 2}SQUARE{s 3 6 y 3 h 200}
+}

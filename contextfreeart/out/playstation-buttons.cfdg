@@ -1,0 +1,34 @@
+/* copyright (c) 2012 by Jonas Kölker.  License: WTFPL, or contact me */
+startshape buttons
+background {brightness -0.25}
+
+rule buttons {
+    circle   {x +1}
+    triangle {y +1}
+    square   {x -1}
+    cross    {y -1}
+}
+
+rule circle {
+    CIRCLE {}
+    CIRCLE {size 0.8 hue 0 saturation 0.75 brightness 1}
+    CIRCLE {size 0.7}
+}
+
+rule square {
+    CIRCLE {}
+    SQUARE {size 0.6 hue (5/6*360) saturation (1/3) brightness 1}
+    SQUARE {size 0.5}
+}
+
+rule triangle {
+    CIRCLE {}
+    TRIANGLE {size 0.7 hue (2.5/6*360) saturation 1 brightness 1}
+    TRIANGLE {size 0.55}
+}
+
+rule cross {
+    CIRCLE {}
+    SQUARE {rotate -45 hue (3.5/6*360) saturation 0.5 brightness 1 s 0.05 0.8}
+    SQUARE {rotate +45 hue (3.5/6*360) saturation 0.5 brightness 1 s 0.05 0.8}
+}

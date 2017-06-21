@@ -1,0 +1,38 @@
+startshape FORESTDOWN
+background {h 240.00 sat 1.0000 b 0.1333}
+rule FORESTDOWN {
+
+TRIANGLE {h 60.00 sat 1.0000 b 0.182 y-.4 s .4}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.3}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y .6}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.9}
+TRIANGLE {h 60.00 sat 1.0000 b 0.182 y-.4 s .4 x-.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 x-.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.3 x-.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y .6 x-.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.9 x-.9}
+TRIANGLE {h 60.00 sat 1.0000 b 0.182 y-.4 s .4 x.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 x.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.3 x.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y .6 x.9}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.9 x.9}
+TRIANGLE {h 60.00 sat 1.0000 b 0.182 y-.4 s .4 x 1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 x 1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.3 x 1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y .6 x 1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.9 x 1.8}
+TRIANGLE {h 60.00 sat 1.0000 b 0.182 y-.4 s .4 x -1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 x -1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.3 x -1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y .6 x -1.8}
+TRIANGLE {h 120.00 sat 1.0000 b 0.4972 skew 1 1 y.9 x -1.8}
+
+
+
+
+
+}
+
+
+

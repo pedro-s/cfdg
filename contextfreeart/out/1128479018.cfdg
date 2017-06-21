@@ -1,0 +1,35 @@
+startshape fuzzball
+include split.cfdg
+
+rule fuzzball
+{
+	fullsun{x -15 y 10 size .5 sat .1 b .5}
+	fullsun{size .2 x 12 y -15 hue 50 sat 1}
+	SQUARE{size 2 b 1}
+}
+
+rule fullsun
+{
+	halfsun{}
+	halfsun{r 180}
+}
+
+rule halfsun
+{
+	hairy{}
+	hairy{r 90}
+}
+
+rule hairy
+{
+	split{b .5}
+	split{r 10}
+	split{r 20 b .5}
+	split{r 30}
+	split{r 40 b .5}
+	split{r 50}
+	split{r 60 b .5}
+	split{r 70}
+	split{r 80 b .5}
+	split{r 90}	
+}

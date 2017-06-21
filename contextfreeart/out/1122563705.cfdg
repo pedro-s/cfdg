@@ -1,0 +1,51 @@
+startshape WHOLE { color }
+
+rule WHOLE
+{
+	FILL { }
+	QUAD { x -0.5 y -0.5 }
+	QUAD { x  0.5 y -0.5 }
+	QUAD { x  0.5 y  0.5 }
+	QUAD { x -0.5 y  0.5 }
+}
+
+rule QUAD
+{
+	FILL { }
+}
+
+rule QUAD 5
+{
+	WHOLE { size 0.5 }
+}
+
+rule QUAD 0.5
+{
+	// nothing
+}
+
+rule FILL { HSQUARE { size 1 } }
+
+// apply variable hue
+rule HSQUARE { SSQUARE { size 1 hue 100 } }
+rule HSQUARE { SSQUARE { size 1 hue 110 } }
+rule HSQUARE { SSQUARE { size 1 hue 120 } }
+rule HSQUARE { SSQUARE { size 1 hue 130 } }
+rule HSQUARE { SSQUARE { size 1 hue 140 } }
+rule HSQUARE { SSQUARE { size 1 hue 150 } }
+
+// apply variable saturation
+rule SSQUARE { BSQUARE { size 1 sat   0 } }
+rule SSQUARE { BSQUARE { size 1 sat 0.2 } }
+rule SSQUARE { BSQUARE { size 1 sat 0.4 } }
+rule SSQUARE { BSQUARE { size 1 sat 0.6 } }
+rule SSQUARE { BSQUARE { size 1 sat 0.9 } }
+rule SSQUARE { BSQUARE { size 1 sat   1 } }
+
+// apply variable brightness
+rule BSQUARE { SQUARE { size 1 b   0 } }
+rule BSQUARE { SQUARE { size 1 b 0.2 } }
+rule BSQUARE { SQUARE { size 1 b 0.4 } }
+rule BSQUARE { SQUARE { size 1 b 0.6 } }
+rule BSQUARE { SQUARE { size 1 b 0.8 } }
+rule BSQUARE { SQUARE { size 1 b   1 } }

@@ -1,0 +1,80 @@
+startshape cityscape
+background { b -1}
+
+
+rule cityscape {
+   SKY [x -5 y -9 s 30 60 hue 265.4 sat 0.9 b 0.3 z -2999]
+   CIRCLE [ x -8 y 7 s 12  hue 25.2 sat 0.9 b 1.0 z -3000 ]
+   CIRCLE[  x -3 s 10 3 b -1 z -2998 ]
+   dawncity [ ]
+}
+
+// the city
+rule dawncity {
+spawn [ ]
+dawncity [ a -.2 s .7 x .5 y 1.5 z -200 ]
+dawncity [ a -.05 s .8 x -3.5 y .05 z -200 ]
+}
+
+
+// a scyscraper
+rule spawn { blockage { z 200 } }
+
+rule blockage { block { } alternatives { } }
+
+rule alternatives { }
+
+rule alternatives 30 { top { } }
+rule alternatives 0.2 { right { } }
+rule alternatives { front { } }
+rule alternatives { back { } }
+rule alternatives { front { } back { } }
+rule alternatives { top { } back { } }
+rule alternatives 0.1 { top { } right { } }
+
+rule front { blockage { s 0.6 x -0.21 y 0.1 z 3} }
+rule back { blockage { s 0.8 x 0.75 y 0.25 z -3} }
+rule top { blockage { y 0.9 } }
+rule right { blockage { y -0.3 x 0.95 z 3} }
+
+rule block { 
+   drawb { y 0.009 s 0.9 1 skew 0 -16 z 2}
+   drawb { s 0.6 1 x 0.752 y -0.072 skew 0 7 b 0.4 z 1}
+   SQUARE { s 0.3 0.94 skew 0 -30 r 72.5 y 0.57 x 0.31 b 0.6}
+}
+rule drawb {
+  SQUARE [  hue 4.7 sat 1.0 b -0.9  ]
+  start [ ]
+}
+
+
+// a fractal window
+rule start { gr1 [ a -1 s 1 1] }
+rule gr1 {
+draw [ ]
+gr1 [ x -.25 y -.25 s .47 a .15]
+gr1 [ x -.25 y .25 s .47 a .3]
+gr1 [ x .25 y -.25 s .47 a .15]
+gr1 [ x .25 y .25 s .47 a .3]
+}
+rule gr1 { gr1 [ b .1 ] }
+rule gr1 { gr1 [ b -.1 ] }
+
+rule draw { CIRCLE [  hue 155.2 sat 0.4 ] }
+rule draw { CIRCLE [  hue 193.0 sat 0.8 ] }
+
+
+// sky
+rule SKY {
+60* { x 0.0167 } VSKY { x -.5 y .5 b 1 sat 1}
+}
+rule VSKY {
+20* { y -0.0167 a -0.1 } HSKY { }
+}
+
+rule HSKY {
+SQUARE {s 0.016}
+}
+rule HSKY {
+SQUARE { s 0.05 r 10}
+}

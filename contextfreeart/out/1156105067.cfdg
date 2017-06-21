@@ -1,0 +1,70 @@
+background { b -.5}
+startshape outofthegray
+
+rule outofthegray
+{
+	start {}
+}
+
+rule start
+{
+	startspine{}
+	start{}
+}
+rule start
+{
+	startspine{}
+	start{ r 7 s .999}
+}
+rule start
+{
+	startspine{}
+	start{ r 2 s .999}
+}
+rule start
+{
+	startspine{}
+	start{ r 25 s .999}
+}
+rule startspine
+{
+	spinePL{b .5}
+}
+
+rule startspine
+{
+	spineNL{b .5}
+}
+
+rule startspine
+{
+	spinePR{b .5}
+}
+
+rule startspine
+{
+	spineNR{b .5}
+}
+
+rule spinePL
+{
+	CIRCLE{}
+	spinePL{ y .1 r .2 s .99 b .005}
+}
+
+rule spineNL
+{
+	CIRCLE{}
+	spineNL{y .1 r .2 s .99 b -.005}
+}
+
+rule spinePR
+{
+	CIRCLE{}
+	spinePR{ y .1 r -.2 s .99 b .005}
+}
+rule spineNR
+{
+	CIRCLE{}
+	spineNR{ y .1 r -.2 s .99 b -.005}
+}

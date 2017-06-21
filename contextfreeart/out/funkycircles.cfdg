@@ -1,0 +1,26 @@
+startshape circ1
+
+
+rule circ1
+{
+	circ{b 1 sat 1 }
+}
+rule circ 1
+{
+	CIRCLE{}
+	circ{s 1 .97 1 b .01 hue 20}
+}
+
+rule circ 1
+{
+	circ{s .97 1 b .01 hue 20}
+}
+
+rule circ 1
+{
+	circ{s 1.02}
+}
+rule circ 1
+{
+	circ{ r 20}
+}

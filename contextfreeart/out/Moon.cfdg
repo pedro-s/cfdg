@@ -1,0 +1,14 @@
+startshape ROUND
+background {b-1}
+rule ARM
+{
+CIRCLE {size .80 h 233.38 sat 1.0000 b 0.8066 }
+ARM { y 3 size 0.99 r 200 h 233.38 sat 1.0000 b 0.8066 }
+}
+
+rule ROUND
+{
+CIRCLE { h 225.42 sat 1.0000 b 1.0000 }
+CIRCLE {skew 1 1 h 348.33 sat 1.0000 b 0.8066 size 1.001}
+CIRCLE { skew  1  1 }
+}

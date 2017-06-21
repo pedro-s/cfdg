@@ -1,0 +1,37 @@
+startshape START
+background {b -1}
+//tile {  s  10 10}
+
+
+rule START{
+
+CIRCLE {b  1  sat .2  s 14 h -40 } 
+4800 * {r (360/120)} GO{}
+
+}
+
+
+
+rule GO{LINE{y 10 a 1 b 0}}
+//rule GO{GO{r 2}}
+
+
+
+
+rule LINE{
+CIRCLE{s  .8 1.2}
+LINE{ y -.6 s .93 r  5 b .04 a .1 sat .1}
+LINE{ y -.6 s .92 r 2   sat .1}
+LINE{ y -.6 s .91 r  4 }
+
+//CIRCLE {b 1 sat 0  s .7 z 1} 
+}
+
+rule LINE 1.92{}
+
+//rule LINE 5{LINE{r -.5}}
+//rule LINE 5{LINE{flip 90}}
+//rule LINE {LINE{b .05}}
+
+
+

@@ -1,0 +1,23 @@
+startshape mit
+
+background {b -1}
+
+rule mit {
+	foo {sat 0.9 b 0.5 h 77}
+}
+
+rule foo {
+	TRIANGLE {}
+	baz {}
+	baz {r 120}
+	baz {r 240}
+}
+
+rule baz {
+	bar {s 0.5 y 0.5}
+}
+
+rule bar {
+	CIRCLE {}
+	foo {x 1 y 2 h 123 b -0.05}
+}

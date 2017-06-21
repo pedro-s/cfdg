@@ -1,0 +1,40 @@
+startshape candyshoppe
+background {b -1}
+
+rule candyshoppe { 
+ circlering { } 
+ candyshoppe {s 0.95 r 31.3 x 0.3} 
+} 
+
+
+rule circlering { 
+ subcirclering {r 5} 
+ subcirclering {r 10} 
+ subcirclering {r 15} 
+ subcirclering {r 210} 
+ subcirclering {r 25} 
+ subcirclering {r 30 h 180.00 sat 1.0000 b 1.0000} 
+} 
+
+rule subcirclering { 
+ arm {r 30 h 0.00 sat 1.0000 b 1.0000} 
+ arm {r 60 h 30.00 sat 1.0000 b 1.0000} 
+ arm {r 90 h 60.00 sat 1.0000 b 1.0000} 
+ arm {r 120 h 90.00 sat 1.0000 b 1.0000} 
+ arm {r 150 h 120.00 sat 1.0000 b 1.0000} 
+ arm {r 180 h 150.00 sat 1.0000 b 1.0000} 
+ arm {r 210 h 180.00 sat 1.0000 b 1.0000} 
+ arm {r 240 h 210.00 sat 1.0000 b 1.0000} 
+ arm {r 270 h 240.00 sat 1.0000 b 1.0000} 
+ arm {r 300 h 270.00 sat 1.0000 b 1.0000} 
+ arm {r 330 h 300.00 sat 1.0000 b 1.0000} 
+ arm {r 360 h 330.00 sat 1.0000 b 1.0000} 
+} 
+
+rule arm { 
+ ball {x 15 s 1 } 
+} 
+
+rule ball { 
+ TRIANGLE {s 0.75 } 
+} 

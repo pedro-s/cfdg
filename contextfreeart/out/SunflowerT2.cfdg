@@ -1,0 +1,8 @@
+startshape Sunflower
+
+background { b -1}
+
+rule Sunflower {
+  TRIANGLE {sat 1 b 1 h 55 s 0.035 flip 137.50776}
+  Sunflower { h -0.02 r 137.50776 x 1.3 s 0.999}
+}

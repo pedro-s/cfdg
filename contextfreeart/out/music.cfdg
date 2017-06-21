@@ -1,0 +1,87 @@
+startshape begin
+
+rule begin {
+	2* {x 401} staff { }
+	8* { x 100 } note { x -160 }
+}
+
+
+rule staff {
+	5* { y 30 } SQUARE { size 400 1 }
+	SQUARE { size 1 120 x -200 y 60 }
+	SQUARE { size 1 120 x 200 y 60 }
+}
+
+rule note { 
+	E { }
+}
+
+rule note {
+	F { }
+}
+
+rule note {
+	G { }
+}
+
+rule note {
+	A { }
+}
+
+rule note {
+	B { }
+}
+
+rule note {
+	c { }
+}
+
+rule note {
+	d { }
+}
+
+rule note {
+	e { }
+}
+
+rule note {
+	hf { }
+}
+
+
+rule E { 
+	CIRCLE { size 40 30 }
+	SQUARE { size 6 80 y 40 x 17 }
+}
+
+rule F { 
+	E { y 15 }
+}
+
+rule G {
+	F { y 15 }
+}
+
+rule A {
+	G { y 15 }
+}
+
+rule B {
+	A { y 105 r 180 }
+}
+
+rule c {
+	B { y 15 }
+}
+
+rule d {
+	c { y 15 }
+}
+
+rule e { 
+	d { y 15 }
+}
+
+rule hf {
+	e { y 15 }
+}

@@ -1,0 +1,21 @@
+startshape tiles 
+
+tile {s 4}
+
+background {b -1}
+
+rule tiles {
+	4*{r (360/4) x 0}
+	skyrim{}
+}
+
+rule skyrim {
+	2*{y 2 x 2}
+	CIRCLE {b .1}
+	2*{y 2 x 2}
+	CIRCLE {b .3 s .9}
+	SQUARE {b 0 x 2 r 45}
+	SQUARE {b 0 y 2 r 45}
+	2* {f 45}
+	skyrim {s 1 .5 b .1 y .5}
+}

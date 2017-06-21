@@ -1,0 +1,49 @@
+startshape WHATEVER
+
+background {h 87.27 sat 0.9344 b 1.0000}
+
+rule WHATEVER
+
+{
+
+20* {r 20}
+
+TRIANGLE {size 5 x-5 y 5 h 222.75 sat 0.8020 b 1.0000 }
+
+20* {r 20}
+
+TRIANGLE {size 4.5 x-4.5 y 4.5 h 200.85 sat 0.7491 b 1.0000}
+
+20* {r 20}
+
+TRIANGLE {size 4 x-4 y 4 h 175.46 sat 0.7022 b 1.0000}
+
+20* {r 20}
+
+TRIANGLE {size 3.5 x-3.5 y 3.5 h 117.90 sat 0.6412 b 1.0000}
+
+20* {r 20}
+
+TRIANGLE {size 3 x-3 y 3 h 66.32 sat 0.6916 b 1.0000}
+
+20* {r 20}
+
+TRIANGLE {size 2.5 x-2.5 y 2.5 h 66.32 sat 0.6916 b 1.0000 }
+
+20* {r 20}
+
+TRIANGLE { size 2 x-2 y 2 h 41.92 sat 0.7317 b 1.0000}
+
+20* {r 20}
+
+TRIANGLE { size 1.5 x-1.5 y 1.5 h 12.15 sat 0.7388 b 1.0000}
+
+20* {r 20}
+
+TRIANGLE { size 1.2 x-1 y 1 h 349.05 sat 0.7017 b 1.0000 }
+
+20* {r 20}
+
+TRIANGLE { size .8 x-.5 y .5 h 286.70 sat 0.6960 b 1.0000}
+
+}

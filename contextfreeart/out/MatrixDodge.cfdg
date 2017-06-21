@@ -1,0 +1,140 @@
+startshape full
+
+rule full{
+	trail{}
+	trail{y -8}
+	trail{y -20}
+	trail{y 9}
+	trail{y 21}
+	stickman{x 20
+		s 8}
+}
+
+rule trail{
+	SQUARE{s 0.05 1.3
+		b 0.5}
+	trail{x 0.4}
+}
+
+rule trail{
+	SQUARE{s 0.05 1.4
+		b 0.5}
+	trail{x 0.4}
+}
+
+rule trail{
+	SQUARE{s 0.05 1.5
+		b 0.5}
+	trail{x 0.4}
+}
+
+rule trail{
+	SQUARE{s 0.05 1.1
+		b 0.5}
+	trail{x 0.4}
+}
+
+rule trail{
+	SQUARE{s 0.05 1.2
+		b 0.5}
+	trail{x 0.4}
+}
+
+rule trail 0.1{
+	bullet{x 0.4}	
+}
+
+rule bullet{
+	SQUARE{}
+	CIRCLE{x 0.5}
+	SQUARE{y 0.4
+		s 0.8 0.1
+		b 1}
+	TRIANGLE{x 0.43 y 0.4
+		r 270
+		s 0.1
+		b 1}
+}
+
+rule stickman{
+	CIRCLE{}
+	body{}
+}
+
+rule stickman 10{
+	stickman{r 94}
+}
+
+rule body{
+	torso{y -0.5
+		s 0.2}
+	arm1{y -0.6
+		s 0.2}
+	arm1{y -0.6
+		s 0.2}
+	leg1{y -2.5
+		s 0.2}
+	leg1{y -2.5
+		s 0.2}
+}
+
+rule arm1 10{
+	arm1{r 94}
+}
+
+rule arm1{
+	limb{}
+	arm2{y -6}
+}
+
+rule arm2 10{
+	arm2{r 94}
+}
+
+rule arm2{
+	limb{}
+}
+
+rule leg1 10{
+	leg1{r 94}
+}
+
+rule leg1{
+	limb{}
+	leg2{y -6}
+}
+
+rule leg2 10{
+	leg2{r 94}
+}
+
+rule leg2{
+	limb{}
+	foot{y -6
+		r 30}
+}
+
+rule foot 10{
+	foot{r 1}
+}
+
+rule foot{
+	CIRCLE{}
+	SQUARE{y -1
+		s 1 2}
+	CIRCLE{y -2}
+}
+
+rule limb{
+	CIRCLE{}
+	SQUARE{y -3
+		s 1 6}
+	CIRCLE{y -6}
+}
+
+rule torso{
+	CIRCLE{}
+	SQUARE{y -5
+		s 1 10}
+	CIRCLE{y -10}
+}

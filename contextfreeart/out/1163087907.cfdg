@@ -1,0 +1,18 @@
+startshape START
+
+background {b -1}
+
+rule START {
+	1000 * {} A {}
+}
+
+rule A {
+	SQUARE {sat 1 b 1}
+	A {y 2 s 0.999 r 20 h 0.1}
+}
+
+rule A {
+	SQUARE {sat 1 b 1}
+	A {y 2 s 0.999 r -20 h 0.1}
+}
+

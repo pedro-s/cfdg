@@ -1,0 +1,14 @@
+startshape MultiStar
+
+rule MultiStar {
+	ColorStar{}
+	MultiStar{r 15 s 0.7 h 80}
+}
+
+rule ColorStar {
+	Star {hue 100 sat 10 b 0.8}
+}
+
+rule Star {
+	6 * {r 30} TRIANGLE{}
+}

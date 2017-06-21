@@ -1,0 +1,33 @@
+// UQN UAU AAP AAU AAV ABD ABM ABO ABW ACA ACY
+//  a serendipitous mistake
+
+startshape go
+background {hue 270 saturation 1 brightness -.3}
+
+rule go { treechoice{} }
+
+rule treechoice{ tree {} }
+rule treechoice { tree {flip 90}}
+
+rule tree  .5 // draw and continue
+{
+	JOINT {}
+	tree {y .999 s .996}
+}
+
+rule tree .05 // branch
+{
+	tree {x -.3536 y -.3536 s .55 r 45}
+	tree{}
+}
+
+rule tree .05 // branch
+{
+	tree {x .3536 y -.3536 s .5 r -45}
+	tree {}
+}
+
+rule tree 15 { tree {x .0087262 y -.0087262 s .998  r -1} } // random rotation
+rule tree .001 { CIRCLE {y -.5} } // end it
+
+rule JOINT { SQUARE {} }

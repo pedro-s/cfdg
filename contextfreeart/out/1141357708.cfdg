@@ -1,0 +1,6 @@
+startshape SPIRO
+
+background { b -1 }
+
+rule SPIRO{ TRISPI{} SPIRO{ x .5 r 60 size .9 b .05 hue .5 sat 1 } }
+rule TRISPI{ TRIANGLE{} TRISPI{ size .9 r 3.8 b .05 hue .5 sat 1 } }

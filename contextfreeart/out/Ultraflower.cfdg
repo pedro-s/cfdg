@@ -1,0 +1,22 @@
+startshape ultraflower
+
+background {b -1}
+
+rule ultraflower {
+	megaflower { }
+	ultraflower { s 0.99 y 10 r 35 h 90 }
+}
+
+rule megaflower {
+	flower {}
+	megaflower { s 0.75  r 35 }
+}
+
+rule flower {
+	12*{ r 30 h 30 } curl { }
+}
+
+rule curl {
+	CIRCLE { }
+	curl { s 0.95 y 0.5  r 10 b 0.1 sat 0.1 }
+}

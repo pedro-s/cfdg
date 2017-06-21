@@ -1,0 +1,20 @@
+startshape fireworks
+background{b-.7 sat.9 h 240}
+rule fireworks
+{10*{sat.9 b.1 s.9 h 2 x 35}
+ CIRCLE{x 450 y 30 s 1200 200 h 240}
+ fires{z 1}}
+rule fires
+{5*{x 190 z-.2 b-.4 a.5 sat.5}
+ {3*{y 50 x 50 z-.1 b-.3 a.5 sat.5}
+  start{}}}
+rule start{
+ 1100*{s.999}A{x 5 r 190}}
+rule start{
+ 1100*{s.999}A{x 1 r 160}}
+rule A{
+ SQUARE{sat .9 b 1}
+ A{y 1 s.999 r 5 h.9}}
+rule A{
+ SQUARE{sat .9 b 1}
+ A{y-10 s.999 r-5 h.7}}

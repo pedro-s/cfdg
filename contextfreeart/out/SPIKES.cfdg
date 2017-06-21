@@ -1,0 +1,17 @@
+startshape ARM
+background { b -0.8 sat 1 h 15}
+
+rule ARM 1{ 
+TRIANGLE { skew 10 50}
+TRIANGLE { skew 2 100  h 100 }
+TRIANGLE { skew 100 2 s .5 b 1 h 10}
+ARM{  y .2 s .99 r 15 h 10}
+
+}
+rule ARM 2{ 
+
+TRIANGLE { skew 2 100 r 50 h 10 }
+TRIANGLE { skew 700 2 s .5 b 1 h 10}
+ARM{  y 1 x 3 . s .99 r 35 h 10}
+
+}

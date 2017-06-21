@@ -1,0 +1,102 @@
+startshape feather
+
+background {
+	hue 28
+	sat .48
+	b -.125
+	}
+
+rule feather {
+	atom {}
+	feather {
+		s 0.997
+		y -.45
+		r .125
+		b 0.0001
+		hue .1
+		alpha 0.1
+	}
+}
+
+rule feather {
+	atom {}
+	feather {
+		s 0.997
+		y -.45
+		r .125
+		b 0.0001
+		hue -.1
+		alpha 0.1
+	}
+}
+
+rule feather {
+	atom {}
+	feather {
+		s 0.997
+		y -.45
+		r .125
+		b -0.0001
+		hue -.1
+		alpha 0.1
+	}
+}
+
+rule feather {
+	atom {}
+	feather {
+		s 0.997
+		y -.45
+		r .125
+		b -0.0001
+		hue .1
+		alpha 0.1
+	}
+}
+
+rule atom {
+	proton{}
+}
+
+rule atom {
+	electron {}
+}
+
+rule proton {
+	SEED{}
+	proton {
+		y .25
+		r .25
+		s .999
+		b .001
+		alpha -0.001
+	}
+}
+
+rule proton .005 {
+	electron{}
+}
+
+rule electron {
+	SEED{}
+	electron {
+		y .25
+		r -.25
+		s .999
+		b .001
+		alpha -0.001
+	}
+}
+
+rule electron .005 {
+	proton{}
+}
+
+rule SEED {
+	CIRCLE {
+		alpha -.75
+		h 1
+		sat .45
+		b .5
+	}
+}

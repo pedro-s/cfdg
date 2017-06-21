@@ -1,0 +1,44 @@
+startshape colortree {color}
+
+rule colortree {
+  tree {alpha -1}
+  colortree {x 3 s 0.99 hue 9.5 r 8.5}
+}
+
+
+rule tree {
+  left { }  
+}
+
+
+rule left {
+ draw { }
+ left { y 1 r 0.1 s 0.999 sat 0.1 b 0.01 alpha 0.001}
+}
+
+rule left 0.01 {
+  left { }
+  CIRCLE {s  15 alpha -.5}
+}
+
+rule left 0.01 {
+  left { }
+  SQUARE {s  25 alpha -.5 r 45}
+}
+
+rule left 0.01 { left {flip 90 } }
+
+rule left 0.01 {
+ left { }
+ branch {s 0.7 }
+}
+
+rule branch { branch_random {r 90 alpha 0.5 b 0.5 sat 0.5}}
+rule branch { branch_random {r 90 alpha 0.5 b -0.5 sat -0.5}}
+rule branch_random { branch_random {r 1} }
+rule branch_random { branch_random {r -1} }
+rule branch_random 0.1 {left { }}
+
+rule draw {
+ SQUARE { }
+}

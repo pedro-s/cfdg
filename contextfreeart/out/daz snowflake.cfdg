@@ -1,0 +1,28 @@
+startshape BigRose
+
+rule BigRose {
+	6*{r 60} MetaRose {y 60}
+	6*{r 60} BigRose {y 60 s 0.4 h 50}
+	BigRose {s 0.5 r 30 h 30}
+	Bloom {z -1 a -.95 s 120 h 180 b 1 sat 0.75}
+}
+
+rule Bloom {
+	CIRCLE { }
+	Bloom {s 0.95}
+}
+
+rule MetaRose {
+	6*{r 60} Rose {y 20}
+}
+
+rule Rose {
+	6*{r 60} Curl { }
+	6*{r 60} Curl {f 90}
+	CIRCLE {z -2 b -1 s 20}
+}
+
+rule Curl {
+	SQUARE {sat .4 b 1}
+	Curl {s 0.99 y 0.2 r 1 h 1}
+}

@@ -1,0 +1,32 @@
+startshape Spiral4
+
+background { b -1}
+
+rule Spiral4
+{
+Spiral3 {}
+Spiral4 {x 10 y 15 r -34 s .92 hue 10}
+}
+
+rule Spiral3
+{
+Spiral2 {}
+Spiral3 {x 1 y 5 r 21 s .92 hue 10}
+}
+
+rule Spiral2
+{
+Spiral1 {}
+Spiral2 {x 5 y 5 r 13 s .92 hue 5}
+}
+
+rule Spiral1
+{
+Element{}
+Spiral1 {x 1 y .3 r 8 s .97}
+}
+
+rule Element
+{
+CIRCLE { sat 1 b 1}
+}

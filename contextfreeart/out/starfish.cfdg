@@ -1,0 +1,96 @@
+startshape STARFISH
+background { b 1 }
+size {s 2.65 2.65 x 0 y 0}
+rule greenarm {6* {r 60}
+ARM1 { |sat 0 sat 1 |b 1 b 0.4}
+}
+
+rule ARM1 {
+ARM1 { sat .05| b 0.05| y 0.2 size 0.89 rotate -10}
+CIRCLE {h 120 }
+}
+
+rule bluearm {6* {r 60}
+ARM2 { |sat 0 sat 1 |b 1 b 0.4}
+}
+
+rule ARM2 {
+ARM2 { sat .05| b 0.05| y 0.152 size 0.89 rotate 10}
+CIRCLE {h 240 s 0.5}
+}
+
+rule yellowarm {6* {r 60}
+ARM3 { |sat 0 sat 1 |b 1 b 0.4}
+}
+
+rule ARM3 {
+ARM3 { sat .06| b 0.06| y 0.09 size 0.89 rotate -10}
+CIRCLE {h 60 s 0.2}
+}
+
+rule redarm {6* {r 60}
+ARM4 { |sat 0 sat 1 |b 1 b 0.4}
+}
+
+rule ARM4{
+ARM4 { sat .07| b 0.07| y 0.04 size 0.89 rotate 10}
+CIRCLE {h 0 s 0.09}
+}
+
+rule orangearm {6* {r 60}
+ARM5 { |sat 0 sat 1 |b 1 b 0.45}
+}
+
+rule ARM5 {
+ARM5 { sat .06| b 0.06| y 0.0175 size 0.89 rotate -10}
+CIRCLE {h 30 s 0.04}
+}
+
+rule purplearm {6* {r 60}
+ARM6 { |sat 0 sat 1 |b 1 b 0.5}
+}
+
+rule ARM6{
+ARM6 { sat .07| b 0.07| y 0.0095 size 0.89 rotate 10}
+CIRCLE {h 300 s 0.02}
+}
+
+rule cyanarm {6* {r 60}
+ARM7 { |sat 0 sat 0.7 |b 1 b 0.32}
+}
+
+rule ARM7 {
+ARM7 { sat .07| b 0.07| y 0.004 size 0.89 rotate -10}
+CIRCLE {h 180 s 0.01}
+}
+
+rule backgr {
+gradient {|hue 0 h 60}
+}
+
+rule gradient {
+gradient {h -0.02| s 0.99}
+CIRCLE { s 3.75 sat 0.8 b 0.6}
+}
+
+rule blackarm {6* {r 60}
+ARM8 { b 0}
+}
+
+rule ARM8 {
+ARM1 { y 0.2 size 0.89 rotate -10}
+CIRCLE {h 120 }
+}
+
+rule STARFISH{
+greenarm {z 1}
+bluearm {z 2 r 10}
+yellowarm {z 3 r 55}
+redarm {z 4 r 15}
+orangearm {z 5 r -5}
+purplearm {z 6}
+cyanarm {z 7}
+blackarm {x 0.01 y -0.01 z 0.5}
+backgr {z 0}
+}
+

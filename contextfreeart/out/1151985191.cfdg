@@ -1,0 +1,56 @@
+startshape SnowFlake
+
+rule SnowFlake {
+   Ice {}
+   Ice { r 45 }
+   Ice { r 90 }
+   Ice { r 135 }
+   Ice { r 180 }
+   Ice { r 215 }
+   Ice { r 270 }
+   Ice { r 305 }
+}
+
+rule Ice 10 {
+   Blade {}
+   Ice { y 0.8 r 35 s 0.5 }
+   Ice { y 0.8 r -35 s 0.5 }
+}
+
+rule Ice 12 {
+   Blade {}
+   Ice { y 0.4 r 35 s 0.5 }
+   Ice { y 0.4 r -35 s 0.5 }
+   Ice { y 0.8 r 35 s 0.5 }
+   Ice { y 0.8 r -35 s 0.5 }
+}
+
+rule Ice 2 {
+   Blade {}
+   Ice { y 0.8 r 35 s 0.5 }
+}
+
+rule Ice 3 {
+   Blade {}
+   Ice { y 0.4 r 35 s 0.5 }
+   Ice { y 0.8 r 35 s 0.5 }
+}
+
+rule Ice 2 {
+   Blade {}
+   Ice { y 0.8 r -35 s 0.5 }
+}
+
+rule Ice 3 {
+   Blade {}
+   Ice { y 0.4 r -35 s 0.5 }
+   Ice { y 0.8 r -35 s 0.5 }
+}
+
+rule Ice 0.005 {
+   Blade {}
+}
+
+rule Blade {
+   TRIANGLE { s 0.05 2 y 0.57 }
+}

@@ -1,0 +1,108 @@
+startshape cube()[]
+
+//_BMB BNM BNT BBW bck bcl bco
+
+CF::ColorDepth = 16
+CF::Impure=1 
+CF::Background = [b -.55 sat 1 h -147] 
+
+
+shape cube {
+
+	// a very long spaghetto inside a cube
+
+	loop i = 120000 []
+	{
+		kk=i*.4
+		xx=sin((kk *rand_static(.1)))
+		yy=sin((kk *rand_static(.5)))
+		zz=sin((kk *rand_static(1)))
+
+		elemento(xx, yy, zz)[h (40+i/12000) sat (.7 - yy/10)] 
+	}
+}
+
+
+
+shape elemento (number xx, number yy, number zz)
+{
+
+
+	// deformazioni
+
+	// schienale
+	xxa=xx-.4
+	xxx=(xxa +abs(xxa)*1.051 +.2 )*.85
+	xxx=min(xxx, .95)
+	yy = yy + xxx*xxx*(yy+1)*.87
+
+	//gambe
+	zero=1.2-((yy-1)/abs(yy-1))/2
+	yy = yy + zero * ( abs(yy-1)) * (.7 - abs(xx*xx*zz*zz*xx*zz))  *.8
+	yy=max(yy,-1)
+
+	//rastremazione
+	yyy=yy+1
+	zz=zz* (1 - (yyy*yyy)/80)
+
+	TRACE(xx,yy,zz-.01, .021)[b .7 sat 1]
+	TRACE(xx,yy,zz, .021)[b 1 sat -.1051]
+	TRACE(xx,yy -.02 ,zz+.001, .037)[b  .3  sat 1 h -190 a -.98243] //AO
+
+
+	// ombra
+	xxx=xx +  (yy+1)*.4
+	zzz=zz + (yy+1)*.4
+	yyy=-1.01
+
+	TRACE(xxx,yyy,zzz, .04)[b -10 a -.987]
+}
+
+
+
+
+shape TRACE(number xx, number yy, number zz, number dime)
+{
+
+	//-------------------------------------------------------------------
+	// ROTAZIONE INIZIALE
+
+	rb = 32
+
+	ax=0
+	ay=1
+	az=0
+ 
+	cos2=cos(rb/2)
+	sin2=sin(rb/2)
+	qw=cos2
+	qx=ax*sin2
+	qy=ay*sin2
+	qz=az*sin2
+
+	// rotate point around y axis -----------------------------------------------
+	p1x=xx
+	p1y=yy
+	p1z=zz
+
+	p2x = qw*qw*p1x    + 2*qy*qw*p1z  - 2*qz*qw*p1y   + qx*qx*p1x     + 2*qy*qx*p1y    + 2*qz*qx*p1z   - qz*qz*p1x      - qy*qy*p1x   
+	p2y = 2*qx*qy*p1x  + qy*qy*p1y    + 2*qz*qy*p1z   + 2*qw*qz*p1x   - qz*qz*p1y      + qw*qw*p1y     - 2*qx*qw*p1z    - qx*qx*p1y
+	p2z = 2*qx*qz*p1x  + 2*qy*qz*p1y  + qz*qz*p1z     - 2*qw*qy*p1x   - qy*qy*p1z      + 2*qw*qx*p1y   - qx*qx*p1z      + qw*qw*p1z
+
+	xx=p2x
+	yy=p2y
+	zz=p2z
+
+
+	//  point of view
+	povy=10
+	yy=yy-povy
+	povz=30
+
+	unosize=(povz+zz)/povz
+	xx = xx*unosize
+	yy = yy*unosize
+
+	CIRCLE[x xx y yy z zz s  dime]
+
+}

@@ -1,0 +1,14 @@
+startshape CINQ
+
+rule CINQ {
+FRACS {} FRACS {x 1} FRACS {y -1} FRACS {x 1 y -1}}
+
+rule FRACS {FRAC {} FRACS {r 90 s .996 hue 1.8 a -.1}}
+
+rule FRACS {FRAC {} FRACS {r -90.2 s .996 hue 1.8 a -.1}}
+
+rule FRAC {SQRS {}
+FRAC {x .75 y .75 s .49} FRAC {x -.75 y -.75 s .49}}
+
+rule SQRS {SQUARE {hue 40 sat 1 b 1 s 3}
+SQUARE {hue 200 sat 1 b 1 x -.75 y -.75 s 1.5} SQUARE {hue 200 sat 1 b 1 x .75 y .75 s 1.5}}

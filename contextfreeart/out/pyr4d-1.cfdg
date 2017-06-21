@@ -1,0 +1,23 @@
+startshape pyre
+background { hue 40 b -.15 }
+
+rule pyre { 2* { r -15 x 1 } pyr { hue 0 sat .9 |hue 238 y 1.15 r -45} }
+rule pyre 5 { pyre { hue 4 } }
+rule pyr {
+	d { r 45}
+	pyr { x .707 y -.35035 s .5 hue 1| sat -.6 a -.2 b .1  r 90 }
+	pyr { x .5 y .375 r 45 s .75 }
+}
+
+
+rule d {
+
+	2* { flip 0 b .7}	tr { s 1 .5775 y -.3335 b -.1}
+//	2* { flip 90 b .4}	tr { s 1 .5775 x .3335 r 90 b -.3}
+}
+rule tr {
+	20* { s .98 x .001 b .025 } TRIANGLE { }  
+	TRIANGLE { s 1.2 r 15 a -.95 b -.2 }
+	SQUARE [b 1 sat -1 y -.255 s 1 .01 ]
+	25 * { s .93 x .01 y -.01} TRIANGLE { b 1 x .3 y -.2 s .4 a -.98 }
+}

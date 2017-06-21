@@ -1,0 +1,21 @@
+startshape Main
+
+rule Main {
+	Skyscraper{}
+}
+
+rule Skyscraper {
+	Floor{}
+	Skyscraper{z -1 s 0.999}
+}
+
+rule Floor {
+	27*{x 1.5} {
+		27*{y 1.5}Box{x -18 y -18}
+	}
+}
+
+rule Box {
+	SQUARE{}
+	SQUARE{b 1 s 0.99}
+}

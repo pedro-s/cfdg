@@ -1,0 +1,11 @@
+startshape umbrella 
+
+background {b -1}
+
+rule umbrella {
+	6 * {r (360/6)}
+	{36 * {s .9 1.01 h .1 a -.01}
+	{2 * {f 90}
+	{24 * {s .8 r 7.4 f -124 y 1 x .5 h 24 sat .5 a -.24}
+	CIRCLE {b 1 h 55 sat .4}
+}}}}

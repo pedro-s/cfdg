@@ -1,0 +1,27 @@
+startshape self_dividing_grid //TGT
+
+rule self_dividing_grid 0.2 {
+   BRUSH { }
+}
+
+rule self_dividing_grid {
+   self_dividing_grid {s 0.5 1 x -0.25}
+   self_dividing_grid {s 0.5 1 x 0.25}
+}
+
+rule self_dividing_grid {
+   self_dividing_grid {s 1 0.5 y -0.25}
+   self_dividing_grid {s 1 0.5 y 0.25}
+}
+
+rule self_dividing_grid { self_dividing_grid {hue 10}}
+rule self_dividing_grid { self_dividing_grid {hue -10}}
+
+rule BRUSH { 
+  CIRCLE {s 0.7 }
+  SQUARE {s 1.2 alpha -0.7 sat 1 b 1}
+  CIRCLE {s 0.6 b 1}
+}
+
+rule BRUSH 5 {BRUSH {r 1}}
+rule BRUSH 5 {BRUSH {r -1}}

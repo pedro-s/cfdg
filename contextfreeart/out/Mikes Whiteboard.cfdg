@@ -1,0 +1,39 @@
+startshape figure
+
+rule figure {
+  radials { }
+  rings { }
+}
+
+rule radials {
+  11 * { r (360/11) } radial { }
+}
+
+rule radial {
+ spoke { y 20 } 
+ spiral { }
+}
+
+rule spoke {
+  CIRCLE { s 0.5 y -0.1 }
+  spoke { s 0.9952 y -0.1  }
+}
+
+rule spiral {
+  CIRCLE { s 0.5 y 20 }
+  spiral { s 0.9975 r -0.1175 }
+}
+
+rule rings {
+  ring { s 20 }
+  rings { s 0.5 }
+}
+
+
+
+path ring {
+  MOVETO{y 1}
+  ARCTO {y -1 r 1}
+  ARCTO {y 1 r 1}
+  STROKE{  width 0.025}
+}

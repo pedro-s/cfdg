@@ -1,0 +1,17 @@
+startshape FLOWER
+
+rule FLOWER{
+PETAL1{}
+PETAL2{}
+}
+
+rule PETAL1 {
+CIRCLE{x 1 y 2 skew 20 40  }
+PETAL1{s 0.99 r 15 b 0.025}
+PETAL2{s 0.99 r -15 }
+}
+
+rule PETAL2 {
+CIRCLE{x 1 y 2 skew 20 40  }
+PETAL2{s 0.99 r -15 }
+}

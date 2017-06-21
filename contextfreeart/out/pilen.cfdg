@@ -1,0 +1,36 @@
+startshape CIRCRIJ
+
+rule CIRCRIJ {
+Sierpinski {r  180 y 2.4 x 2.2 s 2}
+30 * {y -.5} CIRCCOL {}
+}
+rule CIRCCOL {
+10 * {x .5} CIRCLES {}
+}
+
+rule CIRCLES {
+CIR {}
+CIRCLES {s .95}
+}
+
+rule CIRCLES 0.04 {
+CIRCLES {s .1}
+}
+
+rule CIR  {
+CIRCLE {b 0}
+}
+
+rule CIR 2 {
+CIRCLE {b 1}
+}
+
+rule Sierpinski {
+        CIRCLES { s 2}
+       Sierpinski { s 0.5 r 1
+               y -1 x 0  }
+       Sierpinski {  s 0.5 r -2
+               y 0.5 x -0.866025  }
+       Sierpinski { s 0.5 r 2
+               y 0.5 x 0.866025  }
+}

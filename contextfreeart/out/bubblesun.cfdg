@@ -1,0 +1,42 @@
+startshape ASS
+ 
+rule ASS{
+AS[]
+BSS[z -10]
+}
+ 
+rule AS{
+A[hue 20 b 1 sat 70]
+AS[r 31 s 0.995]
+}
+ 
+rule A{
+CIRCLE[b -1 s 4 z -1]
+CIRCLE[]
+A[x 0.1 s 0.999 r 1 hue .1]
+}
+rule A{
+CIRCLE[b -1 s 2 z -1]
+CIRCLE[]
+A[x 0.1 s 0.999 r -1]
+}
+ 
+rule A 0.004{
+CIRCLE[z 3 s 18 b -1]
+CIRCLE[z 4 s 15 hue -40]
+CIRCLE[z 5 s 13 b -1]
+ 
+}
+ 
+rule BSS{
+180*[r 2] BS[s 3]
+}
+
+rule BS{
+CIRCLE[]
+BS[x 0.1 s 0.993 r 3 ]
+}
+rule BS{
+CIRCLE[]
+BS[x 0.1 s 0.993 r -3]
+}

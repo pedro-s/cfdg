@@ -1,0 +1,14 @@
+startshape layer1
+
+
+background { b -1 }
+
+rule layer3
+{     SQUARE [ hue 293.7026 sat 0.9329 b 0.4980 size 10.18754  y +3 ]
+       layer3 [ size .99548 hue -1  y .5548 ] 
+}
+
+
+rule layer1 
+
+{ 64*[ r 8 ] layer3 [ x -20 y +10 hue +10 sat +5 size .88754 ] }

@@ -1,0 +1,98 @@
+startshape NEURONS
+background{ b -1}
+
+// if one wants more neurons one can make put more neurons here
+rule NEURONS 3 {
+	NEURON{s 1.5 r 180 b .9 hue 75 sat 50}
+	}
+
+// axon to one side, 2 branchings dendritic processes to the other
+rule NEURON {
+	AXON {}
+	BODY {}
+	BRANCH { x -.5 y -.3 r 140}
+	BRANCH { x .5 y -.3 r 220}
+	}
+// use the interplay between the two rules below to get some brightness variation along the axon
+rule AXON 70 {
+	CIRCLE {size .1 }
+	AXON {s .999 r 1 y .1 x .05 b -.1 } 
+	}
+
+rule AXON 70 {
+	CIRCLE {size .1}
+	AXON {s .999  r -1 y .1 x -.05 b .4} 
+	}
+
+// somewhere in the neuron show a synapse
+rule AXON 10 {
+	SYNAPSE {alpha 1 s .8}
+	AXON {s .999  r -1 y .1 x -.05 b .4} 
+	}
+
+// 1 -the trick for the lens flare is the hue and sat change.
+// 2 - the probability of synapse changes the sizes of the glow 
+rule SYNAPSE 15 {
+	CIRCLE {s .1}
+	SYNAPSE {s 1.05  alpha -.033 sat -.015  }
+			}
+
+rule SYNAPSE {}
+
+
+// the axon ends in a dendritic tree
+rule AXON 1 {
+	BRANCH {}
+	 }
+// the cell body should be somewhat triangular...
+rule BODY{
+	PROCESS {}
+	PROCESS {r 120}
+	PROCESS {r 240}
+	MEMBRANE {}
+//	NUCLEUS {}
+	}
+
+// ... and lighter in the middle
+rule MEMBRANE {
+	BODY {s .6 b -.3}
+	}
+
+rule PROCESS {
+	FORMATION {r 1 s .8 }
+	}
+
+rule FORMATION {
+	CIRCLE {s .5 }
+	PROCESS {y .13}
+	}
+
+// the conjunction of the two rules below
+// adds zigzags to the dendrites.
+
+rule DENDRITE 80 {
+	CIRCLE {size .1 } 
+	DENDRITE {s .995 x -.05 y .1} }
+
+rule DENDRITE 80 {
+	CIRCLE {size .1} 
+	DENDRITE {s .995 x .05 y .1} }
+
+// smaller and darker until negligible
+rule DENDRITE 5  {
+	BRANCH {s .98 b .1}
+	}
+
+// start a neuron and a synapse at the end of a dendrite
+
+rule DENDRITE 0.5 {
+	NEURON {s .8 r 45 b 0 hue -30}
+	SYNAPSE { s .4 alpha 1}
+	}
+
+// the main branching rule
+rule BRANCH{ 
+	DENDRITE {s .95 r -15}
+	DENDRITE {s .95 r 15 } }
+
+

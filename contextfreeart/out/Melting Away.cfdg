@@ -1,0 +1,34 @@
+startshape CUBE
+background{b -1}
+rule CUBE{
+
+WOAH{ r 30 }
+
+CUBE { x 0.45 y 7 s 0.8  flip 32 h 3 }
+
+CUBE { x 7.45 s 0.8  flip 32 } 
+}
+
+rule WOAH{
+
+SQUARE { y 4.2 s 10 0.5 h 355.70 sat 1.0000 b 1.0000}
+
+SQUARE { x -7.34 r 60 s 10 0.5 h 355.70 sat 1.0000 b 1.0000}
+
+SQUARE { x -7.34 y -8.4 r 120 s 10 0.5h 355.70 sat 1.0000 b 1.0000}
+
+SQUARE { y -12.6 s 10 0.5 h 357.61 sat 1.0000 b 1.0000}
+
+SQUARE { x 7.34 y -8.4 r 60 s 10 0.5 h 357.61 sat 1.0000 b 1.0000}
+
+SQUARE { x 7.34 r  120 s 10 0.5 h 357.61 sat 1.0000 b 1.0000}
+
+SQUARE { x 7.34 r  120 s 10 0.5 h 357.61 sat 1.0000 b 1.0000}
+
+SQUARE { s 10 0.5 r -60  x -2.5 h 357.61 sat 1.0000 b 1.0000}
+
+SQUARE { s 10 0.5 r 60 y -8.4 x -2.5 h 357.61 sat 1.0000 b 1.0000}
+
+SQUARE { s 10 0.5 x 4.9 y -4.2 h 357.61 sat 1.0000 b 1.0000}
+}
+

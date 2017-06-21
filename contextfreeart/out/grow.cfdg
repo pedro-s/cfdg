@@ -1,0 +1,55 @@
+startshape BLUME
+
+background { b -.5}
+
+rule BLUME{
+  CIRCLE {s 10 b .1}
+  STAENGEL {rotate 90}
+  73* [rotate 25 hue 5] COLOR {x 20 hue 5}
+  SUN {x 60 y 20}
+}
+
+rule COLOR {
+  CIRCLE {s .25 hue 100 sat .8 b .8}
+  COLOR {y .1 s .9975 rotate 0.3}
+}
+
+rule STAENGEL 30 {
+  CIRCLE {size 4 b .1}
+  STAENGEL {x -1 r 0.3 size 0.99}
+}
+
+rule STAENGEL 10 {
+  CIRCLE {size 4 b .1}
+  STAENGEL {x -1 r -1 size 0.99}
+}
+
+rule STAENGEL {
+  BRANCH_L {rotate 115 b .1}
+  STAENGEL{}
+}
+
+rule STAENGEL {
+  BRANCH_R {rotate 75 b .1}
+  STAENGEL{}
+}
+
+rule BRANCH_L {
+  CIRCLE {size 3}
+  BRANCH_L {y -.9 s .98 rotate 1.5 b -.1}
+}
+
+rule BRANCH_R {
+  CIRCLE {size 3}
+  BRANCH_R {y -.9 s .98 rotate -1.5 b -.1}
+}
+
+rule SUN {
+  CIRCLE {x -2.8 y 9 size 15 hue 27 b 1 sat 0.9}
+  12* [r 30 x 5] SUNRAY {rotate 180}
+}
+
+rule SUNRAY {
+  CIRCLE {hue 27 b 0.9 sat 0.9}
+  SUNRAY {s 0.995 r 0.3 y 0.1}
+}

@@ -1,0 +1,63 @@
+startshape Natty
+
+background {hue 0 sat 1 b 0}
+ 
+rule Natty {
+
+	wcirc {}
+   bcirc {}
+	eyenear {}
+	hair1 {}
+	stache1 {}
+	stache2 {}
+	hairpartnloop {}
+	mouth {}
+}
+rule wcirc {
+	CIRCLE {b 1 z 1}
+}	
+rule bcirc {
+	CIRCLE {s 1.03}
+}
+rule eyenear{
+	wcirc {s .25 x .08 y .08 z 2}
+   bcirc {s .27 x .08 y .08 z 3}
+	CIRCLE {s .22 x .055 y .075 z 4}
+	wcirc {s .25 x .45 y -.15 }
+   bcirc {s .27 x .45 y -.15 }
+}	
+rule hair1 {
+	SQUARE {x .48 y -.005 s .06 z 3}
+	30*[y 0.0001 r 4] CIRCLE[x .48 s .06 z 3]
+	30*[y 0.0001 r 4] CIRCLE[x .48 y .0145 s .06 z 3]
+	SQUARE {x .431 y -.005 s .06 z 4}
+	15*[y 0.0001 x -.0025 r 4] CIRCLE[x .431 s .06 z 4]
+	15*[y 0.0001 x -.0025 r 4] CIRCLE[x .43 y .015 s .06 z 4]
+	CIRCLE {b 1 x .28 y .28 s .03 z 5 skew 50 5 z 6}
+   CIRCLE {b 1 x .31 y .25 s .03 z 5 skew 50 5 z 6}
+	15*[y 0.0001 x -.0056 r 4] CIRCLE[x .437 s .06 z 5]
+	15*[y 0.0001 x -.0056 r 4] CIRCLE[x .434 y .015 s .06 z 5]
+} 
+rule hairpartnloop {
+	CIRCLE {x -.09 y .442 s .135 skew -1 60 r -40 z 6}
+	CIRCLE {s .16 x -.25 y .435 skew 0 -20 r 40 z 7}
+	CIRCLE {s .22 x .1 y .37 skew -45 1 r 15 z 8}
+	CIRCLE {b 1 s .154 x .1755 y .341 skew 0 -25 r 40 z 9}
+	CIRCLE {s .13 x .167 y .341 skew 20 1 r -40 z 10}
+}
+rule stache1 {
+   CIRCLE{s .25 y -.19 x -.069 z 11}
+   stache1 {x 0.0048 y -.0072 r .35 size 0.985}
+}
+rule stache2 {
+	CIRCLE{s .25 y -.17 x -.28 z 12}
+   stache2 {x -0.008 y -.007 r -.35 size 0.985}
+}
+rule mouth {
+	wcirc {s .2 x -.12 y -.21 z 3}
+   bcirc {s .22 x -.12 y -.21 z 4}
+	wcirc {s .18 x -.13 y -.23 skew 20 0 r 55 z 1}
+   bcirc {s .20 x -.13 y -.23 skew 20 0 r 55 z 2}
+	wcirc {s .2 x -.265 y -.21 z 3}
+}
+

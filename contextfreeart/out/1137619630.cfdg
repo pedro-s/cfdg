@@ -1,0 +1,92 @@
+startshape LINE
+background { hue 200 sat 0.8 b -0.8 }
+
+rule LINE {
+CLOCK {  }
+LINE { r 8 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -8 s 0.99 alpha -0.005}
+}
+
+rule LINE {
+CLOCK {  }
+LINE { r 7 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -7 s 0.99 alpha -0.005}
+}
+
+rule LINE {
+CLOCK {  }
+LINE { r 6 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -6 s 0.99 alpha -0.005}
+}
+
+rule LINE {
+CLOCK {  }
+LINE { r 5 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -5 s 0.99 alpha -0.005}
+}
+
+rule LINE {
+CLOCK {  }
+LINE { r 4 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -4 s 0.99 alpha -0.005}
+}
+
+rule LINE {
+CLOCK {  }
+LINE { r 3 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -3 s 0.99 alpha -0.005}
+}
+
+rule LINE {
+CLOCK {  }
+LINE { r 2 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -2 s 0.99 alpha -0.005}
+}
+
+rule LINE {
+CLOCK {  }
+LINE { r 1 s 0.99 alpha -0.005}
+}
+rule LINE {
+CLOCK {  }
+LINE { r -1 s 0.99 alpha -0.005}
+}
+
+rule CLOCK { 
+DOTS { b 1}
+DOTS { r -30 b 1 }
+DOTS { r 30 b 1 } 
+DOTS { r 60 b 1 } 
+DOTS { r 90 b 1 } 
+DOTS { r 120 b 1 } 
+DOTS { r 150 b 1 } 
+DOTS { r 180 b 1 } 
+DOTS { r 210 b 1 } 
+DOTS { r 240 b 1 } 
+DOTS { r 270 b 1 } 
+DOTS { r 300 b 1 } 
+DOTS { r 360 b 1 } 
+} 
+
+rule DOTS { CIRCLE { y 12 }}

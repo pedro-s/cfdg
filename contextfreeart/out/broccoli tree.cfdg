@@ -1,0 +1,26 @@
+startshape SNOWFLAKE
+background {h 321.34 sat 0.0711 b 0.0221}
+
+rule SNOWFLAKE {
+4* {r 35} SPIKE {}
+}
+rule SPIKE {
+SQUARE {}
+SPIKE { y 0.4 s 0.95}
+}
+rule SPIKE 0.06 {
+SQUARE {}
+SPIKE { r 9 }
+SPIKE { r -60}
+SPIKE { y 0.95 s 0.97  }
+}
+rule CIRCLE {
+CIRCLE {b 1 x 1 y 3}
+CIRCLE {s 1 x 1 y 3}
+}
+rule CIRCLE {
+CIRCLE {b 1 x 1 y 3}
+CIRCLE {s 1 x 1 y 3}
+}
+
+

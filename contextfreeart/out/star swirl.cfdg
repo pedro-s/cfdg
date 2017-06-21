@@ -1,0 +1,23 @@
+startshape SPLIT
+
+rule SPLIT{
+10* {r 36} LOTUSSWIRL { }
+}
+rule LOTUSSWIRL {
+PROJECT { }
+LOTUSSWIRL {s .97 y 1 r 10 }
+}
+
+rule PROJECT {
+4* {r 30} PATOOTIE { }
+}
+
+rule PATOOTIE {
+60* {s .99 r .8 } TRIANGLE { }
+ICON { }
+}
+
+rule ICON { 
+TRIANGLE {s .55 r 48}
+ICON {s.99 b .01 r .8}
+}

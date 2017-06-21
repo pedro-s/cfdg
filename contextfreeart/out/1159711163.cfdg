@@ -1,0 +1,86 @@
+startshape NEURONS
+background{ b -1}
+
+
+// do some of them
+
+rule NEURONS 3 {
+	NEURON{s 1.5 r 180 b .9 hue 75 sat 50}
+	NEURON{x 5 y 3 r 180 b -1 hue 75 sat 800}
+	NEURONS { x 10}
+	}
+// stop sometime
+rule NEURONS 0.5 {}
+
+// axon to one side, 2 branchings dendritic processes to the other
+rule NEURON {
+	AXON {}
+	BODY {}
+	BRANCH { x -.5 y -.3 r 140}
+	BRANCH { x .5 y -.3 r 220}
+	}
+// use the two below to get some brightness variation
+rule AXON 70 {
+	CIRCLE {size .1 }
+	AXON {s .999 r 1 y .1 x .05 b -.1 } 
+	}
+
+rule AXON 70 {
+	CIRCLE {size .1}
+	AXON {s .999  r -1 y .1 x -.05 b .4} 
+	}
+// the axon ends in a dendritic tree
+rule AXON 1 {
+	BRANCH {}
+	 }
+// the cell body should be somewhat triangular...
+rule BODY{
+	PROCESS {}
+	PROCESS {r 120}
+	PROCESS {r 240}
+	MEMBRANE {}
+//	NUCLEUS {}
+	}
+
+// ... and lighter in the middle
+rule MEMBRANE {
+	BODY {s .6 b -.3}
+	}
+
+rule PROCESS {
+	FORMATION {r 1 s .8 }
+	}
+
+rule FORMATION {
+	CIRCLE {s .5 }
+	PROCESS {y .13}
+	}
+
+// the conjunction of the two rules below
+// adds zigzags to the dendrites.
+
+rule DENDRITE 80 {
+	CIRCLE {size .1 } 
+	DENDRITE {s .995 x -.05 y .1} }
+
+rule DENDRITE 80 {
+	CIRCLE {size .1} 
+	DENDRITE {s .995 x .05 y .1} }
+
+// smaller and darker until negligible
+rule DENDRITE 5  {
+	BRANCH {s .98 b .1}
+	}
+
+// this rule is called dendrite but should be synapse: start a neuron at the end of a dendrite.
+
+rule DENDRITE 0.5 {
+	NEURON {s .8 r 45 b 0 hue -30}
+	}
+
+// the main branching rule
+rule BRANCH{ 
+	DENDRITE {s .95 r -15}
+	DENDRITE {s .95 r 15 } }
+
+

@@ -1,0 +1,70 @@
+startshape start
+background{sat 0 b -0.9}
+
+rule start
+{
+	network{hue 0}
+}
+
+rule network 10	// line
+{
+	object{}
+	network{y 0.1 r 1}
+}
+
+rule network 10	// line
+{
+	object{}
+	network{y 0.1 r -1}
+}
+
+rule network	// junction
+{
+	object{}
+	network{r 60}
+	network{r -60}
+}
+
+rule network	// end
+{
+	object{}
+}
+
+rule object
+{
+	spiral{}
+	spiral{flip 180}
+}
+
+rule spiral
+{
+	draw{sat 1 b 0.8}
+	spiral{y 2 r 5 s 0.99 alpha -0.1 hue 1}
+}
+
+rule spiral
+{
+	draw{sat 1 b 0.8}
+	spiral{y 2 r 10 s 0.99 alpha -0.1 hue 1}
+}
+
+rule draw
+{
+	SQUARE{}
+}
+
+rule draw
+{
+	SQUARE{alpha -0.5}
+}
+
+rule draw 0.5
+{
+	SQUARE{}
+	SQUARE{s 4 r 45 alpha -0.5}
+}
+
+rule draw
+{
+	SQUARE{b -1}
+}

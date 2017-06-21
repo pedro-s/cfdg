@@ -1,0 +1,48 @@
+
+startshape MAN
+
+background {b -0.9 sat .5 h 170}
+rule MAN {
+
+STRUT{s .8 r 90}
+STRUT{s .8 r 90 flip 180}
+STRUT{flip 180}
+STRUT{ flip 180}
+STRUT{s .5}
+
+}
+
+
+
+rule TRIP {
+TRIANGLE{ a -.5  y .284}
+}
+
+
+rule STRUT {
+
+CIRCLE{s 5.1  a  -.3  y .2  sat .5 b .5  z -1 h 10}
+TRIP{s 1 3  a -.9  r 90 y .2 }
+TRIP{s 1 3  a -.9  r 90 y .2 flip 180 b 1 }
+STRUT {s .99 y .2 r 1.5}
+
+}
+rule STRUT .4 {
+STRUTA {flip 90}
+}
+
+
+rule STRUTA {
+
+CIRCLE{s 5  a  -.3  y .2  sat .5 b .5  z -1 h 10}
+TRIP{s 1 3  a -.9  r 90 y .2 b 1 }
+TRIP{s 1 3  a -.9  r 90 y .2 flip 180  }
+STRUTA{s .99 y .2 r 1.5}
+
+}
+
+rule STRUTA .4 {
+STRUT {flip 90}
+}
+
+

@@ -1,0 +1,17 @@
+ startshape ODD
+background {  h 122.40 sat 0.6843 b 0.4365 }
+rule ODD {
+KIN {}
+}
+rule KIN {
+TRIANGLE { flip 180 }
+TRIANGLE { flip 87 }
+TRIANGLE { flip 45 }
+TRIANGLE { flip 235 }
+TRIANGLE { flip 190 }
+TRIANGLE { h 230.35 sat 1.0000 b 1.0000 }
+TRIANGLE { h 230.35 sat 1.0000 b 1.0000 }
+TRIANGLE { h 230.35 sat 1.0000 b 1.0000 }
+KIN { y 0.7size 0.76 rotate 15 }
+KIN { size 0.9 brightness 1h 8.21 sat 1.00000 b 1.0000 } 
+}

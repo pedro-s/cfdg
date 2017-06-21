@@ -1,0 +1,30 @@
+startshape CHILISTRING
+
+rule CHILISTRING {
+    PART {}
+}
+
+
+rule PART{
+SQUARE{s 1.0 0.1}
+SQUARE{s 0.1 2.3 x -.5 y .5}
+CHILI{ hue 0.6 sat 1.0 b 1.0 }
+PART { r 15 y 1.6 s 0.995 }
+}
+rule PART{
+SQUARE{s 1.0 0.1}
+SQUARE{s 0.1 2.3 x -.5 y .5}
+CHILI{ hue 0.6 sat 1.0 b 1.0 }
+PART { r -25 y 1.6 s 0.95}
+}
+
+rule CHILI{
+CIRCLE{s .5 }
+CHILI{s .926 x .1 r 10 hue -.2 b +.05}
+}
+
+rule CHILI{
+CIRCLE{s .5}
+CHILI{s .96 x .15 r -10  hue +.2 b -.05}
+}
+

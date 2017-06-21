@@ -1,0 +1,40 @@
+startshape START
+
+rule START {
+	BLOOD{x -20, r 90}
+	BLOOD{x 20, flip 0, r 90}
+	CIRCLE{size 50}
+	CIRCLE{sat 1, size 48, b 1}
+}
+
+rule BLOOD 2000 {
+	VESSEL{}
+	BLOOD{y 0.9, s 0.997, r 3, hue -0.2}
+}
+
+rule BLOOD 75 {
+	BLOOD{s 0.997, hue -0.2, flip 90}
+}
+
+rule BLOOD 5 {
+	BRANCH{}
+	BLOOD{y 0.9, s 0.997, r 3, hue -0.2}
+	BLOOD{y 0.9, s 0.997, r -3, hue -0.2}
+}
+
+rule BRANCH {
+	VESSEL{}
+	BLOOD{y 1, s 1}
+	BLOOD{y 1, s 1}
+}
+
+rule VESSEL {
+	SQUARE{x -3}
+	SQUARE{x 3}
+
+	SQUARE{x -2, hue 1, sat 1, b 1}
+	SQUARE{x -1, hue 1, sat 1, b 1}
+	SQUARE{hue 1, sat 1, b 1}
+	SQUARE{x 1, hue 1, sat 1, b 1}
+	SQUARE{x 2, hue 1, sat 1, b 1}
+}

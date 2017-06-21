@@ -1,0 +1,28 @@
+startshape explode
+
+rule explode
+{
+	3* {y 40} explodeit{} 
+	3* {y 40} explodeit{flip 90}
+	3* {y 40} explodeit{ x 90} 
+	3* {y 40} explodeit{ flip 90 x 90}
+
+}
+
+rule explodeit .02
+{
+	SQUARE {hue 1 sat .6 brightness 1}
+	explodeit {x -2 s .998  |hue 4}
+}
+
+rule explodeit
+{
+	SQUARE {hue 1 sat .6 brightness 1}
+	explodeit {r -2  s .998  hue .1|}
+}
+
+rule explodeit 1.5
+{
+	SQUARE {hue 1 sat .6 brightness 1}
+	explodeit {r -2 y -1 s .998 hue .1|}
+}

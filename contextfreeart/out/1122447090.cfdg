@@ -1,0 +1,74 @@
+# Thanks to:
+#
+# Version 1.2 with its color support
+# Chilly Winter Forest from megaduck0: http://www.chriscoyne.com/cfdgforums/viewtopic.php?t=118
+# Clouds from megaduck0: http://www.chriscoyne.com/cfdgforums/viewtopic.php?t=166
+#
+# Brought together by some combining and color adding from me...
+
+startshape Forest {color}
+
+rule Background { SQUARE { x .4 y 30 s 1 60  hue =202.4 sat =0.3677 b =0.9851 } }
+
+rule Forest 500 { Background {} Grass{  hue =100.2 sat =0.7316 b =0.8259  } Forest{x 0.2} } 
+rule Forest 1 { CloudStart {  x -10 y 40 s 2 hue =180.0 sat =0.0800 b =0.9851 } Forest {} }
+rule Forest 1 { CloudStart {  x -10 y 30 s 3  hue =180.0 sat =0.0800 b =0.8607  } Forest {} }
+rule Forest 10 {Tree{y 0.4   hue =27.0 sat =0.6172 b =0.7114  } Forest{x 0.4} } 
+rule Forest {} 
+
+rule Tree 10 { ShadedSquare{  } Tree { y 0.7 } } 
+rule Tree 20 { Tree {s 0.994 } } 
+rule Tree 10 { Tree {r 1} } 
+rule Tree 10 { Tree {r -1.5} } 
+rule Tree 0.1 { Tree {r -5} Tree {r 20 s 0.4} } 
+rule Tree 0.3 { Tree {r -10} Tree {r 35 s 0.5} } 
+rule Tree 0.1 { Tree {r 5} Tree {r -20 s 0.4} } 
+rule Tree 0.3 { Tree {r 10} Tree {r -35 s 0.5} } 
+
+rule Grass 2 { Grass {b 0.1} } 
+rule Grass { Grass {s 1.1} } 
+rule Grass { Grass {s 0.9} } 
+rule Grass 2 { GrassL {s 0.3} } 
+rule Grass { GrassR {s 0.3} } 
+
+rule GrassL 15 {FilledSquare{} GrassL{y 0.5} } 
+rule GrassL 3 {GrassL{r -2} } 
+rule GrassL 3 {GrassL{r -1} } 
+rule GrassL 10 {GrassL{s 0.95} } 
+rule GrassL 2 {GrassR{} } 
+
+rule GrassR 15 {FilledSquare{} GrassR{y 0.5} } 
+rule GrassR 3 {GrassR{r 2} } 
+rule GrassR 3 {GrassR{r 1} } 
+rule GrassR 10 {GrassR{s 0.95} } 
+rule GrassR 10 {GrassL{} } 
+
+rule FilledSquare { SQUARE{} } 
+rule ShadedSquare { SQUARE{} StripeMe{y -0.2 b 1.0 s 0.4} StripeMe{y -0.4 b 1.0 s 0.4} StripeMe{y -0.6 b 1.0 s 0.4}} 
+
+rule StripeMe { StripeMe{b -0.1} } 
+rule StripeMe 2 { SQUARE{} } 
+
+rule CloudStart{ 
+   CIRCLE{s 1.0 y 0.55 x -0.05 b 0.3} 
+   CIRCLE{s 1.0 y 0.5 b 0.7} 
+   Cloud{x 0.5} 
+} 
+rule Cloud {HollowCircle{} Cloud {x 0.7}} 
+rule Cloud 3 {Cloud {s 1.1}} 
+rule Cloud 3 {Cloud {s 0.91}} 
+rule Cloud 0.1 {CloudEnd{}} 
+
+rule CloudEnd{ 
+   CIRCLE{s 1.0 y 0.55 x -0.25 b 0.3} 
+   CIRCLE{s 1.0 y 0.5 x -0.3 b 0.7} 
+} 
+
+rule HollowCircle { 
+   CIRCLE {s 1.1 y 1 b 0.3} 
+   CIRCLE {s 1.0 y 1 b 0.7} 
+   CIRCLE {s 1.1 y 0.9 b 0.7} 
+   SQUARE {s 1.0 y 0.5 b 0.7} 
+   CIRCLE {s 1.0 0.3 b 0.9} 
+   CIRCLE {y 0.01 s 1.0 0.3 b 0.7} 
+} 

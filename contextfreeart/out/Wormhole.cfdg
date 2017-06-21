@@ -1,0 +1,17 @@
+startshape SPIRAL
+
+rule SPIRAL 10 {
+		TRILL {}
+		SPIRAL { r 23 size .99 y 1 hue +2}
+}
+
+path TRILL  {
+	MOVETO {x cos(234) y sin(234)}
+		5* {r -144} 
+	CURVETO {x 0 y 1
+		x1 (.1)
+		y1 (.9)
+		x2 1 y2 1}
+	CLOSEPOLY {p align}
+	STROKE {p miterjoin a -0.7 h 240 sat .9 b 1}
+}

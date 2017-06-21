@@ -1,0 +1,30 @@
+startshape RADIX
+
+rule RADIX {
+	12* {x 1 r 30} SPIRAL {alpha -.9}
+}
+
+rule SPIRAL 8 {
+	5* {r 72} CLOUD {alpha -.8}
+	SPIRAL { x .5 r 7 s .95 alpha .02}
+}
+rule SPIRAL 2 {
+	SPIRAL {r 30 s .8 alpha -.1}
+	SPIRAL {r -30 s .8 alpha -.1}
+}
+rule SPIRAL 1 {
+	SPIRAL {flip 0}
+}
+
+rule CLOUD {
+	CIRCLE {}
+}
+rule CLOUD {
+	CIRCLE {x .3}
+}
+rule CLOUD {
+	CIRCLE {x .1 y -.3}
+}
+rule CLOUD {
+	CIRCLE {x -.2 y .2}
+}

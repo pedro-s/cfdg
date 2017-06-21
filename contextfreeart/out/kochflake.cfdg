@@ -1,0 +1,30 @@
+startshape MAIN [ b 1 ]
+CF::Background = [ b - 1]
+CF::Impure = 1
+
+thr = (1/3)
+
+shape MAIN{
+	loop 3 [ x 1+thr y -thr r 240 ] SUB(7)[]
+} 
+
+shape SUB(natural n){
+	k = (.01*n^3)
+	KCH(n,k)[]
+}
+
+shape KCH(natural n, number k){
+	if (n>0) {
+		loop i = 2 [ x thr ] KCH(n-1, k)[ s thr x (i*thr)]
+		loop i = 2 [x (3*thr) flip 90 ] KCH(n-1, k)[ x thr r 60 s thr]
+	}
+	else {
+	LN(k)[]
+	}
+}
+
+path LN(number n){
+	MOVETO(0,0)
+	LINETO(1,0)
+	STROKE(n)[]
+}

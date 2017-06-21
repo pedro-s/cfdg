@@ -1,0 +1,26 @@
+startshape STUFF
+background{b -1}
+rule STUFF{
+
+500*{r 2 s 0.95 h 4}
+SQUARE{h 358.49 sat 0.9333 b 1.0000}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,43 @@
+startshape wall
+
+background { b -.95 }
+
+rule wall {
+	20* { } brick { b .7 sat .5 }
+}
+
+rule brick .09 {
+	ghost { }
+}
+
+rule brick {
+	ghost { }
+	brick { x 2.75 }
+}
+rule brick {
+	ghost { }
+	brick { x -2.75 }
+}
+rule brick {
+	ghost { }
+	brick { y 1.25 x (2.75/2) }
+}
+rule brick {
+	ghost { }
+	brick { y -1.25 x (2.75/2) }
+}
+rule brick {
+	ghost { }
+	brick { y 1.25 x (-2.75/2) }
+}
+rule brick {
+	ghost { }
+	brick { y -1.25 x (-2.75/2) }
+}
+
+rule ghost {
+	SQUARE { h 0 a -.9 s 2.5 1 }
+}
+rule ghost .03 {
+	brick { a -.87 s .707 }
+}

@@ -1,0 +1,45 @@
+startshape MOUNTAINS
+
+
+rule MOUNTAINS {
+16* { x 8.6 } MOUNT { z 20}
+}
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { x 0.4 s 0.8 y 0.05 z -1}
+}
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { s 1.8 y 0.05 z -1}
+}
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { x 1 s 0.7 y 0.1 z -1}
+}
+
+rule MOUNT {
+  MBASE { }
+  MOUNT { x -0.5 s 0.85 y 0.1 z -1}
+}
+
+rule MBASE {
+  FUP { hue 30 b 0.2 saturation 1 skew 1 2}
+}
+
+rule FUP {
+  TRIANGLE { s 1.6 1 }
+  FUP { s 0.9 y 0.05 b 0.01 }
+}
+rule FUP 0.1 {
+  TRIANGLE { }
+  FUP { x 0.1 s 0.8 r -10 }
+  FUP { s 0.9 y 0.05 b 0.01 }
+}
+rule FUP 0.1 {
+  TRIANGLE { }
+  FUP { x -0.1 s 0.8 r 10 }
+  FUP { s 0.9 y 0.05 b 0.01 }
+}

@@ -1,0 +1,45 @@
+startshape andrew
+rule andrew {
+CIRCLE {h 0 sat 0 b 0}
+CIRCLE {h 0 sat 0 b 1 size .99}
+CIRCLE {h 0 sat 0 b 0 size .96}
+CIRCLE {h 0 sat 0 b 1 size .93}
+CIRCLE {h 0 sat 0 b 0 size .90}
+CIRCLE {h 0 sat 0 b 1 size .87}
+CIRCLE {h 0 sat 0 b 0 size .85}
+CIRCLE {h 0 sat 0 b 1 size .82}
+CIRCLE {h 0 sat 0 b 0 size .79}
+CIRCLE {h 0 sat 0 b 1 size .76}
+CIRCLE {h 0 sat 0 b 0 size .73}
+CIRCLE {h 0 sat 0 b 1 size .70}
+CIRCLE {h 0 sat 0 b 0 size .67}
+CIRCLE {h 0 sat 0 b 1 size .65}
+CIRCLE {h 0 sat 0 b 0 size .62}
+CIRCLE {h 0 sat 0 b 1 size .59}
+CIRCLE {h 0 sat 0 b 0 size .56}
+CIRCLE {h 0 sat 0 b 1 size .53}
+CIRCLE {h 0 sat 0 b 0 size .50}
+CIRCLE {h 0 sat 0 b 1 size .47}
+CIRCLE {h 0 sat 0 b 0 size .45}
+CIRCLE {h 0 sat 0 b 1 size .42}
+CIRCLE {h 0 sat 0 b 0 size .39}
+CIRCLE {h 0 sat 0 b 1 size .36}
+CIRCLE {h 0 sat 0 b 0 size .33}
+CIRCLE {h 0 sat 0 b 1 size .30}
+CIRCLE {h 0 sat 0 b 0 size .27}
+CIRCLE {h 0 sat 0 b 1 size .25}
+CIRCLE {h 0 sat 0 b 0 size .22}
+CIRCLE {h 0 sat 0 b 1 size .19}
+CIRCLE {h 0 sat 0 b 0 size .16}
+CIRCLE {h 0 sat 0 b 1 size .13}
+CIRCLE {h 0 sat 0 b 0 size .10}
+CIRCLE {h 0 sat 0 b 1 size .07}
+CIRCLE {h 0 sat 0 b 0 size .05}
+CIRCLE {h 0 sat 0 b 1 size .04}
+CIRCLE {h 0 sat 0 b 0 size .03}
+CIRCLE {h 0 sat 0 b 1 size .02}
+CIRCLE {h 0 sat 0 b 0 size .01}
+andrew { r 50 x 1 s .9 }
+}
+
+

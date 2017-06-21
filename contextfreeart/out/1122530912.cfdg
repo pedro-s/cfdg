@@ -1,0 +1,63 @@
+startshape cushion
+
+rule cushion {
+	center_line { }
+	external_lines1 { y 1 }
+	external_lines1 { y -1 flip 180 }
+}
+
+rule center_line {
+	SQUARE { }
+	SQUARE { s .3 y .3 x .3 b 1 }
+	SQUARE { s .3 y .3 x -.3 b 1 }
+	SQUARE { s .3 y -.3 x -.3 b 1 }
+	SQUARE { s .3 y -.3 x .3 b 1 }
+	side_center1 { x 1 }
+	side_center1 { x -1 flip 90 }
+}
+
+rule side_center1 {
+	SQUARE { b 1 }
+	SQUARE { s .3 x -.3 y .3 }
+	SQUARE { s .3 x -.3 y -.3 }
+	side_center2 { s .75 1 x .875 }
+}
+
+rule side_center2 {
+	SQUARE { }
+	SQUARE { s .3 x -.3 y .3 b 1}
+	SQUARE { s .3 x -.3 y -.3 b 1 }
+	side_center1 { s .75 1 x .875 }
+}
+
+rule external_lines1 {
+	SQUARE { b 1 }
+	SQUARE { s .3 y -.3 x -.3 }
+	SQUARE { s .3 y -.3 x .3 }
+	side1 { x 1 }
+	side1 { x -1 flip 90 }
+	external_lines2 { y .875 s 1 .75 }
+}
+
+rule external_lines2 {
+	SQUARE { }
+	SQUARE { s .3 y -.3 x -.3 b 1 }
+	SQUARE { s .3 y -.3 x .3 b 1 }
+	side2 { x 1 }
+	side2 { x -1 flip 90 }
+	external_lines1 { y .875 s 1 .75 }
+}
+
+rule side1 {
+	SQUARE { }
+	SQUARE { s .3 x -.3 y .3 b 1 }
+	SQUARE { s .3 x .3 y -.3 b 1 }
+	side2 { s .75 1 x .875 }
+}
+
+rule side2 {
+	SQUARE { b 1 }
+	SQUARE { s .3 x -.3 y .3 }
+	SQUARE { s .3 x .3 y -.3 }
+	side1 { s .75 1 x .875 }
+}

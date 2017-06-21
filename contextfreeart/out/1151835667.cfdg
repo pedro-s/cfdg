@@ -1,0 +1,14 @@
+startshape fig2
+background { b -1}
+
+rule fig2
+{
+fig1 { }
+fig2 { x .5 s .98 r 185 hue 14 a -.1}
+}
+
+rule fig1
+{
+SQUARE	{ hue 2 sat .15 b .1}
+fig1 { s .954 r 65 x .1 b .1 hue 14 a -.15}
+}

@@ -1,0 +1,351 @@
+startshape PENabc_slant
+
+rule PENabc_slant{
+	SQUARE{x 7 s 21 .025 hue 240 sat 1 b .75 y -4.5}
+	SQUARE{x 7 s 21 .05 hue 240 sat 1 b .75 y -3.5}
+	SQUARE{x 7 s 21 .025 hue 240 sat 1 b .75 y -2.5}
+	SQUARE{x 7 s 21 .025 hue 240 sat 1 b .75 y -1.5}
+	SQUARE{x 7 s 21 .05 hue 240 sat 1 b .75 y -.5}
+	SQUARE{x 7 s 21 .025 hue 240 sat 1 b .75 y .5}
+	SQUARE{x 7 s 21 .025 hue 240 sat 1 b .75 y 1.5}
+	SQUARE{x 7 s 21 .025 hue 240 sat 1 b .75 y 2.5}
+	PENabc{skew 30 0}
+}
+
+rule PENabc{
+	PENa{hue 0 sat 1 b 1} //width 1.75
+	PENb{x 1.75} //width 1.5
+	PENc{x 3.25 hue 0 sat 1 b 1} //width 1
+	PENd{x 4.25} //width 1.75
+	PENe{x 6 hue 0 sat 1 b 1} //width 1
+	PENf{x 7} //width 0.75
+	PENg{x 7.75 hue 0 sat 1 b 1} //width 1.5
+	PENh{x 9.25} //width 1.75
+	PENi{x 11 hue 0 sat 1 b 1} //width 1
+	PENj{x 12} //width 0.5
+	PENk{x 12.5 hue 0 sat 1 b 1} //width 1
+	PENl{x 13.5} //width 1
+	PENm{x 14.5 hue 0 sat 1 b 1} //width 1.75
+	PENn{y -3} //width 1.75
+	PENo{y -3 x 1.75 hue 0 sat 1 b 1} //width 1.5
+	PENp{y -3 x 3.25} //width 1.75
+	PENq{y -3 x 5 hue 0 sat 1 b 1} //width 1.5
+	PENr{y -3 x 6.5} //width 1.5
+	PENs{y -3 x 8 hue 0 sat 1 b 1} //width 0.75
+	PENt{y -3 x 8.75} //width 0.75
+	PENu{y -3 x 9.5 hue 0 sat 1 b 1} //width 1.75
+	PENv{y -3 x 11.25} //width 1.75
+	PENw{y -3 x 13 hue 0 sat 1 b 1} //width 1.75
+	PENx{y -3 x 14.75} //width 1.5
+	PENy{y -3 x 16.25 hue 0 sat 1 b 1} //width 1.5
+	PENz{y -3 x 17.75} //width 1.5
+}
+
+rule PENELEM{
+	SQUARE{s .1 .07822}
+	CIRCLE{y .03911 s .1}
+	CIRCLE{y -.03911 s .1}
+}
+
+rule PENQARC{
+	10*[x -.5 r 9 x .5]PENELEM{}
+}
+
+rule PENQARC1{
+	PENQARC{x .5}
+}
+
+rule PENQARC2{
+	PENQARC1{r 90}
+}
+
+rule PENQARC3{
+	PENQARC1{r 180}
+}
+
+rule PENQARC4{
+	PENQARC1{r 270}
+}
+
+rule PENCIRCLE{
+	PENQARC1{}
+	PENQARC2{}
+	PENQARC3{}
+	PENQARC4{}
+}
+
+rule PENHOOKDN{
+	PENQARC3{}
+	PENQARC4{}
+}
+
+rule PENSMALLQARC{
+	5*[x -.25 r 18 x .25]PENELEM{}
+}
+
+rule PENSMALLQARC1{
+	PENSMALLQARC{y -.25}
+}
+
+rule PENSMALLQARC2{
+	PENSMALLQARC{x -.25 r 90}
+}
+
+rule PENSMALLQARC3{
+	PENSMALLQARC{x -.5 y -.25 r 180}
+}
+
+rule PENSMALLQARC4{
+	PENSMALLQARC{x -.25 y -.5 r 270}
+}
+
+rule PENSMALLHOOKDN{
+	PENSMALLQARC3{}
+	PENSMALLQARC4{}
+}
+
+rule PENSMALLHOOKUP{
+	PENSMALLQARC1{}
+	PENSMALLQARC2{}
+}
+
+rule PENMIDHOOKDN{
+	PENSMALLQARC3{}
+	PENQARC4{x -.25}
+}
+
+rule PENXHT{
+	SQUARE{s .1 1}
+	CIRCLE{y .5 s .1}
+	CIRCLE{y -.5 s .1}
+}
+
+rule PENHALFXHT{
+	SQUARE{s .1 .5 y -.25}
+	CIRCLE{s .1}
+	CIRCLE{y -.5 s .1}
+}
+
+rule PENQXHT{
+	SQUARE{s .1 .25 y -.375}
+	CIRCLE{y -.25 s .1}
+	CIRCLE{y -.5 s .1}
+}
+
+rule PEN3QXHT{
+	PENQXHT{}
+	PENHALFXHT{y .25}
+}
+
+rule PENEXTUP{
+	PENQARC4{y 1 x -.5 r 9}
+	PENQXHT{y 1.5}
+	PENSMALLHOOKUP{y 1.5}
+	PEN3QXHT{x -.5 y 1}
+}
+
+rule PENEXTDN{
+	PENEXTUP{r 180}
+}
+
+rule PENa{
+	PENCIRCLE{}
+	PEN3QXHT{y .25 x .5}
+	PENMIDHOOKDN{x 1}
+}
+
+rule PENb{
+	PENEXTUP{}
+	PENHALFXHT{x -.5 y .5}
+	PENMIDHOOKDN{}
+	PENHALFXHT{x .25 y .5}
+	PENMIDHOOKDN{x .5 y .25 flip 90}
+}
+
+rule PENc{
+	PENSMALLQARC1{y .5 x .25}
+	PENQARC2{}
+	PENHOOKDN{}
+}
+
+rule PENd{
+	PENCIRCLE{}
+	PENXHT{x .5 y 1}
+	PEN3QXHT{x .5 y .25}
+	PENMIDHOOKDN{x 1}
+}
+
+rule PENe{
+	PENHALFXHT{x -.5 r 90}
+	PENSMALLQARC4{y .5 x .25}
+	PENSMALLQARC1{y .5 x .25}
+	PENQARC2{}
+	PENHOOKDN{}
+}
+
+rule PENf{
+	PENEXTUP{}
+	PENXHT{x -.5}
+	PENXHT{x -.5 y -1}
+	PENQARC{y 1 flip 0}
+	PENMIDHOOKDN{}
+}
+
+rule PENg{
+	PENCIRCLE{}
+	PENXHT{x .5}
+	PENEXTDN{}
+	PENQARC4{x .5}
+}
+
+rule PENh{
+	PENEXTUP{}
+	PENXHT{x -.5}
+	PENQARC2{}
+	PENQARC1{}
+	PENQXHT{x .5 y .25}
+	PENMIDHOOKDN{x 1}
+}
+
+rule PENi{
+	PENHALFXHT{x -.5 y .5}
+	PENHOOKDN{}
+
+	PENELEM{x -.5 y 1}
+}
+
+rule PENj{
+	PENXHT{x -.5}
+	PENEXTDN{x -1}
+	PENQARC4{x -.5}
+
+	PENELEM{x -.5 y 1}
+}
+
+rule PENk{
+	PENEXTUP{}
+	PENXHT{x -.5}
+	PENHALFXHT{x -.5 r 90}
+	PENSMALLQARC4{y .5 x .25}
+	PENSMALLQARC1{y .5 x .25}
+	PENQARC2{}
+	PENSMALLQARC1{x -.25}
+	PENMIDHOOKDN{x .25}	
+}
+
+rule PENl{
+	PENEXTUP{}
+	PENHALFXHT{x -.5 y .5}
+	PENHOOKDN{}
+}
+
+rule PENm{
+	PENXHT{x -.5}
+	PENSMALLHOOKUP{y .5}
+	PEN3QXHT{}
+	PENSMALLHOOKUP{x .5 y .5}
+	PENHALFXHT{x .5 y .25}
+	PENMIDHOOKDN{x 1}
+}
+
+rule PENn{
+	PENXHT{x -.5}
+	PENQARC2{}
+	PENQARC1{}
+	PENQXHT{x .5 y .25}
+	PENMIDHOOKDN{x 1}
+}
+
+rule PENo{
+	PENCIRCLE{}
+	PENMIDHOOKDN{x .5 y .25 flip 90}
+}
+
+rule PENp{
+	PENXHT{x -.5}
+	PENXHT{x -.5 y -1}
+	PENQARC2{}
+	PENQARC1{}
+	PENQXHT{x .5 y .25}
+	PENMIDHOOKDN{x 1}
+}
+
+rule PENq{
+	PENCIRCLE{}
+	PENXHT{x .5}
+	PENXHT{x .5 y -1}
+	PENSMALLQARC2{y -.25 x 1}
+	PENSMALLQARC4{y .25 x 1}
+}
+
+rule PENr{
+	PENQARC2{}
+	PENSMALLQARC1{x .25 y .5}
+	PENXHT{x .25}
+	PENMIDHOOKDN{x .5 y .25 flip 90}
+}
+
+rule PENs{
+	PENHALFXHT{x -.5 y .5}
+	PENSMALLQARC3{y .75}
+	PENQARC1{x -.25 y -.25}
+	PENSMALLQARC3{x .25}
+	PENSMALLQARC4{x .25}
+}
+
+rule PENt{
+	PEN3QXHT{x -.5 y 1}
+	PEN3QXHT{x -.5 y .25}
+	PENMIDHOOKDN{}
+
+	PEN3QXHT{r 90 x -.5 y .5}
+}
+
+rule PENu{
+	PENHALFXHT{x -.5 y .5}
+	PENHOOKDN{}
+	PEN3QXHT{x .5 y .25}
+	PENMIDHOOKDN{x 1}
+}
+
+rule PENv{
+	PENHALFXHT{x -.5 y .5}
+	PENHOOKDN{}
+	PENHALFXHT{x .5 y .5}
+	PENMIDHOOKDN{x .75 y .25 flip 90}
+}
+
+rule PENw{
+	PEN3QXHT{x -.5 y .25}
+	PENSMALLHOOKDN{}
+	PEN3QXHT{y .25}
+	PENSMALLHOOKDN{x .5}
+	PEN3QXHT{x .5 y .25}
+	PENMIDHOOKDN{x .75 y .25 flip 90}
+}
+
+rule PENx{
+	PENQARC2{}
+	PENSMALLQARC1{x .25 y .5}
+	PENHALFXHT{x .25 y .25}
+	PENMIDHOOKDN{x .75}
+	PENSMALLHOOKUP{x .75 y .5}
+	PENSMALLHOOKDN{x .25}
+}
+
+rule PENy{
+	PENHALFXHT{x -.5 y .5}
+	PENHOOKDN{}
+	PENXHT{x .5}
+	PENEXTDN{}
+	PENQARC4{x .5}
+}
+
+rule PENz{
+	PENQARC2{}
+	PEN3QXHT{r 90 x .25 y .5}
+	PENQARC4{x .25 y .5}
+	PENQARC2{x .25 y -.5}
+	PEN3QXHT{r 90 y -.5}
+	PENQARC4{x .5}
+}

@@ -1,0 +1,748 @@
+#Tube map generator with station names
+#Bodged together from:
+#Grimace's wordmaker and tube map
+#Bargonaut's character set
+#Very, very bodged...
+#Try the start string GGP for a reasonably clean-looking map
+
+#Mind the gap!
+
+startshape INIT
+
+#Include text shapes and wordmaker
+include wordmaker.cdfg
+include bargonaut_font.cfdg 
+
+#Set things going from the end of a line
+#Equal chance of vert/horz start
+#Vertical
+rule INIT
+{ 
+   LINE{r 0 sat 1 b 1 hue 205} 
+   TERMINUS{r 0 sat 1 b 1 hue 205 y -.5} 
+   LOGO{y -10.4}
+} 
+
+#Horizontal
+rule INIT
+{ 
+   LINE{r 90 sat 1 b 1 hue 205} 
+   TERMINUS{r 90 sat 1 b 1 hue 205 x .5} 
+   LOGO{y -10.4}
+} 
+
+#LUL LOGO
+rule LOGO
+{
+CIRCLE{hue 0 sat 1 b 1 x -10.4 s 3.4}
+CIRCLE{hue 0 sat 0 b 1 x -10.4 s 2}
+SQUARE{hue 230 sat 1 b .6 x -10.4 s 4.6 .7}
+U_BLOCK	{ x 0 y 0 sat 0 b 1 x -12.4 s .4}
+N_BLOCK	{ x 0 y 0 sat 0 b 1 x -12 s .4}
+D_BLOCK	{ x 0 y 0 sat 0 b 1 x -11.6 s .4}
+E_BLOCK	{ x 0 y 0 sat 0 b 1 x -11.2 s .4}
+R_BLOCK	{ x 0 y 0 sat 0 b 1 x -10.8 s .4}
+G_BLOCK	{ x 0 y 0 sat 0 b 1 x -10.4 s .4}
+R_BLOCK	{ x 0 y 0 sat 0 b 1 x -10 s .4}
+O_BLOCK	{ x 0 y 0 sat 0 b 1 x -9.6 s .4}
+U_BLOCK	{ x 0 y 0 sat 0 b 1 x -9.2 s .4}
+N_BLOCK	{ x 0 y 0 sat 0 b 1 x -8.8 s .4}
+D_BLOCK	{ x 0 y 0 sat 0 b 1 x -8.4 s .4}
+}
+
+#Draw a line, width 0.5, length 1, swith to choices
+rule LINE
+{ 
+   SQUARE{s 0.5 1}
+   LINE_B{y 1}
+   LINE_R {y 2}  
+} 
+
+#Draw a line, width 0.5, length 1 then go back...
+rule LINE_B
+{ 
+   SQUARE{s 0.5 1}
+} 
+
+#Start to make some choices...
+#Keep going %
+rule LINE_R 0.5
+{ 
+   SQUARE{s 0.5 1} 
+   LINE_R {y 1}    
+} 
+
+#Station %
+rule LINE_R 0.5
+{ 
+   STATION{y -0.5} 
+} 
+
+#Turn left %
+rule LINE_R .05
+{ 
+   CORNER_1{} 
+} 
+
+#Turn right %
+rule LINE_R 0.05
+{ 
+   CORNER_2{} 
+} 
+
+#Fork in two %
+rule LINE_R 0.04
+{ 
+   CORNER_1{} 
+   CORNER_2{} 
+} 
+
+#Corner (circle rounds off edge)
+rule CORNER_1
+{ 
+   CIRCLE{s 0.5 y -0.5} 
+   LINE_ADJUST{r 45 x -0.5}    
+} 
+
+#Corner (circle rounds off edge)
+rule CORNER_2
+{ 
+   CIRCLE{s 0.5 y -0.5} 
+   LINE_ADJUST{r -45 x 0.5 }    
+}
+
+#Adjust positioning after a corner
+rule LINE_ADJUST
+{
+LINE {y -0.25}
+} 
+
+#Various station types============================
+
+#Terminus 
+rule STATION 1.4
+{
+   TERMINUS{}
+}
+rule TERMINUS
+{ 
+   SQUARE{s 1.2 .5}
+   NAME{x 1}
+} 
+
+#Station on one side of the line... 
+rule STATION 2
+{ 
+   SQUARE{s .7 .5 x 0.25} 
+   SQUARE{s .5 1} 
+   NAME{x 1}
+   LINE{y 1} 
+} 
+
+#Station on other side of the line...
+rule STATION 2
+{ 
+   SQUARE{s .7 .5 x -0.25} 
+   SQUARE{s .5 1 } 
+   NAMEBACK{x -1}
+   LINE{y 1} 
+} 
+
+#Interchange with diff. coloured line
+rule STATION .6
+{ 
+   INTERCHANGE{} 
+} 
+
+#Colour change choices
+rule INTERCHANGE 8
+{ 
+   SQUARE{s .5 1} 
+   LINE{y 1} 
+   JUNCTION_INIT {hue -90 b -.0} 
+   HOLLOW_CIRCLE{}
+}
+
+#Junction directions
+#90 degree turn one way...
+rule JUNCTION_INIT
+{
+   JUNCTION {r 90 x -.8}
+   NAME{x .8}
+} 
+
+#90 degree turn the other way...
+rule JUNCTION_INIT
+{
+   JUNCTION {r -90 x .8}
+   NAME{x .7 y .7}
+} 
+
+#45 degree turn one way...
+rule JUNCTION_INIT
+{
+   JUNCTION {r 45 x -.6 y .6}
+   NAME{x .8 y .6}
+} 
+
+#45 degree turn the other way...
+rule JUNCTION_INIT
+{
+   JUNCTION {r -45 x .6 y .6}
+   NAME{x .8 y -.6}
+} 
+
+
+#Keep things separated a bit
+rule JUNCTION
+{ 
+   LINE{} 
+} 
+
+#
+rule JUNCTION 0.5
+{ 
+   SQUARE {s 1 0.5} 
+   LINE{r 90 x -1}
+   LINE{r -90 x 1}
+   HOLLOW_CIRCLE{}
+   NAME{x .8 y .8}
+} 
+
+#Try to make the circles on top by wasting time until other stuff's already drawn...
+rule HOLLOW_CIRCLE 500
+{
+   HOLLOW_CIRCLE {}
+}
+
+#Actually draw the circle!
+rule HOLLOW_CIRCLE
+{
+   CIRCLE{s 1 sat -1 b -1}
+   CIRCLE{s .55 sat -1 b 1} 
+}
+
+#==STATION NAMES TO RIGHT OF MARK==#
+
+#Name on top by wasting time
+rule NAME 500
+{
+NAME{}
+}
+
+#Actually write the name
+rule NAME
+{
+WORD{s 0.3}
+}
+
+#==STATION NAMES TO LEFT OF MARK==#
+
+#Name on top by wasting time
+rule NAMEBACK 500
+{
+NAMEBACK{}
+}
+
+#Actually write the name
+rule NAMEBACK
+{
+B_WORD{s 0.3}
+}
+
+
+#============================#
+#Can't include this to save my life...#
+#============================#
+### Actual word grammar ### 
+
+rule WORD { 
+   RAND_TRIPLE{} 
+   WORD_R {x 3.3}    
+} 
+rule WORD { 
+   RAND_QUAD{} 
+   WORD_R {x 4.4}    
+} 
+rule WORD { 
+   RAND_QUINT{} 
+   WORD_R {x 5.5}    
+} 
+rule WORD { 
+   RAND_SEXTUPLE{} 
+   // don't recurse 
+   RAND_SUFFIX {x 6.6}    
+} 
+
+#rule WORD_R { 
+#   SQUARE{s 1 0.25} 
+#   WORD_R {x 1.1}    
+#} 
+rule WORD_R { 
+   RAND_TRIPLE{} 
+   RAND_SUFFIX{x 3.3} 
+} 
+rule WORD_R { 
+   RAND_QUAD{} 
+   RAND_SUFFIX {x 4.4}    
+} 
+rule WORD_R { 
+   RAND_QUINT{} 
+   RAND_SUFFIX {x 5.5}    
+} 
+rule WORD_R 2 { 
+   RAND_SUFFIX {} 
+} 
+
+rule RAND_TRIPLE { 
+   START_CONSONANT{} 
+   RAND_VOWEL{x 1.1} RAND_ACCENT{x 1.1} 
+   END_CONSONANT{x 2.2} 
+} 
+
+rule RAND_QUAD { 
+   START_CONSONANT{} 
+   RAND_DOUBLE_VOWEL{x 1.1} 
+   END_CONSONANT{x 3.3} 
+} 
+
+rule RAND_QUAD { 
+   RAND_DIPTHONG{} 
+   RAND_VOWEL{x 2.2} 
+   END_CONSONANT{x 3.3} 
+} 
+rule RAND_QUAD { 
+   START_CONSONANT{} 
+   RAND_VOWEL{x 1.1} 
+   RAND_DOUBLE_CONSONANT{x 2.2} 
+} 
+
+rule RAND_QUINT { 
+   RAND_DIPTHONG{} 
+   RAND_DOUBLE_VOWEL{x 2.2} 
+   END_CONSONANT{x 4.4} 
+} 
+rule RAND_QUINT { 
+   RAND_DIPTHONG{} 
+   RAND_VOWEL{x 2.2} 
+   RAND_DOUBLE_CONSONANT{x 3.3} 
+} 
+
+rule RAND_SEXTUPLE { 
+   RAND_DIPTHONG{} 
+   RAND_DOUBLE_VOWEL{x 2.2} 
+   RAND_DOUBLE_CONSONANT{x 4.4} 
+} 
+rule RAND_SEXTUPLE { 
+   START_CONSONANT{} 
+   RAND_VOWEL{x 1.1} 
+   RAND_DOUBLE_CONSONANT{x 2.2}    
+   RAND_VOWEL{x 4.4} 
+   END_CONSONANT{x 5.5} 
+} 
+
+rule RAND_ACCENT  0.2 { 
+   SQUARE { s 0.25 y 0.8 x -0.25} 
+   SQUARE { s 0.25 y 0.8 x 0.25} 
+} 
+rule RAND_ACCENT {} 
+
+### Ugly data blocks ### 
+
+rule RAND_BLOCK {   A_BLOCK{}} 
+rule RAND_BLOCK {   B_BLOCK{}} 
+rule RAND_BLOCK {   C_BLOCK{}} 
+rule RAND_BLOCK {   D_BLOCK{}} 
+rule RAND_BLOCK {   E_BLOCK{}} 
+rule RAND_BLOCK {   F_BLOCK{}} 
+rule RAND_BLOCK {   G_BLOCK{}} 
+rule RAND_BLOCK {   H_BLOCK{}} 
+rule RAND_BLOCK {   I_BLOCK{}} 
+rule RAND_BLOCK {   J_BLOCK{}} 
+rule RAND_BLOCK {   K_BLOCK{}} 
+rule RAND_BLOCK {   L_BLOCK{}} 
+rule RAND_BLOCK {   M_BLOCK{}} 
+rule RAND_BLOCK {   N_BLOCK{}} 
+rule RAND_BLOCK {   O_BLOCK{}} 
+rule RAND_BLOCK {   P_BLOCK{}} 
+rule RAND_BLOCK {   Q_BLOCK{}} 
+rule RAND_BLOCK {   R_BLOCK{}} 
+rule RAND_BLOCK {   S_BLOCK{}} 
+rule RAND_BLOCK {   T_BLOCK{}} 
+rule RAND_BLOCK {   U_BLOCK{}} 
+rule RAND_BLOCK {   V_BLOCK{}} 
+rule RAND_BLOCK {   W_BLOCK{}} 
+rule RAND_BLOCK {   X_BLOCK{}} 
+rule RAND_BLOCK {   Y_BLOCK{}} 
+rule RAND_BLOCK {   Z_BLOCK{}} 
+
+rule RAND_CONSONANT{ B_BLOCK{}} 
+rule RAND_CONSONANT{ C_BLOCK{}} 
+rule RAND_CONSONANT{ D_BLOCK{}} 
+rule RAND_CONSONANT{ F_BLOCK{}} 
+rule RAND_CONSONANT{ G_BLOCK{}} 
+rule RAND_CONSONANT{ H_BLOCK{}} 
+rule RAND_CONSONANT{ J_BLOCK{}} 
+rule RAND_CONSONANT{ K_BLOCK{}} 
+rule RAND_CONSONANT{ L_BLOCK{}} 
+rule RAND_CONSONANT{ M_BLOCK{}} 
+rule RAND_CONSONANT{ N_BLOCK{}} 
+rule RAND_CONSONANT{ P_BLOCK{}} 
+# rule RAND_CONSONANT{ Q_BLOCK{}} 
+rule RAND_CONSONANT{ R_BLOCK{}} 
+rule RAND_CONSONANT{ S_BLOCK{}} 
+rule RAND_CONSONANT{ T_BLOCK{}} 
+rule RAND_CONSONANT{ V_BLOCK{}} 
+rule RAND_CONSONANT{ W_BLOCK{}} 
+rule RAND_CONSONANT{ X_BLOCK{}} 
+rule RAND_CONSONANT{ Z_BLOCK{}} 
+
+rule START_CONSONANT{ B_BLOCK{}} 
+rule START_CONSONANT{ C_BLOCK{}} 
+rule START_CONSONANT{ D_BLOCK{}} 
+rule START_CONSONANT{ F_BLOCK{}} 
+rule START_CONSONANT{ G_BLOCK{}} 
+rule START_CONSONANT{ H_BLOCK{}} 
+rule START_CONSONANT 0.2 { J_BLOCK{}} 
+rule START_CONSONANT{ K_BLOCK{}} 
+rule START_CONSONANT{ L_BLOCK{}} 
+rule START_CONSONANT{ M_BLOCK{}} 
+rule START_CONSONANT{ N_BLOCK{}} 
+rule START_CONSONANT{ P_BLOCK{}} 
+rule START_CONSONANT{ R_BLOCK{}} 
+rule START_CONSONANT{ S_BLOCK{}} 
+rule START_CONSONANT{ T_BLOCK{}} 
+rule START_CONSONANT{ V_BLOCK{}} 
+rule START_CONSONANT{ W_BLOCK{}} 
+rule START_CONSONANT 0.2 { Z_BLOCK{}} 
+
+rule END_CONSONANT{ B_BLOCK{}} 
+rule END_CONSONANT{ D_BLOCK{}} 
+rule END_CONSONANT{ G_BLOCK{}} 
+rule END_CONSONANT{ M_BLOCK{}} 
+rule END_CONSONANT{ N_BLOCK{}} 
+rule END_CONSONANT{ P_BLOCK{}} 
+rule END_CONSONANT{ R_BLOCK{}} 
+rule END_CONSONANT{ T_BLOCK{}} 
+rule END_CONSONANT{ W_BLOCK{}} 
+rule END_CONSONANT{ X_BLOCK{}} 
+
+rule RAND_VOWEL {   A_BLOCK{}} 
+rule RAND_VOWEL {   E_BLOCK{}} 
+rule RAND_VOWEL {   I_BLOCK{}} 
+rule RAND_VOWEL {   O_BLOCK{}} 
+rule RAND_VOWEL {   U_BLOCK{}} 
+
+rule RAND_DOUBLE_VOWEL 0.5 { E_BLOCK{} E_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_VOWEL 0.5 { E_BLOCK{flip 90} E_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_VOWEL { E_BLOCK{} A_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_VOWEL { I_BLOCK{} E_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_VOWEL { O_BLOCK{} A_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_VOWEL { O_BLOCK{} O_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_VOWEL { O_BLOCK{} U_BLOCK{x 1.1}} 
+
+rule RAND_DOUBLE_CONSONANT { C_BLOCK{} H_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { C_BLOCK{} K_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { F_BLOCK{} F_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { L_BLOCK{} K_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { L_BLOCK{} L_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { L_BLOCK{} P_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { L_BLOCK{} T_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { N_BLOCK{} D_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { N_BLOCK{} G_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { N_BLOCK{} K_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { N_BLOCK{} T_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { P_BLOCK{} P_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { R_BLOCK{} D_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { R_BLOCK{} F_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { R_BLOCK{} N_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { R_BLOCK{} T_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { S_BLOCK{} H_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { S_BLOCK{} T_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { S_BLOCK{} S_BLOCK{x 1.1}} 
+rule RAND_DOUBLE_CONSONANT { Z_BLOCK{} Z_BLOCK{x 1.1}} 
+
+rule RAND_DIPTHONG{ B_BLOCK{} L_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ B_BLOCK{} R_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ C_BLOCK{} H_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ C_BLOCK{} L_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ C_BLOCK{} R_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ D_BLOCK{} R_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ F_BLOCK{} L_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ F_BLOCK{} R_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ G_BLOCK{} L_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ G_BLOCK{} R_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ P_BLOCK{} L_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ P_BLOCK{} R_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ S_BLOCK{} C_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ S_BLOCK{} H_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ S_BLOCK{} L_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ S_BLOCK{} M_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ S_BLOCK{} N_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ S_BLOCK{} P_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ S_BLOCK{} W_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ T_BLOCK{} H_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ T_BLOCK{} R_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ T_BLOCK{} W_BLOCK {x 1.1}} 
+rule RAND_DIPTHONG{ W_BLOCK{} H_BLOCK {x 1.1}} 
+
+rule RAND_SUFFIX 2 {RAND_VOWEL{} WORD_HOOK{x 2.2}} 
+rule RAND_SUFFIX{A_BLOCK{} N_BLOCK{x 1.1} WORD_HOOK{x 3.3}} 
+rule RAND_SUFFIX {I_BLOCK{} N_BLOCK{x 1.1} G_BLOCK{x 2.2} WORD_HOOK{x 4.4}} 
+rule RAND_SUFFIX {I_BLOCK{} S_BLOCK{x 1.1} H_BLOCK{x 2.2} WORD_HOOK{x 4.4}} 
+rule RAND_SUFFIX{E_BLOCK{} D_BLOCK{x 1.1} WORD_HOOK{x 3.3}} 
+rule RAND_SUFFIX{E_BLOCK{} N_BLOCK{x 1.1} WORD_HOOK{x 3.3}} 
+rule RAND_SUFFIX{E_BLOCK{} R_BLOCK{x 1.1} WORD_HOOK{x 3.3}} 
+rule RAND_SUFFIX{O_BLOCK{} N_BLOCK{x 1.1} WORD_HOOK{x 3.3}} 
+rule RAND_SUFFIX{U_BLOCK{} S_BLOCK{x 1.1} S_BLOCK{x 2.2} WORD_HOOK{x 4.4}} 
+rule RAND_SUFFIX 6 { WORD_HOOK{x 1.1}} 
+
+
+
+
+#============================#
+#Same applies for other direction....#
+#============================#
+
+### Actual B_WORD grammar ### 
+
+rule B_WORD { 
+   B_RAND_TRIPLE{} 
+   B_WORD_R {x -3.3}    
+} 
+rule B_WORD { 
+   B_RAND_QUAD{} 
+   B_WORD_R {x -4.4}    
+} 
+rule B_WORD { 
+   B_RAND_QUINT{} 
+   B_WORD_R {x -5.5}    
+} 
+rule B_WORD { 
+   B_RAND_SEXTUPLE{} 
+   // don't recurse 
+   B_RAND_SUFFIx {x -6.6}    
+} 
+
+#rule B_WORD_R { 
+#   SQUARE{s 1 0.25} 
+#   B_WORD_R {x -1.1}    
+#} 
+rule B_WORD_R { 
+   B_RAND_TRIPLE{} 
+   B_RAND_SUFFIX{x -3.3} 
+} 
+rule B_WORD_R { 
+   B_RAND_QUAD{} 
+   B_RAND_SUFFIx {x -4.4}    
+} 
+rule B_WORD_R { 
+   B_RAND_QUINT{} 
+   B_RAND_SUFFIx {x -5.5}    
+} 
+rule B_WORD_R 2 { 
+   B_RAND_SUFFIx {} 
+} 
+
+rule B_RAND_TRIPLE { 
+   B_START_CONSONANT{} 
+   B_RAND_VOWEL{x -1.1} B_RAND_ACCENT{x -1.1} 
+   B_END_CONSONANT{x -2.2} 
+} 
+
+rule B_RAND_QUAD { 
+   B_START_CONSONANT{} 
+   B_RAND_DOUBLE_VOWEL{x -1.1} 
+   B_END_CONSONANT{x -3.3} 
+} 
+
+rule B_RAND_QUAD { 
+   B_RAND_DIPTHONG{} 
+   B_RAND_VOWEL{x -2.2} 
+   B_END_CONSONANT{x -3.3} 
+} 
+rule B_RAND_QUAD { 
+   B_START_CONSONANT{} 
+   B_RAND_VOWEL{x -1.1} 
+   B_RAND_DOUBLE_CONSONANT{x -2.2} 
+} 
+
+rule B_RAND_QUINT { 
+   B_RAND_DIPTHONG{} 
+   B_RAND_DOUBLE_VOWEL{x -2.2} 
+   B_END_CONSONANT{x -4.4} 
+} 
+rule B_RAND_QUINT { 
+   B_RAND_DIPTHONG{} 
+   B_RAND_VOWEL{x -2.2} 
+   B_RAND_DOUBLE_CONSONANT{x -3.3} 
+} 
+
+rule B_RAND_SEXTUPLE { 
+   B_RAND_DIPTHONG{} 
+   B_RAND_DOUBLE_VOWEL{x -2.2} 
+   B_RAND_DOUBLE_CONSONANT{x -4.4} 
+} 
+rule B_RAND_SEXTUPLE { 
+   B_START_CONSONANT{} 
+   B_RAND_VOWEL{x -1.1} 
+   B_RAND_DOUBLE_CONSONANT{x -2.2}    
+   B_RAND_VOWEL{x -4.4} 
+   B_END_CONSONANT{x -5.5} 
+} 
+
+rule B_RAND_ACCENT  0.2 { 
+   SQUARE { s 0.25 y 0.8 x -0.25} 
+   SQUARE { s 0.25 y 0.8 x -0.25} 
+} 
+rule B_RAND_ACCENT {} 
+
+### Ugly data blocks ### 
+
+rule B_RAND_BLOCK {   A_BLOCK{}} 
+rule B_RAND_BLOCK {   B_BLOCK{}} 
+rule B_RAND_BLOCK {   C_BLOCK{}} 
+rule B_RAND_BLOCK {   D_BLOCK{}} 
+rule B_RAND_BLOCK {   E_BLOCK{}} 
+rule B_RAND_BLOCK {   F_BLOCK{}} 
+rule B_RAND_BLOCK {   G_BLOCK{}} 
+rule B_RAND_BLOCK {   H_BLOCK{}} 
+rule B_RAND_BLOCK {   I_BLOCK{}} 
+rule B_RAND_BLOCK {   J_BLOCK{}} 
+rule B_RAND_BLOCK {   K_BLOCK{}} 
+rule B_RAND_BLOCK {   L_BLOCK{}} 
+rule B_RAND_BLOCK {   M_BLOCK{}} 
+rule B_RAND_BLOCK {   N_BLOCK{}} 
+rule B_RAND_BLOCK {   O_BLOCK{}} 
+rule B_RAND_BLOCK {   P_BLOCK{}} 
+rule B_RAND_BLOCK {   Q_BLOCK{}} 
+rule B_RAND_BLOCK {   R_BLOCK{}} 
+rule B_RAND_BLOCK {   S_BLOCK{}} 
+rule B_RAND_BLOCK {   T_BLOCK{}} 
+rule B_RAND_BLOCK {   U_BLOCK{}} 
+rule B_RAND_BLOCK {   V_BLOCK{}} 
+rule B_RAND_BLOCK {   W_BLOCK{}} 
+rule B_RAND_BLOCK {   X_BLOCK{}} 
+rule B_RAND_BLOCK {   Y_BLOCK{}} 
+rule B_RAND_BLOCK {   Z_BLOCK{}} 
+
+rule B_RAND_CONSONANT{ B_BLOCK{}} 
+rule B_RAND_CONSONANT{ C_BLOCK{}} 
+rule B_RAND_CONSONANT{ D_BLOCK{}} 
+rule B_RAND_CONSONANT{ F_BLOCK{}} 
+rule B_RAND_CONSONANT{ G_BLOCK{}} 
+rule B_RAND_CONSONANT{ H_BLOCK{}} 
+rule B_RAND_CONSONANT{ J_BLOCK{}} 
+rule B_RAND_CONSONANT{ K_BLOCK{}} 
+rule B_RAND_CONSONANT{ L_BLOCK{}} 
+rule B_RAND_CONSONANT{ M_BLOCK{}} 
+rule B_RAND_CONSONANT{ N_BLOCK{}} 
+rule B_RAND_CONSONANT{ P_BLOCK{}} 
+# rule B_RAND_CONSONANT{ Q_BLOCK{}} 
+rule B_RAND_CONSONANT{ R_BLOCK{}} 
+rule B_RAND_CONSONANT{ S_BLOCK{}} 
+rule B_RAND_CONSONANT{ T_BLOCK{}} 
+rule B_RAND_CONSONANT{ V_BLOCK{}} 
+rule B_RAND_CONSONANT{ W_BLOCK{}} 
+rule B_RAND_CONSONANT{ X_BLOCK{}} 
+rule B_RAND_CONSONANT{ Z_BLOCK{}} 
+
+rule B_START_CONSONANT{ B_BLOCK{}} 
+rule B_START_CONSONANT{ C_BLOCK{}} 
+rule B_START_CONSONANT{ D_BLOCK{}} 
+rule B_START_CONSONANT{ F_BLOCK{}} 
+rule B_START_CONSONANT{ G_BLOCK{}} 
+rule B_START_CONSONANT{ H_BLOCK{}} 
+rule B_START_CONSONANT 0.2 { J_BLOCK{}} 
+rule B_START_CONSONANT{ K_BLOCK{}} 
+rule B_START_CONSONANT{ L_BLOCK{}} 
+rule B_START_CONSONANT{ M_BLOCK{}} 
+rule B_START_CONSONANT{ N_BLOCK{}} 
+rule B_START_CONSONANT{ P_BLOCK{}} 
+rule B_START_CONSONANT{ R_BLOCK{}} 
+rule B_START_CONSONANT{ S_BLOCK{}} 
+rule B_START_CONSONANT{ T_BLOCK{}} 
+rule B_START_CONSONANT{ V_BLOCK{}} 
+rule B_START_CONSONANT{ W_BLOCK{}} 
+rule B_START_CONSONANT 0.2 { Z_BLOCK{}} 
+
+rule B_END_CONSONANT{ B_BLOCK{}} 
+rule B_END_CONSONANT{ D_BLOCK{}} 
+rule B_END_CONSONANT{ G_BLOCK{}} 
+rule B_END_CONSONANT{ M_BLOCK{}} 
+rule B_END_CONSONANT{ N_BLOCK{}} 
+rule B_END_CONSONANT{ P_BLOCK{}} 
+rule B_END_CONSONANT{ R_BLOCK{}} 
+rule B_END_CONSONANT{ T_BLOCK{}} 
+rule B_END_CONSONANT{ W_BLOCK{}} 
+rule B_END_CONSONANT{ X_BLOCK{}} 
+
+rule B_RAND_VOWEL {   A_BLOCK{}} 
+rule B_RAND_VOWEL {   E_BLOCK{}} 
+rule B_RAND_VOWEL {   I_BLOCK{}} 
+rule B_RAND_VOWEL {   O_BLOCK{}} 
+rule B_RAND_VOWEL {   U_BLOCK{}} 
+
+rule B_RAND_DOUBLE_VOWEL 0.5 { E_BLOCK{} E_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_VOWEL 0.5 { E_BLOCK{flip 90} E_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_VOWEL { E_BLOCK{} A_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_VOWEL { I_BLOCK{} E_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_VOWEL { O_BLOCK{} A_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_VOWEL { O_BLOCK{} O_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_VOWEL { O_BLOCK{} U_BLOCK{x -1.1}} 
+
+rule B_RAND_DOUBLE_CONSONANT { C_BLOCK{} H_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { C_BLOCK{} K_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { F_BLOCK{} F_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { L_BLOCK{} K_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { L_BLOCK{} L_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { L_BLOCK{} P_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { L_BLOCK{} T_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { N_BLOCK{} D_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { N_BLOCK{} G_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { N_BLOCK{} K_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { N_BLOCK{} T_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { P_BLOCK{} P_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { R_BLOCK{} D_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { R_BLOCK{} F_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { R_BLOCK{} N_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { R_BLOCK{} T_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { S_BLOCK{} H_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { S_BLOCK{} T_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { S_BLOCK{} S_BLOCK{x -1.1}} 
+rule B_RAND_DOUBLE_CONSONANT { Z_BLOCK{} Z_BLOCK{x -1.1}} 
+
+rule B_RAND_DIPTHONG{ B_BLOCK{} L_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ B_BLOCK{} R_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ C_BLOCK{} H_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ C_BLOCK{} L_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ C_BLOCK{} R_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ D_BLOCK{} R_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ F_BLOCK{} L_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ F_BLOCK{} R_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ G_BLOCK{} L_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ G_BLOCK{} R_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ P_BLOCK{} L_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ P_BLOCK{} R_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ S_BLOCK{} C_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ S_BLOCK{} H_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ S_BLOCK{} L_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ S_BLOCK{} M_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ S_BLOCK{} N_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ S_BLOCK{} P_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ S_BLOCK{} W_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ T_BLOCK{} H_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ T_BLOCK{} R_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ T_BLOCK{} W_BLOCK {x -1.1}} 
+rule B_RAND_DIPTHONG{ W_BLOCK{} H_BLOCK {x -1.1}} 
+
+rule B_RAND_SUFFIx 2 {RAND_VOWEL{} B_WORD_HOOK{x -2.2}} 
+rule B_RAND_SUFFIX{A_BLOCK{} N_BLOCK{x -1.1} B_WORD_HOOK{x -3.3}} 
+rule B_RAND_SUFFIX{I_BLOCK{} N_BLOCK{x -1.1} G_BLOCK{x -2.2} B_WORD_HOOK{x -4.4}} 
+rule B_RAND_SUFFIX{I_BLOCK{} S_BLOCK{x -1.1} H_BLOCK{x -2.2} B_WORD_HOOK{x -4.4}} 
+rule B_RAND_SUFFIX{E_BLOCK{} D_BLOCK{x -1.1} B_WORD_HOOK{x -3.3}} 
+rule B_RAND_SUFFIX{E_BLOCK{} N_BLOCK{x -1.1} B_WORD_HOOK{x -3.3}} 
+rule B_RAND_SUFFIX{E_BLOCK{} R_BLOCK{x -1.1} B_WORD_HOOK{x -3.3}} 
+rule B_RAND_SUFFIX{O_BLOCK{} N_BLOCK{x -1.1} B_WORD_HOOK{x -3.3}} 
+rule B_RAND_SUFFIX{U_BLOCK{} S_BLOCK{x -1.1} S_BLOCK{x -2.2} B_WORD_HOOK{x -4.4}} 
+rule B_RAND_SUFFIx 6 { B_WORD_HOOK{x -1.1}} 

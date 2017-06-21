@@ -1,0 +1,54 @@
+startshape five_star_bunch
+background {hue 50 sat .3}
+
+rule five_star_bunch
+{
+	star_plant_red{r 180}
+	star_plant_blue{r 170 x 12 y -25 size .7}
+	star_plant_red{r 160 x 15 y -45 size .4}
+	star_plant_blue{r -170 x -9 y -25 size .7}
+		star_plant_red{r -160 x -11 y -45 size .4}
+}
+
+rule star_plant_red
+{
+	starry_flower_red{size 20}
+	star_stem{}
+}
+
+rule star_plant_blue
+{
+	starry_flower_blue{size 20}
+	star_stem{}	
+}
+
+rule star_stem
+{
+	SQUARE { }
+	star_stem { s 0.99 y 1 r .1 } 
+}
+
+rule starry_flower_red
+{
+	starry{hue 0 sat .65 b .7}
+	starry{r 30 b .8}
+}
+
+rule starry_flower_blue
+{
+	starry{hue 200 sat .75 b .6}
+	starry{r 30 b .8}
+}
+
+rule starry
+{
+	star{}
+	star{size .995 b 1}
+	starry{size .99 r .1}
+}
+
+rule star
+{
+	TRIANGLE{}
+	TRIANGLE{flip 180}
+}

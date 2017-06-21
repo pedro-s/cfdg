@@ -1,0 +1,23 @@
+startshape BLUR
+background { b-1 }
+rule BLUR { 
+
+ARM { }
+
+}
+
+rule ARM {
+5* { } 
+TRIANGLE { b-1 }
+
+TRIANGLE { size 0.99 brightness 1h 185.19 sat 0.4909 b 1.0000 }  
+
+ARM { size .99 rotate 299 } 
+
+
+
+
+
+}
+
+

@@ -1,0 +1,31 @@
+startshape SEED
+
+background {b -1}
+
+rule SEED {
+	SEED1 {hue 0 sat 0.8 b 1}
+}
+
+rule SEED1 {
+	SQUARE{}
+	SEED1 {y 1 size 0.99 r 1.5 hue .15 b 0.01}
+}
+
+rule SEED1 {
+ SQUARE{}
+ SEED1 {y 1 size 0.99 r -1.5 hue .15 sat 0.005}
+}
+
+rule SEED1 0.05 {
+	SQUARE {}
+	SEED1 {r -22 hue .3 sat 0.005}
+	SEED1 {r 22 hue .2 sat 0.005}
+}
+
+rule SEED1 0.05 {
+ SQUARE{}
+ SEED1 {y 1 s 0.99 r 1.5 flip 90 hue .22 sat 0.005}
+ SEED1 { s 0.6 r -45 hue .2 sat 0.005}
+ SEED1 { s 0.5 r 45 flip 90 hue .2 sat 0.005}
+}
+

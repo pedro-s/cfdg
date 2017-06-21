@@ -1,0 +1,17 @@
+startshape fig3
+background { b -1 }
+
+rule fig3 {
+fig1 { }
+fig3 {r 145 x 1 y 30 s .7 skew 0 0}
+}
+
+rule fig1 {
+fig2 { }
+fig1 {r 99 x -10 s .9 b .05}
+}
+
+rule fig2 {
+SQUARE {s 1,5 }
+fig2 {r -12 x .5 s .9 b .1}
+}

@@ -1,0 +1,76 @@
+startshape TREE
+
+background{ b -1}
+
+rule TREE
+{
+
+SEED{}
+
+}
+
+
+rule SEED
+{
+GROW{y .9 s .96 hue 65 sat .6 b 1}
+}
+
+rule GROW 20
+{
+
+SQUARE{}
+SEED{}
+}
+
+rule GROW .5
+{
+leaf{}
+}
+include i_curves.cfdg
+rule leaf
+{
+curveright_0.99_5{ r 90 s 1 hue 99 s 1 b 1}
+GROW{}
+}
+
+rule GROW
+{
+BRANCHLEFT{}
+BRANCHRIGHT{}
+
+}
+
+rule BRANCHLEFT
+{
+
+GROW{r 30 s .96}
+
+}
+
+rule BRANCHLEFT
+{
+
+GROW{r 60 s .96}
+}
+
+
+rule BRANCHLEFT
+{
+
+GROW{r 60 s .96}
+
+}
+
+
+
+rule BRANCHRIGHT
+{
+
+GROW{r -30 s .96}
+}
+
+rule BRANCHRIGHT
+{
+
+GROW{r -60 s .96}
+}

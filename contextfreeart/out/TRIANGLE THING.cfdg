@@ -1,0 +1,6 @@
+startshape tri
+background {b-1}
+rule tri {
+100*{ x .2 s .9 h 10 r 100}
+TRIANGLE {h 183.69 sat 1.0000 b 1.0000 skew 100 200 }
+}

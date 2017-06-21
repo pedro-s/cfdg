@@ -1,0 +1,92 @@
+startshape island
+CF::Background = [hue 190 sat 1 b 0.2]
+CF::MinimumSize = 0.1
+CF::Size = [s 200 200 x 0 y 0]
+ 
+
+
+
+shape SPHERESHADE_DOTS(number bboost) {
+	loop 5 [s .95 b bboost x .2]
+		CIRCLE [s 10]
+
+	loop 2 [x (1, 4)]
+		CIRCLE [s rand(2, 5) sat -1 h 1 a .3 b 1 r rand(-120, 120) x 2]
+}
+
+shape SPHERESHADE(number bboost) {
+	loop 5 [s .95 b bboost x .2]
+		CIRCLE [s 10]
+}
+
+
+shape EYE { 
+	// BG
+	SPHERESHADE(.2)[r 180 s 1.7 h 190 b .3 sat 1 x 1.5 a .6 z 1]
+	SPHERESHADE(-.2)[r 180 s 1.4 h 170 b .3 sat 1 x 1.5 a -.6 z 1]
+
+	SPHERESHADE(.4)[b .4 a -.6  z 2]
+	SPHERESHADE(.1)[s .67 h rand(200, 340) b .4 sat 1 x 1 a -.6 z 3]
+
+SPHERESHADE_DOTS(-.1)[r 210 s .3 h 100 b -.4 sat 0 x 1.5 a -.9 z 4]
+
+
+
+}
+
+shape FOAM  {
+
+	loop 2 [r rand(0, 100)]
+		CIRCLE [s rand(.3, 4) h 200 b 1 sat rand(0, .3) a -.6 y 2]
+}
+
+shape TENTACLE(number t) 
+
+rule 20 {
+   	TENTACLE(t) [s .99 r t x 1.7 a -.01]
+	CIRCLE [s 9 h rand(180, 250) b rand(-.7, -.1) sat rand(.8, 1) a -.6 x + 2 y -2]
+
+	CIRCLE [s 9 h rand(180, 200)  b 1 sat rand(.8, 1) a -.6]
+	FOAM()[y 2 x -2]
+}
+rule .5 {
+   	TENTACLE(-3) []
+	}
+rule .5 {
+   	TENTACLE(3) []
+	}
+rule .14 {
+
+	TENTACLE(-3) []
+	EYE[ r 180 s 2 a .2 x -7 y 5 a .2]
+	}
+
+shape SHADOW {
+loop 100 [r 13 s 1.005]
+CIRCLE[s 50 h 230 sat 1 b rand(0, .4) x rand(30, 50) a -.94] 	
+}
+
+shape SHADOW2 {
+loop 120 [r 13 s 1.004 b -.1 a .3]
+CIRCLE[s rand(40, 60) h 230 sat 1 b rand(.2, .5) x 80 a -.9] 	
+}
+
+
+
+shape island {
+//SHADOW[]
+SHADOW2[]
+	//loop 10 [r 36]
+	//	TENTACLE(-.5)[s 1.4 ]
+	loop 12 [r 60]
+		TENTACLE(-.5)[s 1.6 b -1 h 50 a -.7]
+	loop 12 [r 60]
+		TENTACLE(-.5)[s 1.4 b -1 h 30 a -.4]
+	loop 16 [r 60]
+		TENTACLE(-.5)[s 1.2 b -1 h 10]
+
+//	loop 120 [r 137 s 1.015]
+//		EYE[x rand(70, 80) r 180]
+	
+	//EYE[s 2]
+	}

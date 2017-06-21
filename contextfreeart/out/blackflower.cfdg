@@ -1,0 +1,49 @@
+// Blackflower,
+// a cfdg script ( http://contextfreeart.org/ ) 
+//
+// ** Instructions
+// Use the following python script to generate sinB.cfdg
+//	import math
+//	print "rule sin {"
+//	for i in range(-314,315):
+//	        print "point { x", i, "y %0.9f"%(math.sin(i/100.)*100), "}"
+//	print "}"
+// 
+// AlpT (@freaknet.org)  
+// Fri Nov  2 15:53:41 CET 2007
+//
+// Other scripts:
+// http://freaknet.org/alpt/misc/fatrial/math-exp/cfdg
+//
+
+startshape START
+include sinB.cfdg
+
+rule START {
+	B0 { b -1 }
+}
+
+rule B0 {
+	2 * { r 90 } B { }
+	B0 { r 45 s 0.7 z -1 }
+}
+
+rule B {
+	sin { }
+	sin { flip -90 }
+	B { s 0.992 b 0.01 }
+}
+
+rule cartesian {
+	line { x -500 y 0}
+	line { x 0 y -500 r 90 }
+}
+
+rule line { 
+	1000 * { x 1 } CIRCLE { }
+}
+
+rule point {
+	CIRCLE { }
+}
+

@@ -1,0 +1,33 @@
+startshape start []
+
+CF::Background=[h 200 sat 1 b -.5]
+CF::Size=[s 1 x .5 y -.5]
+
+vector4 Bern(t)=
+(1-t)^3, 
+3*(1-t)^2*t,
+3*(1-t)*t^2,
+t^3
+
+vector2 P(t,vector8 B) =let (v=Bern(t);v[0]*B[0,1]+v[1]*B[2,1]+v[2]*B[4,1]+v[3]*B[6,1], v[0]*B[0+1,1]+v[1]*B[2+1,1]+v[2]*B[4+1,1]+v[3]*B[6+1,1])
+
+shape start 
+{
+  loop j=0,100 []
+  {
+    loop i=-100,100 [] 
+    {
+     B0=(0,j/100),  (0.15,.5), (.75,.015+i*0.005),  (1,1-j/100)
+     bezier(B0,i) [sat 1r 90 a -.5 h 220   b -1 ]
+     bezier(B0,i) [sat 1 r 180 a -.5 y 1 h 230   b -1 ]
+     B1=(0,j/100),  (0.25,.1), (.75,.015-i*0.005),  (1,1-j/100)
+     bezier(B1,i) [sat 1 a -.5 h 221 x -1  b -1 ]
+    }
+  }
+}
+
+shape bezier(vector8 P4,k)
+{
+    loop i=0,1,.0015 []
+       CIRCLE [x P(i,P4) s 0.0015 b (if (mod(k,20)>15,-1,k/200+i))]
+} 

@@ -1,0 +1,50 @@
+startshape Main
+tile {s 10 10}
+background {b -1}
+
+rule Thread 5 {
+	CIRCLE [ s 0.2 2 b .19]
+	Thread [ s 0.92 y 0.25 r 2.5 alpha -.55]
+}
+rule Thread { Thread { f 70 } }
+rule Thread { Thread { r .5 } }
+
+rule Tenticles {
+	10*{r 36}
+	Thread{}
+}
+
+rule TentTri {
+	Tri1{}
+	Tri2{}
+	Tri3{}
+}
+
+rule Tri1 {
+	10*{x 2 y 3}
+	Tenticles{ }
+
+}
+
+rule Tri2 {
+	10*{x 4}
+	Tenticles{ }
+
+}
+
+rule Tri3 {
+	10*{x -2 y 3}
+	Tenticles{ x 36}
+
+}
+
+rule Pyramid {
+	TentTri {}
+	Pyramid{s .8 x 3.5 y 2.5 }
+}
+
+rule Main {
+	2*{s .5 x 10.5 y 8 b .91 alpha -.24}
+	Pyramid{s 1.2 b .2}
+
+}

@@ -1,0 +1,25 @@
+startshape SEED
+
+rule SEED {
+	BRANCH {r 0 b 1}
+}
+
+rule SEED {
+	BRANCH {r 0 b 1 flip 90}
+}
+
+rule BRANCH {
+	SQUARE{}
+	BRANCH{s 0.99 y 0.5 r 4 b -0.01}
+}
+
+rule BRANCH {
+	SQUARE{}
+	BRANCH{y 0.5 r -1 b -0.01}
+}
+
+rule BRANCH 0.0035 {
+	BRANCH{r 30 x -0.2}
+	BRANCH{r -30 x 0.2}
+}
+
